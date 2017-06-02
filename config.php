@@ -13,4 +13,5 @@ require_once "model/access/key_facts_function.php";
 
 
 // control files
-
+require_once "control/utilities/session.php";
+require_once "control/teacherpanel.php";
