@@ -7,7 +7,7 @@ class data
 
 		$servername = "localhost";
 		$username = "noname";
-		$password = "123123$#@!";
+		$password = "noname";
 		$database="noname";
 		try {
 			$con =  new PDO("mysql:host=$servername;dbname=$database", $username, $password);
