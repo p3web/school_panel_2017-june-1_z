@@ -1,0 +1,16 @@
+@font-face {
+    font-family:MuseoSans_300;
+    src:url(fonts/MuseoSans_300.ttf);
+    font-weight: normal;
+    font-style: normal;
+
+}
+table.borderless td,table.borderless th{
+    border: none !important; height:0% auto !important; padding:0% !important;
+}
+table{ border:none !important;}
+
+.ui-autocomplete {
+    z-index: 5000;
+}
+

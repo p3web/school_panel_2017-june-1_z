@@ -18,8 +18,10 @@ require_once "model/language/lang.php";
 
 // access files
 require_once "model/access/key_facts_function.php";
+require_once "model/access/access_teacherpanel.php";
 
 
 // control files
 require_once "control/utilities/session.php";
-require_once "control/teacherpanel.php";
+require_once "control/utilities/csv_file.php";
+require_once "control/control_teacherpanel.php";
