@@ -2,9 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="676e04ff-6d34-48ac-9098-ebf739dc256d" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/template/JSON/lang/lang.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/model/language/lang.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/model/database/data.php" afterPath="$PROJECT_DIR$/model/database/data.php" />
     </list>
     <ignored path="school_panel_2017-june-1_z.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -32,18 +30,18 @@
       <file leaf-file-name="data.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/model/database/data.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="4560">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.12526096" vertical-offset="0" max-vertical-offset="4560">
+              <caret line="8" column="27" selection-start-line="8" selection-start-column="27" selection-end-line="8" selection-end-column="27" />
               <folding>
-                <marker date="1496170804000" expanded="true" signature="2177:2191" placeholder="SELECT * FRO..table..." />
-                <marker date="1496170804000" expanded="true" signature="2284:2311" placeholder="SELECT * FRO.._table WHERE..." />
-                <marker date="1496170804000" expanded="true" signature="3331:3349" placeholder="SELECT :_col..." />
-                <marker date="1496170804000" expanded="true" signature="3384:3415" placeholder="SELECT :_col..." />
-                <marker date="1496170804000" expanded="true" signature="3859:3877" placeholder="SELECT :_col..." />
-                <marker date="1496170804000" expanded="true" signature="3912:3937" placeholder="SELECT :_col..." />
-                <marker date="1496170804000" expanded="true" signature="4364:4404" placeholder="INSERT INTO ..." />
-                <marker date="1496170804000" expanded="true" signature="4910:4941" placeholder="UPDATE :_tab..." />
-                <marker date="1496170804000" expanded="true" signature="5381:5406" placeholder="DELETE FROM ..." />
+                <marker date="1496384326000" expanded="true" signature="2162:2176" placeholder="SELECT * FRO..table..." />
+                <marker date="1496384326000" expanded="true" signature="2269:2296" placeholder="SELECT * FRO.._table WHERE..." />
+                <marker date="1496384326000" expanded="true" signature="3316:3334" placeholder="SELECT :_col..." />
+                <marker date="1496384326000" expanded="true" signature="3369:3400" placeholder="SELECT :_col..." />
+                <marker date="1496384326000" expanded="true" signature="3844:3862" placeholder="SELECT :_col..." />
+                <marker date="1496384326000" expanded="true" signature="3897:3922" placeholder="SELECT :_col..." />
+                <marker date="1496384326000" expanded="true" signature="4349:4389" placeholder="INSERT INTO ..." />
+                <marker date="1496384326000" expanded="true" signature="4895:4926" placeholder="UPDATE :_tab..." />
+                <marker date="1496384326000" expanded="true" signature="5366:5391" placeholder="DELETE FROM ..." />
               </folding>
             </state>
           </provider>
@@ -59,6 +57,7 @@
       <list>
         <option value="$PROJECT_DIR$/model/language/lang.php" />
         <option value="$PROJECT_DIR$/template/JSON/lang/lang.json" />
+        <option value="$PROJECT_DIR$/model/database/data.php" />
       </list>
     </option>
   </component>
@@ -274,18 +273,18 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/model/database/data.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="4560">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.12526096" vertical-offset="0" max-vertical-offset="4560">
+          <caret line="8" column="27" selection-start-line="8" selection-start-column="27" selection-end-line="8" selection-end-column="27" />
           <folding>
-            <marker date="1496170804000" expanded="true" signature="2177:2191" placeholder="SELECT * FRO..table..." />
-            <marker date="1496170804000" expanded="true" signature="2284:2311" placeholder="SELECT * FRO.._table WHERE..." />
-            <marker date="1496170804000" expanded="true" signature="3331:3349" placeholder="SELECT :_col..." />
-            <marker date="1496170804000" expanded="true" signature="3384:3415" placeholder="SELECT :_col..." />
-            <marker date="1496170804000" expanded="true" signature="3859:3877" placeholder="SELECT :_col..." />
-            <marker date="1496170804000" expanded="true" signature="3912:3937" placeholder="SELECT :_col..." />
-            <marker date="1496170804000" expanded="true" signature="4364:4404" placeholder="INSERT INTO ..." />
-            <marker date="1496170804000" expanded="true" signature="4910:4941" placeholder="UPDATE :_tab..." />
-            <marker date="1496170804000" expanded="true" signature="5381:5406" placeholder="DELETE FROM ..." />
+            <marker date="1496384326000" expanded="true" signature="2162:2176" placeholder="SELECT * FRO..table..." />
+            <marker date="1496384326000" expanded="true" signature="2269:2296" placeholder="SELECT * FRO.._table WHERE..." />
+            <marker date="1496384326000" expanded="true" signature="3316:3334" placeholder="SELECT :_col..." />
+            <marker date="1496384326000" expanded="true" signature="3369:3400" placeholder="SELECT :_col..." />
+            <marker date="1496384326000" expanded="true" signature="3844:3862" placeholder="SELECT :_col..." />
+            <marker date="1496384326000" expanded="true" signature="3897:3922" placeholder="SELECT :_col..." />
+            <marker date="1496384326000" expanded="true" signature="4349:4389" placeholder="INSERT INTO ..." />
+            <marker date="1496384326000" expanded="true" signature="4895:4926" placeholder="UPDATE :_tab..." />
+            <marker date="1496384326000" expanded="true" signature="5366:5391" placeholder="DELETE FROM ..." />
           </folding>
         </state>
       </provider>

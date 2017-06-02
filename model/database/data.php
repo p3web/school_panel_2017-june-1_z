@@ -6,9 +6,9 @@ class data
 	{
 
 		$servername = "localhost";
-		$username = "ancestry_PSCO";
+		$username = "noname";
 		$password = "123123$#@!";
-		$database="ancestry_atlas";
+		$database="noname";
 		try {
 			$con =  new PDO("mysql:host=$servername;dbname=$database", $username, $password);
 			$con->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
