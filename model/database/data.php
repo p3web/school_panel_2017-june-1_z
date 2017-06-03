@@ -99,6 +99,32 @@ class data
 		return $row;
 		*/
 	}
+
+	public static function run_query($cmd)
+	{
+		$con=self::connection_open();
+
+		try {
+
+			$stmt = $con->prepare($cmd);
+			$stmt->execute();
+			$result = $stmt->setFetchMode(PDO::FETCH_ASSOC);
+			//$r=array() ;
+			$r=$stmt->fetchAll();
+
+			//print_r($r);
+			//exit;
+			self::connection_close();
+			return $r;
+
+		}
+
+		catch(PDOException $e) {
+			return $row= "Error: " . $e->getMessage();
+		}
+
+	}
+
 	public static function selects($table,$where)
 	{
 		$con=self::connection_open();

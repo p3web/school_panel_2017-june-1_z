@@ -79,83 +79,21 @@ class control_teacherpanel
 
     public static function get_(){
 
-    if (!empty($_REQUEST['classnamedropdown']))
-    {
-        $className= $_REQUEST['classnamedropdown'];
-    }
-
-    $unionAllOption = 0;
-    //starting query
-    $querytest ="";
-
-
-    if (!empty($_REQUEST['formDoor'])){
-        $querytest .= "select x , COUNT( * )  from(";
-        $aDoor = $_REQUEST['formDoor'];
-        $N = count($aDoor);
-        for($i=0; $i < $N; $i++){
-            if($aDoor[$i] == 'S'){
-                $querytest .= " select `studentbirthplace` as x from studentbirthdetails where studentemailid IN(SELECT studentemailid FROM student where schoolid='".$schoolId."'  AND classname='".$className."')";
-                $unionAllOption = 1;
-            }
-            if($aDoor[$i] == 'F'){
-                if($unionAllOption==1){$querytest .= " UNION ALL";}
-                $querytest .= " select `studentfatherbirthplace` as x from studentbirthdetails  where studentemailid IN(SELECT studentemailid FROM student where schoolid='".$schoolId."'  AND classname='".$className."')";
-                $unionAllOption = 1;
-            }
-            if($aDoor[$i] == 'M'){
-                if($unionAllOption==1){$querytest .= " UNION ALL";}
-                $querytest .= " select `studentmotherbirthplace` as x from studentbirthdetails  where studentemailid IN(SELECT studentemailid FROM student where schoolid='".$schoolId."'  AND classname='".$className."')";
-                $unionAllOption = 1;
-            }
-            if($aDoor[$i] == 'GFFS'){
-                if($unionAllOption==1){$querytest .= " UNION ALL";}
-                $querytest .= " select `studentfathersfatherbirthplace` as x from studentbirthdetails  where studentemailid IN(SELECT studentemailid FROM student where schoolid='".$schoolId."'  AND classname='".$className."')";
-                $unionAllOption = 1;
-            }
-            if($aDoor[$i] == 'GMFS'){
-                if($unionAllOption==1){$querytest .= " UNION ALL";}
-                $querytest .= " select `studentfathersmotherbirthplace` as x from studentbirthdetails  where studentemailid IN(SELECT studentemailid FROM student where schoolid='".$schoolId."'  AND classname='".$className."')";
-                $unionAllOption = 1;
-            }
-            if($aDoor[$i] == 'GFMS'){
-                if($unionAllOption==1){$querytest .= " UNION ALL";}
-                $querytest .= " select `studentmothersfatherbirthplace` as x from studentbirthdetails  where studentemailid IN(SELECT studentemailid FROM student where schoolid='".$schoolId."'  AND classname='".$className."')";
-                $unionAllOption = 1;
-            }
-            if($aDoor[$i] == 'GMMS'){
-                if($unionAllOption==1){$querytest .= " UNION ALL";}
-                $querytest .= " select `studentmothersmotherbirthplace` as x from studentbirthdetails  where studentemailid IN(SELECT studentemailid FROM student where schoolid='".$schoolId."'  AND classname='".$className."')";
-                $unionAllOption = 1;
-            }
+        if (!empty($_REQUEST['classnamedropdown']))
+        {
+            $className= $_REQUEST['classnamedropdown'];
         }
+        $aDoor = $_REQUEST['formDoor'];
 
-        $querytest .= " ) as temptable group by x";
-    }
+        $result = access_teacherpanel::get_student_parameter($aDoor,self::$schoolId,self::$className);
 
+        while($row = mysql_fetch_assoc($result)) {
 
+            ?>
+            ['<?php echo $row['x']; ?>',<?php echo $row['COUNT( * )']; ?>], <?php } ?>
 
-
-
-
-
-    // Default values goes here
-    if($querytest==""){
-
-        $querytest = "select x , COUNT( * )  from( select `studentbirthplace` as x from studentbirthdetails where studentemailid IN(SELECT studentemailid FROM student where schoolid='".$schoolId."'  AND classname='".$className."') ) as temptable group by x";
-    }
-
-    $currentQuerry = $querytest;
-
-    $result = mysql_query($currentQuerry);
-    $result1 = mysql_query($currentQuerry);
-
-    while($row = mysql_fetch_assoc($result)) {
-
-        ?>
-        ['<?php echo $row['x']; ?>',<?php echo $row['COUNT( * )']; ?>], <?php } ?>
-
-]
+            ]
+        }
     }
 
 }
