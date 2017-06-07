@@ -87,13 +87,13 @@ class invite{
     }
 
     private static function set_staff($email,$orgId,$deptName,$teamName,$name,$token){
-       // insert into staff(staffemailid, orgid, deptname, teamname, firstname, token, status) values('$email','$orgId','$deptName','$teamName','$name','$token','pending')",$con))
+        // insert into staff(staffemailid, orgid, deptname, teamname, firstname, token, status) values('$email','$orgId','$deptName','$teamName','$name','$token','pending')",$con))
         return data::insertinto("`staff`", "`staffemailid`, `orgid`, `deptname`, `teamname`, `firstname`, `token`, `status`", "'$email','$orgId','$deptName','$teamName','$name','$token','pending'");
     }
 
     private static function set_student($email,$schoolid,$classname,$firstname,$gender,$religion,$token){
-       // insert into `student`(`studentemailid`, `schoolid`, `classname`, `firstname`, `lastname`, `gender`, `religion`, `token`, `status`)
-       return data::insertinto("`student`", "`studentemailid`, `schoolid`, `classname`, `firstname`, `gender`, `religion`, `token`, `status`", "'$email', '$schoolid', '$classname', '$firstname', '$gender', '$religion', '$token','pending'");
+        // insert into `student`(`studentemailid`, `schoolid`, `classname`, `firstname`, `lastname`, `gender`, `religion`, `token`, `status`)
+        return data::insertinto("`student`", "`studentemailid`, `schoolid`, `classname`, `firstname`, `gender`, `religion`, `token`, `status`", "'$email', '$schoolid', '$classname', '$firstname', '$gender', '$religion', '$token','pending'");
     }
 
     private static function send_mail($adminid,$email,$token){
@@ -181,13 +181,13 @@ class invite{
                     $register_on_teacher = invite::check_mail_in_teacher(strtolower($email));
                     $register_on_student = invite::check_mail_in_student(strtolower($email));
 
-                    if(!$register_on_staff) {
-                        if (!$register_on_teamadmin) {
-                            if (!$register_on_organisationadmin) {
-                                if (!$register_on_deptadmin) {
-                                    if (!$register_on_school) {
-                                        if (!$register_on_teacher) {
-                                            if (!$register_on_student) {
+                    if($register_on_staff != false) {
+                        if ($register_on_teamadmin != false) {
+                            if (!$register_on_organisationadmin != false) {
+                                if (!$register_on_deptadmin != false) {
+                                    if (!$register_on_school != false) {
+                                        if (!$register_on_teacher != false) {
+                                            if (!$register_on_student != false) {
                                                 $emailErr = "Email already registered.";
                                                 $combineErr = $combineErr . "<br>" . $emailErr;
                                                 echo "<script type='text/javascript'>
@@ -222,7 +222,7 @@ class invite{
 
                 $set_result = invite::set_staff($email,$orgId,$deptName,$teamName,$name,$token);
 
-                if($set_result<=0){
+                if($set_result!=0){
 
                     die("ERROR: Data not inserted");
                 }
@@ -298,13 +298,13 @@ class invite{
                     $register_on_teacher = invite::check_mail_in_teacher(strtolower($email));
                     $register_on_student = invite::check_mail_in_student(strtolower($email));
 
-                    if(!$register_on_staff) {
-                        if (!$register_on_teamadmin) {
-                            if (!$register_on_organisationadmin) {
-                                if (!$register_on_deptadmin) {
-                                    if (!$register_on_school) {
-                                        if (!$register_on_teacher) {
-                                            if (!$register_on_student) {
+                    if($register_on_staff != false) {
+                        if ($register_on_teamadmin != false) {
+                            if (!$register_on_organisationadmin != false) {
+                                if (!$register_on_deptadmin != false) {
+                                    if (!$register_on_school != false) {
+                                        if (!$register_on_teacher != false) {
+                                            if (!$register_on_student != false) {
                                                 $emailErr = "Email already registered.";
                                                 $combineErr = $combineErr . "<br>" . $emailErr;
                                                 echo "<script type='text/javascript'>
@@ -339,7 +339,7 @@ class invite{
                 // TODO: check data input to func (gende= null & religion= null):?
                 $set_result = invite::set_student($email,$schoolid,$classname,$name,'null','null',$token);
 
-                if($set_result<=0){
+                if($set_result!=0){
 
                     die("ERROR: Data not inserted");
                 }
@@ -373,4 +373,6 @@ class invite{
 
 //TODO: test function
 // invite::invite_student($schoolid,$adminid);
+
+invite::invite_staff($orgId,$deptName,$adminid);
 
