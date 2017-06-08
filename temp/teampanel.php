@@ -1,12 +1,4 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: peymanvalikhanli
- * Date: 6/8/17 AD
- * Time: 02:22
- */
-?>
-<?php
 ob_start();
 session_cache_expire();
 session_start();
@@ -1352,18 +1344,18 @@ if(!isset($_SESSION['teamorg'])){
 
             $("#languagetext").html("<?php
 								include 'connection.php';
-
-
+								
+								 
 								$result = mysql_query("SELECT languagename, COUNT( languagename ) FROM stafflanguage where staffemailid IN(SELECT staffemailid FROM staff where orgid='".$orgId."' AND teamname='".$teamName."' AND deptname='".$deptName."') GROUP BY languagename ORDER BY COUNT( languagename ) DESC");
-
-
-
-								while($row = mysql_fetch_assoc($result)) {
+							
+								
+								
+								while($row = mysql_fetch_assoc($result)) { 
 									echo "<b>";
 									echo $row['languagename'];
-									echo ": </b>&nbsp;";
+									echo ": </b>&nbsp;"; 
 									echo $row['COUNT( languagename )'];
-									echo "<br/>";
+									echo "<br/>"; 
 									} mysql_close($con);?>");
 
         });
@@ -1409,18 +1401,18 @@ if(!isset($_SESSION['teamorg'])){
 
             $("#languagetext").html("<?php
 								include 'connection.php';
-
+								
 								$result = mysql_query("SELECT languagename, COUNT( languagename ) FROM stafflanguage where staffemailid IN(SELECT staffemailid FROM staff where orgid='".$orgId."' AND teamname='".$teamName."' AND deptname='".$deptName."' AND gender='".$gen."') GROUP BY languagename ORDER BY COUNT( languagename ) DESC");
-
-
-
-
-								while($row = mysql_fetch_assoc($result)) {
+								
+							
+								
+								
+								while($row = mysql_fetch_assoc($result)) { 
 									echo "<b>";
 									echo $row['languagename'];
-									echo ": </b>&nbsp;";
+									echo ": </b>&nbsp;"; 
 									echo $row['COUNT( languagename )'];
-									echo "<br/>";
+									echo "<br/>"; 
 									} mysql_close($con);?>");
 
         });
@@ -1468,18 +1460,18 @@ if(!isset($_SESSION['teamorg'])){
             languagechart.draw(data, options);
             $("#languagetext").html("<?php
 								include 'connection.php';
-
+								
 								$result = mysql_query("SELECT languagename, COUNT( languagename ) FROM stafflanguage where staffemailid IN(SELECT staffemailid FROM staff where orgid='".$orgId."' AND teamname='".$teamName."' AND deptname='".$deptName."' AND gender='".$gen."') GROUP BY languagename ORDER BY COUNT( languagename ) DESC");
-
-
-
-
-								while($row = mysql_fetch_assoc($result)) {
+								
+							
+								
+								
+								while($row = mysql_fetch_assoc($result)) { 
 									echo "<b>";
 									echo $row['languagename'];
-									echo ": </b>&nbsp;";
+									echo ": </b>&nbsp;"; 
 									echo $row['COUNT( languagename )'];
-									echo "<br/>";
+									echo "<br/>"; 
 									} mysql_close($con);?>");
 
         });
@@ -1526,18 +1518,18 @@ if(!isset($_SESSION['teamorg'])){
 
             $("#languagetext").html("<?php
 								include 'connection.php';
-
+								
 								$result = mysql_query("SELECT languagename, COUNT( languagename ) FROM stafflanguage where staffemailid IN(SELECT staffemailid FROM staff where orgid='".$orgId."' AND teamname='".$teamName."' AND deptname='".$deptName."' AND gender='".$gen."') GROUP BY languagename ORDER BY COUNT( languagename ) DESC");
-
-
-
-
-								while($row = mysql_fetch_assoc($result)) {
+								
+							
+								
+								
+								while($row = mysql_fetch_assoc($result)) { 
 									echo "<b>";
 									echo $row['languagename'];
-									echo ": </b>&nbsp;";
+									echo ": </b>&nbsp;"; 
 									echo $row['COUNT( languagename )'];
-									echo "<br/>";
+									echo "<br/>"; 
 									} mysql_close($con);?>");
         });
 
