@@ -1,0 +1,60 @@
+<div class="modal-dialog modal-lg">
+    <div class="modal-content">
+        <div class="modal-body" id="change_pass_user">
+            <div id="wrap">
+                <div class="container-fluid">
+                    <div class="row" >
+                        <div class="col-sm-4"></div>
+                        <div class="col-sm-6 col-sm-pull-1 text-center">
+
+                            <h2>CHANGE PASSWORD</h2>
+
+                            <div class="col-sm-12 text-center" style="background-color:#FFF; margin-bottom:30px;  padding-bottom:30px;">
+                                <div class="row">
+                                    <br>
+                                    <div class="col-sm-4 text-left" style="margin-left:1.5%; margin-top:3.5%;"><span style=" font-weight:bold; font-size:1.5em; color:#71908a;"></span>
+                                    </div>
+                                    <div class="col-sm-4 text-center">
+                                        <img src="images/mainlogo.png" alt="" title="" width="73" height="73" class="loglogo" >
+                                    </div>
+                                    <div class="col-sm-4">
+                                    </div>
+                                </div>
+                                <form id="frm_change_pass" method="post" action="controller_user.php">
+                                    <div class="form-group form-inline" >
+                                        <br>
+                                        <!--<input type="password" class="form-control inputfield" style="margin-left:1.5%; width:90%;" name="current_password" id="current_password" placeholder="Current Password*" >-->
+                                        <input type="password" class="form-control inputfield" style="margin-left:1.5%; width:90%;" name="password" id="password" placeholder="New Password*" >
+                                        <input type="password" class="form-control inputfield" style="margin-left:1.5%; width:90%;" name="confirmPassword" id="confirmPassword" placeholder="Confirm New Password*">
+                                    </div>
+                                    <span style="float:left; margin-left:2.5em;">* Mandatory fields</span><br>
+                                    <div class="col-sm-12 text-left">
+                			                <span id="error_box" style="clear:both; float:left; margin-left:3em;" id="error">
+
+											</span>
+                                        <input type="hidden" name="act" id="change_pass_act">
+                                        <button id="btn_change_pass" type="button" class="btn btn-default loginbutton"  title="SAVE" style=" float:right; width:98%; padding:5%; padding-bottom: 12%;">SAVE</button>
+                                    </div>
+                                    <script type="text/javascript">
+                                        $('#btn_change_pass').click(function(){
+                                            var pass1 = $('#password').val();
+                                            var pass2 = $('#confirmPassword').val();
+                                            if(pass1 == pass2 && pass1 != "" && pass1 != undefined){
+                                                $( "#frm_change_pass" ).submit();
+                                            }else{
+                                                $('#error_box').text('password not match.');
+                                            }
+                                        });
+                                    </script>
+
+                                </form>
+
+                            </div>
+                        </div>
+                        <div class="col-sm-3"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -22,6 +22,11 @@ class user_profile
 
     }
 
+    public static function change_team_pass($pass,$mail){
+        $hashAndSaltedPassword = password_hash($pass, PASSWORD_BCRYPT);
+        data::update("teamadmin","`password` = '$hashAndSaltedPassword'","`teamemailid` = '$mail'");
+    }
+
     private static function get_teame_profile($email){
         $data = data::selects('`teamadmin`', "`teamemailid` = '$email'" );
 
@@ -41,6 +46,7 @@ class user_profile
                         $('#user_profile_header').html('User profile');
                     }
                  }
+
 </script>
 
   <h3 id='user_profile_header'> User profile</h3>
@@ -53,7 +59,7 @@ class user_profile
                         <option value='male' ".($data[0]['gender']== "male"? "selected":"").">male</option>
                         <option value='female' ".($data[0]['gender']== "female"? "selected":"").">female</option>
                     </select><br></td></tr>
-                <tr><td>Password:</td><td><button type='button' class='btn btn-warning' >change</button><br></td></tr>
+                <tr><td>Password:</td><td><button id='btn_change_pass_user' type='button' class='btn btn-warning' >change</button><br></td></tr>
                 <tr><td>Department:</td><td> <select disabled>
                         <option value='Database' ".($data[0]['deptname']== "Database"? "selected":"").">Database</option>
                         <option value='HR' ".($data[0]['deptname']== "HR"? "selected":"").">HR</option>
@@ -63,9 +69,20 @@ class user_profile
                 <br><hr>
                 <button type='button' class='btn btn-danger' data-dismiss='modal'>Close</button>
                 <button id='btn_profile_edit' name='edit' type='button' class='btn btn-warning' onclick='btn_user_profile_edit()'>Edit</button>
+
+                <script>
+	            $(document).ready(function(){
+		            $('#btn_change_pass_user').click(function(){
+			            $('#modal_change_pass_user').modal('show');
+		            });
+	            });
+        </script>
+
                 ";
         return $temp;
 
     }
+
+
 
 }
