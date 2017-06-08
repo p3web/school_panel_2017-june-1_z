@@ -2,7 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="676e04ff-6d34-48ac-9098-ebf739dc256d" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/model/database/data.php" afterPath="$PROJECT_DIR$/model/database/data.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/teacherpanel (2).php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/teamadminpanel (1).php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="school_panel_2017-june-1_z.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -27,21 +29,246 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="data.php" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/model/database/data.php">
+      <file leaf-file-name="teacherpanel.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/temp/teacherpanel.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.14091858" vertical-offset="0" max-vertical-offset="4560">
-              <caret line="9" column="27" selection-start-line="9" selection-start-column="27" selection-end-line="9" selection-end-column="27" />
+            <state vertical-scroll-proportion="-9.916667" vertical-offset="56312" max-vertical-offset="57330">
+              <caret line="3770" column="0" selection-start-line="3770" selection-start-column="0" selection-end-line="3770" selection-end-column="0" />
               <folding>
-                <marker date="1496384454000" expanded="true" signature="2158:2172" placeholder="SELECT * FRO..table..." />
-                <marker date="1496384454000" expanded="true" signature="2265:2292" placeholder="SELECT * FRO.._table WHERE..." />
-                <marker date="1496384454000" expanded="true" signature="3312:3330" placeholder="SELECT :_col..." />
-                <marker date="1496384454000" expanded="true" signature="3365:3396" placeholder="SELECT :_col..." />
-                <marker date="1496384454000" expanded="true" signature="3840:3858" placeholder="SELECT :_col..." />
-                <marker date="1496384454000" expanded="true" signature="3893:3918" placeholder="SELECT :_col..." />
-                <marker date="1496384454000" expanded="true" signature="4345:4385" placeholder="INSERT INTO ..." />
-                <marker date="1496384454000" expanded="true" signature="4891:4922" placeholder="UPDATE :_tab..." />
-                <marker date="1496384454000" expanded="true" signature="5362:5387" placeholder="DELETE FROM ..." />
+                <element signature="n#style#0;n#div#1;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#2;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#a#0;n#form#0;n#div#0;n#div#0;n#div#2;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#tr#0;n#form#0;n#div#0;n#div#0;n#div#2;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#a#1;n#div#0;n#div#0;n#div#2;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#span#0;n#div#0;n#div#0;n#div#2;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#2;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#1;n#div#0;n#div#1;n#div#0;n#div#2;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#button#0;n#div#0;n#div#2;n#div#0;n#div#2;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#1;n#div#2;n#div#0;n#div#2;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#div#3;n#div#0;n#div#2;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#1;n#div#3;n#div#0;n#div#2;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#ul#0;n#div#4;n#div#0;n#div#2;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#a#0;n#li#0;n#ul#0;n#div#4;n#div#0;n#div#2;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#a#0;n#li#1;n#ul#0;n#div#4;n#div#0;n#div#2;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#a#0;n#li#2;n#ul#0;n#div#4;n#div#0;n#div#2;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#a#0;n#li#3;n#ul#0;n#div#4;n#div#0;n#div#2;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#h3#0;n#div#0;n#div#0;n#div#0;n#div#1;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#span#0;n#h3#0;n#div#1;n#div#0;n#div#0;n#div#1;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#h4#0;n#div#0;n#div#0;n#div#0;n#div#2;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#h3#0;n#form#0;n#div#1;n#div#0;n#div#0;n#div#2;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#input#0;n#div#0;n#div#0;n#form#0;n#div#1;n#div#0;n#div#0;n#div#2;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#label#0;n#div#1;n#div#0;n#div#4;n#form#0;n#div#1;n#div#0;n#div#0;n#div#2;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#h3#1;n#form#0;n#div#1;n#div#0;n#div#0;n#div#2;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#1;n#div#0;n#div#0;n#div#0;n#body#0;n#html#1;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#2;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#body#0;n#html#1;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#a#0;n#form#0;n#div#0;n#div#0;n#div#2;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#body#0;n#html#1;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#tr#0;n#form#0;n#div#0;n#div#0;n#div#2;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#body#0;n#html#1;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#a#1;n#div#0;n#div#0;n#div#2;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#body#0;n#html#1;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#span#0;n#div#0;n#div#0;n#div#2;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#body#0;n#html#1;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#2;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#body#0;n#html#1;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#1;n#div#0;n#div#1;n#div#0;n#div#2;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#body#0;n#html#1;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#button#0;n#div#0;n#div#2;n#div#0;n#div#2;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#body#0;n#html#1;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#1;n#div#2;n#div#0;n#div#2;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#body#0;n#html#1;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#div#3;n#div#0;n#div#2;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#body#0;n#html#1;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#1;n#div#3;n#div#0;n#div#2;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#body#0;n#html#1;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#ul#0;n#div#4;n#div#0;n#div#2;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#body#0;n#html#1;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#a#0;n#li#0;n#ul#0;n#div#4;n#div#0;n#div#2;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#body#0;n#html#1;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#a#0;n#li#1;n#ul#0;n#div#4;n#div#0;n#div#2;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#body#0;n#html#1;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#a#0;n#li#2;n#ul#0;n#div#4;n#div#0;n#div#2;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#body#0;n#html#1;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#a#0;n#li#3;n#ul#0;n#div#4;n#div#0;n#div#2;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#body#0;n#html#1;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#h3#0;n#div#0;n#div#0;n#div#0;n#div#4;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#span#0;n#h3#0;n#div#1;n#div#0;n#div#0;n#div#4;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#h4#0;n#div#0;n#div#0;n#div#0;n#div#5;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#h3#0;n#form#0;n#div#1;n#div#0;n#div#0;n#div#5;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#input#0;n#div#0;n#div#0;n#form#0;n#div#1;n#div#0;n#div#0;n#div#5;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#label#0;n#div#1;n#div#0;n#div#4;n#form#0;n#div#1;n#div#0;n#div#0;n#div#5;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#h3#1;n#form#0;n#div#1;n#div#0;n#div#0;n#div#5;n#!!top" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="teamadminpanel (1).php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/backup/teamadminpanel (1).php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="29085">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding>
+                <marker date="1496907785000" expanded="true" signature="208:266" placeholder="select * fro..teamadmin..." />
+                <marker date="1496907785000" expanded="true" signature="817:875" placeholder="select * fro..organisationadmin..." />
+                <marker date="1496907785000" expanded="true" signature="1156:1250" placeholder="select deptn..orgteamdetail..." />
+                <marker date="1496907785000" expanded="true" signature="1428:1522" placeholder="select teamn..orgteamdetail..." />
+                <marker date="1496907785000" expanded="true" signature="2147:2197" placeholder="..." />
+                <marker date="1496907785000" expanded="true" signature="6959:7157" placeholder="SELECT relig..staff..." />
+                <marker date="1496907785000" expanded="true" signature="7204:7402" placeholder="SELECT relig..staff..." />
+                <marker date="1496907785000" expanded="true" signature="9826:10016" placeholder="select `staf..." />
+                <marker date="1496907785000" expanded="true" signature="10265:10461" placeholder="select `staf..." />
+                <marker date="1496907785000" expanded="true" signature="10710:10906" placeholder="select `staf..." />
+                <marker date="1496907785000" expanded="true" signature="11158:11361" placeholder="select `staf..." />
+                <marker date="1496907785000" expanded="true" signature="11613:11816" placeholder="select `staf..." />
+                <marker date="1496907785000" expanded="true" signature="12068:12271" placeholder="select `staf..." />
+                <marker date="1496907785000" expanded="true" signature="12523:12726" placeholder="select `staf..." />
+                <marker date="1496907785000" expanded="true" signature="13033:13278" placeholder="select x , C..temptable..." />
+                <marker date="1496907785000" expanded="true" signature="13062:13252" placeholder="select `staf..." />
+                <marker date="1496907785000" expanded="true" signature="15015:15271" placeholder="SELECT langu..stafflanguage..." />
+                <marker date="1496907785000" expanded="true" signature="15099:15212" placeholder="SELECT staff..staff..." />
+                <marker date="1496907785000" expanded="true" signature="15317:15573" placeholder="SELECT langu..stafflanguage..." />
+                <marker date="1496907785000" expanded="true" signature="15401:15514" placeholder="SELECT staff..staff..." />
+                <marker date="1496907785000" expanded="true" signature="20841:20935" placeholder="select teamn..orgteamdetail..." />
+                <marker date="1496907785000" expanded="true" signature="21159:21173" placeholder="..." />
+                <marker date="1496907785000" expanded="true" signature="22156:22282" placeholder="select * fro..staff..." />
+                <marker date="1496907785000" expanded="true" signature="22712:22748" placeholder="..." />
+                <marker date="1496907785000" expanded="true" signature="22855:22867" placeholder="..." />
+                <marker date="1496907785000" expanded="true" signature="22934:22945" placeholder="..." />
+                <marker date="1496907785000" expanded="true" signature="23021:23032" placeholder="..." />
+                <marker date="1496907785000" expanded="true" signature="23811:23822" placeholder="..." />
+                <marker date="1496907785000" expanded="true" signature="23889:23900" placeholder="..." />
+                <marker date="1496907785000" expanded="true" signature="23969:23980" placeholder="..." />
+                <marker date="1496907785000" expanded="true" signature="26379:26390" placeholder="..." />
+                <marker date="1496907785000" expanded="true" signature="26602:26613" placeholder="..." />
+                <marker date="1496907785000" expanded="true" signature="27220:27231" placeholder="..." />
+                <marker date="1496907785000" expanded="true" signature="31952:31964" placeholder="..." />
+                <marker date="1496907785000" expanded="true" signature="32917:32928" placeholder="..." />
+                <marker date="1496907785000" expanded="true" signature="33651:33663" placeholder="..." />
+                <marker date="1496907785000" expanded="true" signature="36360:36454" placeholder="select teamn..orgteamdetail..." />
+                <marker date="1496907785000" expanded="true" signature="40973:41163" placeholder="select `staf..." />
+                <marker date="1496907785000" expanded="true" signature="41552:41748" placeholder="select `staf..." />
+                <marker date="1496907785000" expanded="true" signature="42137:42333" placeholder="select `staf..." />
+                <marker date="1496907785000" expanded="true" signature="42725:42928" placeholder="select `staf..." />
+                <marker date="1496907785000" expanded="true" signature="43320:43523" placeholder="select `staf..." />
+                <marker date="1496907785000" expanded="true" signature="43915:44118" placeholder="select `staf..." />
+                <marker date="1496907785000" expanded="true" signature="44510:44713" placeholder="select `staf..." />
+                <marker date="1496907785000" expanded="true" signature="45236:45481" placeholder="select x , C..temptable..." />
+                <marker date="1496907785000" expanded="true" signature="45265:45455" placeholder="select `staf..." />
+                <marker date="1496907785000" expanded="true" signature="47004:47098" placeholder="select teamn..orgteamdetail..." />
+                <marker date="1496907785000" expanded="true" signature="50060:50316" placeholder="SELECT langu..stafflanguage..." />
+                <marker date="1496907785000" expanded="true" signature="50144:50257" placeholder="SELECT staff..staff..." />
+                <marker date="1496907785000" expanded="true" signature="51595:51689" placeholder="select teamn..orgteamdetail..." />
+                <marker date="1496907785000" expanded="true" signature="52948:53146" placeholder="SELECT relig..staff..." />
+                <marker date="1496907785000" expanded="true" signature="54792:54843" placeholder="..." />
+                <marker date="1496907785000" expanded="true" signature="60842:61098" placeholder="SELECT langu..stafflanguage..." />
+                <marker date="1496907785000" expanded="true" signature="60926:61039" placeholder="SELECT staff..staff..." />
+                <marker date="1496907785000" expanded="true" signature="61862:62118" placeholder="SELECT langu..stafflanguage..." />
+                <marker date="1496907785000" expanded="true" signature="61946:62059" placeholder="SELECT staff..staff..." />
+                <marker date="1496907785000" expanded="true" signature="62818:63096" placeholder="SELECT langu..stafflanguage..." />
+                <marker date="1496907785000" expanded="true" signature="62902:63037" placeholder="SELECT staff..staff..." />
+                <marker date="1496907785000" expanded="true" signature="63782:64060" placeholder="SELECT langu..stafflanguage..." />
+                <marker date="1496907785000" expanded="true" signature="63866:64001" placeholder="SELECT staff..staff..." />
+                <marker date="1496907785000" expanded="true" signature="64780:65058" placeholder="SELECT langu..stafflanguage..." />
+                <marker date="1496907785000" expanded="true" signature="64864:64999" placeholder="SELECT staff..staff..." />
+                <marker date="1496907785000" expanded="true" signature="65744:66022" placeholder="SELECT langu..stafflanguage..." />
+                <marker date="1496907785000" expanded="true" signature="65828:65963" placeholder="SELECT staff..staff..." />
+                <marker date="1496907785000" expanded="true" signature="66738:67016" placeholder="SELECT langu..stafflanguage..." />
+                <marker date="1496907785000" expanded="true" signature="66822:66957" placeholder="SELECT staff..staff..." />
+                <marker date="1496907785000" expanded="true" signature="67703:67981" placeholder="SELECT langu..stafflanguage..." />
+                <marker date="1496907785000" expanded="true" signature="67787:67922" placeholder="SELECT staff..staff..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="teampanel.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/temp/teampanel.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-11.166667" vertical-offset="28067" max-vertical-offset="29085">
+              <caret line="1889" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="1933" selection-end-column="9" />
+              <folding>
+                <element signature="n#style#0;n#div#1;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#2;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#li#0;n#ul#0;n#div#2;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#li#1;n#ul#0;n#div#2;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#li#2;n#ul#0;n#div#2;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#li#3;n#ul#0;n#div#2;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#li#4;n#ul#0;n#div#2;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#li#5;n#ul#0;n#div#2;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#tr#0;n#form#0;n#div#0;n#div#0;n#div#2;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#button#0;n#td#5;n#tr#0;n#form#0;n#div#0;n#div#0;n#div#2;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#a#1;n#form#0;n#div#0;n#div#0;n#div#2;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#span#0;n#div#0;n#div#0;n#div#2;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#2;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#1;n#div#0;n#div#1;n#div#0;n#div#2;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#button#0;n#div#0;n#div#2;n#div#0;n#div#2;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#button#0;n#div#1;n#div#2;n#div#0;n#div#2;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#2;n#div#2;n#div#0;n#div#2;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#div#3;n#div#0;n#div#2;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#1;n#div#3;n#div#0;n#div#2;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#h3#0;n#div#0;n#div#0;n#div#0;n#div#1;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#span#0;n#h3#0;n#div#1;n#div#0;n#div#0;n#div#1;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#h4#0;n#div#0;n#div#0;n#div#0;n#div#2;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#h3#0;n#form#0;n#div#1;n#div#0;n#div#0;n#div#2;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#label#0;n#div#0;n#form#0;n#div#1;n#div#0;n#div#0;n#div#2;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#input#0;n#div#0;n#div#0;n#form#0;n#div#1;n#div#0;n#div#0;n#div#2;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#label#0;n#div#1;n#div#0;n#div#4;n#form#0;n#div#1;n#div#0;n#div#0;n#div#2;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#h3#1;n#form#0;n#div#1;n#div#0;n#div#0;n#div#2;n#!!top" expanded="true" />
+                <marker date="1496906087000" expanded="true" signature="208:266" placeholder="select * fro..teamadmin..." />
+                <marker date="1496906087000" expanded="true" signature="817:875" placeholder="select * fro..organisationadmin..." />
+                <marker date="1496906087000" expanded="true" signature="1156:1250" placeholder="select deptn..orgteamdetail..." />
+                <marker date="1496906087000" expanded="true" signature="1428:1522" placeholder="select teamn..orgteamdetail..." />
+                <marker date="1496906087000" expanded="true" signature="2147:2197" placeholder="..." />
+                <marker date="1496906087000" expanded="true" signature="6959:7157" placeholder="SELECT relig..staff..." />
+                <marker date="1496906087000" expanded="true" signature="7204:7402" placeholder="SELECT relig..staff..." />
+                <marker date="1496906087000" expanded="true" signature="9826:10016" placeholder="select `staf..." />
+                <marker date="1496906087000" expanded="true" signature="10265:10461" placeholder="select `staf..." />
+                <marker date="1496906087000" expanded="true" signature="10710:10906" placeholder="select `staf..." />
+                <marker date="1496906087000" expanded="true" signature="11158:11361" placeholder="select `staf..." />
+                <marker date="1496906087000" expanded="true" signature="11613:11816" placeholder="select `staf..." />
+                <marker date="1496906087000" expanded="true" signature="12068:12271" placeholder="select `staf..." />
+                <marker date="1496906087000" expanded="true" signature="12523:12726" placeholder="select `staf..." />
+                <marker date="1496906087000" expanded="true" signature="13033:13278" placeholder="select x , C..temptable..." />
+                <marker date="1496906087000" expanded="true" signature="13062:13252" placeholder="select `staf..." />
+                <marker date="1496906087000" expanded="true" signature="15015:15271" placeholder="SELECT langu..stafflanguage..." />
+                <marker date="1496906087000" expanded="true" signature="15099:15212" placeholder="SELECT staff..staff..." />
+                <marker date="1496906087000" expanded="true" signature="15317:15573" placeholder="SELECT langu..stafflanguage..." />
+                <marker date="1496906087000" expanded="true" signature="15401:15514" placeholder="SELECT staff..staff..." />
+                <marker date="1496906087000" expanded="true" signature="20841:20935" placeholder="select teamn..orgteamdetail..." />
+                <marker date="1496906087000" expanded="true" signature="21159:21173" placeholder="..." />
+                <marker date="1496906087000" expanded="true" signature="22156:22282" placeholder="select * fro..staff..." />
+                <marker date="1496906087000" expanded="true" signature="22712:22748" placeholder="..." />
+                <marker date="1496906087000" expanded="true" signature="22855:22867" placeholder="..." />
+                <marker date="1496906087000" expanded="true" signature="22934:22945" placeholder="..." />
+                <marker date="1496906087000" expanded="true" signature="23021:23032" placeholder="..." />
+                <marker date="1496906087000" expanded="true" signature="23811:23822" placeholder="..." />
+                <marker date="1496906087000" expanded="true" signature="23889:23900" placeholder="..." />
+                <marker date="1496906087000" expanded="true" signature="23969:23980" placeholder="..." />
+                <marker date="1496906087000" expanded="true" signature="26379:26390" placeholder="..." />
+                <marker date="1496906087000" expanded="true" signature="26602:26613" placeholder="..." />
+                <marker date="1496906087000" expanded="true" signature="27220:27231" placeholder="..." />
+                <marker date="1496906087000" expanded="true" signature="31952:31964" placeholder="..." />
+                <marker date="1496906087000" expanded="true" signature="32652:32689" placeholder="..." />
+                <marker date="1496906087000" expanded="true" signature="32913:32924" placeholder="..." />
+                <marker date="1496906087000" expanded="true" signature="33647:33659" placeholder="..." />
+                <marker date="1496906087000" expanded="true" signature="36356:36450" placeholder="select teamn..orgteamdetail..." />
+                <marker date="1496906087000" expanded="true" signature="40969:41159" placeholder="select `staf..." />
+                <marker date="1496906087000" expanded="true" signature="41548:41744" placeholder="select `staf..." />
+                <marker date="1496906087000" expanded="true" signature="42133:42329" placeholder="select `staf..." />
+                <marker date="1496906087000" expanded="true" signature="42721:42924" placeholder="select `staf..." />
+                <marker date="1496906087000" expanded="true" signature="43316:43519" placeholder="select `staf..." />
+                <marker date="1496906087000" expanded="true" signature="43911:44114" placeholder="select `staf..." />
+                <marker date="1496906087000" expanded="true" signature="44506:44709" placeholder="select `staf..." />
+                <marker date="1496906087000" expanded="true" signature="45232:45477" placeholder="select x , C..temptable..." />
+                <marker date="1496906087000" expanded="true" signature="45261:45451" placeholder="select `staf..." />
+                <marker date="1496906087000" expanded="true" signature="47000:47094" placeholder="select teamn..orgteamdetail..." />
+                <marker date="1496906087000" expanded="true" signature="50056:50312" placeholder="SELECT langu..stafflanguage..." />
+                <marker date="1496906087000" expanded="true" signature="50140:50253" placeholder="SELECT staff..staff..." />
+                <marker date="1496906087000" expanded="true" signature="51591:51685" placeholder="select teamn..orgteamdetail..." />
+                <marker date="1496906087000" expanded="true" signature="52944:53142" placeholder="SELECT relig..staff..." />
+                <marker date="1496906087000" expanded="true" signature="54788:54839" placeholder="..." />
+                <marker date="1496906087000" expanded="true" signature="60838:61094" placeholder="SELECT langu..stafflanguage..." />
+                <marker date="1496906087000" expanded="true" signature="60922:61035" placeholder="SELECT staff..staff..." />
+                <marker date="1496906087000" expanded="true" signature="61858:62114" placeholder="SELECT langu..stafflanguage..." />
+                <marker date="1496906087000" expanded="true" signature="61942:62055" placeholder="SELECT staff..staff..." />
+                <marker date="1496906087000" expanded="true" signature="62814:63092" placeholder="SELECT langu..stafflanguage..." />
+                <marker date="1496906087000" expanded="true" signature="62898:63033" placeholder="SELECT staff..staff..." />
+                <marker date="1496906087000" expanded="true" signature="63778:64056" placeholder="SELECT langu..stafflanguage..." />
+                <marker date="1496906087000" expanded="true" signature="63862:63997" placeholder="SELECT staff..staff..." />
+                <marker date="1496906087000" expanded="true" signature="64776:65054" placeholder="SELECT langu..stafflanguage..." />
+                <marker date="1496906087000" expanded="true" signature="64860:64995" placeholder="SELECT staff..staff..." />
+                <marker date="1496906087000" expanded="true" signature="65740:66018" placeholder="SELECT langu..stafflanguage..." />
+                <marker date="1496906087000" expanded="true" signature="65824:65959" placeholder="SELECT staff..staff..." />
+                <marker date="1496906087000" expanded="true" signature="66734:67012" placeholder="SELECT langu..stafflanguage..." />
+                <marker date="1496906087000" expanded="true" signature="66818:66953" placeholder="SELECT staff..staff..." />
+                <marker date="1496906087000" expanded="true" signature="67699:67977" placeholder="SELECT langu..stafflanguage..." />
+                <marker date="1496906087000" expanded="true" signature="67783:67918" placeholder="SELECT staff..staff..." />
               </folding>
             </state>
           </provider>
@@ -57,7 +284,30 @@
       <list>
         <option value="$PROJECT_DIR$/model/language/lang.php" />
         <option value="$PROJECT_DIR$/template/JSON/lang/lang.json" />
+        <option value="$PROJECT_DIR$/control/view_teacherpanel.php" />
+        <option value="$PROJECT_DIR$/control/teacherpanel.php" />
+        <option value="$PROJECT_DIR$/model/access/teacherpanel.php" />
+        <option value="$PROJECT_DIR$/control/utilities/csv_file.php" />
+        <option value="$PROJECT_DIR$/config.php" />
+        <option value="$PROJECT_DIR$/template/js/teacherpanel/country_name.js" />
+        <option value="$PROJECT_DIR$/template/js/teacherpanel/main.js" />
+        <option value="$PROJECT_DIR$/template/css/teacherpanel/main.css" />
+        <option value="$PROJECT_DIR$/teacherpanel.php" />
+        <option value="$PROJECT_DIR$/view_teacherpanel.php" />
+        <option value="$PROJECT_DIR$/template/js/teacherpanel/google_chart.js" />
         <option value="$PROJECT_DIR$/model/database/data.php" />
+        <option value="$PROJECT_DIR$/model/access/access_teacherpanel.php" />
+        <option value="$PROJECT_DIR$/control/control_teacherpanel.php" />
+        <option value="$PROJECT_DIR$/staffregistrationstep3.php" />
+        <option value="$PROJECT_DIR$/staffregistrationstep1.php" />
+        <option value="$PROJECT_DIR$/model/access/test_file.php" />
+        <option value="$PROJECT_DIR$/model/access/key_facts_function.php" />
+        <option value="$PROJECT_DIR$/teamadminpanel(peyman edit check bugs).php" />
+        <option value="$PROJECT_DIR$/religonteacherdataout(peyman edit check bugs).php" />
+        <option value="$PROJECT_DIR$/admin_teacher.php" />
+        <option value="$PROJECT_DIR$/model/access/invite.php" />
+        <option value="$PROJECT_DIR$/temp/teacherpanel.php" />
+        <option value="$PROJECT_DIR$/temp/teampanel.php" />
       </list>
     </option>
   </component>
@@ -76,7 +326,7 @@
     <OptionsSetting value="true" id="Update" />
     <OptionsSetting value="true" id="Status" />
     <OptionsSetting value="true" id="Edit" />
-    <ConfirmationsSetting value="0" id="Add" />
+    <ConfirmationsSetting value="2" id="Add" />
     <ConfirmationsSetting value="0" id="Remove" />
   </component>
   <component name="ProjectView">
@@ -120,43 +370,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="template" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="JSON" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="lang" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="school_panel_2017-june-1_z" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="school_panel_2017-june-1_z" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="template" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="school_panel_2017-june-1_z" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="school_panel_2017-june-1_z" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="model" />
+              <option name="myItemId" value="backup" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -168,11 +382,19 @@
   <component name="PropertiesComponent">
     <property name="FullScreen" value="true" />
     <property name="WebServerToolWindowFactoryState" value="true" />
+    <property name="list.type.of.created.stylesheet" value="CSS" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../../../projects PHP/SmartHome/server_side_android_manager/admin_panel" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/backup" />
+      <recent name="$PROJECT_DIR$" />
+      <recent name="$PROJECT_DIR$/control/utilities" />
+      <recent name="$PROJECT_DIR$/model/access" />
       <recent name="$PROJECT_DIR$/model/language" />
-      <recent name="$PROJECT_DIR$/model/database" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
     </key>
   </component>
   <component name="RunManager">
@@ -215,18 +437,18 @@
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32970297" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24973376" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.106496274" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
@@ -251,7 +473,9 @@
     </option>
   </component>
   <component name="XDebuggerManager">
-    <breakpoint-manager />
+    <breakpoint-manager>
+      <option name="time" value="3" />
+    </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
@@ -271,20 +495,672 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/control/utilities/session.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-5.625" vertical-offset="0" max-vertical-offset="795">
+          <caret line="14" column="9" selection-start-line="14" selection-start-column="9" selection-end-line="14" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/control/utilities/csv_file.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.792" vertical-offset="0" max-vertical-offset="625">
+          <caret line="38" column="0" selection-start-line="38" selection-start-column="0" selection-end-line="38" selection-end-column="0" />
+          <folding>
+            <marker date="1496391863000" expanded="true" signature="-1:-1" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-16.25" vertical-offset="0" max-vertical-offset="495">
+          <caret line="26" column="42" selection-start-line="26" selection-start-column="30" selection-end-line="26" selection-end-column="42" />
+          <folding>
+            <element signature="e#6#97#0#PHP" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/template/js/teacherpanel/main.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="465">
+          <caret line="26" column="0" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#52#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/template/css/teacherpanel/main.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.24439919" vertical-offset="0" max-vertical-offset="982">
+          <caret line="16" column="0" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/template/js/teacherpanel/country_name.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="645">
+          <caret line="39" column="3" selection-start-line="39" selection-start-column="3" selection-end-line="39" selection-end-column="3" />
+          <folding>
+            <element signature="e#0#52#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/model/database/data.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.14091858" vertical-offset="0" max-vertical-offset="4560">
-          <caret line="9" column="27" selection-start-line="9" selection-start-column="27" selection-end-line="9" selection-end-column="27" />
+        <state vertical-scroll-proportion="-13.75" vertical-offset="1035" max-vertical-offset="4950">
+          <caret line="91" column="8" selection-start-line="91" selection-start-column="8" selection-end-line="91" selection-end-column="8" />
           <folding>
-            <marker date="1496384454000" expanded="true" signature="2158:2172" placeholder="SELECT * FRO..table..." />
-            <marker date="1496384454000" expanded="true" signature="2265:2292" placeholder="SELECT * FRO.._table WHERE..." />
-            <marker date="1496384454000" expanded="true" signature="3312:3330" placeholder="SELECT :_col..." />
-            <marker date="1496384454000" expanded="true" signature="3365:3396" placeholder="SELECT :_col..." />
-            <marker date="1496384454000" expanded="true" signature="3840:3858" placeholder="SELECT :_col..." />
-            <marker date="1496384454000" expanded="true" signature="3893:3918" placeholder="SELECT :_col..." />
-            <marker date="1496384454000" expanded="true" signature="4345:4385" placeholder="INSERT INTO ..." />
-            <marker date="1496384454000" expanded="true" signature="4891:4922" placeholder="UPDATE :_tab..." />
-            <marker date="1496384454000" expanded="true" signature="5362:5387" placeholder="DELETE FROM ..." />
+            <marker date="1496411537000" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..table..." />
+            <marker date="1496411537000" expanded="true" signature="-1:-1" placeholder="SELECT * FRO.._table WHERE..." />
+            <marker date="1496411537000" expanded="true" signature="-1:-1" placeholder="SELECT :_col..." />
+            <marker date="1496411537000" expanded="true" signature="-1:-1" placeholder="SELECT :_col..." />
+            <marker date="1496411537000" expanded="true" signature="-1:-1" placeholder="SELECT :_col..." />
+            <marker date="1496411537000" expanded="true" signature="-1:-1" placeholder="SELECT :_col..." />
+            <marker date="1496411537000" expanded="true" signature="-1:-1" placeholder="INSERT INTO ..." />
+            <marker date="1496411537000" expanded="true" signature="-1:-1" placeholder="UPDATE :_tab..." />
+            <marker date="1496411537000" expanded="true" signature="-1:-1" placeholder="DELETE FROM ..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/control/control_teacherpanel.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-15.019608" vertical-offset="659" max-vertical-offset="1620">
+          <caret line="95" column="9" selection-start-line="82" selection-start-column="8" selection-end-line="95" selection-end-column="9" />
+          <folding>
+            <element signature="e#6#97#0#PHP" expanded="true" />
+            <marker date="1496412087000" expanded="true" signature="-1:-1" placeholder="select `stud..." />
+            <marker date="1496412087000" expanded="true" signature="-1:-1" placeholder="select `stud..." />
+            <marker date="1496412087000" expanded="true" signature="-1:-1" placeholder="select `stud..." />
+            <marker date="1496412087000" expanded="true" signature="-1:-1" placeholder="select `stud..." />
+            <marker date="1496412087000" expanded="true" signature="-1:-1" placeholder="select `stud..." />
+            <marker date="1496412087000" expanded="true" signature="-1:-1" placeholder="select `stud..." />
+            <marker date="1496412087000" expanded="true" signature="-1:-1" placeholder="select `stud..." />
+            <marker date="1496412087000" expanded="true" signature="-1:-1" placeholder="select x , C..temptable..." />
+            <marker date="1496412087000" expanded="true" signature="-1:-1" placeholder="select `stud..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/view_teacherpanel.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-25.625" vertical-offset="0" max-vertical-offset="765">
+          <caret line="41" column="0" selection-start-line="41" selection-start-column="0" selection-end-line="41" selection-end-column="0" />
+          <folding>
+            <element signature="e#6#97#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/teacherpanel.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="27030">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <marker date="1496403762000" expanded="true" signature="-1:-1" placeholder="SELECT langu..studentlanguage..." />
+            <marker date="1496403762000" expanded="true" signature="-1:-1" placeholder="SELECT stude..student..." />
+            <marker date="1496403762000" expanded="true" signature="-1:-1" placeholder="SELECT langu..studentlanguage..." />
+            <marker date="1496403762000" expanded="true" signature="-1:-1" placeholder="SELECT stude..student..." />
+            <marker date="1496403762000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1496403762000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1496403762000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1496403762000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1496403762000" expanded="true" signature="-1:-1" placeholder="select admin..school..." />
+            <marker date="1496403762000" expanded="true" signature="-1:-1" placeholder="select teach..teacher..." />
+            <marker date="1496403762000" expanded="true" signature="-1:-1" placeholder="select stude..student..." />
+            <marker date="1496403762000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1496403762000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1496403762000" expanded="true" signature="-1:-1" placeholder="insert into ..." />
+            <marker date="1496403762000" expanded="true" signature="-1:-1" placeholder="DELETE FROM ..." />
+            <marker date="1496403762000" expanded="true" signature="-1:-1" placeholder="select class..classteacher..." />
+            <marker date="1496403762000" expanded="true" signature="-1:-1" placeholder="select * fro..student..." />
+            <marker date="1496403762000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1496403762000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1496403762000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1496403762000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1496403762000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1496403762000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1496403762000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1496403762000" expanded="true" signature="-1:-1" placeholder="select class..classteacher..." />
+            <marker date="1496403762000" expanded="true" signature="-1:-1" placeholder="select `stud..." />
+            <marker date="1496403762000" expanded="true" signature="-1:-1" placeholder="select `stud..." />
+            <marker date="1496403762000" expanded="true" signature="-1:-1" placeholder="select `stud..." />
+            <marker date="1496403762000" expanded="true" signature="-1:-1" placeholder="select `stud..." />
+            <marker date="1496403762000" expanded="true" signature="-1:-1" placeholder="select `stud..." />
+            <marker date="1496403762000" expanded="true" signature="-1:-1" placeholder="select `stud..." />
+            <marker date="1496403762000" expanded="true" signature="-1:-1" placeholder="select `stud..." />
+            <marker date="1496403762000" expanded="true" signature="-1:-1" placeholder="select x , C..temptable..." />
+            <marker date="1496403762000" expanded="true" signature="-1:-1" placeholder="select `stud..." />
+            <marker date="1496403762000" expanded="true" signature="-1:-1" placeholder="select class..classteacher..." />
+            <marker date="1496403762000" expanded="true" signature="-1:-1" placeholder="SELECT langu..studentlanguage..." />
+            <marker date="1496403762000" expanded="true" signature="-1:-1" placeholder="SELECT stude..student..." />
+            <marker date="1496403762000" expanded="true" signature="-1:-1" placeholder="select class..classteacher..." />
+            <marker date="1496403762000" expanded="true" signature="-1:-1" placeholder="SELECT relig..student..." />
+            <marker date="1496403762000" expanded="true" signature="-1:-1" placeholder="SELECT langu..studentlanguage..." />
+            <marker date="1496403762000" expanded="true" signature="-1:-1" placeholder="SELECT stude..student..." />
+            <marker date="1496403762000" expanded="true" signature="-1:-1" placeholder="SELECT langu..studentlanguage..." />
+            <marker date="1496403762000" expanded="true" signature="-1:-1" placeholder="SELECT stude..student..." />
+            <marker date="1496403762000" expanded="true" signature="-1:-1" placeholder="SELECT langu..studentlanguage..." />
+            <marker date="1496403762000" expanded="true" signature="-1:-1" placeholder="SELECT stude..student..." />
+            <marker date="1496403762000" expanded="true" signature="-1:-1" placeholder="SELECT langu..studentlanguage..." />
+            <marker date="1496403762000" expanded="true" signature="-1:-1" placeholder="SELECT stude..student..." />
+            <marker date="1496403762000" expanded="true" signature="-1:-1" placeholder="SELECT langu..studentlanguage..." />
+            <marker date="1496403762000" expanded="true" signature="-1:-1" placeholder="SELECT stude..student..." />
+            <marker date="1496403762000" expanded="true" signature="-1:-1" placeholder="SELECT langu..studentlanguage..." />
+            <marker date="1496403762000" expanded="true" signature="-1:-1" placeholder="SELECT stude..student..." />
+            <marker date="1496403762000" expanded="true" signature="-1:-1" placeholder="SELECT langu..studentlanguage..." />
+            <marker date="1496403762000" expanded="true" signature="-1:-1" placeholder="SELECT stude..student..." />
+            <marker date="1496403762000" expanded="true" signature="-1:-1" placeholder="SELECT langu..studentlanguage..." />
+            <marker date="1496403762000" expanded="true" signature="-1:-1" placeholder="SELECT stude..student..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/template/js/teacherpanel/google_chart.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="443" max-vertical-offset="1425">
+          <caret line="89" column="1" selection-start-line="89" selection-start-column="1" selection-end-line="89" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/staffregistrationstep2.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="84.375" vertical-offset="2025" max-vertical-offset="5220">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <marker date="1496479965000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1496479965000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1496479965000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1496479965000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1496479965000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1496479965000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1496479965000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1496479965000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1496479965000" expanded="true" signature="-1:-1" placeholder="select relig..religions..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/staffregistrationstep1.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-10.019608" vertical-offset="3719" max-vertical-offset="4845">
+          <caret line="282" column="0" selection-start-line="282" selection-start-column="0" selection-end-line="282" selection-end-column="0" />
+          <folding>
+            <element signature="n#style#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#input#0;n#div#0;n#form#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#input#1;n#div#0;n#form#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#input#0;n#div#1;n#form#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#input#1;n#div#1;n#form#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#select#0;n#div#2;n#form#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#0;n#form#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#1;n#form#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#label#1;n#span#1;n#form#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#input#0;n#label#1;n#span#1;n#form#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#0;n#div#4;n#form#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#button#0;n#form#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <marker date="1496483097000" expanded="true" signature="-1:-1" placeholder="select orgid..staff..." />
+            <marker date="1496483097000" expanded="true" signature="-1:-1" placeholder="select orgna..organisationadmin..." />
+            <marker date="1496483097000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1496483097000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1496483097000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1496483097000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1496483097000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1496483097000" expanded="true" signature="-1:-1" placeholder="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/model/access/access_teacherpanel.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="1.2043344" vertical-offset="932" max-vertical-offset="1890">
+          <caret line="119" column="12" selection-start-line="116" selection-start-column="7" selection-end-line="120" selection-end-column="9" />
+          <folding>
+            <marker date="1496411891000" expanded="true" signature="-1:-1" placeholder="select `stud..." />
+            <marker date="1496411891000" expanded="true" signature="-1:-1" placeholder="select `stud..." />
+            <marker date="1496411891000" expanded="true" signature="-1:-1" placeholder="select `stud..." />
+            <marker date="1496411891000" expanded="true" signature="-1:-1" placeholder="select `stud..." />
+            <marker date="1496411891000" expanded="true" signature="-1:-1" placeholder="select `stud..." />
+            <marker date="1496411891000" expanded="true" signature="-1:-1" placeholder="select `stud..." />
+            <marker date="1496411891000" expanded="true" signature="-1:-1" placeholder="select `stud..." />
+            <marker date="1496411891000" expanded="true" signature="-1:-1" placeholder="select x , C..temptable..." />
+            <marker date="1496411891000" expanded="true" signature="-1:-1" placeholder="select `stud..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/staffregistrationstep3.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-14.833333" vertical-offset="4189" max-vertical-offset="8310">
+          <caret line="303" column="38" selection-start-line="303" selection-start-column="29" selection-end-line="303" selection-end-column="38" />
+          <folding>
+            <marker date="1496482189000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1496482189000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1496482189000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1496482189000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1496482189000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1496482189000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1496482189000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1496482189000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1496482189000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1496482189000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1496482189000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1496482189000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1496482189000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1496482189000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1496482189000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1496482189000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1496482189000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1496482189000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1496482189000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1496482189000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1496482189000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1496482189000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1496482189000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1496482189000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1496482189000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1496482189000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1496482189000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1496482189000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1496482189000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1496482189000" expanded="true" signature="-1:-1" placeholder="UPDATE staff..." />
+            <marker date="1496482189000" expanded="true" signature="-1:-1" placeholder="insert into ..." />
+            <marker date="1496482189000" expanded="true" signature="-1:-1" placeholder="insert into ..." />
+            <marker date="1496482189000" expanded="true" signature="-1:-1" placeholder="select deptn..staff..." />
+            <marker date="1496482189000" expanded="true" signature="-1:-1" placeholder="delete from ..." />
+            <marker date="1496482189000" expanded="true" signature="-1:-1" placeholder="insert into ..." />
+            <marker date="1496482189000" expanded="true" signature="-1:-1" placeholder="select count..countries..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/model/access/test_file.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.23219815" vertical-offset="0" max-vertical-offset="646">
+          <caret line="10" column="0" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="72" />
+          <folding>
+            <element signature="e#6#97#0#PHP" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/religonteacherdataout(peyman edit check bugs).php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-23.166666" vertical-offset="599" max-vertical-offset="1245">
+          <caret line="77" column="2" selection-start-line="77" selection-start-column="2" selection-end-line="77" selection-end-column="2" />
+          <folding>
+            <element signature="e#6#97#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/model/access/key_facts_function.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.43841335" vertical-offset="645" max-vertical-offset="3180">
+          <caret line="15" column="0" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
+          <folding>
+            <element signature="e#6#98#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/admin_teacher.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-5.611171" vertical-offset="15004" max-vertical-offset="31845">
+          <caret line="652" column="0" selection-start-line="652" selection-start-column="0" selection-end-line="652" selection-end-column="0" />
+          <folding>
+            <element signature="e#6#97#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/model/access/invite.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="210.58333" vertical-offset="5054" max-vertical-offset="5760">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="378" selection-end-column="0" />
+          <folding>
+            <element signature="e#6#97#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/teamadminpanel(peyman edit check bugs).php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="290.0" vertical-offset="7080" max-vertical-offset="33330">
+          <caret line="8" column="0" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
+          <folding>
+            <element signature="e#6#97#0#PHP" expanded="true" />
+            <marker date="1496727130000" expanded="true" signature="-1:-1" placeholder="select * fro..teamadmin..." />
+            <marker date="1496727130000" expanded="true" signature="-1:-1" placeholder="select * fro..organisationadmin..." />
+            <marker date="1496727130000" expanded="true" signature="-1:-1" placeholder="select deptn..orgteamdetail..." />
+            <marker date="1496727130000" expanded="true" signature="-1:-1" placeholder="select teamn..orgteamdetail..." />
+            <marker date="1496727130000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1496727130000" expanded="true" signature="-1:-1" placeholder="SELECT relig..staff..." />
+            <marker date="1496727130000" expanded="true" signature="-1:-1" placeholder="SELECT relig..staff..." />
+            <marker date="1496727130000" expanded="true" signature="-1:-1" placeholder="select `staf..." />
+            <marker date="1496727130000" expanded="true" signature="-1:-1" placeholder="select `staf..." />
+            <marker date="1496727130000" expanded="true" signature="-1:-1" placeholder="select `staf..." />
+            <marker date="1496727130000" expanded="true" signature="-1:-1" placeholder="select `staf..." />
+            <marker date="1496727130000" expanded="true" signature="-1:-1" placeholder="select `staf..." />
+            <marker date="1496727130000" expanded="true" signature="-1:-1" placeholder="select `staf..." />
+            <marker date="1496727130000" expanded="true" signature="-1:-1" placeholder="select `staf..." />
+            <marker date="1496727130000" expanded="true" signature="-1:-1" placeholder="select x , C..temptable..." />
+            <marker date="1496727130000" expanded="true" signature="-1:-1" placeholder="select `staf..." />
+            <marker date="1496727130000" expanded="true" signature="-1:-1" placeholder="SELECT langu..stafflanguage..." />
+            <marker date="1496727130000" expanded="true" signature="-1:-1" placeholder="SELECT staff..staff..." />
+            <marker date="1496727130000" expanded="true" signature="-1:-1" placeholder="SELECT langu..stafflanguage..." />
+            <marker date="1496727130000" expanded="true" signature="-1:-1" placeholder="SELECT staff..staff..." />
+            <marker date="1496727130000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1496727130000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1496727130000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1496727130000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1496727130000" expanded="true" signature="-1:-1" placeholder="select staff..staff..." />
+            <marker date="1496727130000" expanded="true" signature="-1:-1" placeholder="select teame..teamadmin..." />
+            <marker date="1496727130000" expanded="true" signature="-1:-1" placeholder="select orgad..organisationadmin..." />
+            <marker date="1496727130000" expanded="true" signature="-1:-1" placeholder="select depte..deptadmin..." />
+            <marker date="1496727130000" expanded="true" signature="-1:-1" placeholder="select admin..school..." />
+            <marker date="1496727130000" expanded="true" signature="-1:-1" placeholder="select teach..teacher..." />
+            <marker date="1496727130000" expanded="true" signature="-1:-1" placeholder="select stude..student..." />
+            <marker date="1496727130000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1496727130000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1496727130000" expanded="true" signature="-1:-1" placeholder="insert into ..." />
+            <marker date="1496727130000" expanded="true" signature="-1:-1" placeholder="DELETE FROM ..." />
+            <marker date="1496727130000" expanded="true" signature="-1:-1" placeholder="select teamn..orgteamdetail..." />
+            <marker date="1496727130000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1496727130000" expanded="true" signature="-1:-1" placeholder="select * fro..staff..." />
+            <marker date="1496727130000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1496727130000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1496727130000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1496727130000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1496727130000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1496727130000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1496727130000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1496727130000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1496727130000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1496727130000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1496727130000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1496727130000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1496727130000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1496727130000" expanded="true" signature="-1:-1" placeholder="select teamn..orgteamdetail..." />
+            <marker date="1496727130000" expanded="true" signature="-1:-1" placeholder="select `staf..." />
+            <marker date="1496727130000" expanded="true" signature="-1:-1" placeholder="select `staf..." />
+            <marker date="1496727130000" expanded="true" signature="-1:-1" placeholder="select `staf..." />
+            <marker date="1496727130000" expanded="true" signature="-1:-1" placeholder="select `staf..." />
+            <marker date="1496727130000" expanded="true" signature="-1:-1" placeholder="select `staf..." />
+            <marker date="1496727130000" expanded="true" signature="-1:-1" placeholder="select `staf..." />
+            <marker date="1496727130000" expanded="true" signature="-1:-1" placeholder="select `staf..." />
+            <marker date="1496727130000" expanded="true" signature="-1:-1" placeholder="select x , C..temptable..." />
+            <marker date="1496727130000" expanded="true" signature="-1:-1" placeholder="select `staf..." />
+            <marker date="1496727130000" expanded="true" signature="-1:-1" placeholder="select teamn..orgteamdetail..." />
+            <marker date="1496727130000" expanded="true" signature="-1:-1" placeholder="SELECT langu..stafflanguage..." />
+            <marker date="1496727130000" expanded="true" signature="-1:-1" placeholder="SELECT staff..staff..." />
+            <marker date="1496727130000" expanded="true" signature="-1:-1" placeholder="select teamn..orgteamdetail..." />
+            <marker date="1496727130000" expanded="true" signature="-1:-1" placeholder="SELECT relig..staff..." />
+            <marker date="1496727130000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1496727130000" expanded="true" signature="-1:-1" placeholder="SELECT langu..stafflanguage..." />
+            <marker date="1496727130000" expanded="true" signature="-1:-1" placeholder="SELECT staff..staff..." />
+            <marker date="1496727130000" expanded="true" signature="-1:-1" placeholder="SELECT langu..stafflanguage..." />
+            <marker date="1496727130000" expanded="true" signature="-1:-1" placeholder="SELECT staff..staff..." />
+            <marker date="1496727130000" expanded="true" signature="-1:-1" placeholder="SELECT langu..stafflanguage..." />
+            <marker date="1496727130000" expanded="true" signature="-1:-1" placeholder="SELECT staff..staff..." />
+            <marker date="1496727130000" expanded="true" signature="-1:-1" placeholder="SELECT langu..stafflanguage..." />
+            <marker date="1496727130000" expanded="true" signature="-1:-1" placeholder="SELECT staff..staff..." />
+            <marker date="1496727130000" expanded="true" signature="-1:-1" placeholder="SELECT langu..stafflanguage..." />
+            <marker date="1496727130000" expanded="true" signature="-1:-1" placeholder="SELECT staff..staff..." />
+            <marker date="1496727130000" expanded="true" signature="-1:-1" placeholder="SELECT langu..stafflanguage..." />
+            <marker date="1496727130000" expanded="true" signature="-1:-1" placeholder="SELECT staff..staff..." />
+            <marker date="1496727130000" expanded="true" signature="-1:-1" placeholder="SELECT langu..stafflanguage..." />
+            <marker date="1496727130000" expanded="true" signature="-1:-1" placeholder="SELECT staff..staff..." />
+            <marker date="1496727130000" expanded="true" signature="-1:-1" placeholder="SELECT langu..stafflanguage..." />
+            <marker date="1496727130000" expanded="true" signature="-1:-1" placeholder="SELECT staff..staff..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/temp/teampanel.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-11.166667" vertical-offset="28067" max-vertical-offset="29085">
+          <caret line="1889" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="1933" selection-end-column="9" />
+          <folding>
+            <element signature="n#style#0;n#div#1;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#2;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#li#0;n#ul#0;n#div#2;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#li#1;n#ul#0;n#div#2;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#li#2;n#ul#0;n#div#2;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#li#3;n#ul#0;n#div#2;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#li#4;n#ul#0;n#div#2;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#li#5;n#ul#0;n#div#2;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#tr#0;n#form#0;n#div#0;n#div#0;n#div#2;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#button#0;n#td#5;n#tr#0;n#form#0;n#div#0;n#div#0;n#div#2;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#a#1;n#form#0;n#div#0;n#div#0;n#div#2;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#0;n#div#0;n#div#0;n#div#2;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#2;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#1;n#div#0;n#div#1;n#div#0;n#div#2;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#button#0;n#div#0;n#div#2;n#div#0;n#div#2;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#button#0;n#div#1;n#div#2;n#div#0;n#div#2;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#2;n#div#2;n#div#0;n#div#2;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#3;n#div#0;n#div#2;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#1;n#div#3;n#div#0;n#div#2;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#h3#0;n#div#0;n#div#0;n#div#0;n#div#1;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#0;n#h3#0;n#div#1;n#div#0;n#div#0;n#div#1;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#h4#0;n#div#0;n#div#0;n#div#0;n#div#2;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#h3#0;n#form#0;n#div#1;n#div#0;n#div#0;n#div#2;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#label#0;n#div#0;n#form#0;n#div#1;n#div#0;n#div#0;n#div#2;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#input#0;n#div#0;n#div#0;n#form#0;n#div#1;n#div#0;n#div#0;n#div#2;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#label#0;n#div#1;n#div#0;n#div#4;n#form#0;n#div#1;n#div#0;n#div#0;n#div#2;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#h3#1;n#form#0;n#div#1;n#div#0;n#div#0;n#div#2;n#!!top" expanded="true" />
+            <marker date="1496906087000" expanded="true" signature="208:266" placeholder="select * fro..teamadmin..." />
+            <marker date="1496906087000" expanded="true" signature="817:875" placeholder="select * fro..organisationadmin..." />
+            <marker date="1496906087000" expanded="true" signature="1156:1250" placeholder="select deptn..orgteamdetail..." />
+            <marker date="1496906087000" expanded="true" signature="1428:1522" placeholder="select teamn..orgteamdetail..." />
+            <marker date="1496906087000" expanded="true" signature="2147:2197" placeholder="..." />
+            <marker date="1496906087000" expanded="true" signature="6959:7157" placeholder="SELECT relig..staff..." />
+            <marker date="1496906087000" expanded="true" signature="7204:7402" placeholder="SELECT relig..staff..." />
+            <marker date="1496906087000" expanded="true" signature="9826:10016" placeholder="select `staf..." />
+            <marker date="1496906087000" expanded="true" signature="10265:10461" placeholder="select `staf..." />
+            <marker date="1496906087000" expanded="true" signature="10710:10906" placeholder="select `staf..." />
+            <marker date="1496906087000" expanded="true" signature="11158:11361" placeholder="select `staf..." />
+            <marker date="1496906087000" expanded="true" signature="11613:11816" placeholder="select `staf..." />
+            <marker date="1496906087000" expanded="true" signature="12068:12271" placeholder="select `staf..." />
+            <marker date="1496906087000" expanded="true" signature="12523:12726" placeholder="select `staf..." />
+            <marker date="1496906087000" expanded="true" signature="13033:13278" placeholder="select x , C..temptable..." />
+            <marker date="1496906087000" expanded="true" signature="13062:13252" placeholder="select `staf..." />
+            <marker date="1496906087000" expanded="true" signature="15015:15271" placeholder="SELECT langu..stafflanguage..." />
+            <marker date="1496906087000" expanded="true" signature="15099:15212" placeholder="SELECT staff..staff..." />
+            <marker date="1496906087000" expanded="true" signature="15317:15573" placeholder="SELECT langu..stafflanguage..." />
+            <marker date="1496906087000" expanded="true" signature="15401:15514" placeholder="SELECT staff..staff..." />
+            <marker date="1496906087000" expanded="true" signature="20841:20935" placeholder="select teamn..orgteamdetail..." />
+            <marker date="1496906087000" expanded="true" signature="21159:21173" placeholder="..." />
+            <marker date="1496906087000" expanded="true" signature="22156:22282" placeholder="select * fro..staff..." />
+            <marker date="1496906087000" expanded="true" signature="22712:22748" placeholder="..." />
+            <marker date="1496906087000" expanded="true" signature="22855:22867" placeholder="..." />
+            <marker date="1496906087000" expanded="true" signature="22934:22945" placeholder="..." />
+            <marker date="1496906087000" expanded="true" signature="23021:23032" placeholder="..." />
+            <marker date="1496906087000" expanded="true" signature="23811:23822" placeholder="..." />
+            <marker date="1496906087000" expanded="true" signature="23889:23900" placeholder="..." />
+            <marker date="1496906087000" expanded="true" signature="23969:23980" placeholder="..." />
+            <marker date="1496906087000" expanded="true" signature="26379:26390" placeholder="..." />
+            <marker date="1496906087000" expanded="true" signature="26602:26613" placeholder="..." />
+            <marker date="1496906087000" expanded="true" signature="27220:27231" placeholder="..." />
+            <marker date="1496906087000" expanded="true" signature="31952:31964" placeholder="..." />
+            <marker date="1496906087000" expanded="true" signature="32652:32689" placeholder="..." />
+            <marker date="1496906087000" expanded="true" signature="32913:32924" placeholder="..." />
+            <marker date="1496906087000" expanded="true" signature="33647:33659" placeholder="..." />
+            <marker date="1496906087000" expanded="true" signature="36356:36450" placeholder="select teamn..orgteamdetail..." />
+            <marker date="1496906087000" expanded="true" signature="40969:41159" placeholder="select `staf..." />
+            <marker date="1496906087000" expanded="true" signature="41548:41744" placeholder="select `staf..." />
+            <marker date="1496906087000" expanded="true" signature="42133:42329" placeholder="select `staf..." />
+            <marker date="1496906087000" expanded="true" signature="42721:42924" placeholder="select `staf..." />
+            <marker date="1496906087000" expanded="true" signature="43316:43519" placeholder="select `staf..." />
+            <marker date="1496906087000" expanded="true" signature="43911:44114" placeholder="select `staf..." />
+            <marker date="1496906087000" expanded="true" signature="44506:44709" placeholder="select `staf..." />
+            <marker date="1496906087000" expanded="true" signature="45232:45477" placeholder="select x , C..temptable..." />
+            <marker date="1496906087000" expanded="true" signature="45261:45451" placeholder="select `staf..." />
+            <marker date="1496906087000" expanded="true" signature="47000:47094" placeholder="select teamn..orgteamdetail..." />
+            <marker date="1496906087000" expanded="true" signature="50056:50312" placeholder="SELECT langu..stafflanguage..." />
+            <marker date="1496906087000" expanded="true" signature="50140:50253" placeholder="SELECT staff..staff..." />
+            <marker date="1496906087000" expanded="true" signature="51591:51685" placeholder="select teamn..orgteamdetail..." />
+            <marker date="1496906087000" expanded="true" signature="52944:53142" placeholder="SELECT relig..staff..." />
+            <marker date="1496906087000" expanded="true" signature="54788:54839" placeholder="..." />
+            <marker date="1496906087000" expanded="true" signature="60838:61094" placeholder="SELECT langu..stafflanguage..." />
+            <marker date="1496906087000" expanded="true" signature="60922:61035" placeholder="SELECT staff..staff..." />
+            <marker date="1496906087000" expanded="true" signature="61858:62114" placeholder="SELECT langu..stafflanguage..." />
+            <marker date="1496906087000" expanded="true" signature="61942:62055" placeholder="SELECT staff..staff..." />
+            <marker date="1496906087000" expanded="true" signature="62814:63092" placeholder="SELECT langu..stafflanguage..." />
+            <marker date="1496906087000" expanded="true" signature="62898:63033" placeholder="SELECT staff..staff..." />
+            <marker date="1496906087000" expanded="true" signature="63778:64056" placeholder="SELECT langu..stafflanguage..." />
+            <marker date="1496906087000" expanded="true" signature="63862:63997" placeholder="SELECT staff..staff..." />
+            <marker date="1496906087000" expanded="true" signature="64776:65054" placeholder="SELECT langu..stafflanguage..." />
+            <marker date="1496906087000" expanded="true" signature="64860:64995" placeholder="SELECT staff..staff..." />
+            <marker date="1496906087000" expanded="true" signature="65740:66018" placeholder="SELECT langu..stafflanguage..." />
+            <marker date="1496906087000" expanded="true" signature="65824:65959" placeholder="SELECT staff..staff..." />
+            <marker date="1496906087000" expanded="true" signature="66734:67012" placeholder="SELECT langu..stafflanguage..." />
+            <marker date="1496906087000" expanded="true" signature="66818:66953" placeholder="SELECT staff..staff..." />
+            <marker date="1496906087000" expanded="true" signature="67699:67977" placeholder="SELECT langu..stafflanguage..." />
+            <marker date="1496906087000" expanded="true" signature="67783:67918" placeholder="SELECT staff..staff..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/temp/teacherpanel.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-9.916667" vertical-offset="56312" max-vertical-offset="57330">
+          <caret line="3770" column="0" selection-start-line="3770" selection-start-column="0" selection-end-line="3770" selection-end-column="0" />
+          <folding>
+            <element signature="n#style#0;n#div#1;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#2;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#a#0;n#form#0;n#div#0;n#div#0;n#div#2;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#tr#0;n#form#0;n#div#0;n#div#0;n#div#2;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#a#1;n#div#0;n#div#0;n#div#2;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#0;n#div#0;n#div#0;n#div#2;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#2;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#1;n#div#0;n#div#1;n#div#0;n#div#2;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#button#0;n#div#0;n#div#2;n#div#0;n#div#2;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#1;n#div#2;n#div#0;n#div#2;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#3;n#div#0;n#div#2;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#1;n#div#3;n#div#0;n#div#2;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#ul#0;n#div#4;n#div#0;n#div#2;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#a#0;n#li#0;n#ul#0;n#div#4;n#div#0;n#div#2;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#a#0;n#li#1;n#ul#0;n#div#4;n#div#0;n#div#2;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#a#0;n#li#2;n#ul#0;n#div#4;n#div#0;n#div#2;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#a#0;n#li#3;n#ul#0;n#div#4;n#div#0;n#div#2;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#h3#0;n#div#0;n#div#0;n#div#0;n#div#1;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#0;n#h3#0;n#div#1;n#div#0;n#div#0;n#div#1;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#h4#0;n#div#0;n#div#0;n#div#0;n#div#2;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#h3#0;n#form#0;n#div#1;n#div#0;n#div#0;n#div#2;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#input#0;n#div#0;n#div#0;n#form#0;n#div#1;n#div#0;n#div#0;n#div#2;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#label#0;n#div#1;n#div#0;n#div#4;n#form#0;n#div#1;n#div#0;n#div#0;n#div#2;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#h3#1;n#form#0;n#div#1;n#div#0;n#div#0;n#div#2;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#1;n#div#0;n#div#0;n#div#0;n#body#0;n#html#1;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#2;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#body#0;n#html#1;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#a#0;n#form#0;n#div#0;n#div#0;n#div#2;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#body#0;n#html#1;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#tr#0;n#form#0;n#div#0;n#div#0;n#div#2;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#body#0;n#html#1;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#a#1;n#div#0;n#div#0;n#div#2;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#body#0;n#html#1;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#0;n#div#0;n#div#0;n#div#2;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#body#0;n#html#1;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#2;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#body#0;n#html#1;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#1;n#div#0;n#div#1;n#div#0;n#div#2;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#body#0;n#html#1;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#button#0;n#div#0;n#div#2;n#div#0;n#div#2;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#body#0;n#html#1;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#1;n#div#2;n#div#0;n#div#2;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#body#0;n#html#1;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#3;n#div#0;n#div#2;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#body#0;n#html#1;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#1;n#div#3;n#div#0;n#div#2;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#body#0;n#html#1;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#ul#0;n#div#4;n#div#0;n#div#2;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#body#0;n#html#1;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#a#0;n#li#0;n#ul#0;n#div#4;n#div#0;n#div#2;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#body#0;n#html#1;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#a#0;n#li#1;n#ul#0;n#div#4;n#div#0;n#div#2;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#body#0;n#html#1;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#a#0;n#li#2;n#ul#0;n#div#4;n#div#0;n#div#2;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#body#0;n#html#1;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#a#0;n#li#3;n#ul#0;n#div#4;n#div#0;n#div#2;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#body#0;n#html#1;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#h3#0;n#div#0;n#div#0;n#div#0;n#div#4;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#0;n#h3#0;n#div#1;n#div#0;n#div#0;n#div#4;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#h4#0;n#div#0;n#div#0;n#div#0;n#div#5;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#h3#0;n#form#0;n#div#1;n#div#0;n#div#0;n#div#5;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#input#0;n#div#0;n#div#0;n#form#0;n#div#1;n#div#0;n#div#0;n#div#5;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#label#0;n#div#1;n#div#0;n#div#4;n#form#0;n#div#1;n#div#0;n#div#0;n#div#5;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#h3#1;n#form#0;n#div#1;n#div#0;n#div#0;n#div#5;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/backup/teamadminpanel (1).php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="29085">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <marker date="1496907785000" expanded="true" signature="208:266" placeholder="select * fro..teamadmin..." />
+            <marker date="1496907785000" expanded="true" signature="817:875" placeholder="select * fro..organisationadmin..." />
+            <marker date="1496907785000" expanded="true" signature="1156:1250" placeholder="select deptn..orgteamdetail..." />
+            <marker date="1496907785000" expanded="true" signature="1428:1522" placeholder="select teamn..orgteamdetail..." />
+            <marker date="1496907785000" expanded="true" signature="2147:2197" placeholder="..." />
+            <marker date="1496907785000" expanded="true" signature="6959:7157" placeholder="SELECT relig..staff..." />
+            <marker date="1496907785000" expanded="true" signature="7204:7402" placeholder="SELECT relig..staff..." />
+            <marker date="1496907785000" expanded="true" signature="9826:10016" placeholder="select `staf..." />
+            <marker date="1496907785000" expanded="true" signature="10265:10461" placeholder="select `staf..." />
+            <marker date="1496907785000" expanded="true" signature="10710:10906" placeholder="select `staf..." />
+            <marker date="1496907785000" expanded="true" signature="11158:11361" placeholder="select `staf..." />
+            <marker date="1496907785000" expanded="true" signature="11613:11816" placeholder="select `staf..." />
+            <marker date="1496907785000" expanded="true" signature="12068:12271" placeholder="select `staf..." />
+            <marker date="1496907785000" expanded="true" signature="12523:12726" placeholder="select `staf..." />
+            <marker date="1496907785000" expanded="true" signature="13033:13278" placeholder="select x , C..temptable..." />
+            <marker date="1496907785000" expanded="true" signature="13062:13252" placeholder="select `staf..." />
+            <marker date="1496907785000" expanded="true" signature="15015:15271" placeholder="SELECT langu..stafflanguage..." />
+            <marker date="1496907785000" expanded="true" signature="15099:15212" placeholder="SELECT staff..staff..." />
+            <marker date="1496907785000" expanded="true" signature="15317:15573" placeholder="SELECT langu..stafflanguage..." />
+            <marker date="1496907785000" expanded="true" signature="15401:15514" placeholder="SELECT staff..staff..." />
+            <marker date="1496907785000" expanded="true" signature="20841:20935" placeholder="select teamn..orgteamdetail..." />
+            <marker date="1496907785000" expanded="true" signature="21159:21173" placeholder="..." />
+            <marker date="1496907785000" expanded="true" signature="22156:22282" placeholder="select * fro..staff..." />
+            <marker date="1496907785000" expanded="true" signature="22712:22748" placeholder="..." />
+            <marker date="1496907785000" expanded="true" signature="22855:22867" placeholder="..." />
+            <marker date="1496907785000" expanded="true" signature="22934:22945" placeholder="..." />
+            <marker date="1496907785000" expanded="true" signature="23021:23032" placeholder="..." />
+            <marker date="1496907785000" expanded="true" signature="23811:23822" placeholder="..." />
+            <marker date="1496907785000" expanded="true" signature="23889:23900" placeholder="..." />
+            <marker date="1496907785000" expanded="true" signature="23969:23980" placeholder="..." />
+            <marker date="1496907785000" expanded="true" signature="26379:26390" placeholder="..." />
+            <marker date="1496907785000" expanded="true" signature="26602:26613" placeholder="..." />
+            <marker date="1496907785000" expanded="true" signature="27220:27231" placeholder="..." />
+            <marker date="1496907785000" expanded="true" signature="31952:31964" placeholder="..." />
+            <marker date="1496907785000" expanded="true" signature="32917:32928" placeholder="..." />
+            <marker date="1496907785000" expanded="true" signature="33651:33663" placeholder="..." />
+            <marker date="1496907785000" expanded="true" signature="36360:36454" placeholder="select teamn..orgteamdetail..." />
+            <marker date="1496907785000" expanded="true" signature="40973:41163" placeholder="select `staf..." />
+            <marker date="1496907785000" expanded="true" signature="41552:41748" placeholder="select `staf..." />
+            <marker date="1496907785000" expanded="true" signature="42137:42333" placeholder="select `staf..." />
+            <marker date="1496907785000" expanded="true" signature="42725:42928" placeholder="select `staf..." />
+            <marker date="1496907785000" expanded="true" signature="43320:43523" placeholder="select `staf..." />
+            <marker date="1496907785000" expanded="true" signature="43915:44118" placeholder="select `staf..." />
+            <marker date="1496907785000" expanded="true" signature="44510:44713" placeholder="select `staf..." />
+            <marker date="1496907785000" expanded="true" signature="45236:45481" placeholder="select x , C..temptable..." />
+            <marker date="1496907785000" expanded="true" signature="45265:45455" placeholder="select `staf..." />
+            <marker date="1496907785000" expanded="true" signature="47004:47098" placeholder="select teamn..orgteamdetail..." />
+            <marker date="1496907785000" expanded="true" signature="50060:50316" placeholder="SELECT langu..stafflanguage..." />
+            <marker date="1496907785000" expanded="true" signature="50144:50257" placeholder="SELECT staff..staff..." />
+            <marker date="1496907785000" expanded="true" signature="51595:51689" placeholder="select teamn..orgteamdetail..." />
+            <marker date="1496907785000" expanded="true" signature="52948:53146" placeholder="SELECT relig..staff..." />
+            <marker date="1496907785000" expanded="true" signature="54792:54843" placeholder="..." />
+            <marker date="1496907785000" expanded="true" signature="60842:61098" placeholder="SELECT langu..stafflanguage..." />
+            <marker date="1496907785000" expanded="true" signature="60926:61039" placeholder="SELECT staff..staff..." />
+            <marker date="1496907785000" expanded="true" signature="61862:62118" placeholder="SELECT langu..stafflanguage..." />
+            <marker date="1496907785000" expanded="true" signature="61946:62059" placeholder="SELECT staff..staff..." />
+            <marker date="1496907785000" expanded="true" signature="62818:63096" placeholder="SELECT langu..stafflanguage..." />
+            <marker date="1496907785000" expanded="true" signature="62902:63037" placeholder="SELECT staff..staff..." />
+            <marker date="1496907785000" expanded="true" signature="63782:64060" placeholder="SELECT langu..stafflanguage..." />
+            <marker date="1496907785000" expanded="true" signature="63866:64001" placeholder="SELECT staff..staff..." />
+            <marker date="1496907785000" expanded="true" signature="64780:65058" placeholder="SELECT langu..stafflanguage..." />
+            <marker date="1496907785000" expanded="true" signature="64864:64999" placeholder="SELECT staff..staff..." />
+            <marker date="1496907785000" expanded="true" signature="65744:66022" placeholder="SELECT langu..stafflanguage..." />
+            <marker date="1496907785000" expanded="true" signature="65828:65963" placeholder="SELECT staff..staff..." />
+            <marker date="1496907785000" expanded="true" signature="66738:67016" placeholder="SELECT langu..stafflanguage..." />
+            <marker date="1496907785000" expanded="true" signature="66822:66957" placeholder="SELECT staff..staff..." />
+            <marker date="1496907785000" expanded="true" signature="67703:67981" placeholder="SELECT langu..stafflanguage..." />
+            <marker date="1496907785000" expanded="true" signature="67787:67922" placeholder="SELECT staff..staff..." />
           </folding>
         </state>
       </provider>
