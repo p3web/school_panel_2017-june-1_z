@@ -1,0 +1,212 @@
+
+<style>
+    .Chart-table th{
+        text-align: center !important;
+    }
+</style>
+<br>
+<div id="PSCO_chart" class="container-fluid">
+    <div class="row">
+        <div class="col-xs-12 col-md-8 col-md-push-2">
+            <div class="dropdown" style="display: inline-block; margin-bottom: 50px">
+                <button id="TeamL" class="btn btn-default" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Team Select
+                    <span class="caret"></span>
+                </button>
+                <ul class="dropdown-menu" aria-labelledby="dLabel">
+                    <li><a href="#" onclick="changeChartData('ChartContainer' , series)" >CITeam</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="col-xs-12 col-md-8 col-md-push-2">
+            <div class="dropdown" style="display: inline-block;">
+                <button id="GenderL" class="btn btn-primary" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Select Gender
+                    <span class="caret"></span>
+                </button>
+                <ul class="dropdown-menu" aria-labelledby="dLabel">
+                  <li><a href="#"> All</a></li>
+                    <li><a href="#"> Male</a></li>
+                    <li><a href="#"> Female</a></li>
+                    <li><a href="#"> Other</a></li>
+                </ul>
+            </div>
+            <div class="dropdown" style="display: inline-block;">
+                <button id="ChartTypel" class="btn btn-primary" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Select Chart Type
+                    <span class="caret"></span>
+                </button>
+                <ul class="dropdown-menu" aria-labelledby="dLabel">
+                    <li><a href="#" onclick="PieChart('ChartContainer' , series)" > Pie</a></li>
+                    <li><a href="#" onclick="BarChart('ChartContainer' , series)"> Bar</a></li>
+                </ul>
+            </div>
+            <a href="teamadminlangout.csv" class="btn btn-primary" style="display: inline-block;">Export CSV</a>
+        </div>
+        <div class="col-xs-12 col-md-8 col-md-push-2">
+            <br>
+            <div id="ChartContainer" style="height: 400px; width: 100%; margin: 0 auto"></div>
+        </div>
+        <div class="col-xs-12 col-md-8 col-md-push-2">
+            <br>
+            <table id="langTable" class="table Chart-table text-center table-responsive table-bordered table-hover">
+
+            </table>
+        </div>
+    </div>
+</div>
+
+<script>
+    var Chart_Type = 'pie';
+
+    //_____ Check ChartLoad
+    var ChartScriptLoad = {
+        highcharts: false,
+        exporting: false,
+        data: false,
+        drilldown: false
+    };
+    function scriptLoad(scriptName) {
+        ChartScriptLoad[scriptName] = true;
+    }
+    function CheckScriptChart() {
+        if(ChartScriptLoad.highcharts && ChartScriptLoad.exporting && ChartScriptLoad.data && ChartScriptLoad.drilldown){
+            PieChart('ChartContainer', series);
+        }else{
+            setTimeout(function () {
+                CheckScriptChart();
+            },100);
+        }
+    }
+   // CheckScriptChart();
+    ///_____ End Check load
+
+    function changeChartData(ContainerID , series ){
+        if(Chart_Type == 'pie'){
+            PieChart(ContainerID , series);
+        }
+        else if(Chart_Type == 'bar'){
+            BarChart(ContainerID , series);
+        }
+    }
+
+
+
+    function BarChart(ContainerID, series) {
+        // Create the chart
+        document.getElementById(ContainerID).innerHTML = '';
+        Highcharts.chart(ContainerID, {
+            credits: {
+                enabled: false
+            },
+            chart: {
+                type: 'column'
+            },
+            title: {
+                text: ''
+            },
+            subtitle: {
+                text: ''
+            },
+            xAxis: {
+                type: 'category'
+            },
+            yAxis: {
+                title: {
+                    text: ''
+                }
+
+            },
+            legend: {
+                enabled: false
+            },
+            plotOptions: {
+                series: {
+                    borderWidth: 0,
+                    dataLabels: {
+                        enabled: true,
+                        format: '{point.y:.1f}%'
+                    }
+                }
+            },
+
+            tooltip: {
+                headerFormat: '<span style="font-size:11px">{series.name}</span><br>',
+                pointFormat: '<span style="color:{point.color}">{point.name}</span>: <b>{point.y:.2f}%</b> of total<br/>'
+            },
+
+            series: series
+        });
+        Chart_Type = 'bar';
+        removeAds();
+    }
+    function PieChart(ContainerID, series) {
+        document.getElementById(ContainerID).innerHTML = '';
+        // Build the chart
+        Highcharts.chart(ContainerID, {
+            credits: {
+                enabled: false
+            },
+            chart: {
+                plotBackgroundColor: null,
+                plotBorderWidth: null,
+                plotShadow: false,
+                type: 'pie'
+            },
+            title: {
+                text: ''
+            },
+            tooltip: {
+                pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
+            },
+            plotOptions: {
+                pie: {
+                    allowPointSelect: true,
+                    cursor: 'pointer',
+                    dataLabels: {
+                        enabled: true,
+                        format: '<b>{point.name}</b>: {point.percentage:.1f} %',
+                        style: {
+                            color: (Highcharts.theme && Highcharts.theme.contrastTextColor) || 'black'
+                        }
+                    }
+                }
+            },
+            series: series
+        });
+        Chart_Type = 'pie';
+        removeAds();
+    }
+    function removeAds() {
+        var ads = document.querySelector('.highcharts-credits');
+
+            ads.parentNode.removeChild(ads);
+    }
+
+
+    //_____ <table> must be Exist ...
+    function TabelCreateor(data , tableId) {
+        var i;
+        var tableData = '<thead style="background-color:#FFD799 !important;"><tr><th>#</th>';
+        for(i = 0; i < data.thName.length ; i++){
+            tableData += '<td>'+data.thName[i]+'</td>';
+        }
+        tableData += '</tr></thead><tbody>';
+        for(i = 0 ; i < data.trData.length ; i++){
+            tableData += '<tr><td>'+(i + 1)+'</td>';
+            for (var a = 0; a < data.trData[i].length ; a++){
+                tableData += '<td>'+data.trData[i][a]+'</td>';
+            }
+            tableData += '</tr>';
+        }
+        tableData +='</tbody>';
+        document.getElementById(tableId).innerHTML = tableData;
+    }
+
+
+
+
+
+</script>
+
+
