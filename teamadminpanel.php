@@ -4,6 +4,7 @@ session_cache_expire();
 session_start();
 require_once 'PSCO_function.php';
 require_once 'invite.php';
+require_once 'user_profile.php';
 ?>
 <?php
 //print_r($_SESSION);exit;
@@ -1176,13 +1177,22 @@ function test_input($data) {
 								echo PSCO_func::How_many_number($orgId,$teamName,$deptName);
 								echo "</li>";
 								echo "<li>";
-								echo PSCO_func::born_country($orgId,$teamName,$deptName);
+								echo PSCO_func::born_country($orgId,$teamName,$deptName)[0];
+								echo "</li>";
+								echo "<li>";
+								echo PSCO_func::born_country($orgId,$teamName,$deptName)[1];
+								echo "</li>";
+								echo "<li>";
+								echo PSCO_func::born_country($orgId,$teamName,$deptName)[2];
 								echo "</li>";
 								echo "<li>";
 								echo PSCO_func::male_female_know_language($orgId,$teamName,$deptName);
 								echo "</li>";
 								echo "<li>";
 								echo PSCO_func::cultures_country_influence($orgId,$teamName,$deptName);
+								echo "</li>";
+								echo "<li>";
+								echo PSCO_func::top_migrant($orgId,$teamName,$deptName);
 								echo "</li>";
 								echo "<li>";
 								echo PSCO_func::num_of_language_spoken($orgId,$teamName,$deptName)[0];
@@ -1195,6 +1205,12 @@ function test_input($data) {
 								echo "</li>";
 								echo "<li>";
 								echo PSCO_func::invitation_status($orgId,$teamName,$deptName);
+								echo "</li>";
+								echo "<li>";
+								echo PSCO_func::parent_born_overseas($orgId,$teamName,$deptName);
+								echo "</li>";
+								echo "<li>";
+								echo PSCO_func::gparent_born_overseas($orgId,$teamName,$deptName);
 								echo "</li>";
 
 
@@ -1620,7 +1636,7 @@ if(isset($_POST['submitvalbeltab'])){
 
 			<div class="modal-body" id="user_profile">
 				<?php
-				require_once 'user_profile.php';
+
 				echo user_profile::get_profile($_SESSION['teamemailidorg']);
 				?>
 			</div>
@@ -1784,8 +1800,15 @@ if(isset($_POST['submitvalbeltab'])){
 						<div class="col-sm-9">
 							<input type="text" class="form-control" id="gmf" name="gmf" >
 						</div>
+					</div>
 
+					<h3 style="padding: 1% 0%; background-color:#FE8885; color:#FFF; text-align:center;  border-radius: 8px;">LANGUAGES</h3>
+					<div class="form-group">
+						<div class="col-sm-9">
+							<table class='table borderless table-responsive ' id="employee_lang">
 
+							</table>
+						</div>
 					</div>
 
 					<br>
@@ -1818,6 +1841,8 @@ if(isset($_POST['submitvalbeltab'])){
 				success:function(data){
 					var datastaff=data['arr1'];
 					var datastaffbirth=data['arr2'];
+					var lang = data['arr4'];
+
 					$('#staffemail').val(datastaff.staffemailid);
 					$('#firstname').val(datastaff.firstname);
 					$('#lastname').val(datastaff.lastname);
@@ -1844,6 +1869,7 @@ if(isset($_POST['submitvalbeltab'])){
 					$('#f').val(datastaffbirth.stafffatherbirthplace);
 					$('#gff').val(datastaffbirth.stafffathersfatherbirthplace);
 					$('#gmf').val(datastaffbirth.stafffathersmotherbirthplace);
+					$('#employee_lang').html(lang.data);
 
 					$('#edit_data_Modal').modal('show');
 				}

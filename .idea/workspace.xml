@@ -2,16 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="676e04ff-6d34-48ac-9098-ebf739dc256d" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/page/data_value/country.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/page/data_value/lanuage.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/page/data_value/lanuage_level.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/user_profile.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/fetchstaffinfo.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/updatestaffdetails.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/documentation/timing/Time Sheet1.xlsx" afterPath="$PROJECT_DIR$/documentation/timing/Time Sheet1.xlsx" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/controller_user.php" afterPath="$PROJECT_DIR$/controller_user.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/page/modal_change_pass_user.html" afterPath="$PROJECT_DIR$/page/modal_change_pass_user.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/teacherpanel.php" afterPath="$PROJECT_DIR$/teacherpanel.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/teamadminpanel.php" afterPath="$PROJECT_DIR$/teamadminpanel.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/user_profile.php" afterPath="$PROJECT_DIR$/user_profile.php" />
     </list>
     <ignored path="school_panel_2017-june-1_z.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -35,277 +30,7 @@
     <favorites_list name="school_panel_2017-june-1_z" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file leaf-file-name="user_profile.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/model/access/user_profile.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="452" max-vertical-offset="1410">
-              <caret line="88" column="0" selection-start-line="88" selection-start-column="0" selection-end-line="88" selection-end-column="0" />
-              <folding>
-                <marker date="1496955296000" expanded="true" signature="853:1995" placeholder="{...}" />
-                <marker date="1496955296000" expanded="true" signature="901:1063" placeholder="{...}" />
-                <marker date="1496955296000" expanded="true" signature="901:1065" placeholder="{...}" />
-                <marker date="1496955296000" expanded="true" signature="901:1116" placeholder="{...}" />
-                <marker date="1496955296000" expanded="true" signature="1240:1504" placeholder="{...}" />
-                <marker date="1496955296000" expanded="true" signature="1671:3065" placeholder="..." />
-                <marker date="1496955296000" expanded="true" signature="2158:2462" placeholder="..." />
-                <marker date="1496955296000" expanded="true" signature="2178:2457" placeholder="..." />
-                <marker date="1496955296000" expanded="true" signature="2195:2448" placeholder="..." />
-                <marker date="1496955296000" expanded="true" signature="2628:3040" placeholder="..." />
-                <marker date="1496955296000" expanded="true" signature="2652:3035" placeholder="..." />
-                <marker date="1496955296000" expanded="true" signature="2670:3030" placeholder="..." />
-                <marker date="1496955296000" expanded="true" signature="3357:3571" placeholder="..." />
-                <marker date="1496955296000" expanded="true" signature="3400:3552" placeholder="{...}" />
-                <marker date="1496955296000" expanded="true" signature="3459:3535" placeholder="{...}" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="peyman_test_teampanel.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/peyman_test_teampanel.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-76.791664" vertical-offset="27617" max-vertical-offset="29550">
-              <caret line="1964" column="9" selection-start-line="1964" selection-start-column="9" selection-end-line="1964" selection-end-column="9" />
-              <folding>
-                <marker date="1496955171000" expanded="true" signature="235:293" placeholder="select * fro..teamadmin..." />
-                <marker date="1496955171000" expanded="true" signature="811:869" placeholder="select * fro..organisationadmin..." />
-                <marker date="1496955171000" expanded="true" signature="1138:1232" placeholder="select deptn..orgteamdetail..." />
-                <marker date="1496955171000" expanded="true" signature="1410:1504" placeholder="select teamn..orgteamdetail..." />
-                <marker date="1496955171000" expanded="true" signature="2072:2122" placeholder="..." />
-                <marker date="1496955171000" expanded="true" signature="6206:6404" placeholder="SELECT relig..staff..." />
-                <marker date="1496955171000" expanded="true" signature="6452:6650" placeholder="SELECT relig..staff..." />
-                <marker date="1496955171000" expanded="true" signature="8704:8894" placeholder="select `staf..." />
-                <marker date="1496955171000" expanded="true" signature="9143:9339" placeholder="select `staf..." />
-                <marker date="1496955171000" expanded="true" signature="9588:9784" placeholder="select `staf..." />
-                <marker date="1496955171000" expanded="true" signature="10036:10239" placeholder="select `staf..." />
-                <marker date="1496955171000" expanded="true" signature="10491:10694" placeholder="select `staf..." />
-                <marker date="1496955171000" expanded="true" signature="10946:11149" placeholder="select `staf..." />
-                <marker date="1496955171000" expanded="true" signature="11401:11604" placeholder="select `staf..." />
-                <marker date="1496955171000" expanded="true" signature="11911:12156" placeholder="select x , C..temptable..." />
-                <marker date="1496955171000" expanded="true" signature="11940:12130" placeholder="select `staf..." />
-                <marker date="1496955171000" expanded="true" signature="13707:13963" placeholder="SELECT langu..stafflanguage..." />
-                <marker date="1496955171000" expanded="true" signature="13791:13904" placeholder="SELECT staff..staff..." />
-                <marker date="1496955171000" expanded="true" signature="14011:14267" placeholder="SELECT langu..stafflanguage..." />
-                <marker date="1496955171000" expanded="true" signature="14095:14208" placeholder="SELECT staff..staff..." />
-                <marker date="1496955171000" expanded="true" signature="18487:18581" placeholder="select teamn..orgteamdetail..." />
-                <marker date="1496955171000" expanded="true" signature="18724:18738" placeholder="..." />
-                <marker date="1496955171000" expanded="true" signature="19361:19487" placeholder="select * fro..staff..." />
-                <marker date="1496955171000" expanded="true" signature="19755:19791" placeholder="..." />
-                <marker date="1496955171000" expanded="true" signature="19844:19856" placeholder="..." />
-                <marker date="1496955171000" expanded="true" signature="19896:19907" placeholder="..." />
-                <marker date="1496955171000" expanded="true" signature="19956:19967" placeholder="..." />
-                <marker date="1496955171000" expanded="true" signature="20692:20703" placeholder="..." />
-                <marker date="1496955171000" expanded="true" signature="20743:20754" placeholder="..." />
-                <marker date="1496955171000" expanded="true" signature="20796:20807" placeholder="..." />
-                <marker date="1496955171000" expanded="true" signature="22471:22482" placeholder="..." />
-                <marker date="1496955171000" expanded="true" signature="22604:22615" placeholder="..." />
-                <marker date="1496955171000" expanded="true" signature="22949:22960" placeholder="..." />
-                <marker date="1496955171000" expanded="true" signature="27441:27453" placeholder="..." />
-                <marker date="1496955171000" expanded="true" signature="27922:27959" placeholder="..." />
-                <marker date="1496955171000" expanded="true" signature="28063:28074" placeholder="..." />
-                <marker date="1496955171000" expanded="true" signature="28488:28500" placeholder="..." />
-                <marker date="1496955171000" expanded="true" signature="30084:30178" placeholder="select teamn..orgteamdetail..." />
-                <marker date="1496955171000" expanded="true" signature="33356:33546" placeholder="select `staf..." />
-                <marker date="1496955171000" expanded="true" signature="33731:33927" placeholder="select `staf..." />
-                <marker date="1496955171000" expanded="true" signature="34112:34308" placeholder="select `staf..." />
-                <marker date="1496955171000" expanded="true" signature="34496:34699" placeholder="select `staf..." />
-                <marker date="1496955171000" expanded="true" signature="34887:35090" placeholder="select `staf..." />
-                <marker date="1496955171000" expanded="true" signature="35278:35481" placeholder="select `staf..." />
-                <marker date="1496955171000" expanded="true" signature="35669:35872" placeholder="select `staf..." />
-                <marker date="1496955171000" expanded="true" signature="36107:36352" placeholder="select x , C..temptable..." />
-                <marker date="1496955171000" expanded="true" signature="36136:36326" placeholder="select `staf..." />
-                <marker date="1496955171000" expanded="true" signature="37140:37234" placeholder="select teamn..orgteamdetail..." />
-                <marker date="1496955171000" expanded="true" signature="39116:39372" placeholder="SELECT langu..stafflanguage..." />
-                <marker date="1496955171000" expanded="true" signature="39200:39313" placeholder="SELECT staff..staff..." />
-                <marker date="1496955171000" expanded="true" signature="40087:40181" placeholder="select teamn..orgteamdetail..." />
-                <marker date="1496955171000" expanded="true" signature="40984:41182" placeholder="SELECT relig..staff..." />
-                <marker date="1496955171000" expanded="true" signature="42430:42481" placeholder="..." />
-                <marker date="1496955171000" expanded="true" signature="46555:46811" placeholder="SELECT langu..stafflanguage..." />
-                <marker date="1496955171000" expanded="true" signature="46639:46752" placeholder="SELECT staff..staff..." />
-                <marker date="1496955171000" expanded="true" signature="47419:47675" placeholder="SELECT langu..stafflanguage..." />
-                <marker date="1496955171000" expanded="true" signature="47503:47616" placeholder="SELECT staff..staff..." />
-                <marker date="1496955171000" expanded="true" signature="48321:48599" placeholder="SELECT langu..stafflanguage..." />
-                <marker date="1496955171000" expanded="true" signature="48405:48540" placeholder="SELECT staff..staff..." />
-                <marker date="1496955171000" expanded="true" signature="49161:49439" placeholder="SELECT langu..stafflanguage..." />
-                <marker date="1496955171000" expanded="true" signature="49245:49380" placeholder="SELECT staff..staff..." />
-                <marker date="1496955171000" expanded="true" signature="50105:50383" placeholder="SELECT langu..stafflanguage..." />
-                <marker date="1496955171000" expanded="true" signature="50189:50324" placeholder="SELECT staff..staff..." />
-                <marker date="1496955171000" expanded="true" signature="50945:51223" placeholder="SELECT langu..stafflanguage..." />
-                <marker date="1496955171000" expanded="true" signature="51029:51164" placeholder="SELECT staff..staff..." />
-                <marker date="1496955171000" expanded="true" signature="51885:52163" placeholder="SELECT langu..stafflanguage..." />
-                <marker date="1496955171000" expanded="true" signature="51969:52104" placeholder="SELECT staff..staff..." />
-                <marker date="1496955171000" expanded="true" signature="52725:53003" placeholder="SELECT langu..stafflanguage..." />
-                <marker date="1496955171000" expanded="true" signature="52809:52944" placeholder="SELECT staff..staff..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="teamadminpanel.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/teamadminpanel.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-58.041668" vertical-offset="28052" max-vertical-offset="29535">
-              <caret line="1963" column="9" selection-start-line="1963" selection-start-column="9" selection-end-line="1963" selection-end-column="9" />
-              <folding>
-                <element signature="n#style#0;n#div#1;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#2;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#li#0;n#ul#0;n#div#2;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#li#1;n#ul#0;n#div#2;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#li#2;n#ul#0;n#div#2;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#li#3;n#ul#0;n#div#2;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#li#4;n#ul#0;n#div#2;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#li#5;n#ul#0;n#div#2;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#tr#0;n#form#0;n#div#0;n#div#0;n#div#2;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#button#0;n#td#5;n#tr#0;n#form#0;n#div#0;n#div#0;n#div#2;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#a#1;n#form#0;n#div#0;n#div#0;n#div#2;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#span#0;n#div#0;n#div#0;n#div#2;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#2;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#1;n#div#0;n#div#1;n#div#0;n#div#2;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#button#0;n#div#0;n#div#2;n#div#0;n#div#2;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#button#0;n#div#1;n#div#2;n#div#0;n#div#2;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#2;n#div#2;n#div#0;n#div#2;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#0;n#div#3;n#div#0;n#div#2;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#1;n#div#3;n#div#0;n#div#2;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#h3#0;n#div#0;n#div#0;n#div#0;n#div#3;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#span#0;n#h3#0;n#div#1;n#div#0;n#div#0;n#div#3;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#h4#0;n#div#0;n#div#0;n#div#0;n#div#4;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#h3#0;n#form#0;n#div#1;n#div#0;n#div#0;n#div#4;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#label#0;n#div#0;n#form#0;n#div#1;n#div#0;n#div#0;n#div#4;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#input#0;n#div#0;n#div#0;n#form#0;n#div#1;n#div#0;n#div#0;n#div#4;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#label#0;n#div#1;n#div#0;n#div#4;n#form#0;n#div#1;n#div#0;n#div#0;n#div#4;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#h3#1;n#form#0;n#div#1;n#div#0;n#div#0;n#div#4;n#!!top" expanded="true" />
-                <marker date="1497016746000" expanded="true" signature="235:293" placeholder="select * fro..teamadmin..." />
-                <marker date="1497016746000" expanded="true" signature="811:869" placeholder="select * fro..organisationadmin..." />
-                <marker date="1497016746000" expanded="true" signature="1138:1232" placeholder="select deptn..orgteamdetail..." />
-                <marker date="1497016746000" expanded="true" signature="1410:1504" placeholder="select teamn..orgteamdetail..." />
-                <marker date="1497016746000" expanded="true" signature="2072:2122" placeholder="..." />
-                <marker date="1497016746000" expanded="true" signature="6200:6398" placeholder="SELECT relig..staff..." />
-                <marker date="1497016746000" expanded="true" signature="6445:6643" placeholder="SELECT relig..staff..." />
-                <marker date="1497016746000" expanded="true" signature="8683:8873" placeholder="select `staf..." />
-                <marker date="1497016746000" expanded="true" signature="9122:9318" placeholder="select `staf..." />
-                <marker date="1497016746000" expanded="true" signature="9567:9763" placeholder="select `staf..." />
-                <marker date="1497016746000" expanded="true" signature="10015:10218" placeholder="select `staf..." />
-                <marker date="1497016746000" expanded="true" signature="10470:10673" placeholder="select `staf..." />
-                <marker date="1497016746000" expanded="true" signature="10925:11128" placeholder="select `staf..." />
-                <marker date="1497016746000" expanded="true" signature="11380:11583" placeholder="select `staf..." />
-                <marker date="1497016746000" expanded="true" signature="11890:12135" placeholder="select x , C..temptable..." />
-                <marker date="1497016746000" expanded="true" signature="11919:12109" placeholder="select `staf..." />
-                <marker date="1497016746000" expanded="true" signature="13656:13912" placeholder="SELECT langu..stafflanguage..." />
-                <marker date="1497016746000" expanded="true" signature="13740:13853" placeholder="SELECT staff..staff..." />
-                <marker date="1497016746000" expanded="true" signature="13958:14214" placeholder="SELECT langu..stafflanguage..." />
-                <marker date="1497016746000" expanded="true" signature="14042:14155" placeholder="SELECT staff..staff..." />
-                <marker date="1497016746000" expanded="true" signature="18426:18520" placeholder="select teamn..orgteamdetail..." />
-                <marker date="1497016746000" expanded="true" signature="18663:18677" placeholder="..." />
-                <marker date="1497016746000" expanded="true" signature="19300:19426" placeholder="select * fro..staff..." />
-                <marker date="1497016746000" expanded="true" signature="19694:19730" placeholder="..." />
-                <marker date="1497016746000" expanded="true" signature="19783:19795" placeholder="..." />
-                <marker date="1497016746000" expanded="true" signature="19835:19846" placeholder="..." />
-                <marker date="1497016746000" expanded="true" signature="19895:19906" placeholder="..." />
-                <marker date="1497016746000" expanded="true" signature="20631:20642" placeholder="..." />
-                <marker date="1497016746000" expanded="true" signature="20682:20693" placeholder="..." />
-                <marker date="1497016746000" expanded="true" signature="20735:20746" placeholder="..." />
-                <marker date="1497016746000" expanded="true" signature="22383:22394" placeholder="..." />
-                <marker date="1497016746000" expanded="true" signature="22516:22527" placeholder="..." />
-                <marker date="1497016746000" expanded="true" signature="22861:22872" placeholder="..." />
-                <marker date="1497016746000" expanded="true" signature="27353:27365" placeholder="..." />
-                <marker date="1497016746000" expanded="true" signature="27980:27991" placeholder="..." />
-                <marker date="1497016746000" expanded="true" signature="28405:28417" placeholder="..." />
-                <marker date="1497016746000" expanded="true" signature="30001:30095" placeholder="select teamn..orgteamdetail..." />
-                <marker date="1497016746000" expanded="true" signature="33273:33463" placeholder="select `staf..." />
-                <marker date="1497016746000" expanded="true" signature="33648:33844" placeholder="select `staf..." />
-                <marker date="1497016746000" expanded="true" signature="34029:34225" placeholder="select `staf..." />
-                <marker date="1497016746000" expanded="true" signature="34413:34616" placeholder="select `staf..." />
-                <marker date="1497016746000" expanded="true" signature="34804:35007" placeholder="select `staf..." />
-                <marker date="1497016746000" expanded="true" signature="35195:35398" placeholder="select `staf..." />
-                <marker date="1497016746000" expanded="true" signature="35586:35789" placeholder="select `staf..." />
-                <marker date="1497016746000" expanded="true" signature="36024:36269" placeholder="select x , C..temptable..." />
-                <marker date="1497016746000" expanded="true" signature="36053:36243" placeholder="select `staf..." />
-                <marker date="1497016746000" expanded="true" signature="37057:37151" placeholder="select teamn..orgteamdetail..." />
-                <marker date="1497016746000" expanded="true" signature="39033:39289" placeholder="SELECT langu..stafflanguage..." />
-                <marker date="1497016746000" expanded="true" signature="39117:39230" placeholder="SELECT staff..staff..." />
-                <marker date="1497016746000" expanded="true" signature="40004:40098" placeholder="select teamn..orgteamdetail..." />
-                <marker date="1497016746000" expanded="true" signature="40901:41099" placeholder="SELECT relig..staff..." />
-                <marker date="1497016746000" expanded="true" signature="42331:42382" placeholder="..." />
-                <marker date="1497016746000" expanded="true" signature="46452:46708" placeholder="SELECT langu..stafflanguage..." />
-                <marker date="1497016746000" expanded="true" signature="46536:46649" placeholder="SELECT staff..staff..." />
-                <marker date="1497016746000" expanded="true" signature="47331:47587" placeholder="SELECT langu..stafflanguage..." />
-                <marker date="1497016746000" expanded="true" signature="47415:47528" placeholder="SELECT staff..staff..." />
-                <marker date="1497016746000" expanded="true" signature="48227:48505" placeholder="SELECT langu..stafflanguage..." />
-                <marker date="1497016746000" expanded="true" signature="48311:48446" placeholder="SELECT staff..staff..." />
-                <marker date="1497016746000" expanded="true" signature="49062:49340" placeholder="SELECT langu..stafflanguage..." />
-                <marker date="1497016746000" expanded="true" signature="49146:49281" placeholder="SELECT staff..staff..." />
-                <marker date="1497016746000" expanded="true" signature="50000:50278" placeholder="SELECT langu..stafflanguage..." />
-                <marker date="1497016746000" expanded="true" signature="50084:50219" placeholder="SELECT staff..staff..." />
-                <marker date="1497016746000" expanded="true" signature="50835:51113" placeholder="SELECT langu..stafflanguage..." />
-                <marker date="1497016746000" expanded="true" signature="50919:51054" placeholder="SELECT staff..staff..." />
-                <marker date="1497016746000" expanded="true" signature="51769:52047" placeholder="SELECT langu..stafflanguage..." />
-                <marker date="1497016746000" expanded="true" signature="51853:51988" placeholder="SELECT staff..staff..." />
-                <marker date="1497016746000" expanded="true" signature="52605:52883" placeholder="SELECT langu..stafflanguage..." />
-                <marker date="1497016746000" expanded="true" signature="52689:52824" placeholder="SELECT staff..staff..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="country.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/page/data_value/country.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="3810">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="user_profile.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/user_profile.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="2880">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding>
-                <marker date="1497033158000" expanded="true" signature="2219:3903" placeholder="..." />
-                <marker date="1497033158000" expanded="true" signature="2269:3881" placeholder="{...}" />
-                <marker date="1497033158000" expanded="true" signature="2385:3101" placeholder="{...}" />
-                <marker date="1497033158000" expanded="true" signature="3105:3863" placeholder="{...}" />
-                <marker date="1497033158000" expanded="false" signature="3954:3973" placeholder="..." />
-                <marker date="1497033158000" expanded="false" signature="4083:4113" placeholder="..." />
-                <marker date="1497033158000" expanded="false" signature="4191:4221" placeholder="..." />
-                <marker date="1497033158000" expanded="true" signature="4251:8913" placeholder="..." />
-                <marker date="1497033158000" expanded="true" signature="4355:7140" placeholder="..." />
-                <marker date="1497033158000" expanded="true" signature="4952:5338" placeholder="..." />
-                <marker date="1497033158000" expanded="true" signature="4972:5333" placeholder="..." />
-                <marker date="1497033158000" expanded="true" signature="5071:5324" placeholder="..." />
-                <marker date="1497033158000" expanded="true" signature="5363:5869" placeholder="..." />
-                <marker date="1497033158000" expanded="true" signature="5387:5864" placeholder="..." />
-                <marker date="1497033158000" expanded="true" signature="5495:5855" placeholder="..." />
-                <marker date="1497033158000" expanded="true" signature="5894:6892" placeholder="..." />
-                <marker date="1497033158000" expanded="true" signature="5916:6887" placeholder="..." />
-                <marker date="1497033158000" expanded="true" signature="6020:6878" placeholder="..." />
-                <marker date="1497033158000" expanded="false" signature="7019:7072" placeholder="..." />
-                <marker date="1497033158000" expanded="true" signature="7272:8787" placeholder="..." />
-                <marker date="1497033158000" expanded="true" signature="9940:10698" placeholder="..." />
-                <marker date="1497033158000" expanded="true" signature="9993:10091" placeholder="{...}" />
-                <marker date="1497033158000" expanded="true" signature="10146:10245" placeholder="{...}" />
-                <marker date="1497033158000" expanded="true" signature="10306:10417" placeholder="{...}" />
-                <marker date="1497033158000" expanded="true" signature="10464:10640" placeholder="{...}" />
-                <marker date="1497033158000" expanded="true" signature="10529:10620" placeholder="{...}" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="controller_user.php" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/controller_user.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="958">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf />
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -593,21 +318,21 @@
         <state vertical-scroll-proportion="0.0" vertical-offset="452" max-vertical-offset="1410">
           <caret line="88" column="0" selection-start-line="88" selection-start-column="0" selection-end-line="88" selection-end-column="0" />
           <folding>
-            <marker date="1496955296000" expanded="true" signature="853:1995" placeholder="{...}" />
-            <marker date="1496955296000" expanded="true" signature="901:1063" placeholder="{...}" />
-            <marker date="1496955296000" expanded="true" signature="901:1065" placeholder="{...}" />
-            <marker date="1496955296000" expanded="true" signature="901:1116" placeholder="{...}" />
-            <marker date="1496955296000" expanded="true" signature="1240:1504" placeholder="{...}" />
-            <marker date="1496955296000" expanded="true" signature="1671:3065" placeholder="..." />
-            <marker date="1496955296000" expanded="true" signature="2158:2462" placeholder="..." />
-            <marker date="1496955296000" expanded="true" signature="2178:2457" placeholder="..." />
-            <marker date="1496955296000" expanded="true" signature="2195:2448" placeholder="..." />
-            <marker date="1496955296000" expanded="true" signature="2628:3040" placeholder="..." />
-            <marker date="1496955296000" expanded="true" signature="2652:3035" placeholder="..." />
-            <marker date="1496955296000" expanded="true" signature="2670:3030" placeholder="..." />
-            <marker date="1496955296000" expanded="true" signature="3357:3571" placeholder="..." />
-            <marker date="1496955296000" expanded="true" signature="3400:3552" placeholder="{...}" />
-            <marker date="1496955296000" expanded="true" signature="3459:3535" placeholder="{...}" />
+            <marker date="1496955296000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1496955296000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1496955296000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1496955296000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1496955296000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1496955296000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1496955296000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1496955296000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1496955296000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1496955296000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1496955296000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1496955296000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1496955296000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1496955296000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1496955296000" expanded="true" signature="-1:-1" placeholder="{...}" />
           </folding>
         </state>
       </provider>
@@ -617,75 +342,75 @@
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="29550">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <marker date="1496955171000" expanded="true" signature="235:293" placeholder="select * fro..teamadmin..." />
-            <marker date="1496955171000" expanded="true" signature="811:869" placeholder="select * fro..organisationadmin..." />
-            <marker date="1496955171000" expanded="true" signature="1138:1232" placeholder="select deptn..orgteamdetail..." />
-            <marker date="1496955171000" expanded="true" signature="1410:1504" placeholder="select teamn..orgteamdetail..." />
-            <marker date="1496955171000" expanded="true" signature="2072:2122" placeholder="..." />
-            <marker date="1496955171000" expanded="true" signature="6206:6404" placeholder="SELECT relig..staff..." />
-            <marker date="1496955171000" expanded="true" signature="6452:6650" placeholder="SELECT relig..staff..." />
-            <marker date="1496955171000" expanded="true" signature="8704:8894" placeholder="select `staf..." />
-            <marker date="1496955171000" expanded="true" signature="9143:9339" placeholder="select `staf..." />
-            <marker date="1496955171000" expanded="true" signature="9588:9784" placeholder="select `staf..." />
-            <marker date="1496955171000" expanded="true" signature="10036:10239" placeholder="select `staf..." />
-            <marker date="1496955171000" expanded="true" signature="10491:10694" placeholder="select `staf..." />
-            <marker date="1496955171000" expanded="true" signature="10946:11149" placeholder="select `staf..." />
-            <marker date="1496955171000" expanded="true" signature="11401:11604" placeholder="select `staf..." />
-            <marker date="1496955171000" expanded="true" signature="11911:12156" placeholder="select x , C..temptable..." />
-            <marker date="1496955171000" expanded="true" signature="11940:12130" placeholder="select `staf..." />
-            <marker date="1496955171000" expanded="true" signature="13707:13963" placeholder="SELECT langu..stafflanguage..." />
-            <marker date="1496955171000" expanded="true" signature="13791:13904" placeholder="SELECT staff..staff..." />
-            <marker date="1496955171000" expanded="true" signature="14011:14267" placeholder="SELECT langu..stafflanguage..." />
-            <marker date="1496955171000" expanded="true" signature="14095:14208" placeholder="SELECT staff..staff..." />
-            <marker date="1496955171000" expanded="true" signature="18487:18581" placeholder="select teamn..orgteamdetail..." />
-            <marker date="1496955171000" expanded="true" signature="18724:18738" placeholder="..." />
-            <marker date="1496955171000" expanded="true" signature="19361:19487" placeholder="select * fro..staff..." />
-            <marker date="1496955171000" expanded="true" signature="19755:19791" placeholder="..." />
-            <marker date="1496955171000" expanded="true" signature="19844:19856" placeholder="..." />
-            <marker date="1496955171000" expanded="true" signature="19896:19907" placeholder="..." />
-            <marker date="1496955171000" expanded="true" signature="19956:19967" placeholder="..." />
-            <marker date="1496955171000" expanded="true" signature="20692:20703" placeholder="..." />
-            <marker date="1496955171000" expanded="true" signature="20743:20754" placeholder="..." />
-            <marker date="1496955171000" expanded="true" signature="20796:20807" placeholder="..." />
-            <marker date="1496955171000" expanded="true" signature="22471:22482" placeholder="..." />
-            <marker date="1496955171000" expanded="true" signature="22604:22615" placeholder="..." />
-            <marker date="1496955171000" expanded="true" signature="22949:22960" placeholder="..." />
-            <marker date="1496955171000" expanded="true" signature="27441:27453" placeholder="..." />
-            <marker date="1496955171000" expanded="true" signature="27922:27959" placeholder="..." />
-            <marker date="1496955171000" expanded="true" signature="28063:28074" placeholder="..." />
-            <marker date="1496955171000" expanded="true" signature="28488:28500" placeholder="..." />
-            <marker date="1496955171000" expanded="true" signature="30084:30178" placeholder="select teamn..orgteamdetail..." />
-            <marker date="1496955171000" expanded="true" signature="33356:33546" placeholder="select `staf..." />
-            <marker date="1496955171000" expanded="true" signature="33731:33927" placeholder="select `staf..." />
-            <marker date="1496955171000" expanded="true" signature="34112:34308" placeholder="select `staf..." />
-            <marker date="1496955171000" expanded="true" signature="34496:34699" placeholder="select `staf..." />
-            <marker date="1496955171000" expanded="true" signature="34887:35090" placeholder="select `staf..." />
-            <marker date="1496955171000" expanded="true" signature="35278:35481" placeholder="select `staf..." />
-            <marker date="1496955171000" expanded="true" signature="35669:35872" placeholder="select `staf..." />
-            <marker date="1496955171000" expanded="true" signature="36107:36352" placeholder="select x , C..temptable..." />
-            <marker date="1496955171000" expanded="true" signature="36136:36326" placeholder="select `staf..." />
-            <marker date="1496955171000" expanded="true" signature="37140:37234" placeholder="select teamn..orgteamdetail..." />
-            <marker date="1496955171000" expanded="true" signature="39116:39372" placeholder="SELECT langu..stafflanguage..." />
-            <marker date="1496955171000" expanded="true" signature="39200:39313" placeholder="SELECT staff..staff..." />
-            <marker date="1496955171000" expanded="true" signature="40087:40181" placeholder="select teamn..orgteamdetail..." />
-            <marker date="1496955171000" expanded="true" signature="40984:41182" placeholder="SELECT relig..staff..." />
-            <marker date="1496955171000" expanded="true" signature="42430:42481" placeholder="..." />
-            <marker date="1496955171000" expanded="true" signature="46555:46811" placeholder="SELECT langu..stafflanguage..." />
-            <marker date="1496955171000" expanded="true" signature="46639:46752" placeholder="SELECT staff..staff..." />
-            <marker date="1496955171000" expanded="true" signature="47419:47675" placeholder="SELECT langu..stafflanguage..." />
-            <marker date="1496955171000" expanded="true" signature="47503:47616" placeholder="SELECT staff..staff..." />
-            <marker date="1496955171000" expanded="true" signature="48321:48599" placeholder="SELECT langu..stafflanguage..." />
-            <marker date="1496955171000" expanded="true" signature="48405:48540" placeholder="SELECT staff..staff..." />
-            <marker date="1496955171000" expanded="true" signature="49161:49439" placeholder="SELECT langu..stafflanguage..." />
-            <marker date="1496955171000" expanded="true" signature="49245:49380" placeholder="SELECT staff..staff..." />
-            <marker date="1496955171000" expanded="true" signature="50105:50383" placeholder="SELECT langu..stafflanguage..." />
-            <marker date="1496955171000" expanded="true" signature="50189:50324" placeholder="SELECT staff..staff..." />
-            <marker date="1496955171000" expanded="true" signature="50945:51223" placeholder="SELECT langu..stafflanguage..." />
-            <marker date="1496955171000" expanded="true" signature="51029:51164" placeholder="SELECT staff..staff..." />
-            <marker date="1496955171000" expanded="true" signature="51885:52163" placeholder="SELECT langu..stafflanguage..." />
-            <marker date="1496955171000" expanded="true" signature="51969:52104" placeholder="SELECT staff..staff..." />
-            <marker date="1496955171000" expanded="true" signature="52725:53003" placeholder="SELECT langu..stafflanguage..." />
-            <marker date="1496955171000" expanded="true" signature="52809:52944" placeholder="SELECT staff..staff..." />
+            <marker date="1496955171000" expanded="true" signature="-1:-1" placeholder="select * fro..teamadmin..." />
+            <marker date="1496955171000" expanded="true" signature="-1:-1" placeholder="select * fro..organisationadmin..." />
+            <marker date="1496955171000" expanded="true" signature="-1:-1" placeholder="select deptn..orgteamdetail..." />
+            <marker date="1496955171000" expanded="true" signature="-1:-1" placeholder="select teamn..orgteamdetail..." />
+            <marker date="1496955171000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1496955171000" expanded="true" signature="-1:-1" placeholder="SELECT relig..staff..." />
+            <marker date="1496955171000" expanded="true" signature="-1:-1" placeholder="SELECT relig..staff..." />
+            <marker date="1496955171000" expanded="true" signature="-1:-1" placeholder="select `staf..." />
+            <marker date="1496955171000" expanded="true" signature="-1:-1" placeholder="select `staf..." />
+            <marker date="1496955171000" expanded="true" signature="-1:-1" placeholder="select `staf..." />
+            <marker date="1496955171000" expanded="true" signature="-1:-1" placeholder="select `staf..." />
+            <marker date="1496955171000" expanded="true" signature="-1:-1" placeholder="select `staf..." />
+            <marker date="1496955171000" expanded="true" signature="-1:-1" placeholder="select `staf..." />
+            <marker date="1496955171000" expanded="true" signature="-1:-1" placeholder="select `staf..." />
+            <marker date="1496955171000" expanded="true" signature="-1:-1" placeholder="select x , C..temptable..." />
+            <marker date="1496955171000" expanded="true" signature="-1:-1" placeholder="select `staf..." />
+            <marker date="1496955171000" expanded="true" signature="-1:-1" placeholder="SELECT langu..stafflanguage..." />
+            <marker date="1496955171000" expanded="true" signature="-1:-1" placeholder="SELECT staff..staff..." />
+            <marker date="1496955171000" expanded="true" signature="-1:-1" placeholder="SELECT langu..stafflanguage..." />
+            <marker date="1496955171000" expanded="true" signature="-1:-1" placeholder="SELECT staff..staff..." />
+            <marker date="1496955171000" expanded="true" signature="-1:-1" placeholder="select teamn..orgteamdetail..." />
+            <marker date="1496955171000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1496955171000" expanded="true" signature="-1:-1" placeholder="select * fro..staff..." />
+            <marker date="1496955171000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1496955171000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1496955171000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1496955171000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1496955171000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1496955171000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1496955171000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1496955171000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1496955171000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1496955171000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1496955171000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1496955171000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1496955171000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1496955171000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1496955171000" expanded="true" signature="-1:-1" placeholder="select teamn..orgteamdetail..." />
+            <marker date="1496955171000" expanded="true" signature="-1:-1" placeholder="select `staf..." />
+            <marker date="1496955171000" expanded="true" signature="-1:-1" placeholder="select `staf..." />
+            <marker date="1496955171000" expanded="true" signature="-1:-1" placeholder="select `staf..." />
+            <marker date="1496955171000" expanded="true" signature="-1:-1" placeholder="select `staf..." />
+            <marker date="1496955171000" expanded="true" signature="-1:-1" placeholder="select `staf..." />
+            <marker date="1496955171000" expanded="true" signature="-1:-1" placeholder="select `staf..." />
+            <marker date="1496955171000" expanded="true" signature="-1:-1" placeholder="select `staf..." />
+            <marker date="1496955171000" expanded="true" signature="-1:-1" placeholder="select x , C..temptable..." />
+            <marker date="1496955171000" expanded="true" signature="-1:-1" placeholder="select `staf..." />
+            <marker date="1496955171000" expanded="true" signature="-1:-1" placeholder="select teamn..orgteamdetail..." />
+            <marker date="1496955171000" expanded="true" signature="-1:-1" placeholder="SELECT langu..stafflanguage..." />
+            <marker date="1496955171000" expanded="true" signature="-1:-1" placeholder="SELECT staff..staff..." />
+            <marker date="1496955171000" expanded="true" signature="-1:-1" placeholder="select teamn..orgteamdetail..." />
+            <marker date="1496955171000" expanded="true" signature="-1:-1" placeholder="SELECT relig..staff..." />
+            <marker date="1496955171000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1496955171000" expanded="true" signature="-1:-1" placeholder="SELECT langu..stafflanguage..." />
+            <marker date="1496955171000" expanded="true" signature="-1:-1" placeholder="SELECT staff..staff..." />
+            <marker date="1496955171000" expanded="true" signature="-1:-1" placeholder="SELECT langu..stafflanguage..." />
+            <marker date="1496955171000" expanded="true" signature="-1:-1" placeholder="SELECT staff..staff..." />
+            <marker date="1496955171000" expanded="true" signature="-1:-1" placeholder="SELECT langu..stafflanguage..." />
+            <marker date="1496955171000" expanded="true" signature="-1:-1" placeholder="SELECT staff..staff..." />
+            <marker date="1496955171000" expanded="true" signature="-1:-1" placeholder="SELECT langu..stafflanguage..." />
+            <marker date="1496955171000" expanded="true" signature="-1:-1" placeholder="SELECT staff..staff..." />
+            <marker date="1496955171000" expanded="true" signature="-1:-1" placeholder="SELECT langu..stafflanguage..." />
+            <marker date="1496955171000" expanded="true" signature="-1:-1" placeholder="SELECT staff..staff..." />
+            <marker date="1496955171000" expanded="true" signature="-1:-1" placeholder="SELECT langu..stafflanguage..." />
+            <marker date="1496955171000" expanded="true" signature="-1:-1" placeholder="SELECT staff..staff..." />
+            <marker date="1496955171000" expanded="true" signature="-1:-1" placeholder="SELECT langu..stafflanguage..." />
+            <marker date="1496955171000" expanded="true" signature="-1:-1" placeholder="SELECT staff..staff..." />
+            <marker date="1496955171000" expanded="true" signature="-1:-1" placeholder="SELECT langu..stafflanguage..." />
+            <marker date="1496955171000" expanded="true" signature="-1:-1" placeholder="SELECT staff..staff..." />
           </folding>
         </state>
       </provider>
@@ -695,21 +420,21 @@
         <state vertical-scroll-proportion="0.0" vertical-offset="704" max-vertical-offset="1410">
           <caret line="88" column="0" selection-start-line="88" selection-start-column="0" selection-end-line="88" selection-end-column="0" />
           <folding>
-            <marker date="1496955296000" expanded="true" signature="853:1995" placeholder="{...}" />
-            <marker date="1496955296000" expanded="true" signature="901:1063" placeholder="{...}" />
-            <marker date="1496955296000" expanded="true" signature="901:1065" placeholder="{...}" />
-            <marker date="1496955296000" expanded="true" signature="901:1116" placeholder="{...}" />
-            <marker date="1496955296000" expanded="true" signature="1240:1504" placeholder="{...}" />
-            <marker date="1496955296000" expanded="true" signature="1671:3065" placeholder="..." />
-            <marker date="1496955296000" expanded="true" signature="2158:2462" placeholder="..." />
-            <marker date="1496955296000" expanded="true" signature="2178:2457" placeholder="..." />
-            <marker date="1496955296000" expanded="true" signature="2195:2448" placeholder="..." />
-            <marker date="1496955296000" expanded="true" signature="2628:3040" placeholder="..." />
-            <marker date="1496955296000" expanded="true" signature="2652:3035" placeholder="..." />
-            <marker date="1496955296000" expanded="true" signature="2670:3030" placeholder="..." />
-            <marker date="1496955296000" expanded="true" signature="3357:3571" placeholder="..." />
-            <marker date="1496955296000" expanded="true" signature="3400:3552" placeholder="{...}" />
-            <marker date="1496955296000" expanded="true" signature="3459:3535" placeholder="{...}" />
+            <marker date="1496955296000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1496955296000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1496955296000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1496955296000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1496955296000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1496955296000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1496955296000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1496955296000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1496955296000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1496955296000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1496955296000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1496955296000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1496955296000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1496955296000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1496955296000" expanded="true" signature="-1:-1" placeholder="{...}" />
           </folding>
         </state>
       </provider>
@@ -719,75 +444,75 @@
         <state vertical-scroll-proportion="0.0" vertical-offset="28844" max-vertical-offset="29550">
           <caret line="1964" column="9" selection-start-line="1964" selection-start-column="9" selection-end-line="1964" selection-end-column="9" />
           <folding>
-            <marker date="1496955171000" expanded="true" signature="235:293" placeholder="select * fro..teamadmin..." />
-            <marker date="1496955171000" expanded="true" signature="811:869" placeholder="select * fro..organisationadmin..." />
-            <marker date="1496955171000" expanded="true" signature="1138:1232" placeholder="select deptn..orgteamdetail..." />
-            <marker date="1496955171000" expanded="true" signature="1410:1504" placeholder="select teamn..orgteamdetail..." />
-            <marker date="1496955171000" expanded="true" signature="2072:2122" placeholder="..." />
-            <marker date="1496955171000" expanded="true" signature="6206:6404" placeholder="SELECT relig..staff..." />
-            <marker date="1496955171000" expanded="true" signature="6452:6650" placeholder="SELECT relig..staff..." />
-            <marker date="1496955171000" expanded="true" signature="8704:8894" placeholder="select `staf..." />
-            <marker date="1496955171000" expanded="true" signature="9143:9339" placeholder="select `staf..." />
-            <marker date="1496955171000" expanded="true" signature="9588:9784" placeholder="select `staf..." />
-            <marker date="1496955171000" expanded="true" signature="10036:10239" placeholder="select `staf..." />
-            <marker date="1496955171000" expanded="true" signature="10491:10694" placeholder="select `staf..." />
-            <marker date="1496955171000" expanded="true" signature="10946:11149" placeholder="select `staf..." />
-            <marker date="1496955171000" expanded="true" signature="11401:11604" placeholder="select `staf..." />
-            <marker date="1496955171000" expanded="true" signature="11911:12156" placeholder="select x , C..temptable..." />
-            <marker date="1496955171000" expanded="true" signature="11940:12130" placeholder="select `staf..." />
-            <marker date="1496955171000" expanded="true" signature="13707:13963" placeholder="SELECT langu..stafflanguage..." />
-            <marker date="1496955171000" expanded="true" signature="13791:13904" placeholder="SELECT staff..staff..." />
-            <marker date="1496955171000" expanded="true" signature="14011:14267" placeholder="SELECT langu..stafflanguage..." />
-            <marker date="1496955171000" expanded="true" signature="14095:14208" placeholder="SELECT staff..staff..." />
-            <marker date="1496955171000" expanded="true" signature="18487:18581" placeholder="select teamn..orgteamdetail..." />
-            <marker date="1496955171000" expanded="true" signature="18724:18738" placeholder="..." />
-            <marker date="1496955171000" expanded="true" signature="19361:19487" placeholder="select * fro..staff..." />
-            <marker date="1496955171000" expanded="true" signature="19755:19791" placeholder="..." />
-            <marker date="1496955171000" expanded="true" signature="19844:19856" placeholder="..." />
-            <marker date="1496955171000" expanded="true" signature="19896:19907" placeholder="..." />
-            <marker date="1496955171000" expanded="true" signature="19956:19967" placeholder="..." />
-            <marker date="1496955171000" expanded="true" signature="20692:20703" placeholder="..." />
-            <marker date="1496955171000" expanded="true" signature="20743:20754" placeholder="..." />
-            <marker date="1496955171000" expanded="true" signature="20796:20807" placeholder="..." />
-            <marker date="1496955171000" expanded="true" signature="22471:22482" placeholder="..." />
-            <marker date="1496955171000" expanded="true" signature="22604:22615" placeholder="..." />
-            <marker date="1496955171000" expanded="true" signature="22949:22960" placeholder="..." />
-            <marker date="1496955171000" expanded="true" signature="27441:27453" placeholder="..." />
-            <marker date="1496955171000" expanded="true" signature="27922:27959" placeholder="..." />
-            <marker date="1496955171000" expanded="true" signature="28063:28074" placeholder="..." />
-            <marker date="1496955171000" expanded="true" signature="28488:28500" placeholder="..." />
-            <marker date="1496955171000" expanded="true" signature="30084:30178" placeholder="select teamn..orgteamdetail..." />
-            <marker date="1496955171000" expanded="true" signature="33356:33546" placeholder="select `staf..." />
-            <marker date="1496955171000" expanded="true" signature="33731:33927" placeholder="select `staf..." />
-            <marker date="1496955171000" expanded="true" signature="34112:34308" placeholder="select `staf..." />
-            <marker date="1496955171000" expanded="true" signature="34496:34699" placeholder="select `staf..." />
-            <marker date="1496955171000" expanded="true" signature="34887:35090" placeholder="select `staf..." />
-            <marker date="1496955171000" expanded="true" signature="35278:35481" placeholder="select `staf..." />
-            <marker date="1496955171000" expanded="true" signature="35669:35872" placeholder="select `staf..." />
-            <marker date="1496955171000" expanded="true" signature="36107:36352" placeholder="select x , C..temptable..." />
-            <marker date="1496955171000" expanded="true" signature="36136:36326" placeholder="select `staf..." />
-            <marker date="1496955171000" expanded="true" signature="37140:37234" placeholder="select teamn..orgteamdetail..." />
-            <marker date="1496955171000" expanded="true" signature="39116:39372" placeholder="SELECT langu..stafflanguage..." />
-            <marker date="1496955171000" expanded="true" signature="39200:39313" placeholder="SELECT staff..staff..." />
-            <marker date="1496955171000" expanded="true" signature="40087:40181" placeholder="select teamn..orgteamdetail..." />
-            <marker date="1496955171000" expanded="true" signature="40984:41182" placeholder="SELECT relig..staff..." />
-            <marker date="1496955171000" expanded="true" signature="42430:42481" placeholder="..." />
-            <marker date="1496955171000" expanded="true" signature="46555:46811" placeholder="SELECT langu..stafflanguage..." />
-            <marker date="1496955171000" expanded="true" signature="46639:46752" placeholder="SELECT staff..staff..." />
-            <marker date="1496955171000" expanded="true" signature="47419:47675" placeholder="SELECT langu..stafflanguage..." />
-            <marker date="1496955171000" expanded="true" signature="47503:47616" placeholder="SELECT staff..staff..." />
-            <marker date="1496955171000" expanded="true" signature="48321:48599" placeholder="SELECT langu..stafflanguage..." />
-            <marker date="1496955171000" expanded="true" signature="48405:48540" placeholder="SELECT staff..staff..." />
-            <marker date="1496955171000" expanded="true" signature="49161:49439" placeholder="SELECT langu..stafflanguage..." />
-            <marker date="1496955171000" expanded="true" signature="49245:49380" placeholder="SELECT staff..staff..." />
-            <marker date="1496955171000" expanded="true" signature="50105:50383" placeholder="SELECT langu..stafflanguage..." />
-            <marker date="1496955171000" expanded="true" signature="50189:50324" placeholder="SELECT staff..staff..." />
-            <marker date="1496955171000" expanded="true" signature="50945:51223" placeholder="SELECT langu..stafflanguage..." />
-            <marker date="1496955171000" expanded="true" signature="51029:51164" placeholder="SELECT staff..staff..." />
-            <marker date="1496955171000" expanded="true" signature="51885:52163" placeholder="SELECT langu..stafflanguage..." />
-            <marker date="1496955171000" expanded="true" signature="51969:52104" placeholder="SELECT staff..staff..." />
-            <marker date="1496955171000" expanded="true" signature="52725:53003" placeholder="SELECT langu..stafflanguage..." />
-            <marker date="1496955171000" expanded="true" signature="52809:52944" placeholder="SELECT staff..staff..." />
+            <marker date="1496955171000" expanded="true" signature="-1:-1" placeholder="select * fro..teamadmin..." />
+            <marker date="1496955171000" expanded="true" signature="-1:-1" placeholder="select * fro..organisationadmin..." />
+            <marker date="1496955171000" expanded="true" signature="-1:-1" placeholder="select deptn..orgteamdetail..." />
+            <marker date="1496955171000" expanded="true" signature="-1:-1" placeholder="select teamn..orgteamdetail..." />
+            <marker date="1496955171000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1496955171000" expanded="true" signature="-1:-1" placeholder="SELECT relig..staff..." />
+            <marker date="1496955171000" expanded="true" signature="-1:-1" placeholder="SELECT relig..staff..." />
+            <marker date="1496955171000" expanded="true" signature="-1:-1" placeholder="select `staf..." />
+            <marker date="1496955171000" expanded="true" signature="-1:-1" placeholder="select `staf..." />
+            <marker date="1496955171000" expanded="true" signature="-1:-1" placeholder="select `staf..." />
+            <marker date="1496955171000" expanded="true" signature="-1:-1" placeholder="select `staf..." />
+            <marker date="1496955171000" expanded="true" signature="-1:-1" placeholder="select `staf..." />
+            <marker date="1496955171000" expanded="true" signature="-1:-1" placeholder="select `staf..." />
+            <marker date="1496955171000" expanded="true" signature="-1:-1" placeholder="select `staf..." />
+            <marker date="1496955171000" expanded="true" signature="-1:-1" placeholder="select x , C..temptable..." />
+            <marker date="1496955171000" expanded="true" signature="-1:-1" placeholder="select `staf..." />
+            <marker date="1496955171000" expanded="true" signature="-1:-1" placeholder="SELECT langu..stafflanguage..." />
+            <marker date="1496955171000" expanded="true" signature="-1:-1" placeholder="SELECT staff..staff..." />
+            <marker date="1496955171000" expanded="true" signature="-1:-1" placeholder="SELECT langu..stafflanguage..." />
+            <marker date="1496955171000" expanded="true" signature="-1:-1" placeholder="SELECT staff..staff..." />
+            <marker date="1496955171000" expanded="true" signature="-1:-1" placeholder="select teamn..orgteamdetail..." />
+            <marker date="1496955171000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1496955171000" expanded="true" signature="-1:-1" placeholder="select * fro..staff..." />
+            <marker date="1496955171000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1496955171000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1496955171000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1496955171000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1496955171000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1496955171000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1496955171000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1496955171000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1496955171000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1496955171000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1496955171000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1496955171000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1496955171000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1496955171000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1496955171000" expanded="true" signature="-1:-1" placeholder="select teamn..orgteamdetail..." />
+            <marker date="1496955171000" expanded="true" signature="-1:-1" placeholder="select `staf..." />
+            <marker date="1496955171000" expanded="true" signature="-1:-1" placeholder="select `staf..." />
+            <marker date="1496955171000" expanded="true" signature="-1:-1" placeholder="select `staf..." />
+            <marker date="1496955171000" expanded="true" signature="-1:-1" placeholder="select `staf..." />
+            <marker date="1496955171000" expanded="true" signature="-1:-1" placeholder="select `staf..." />
+            <marker date="1496955171000" expanded="true" signature="-1:-1" placeholder="select `staf..." />
+            <marker date="1496955171000" expanded="true" signature="-1:-1" placeholder="select `staf..." />
+            <marker date="1496955171000" expanded="true" signature="-1:-1" placeholder="select x , C..temptable..." />
+            <marker date="1496955171000" expanded="true" signature="-1:-1" placeholder="select `staf..." />
+            <marker date="1496955171000" expanded="true" signature="-1:-1" placeholder="select teamn..orgteamdetail..." />
+            <marker date="1496955171000" expanded="true" signature="-1:-1" placeholder="SELECT langu..stafflanguage..." />
+            <marker date="1496955171000" expanded="true" signature="-1:-1" placeholder="SELECT staff..staff..." />
+            <marker date="1496955171000" expanded="true" signature="-1:-1" placeholder="select teamn..orgteamdetail..." />
+            <marker date="1496955171000" expanded="true" signature="-1:-1" placeholder="SELECT relig..staff..." />
+            <marker date="1496955171000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1496955171000" expanded="true" signature="-1:-1" placeholder="SELECT langu..stafflanguage..." />
+            <marker date="1496955171000" expanded="true" signature="-1:-1" placeholder="SELECT staff..staff..." />
+            <marker date="1496955171000" expanded="true" signature="-1:-1" placeholder="SELECT langu..stafflanguage..." />
+            <marker date="1496955171000" expanded="true" signature="-1:-1" placeholder="SELECT staff..staff..." />
+            <marker date="1496955171000" expanded="true" signature="-1:-1" placeholder="SELECT langu..stafflanguage..." />
+            <marker date="1496955171000" expanded="true" signature="-1:-1" placeholder="SELECT staff..staff..." />
+            <marker date="1496955171000" expanded="true" signature="-1:-1" placeholder="SELECT langu..stafflanguage..." />
+            <marker date="1496955171000" expanded="true" signature="-1:-1" placeholder="SELECT staff..staff..." />
+            <marker date="1496955171000" expanded="true" signature="-1:-1" placeholder="SELECT langu..stafflanguage..." />
+            <marker date="1496955171000" expanded="true" signature="-1:-1" placeholder="SELECT staff..staff..." />
+            <marker date="1496955171000" expanded="true" signature="-1:-1" placeholder="SELECT langu..stafflanguage..." />
+            <marker date="1496955171000" expanded="true" signature="-1:-1" placeholder="SELECT staff..staff..." />
+            <marker date="1496955171000" expanded="true" signature="-1:-1" placeholder="SELECT langu..stafflanguage..." />
+            <marker date="1496955171000" expanded="true" signature="-1:-1" placeholder="SELECT staff..staff..." />
+            <marker date="1496955171000" expanded="true" signature="-1:-1" placeholder="SELECT langu..stafflanguage..." />
+            <marker date="1496955171000" expanded="true" signature="-1:-1" placeholder="SELECT staff..staff..." />
           </folding>
         </state>
       </provider>
@@ -953,24 +678,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/model/access/invite.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-5.0" vertical-offset="0" max-vertical-offset="5685">
-          <caret line="13" column="76" selection-start-line="13" selection-start-column="8" selection-end-line="13" selection-end-column="76" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/headerteamadmin.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.43841335" vertical-offset="0" max-vertical-offset="958">
           <caret line="28" column="38" selection-start-line="28" selection-start-column="38" selection-end-line="28" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/model/access/access_teacherpanel.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.83716077" vertical-offset="908" max-vertical-offset="1890">
-          <caret line="119" column="12" selection-start-line="116" selection-start-column="7" selection-end-line="120" selection-end-column="9" />
         </state>
       </provider>
     </entry>
@@ -981,209 +692,97 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/model/access/user_profile.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="452" max-vertical-offset="1410">
-          <caret line="88" column="0" selection-start-line="88" selection-start-column="0" selection-end-line="88" selection-end-column="0" />
-          <folding>
-            <marker date="1496955296000" expanded="true" signature="853:1995" placeholder="{...}" />
-            <marker date="1496955296000" expanded="true" signature="901:1063" placeholder="{...}" />
-            <marker date="1496955296000" expanded="true" signature="901:1065" placeholder="{...}" />
-            <marker date="1496955296000" expanded="true" signature="901:1116" placeholder="{...}" />
-            <marker date="1496955296000" expanded="true" signature="1240:1504" placeholder="{...}" />
-            <marker date="1496955296000" expanded="true" signature="1671:3065" placeholder="..." />
-            <marker date="1496955296000" expanded="true" signature="2158:2462" placeholder="..." />
-            <marker date="1496955296000" expanded="true" signature="2178:2457" placeholder="..." />
-            <marker date="1496955296000" expanded="true" signature="2195:2448" placeholder="..." />
-            <marker date="1496955296000" expanded="true" signature="2628:3040" placeholder="..." />
-            <marker date="1496955296000" expanded="true" signature="2652:3035" placeholder="..." />
-            <marker date="1496955296000" expanded="true" signature="2670:3030" placeholder="..." />
-            <marker date="1496955296000" expanded="true" signature="3357:3571" placeholder="..." />
-            <marker date="1496955296000" expanded="true" signature="3400:3552" placeholder="{...}" />
-            <marker date="1496955296000" expanded="true" signature="3459:3535" placeholder="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/peyman_test_teampanel.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-76.791664" vertical-offset="27617" max-vertical-offset="29550">
-          <caret line="1964" column="9" selection-start-line="1964" selection-start-column="9" selection-end-line="1964" selection-end-column="9" />
+        <state vertical-scroll-proportion="0.37682673" vertical-offset="27869" max-vertical-offset="29550">
+          <caret line="1882" column="13" selection-start-line="1882" selection-start-column="13" selection-end-line="1882" selection-end-column="13" />
           <folding>
-            <marker date="1496955171000" expanded="true" signature="235:293" placeholder="select * fro..teamadmin..." />
-            <marker date="1496955171000" expanded="true" signature="811:869" placeholder="select * fro..organisationadmin..." />
-            <marker date="1496955171000" expanded="true" signature="1138:1232" placeholder="select deptn..orgteamdetail..." />
-            <marker date="1496955171000" expanded="true" signature="1410:1504" placeholder="select teamn..orgteamdetail..." />
-            <marker date="1496955171000" expanded="true" signature="2072:2122" placeholder="..." />
-            <marker date="1496955171000" expanded="true" signature="6206:6404" placeholder="SELECT relig..staff..." />
-            <marker date="1496955171000" expanded="true" signature="6452:6650" placeholder="SELECT relig..staff..." />
-            <marker date="1496955171000" expanded="true" signature="8704:8894" placeholder="select `staf..." />
-            <marker date="1496955171000" expanded="true" signature="9143:9339" placeholder="select `staf..." />
-            <marker date="1496955171000" expanded="true" signature="9588:9784" placeholder="select `staf..." />
-            <marker date="1496955171000" expanded="true" signature="10036:10239" placeholder="select `staf..." />
-            <marker date="1496955171000" expanded="true" signature="10491:10694" placeholder="select `staf..." />
-            <marker date="1496955171000" expanded="true" signature="10946:11149" placeholder="select `staf..." />
-            <marker date="1496955171000" expanded="true" signature="11401:11604" placeholder="select `staf..." />
-            <marker date="1496955171000" expanded="true" signature="11911:12156" placeholder="select x , C..temptable..." />
-            <marker date="1496955171000" expanded="true" signature="11940:12130" placeholder="select `staf..." />
-            <marker date="1496955171000" expanded="true" signature="13707:13963" placeholder="SELECT langu..stafflanguage..." />
-            <marker date="1496955171000" expanded="true" signature="13791:13904" placeholder="SELECT staff..staff..." />
-            <marker date="1496955171000" expanded="true" signature="14011:14267" placeholder="SELECT langu..stafflanguage..." />
-            <marker date="1496955171000" expanded="true" signature="14095:14208" placeholder="SELECT staff..staff..." />
-            <marker date="1496955171000" expanded="true" signature="18487:18581" placeholder="select teamn..orgteamdetail..." />
-            <marker date="1496955171000" expanded="true" signature="18724:18738" placeholder="..." />
-            <marker date="1496955171000" expanded="true" signature="19361:19487" placeholder="select * fro..staff..." />
-            <marker date="1496955171000" expanded="true" signature="19755:19791" placeholder="..." />
-            <marker date="1496955171000" expanded="true" signature="19844:19856" placeholder="..." />
-            <marker date="1496955171000" expanded="true" signature="19896:19907" placeholder="..." />
-            <marker date="1496955171000" expanded="true" signature="19956:19967" placeholder="..." />
-            <marker date="1496955171000" expanded="true" signature="20692:20703" placeholder="..." />
-            <marker date="1496955171000" expanded="true" signature="20743:20754" placeholder="..." />
-            <marker date="1496955171000" expanded="true" signature="20796:20807" placeholder="..." />
-            <marker date="1496955171000" expanded="true" signature="22471:22482" placeholder="..." />
-            <marker date="1496955171000" expanded="true" signature="22604:22615" placeholder="..." />
-            <marker date="1496955171000" expanded="true" signature="22949:22960" placeholder="..." />
-            <marker date="1496955171000" expanded="true" signature="27441:27453" placeholder="..." />
-            <marker date="1496955171000" expanded="true" signature="27922:27959" placeholder="..." />
-            <marker date="1496955171000" expanded="true" signature="28063:28074" placeholder="..." />
-            <marker date="1496955171000" expanded="true" signature="28488:28500" placeholder="..." />
-            <marker date="1496955171000" expanded="true" signature="30084:30178" placeholder="select teamn..orgteamdetail..." />
-            <marker date="1496955171000" expanded="true" signature="33356:33546" placeholder="select `staf..." />
-            <marker date="1496955171000" expanded="true" signature="33731:33927" placeholder="select `staf..." />
-            <marker date="1496955171000" expanded="true" signature="34112:34308" placeholder="select `staf..." />
-            <marker date="1496955171000" expanded="true" signature="34496:34699" placeholder="select `staf..." />
-            <marker date="1496955171000" expanded="true" signature="34887:35090" placeholder="select `staf..." />
-            <marker date="1496955171000" expanded="true" signature="35278:35481" placeholder="select `staf..." />
-            <marker date="1496955171000" expanded="true" signature="35669:35872" placeholder="select `staf..." />
-            <marker date="1496955171000" expanded="true" signature="36107:36352" placeholder="select x , C..temptable..." />
-            <marker date="1496955171000" expanded="true" signature="36136:36326" placeholder="select `staf..." />
-            <marker date="1496955171000" expanded="true" signature="37140:37234" placeholder="select teamn..orgteamdetail..." />
-            <marker date="1496955171000" expanded="true" signature="39116:39372" placeholder="SELECT langu..stafflanguage..." />
-            <marker date="1496955171000" expanded="true" signature="39200:39313" placeholder="SELECT staff..staff..." />
-            <marker date="1496955171000" expanded="true" signature="40087:40181" placeholder="select teamn..orgteamdetail..." />
-            <marker date="1496955171000" expanded="true" signature="40984:41182" placeholder="SELECT relig..staff..." />
-            <marker date="1496955171000" expanded="true" signature="42430:42481" placeholder="..." />
-            <marker date="1496955171000" expanded="true" signature="46555:46811" placeholder="SELECT langu..stafflanguage..." />
-            <marker date="1496955171000" expanded="true" signature="46639:46752" placeholder="SELECT staff..staff..." />
-            <marker date="1496955171000" expanded="true" signature="47419:47675" placeholder="SELECT langu..stafflanguage..." />
-            <marker date="1496955171000" expanded="true" signature="47503:47616" placeholder="SELECT staff..staff..." />
-            <marker date="1496955171000" expanded="true" signature="48321:48599" placeholder="SELECT langu..stafflanguage..." />
-            <marker date="1496955171000" expanded="true" signature="48405:48540" placeholder="SELECT staff..staff..." />
-            <marker date="1496955171000" expanded="true" signature="49161:49439" placeholder="SELECT langu..stafflanguage..." />
-            <marker date="1496955171000" expanded="true" signature="49245:49380" placeholder="SELECT staff..staff..." />
-            <marker date="1496955171000" expanded="true" signature="50105:50383" placeholder="SELECT langu..stafflanguage..." />
-            <marker date="1496955171000" expanded="true" signature="50189:50324" placeholder="SELECT staff..staff..." />
-            <marker date="1496955171000" expanded="true" signature="50945:51223" placeholder="SELECT langu..stafflanguage..." />
-            <marker date="1496955171000" expanded="true" signature="51029:51164" placeholder="SELECT staff..staff..." />
-            <marker date="1496955171000" expanded="true" signature="51885:52163" placeholder="SELECT langu..stafflanguage..." />
-            <marker date="1496955171000" expanded="true" signature="51969:52104" placeholder="SELECT staff..staff..." />
-            <marker date="1496955171000" expanded="true" signature="52725:53003" placeholder="SELECT langu..stafflanguage..." />
-            <marker date="1496955171000" expanded="true" signature="52809:52944" placeholder="SELECT staff..staff..." />
+            <marker date="1496955171000" expanded="true" signature="-1:-1" placeholder="select * fro..teamadmin..." />
+            <marker date="1496955171000" expanded="true" signature="-1:-1" placeholder="select * fro..organisationadmin..." />
+            <marker date="1496955171000" expanded="true" signature="-1:-1" placeholder="select deptn..orgteamdetail..." />
+            <marker date="1496955171000" expanded="true" signature="-1:-1" placeholder="select teamn..orgteamdetail..." />
+            <marker date="1496955171000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1496955171000" expanded="true" signature="-1:-1" placeholder="SELECT relig..staff..." />
+            <marker date="1496955171000" expanded="true" signature="-1:-1" placeholder="SELECT relig..staff..." />
+            <marker date="1496955171000" expanded="true" signature="-1:-1" placeholder="select `staf..." />
+            <marker date="1496955171000" expanded="true" signature="-1:-1" placeholder="select `staf..." />
+            <marker date="1496955171000" expanded="true" signature="-1:-1" placeholder="select `staf..." />
+            <marker date="1496955171000" expanded="true" signature="-1:-1" placeholder="select `staf..." />
+            <marker date="1496955171000" expanded="true" signature="-1:-1" placeholder="select `staf..." />
+            <marker date="1496955171000" expanded="true" signature="-1:-1" placeholder="select `staf..." />
+            <marker date="1496955171000" expanded="true" signature="-1:-1" placeholder="select `staf..." />
+            <marker date="1496955171000" expanded="true" signature="-1:-1" placeholder="select x , C..temptable..." />
+            <marker date="1496955171000" expanded="true" signature="-1:-1" placeholder="select `staf..." />
+            <marker date="1496955171000" expanded="true" signature="-1:-1" placeholder="SELECT langu..stafflanguage..." />
+            <marker date="1496955171000" expanded="true" signature="-1:-1" placeholder="SELECT staff..staff..." />
+            <marker date="1496955171000" expanded="true" signature="-1:-1" placeholder="SELECT langu..stafflanguage..." />
+            <marker date="1496955171000" expanded="true" signature="-1:-1" placeholder="SELECT staff..staff..." />
+            <marker date="1496955171000" expanded="true" signature="-1:-1" placeholder="select teamn..orgteamdetail..." />
+            <marker date="1496955171000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1496955171000" expanded="true" signature="-1:-1" placeholder="select * fro..staff..." />
+            <marker date="1496955171000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1496955171000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1496955171000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1496955171000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1496955171000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1496955171000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1496955171000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1496955171000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1496955171000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1496955171000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1496955171000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1496955171000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1496955171000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1496955171000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1496955171000" expanded="true" signature="-1:-1" placeholder="select teamn..orgteamdetail..." />
+            <marker date="1496955171000" expanded="true" signature="-1:-1" placeholder="select `staf..." />
+            <marker date="1496955171000" expanded="true" signature="-1:-1" placeholder="select `staf..." />
+            <marker date="1496955171000" expanded="true" signature="-1:-1" placeholder="select `staf..." />
+            <marker date="1496955171000" expanded="true" signature="-1:-1" placeholder="select `staf..." />
+            <marker date="1496955171000" expanded="true" signature="-1:-1" placeholder="select `staf..." />
+            <marker date="1496955171000" expanded="true" signature="-1:-1" placeholder="select `staf..." />
+            <marker date="1496955171000" expanded="true" signature="-1:-1" placeholder="select `staf..." />
+            <marker date="1496955171000" expanded="true" signature="-1:-1" placeholder="select x , C..temptable..." />
+            <marker date="1496955171000" expanded="true" signature="-1:-1" placeholder="select `staf..." />
+            <marker date="1496955171000" expanded="true" signature="-1:-1" placeholder="select teamn..orgteamdetail..." />
+            <marker date="1496955171000" expanded="true" signature="-1:-1" placeholder="SELECT langu..stafflanguage..." />
+            <marker date="1496955171000" expanded="true" signature="-1:-1" placeholder="SELECT staff..staff..." />
+            <marker date="1496955171000" expanded="true" signature="-1:-1" placeholder="select teamn..orgteamdetail..." />
+            <marker date="1496955171000" expanded="true" signature="-1:-1" placeholder="SELECT relig..staff..." />
+            <marker date="1496955171000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1496955171000" expanded="true" signature="-1:-1" placeholder="SELECT langu..stafflanguage..." />
+            <marker date="1496955171000" expanded="true" signature="-1:-1" placeholder="SELECT staff..staff..." />
+            <marker date="1496955171000" expanded="true" signature="-1:-1" placeholder="SELECT langu..stafflanguage..." />
+            <marker date="1496955171000" expanded="true" signature="-1:-1" placeholder="SELECT staff..staff..." />
+            <marker date="1496955171000" expanded="true" signature="-1:-1" placeholder="SELECT langu..stafflanguage..." />
+            <marker date="1496955171000" expanded="true" signature="-1:-1" placeholder="SELECT staff..staff..." />
+            <marker date="1496955171000" expanded="true" signature="-1:-1" placeholder="SELECT langu..stafflanguage..." />
+            <marker date="1496955171000" expanded="true" signature="-1:-1" placeholder="SELECT staff..staff..." />
+            <marker date="1496955171000" expanded="true" signature="-1:-1" placeholder="SELECT langu..stafflanguage..." />
+            <marker date="1496955171000" expanded="true" signature="-1:-1" placeholder="SELECT staff..staff..." />
+            <marker date="1496955171000" expanded="true" signature="-1:-1" placeholder="SELECT langu..stafflanguage..." />
+            <marker date="1496955171000" expanded="true" signature="-1:-1" placeholder="SELECT staff..staff..." />
+            <marker date="1496955171000" expanded="true" signature="-1:-1" placeholder="SELECT langu..stafflanguage..." />
+            <marker date="1496955171000" expanded="true" signature="-1:-1" placeholder="SELECT staff..staff..." />
+            <marker date="1496955171000" expanded="true" signature="-1:-1" placeholder="SELECT langu..stafflanguage..." />
+            <marker date="1496955171000" expanded="true" signature="-1:-1" placeholder="SELECT staff..staff..." />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/teamadminpanel.php">
+    <entry file="file://$PROJECT_DIR$/model/access/invite.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-58.041668" vertical-offset="28052" max-vertical-offset="29535">
-          <caret line="1963" column="9" selection-start-line="1963" selection-start-column="9" selection-end-line="1963" selection-end-column="9" />
-          <folding>
-            <element signature="n#style#0;n#div#1;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#2;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#li#0;n#ul#0;n#div#2;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#li#1;n#ul#0;n#div#2;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#li#2;n#ul#0;n#div#2;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#li#3;n#ul#0;n#div#2;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#li#4;n#ul#0;n#div#2;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#li#5;n#ul#0;n#div#2;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#tr#0;n#form#0;n#div#0;n#div#0;n#div#2;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#button#0;n#td#5;n#tr#0;n#form#0;n#div#0;n#div#0;n#div#2;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#a#1;n#form#0;n#div#0;n#div#0;n#div#2;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#span#0;n#div#0;n#div#0;n#div#2;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#2;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#1;n#div#0;n#div#1;n#div#0;n#div#2;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#button#0;n#div#0;n#div#2;n#div#0;n#div#2;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#button#0;n#div#1;n#div#2;n#div#0;n#div#2;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#2;n#div#2;n#div#0;n#div#2;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#3;n#div#0;n#div#2;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#1;n#div#3;n#div#0;n#div#2;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#h3#0;n#div#0;n#div#0;n#div#0;n#div#3;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#span#0;n#h3#0;n#div#1;n#div#0;n#div#0;n#div#3;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#h4#0;n#div#0;n#div#0;n#div#0;n#div#4;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#h3#0;n#form#0;n#div#1;n#div#0;n#div#0;n#div#4;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#label#0;n#div#0;n#form#0;n#div#1;n#div#0;n#div#0;n#div#4;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#input#0;n#div#0;n#div#0;n#form#0;n#div#1;n#div#0;n#div#0;n#div#4;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#label#0;n#div#1;n#div#0;n#div#4;n#form#0;n#div#1;n#div#0;n#div#0;n#div#4;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#h3#1;n#form#0;n#div#1;n#div#0;n#div#0;n#div#4;n#!!top" expanded="true" />
-            <marker date="1497016746000" expanded="true" signature="235:293" placeholder="select * fro..teamadmin..." />
-            <marker date="1497016746000" expanded="true" signature="811:869" placeholder="select * fro..organisationadmin..." />
-            <marker date="1497016746000" expanded="true" signature="1138:1232" placeholder="select deptn..orgteamdetail..." />
-            <marker date="1497016746000" expanded="true" signature="1410:1504" placeholder="select teamn..orgteamdetail..." />
-            <marker date="1497016746000" expanded="true" signature="2072:2122" placeholder="..." />
-            <marker date="1497016746000" expanded="true" signature="6200:6398" placeholder="SELECT relig..staff..." />
-            <marker date="1497016746000" expanded="true" signature="6445:6643" placeholder="SELECT relig..staff..." />
-            <marker date="1497016746000" expanded="true" signature="8683:8873" placeholder="select `staf..." />
-            <marker date="1497016746000" expanded="true" signature="9122:9318" placeholder="select `staf..." />
-            <marker date="1497016746000" expanded="true" signature="9567:9763" placeholder="select `staf..." />
-            <marker date="1497016746000" expanded="true" signature="10015:10218" placeholder="select `staf..." />
-            <marker date="1497016746000" expanded="true" signature="10470:10673" placeholder="select `staf..." />
-            <marker date="1497016746000" expanded="true" signature="10925:11128" placeholder="select `staf..." />
-            <marker date="1497016746000" expanded="true" signature="11380:11583" placeholder="select `staf..." />
-            <marker date="1497016746000" expanded="true" signature="11890:12135" placeholder="select x , C..temptable..." />
-            <marker date="1497016746000" expanded="true" signature="11919:12109" placeholder="select `staf..." />
-            <marker date="1497016746000" expanded="true" signature="13656:13912" placeholder="SELECT langu..stafflanguage..." />
-            <marker date="1497016746000" expanded="true" signature="13740:13853" placeholder="SELECT staff..staff..." />
-            <marker date="1497016746000" expanded="true" signature="13958:14214" placeholder="SELECT langu..stafflanguage..." />
-            <marker date="1497016746000" expanded="true" signature="14042:14155" placeholder="SELECT staff..staff..." />
-            <marker date="1497016746000" expanded="true" signature="18426:18520" placeholder="select teamn..orgteamdetail..." />
-            <marker date="1497016746000" expanded="true" signature="18663:18677" placeholder="..." />
-            <marker date="1497016746000" expanded="true" signature="19300:19426" placeholder="select * fro..staff..." />
-            <marker date="1497016746000" expanded="true" signature="19694:19730" placeholder="..." />
-            <marker date="1497016746000" expanded="true" signature="19783:19795" placeholder="..." />
-            <marker date="1497016746000" expanded="true" signature="19835:19846" placeholder="..." />
-            <marker date="1497016746000" expanded="true" signature="19895:19906" placeholder="..." />
-            <marker date="1497016746000" expanded="true" signature="20631:20642" placeholder="..." />
-            <marker date="1497016746000" expanded="true" signature="20682:20693" placeholder="..." />
-            <marker date="1497016746000" expanded="true" signature="20735:20746" placeholder="..." />
-            <marker date="1497016746000" expanded="true" signature="22383:22394" placeholder="..." />
-            <marker date="1497016746000" expanded="true" signature="22516:22527" placeholder="..." />
-            <marker date="1497016746000" expanded="true" signature="22861:22872" placeholder="..." />
-            <marker date="1497016746000" expanded="true" signature="27353:27365" placeholder="..." />
-            <marker date="1497016746000" expanded="true" signature="27980:27991" placeholder="..." />
-            <marker date="1497016746000" expanded="true" signature="28405:28417" placeholder="..." />
-            <marker date="1497016746000" expanded="true" signature="30001:30095" placeholder="select teamn..orgteamdetail..." />
-            <marker date="1497016746000" expanded="true" signature="33273:33463" placeholder="select `staf..." />
-            <marker date="1497016746000" expanded="true" signature="33648:33844" placeholder="select `staf..." />
-            <marker date="1497016746000" expanded="true" signature="34029:34225" placeholder="select `staf..." />
-            <marker date="1497016746000" expanded="true" signature="34413:34616" placeholder="select `staf..." />
-            <marker date="1497016746000" expanded="true" signature="34804:35007" placeholder="select `staf..." />
-            <marker date="1497016746000" expanded="true" signature="35195:35398" placeholder="select `staf..." />
-            <marker date="1497016746000" expanded="true" signature="35586:35789" placeholder="select `staf..." />
-            <marker date="1497016746000" expanded="true" signature="36024:36269" placeholder="select x , C..temptable..." />
-            <marker date="1497016746000" expanded="true" signature="36053:36243" placeholder="select `staf..." />
-            <marker date="1497016746000" expanded="true" signature="37057:37151" placeholder="select teamn..orgteamdetail..." />
-            <marker date="1497016746000" expanded="true" signature="39033:39289" placeholder="SELECT langu..stafflanguage..." />
-            <marker date="1497016746000" expanded="true" signature="39117:39230" placeholder="SELECT staff..staff..." />
-            <marker date="1497016746000" expanded="true" signature="40004:40098" placeholder="select teamn..orgteamdetail..." />
-            <marker date="1497016746000" expanded="true" signature="40901:41099" placeholder="SELECT relig..staff..." />
-            <marker date="1497016746000" expanded="true" signature="42331:42382" placeholder="..." />
-            <marker date="1497016746000" expanded="true" signature="46452:46708" placeholder="SELECT langu..stafflanguage..." />
-            <marker date="1497016746000" expanded="true" signature="46536:46649" placeholder="SELECT staff..staff..." />
-            <marker date="1497016746000" expanded="true" signature="47331:47587" placeholder="SELECT langu..stafflanguage..." />
-            <marker date="1497016746000" expanded="true" signature="47415:47528" placeholder="SELECT staff..staff..." />
-            <marker date="1497016746000" expanded="true" signature="48227:48505" placeholder="SELECT langu..stafflanguage..." />
-            <marker date="1497016746000" expanded="true" signature="48311:48446" placeholder="SELECT staff..staff..." />
-            <marker date="1497016746000" expanded="true" signature="49062:49340" placeholder="SELECT langu..stafflanguage..." />
-            <marker date="1497016746000" expanded="true" signature="49146:49281" placeholder="SELECT staff..staff..." />
-            <marker date="1497016746000" expanded="true" signature="50000:50278" placeholder="SELECT langu..stafflanguage..." />
-            <marker date="1497016746000" expanded="true" signature="50084:50219" placeholder="SELECT staff..staff..." />
-            <marker date="1497016746000" expanded="true" signature="50835:51113" placeholder="SELECT langu..stafflanguage..." />
-            <marker date="1497016746000" expanded="true" signature="50919:51054" placeholder="SELECT staff..staff..." />
-            <marker date="1497016746000" expanded="true" signature="51769:52047" placeholder="SELECT langu..stafflanguage..." />
-            <marker date="1497016746000" expanded="true" signature="51853:51988" placeholder="SELECT staff..staff..." />
-            <marker date="1497016746000" expanded="true" signature="52605:52883" placeholder="SELECT langu..stafflanguage..." />
-            <marker date="1497016746000" expanded="true" signature="52689:52824" placeholder="SELECT staff..staff..." />
-          </folding>
+        <state vertical-scroll-proportion="0.21920668" vertical-offset="105" max-vertical-offset="5685">
+          <caret line="26" column="8" selection-start-line="26" selection-start-column="8" selection-end-line="30" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/model/access/access_teacherpanel.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.83716077" vertical-offset="908" max-vertical-offset="1890">
+          <caret line="119" column="12" selection-start-line="116" selection-start-column="7" selection-end-line="120" selection-end-column="9" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1195,44 +794,171 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/user_profile.php">
+    <entry file="file://$PROJECT_DIR$/teamadminpanel.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2880">
+        <state vertical-scroll-proportion="0.96868473" vertical-offset="28907" max-vertical-offset="29925">
+          <caret line="1989" column="9" selection-start-line="1989" selection-start-column="9" selection-end-line="1989" selection-end-column="9" />
+          <folding>
+            <marker date="1497106646000" expanded="true" signature="-1:-1" placeholder="select * fro..teamadmin..." />
+            <marker date="1497106646000" expanded="true" signature="-1:-1" placeholder="select * fro..organisationadmin..." />
+            <marker date="1497106646000" expanded="true" signature="-1:-1" placeholder="select deptn..orgteamdetail..." />
+            <marker date="1497106646000" expanded="true" signature="-1:-1" placeholder="select teamn..orgteamdetail..." />
+            <marker date="1497106646000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1497106646000" expanded="true" signature="-1:-1" placeholder="SELECT relig..staff..." />
+            <marker date="1497106646000" expanded="true" signature="-1:-1" placeholder="SELECT relig..staff..." />
+            <marker date="1497106646000" expanded="true" signature="-1:-1" placeholder="select `staf..." />
+            <marker date="1497106646000" expanded="true" signature="-1:-1" placeholder="select `staf..." />
+            <marker date="1497106646000" expanded="true" signature="-1:-1" placeholder="select `staf..." />
+            <marker date="1497106646000" expanded="true" signature="-1:-1" placeholder="select `staf..." />
+            <marker date="1497106646000" expanded="true" signature="-1:-1" placeholder="select `staf..." />
+            <marker date="1497106646000" expanded="true" signature="-1:-1" placeholder="select `staf..." />
+            <marker date="1497106646000" expanded="true" signature="-1:-1" placeholder="select `staf..." />
+            <marker date="1497106646000" expanded="true" signature="-1:-1" placeholder="select x , C..temptable..." />
+            <marker date="1497106646000" expanded="true" signature="-1:-1" placeholder="select `staf..." />
+            <marker date="1497106646000" expanded="true" signature="-1:-1" placeholder="SELECT langu..stafflanguage..." />
+            <marker date="1497106646000" expanded="true" signature="-1:-1" placeholder="SELECT staff..staff..." />
+            <marker date="1497106646000" expanded="true" signature="-1:-1" placeholder="SELECT langu..stafflanguage..." />
+            <marker date="1497106646000" expanded="true" signature="-1:-1" placeholder="SELECT staff..staff..." />
+            <marker date="1497106646000" expanded="true" signature="-1:-1" placeholder="select teamn..orgteamdetail..." />
+            <marker date="1497106646000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1497106646000" expanded="true" signature="-1:-1" placeholder="select * fro..staff..." />
+            <marker date="1497106646000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1497106646000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1497106646000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1497106646000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1497106646000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1497106646000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1497106646000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1497106646000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1497106646000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1497106646000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1497106646000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1497106646000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1497106646000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1497106646000" expanded="true" signature="-1:-1" placeholder="select teamn..orgteamdetail..." />
+            <marker date="1497106646000" expanded="true" signature="-1:-1" placeholder="select `staf..." />
+            <marker date="1497106646000" expanded="true" signature="-1:-1" placeholder="select `staf..." />
+            <marker date="1497106646000" expanded="true" signature="-1:-1" placeholder="select `staf..." />
+            <marker date="1497106646000" expanded="true" signature="-1:-1" placeholder="select `staf..." />
+            <marker date="1497106646000" expanded="true" signature="-1:-1" placeholder="select `staf..." />
+            <marker date="1497106646000" expanded="true" signature="-1:-1" placeholder="select `staf..." />
+            <marker date="1497106646000" expanded="true" signature="-1:-1" placeholder="select `staf..." />
+            <marker date="1497106646000" expanded="true" signature="-1:-1" placeholder="select x , C..temptable..." />
+            <marker date="1497106646000" expanded="true" signature="-1:-1" placeholder="select `staf..." />
+            <marker date="1497106646000" expanded="true" signature="-1:-1" placeholder="select teamn..orgteamdetail..." />
+            <marker date="1497106646000" expanded="true" signature="-1:-1" placeholder="SELECT langu..stafflanguage..." />
+            <marker date="1497106646000" expanded="true" signature="-1:-1" placeholder="SELECT staff..staff..." />
+            <marker date="1497106646000" expanded="true" signature="-1:-1" placeholder="select teamn..orgteamdetail..." />
+            <marker date="1497106646000" expanded="true" signature="-1:-1" placeholder="SELECT relig..staff..." />
+            <marker date="1497106646000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1497106646000" expanded="true" signature="-1:-1" placeholder="SELECT langu..stafflanguage..." />
+            <marker date="1497106646000" expanded="true" signature="-1:-1" placeholder="SELECT staff..staff..." />
+            <marker date="1497106646000" expanded="true" signature="-1:-1" placeholder="SELECT langu..stafflanguage..." />
+            <marker date="1497106646000" expanded="true" signature="-1:-1" placeholder="SELECT staff..staff..." />
+            <marker date="1497106646000" expanded="true" signature="-1:-1" placeholder="SELECT langu..stafflanguage..." />
+            <marker date="1497106646000" expanded="true" signature="-1:-1" placeholder="SELECT staff..staff..." />
+            <marker date="1497106646000" expanded="true" signature="-1:-1" placeholder="SELECT langu..stafflanguage..." />
+            <marker date="1497106646000" expanded="true" signature="-1:-1" placeholder="SELECT staff..staff..." />
+            <marker date="1497106646000" expanded="true" signature="-1:-1" placeholder="SELECT langu..stafflanguage..." />
+            <marker date="1497106646000" expanded="true" signature="-1:-1" placeholder="SELECT staff..staff..." />
+            <marker date="1497106646000" expanded="true" signature="-1:-1" placeholder="SELECT langu..stafflanguage..." />
+            <marker date="1497106646000" expanded="true" signature="-1:-1" placeholder="SELECT staff..staff..." />
+            <marker date="1497106646000" expanded="true" signature="-1:-1" placeholder="SELECT langu..stafflanguage..." />
+            <marker date="1497106646000" expanded="true" signature="-1:-1" placeholder="SELECT staff..staff..." />
+            <marker date="1497106646000" expanded="true" signature="-1:-1" placeholder="SELECT langu..stafflanguage..." />
+            <marker date="1497106646000" expanded="true" signature="-1:-1" placeholder="SELECT staff..staff..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/model/access/user_profile.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.90605426" vertical-offset="452" max-vertical-offset="1410">
+          <caret line="88" column="0" selection-start-line="88" selection-start-column="0" selection-end-line="88" selection-end-column="0" />
+          <folding>
+            <marker date="1496955296000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1496955296000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1496955296000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1496955296000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1496955296000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1496955296000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1496955296000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1496955296000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1496955296000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1496955296000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1496955296000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1496955296000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1496955296000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1496955296000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1496955296000" expanded="true" signature="-1:-1" placeholder="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/updatestaffdetails.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1455">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <marker date="1497033158000" expanded="true" signature="2219:3903" placeholder="..." />
-            <marker date="1497033158000" expanded="true" signature="2269:3881" placeholder="{...}" />
-            <marker date="1497033158000" expanded="true" signature="2385:3101" placeholder="{...}" />
-            <marker date="1497033158000" expanded="true" signature="3105:3863" placeholder="{...}" />
-            <marker date="1497033158000" expanded="false" signature="3954:3973" placeholder="..." />
-            <marker date="1497033158000" expanded="false" signature="4083:4113" placeholder="..." />
-            <marker date="1497033158000" expanded="false" signature="4191:4221" placeholder="..." />
-            <marker date="1497033158000" expanded="true" signature="4251:8913" placeholder="..." />
-            <marker date="1497033158000" expanded="true" signature="4355:7140" placeholder="..." />
-            <marker date="1497033158000" expanded="true" signature="4952:5338" placeholder="..." />
-            <marker date="1497033158000" expanded="true" signature="4972:5333" placeholder="..." />
-            <marker date="1497033158000" expanded="true" signature="5071:5324" placeholder="..." />
-            <marker date="1497033158000" expanded="true" signature="5363:5869" placeholder="..." />
-            <marker date="1497033158000" expanded="true" signature="5387:5864" placeholder="..." />
-            <marker date="1497033158000" expanded="true" signature="5495:5855" placeholder="..." />
-            <marker date="1497033158000" expanded="true" signature="5894:6892" placeholder="..." />
-            <marker date="1497033158000" expanded="true" signature="5916:6887" placeholder="..." />
-            <marker date="1497033158000" expanded="true" signature="6020:6878" placeholder="..." />
-            <marker date="1497033158000" expanded="false" signature="7019:7072" placeholder="..." />
-            <marker date="1497033158000" expanded="true" signature="7272:8787" placeholder="..." />
-            <marker date="1497033158000" expanded="true" signature="9940:10698" placeholder="..." />
-            <marker date="1497033158000" expanded="true" signature="9993:10091" placeholder="{...}" />
-            <marker date="1497033158000" expanded="true" signature="10146:10245" placeholder="{...}" />
-            <marker date="1497033158000" expanded="true" signature="10306:10417" placeholder="{...}" />
-            <marker date="1497033158000" expanded="true" signature="10464:10640" placeholder="{...}" />
-            <marker date="1497033158000" expanded="true" signature="10529:10620" placeholder="{...}" />
+            <marker date="1497102154000" expanded="true" signature="-1:-1" placeholder="UPDATE staff..." />
+            <marker date="1497102154000" expanded="true" signature="-1:-1" placeholder="UPDATE staff..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/user_profile.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="3120">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <marker date="1497101131000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1497101131000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1497101131000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1497101131000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1497101131000" expanded="false" signature="-1:-1" placeholder="..." />
+            <marker date="1497101131000" expanded="false" signature="-1:-1" placeholder="..." />
+            <marker date="1497101131000" expanded="false" signature="-1:-1" placeholder="..." />
+            <marker date="1497101131000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1497101131000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1497101131000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1497101131000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1497101131000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1497101131000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1497101131000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1497101131000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1497101131000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1497101131000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1497101131000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1497101131000" expanded="false" signature="-1:-1" placeholder="..." />
+            <marker date="1497101131000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1497101131000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1497101131000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1497101131000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1497101131000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1497101131000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1497101131000" expanded="true" signature="-1:-1" placeholder="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/fetchstaffinfo.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1065">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <marker date="1497101911000" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..staff..." />
+            <marker date="1497101911000" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..staffbirthdetails..." />
+            <marker date="1497101911000" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..stafflanguage..." />
+            <marker date="1497101911000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1497101911000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1497101911000" expanded="true" signature="-1:-1" placeholder="{...}" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/controller_user.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="982">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="885">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>

@@ -48,6 +48,22 @@ class user_profile
         }
     }
 
+    public static function edit_staff_language($data){
+
+        for($index=0 ; $index<count($data);$index++) {
+            data::update("staff_language", "`languagename`= '" . $data[$index]['lang'] . "' ,`languagelevel`= '" . $data[$index]['level'] . "'", "`id`= " . $data[$index]['id']);
+        }
+    }
+
+    public static function get_staff_language($email){
+        $data = data::selects("`staff_language`","`staffemailid` = '$email'");
+        if (count($data[0]) != 0) {
+            return $data;
+        } else {
+            return false;
+        }
+    }
+
     private static function get_teame_profile($email){
         $data = data::selects('`teamadmin`', "`teamemailid` = '$email'" );
 
