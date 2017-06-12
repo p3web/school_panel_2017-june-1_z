@@ -2,23 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="676e04ff-6d34-48ac-9098-ebf739dc256d" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/page/Belief_chart.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/page/data_value/age_group_20.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/page/data_value/age_group_60.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/page/js/ajax.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/page/js/chart.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/departmentregistrationstep1.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/departmentregistrationstep3.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/studentregistrationstep1.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/studentregistrationstep3.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/teacherregistrationstep1.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/teacherregistrationstep3.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/teamregistrationstep1.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/teamregistrationstep3.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/page/Chart.html" afterPath="$PROJECT_DIR$/page/Chart.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/page/modal_change_pass_user.html" afterPath="$PROJECT_DIR$/page/modal_change_pass_user.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/staffregistrationstep1.php" afterPath="$PROJECT_DIR$/staffregistrationstep1.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/staffregistrationstep3.php" afterPath="$PROJECT_DIR$/staffregistrationstep3.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/invite.php" />
     </list>
     <ignored path="school_panel_2017-june-1_z.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -43,10 +27,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="teacherregistrationstep3.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="teacherregistrationstep3.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/teacherregistrationstep3.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="8205">
+            <state vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="8205">
               <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding>
                 <marker date="1497291966000" expanded="true" signature="2863:2971" placeholder="..." />
@@ -84,6 +68,29 @@
                 <marker date="1497291966000" expanded="true" signature="12483:12536" placeholder="delete from ..." />
                 <marker date="1497291966000" expanded="true" signature="12569:12700" placeholder="insert into ..." />
                 <marker date="1497291966000" expanded="true" signature="13629:13662" placeholder="select count..countries..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="invite.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/invite.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="5685">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding>
+                <marker date="1497293803000" expanded="true" signature="5422:5532" placeholder="..." />
+                <marker date="1497293803000" expanded="true" signature="5461:5521" placeholder="{...}" />
+                <marker date="1497293803000" expanded="true" signature="5911:6021" placeholder="..." />
+                <marker date="1497293803000" expanded="true" signature="5950:6010" placeholder="{...}" />
+                <marker date="1497293803000" expanded="true" signature="7540:7813" placeholder="..." />
+                <marker date="1497293803000" expanded="true" signature="7659:7802" placeholder="{...}" />
+                <marker date="1497293803000" expanded="true" signature="10051:10161" placeholder="..." />
+                <marker date="1497293803000" expanded="true" signature="10090:10150" placeholder="{...}" />
+                <marker date="1497293803000" expanded="true" signature="10540:10650" placeholder="..." />
+                <marker date="1497293803000" expanded="true" signature="10579:10639" placeholder="{...}" />
+                <marker date="1497293803000" expanded="true" signature="12169:12442" placeholder="..." />
+                <marker date="1497293803000" expanded="true" signature="12288:12431" placeholder="{...}" />
               </folding>
             </state>
           </provider>
@@ -1050,6 +1057,27 @@
             <marker date="1497291966000" expanded="true" signature="12483:12536" placeholder="delete from ..." />
             <marker date="1497291966000" expanded="true" signature="12569:12700" placeholder="insert into ..." />
             <marker date="1497291966000" expanded="true" signature="13629:13662" placeholder="select count..countries..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/invite.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="5685">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <marker date="1497293803000" expanded="true" signature="5422:5532" placeholder="..." />
+            <marker date="1497293803000" expanded="true" signature="5461:5521" placeholder="{...}" />
+            <marker date="1497293803000" expanded="true" signature="5911:6021" placeholder="..." />
+            <marker date="1497293803000" expanded="true" signature="5950:6010" placeholder="{...}" />
+            <marker date="1497293803000" expanded="true" signature="7540:7813" placeholder="..." />
+            <marker date="1497293803000" expanded="true" signature="7659:7802" placeholder="{...}" />
+            <marker date="1497293803000" expanded="true" signature="10051:10161" placeholder="..." />
+            <marker date="1497293803000" expanded="true" signature="10090:10150" placeholder="{...}" />
+            <marker date="1497293803000" expanded="true" signature="10540:10650" placeholder="..." />
+            <marker date="1497293803000" expanded="true" signature="10579:10639" placeholder="{...}" />
+            <marker date="1497293803000" expanded="true" signature="12169:12442" placeholder="..." />
+            <marker date="1497293803000" expanded="true" signature="12288:12431" placeholder="{...}" />
           </folding>
         </state>
       </provider>
