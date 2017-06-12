@@ -6,6 +6,7 @@ require_once 'PSCO_function.php';
 require_once 'invite.php';
 require_once 'user_profile.php';
 require_once 'language.php';
+require_once 'religion.php';
 ?>
 <?php
 //print_r($_SESSION);exit;
@@ -121,10 +122,15 @@ function makecsv($data, $csvfilename,$scriptrun = null)
 
 
 
+    <script src="page/js/ajax.js"></script>
+
+
     <script src="https://code.highcharts.com/highcharts.js"></script>
     <script src="https://code.highcharts.com/modules/exporting.js"></script>
     <script src="https://code.highcharts.com/modules/data.js"></script>
     <script src="https://code.highcharts.com/modules/drilldown.js"></script>
+
+    <script src="page/js/chart.js"></script>
 
 
 
@@ -1002,9 +1008,27 @@ function test_input($data) {
 
                             <script type="text/javascript">
 
+                                //_____ set base var
+                                window.orgId = '<?php echo $orgId ?>';
+                                window.deptName = '<?php echo $deptName ?>';
+                                window.teamName = '<?php echo $teamName ?>';
+
                                 //_____ exampel Chart Data
+
+                                var donutSeries = {
+                                    name: 'Language',
+                                    data: <?php
+							$result = language::get_chart_donut_language($orgId,$deptName,$teamName);
+							 echo $result;
+								?>
+                                };
+
+                                for(var i =0 ; i < donutSeries.data.length ; i++){
+                                    donutSeries.data[i][1] =  parseFloat(donutSeries.data[i][1]);
+                                }
+
                                 var series = [{
-                                    name: 'language',
+                                    name: 'Language',
                                     colorByPoint: true,
                                     data: <?php
 							$result = language::get_chart_language($orgId,$deptName,$teamName);
@@ -1050,61 +1074,69 @@ function test_input($data) {
                             </script>
 
 
+                            <!-- ganerat data religion chart -->
+
+                            <script type="text/javascript">
+
+                                //_____ exampel Chart Data
+                                var donutSeries_religion = {
+                                    name: 'Religion',
+                                    data: <?php
+							$result = religion::get_chart_donut_religion($orgId,$deptName,$teamName);
+							 echo $result;
+								?>
+                                };
+
+                                for(var i =0 ; i < donutSeries_religion.data.length ; i++){
+                                    donutSeries_religion.data[i][1] =  parseFloat(donutSeries_religion.data[i][1]);
+                                }
+
+                                var series_religion = [{
+                                    name: 'Religion',
+                                    colorByPoint: true,
+                                    data: <?php
+							$result = religion::get_chart_religion($orgId,$deptName,$teamName);
+							 echo $result;
+								?>
+                                }];
+
+                                for(var i =0 ; i < series_religion[0].data.length ; i++){
+                                    series_religion[0].data[i].y =  parseFloat(series_religion[0].data[i].y);
+                                }
+
+                                //_____ table Func
+                                var TableData_religion = {
+                                    thName : ['Religion' , 'Count'],
+                                    trData:<?php
+							$result = religion::get_table_religion($orgId,$deptName,$teamName);
+							 echo $result;
+								?>
+                                };
+                            </script>
+
 
                             <div id="religion" class="tab-pane fade">
 
-                                <br>
-                                <form method="post">
-                                    <?php
-
-                                    if (!empty($_POST['classnamedropdownbeltab']))
-                                    {
-                                        $teamName= $_POST['classnamedropdownbeltab'];
-                                        $currentClassName = $_POST['classnamedropdownbeltab'];
-                                    }
-                                    include 'connection.php';
-                                    $queryp = "select teamname from orgteamdetail where teamemailid	= '".$adminid."' AND orgid = '".$orgId."'";
-                                    $resultp = mysql_query($queryp);
-                                    echo "Team Name: ";
-                                    echo '<select name="classnamedropdownbeltab" >';
-                                    while ($rowp = mysql_fetch_array($resultp)){
-                                        $selected = ($rowp['teamname'] == $currentClassName) ? 'selected="selected"' : '';
-                                        echo '<option value="'.$rowp['teamname'].'"'.$selected.' >'.$rowp['teamname'].'</option>';
-                                    }
-                                    echo '</select>';// Close your drop down box
-                                    mysql_close($con);
-                                    ?>
-                                    <input type="submit" id="submitvalbeltab" name="submitvalbeltab" value="SUBMIT">
-
-
-
-
-
-                                </form>
-                                <div id="barchart_values" style="width: '100%'; clear:both; height:auto;"></div>
-                                <div style="clear:both;">
-                                    <?php
-                                    include 'connection.php';
-
-
-                                    $result = mysql_query("SELECT religion, COUNT( religion ) FROM staff where orgid='".$orgId."' AND deptname='".$deptName."' AND teamname='".$teamName."' AND status='active' GROUP BY religion ORDER BY COUNT( religion ) DESC");
-
-
-
-
-                                    while($row = mysql_fetch_assoc($result)) {
-                                        echo "<b>";
-                                        echo $row['religion'];
-                                        echo ": </b>&nbsp;";
-                                        echo $row['COUNT( religion )'];
-                                        echo "<br/>";
-                                    } ?>
-
-                                </div>
-                                <a href="teamadminreligonout.csv" id="CSVFILE">EXPORT To CSV</a>
                             </div>
 
+                            <script type="text/javascript">
+                                var flag = true;
+                                function init_PSCO_chart_religion(){
+                                    $("#PSCO_chart").ready(function () {
+                                        try {
+                                            flag = false;
+                                            TabelCreateor(TableData_religion, 'langTable_religion');
+                                            PieChart('ChartContainer_religion', series_religion);
 
+                                        }catch(e){
+                                            console.log(e);
+                                        }
+                                    });
+                                    if(flag){setTimeout(function(){init_PSCO_chart_religion();},1000);}
+                                }
+                                $('#religion').load('page/Belief_chart.html');
+                                setTimeout(function(){init_PSCO_chart_religion();},1000);
+                            </script>
 
 
                             <div id="key_facts" class="tab-pane fade">

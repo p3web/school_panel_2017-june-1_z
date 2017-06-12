@@ -1,0 +1,166 @@
+
+<style>
+    .Chart-table th{
+        text-align: center !important;
+    }
+</style>
+<br>
+<div id="PSCO_chart" class="container-fluid">
+    <div class="row">
+        <div class="col-xs-12 col-md-8 col-md-push-2">
+            <div class="dropdown" style="display: inline-block; margin-bottom: 50px">
+                <button id="TeamL" class="btn btn-default" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Team Select
+                    <span class="caret"></span>
+                </button>
+                <ul class="dropdown-menu" aria-labelledby="dLabel">
+                    <li><a href="#" onclick="changeChartData('ChartContainer' , series)" >CITeam</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="col-xs-12 col-md-8 col-md-push-2">
+            <div class="dropdown" style="display: inline-block;">
+                <button id="GenderL" class="btn btn-primary" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Select Gender
+                    <span class="caret"></span>
+                </button>
+                <ul class="dropdown-menu" aria-labelledby="dLabel">
+                  <li><a href="#" onclick="chart_select_gender('A')"> All</a></li>
+                    <li><a href="#" onclick="chart_select_gender('M')"> Male</a></li>
+                    <li><a href="#" onclick="chart_select_gender('F')"> Female</a></li>
+                    <li><a href="#" onclick="chart_select_gender('O')"> Other</a></li>
+                </ul>
+            </div>
+            <div class="dropdown" style="display: inline-block;">
+                <button id="ChartTypel" class="btn btn-primary" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Select Chart Type
+                    <span class="caret"></span>
+                </button>
+                <ul class="dropdown-menu" aria-labelledby="dLabel">
+                    <li><a href="#" onclick="PieChart('ChartContainer' , series)" > Pie</a></li>
+                    <li><a href="#" onclick="BarChart('ChartContainer' , series)"> Bar</a></li>
+                    <li><a href="#" onclick="DonutChart('ChartContainer' , donutSeries)"> Donut</a></li>
+                </ul>
+            </div>
+            <a href="teamadminlangout.csv" class="btn btn-primary" style="display: inline-block;">Export CSV</a>
+        </div>
+        <div class="col-xs-12 col-md-8 col-md-push-2">
+            <br>
+            <div id="ChartContainer" style="height: 400px; width: 100%; margin: 0 auto"></div>
+        </div>
+        <div class="col-xs-12 col-md-8 col-md-push-2">
+            <br>
+            <table id="langTable" class="table Chart-table text-center table-responsive table-bordered table-hover">
+
+            </table>
+        </div>
+    </div>
+</div>
+
+
+<script type="text/javascript">
+
+    var get_valid_data_chart={};
+
+
+    function get_chart_data(data){
+         series = [{
+            name: 'Language',
+            colorByPoint: true,
+            data: data
+    }];
+        get_valid_data_chart.chart = true;
+    }
+
+    function get_donut_data(data){
+         donutSeries = {
+            name: 'Language',
+            data: data
+    };
+        get_valid_data_chart.donut = true ;
+    }
+
+    function get_table_data(data){
+         TableData = {
+            thName: ['Language', 'Count'],
+            trData: data
+    };
+        get_valid_data_chart.table = true ;
+    }
+
+
+    function chart_select_gender(gender) {
+
+        get_valid_data_chart = {
+            chart:false ,
+            donut:false,
+            table:false
+        };
+
+        var data_request = {
+
+            act: 'lang_gender',
+            datatype: 'chart',
+            orgId: window.orgId,
+            deptName: window.deptName,
+            teamName: window.teamName,
+            gender:gender
+
+        };
+
+        ajax.sender_data_json_by_url_callback('controller_team_admin.php',data_request, get_chart_data,'POST');
+
+        data_request = {
+
+            act: 'lang_gender',
+            datatype: 'donut',
+            orgId: window.orgId,
+            deptName: window.deptName,
+            teamName: window.teamName,
+            gender:gender
+
+        };
+
+        ajax.sender_data_json_by_url_callback('controller_team_admin.php',data_request, get_donut_data,'POST');
+
+        data_request = {
+
+            act: 'lang_gender',
+            datatype: 'table',
+            orgId: window.orgId,
+            deptName: window.deptName,
+            teamName: window.teamName,
+            gender:gender
+
+        };
+
+        ajax.sender_data_json_by_url_callback('controller_team_admin.php',data_request, get_table_data,'POST');
+
+        render_page_chart();
+
+    }
+
+    function render_page_chart() {
+
+        if(get_valid_data_chart.chart && get_valid_data_chart.donut && get_valid_data_chart.table ) {
+
+            for (var i = 0; i < donutSeries.data.length; i++) {
+                donutSeries.data[i][1] = parseFloat(donutSeries.data[i][1]);
+            }
+
+            for (var i = 0; i < series[0].data.length; i++) {
+                series[0].data[i].y = parseFloat(series[0].data[i].y);
+            }
+
+            TabelCreateor(TableData, 'langTable');
+            changeChartData('ChartContainer', series ,donutSeries );
+        }else {
+
+            setTimeout(function () {
+                render_page_chart();
+            }, 100);
+        }
+    }
+
+
+</script>

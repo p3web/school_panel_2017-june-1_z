@@ -7,14 +7,35 @@
  */
 
 require_once 'PSCO_data.php';
+require_once 'csv_file.php';
 
 class language
 {
-    // SELECT  FROM staff where orgid='".$orgId."' AND deptname='".$deptName."' AND teamname='".$teamName."' AND status='active' GROUP BY religion ORDER BY COUNT( religion ) DESC");
 
-    private static function get_lang($orgId, $deptName, $teamName)
+    private static function get_lang($orgId, $deptName, $teamName,$genderMode='A')
     {
-        $data = data::selects_col("staff_language", "languagename, COUNT( languagename ) as count", "staffemailid IN(SELECT staffemailid FROM staff where orgid='$orgId' AND teamname='$teamName' AND deptname='$deptName') GROUP BY languagename ORDER BY COUNT( languagename ) DESC");
+
+        switch($genderMode) {
+            case 'F':
+                $gen="female";
+                $data = data::selects_col('`staff_language` ','languagename, COUNT( languagename ) as count',"staffemailid IN(SELECT staffemailid FROM staff where orgid='".$orgId."' AND teamname='".$teamName."' AND deptname='".$deptName."' AND gender='".$gen."') GROUP BY languagename ORDER BY COUNT( languagename ) DESC");
+                break;
+
+            case 'M':
+                $gen="male";
+                $data = data::selects_col('`staff_language` ','languagename, COUNT( languagename ) as count',"staffemailid IN(SELECT staffemailid FROM staff where orgid='".$orgId."' AND teamname='".$teamName."' AND deptname='".$deptName."' AND gender='".$gen."') GROUP BY languagename ORDER BY COUNT( languagename ) DESC");
+                break;
+
+            case 'O':
+                $gen="others";
+                $data = data::selects_col('`staff_language` ','languagename, COUNT( languagename ) as count',"staffemailid IN(SELECT staffemailid FROM staff where orgid='".$orgId."' AND teamname='".$teamName."' AND deptname='".$deptName."' AND gender='".$gen."') GROUP BY languagename ORDER BY COUNT( languagename ) DESC");
+                break;
+
+            default:
+                $data = data::selects_col("staff_language", "languagename, COUNT( languagename ) as count", "staffemailid IN(SELECT staffemailid FROM staff where orgid='$orgId' AND teamname='$teamName' AND deptname='$deptName') GROUP BY languagename ORDER BY COUNT( languagename ) DESC");
+
+        }
+
         if (count($data[0]) != 0) {
             return $data;
         } else {
@@ -24,13 +45,12 @@ class language
         }
     }
 
-    public static function get_table_language($orgId, $deptName, $teamName)
+    public static function get_table_language($orgId, $deptName, $teamName,$genderMode='A')
     {
-        // religen
-        // $data = data::selects_col("staff","religion, COUNT( religion ) as count", "orgid='$orgId' AND deptname='$deptName' AND teamname='$teamName' AND status='active' GROUP BY religion ORDER BY COUNT( religion ) DESC");
 
-        $data = self::get_lang($orgId, $deptName, $teamName);
+        $data = self::get_lang($orgId, $deptName, $teamName,$genderMode);
 
+        csv_file::makecsv($data , 'teamadminlangout.csv', false);
 
         $result = array();
 
@@ -45,10 +65,31 @@ class language
 
     }
 
-    public static function get_chart_language($orgId, $deptName, $teamName)
+    public static function get_chart_donut_language($orgId, $deptName, $teamName,$genderMode='A')
     {
 
-        $data = self::get_lang($orgId, $deptName, $teamName);
+        $data = self::get_lang($orgId, $deptName, $teamName,$genderMode);
+
+        $result = array();
+
+        for ($i = 0; $i < count($data); $i++) {
+
+            $result[] = array($data[$i]['languagename'], ($data[$i]['count']*1));
+        }
+
+
+
+        $result[] = array('name'=>'Proprietary or Undetectable' , 'y'=> 0.2 , 'dataLabels'=> array('enabled'=>false));
+
+        return json_encode($result);
+
+
+    }
+
+    public static function get_chart_language($orgId, $deptName, $teamName,$genderMode='A')
+    {
+
+        $data = self::get_lang($orgId, $deptName, $teamName,$genderMode);
         $result = array();
 
         for ($i = 0; $i < count($data); $i++) {
