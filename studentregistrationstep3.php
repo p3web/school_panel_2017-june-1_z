@@ -6,7 +6,7 @@ require_once "PSCO_data.php";
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>Ancestry Atlas - Staff Registration</title>
+  <title>Ancestry Atlas - Student Registration</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
@@ -21,14 +21,15 @@ require_once "PSCO_data.php";
 	font-style: normal;
 }
 
+
 .speccolor{color:#bcbbbb !important;}
 .speccolor:hover{color:#BDE1DF !important;}
+
 </style>
   <!--  AUTO COMPLETE MATERIAL -->
     <link rel="stylesheet" href="css/jquery-ui.css">
     <script src="scripts/jquery-1.10.2.js"></script>
     <script src="scripts/jquery-ui.js"></script>
-  
   
 	<style>
     	#error{ color:red;}	
@@ -299,31 +300,22 @@ $combineErr="";
 		  
 		//EVERYTHING is OK
 		if(empty($teacherBirthCountryErr) and empty($fatherBirthCountryErr)and empty($motherBirthCountryErr)and empty($grandfatherBirthCountryFatherSideErr)and empty($grandfatherBirthCountryMotherSideErr)and empty($grandmotherBirthCountryMotherSideErr)and empty($grandmotherBirthCountryFatherSideErr)){
-
-			if(isset($_SESSION["check_anonymous"])&& $_SESSION["check_anonymous"]) {
-
-				$firstName = "*******";
-				$lastName = "*******";
-
-			}else{
-				$firstName = $_SESSION["fn"];
-				$lastName = $_SESSION["ln"];
-				
-			}
-
+			
+			
+			$firstName = $_SESSION["fn"];
+			$lastName = $_SESSION["ln"];
 			$religion = $_SESSION["r"];
 			$gender = $_SESSION["o"];
-
-			$email = $_SESSION["u"];
 			
-
+			$email = $_SESSION["u"];
 			$token = $_SESSION["t"];
 			//$language = $_SESSION["lan"];
 			//$languageLevel = $_SESSION["lanlevel"];
-			$orgId = $_SESSION["orgid"];
+			$schooId = $_SESSION["schoolid"];
 
 			$age = $_SESSION["age"];
-			
+
+
 			if(empty($firstName) or empty($gender)  or empty($email) or empty($token)){
 			echo "<script type='text/javascript'>
 					alert('Some data is missing. Please follow the email link step by step Again.'); </script>";
@@ -340,12 +332,13 @@ $combineErr="";
 			  $religion="null";
 			  }
 
-				data::insertinto('`age_group`','`age`, `user_id`, `type`',"'$age' , '$email', 2 ");
 
+				data::insertinto('`age_group`','`age`, `user_id`, `type`',"'$age' , '$email', 3 ");
+			  
 			  include 'connection.php';
 				$allDataInserted ="no";
 				$languageerror="no";
-				if(!mysql_query("UPDATE staff SET status='active', firstname='".$firstName."', lastname='".$lastName."', religion='".$religion."', gender='".$gender."' WHERE staffemailid='".$email."' AND token='".$token."' AND status='pending'",$con)){ 
+				if(!mysql_query("UPDATE student SET status='active', firstname='".$firstName."', lastname='".$lastName."', religion='".$religion."', gender='".$gender."' WHERE studentemailid='".$email."' AND token='".$token."' AND status='pending'",$con)){ 
 					$allDataInserted ="no";
 					die("ERROR: Data not inserted".mysql_error());
 					
@@ -357,7 +350,7 @@ $combineErr="";
 						$language = ${'finallanguagename'.$i};
 						$languageLevel = ${'finallanguagelevel'.$i};
 				         
-						if(!mysql_query("insert into stafflanguage(staffemailid, languagename, languagelevel) values('$email','$language','$languageLevel')",$con)){
+						if(!mysql_query("insert into studentlanguage(studentemailid, languagename, languagelevel) values('$email','$language','$languageLevel')",$con)){
 								$allDataInserted ="no";
 								$languageerror="yes";
 								die("ERROR: Data not inserted".mysql_error());
@@ -371,7 +364,7 @@ $combineErr="";
 						die("ERROR: Data not inserted".mysql_error());						
 						
 					}else{
-							if(!mysql_query("insert into staffbirthdetails(staffemailid, staffbirthplace, stafffatherbirthplace, staffmotherbirthplace, stafffathersfatherbirthplace, staffmothersfatherbirthplace, stafffathersmotherbirthplace, staffmothersmotherbirthplace) values('$email','$teacherBirthCountry','$fatherBirthCountry','$motherBirthCountry','$grandfatherBirthCountryFatherSide','$grandfatherBirthCountryMotherSide','$grandmotherBirthCountryFatherSide','$grandmotherBirthCountryMotherSide')",$con)){
+							if(!mysql_query("insert into studentbirthdetails(studentemailid, studentbirthplace, studentfatherbirthplace, studentmotherbirthplace, studentfathersfatherbirthplace, studentmothersfatherbirthplace, studentfathersmotherbirthplace, studentmothersmotherbirthplace) values('$email','$teacherBirthCountry','$fatherBirthCountry','$motherBirthCountry','$grandfatherBirthCountryFatherSide','$grandmotherBirthCountryFatherSide','$grandfatherBirthCountryMotherSide','$grandmotherBirthCountryMotherSide')",$con)){
 								$allDataInserted ="no";
 								die("ERROR: Data not inserted".mysql_error());
 								
@@ -388,24 +381,14 @@ $combineErr="";
 								
 				if($allDataInserted == "no"){
 					
+					mysql_query("delete from student where studentemailid='".$email."'",$con);
 					
-					$query = "select deptname,teamname from staff where staffemailid='".$email."'";
-					$result = mysql_query($query);
-					$deptTempName = "";
-					$teamTempName = "";
-					
-					$rowp = mysql_fetch_array($result);
-					$deptTempName = $rowp["deptname"];
-					$teamTempName = $rowp["teamname"];
-					
-					mysql_query("delete from staff where staffemailid='".$email."'",$con);
-					
-					mysql_query("insert into staff(staffemailid, orgid, deptname, teamname, firstname, token, status) values('$email','$orgId','$deptTempName','$teamTempName','$firstName','$token','pending')",$con);
+					mysql_query("insert into student(studentemailid, schoolid, firstname, token, status) values('$email','$schooId','$firstName','$token','pending')",$con);
 					
 					
 					
 					echo '<script type="text/javascript">'; 
-							echo 'alert("Staff Registration UnSuccessfull.Please follow registration link again from the email.");'; 
+							echo 'alert("Student Registration UnSuccessfull.Please follow registration link again from the email.");'; 
 							echo 'window.location.href = "index.php";';
 							echo '</script>';
 					
@@ -421,7 +404,7 @@ $combineErr="";
 							
 							echo '<script type="text/javascript">'; 
 							echo 'alert("Your assessment has been completed Successfully.");'; 
-							echo 'window.location.href = "staffthanks.php";';
+							echo 'window.location.href = "studentthanks.php";';
 							echo '</script>';
 				}
 				
@@ -481,6 +464,7 @@ $combineErr="";
             
             <br> <br>
             <h3  class="text-center">REGISTRATION</h3>
+            
             	
             	<br>
                 <span>Please fill up the form.</span>
@@ -503,21 +487,22 @@ $combineErr="";
                        		
                             <div class="form-group form-inline">
                             
-                             <input type="text" class="form-control inputfield" style="margin-left:0.5%; width:93%;" id="tbp" name="tbp"  placeholder="Your Country of birth*" value="<?php echo $teacherBirthCountry; ?>" >                                                          
-                             <input type="text" class="form-control inputfield" style="margin-left:0.5%; width:46%;" id="fbp" name="fbp"  placeholder="Father's birthplace*" value="<?php echo $fatherBirthCountry; ?>"  >
-                              <input type="text" class="form-control inputfield" style="margin-left:0.5%; width:46%;" id="mbp" name="mbp"  placeholder="Mother's birthplace*" value="<?php echo $motherBirthCountry; ?>">
-                               <input type="text" class="form-control inputfield" style="margin-left:0.5%; width:46%;" id="gbpfs" name="gbpfs"  placeholder="Grandfather's birthplace (Father's side)*"  value="<?php echo $grandfatherBirthCountryFatherSide; ?>">
+                             <input type="text" class="form-control inputfield" style="margin-left:0.5%; width:93%;" id="tbp" name="tbp"  placeholder="Student birthplace*" value="<?php echo $teacherBirthCountry; ?>" >                                                          
+                             <input type="text" class="form-control inputfield" style="margin-left:0.5%; width:46%;" id="fbp" name="fbp" placeholder="Father's birthplace*" value="<?php echo $fatherBirthCountry; ?>"  >
+                              <input type="text" class="form-control inputfield" style="margin-left:0.5%; width:46%;" id="mbp" name="mbp" placeholder="Mother's birthplace*" value="<?php echo $motherBirthCountry; ?>">
+                               <input type="text" class="form-control inputfield" style="margin-left:0.5%; width:46%;" id="gbpfs" name="gbpfs" placeholder="Grandfather's birthplace (Father's side)*"  value="<?php echo $grandfatherBirthCountryFatherSide; ?>">
                              
-                               <input type="text" class="form-control inputfield" style="margin-left:0.5%; width:46%;" id="gbpms" name="gbpms"  placeholder="Grandfather's birthplace (Mother's side)*" value="<?php echo $grandfatherBirthCountryMotherSide; ?>"  >
-                                <input type="text" class="form-control inputfield" style="margin-left:0.5%; width:46%;" id="gmbpfs" name="gmbpfs"  placeholder="Grandmother's birthplace (Father's side)*" value="<?php echo $grandmotherBirthCountryFatherSide;?>" >
-                              <input type="text" class="form-control inputfield" style="margin-left:0.5%; width:46%;" id="gmbpms" name="gmbpms"  placeholder="Grandmother's birthplace (Mother's side)*" value="<?php echo $grandmotherBirthCountryMotherSide; ?>" >
+                               <input type="text" class="form-control inputfield" style="margin-left:0.5%; width:46%;" id="gbpms" name="gbpms" placeholder="Grandfather's birthplace (Mother's side)*" value="<?php echo $grandfatherBirthCountryMotherSide; ?>"  >
+                                <input type="text" class="form-control inputfield" style="margin-left:0.5%; width:46%;" id="gmbpfs" name="gmbpfs" placeholder="Grandmother's birthplace (Father's side)*" value="<?php echo $grandmotherBirthCountryFatherSide;?>" >
+                              <input type="text" class="form-control inputfield" style="margin-left:0.5%; width:46%;" id="gmbpms" name="gmbpms" placeholder="Grandmother's birthplace (Mother's side)*" value="<?php echo $grandmotherBirthCountryMotherSide; ?>" >
                                
                             </div>    
-                           
-                                                   
-                                                        <span style="float:left; margin-left:3em;">* Mandatory fields <a href="#" style="margin-right:7em; font-weight:bold; font-size:1.2em; color:#000;" data-toggle="tooltip" data-placement="top" title="Can't find your Country, please read FAQ.">
+                            
+                            
+                            <span style="float:left; margin-left:3em;">* Mandatory fields <a href="#" style="margin-right:7em; font-weight:bold; font-size:1.2em; color:#000;" data-toggle="tooltip" data-placement="top" title="Can't find your Country, please read FAQ.">
                                                            <span style="font-size:20px; " class="glyphicon glyphicon-question-sign speccolor"  ></span>
                                                             </a></span><br>
+                            
                             
                             <div class="col-sm-12 text-left">
                                 <span style="clear:both; float:left; color:red; margin-left:2.8em;" id="error">
@@ -529,8 +514,9 @@ $combineErr="";
                                 
                                </span>
                             </div>
-                            <a href="staffregistrationstep2.php">
-                            <button type="button" class="btn btn-default loginbutton" title="BACK" style=" float:left; margin-left:2.5em; margin-top:1em; width:15%; height:6%;">BACK</button></a>
+                            
+                            
+                                                      
                           <button type="submit" class="btn btn-default loginbutton" title="SUBMIT" style=" float:right; margin-right:2.5em;background-color:6e9643; margin-top:1em; width:15%; height:6%;">SUBMIT</button>
                       </form>
                       

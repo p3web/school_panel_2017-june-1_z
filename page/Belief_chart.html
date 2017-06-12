@@ -1,0 +1,50 @@
+
+<style>
+    .Chart-table th{
+        text-align: center !important;
+    }
+</style>
+<br>
+<div id="PSCO_chart" class="container-fluid">
+    <div class="row">
+        <div class="col-xs-12 col-md-8 col-md-push-2">
+            <div class="dropdown" style="display: inline-block; margin-bottom: 50px">
+                <button id="TeamL" class="btn btn-default" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Team Select
+                    <span class="caret"></span>
+                </button>
+                <ul class="dropdown-menu" aria-labelledby="dLabel">
+                    <li><a href="#" onclick="changeChartData('ChartContainer_religion' , series_religion)" >CITeam</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="col-xs-12 col-md-8 col-md-push-2">
+            <div class="dropdown" style="display: inline-block;">
+                <button id="ChartTypel" class="btn btn-primary" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Select Chart Type
+                    <span class="caret"></span>
+                </button>
+                <ul class="dropdown-menu" aria-labelledby="dLabel">
+                    <li><a href="#" onclick="PieChart('ChartContainer_religion' , series_religion)" > Pie</a></li>
+                    <li><a href="#" onclick="BarChart('ChartContainer_religion' , series_religion)"> Bar</a></li>
+                    <li><a href="#" onclick="DonutChart('ChartContainer_religion' , donutSeries_religion)"> Donut</a></li>
+                </ul>
+            </div>
+            <a href="teamadminreligonout.csv" class="btn btn-primary" style="display: inline-block;">Export CSV</a>
+        </div>
+        <div class="col-xs-12 col-md-8 col-md-push-2">
+            <br>
+            <div id="ChartContainer_religion" style="height: 400px; width: 100%; margin: 0 auto"></div>
+        </div>
+        <div class="col-xs-12 col-md-8 col-md-push-2">
+            <br>
+            <table id="langTable_religion" class="table Chart-table text-center table-responsive table-bordered table-hover">
+
+            </table>
+        </div>
+    </div>
+</div>
+
+
+
+

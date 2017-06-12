@@ -2,20 +2,23 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="676e04ff-6d34-48ac-9098-ebf739dc256d" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/page/page/Belief_chart.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/page/page/Chart.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/PSCO_function.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/page/page/js/ajax.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/page/page/js/chart.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/controller_team_admin.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/page/page/data_value/country.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/csv_file.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/page/page/data_value/lanuage.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/page/page/data_value/lanuage_level.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/page/page/modal_change_pass_user.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/documentation/timing/Time Sheet1.xlsx" afterPath="$PROJECT_DIR$/documentation/timing/Time Sheet1.xlsx" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/language.php" afterPath="$PROJECT_DIR$/language.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/teamadminpanel.php" afterPath="$PROJECT_DIR$/teamadminpanel.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/page/Belief_chart.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/page/data_value/age_group_20.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/page/data_value/age_group_60.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/page/js/ajax.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/page/js/chart.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/departmentregistrationstep1.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/departmentregistrationstep3.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/studentregistrationstep1.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/studentregistrationstep3.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/teacherregistrationstep1.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/teacherregistrationstep3.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/teamregistrationstep1.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/teamregistrationstep3.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/page/Chart.html" afterPath="$PROJECT_DIR$/page/Chart.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/page/modal_change_pass_user.html" afterPath="$PROJECT_DIR$/page/modal_change_pass_user.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/staffregistrationstep1.php" afterPath="$PROJECT_DIR$/staffregistrationstep1.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/staffregistrationstep3.php" afterPath="$PROJECT_DIR$/staffregistrationstep3.php" />
     </list>
     <ignored path="school_panel_2017-june-1_z.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -39,7 +42,54 @@
     <favorites_list name="school_panel_2017-june-1_z" />
   </component>
   <component name="FileEditorManager">
-    <leaf />
+    <leaf>
+      <file leaf-file-name="teacherregistrationstep3.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/teacherregistrationstep3.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="8205">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding>
+                <marker date="1497291966000" expanded="true" signature="2863:2971" placeholder="..." />
+                <marker date="1497291966000" expanded="true" signature="2902:2960" placeholder="{...}" />
+                <marker date="1497291966000" expanded="true" signature="3278:3390" placeholder="..." />
+                <marker date="1497291966000" expanded="true" signature="3319:3379" placeholder="{...}" />
+                <marker date="1497291966000" expanded="true" signature="3707:3815" placeholder="..." />
+                <marker date="1497291966000" expanded="true" signature="3746:3804" placeholder="{...}" />
+                <marker date="1497291966000" expanded="true" signature="4117:4229" placeholder="..." />
+                <marker date="1497291966000" expanded="true" signature="4158:4218" placeholder="{...}" />
+                <marker date="1497291966000" expanded="true" signature="4540:4648" placeholder="..." />
+                <marker date="1497291966000" expanded="true" signature="4579:4637" placeholder="{...}" />
+                <marker date="1497291966000" expanded="true" signature="4950:5062" placeholder="..." />
+                <marker date="1497291966000" expanded="true" signature="4991:5051" placeholder="{...}" />
+                <marker date="1497291966000" expanded="true" signature="5449:5559" placeholder="..." />
+                <marker date="1497291966000" expanded="true" signature="5488:5548" placeholder="{...}" />
+                <marker date="1497291966000" expanded="true" signature="5942:6056" placeholder="..." />
+                <marker date="1497291966000" expanded="true" signature="5983:6045" placeholder="{...}" />
+                <marker date="1497291966000" expanded="true" signature="6452:6562" placeholder="..." />
+                <marker date="1497291966000" expanded="true" signature="6491:6551" placeholder="{...}" />
+                <marker date="1497291966000" expanded="true" signature="6945:7059" placeholder="..." />
+                <marker date="1497291966000" expanded="true" signature="6986:7048" placeholder="{...}" />
+                <marker date="1497291966000" expanded="true" signature="7464:7575" placeholder="..." />
+                <marker date="1497291966000" expanded="true" signature="7503:7564" placeholder="{...}" />
+                <marker date="1497291966000" expanded="true" signature="7959:8074" placeholder="..." />
+                <marker date="1497291966000" expanded="true" signature="8000:8063" placeholder="{...}" />
+                <marker date="1497291966000" expanded="true" signature="8473:8584" placeholder="..." />
+                <marker date="1497291966000" expanded="true" signature="8512:8573" placeholder="{...}" />
+                <marker date="1497291966000" expanded="true" signature="8968:9083" placeholder="..." />
+                <marker date="1497291966000" expanded="true" signature="9009:9072" placeholder="{...}" />
+                <marker date="1497291966000" expanded="true" signature="10194:10292" placeholder="..." />
+                <marker date="1497291966000" expanded="true" signature="10703:10956" placeholder="UPDATE teach..." />
+                <marker date="1497291966000" expanded="true" signature="11317:11435" placeholder="insert into ..." />
+                <marker date="1497291966000" expanded="true" signature="11779:12202" placeholder="insert into ..." />
+                <marker date="1497291966000" expanded="true" signature="12483:12536" placeholder="delete from ..." />
+                <marker date="1497291966000" expanded="true" signature="12569:12700" placeholder="insert into ..." />
+                <marker date="1497291966000" expanded="true" signature="13629:13662" placeholder="select count..countries..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -161,93 +211,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="page" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="school_panel_2017-june-1_z" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="school_panel_2017-june-1_z" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="page" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="page" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="js" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="school_panel_2017-june-1_z" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="school_panel_2017-june-1_z" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="page" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
               <option name="myItemId" value="data_value" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="school_panel_2017-june-1_z" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="school_panel_2017-june-1_z" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="model" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="school_panel_2017-june-1_z" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="school_panel_2017-june-1_z" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="model" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="access" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="school_panel_2017-june-1_z" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="school_panel_2017-june-1_z" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="control" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -644,20 +608,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/staffregistrationstep1.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-10.019608" vertical-offset="3719" max-vertical-offset="4845">
-          <caret line="282" column="0" selection-start-line="282" selection-start-column="0" selection-end-line="282" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/staffregistrationstep3.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-14.833333" vertical-offset="4189" max-vertical-offset="8310">
-          <caret line="303" column="38" selection-start-line="303" selection-start-column="29" selection-end-line="303" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/model/access/test_file.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.23219815" vertical-offset="0" max-vertical-offset="646">
@@ -825,14 +775,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.83716077" vertical-offset="908" max-vertical-offset="1890">
           <caret line="119" column="12" selection-start-line="116" selection-start-column="7" selection-end-line="120" selection-end-column="9" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/page/data_value/country.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="3810">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -1026,18 +968,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/page/Chart.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="3270">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <marker date="1497117757000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1497117757000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1497117757000" expanded="true" signature="-1:-1" placeholder="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/language.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-38.666668" vertical-offset="512" max-vertical-offset="1530">
@@ -1077,6 +1007,50 @@
         <state vertical-scroll-proportion="0.48538622" vertical-offset="0" max-vertical-offset="958">
           <caret line="36" column="0" selection-start-line="36" selection-start-column="0" selection-end-line="36" selection-end-column="0" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/teacherregistrationstep3.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="8205">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <marker date="1497291966000" expanded="true" signature="2863:2971" placeholder="..." />
+            <marker date="1497291966000" expanded="true" signature="2902:2960" placeholder="{...}" />
+            <marker date="1497291966000" expanded="true" signature="3278:3390" placeholder="..." />
+            <marker date="1497291966000" expanded="true" signature="3319:3379" placeholder="{...}" />
+            <marker date="1497291966000" expanded="true" signature="3707:3815" placeholder="..." />
+            <marker date="1497291966000" expanded="true" signature="3746:3804" placeholder="{...}" />
+            <marker date="1497291966000" expanded="true" signature="4117:4229" placeholder="..." />
+            <marker date="1497291966000" expanded="true" signature="4158:4218" placeholder="{...}" />
+            <marker date="1497291966000" expanded="true" signature="4540:4648" placeholder="..." />
+            <marker date="1497291966000" expanded="true" signature="4579:4637" placeholder="{...}" />
+            <marker date="1497291966000" expanded="true" signature="4950:5062" placeholder="..." />
+            <marker date="1497291966000" expanded="true" signature="4991:5051" placeholder="{...}" />
+            <marker date="1497291966000" expanded="true" signature="5449:5559" placeholder="..." />
+            <marker date="1497291966000" expanded="true" signature="5488:5548" placeholder="{...}" />
+            <marker date="1497291966000" expanded="true" signature="5942:6056" placeholder="..." />
+            <marker date="1497291966000" expanded="true" signature="5983:6045" placeholder="{...}" />
+            <marker date="1497291966000" expanded="true" signature="6452:6562" placeholder="..." />
+            <marker date="1497291966000" expanded="true" signature="6491:6551" placeholder="{...}" />
+            <marker date="1497291966000" expanded="true" signature="6945:7059" placeholder="..." />
+            <marker date="1497291966000" expanded="true" signature="6986:7048" placeholder="{...}" />
+            <marker date="1497291966000" expanded="true" signature="7464:7575" placeholder="..." />
+            <marker date="1497291966000" expanded="true" signature="7503:7564" placeholder="{...}" />
+            <marker date="1497291966000" expanded="true" signature="7959:8074" placeholder="..." />
+            <marker date="1497291966000" expanded="true" signature="8000:8063" placeholder="{...}" />
+            <marker date="1497291966000" expanded="true" signature="8473:8584" placeholder="..." />
+            <marker date="1497291966000" expanded="true" signature="8512:8573" placeholder="{...}" />
+            <marker date="1497291966000" expanded="true" signature="8968:9083" placeholder="..." />
+            <marker date="1497291966000" expanded="true" signature="9009:9072" placeholder="{...}" />
+            <marker date="1497291966000" expanded="true" signature="10194:10292" placeholder="..." />
+            <marker date="1497291966000" expanded="true" signature="10703:10956" placeholder="UPDATE teach..." />
+            <marker date="1497291966000" expanded="true" signature="11317:11435" placeholder="insert into ..." />
+            <marker date="1497291966000" expanded="true" signature="11779:12202" placeholder="insert into ..." />
+            <marker date="1497291966000" expanded="true" signature="12483:12536" placeholder="delete from ..." />
+            <marker date="1497291966000" expanded="true" signature="12569:12700" placeholder="insert into ..." />
+            <marker date="1497291966000" expanded="true" signature="13629:13662" placeholder="select count..countries..." />
+          </folding>
         </state>
       </provider>
     </entry>

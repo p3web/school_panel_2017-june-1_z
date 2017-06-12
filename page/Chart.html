@@ -25,10 +25,10 @@
                     <span class="caret"></span>
                 </button>
                 <ul class="dropdown-menu" aria-labelledby="dLabel">
-                  <li><a href="#"> All</a></li>
-                    <li><a href="#"> Male</a></li>
-                    <li><a href="#"> Female</a></li>
-                    <li><a href="#"> Other</a></li>
+                  <li><a href="#" onclick="chart_select_gender('A')"> All</a></li>
+                    <li><a href="#" onclick="chart_select_gender('M')"> Male</a></li>
+                    <li><a href="#" onclick="chart_select_gender('F')"> Female</a></li>
+                    <li><a href="#" onclick="chart_select_gender('O')"> Other</a></li>
                 </ul>
             </div>
             <div class="dropdown" style="display: inline-block;">
@@ -39,6 +39,7 @@
                 <ul class="dropdown-menu" aria-labelledby="dLabel">
                     <li><a href="#" onclick="PieChart('ChartContainer' , series)" > Pie</a></li>
                     <li><a href="#" onclick="BarChart('ChartContainer' , series)"> Bar</a></li>
+                    <li><a href="#" onclick="DonutChart('ChartContainer' , donutSeries)"> Donut</a></li>
                 </ul>
             </div>
             <a href="teamadminlangout.csv" class="btn btn-primary" style="display: inline-block;">Export CSV</a>
@@ -56,157 +57,110 @@
     </div>
 </div>
 
-<script>
-    var Chart_Type = 'pie';
 
-    //_____ Check ChartLoad
-    var ChartScriptLoad = {
-        highcharts: false,
-        exporting: false,
-        data: false,
-        drilldown: false
+<script type="text/javascript">
+
+    var get_valid_data_chart={};
+
+
+    function get_chart_data(data){
+         series = [{
+            name: 'Language',
+            colorByPoint: true,
+            data: data
+    }];
+        get_valid_data_chart.chart = true;
+    }
+
+    function get_donut_data(data){
+         donutSeries = {
+            name: 'Language',
+            data: data
     };
-    function scriptLoad(scriptName) {
-        ChartScriptLoad[scriptName] = true;
+        get_valid_data_chart.donut = true ;
     }
-    function CheckScriptChart() {
-        if(ChartScriptLoad.highcharts && ChartScriptLoad.exporting && ChartScriptLoad.data && ChartScriptLoad.drilldown){
-            PieChart('ChartContainer', series);
-        }else{
-            setTimeout(function () {
-                CheckScriptChart();
-            },100);
-        }
-    }
-   // CheckScriptChart();
-    ///_____ End Check load
 
-    function changeChartData(ContainerID , series ){
-        if(Chart_Type == 'pie'){
-            PieChart(ContainerID , series);
-        }
-        else if(Chart_Type == 'bar'){
-            BarChart(ContainerID , series);
-        }
+    function get_table_data(data){
+         TableData = {
+            thName: ['Language', 'Count'],
+            trData: data
+    };
+        get_valid_data_chart.table = true ;
     }
 
 
+    function chart_select_gender(gender) {
 
-    function BarChart(ContainerID, series) {
-        // Create the chart
-        document.getElementById(ContainerID).innerHTML = '';
-        Highcharts.chart(ContainerID, {
-            credits: {
-                enabled: false
-            },
-            chart: {
-                type: 'column'
-            },
-            title: {
-                text: ''
-            },
-            subtitle: {
-                text: ''
-            },
-            xAxis: {
-                type: 'category'
-            },
-            yAxis: {
-                title: {
-                    text: ''
-                }
+        get_valid_data_chart = {
+            chart:false ,
+            donut:false,
+            table:false
+        };
 
-            },
-            legend: {
-                enabled: false
-            },
-            plotOptions: {
-                series: {
-                    borderWidth: 0,
-                    dataLabels: {
-                        enabled: true,
-                        format: '{point.y:.1f}%'
-                    }
-                }
-            },
+        var data_request = {
 
-            tooltip: {
-                headerFormat: '<span style="font-size:11px">{series.name}</span><br>',
-                pointFormat: '<span style="color:{point.color}">{point.name}</span>: <b>{point.y:.2f}%</b> of total<br/>'
-            },
+            act: 'lang_gender',
+            datatype: 'chart',
+            orgId: window.orgId,
+            deptName: window.deptName,
+            teamName: window.teamName,
+            gender:gender
 
-            series: series
-        });
-        Chart_Type = 'bar';
-        removeAds();
-    }
-    function PieChart(ContainerID, series) {
-        document.getElementById(ContainerID).innerHTML = '';
-        // Build the chart
-        Highcharts.chart(ContainerID, {
-            credits: {
-                enabled: false
-            },
-            chart: {
-                plotBackgroundColor: null,
-                plotBorderWidth: null,
-                plotShadow: false,
-                type: 'pie'
-            },
-            title: {
-                text: ''
-            },
-            tooltip: {
-                pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
-            },
-            plotOptions: {
-                pie: {
-                    allowPointSelect: true,
-                    cursor: 'pointer',
-                    dataLabels: {
-                        enabled: true,
-                        format: '<b>{point.name}</b>: {point.percentage:.1f} %',
-                        style: {
-                            color: (Highcharts.theme && Highcharts.theme.contrastTextColor) || 'black'
-                        }
-                    }
-                }
-            },
-            series: series
-        });
-        Chart_Type = 'pie';
-        removeAds();
-    }
-    function removeAds() {
-        var ads = document.querySelector('.highcharts-credits');
+        };
 
-            ads.parentNode.removeChild(ads);
+        ajax.sender_data_json_by_url_callback('controller_team_admin.php',data_request, get_chart_data,'POST');
+
+        data_request = {
+
+            act: 'lang_gender',
+            datatype: 'donut',
+            orgId: window.orgId,
+            deptName: window.deptName,
+            teamName: window.teamName,
+            gender:gender
+
+        };
+
+        ajax.sender_data_json_by_url_callback('controller_team_admin.php',data_request, get_donut_data,'POST');
+
+        data_request = {
+
+            act: 'lang_gender',
+            datatype: 'table',
+            orgId: window.orgId,
+            deptName: window.deptName,
+            teamName: window.teamName,
+            gender:gender
+
+        };
+
+        ajax.sender_data_json_by_url_callback('controller_team_admin.php',data_request, get_table_data,'POST');
+
+        render_page_chart();
+
     }
 
+    function render_page_chart() {
 
-    //_____ <table> must be Exist ...
-    function TabelCreateor(data , tableId) {
-        var i;
-        var tableData = '<thead style="background-color:#FFD799 !important;"><tr><th>#</th>';
-        for(i = 0; i < data.thName.length ; i++){
-            tableData += '<td>'+data.thName[i]+'</td>';
-        }
-        tableData += '</tr></thead><tbody>';
-        for(i = 0 ; i < data.trData.length ; i++){
-            tableData += '<tr><td>'+(i + 1)+'</td>';
-            for (var a = 0; a < data.trData[i].length ; a++){
-                tableData += '<td>'+data.trData[i][a]+'</td>';
+        if(get_valid_data_chart.chart && get_valid_data_chart.donut && get_valid_data_chart.table ) {
+
+            for (var i = 0; i < donutSeries.data.length; i++) {
+                donutSeries.data[i][1] = parseFloat(donutSeries.data[i][1]);
             }
-            tableData += '</tr>';
+
+            for (var i = 0; i < series[0].data.length; i++) {
+                series[0].data[i].y = parseFloat(series[0].data[i].y);
+            }
+
+            TabelCreateor(TableData, 'langTable');
+            changeChartData('ChartContainer', series ,donutSeries );
+        }else {
+
+            setTimeout(function () {
+                render_page_chart();
+            }, 100);
         }
-        tableData +='</tbody>';
-        document.getElementById(tableId).innerHTML = tableData;
     }
-
-
-
 
 
 </script>
-
-

@@ -4,9 +4,9 @@ session_start();
 ob_start();
 ?>
 <!DOCTYPE html>
-<html lang="en" xmlns="http://www.w3.org/1999/html">
+<html lang="en">
 <head>
-    <title>Ancestry Atlas - Staff Registration</title>
+    <title>Ancestry Atlas - Department Registration</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
@@ -33,8 +33,8 @@ ob_start();
 
 <?php
 $combineErr = "";
-$firstNameErr = $lastNameErr = "";
-$firstName = $lastName = $option = "";
+$firstNameErr = $lastNameErr = $passErr = $passConErr = "";
+$firstName = $lastName = $pass = $passCon = $option = "";
 
 
 $email = "";
@@ -49,7 +49,8 @@ if (isset($_GET['u']) && !empty($_GET['u']) AND isset($_GET['t']) && !empty($_GE
 
     include 'connection.php';
 
-    $queryp = "select orgid from staff where staffemailid = '" . $email . "'";
+
+    $queryp = "select orgid from deptadmin where deptemailid = '" . $email . "'";
     $resultp = mysql_query($queryp);
 
     $orgId = "";
@@ -85,7 +86,9 @@ if (isset($_SESSION['ln'])) {
 if (isset($_SESSION['o'])) {
     $option = $_SESSION["o"];
 }
-
+if (isset($_SESSION['p'])) {
+    $pass = $_SESSION["p"];
+}
 if (isset($_SESSION['u']) and empty($email)) {
     $email = $_SESSION["u"];
 }
@@ -161,35 +164,111 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $age = $_POST["age"];
 
 
-    // 	print_r($_REQUEST);exit;
-    $check_anonymous = false;
+    //PASSWORD
+    $passPolicy = "[Password must be at least 8 characters, containing numbers, lower and upper case letters. Such as H3llo246]";
+    if (empty($_POST["password"])) {
+        $passErr = "Password is required";
+        $combineErr = $combineErr . "<br>" . $passErr . "<br>" . $passPolicy;
+        echo "<script type='text/javascript'>
+				$(document).ready(function()
+				{
+					$('#password').css('background-color', '#ffb0b0');
+				}); </script>";
+    } else if (strlen($_POST["password"]) < 8) {
 
-    if (isset($_POST["check_anonymous"]) && $_POST["check_anonymous"] == 'true') {
 
-        $check_anonymous = true;
+        $passErr = "Password is too short!";
+        $combineErr = $combineErr . "<br>" . $passErr . "<br>" . $passPolicy;
+        $pass = $_POST["password"];
+        echo "<script type='text/javascript'>
+					$(document).ready(function()
+					{
+						$('#password').css('background-color', '#ffb0b0');
+					}); </script>";
+
+
+    } else if (strlen($_POST["password"]) > 25) {
+
+
+        $passErr = "Password is too long!";
+        $combineErr = $combineErr . "<br>" . $passErr . "<br>" . $passPolicy;
+        $pass = $_POST["password"];
+        echo "<script type='text/javascript'>
+					$(document).ready(function()
+					{
+						$('#password').css('background-color', '#ffb0b0');
+					}); </script>";
+
+    } else if (!preg_match("#[0-9]+#", $_POST["password"])) {
+
+
+        $passErr = "Password must include at least one number!";
+        $combineErr = $combineErr . "<br>" . $passErr . "<br>" . $passPolicy;
+        $pass = $_POST["password"];
+        echo "<script type='text/javascript'>
+					$(document).ready(function()
+					{
+						$('#password').css('background-color', '#ffb0b0');
+					}); </script>";
+
+    } else if (!preg_match("#[a-z]+#", $_POST["password"])) {
+
+
+        $passErr = "Password must include at least one small letter!";
+        $combineErr = $combineErr . "<br>" . $passErr . "<br>" . $passPolicy;
+        $pass = $_POST["password"];
+        echo "<script type='text/javascript'>
+					$(document).ready(function()
+					{
+						$('#password').css('background-color', '#ffb0b0');
+					}); </script>";
+
+    } else if (!preg_match("#[A-Z]+#", $_POST["password"])) {
+
+
+        $passErr = "Password must include at least one CAPS!";
+        $combineErr = $combineErr . "<br>" . $passErr . "<br>" . $passPolicy;
+        $pass = $_POST["password"];
+        echo "<script type='text/javascript'>
+					$(document).ready(function()
+					{
+						$('#password').css('background-color', '#ffb0b0');
+					}); </script>";
+
+    } else {
+
+        $pass = $_POST["password"];
+        $passCon = $_POST["confirmPassword"];
+
+        if ($_POST["password"] != $_POST["confirmPassword"]) {
+            $passConErr = "Confirm password not matched with Password.";
+            $combineErr = $combineErr . "<br>" . $passConErr;
+            echo "<script type='text/javascript'>
+							$(document).ready(function()
+							{
+								$('#confirmPassword').css('background-color', '#ffb0b0');
+							}); </script>";
+
+        }
 
     }
 
 
     //EVERTHING IS OK NOW
-    if ((empty($firstNameErr)) and (empty($lastNameErr))) {
+    if ((empty($firstNameErr)) and (empty($lastNameErr)) and (empty($passErr)) and (empty($passConErr))) {
 
         $_SESSION["fn"] = $firstName;
         $_SESSION["ln"] = $lastName;
 
         $_SESSION["o"] = $option;
-        $_SESSION["age"] = $age;
-
+        $_SESSION["p"] = $pass;
         $_SESSION["u"] = $email;
         $_SESSION["s"] = $orgName;
         $_SESSION["t"] = $token;
         $_SESSION["orgid"] = $orgId;
 
-        //peyman code
-        $_SESSION["check_anonymous"] = $check_anonymous;
 
-
-        header('location:staffregistrationstep2.php');
+        header('location:departmentregistrationstep2.php');
 
     }
 
@@ -202,7 +281,6 @@ function test_input($data)
     $data = trim($data);
     $data = stripslashes($data);
     $data = htmlspecialchars($data);
-    //$data = mysql_real_escape_string($data);
     return $data;
 }
 
@@ -216,13 +294,13 @@ function test_input($data)
         <div class="row">
             <div class="col-sm-3"></div>
             <div class="col-sm-6 text-center">
-                <br> <br>
+                <br>
+                <br>
 
                 <h3 class="text-center">REGISTRATION</h3>
 
-
                 <br>
-                <span>Please fill in the form.</span>
+                <span>Please fill up the form.</span>
 
                 <div class="col-sm-12 text-center"
                      style="background-color:#FFF; margin-bottom:30px; margin-top:2em; padding-bottom:30px;">
@@ -248,8 +326,8 @@ function test_input($data)
                                    name="username" id="username" placeholder="Username*" disabled
                                    value="<?php echo $email; ?>">
                             <input type="text" class="form-control inputfield"
-                                   style="margin-left:0%; width:45%; background-color:#6f9693;" name="orgname"
-                                   id="orgname" placeholder="Organisation*" disabled value="<?php echo $orgName; ?>">
+                                   style="margin-left:0%; width:45%; background-color:#6f9693;" name="schoolname"
+                                   id="schoolname" placeholder="School*" disabled value="<?php echo $orgName; ?>">
                         </div>
                         <div class="form-group form-inline">
                             <input type="text" class="form-control inputfield" style="margin-left:1.5%; width:45%;"
@@ -264,8 +342,8 @@ function test_input($data)
                         <div class="form-group form-inline">
 
 
-                            <select required class="form-control inputfield"
-                                    style="float:left; margin-left:5.5%; width:45%;" name="option" id="option">
+                            <select required class="form-control inputfield" style="margin-left:1.5%; width:45%;"
+                                    name="option" id="option">
                                 <option value="">Gender</option>
                                 <option <?php if ($option == "male") echo "selected"; ?> value="male">Male</option>
                                 <option <?php if ($option == "female") echo "selected"; ?> value="female">Female
@@ -274,7 +352,6 @@ function test_input($data)
                                 </option>
                             </select>
                         </div>
-
                         <div class="form-group form-inline">
 
                             <select required class="form-control inputfield"
@@ -286,21 +363,20 @@ function test_input($data)
                         <script type="text/javascript">
                             $('#age').load("page/data_value/age_group_60.html");
                         </script>
+                        <div class="form-group form-inline">
+                            <input type="password" class="form-control inputfield" style=" margin-left:0.1%; width:45%;"
+                                   name="password" id="password" placeholder="Password*" value="<?php echo $pass; ?>">
+                        </div>
 
                         <div class="form-group form-inline">
 
+                            <input type="password" class="form-control inputfield" style=" float:left; width:45%;"
+                                   name="confirmPassword" id="confirmPassword" placeholder="Confirm Password*"
+                                   value="<?php echo $passCon; ?>">
+
+
                         </div>
                         <span style=" clear:both; float:left; margin-left:3em;">* Mandatory fields</span>
-                            <span style=" clear:both; float:left; margin-left:3em;">
-								<label>
-                                    <input type="radio" name="check_anonymous" value="false" checked> My team admin can
-                                    see my information on this website.
-                                </label>
-								<br>
-								<label style="margin-left: -83px;">
-                                    <input type="radio" name="check_anonymous" value="true" style="margin: 0%"> keep my
-                                    information anonymous. </label>
-                            </span>
 
                         <div class="col-sm-12 text-left">
                                 <span style="clear:both; float:left; margin-left:3em; color:red;" id="error">
