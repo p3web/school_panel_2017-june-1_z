@@ -26,6 +26,9 @@
 
 
      $language = user_profile::get_staff_language($_POST["employee_id"]);
+
+     $age = user_profile::get_age_user($_POST["employee_id"],2);
+
      $temp="";
      for($lang_index=0; $lang_index<count($language);$lang_index++){
          $temp .="<tr><td><select id='edit_employee_language$lang_index' name='lang_".$language[$lang_index]['id']."' class='PSCO_employee_language form-control' data-placeholder='Choose a Language...' form='update_form' ></select></td><td><select id='edit_employee_language_level$lang_index' name='langlevel_".$language[$lang_index]['id']."' class='PSCO_employee_language_level form-control' data-placeholder='Choose a Language level...' form='update_form'></select><br></td></tr>";
@@ -38,6 +41,8 @@
                     $('.PSCO_employee_language_level').load( 'page/data_value/lanuage_level.html' );
                 });
                 setTimeout(function(){
+                $('#age').val('" . $age[0]['age'] . "');
+
 ";
      for($lang_index=0; $lang_index<count($language);$lang_index++){
          $temp .="

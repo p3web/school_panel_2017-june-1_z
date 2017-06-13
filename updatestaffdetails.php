@@ -49,6 +49,9 @@ if(!empty($_POST)){
 
     user_profile::edit_staff_language($lang);
 
+    user_profile::edit_age_user($_POST["age"],$staffemailid , 2 ) ;
+
+
     // peyman code end region
 
 

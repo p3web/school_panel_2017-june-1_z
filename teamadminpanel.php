@@ -1741,6 +1741,17 @@ if(isset($_POST['submitvalbeltab'])){
                         </div>
                     </div>
                     <div class="form-group">
+                        <label class="control-label col-sm-3" for="age">Age Group:</label>
+                        <div class="col-sm-9">
+                            <select name="age" id="age" class="form-control">
+
+                            </select>
+                            <script type="text/javascript">
+                                $('#age').load("page/data_value/age_group_60.html");
+                            </script>
+                        </div>
+                    </div>
+                    <div class="form-group">
                         <label class="control-label col-sm-3" for="beliefreligion">Belief/Religion:</label>
                         <div class="col-sm-9">
                             <div class="col-sm-6" >

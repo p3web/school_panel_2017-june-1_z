@@ -27,6 +27,21 @@ class user_profile
 
     }
 
+    public static function get_age_user($email , $type){
+        $data = data::selects("`age_group`","`user_id` = '$email' and `type` = $type ");
+        if (count($data[0]) != 0) {
+            return $data;
+        } else {
+            return false;
+        }
+    }
+
+    public static function edit_age_user($age,$email , $type){
+
+        data::update('`age_group`',"`age`= '$age'" , "`user_id` = '$email' and `type` = $type");
+
+    }
+
     public static function change_team_pass($pass,$mail){
 
         $hashAndSaltedPassword = password_hash($pass, PASSWORD_BCRYPT);
