@@ -12,6 +12,7 @@ if(isset($_REQUEST['act'])){
     switch($_REQUEST['act']){
 
         case 'team_user_change_pass':
+
             $pass = $_REQUEST['password'];
             user_profile::change_team_pass($pass, $_SESSION['teamemailidorg']);
             echo '<script type="text/javascript">';
@@ -43,12 +44,23 @@ if(isset($_REQUEST['act'])){
             }
             user_profile::edit_team_language($lang);
             user_profile::edit_teame_profile($_REQUEST['email'],$_REQUEST['firstname'],$_REQUEST['lasttname'],$_REQUEST['gender'],$_REQUEST['department'],$_REQUEST['Self'],$_REQUEST['Father'],$_REQUEST['Mother'],$_REQUEST['f_Grandfather'],$_REQUEST['f_GrandMother'],$_REQUEST['m_Grandfather'],$_REQUEST['m_GrandMother']);
+            user_profile::edit_age_user($_REQUEST['age'],$_REQUEST['email'],1);
             echo '<script type="text/javascript">';
             echo 'alert("Edit profile successful.");' ;
             echo 'window.location.href = "teamadminpanel.php";';
             echo '</script>';
             break;
+        default :
+            echo '<script type="text/javascript">';
+            echo 'alert("invalid data form. act not found ");' ;
+            echo 'window.location.href = "teamadminpanel.php";';
+            echo '</script>';
 
 
     }
+}else{
+    echo '<script type="text/javascript">';
+    echo 'alert("invalid data form. are you robot ?!");' ;
+    echo 'window.location.href = "teamadminpanel.php";';
+    echo '</script>';
 }

@@ -85,6 +85,8 @@ class user_profile
         $language = data::selects("`teamadmin_language`","`teamemailid` = '$email'");
         $birthdetails = data::selects("`teamadminbirthdetails`","`teamadminbirthdetails`.`teamemailid` = '$email'");
 
+        $age = self::get_age_user($email , 1);
+
         //print_r($language);exit;
         $temp = "
             <script type='text/javascript'>
@@ -95,6 +97,7 @@ class user_profile
                         $('#frm_edit_user_gender').prop('disabled', false);
                         $('#frm_edit_user_department').prop('disabled', false);
                         $('#frm_edit_user_religion').prop('disabled', false);
+                        $('#frm_edit_user_age').prop('disabled', false);
                         $('.PSCO_country').prop('disabled', false);
                         $('.PSCO_language').prop('disabled', false);
                         $('.PSCO_language_level').prop('disabled', false);
@@ -107,6 +110,7 @@ class user_profile
                         $('#frm_edit_user_gender').prop('disabled', true);
                         $('#frm_edit_user_department').prop('disabled', true);
                         $('#frm_edit_user_religion').prop('disabled', true);
+                        $('#frm_edit_user_age').prop('disabled', true);
                         $('.PSCO_country').prop('disabled', true);
                         $('.PSCO_language').prop('disabled', true);
                         $('.PSCO_language_level').prop('disabled', true);
@@ -130,6 +134,8 @@ class user_profile
                     <tr><td>Gender:</td><td><select name='gender' id='frm_edit_user_gender' class='form-control' form='frm_edit_user' disabled >
                         <option value='male' ".($data[0]['gender']== "male"? "selected":"").">male</option>
                         <option value='female' ".($data[0]['gender']== "female"? "selected":"").">female</option>
+                    </select><br></td></tr><tr><td>Age Group:</td><td><select name='age' id='frm_edit_user_age' class='form-control' form='frm_edit_user' disabled >
+
                     </select><br></td></tr>
                     <tr><td>Department:</td><td> <select name='department' class='form-control' id='frm_edit_user_department' form='frm_edit_user' disabled>
                         <option value='Database' ".($data[0]['deptname']== "Database"? "selected":"").">Database</option>
@@ -178,6 +184,9 @@ class user_profile
                 $('.PSCO_language').ready(function(){
                     $('.PSCO_language').load( 'page/data_value/lanuage.html' );
                 });
+                $('#frm_edit_user_age').ready(function(){
+                    $('#frm_edit_user_age').load( 'page/data_value/age_group_60.html' );
+                });
                 $('.PSCO_language_level').ready(function(){
                     $('.PSCO_language_level').load( 'page/data_value/lanuage_level.html' );
                 });
@@ -188,6 +197,9 @@ class user_profile
                 });
 
                 setTimeout(function(){
+
+
+                 $('#frm_edit_user_age').val('".$age[0]['age']."');
                 ";
 
         for($lang_index=0; $lang_index<count($language);$lang_index++){
