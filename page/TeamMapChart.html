@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
-    <!--  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
-            integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">-->
-    <link rel="stylesheet" href="bootstrap-3.3.7-dist/css/bootstrap.css">
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+            integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
     <style>
 
     </style>
@@ -68,20 +68,16 @@
     <div class="row">
         <div class="col-xs-12">
 
-            <div class="Footer"><p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh
-                euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis
-                nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem
-                vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu
-                feugiat nulla </p></div>
+            <div class="Footer"><p id="copyright" style="font-size: 14px"><b><a href="http://ancestryatlas.com/" rel="nofollow" target="_blank">Ancestry Atlas</a></b> is powered&nbsp;by <b>© <a href="http://culturalinfusion.org.au/" rel="nofollow" target="_blank">Cultural Infusion</a></p></b></font></div>
         </div>
     </div>
 </div>
 
 
 <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
-<script src="bootstrap-3.3.7-dist/js/bootstrap.js"></script>
 
-<script src="code/ajax.js"></script>
+
+<!--<script src="code/ajax.js"></script>-->
 
 <!--Map Script-->
 <script src="https://code.highcharts.com/maps/highmaps.js"></script>
@@ -96,117 +92,17 @@
 <script src="https://code.highcharts.com/modules/drilldown.js"></script>
 
 <!--myFunc-->
-<script src="Chart.js"></script>
+<script src="js/chart.js"></script>
+<script src="js/ajax.js"></script>
 
 <script>
 
     function sendActions() {
-        ajax.sender_data_callback({out : 'TRMDO'} , CreateMapData); // TODO: Set Correct out !
-        ajax.sender_data_callback({out : 'RAO'} , CreateBarData);
+        ajax.sender_data_callback({out : 'TARO'} , CreateMapData);
+        ajax.sender_data_callback({out : 'TALO'} , CreateBarData);
     }
 
-    function MapChart(ContainerID, MapData) {
-        Highcharts.data({
 
-            googleSpreadsheetKey: '0AoIaUO7wH1HwdFJHaFI4eUJDYlVna3k5TlpuXzZubHc',
-
-            // custom handler when the spreadsheet is parsed
-            parsed: function (columns) {
-                columns = MapData;
-                // Read the columns into the data array
-                var data = [];
-                $.each(columns[0], function (i, code) {
-                    data.push({
-                        code: code.toUpperCase(),
-                        value: parseFloat(columns[2][i]),
-                        name: columns[1][i]
-                    });
-                });
-
-
-                // Initiate the chart
-                Highcharts.mapChart(ContainerID, {
-                    chart: {
-                        borderWidth: 1
-                    },
-
-                    colors: ['#fff', 'rgba(19,64,117,0.2)', 'rgba(19,64,117,0.4)',
-                        'rgba(19,64,117,0.5)', 'rgba(19,64,117,0.6)', 'rgba(19,64,117,0.8)', 'rgba(19,64,117,1)'],
-
-                    title: {
-                        text: ''
-                    },
-
-                    mapNavigation: {
-                        enabled: true
-                    },
-
-                    legend: {
-                        title: {
-                            text: 'Individuals per km²',
-                            style: {
-                                color: (Highcharts.theme && Highcharts.theme.textColor) || 'black'
-                            }
-                        },
-                        align: 'left',
-                        verticalAlign: 'bottom',
-                        floating: true,
-                        layout: 'vertical',
-                        valueDecimals: 0,
-                        backgroundColor: (Highcharts.theme && Highcharts.theme.legendBackgroundColor) || 'rgba(255, 255, 255, 0.85)',
-                        symbolRadius: 0,
-                        symbolHeight: 14
-                    },
-
-                    colorAxis: {
-                        dataClasses: [{
-                            to: 8
-                        }, {
-                            from: 3,
-                            to: 10
-                        }, {
-                            from: 10,
-                            to: 30
-                        }, {
-                            from: 30,
-                            to: 100
-                        }, {
-                            from: 100,
-                            to: 300
-                        }, {
-                            from: 300,
-                            to: 1000
-                        }, {
-                            from: 1000
-                        }]
-                    },
-
-                    series: [{
-                        data: data,
-                        mapData: Highcharts.maps['custom/world'],
-                        joinBy: ['iso-a2', 'code'],
-                        animation: true,
-                        name: 'Population density',
-                        states: {
-                            hover: {
-                                color: '#a4edba'
-                            }
-                        },
-                        tooltip: {
-                            valueSuffix: '/km²'
-                        }
-                    }]
-                });
-            },
-            error: function () {
-                $('#container').html('<div class="loading">' +
-                    '<i class="icon-frown icon-large"></i> ' +
-                    'Error loading data from Google Spreadsheets' +
-                    '</div>');
-            }
-        });
-
-    }
 
 
     function CreateMapData(data) {
@@ -227,17 +123,17 @@
         for (var i = 1; i < data[0].length; i++) {
             var Name = data[0][i][0];
             var numb = data[0][i][1];
-            for (var c = 1; c < data[0].length; c++) {
+            for (var c = 1; c < MapDatas[0].length; c++) {
                 if (Name.toLowerCase() == MapDatas[1][c].toLowerCase()) {
                     MapDatas[2][c] = numb;
                 }
             }
         }
-        TeacherMapChart('MapContainer', MapDatas);
+        MapChart('MapContainer', MapDatas);
         var Table = document.getElementById('Table');
         var Tag = '';
         for (var i = 0; i < data[0].length; i++) {
-            Tag += '<tr><td>' + data[0][i][0] + '</td><td>data[0][i][1]</td></tr>';
+            Tag += '<tr><td>' + data[0][i][0] + '</td><td>'+data[0][i][1]+'</td></tr>';
         }
         Table.innerHTML = Tag;
     }
