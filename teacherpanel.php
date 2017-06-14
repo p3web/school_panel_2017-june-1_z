@@ -132,9 +132,15 @@ function makecsv($data, $csvfilename,$scriptrun = null)
 
 
 
+    <script src="page/js/ajax.js"></script>
 
 
-    </script>
+    <script src="https://code.highcharts.com/highcharts.js"></script>
+    <script src="https://code.highcharts.com/modules/exporting.js"></script>
+    <script src="https://code.highcharts.com/modules/data.js"></script>
+    <script src="https://code.highcharts.com/modules/drilldown.js"></script>
+
+    <script src="page/js/chart.js"></script>
 
     <!--Jquery function to autocomplete country name -->
     <script>
@@ -996,161 +1002,137 @@ function test_input($data) {
 
                             </div>
 
+                            <script type="text/javascript">
+
+                                //_____ set base var
+                                window.schoolId = '<?php echo $schoolId ?>';
+                                window.className = '<?php echo 'S1'; $className= 'S1'; ?>';
+
+                                //_____ exampel Chart Data
+
+                                var donutSeries = {
+                                    name: 'Language',
+                                    data: <?php
+							$result = language::get_chart_donut_language_teacher($schoolId, $className);
+							 echo $result;
+								?>
+                                };
+
+                                for(var i =0 ; i < donutSeries.data.length ; i++){
+                                    donutSeries.data[i][1] =  parseFloat(donutSeries.data[i][1]);
+                                }
+
+                                var series = [{
+                                    name: 'Language',
+                                    colorByPoint: true,
+                                    data: <?php
+							$result = language::get_chart_language_teacher($schoolId, $className);
+							 echo $result;
+								?>
+                                }];
+
+                                for(var i =0 ; i < series[0].data.length ; i++){
+                                    series[0].data[i].y =  parseFloat(series[0].data[i].y);
+                                }
+
+                                //_____ table Func
+                                var TableData = {
+                                    thName : ['Language' , 'Count'],
+                                    trData:<?php
+							$result = language::get_table_language_teacher($schoolId, $className);
+
+							 echo $result;
+								?>
+                                };
+                            </script>
+
                             <div id="language" class="tab-pane fade">
 
-                                <br>
-                                <form method="post">
-                                    <?php
-
-                                    if (!empty($_POST['classnamedropdownlantab']))
-                                    {
-                                        $className= $_POST['classnamedropdownlantab'];
-                                        $currentClassName = $_POST['classnamedropdownlantab'];
-                                    }
-                                    include 'connection.php';
-                                    $queryp = "select classname from classteacher where teacheremailid = '".$adminid."' AND schoolid = '".$schoolId."'";
-                                    $resultp = mysql_query($queryp);
-                                    echo "Class Name: ";
-                                    echo '<select name="classnamedropdownlantab" >';
-                                    while ($rowp = mysql_fetch_array($resultp)){
-                                        $selected = ($rowp['classname'] == $currentClassName) ? 'selected="selected"' : '';
-                                        echo '<option value="'.$rowp['classname'].'"'.$selected.' >'.$rowp['classname'].'</option>';
-                                    }
-                                    echo '</select>';// Close your drop down box
-                                    mysql_close($con);
-                                    ?>
-                                    <input type="submit" id="submitvallantab" name="submitvallantab" value="SUBMIT">
-
-
-
-
-
-                                </form>
-
-
-
-
-                                &nbsp;&nbsp;<br><br>
-                                <div class="btn-group">
-                                    <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" style="width:10em;font-size: 0.8em;" aria-expanded="false" id="genderbtn" name="genderbtn">
-                                        Select Gender <span class="caret"></span>
-                                    </button>
-                                    <ul class="dropdown-menu" role="menu">
-                                        <li><a class="all-btn">All</a></li>
-                                        <li><a class="male-btn">Male</a></li>
-                                        <li><a class="female-btn">Female</a></li>
-                                        <li><a class="others-btn">Others</a></li>
-                                    </ul>
-                                </div>
-
-
-
-
-
-
-
-
-
-
-                                <br><br>
-
-
-                                <div id="languagechart" style="width: '100%'; clear:both; height:auto;">
-                                </div>
-                                <div id="languagetext">
-                                    <?php
-                                    include 'connection.php';
-
-                                    $result = mysql_query("SELECT languagename, COUNT( languagename ) FROM studentlanguage where studentemailid IN(SELECT studentemailid FROM student where schoolid='".$schoolId."' AND classname='".$className."' ) GROUP BY languagename ORDER BY COUNT( languagename ) DESC ");
-
-
-                                    while($row = mysql_fetch_assoc($result)) {
-                                        echo "<b>";
-                                        echo $row['languagename'];
-                                        echo ": </b>&nbsp;";
-                                        echo $row['COUNT( languagename )'];
-                                        echo "<br/>";
-                                    }mysql_close($con);?>
-
-
-                                    <a href="teacherlangout.csv" id="CSVFILE">EXPORT To CSV</a> <br>
-
-                                </div>
-
                             </div>
+
+                            <script type="text/javascript">
+                                var flag = true;
+                                function init_PSCO_chart(){
+                                    $("#PSCO_chart").ready(function () {
+                                        try {
+                                            flag = false;
+                                            TabelCreateor(TableData, 'langTable');
+                                            PieChart('ChartContainer', series);
+
+                                        }catch(e){
+                                            console.log(e);
+                                        }
+                                    });
+                                    if(flag){setTimeout(function(){init_PSCO_chart();},1000);}
+                                }
+                                $('#language').load('page/Chart_teacher.html');
+                                setTimeout(function(){init_PSCO_chart();},1000);
+                            </script>
+
+
+                            <!-- ganerat data religion chart -->
+
+                            <script type="text/javascript">
+
+                                //_____ exampel Chart Data
+                                var donutSeries_religion = {
+                                    name: 'Religion',
+                                    data: <?php
+							$result = religion::get_chart_donut_religion_teacher($schoolId, $className);
+							 echo $result;
+								?>
+                                };
+
+                                for(var i =0 ; i < donutSeries_religion.data.length ; i++){
+                                    donutSeries_religion.data[i][1] =  parseFloat(donutSeries_religion.data[i][1]);
+                                }
+
+                                var series_religion = [{
+                                    name: 'Religion',
+                                    colorByPoint: true,
+                                    data: <?php
+							$result = religion::get_chart_religion_teacher($schoolId, $className);
+							 echo $result;
+								?>
+                                }];
+
+                                for(var i =0 ; i < series_religion[0].data.length ; i++){
+                                    series_religion[0].data[i].y =  parseFloat(series_religion[0].data[i].y);
+                                }
+
+                                //_____ table Func
+                                var TableData_religion = {
+                                    thName : ['Religion' , 'Count'],
+                                    trData:<?php
+							$result = religion::get_table_religion_teacher($schoolId, $className);
+							 echo $result;
+								?>
+                                };
+                            </script>
 
 
                             <div id="religion" class="tab-pane fade">
 
-                                <br>
-                                <form method="post">
-                                    <?php
-
-                                    if (!empty($_POST['classnamedropdownbeltab']))
-                                    {
-                                        $className= $_POST['classnamedropdownbeltab'];
-                                        $currentClassName = $_POST['classnamedropdownbeltab'];
-                                    }
-                                    include 'connection.php';
-                                    $queryp = "select classname from classteacher where teacheremailid = '".$adminid."' AND schoolid = '".$schoolId."'";
-                                    $resultp = mysql_query($queryp);
-                                    echo "Class Name: ";
-                                    echo '<select name="classnamedropdownbeltab" >';
-                                    while ($rowp = mysql_fetch_array($resultp)){
-                                        $selected = ($rowp['classname'] == $currentClassName) ? 'selected="selected"' : '';
-                                        echo '<option value="'.$rowp['classname'].'"'.$selected.' >'.$rowp['classname'].'</option>';
-                                    }
-                                    echo '</select>';// Close your drop down box
-                                    mysql_close($con);
-                                    ?>
-                                    <input type="submit" id="submitvalbeltab" name="submitvalbeltab" value="SUBMIT">
-
-
-
-
-
-                                </form>
-                                <div id="barchart_values" style="width: '100%'; clear:both; height:auto;"></div>
-                                <div style="clear:both;">
-                                    <?php
-                                    include 'connection.php';
-
-                                    $result = mysql_query("SELECT religion, COUNT( religion ) FROM student where schoolid='".$schoolId."' AND classname='".$className."' AND status='active' GROUP BY religion");
-
-                                    while($row = mysql_fetch_assoc($result)) {
-                                        echo "<b>";
-                                        echo $row['religion'];
-                                        echo ": </b>&nbsp;";
-                                        echo $row['COUNT( religion )'];
-                                        echo "<br/>";
-                                    }?>
-                                    <a href="teacherreligonout.csv" id="CSVFILE">EXPORT To CSV</a> <br>
-
-
-                                </div>
-
                             </div>
-                            <script>
 
+                            <script type="text/javascript">
+                                var flag = true;
+                                function init_PSCO_chart_religion(){
+                                    $("#PSCO_chart").ready(function () {
+                                        try {
+                                            flag = false;
+                                            TabelCreateor(TableData_religion, 'langTable_religion');
+                                            PieChart('ChartContainer_religion', series_religion);
 
-
-
+                                        }catch(e){
+                                            console.log(e);
+                                        }
+                                    });
+                                    if(flag){setTimeout(function(){init_PSCO_chart_religion();},1000);}
+                                }
+                                $('#religion').load('page/Belief_chart_teacher.html');
+                                setTimeout(function(){init_PSCO_chart_religion();},1000);
                             </script>
-
-
-
-
-
-                            <div id="lessonplans" class="tab-pane fade">
-
-                                <br>
-                                <ul style="list-style-image:url(images/lessonplanicon.png);">
-                                    <li><a href="lessonplans/UNIT 1.pdf" target="_blank" style="color:#000;">Unit 1 (5-7 years+)</a></li><br>
-                                    <li><a href="lessonplans/UNIT 2.pdf" target="_blank" style="color:#000;">Unit 2 (8-9 years+) </a></li><br>
-                                    <li><a href="lessonplans/UNIT 3.pdf" target="_blank" style="color:#000;">Unit 3 (10-12 years+) </a></li><br>
-                                    <li><a href="lessonplans/UNIT 4.pdf" target="_blank" style="color:#000;">Unit 4 (All Age Groups)</a></li><br>
-                                </ul>
-                            </div>
 
 
                             <div id="key_facts" class="tab-pane fade">
@@ -1716,6 +1698,17 @@ if(isset($_POST['submitvalbeltab'])){
                         </div>
                     </div>
                     <div class="form-group">
+                        <label class="control-label col-sm-3" for="age">Age Group:</label>
+                        <div class="col-sm-9">
+                            <select name="age" id="age" class="form-control">
+
+                            </select>
+                            <script type="text/javascript">
+                                $('#age').load("page/data_value/age_group_60.html");
+                            </script>
+                        </div>
+                    </div>
+                    <div class="form-group">
                         <label class="control-label col-sm-3" for="beliefreligion">Belief/Religion:</label>
                         <div class="col-sm-9">
                             <div class="col-sm-6" >
@@ -1777,6 +1770,16 @@ if(isset($_POST['submitvalbeltab'])){
 
                     </div>
 
+
+                    <h3 style="padding: 1% 0%; background-color:#FE8885; color:#FFF; text-align:center;  border-radius: 8px;">LANGUAGES</h3>
+                    <div class="form-group">
+                        <div class="col-sm-9">
+                            <table class='table borderless table-responsive ' id="employee_lang">
+
+                            </table>
+                        </div>
+                    </div>
+
                     <br>
                     <input type="submit" name="update" id="update" value="Save" class="btn btn-success "  />
 
@@ -1806,6 +1809,7 @@ if(isset($_POST['submitvalbeltab'])){
                 success:function(data){
                     var datastaff=data['arr1'];
                     var datastaffbirth=data['arr2'];
+                    var lang = data['arr4'];
                     $('#studentemail').val(datastaff.studentemailid);
                     $('#firstname').val(datastaff.firstname);
                     $('#lastname').val(datastaff.lastname);
@@ -1831,6 +1835,7 @@ if(isset($_POST['submitvalbeltab'])){
                     $('#f').val(datastaffbirth.studentfatherbirthplace);
                     $('#gff').val(datastaffbirth.studentfathersfatherbirthplace);
                     $('#gmf').val(datastaffbirth.studentfathersmotherbirthplace);
+                    $('#employee_lang').html(lang.data);
 
                     $('#edit_data_Modal').modal('show');
                 }

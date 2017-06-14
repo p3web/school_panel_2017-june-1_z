@@ -3,7 +3,7 @@
  * Created by peymanvalikhanli on 4/17/17 AD.
  */
 var ajax = {
-    url: ""
+    url: "religonteacherdataout.php"
     , data: {}
 };
 

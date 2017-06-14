@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <!--  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+            integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">-->
+    <link rel="stylesheet" href="bootstrap-3.3.7-dist/css/bootstrap.css">
+    <style>
+
+    </style>
+    <link rel="stylesheet" href="CssMapChart.css">
+
+
+</head>
+<body onload="sendActions()">
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-xs-12 col-md-10 no-padding">
+            <div class="topBorder" id="TopBorderMap">
+                <img src="logo.jpg" id="Logo"/>
+                <div id="MapContainer" class="Chart">
+                    <div class="loading">
+                        <i class="icon-spinner icon-spin icon-large"></i>
+                        Loading Map data ...
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="hidden-xs hidden-sm col-md-2 no-padding">
+            <div class="MapDetails">
+                <div>
+                    <strong>
+                        <p>School / Organisation name</p>
+                        <p>Address</p>
+                        <p>State / Country / Year</p>
+                    </strong>
+                    <p>Number of people in Total</p>
+                    <p>Number Man</p>
+                    <p>Number Women</p>
+                </div>
+            </div>
+            <div class="MapCountryDetails">
+                <table id="Table">
+
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-6 bottomBorder col-xs-12 no-padding">
+            <div class="topBorder chartDivider" id="TopBorderDonut">
+                <div class="Chart OtherChart" id="DonutChart">
+                    <iframe style="width:100%;height: 320px;overflow: hidden;border: none;"
+                            src="TeamdonutChart.html"></iframe>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6 col-xs-12 bottomBorder no-padding-left">
+            <div class="topBorder chartDivider" id="TopBorderBar">
+                <div class="Chart OtherChart" id="BarChart">
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-xs-12">
+
+            <div class="Footer"><p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh
+                euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis
+                nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem
+                vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu
+                feugiat nulla </p></div>
+        </div>
+    </div>
+</div>
+
+
+<script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+<script src="bootstrap-3.3.7-dist/js/bootstrap.js"></script>
+
+<script src="code/ajax.js"></script>
+
+<!--Map Script-->
+<script src="https://code.highcharts.com/maps/highmaps.js"></script>
+<script src="https://code.highcharts.com/maps/modules/data.js"></script>
+<script src="https://code.highcharts.com/mapdata/custom/world.js"></script>
+
+<!--chart Script-->
+<!--<script src="https://code.highcharts.com/highcharts.js"></script>-->
+
+<script src="https://code.highcharts.com/modules/exporting.js"></script>
+<script src="https://code.highcharts.com/modules/data.js"></script>
+<script src="https://code.highcharts.com/modules/drilldown.js"></script>
+
+<!--myFunc-->
+<script src="Chart.js"></script>
+
+<script>
+
+    function sendActions() {
+        ajax.sender_data_callback({out : 'TRMDO'} , CreateMapData); // TODO: Set Correct out !
+        ajax.sender_data_callback({out : 'RAO'} , CreateBarData);
+    }
+
+    function MapChart(ContainerID, MapData) {
+        Highcharts.data({
+
+            googleSpreadsheetKey: '0AoIaUO7wH1HwdFJHaFI4eUJDYlVna3k5TlpuXzZubHc',
+
+            // custom handler when the spreadsheet is parsed
+            parsed: function (columns) {
+                columns = MapData;
+                // Read the columns into the data array
+                var data = [];
+                $.each(columns[0], function (i, code) {
+                    data.push({
+                        code: code.toUpperCase(),
+                        value: parseFloat(columns[2][i]),
+                        name: columns[1][i]
+                    });
+                });
+
+
+                // Initiate the chart
+                Highcharts.mapChart(ContainerID, {
+                    chart: {
+                        borderWidth: 1
+                    },
+
+                    colors: ['#fff', 'rgba(19,64,117,0.2)', 'rgba(19,64,117,0.4)',
+                        'rgba(19,64,117,0.5)', 'rgba(19,64,117,0.6)', 'rgba(19,64,117,0.8)', 'rgba(19,64,117,1)'],
+
+                    title: {
+                        text: ''
+                    },
+
+                    mapNavigation: {
+                        enabled: true
+                    },
+
+                    legend: {
+                        title: {
+                            text: 'Individuals per km²',
+                            style: {
+                                color: (Highcharts.theme && Highcharts.theme.textColor) || 'black'
+                            }
+                        },
+                        align: 'left',
+                        verticalAlign: 'bottom',
+                        floating: true,
+                        layout: 'vertical',
+                        valueDecimals: 0,
+                        backgroundColor: (Highcharts.theme && Highcharts.theme.legendBackgroundColor) || 'rgba(255, 255, 255, 0.85)',
+                        symbolRadius: 0,
+                        symbolHeight: 14
+                    },
+
+                    colorAxis: {
+                        dataClasses: [{
+                            to: 8
+                        }, {
+                            from: 3,
+                            to: 10
+                        }, {
+                            from: 10,
+                            to: 30
+                        }, {
+                            from: 30,
+                            to: 100
+                        }, {
+                            from: 100,
+                            to: 300
+                        }, {
+                            from: 300,
+                            to: 1000
+                        }, {
+                            from: 1000
+                        }]
+                    },
+
+                    series: [{
+                        data: data,
+                        mapData: Highcharts.maps['custom/world'],
+                        joinBy: ['iso-a2', 'code'],
+                        animation: true,
+                        name: 'Population density',
+                        states: {
+                            hover: {
+                                color: '#a4edba'
+                            }
+                        },
+                        tooltip: {
+                            valueSuffix: '/km²'
+                        }
+                    }]
+                });
+            },
+            error: function () {
+                $('#container').html('<div class="loading">' +
+                    '<i class="icon-frown icon-large"></i> ' +
+                    'Error loading data from Google Spreadsheets' +
+                    '</div>');
+            }
+        });
+
+    }
+
+
+    function CreateMapData(data) {
+        // _____ for Map
+        var MapDatas = [
+            [
+                "Country code", "af", "al", "dz", "as", "ad", "ao", "ai", "ar", "am", "aw", "au", "at", "az", "bs", "bh", "bd", "bb", "by", "be", "bz", "bj", "bm", "bt", "bo", "ba", "bw", "br", "bn", "bg", "bf", "bi", "kh", "cm", "ca", "cv", "ky", "cf", "td", "cl", "cn", "co", "km", "cd", "cg", "cr", "ci", "hr", "cu", "cw", "cy", "cz", "dk", "dj", "dm", "do", "ec", "eg", "sv", "gq", "er", "ee", "et", "fo", "fj", "fi", "fr", "pf", "ga", "gm", "ge", "de", "gh", "gr", "gl", "gd", "gu", "gt", "gn", "gw", "gy", "ht", "hn", "hk", "hu", "is", "in", "id", "ir", "iq", "ie", "im", "il", "it", "jm", "jp", "jo", "kz", "ke", "ki", "kp", "kr", "xk", "kw", "kg", "la", "lv", "lb", "ls", "lr", "ly", "li", "lt", "lu", "mo", "mk", "mg", "mw", "my", "mv", "ml", "mt", "mh", "mr", "mu", "yt", "mx", "fm", "md", "mc", "mn", "me", "ma", "mz", "mm", "na", "np", "nl", "nc", "nz", "ni", "ne", "ng", "mp", "no", "om", "pk", "pw", "pa", "pg", "py", "pe", "ph", "pl", "pt", "pr", "wa", "ro", "ru", "rw", "ws", "sm", "st", "sa", "sn", "rs", "sc", "sl", "sg", "sk", "si", "sb", "so", "za", "ss", "es", "lk", "kn", "lc", "mf", "vc", "sd", "sr", "sz", "se", "ch", "sy", "tj", "tz", "th", "tp", "tg", "to", "tt", "tn", "tr", "tm", "tc", "tv", "ug", "ua", "ae", "uk", "us", "uy", "uz", "vu", "ve", "vn", "vi", "ps", "eh", "ye", "zm", "zw"
+            ],
+            [
+                "Country name", "Afghanistan", "Albania", "Algeria", "American Samoa", "Andorra", "Angola", "Antigua and Barbuda", "Argentina", "Armenia", "Aruba", "Australia", "Austria", "Azerbaijan", "Bahamas, The", "Bahrain", "Bangladesh", "Barbados", "Belarus", "Belgium", "Belize", "Benin", "Bermuda", "Bhutan", "Bolivia", "Bosnia and Herzegovina", "Botswana", "Brazil", "Brunei Darussalam", "Bulgaria", "Burkina Faso", "Burundi", "Cambodia", "Cameroon", "Canada", "Cape Verde", "Cayman Islands", "Central African Republic", "Chad", "Chile", "China", "Colombia", "Comoros", "Congo, Dem. Rep.", "Congo, Rep.", "Costa Rica", "Cote d'Ivoire", "Croatia", "Cuba", "Curacao", "Cyprus", "Czech Republic", "Denmark", "Djibouti", "Dominica", "Dominican Republic", "Ecuador", "Egypt, Arab Rep.", "El Salvador", "Equatorial Guinea", "Eritrea", "Estonia", "Ethiopia", "Faeroe Islands", "Fiji", "Finland", "France", "French Polynesia", "Gabon", "Gambia, The", "Georgia", "Germany", "Ghana", "Greece", "Greenland", "Grenada", "Guam", "Guatemala", "Guinea", "Guinea-Bissau", "Guyana", "Haiti", "Honduras", "Hong Kong SAR, China", "Hungary", "Iceland", "India", "Indonesia", "Iran, Islamic Rep.", "Iraq", "Ireland", "Isle of Man", "Israel", "Italy", "Jamaica", "Japan", "Jordan", "Kazakhstan", "Kenya", "Kiribati", "Korea, Dem. Rep.", "Korea, Rep.", "Kosovo", "Kuwait", "Kyrgyz Republic", "Lao PDR", "Latvia", "Lebanon", "Lesotho", "Liberia", "Libya", "Liechtenstein", "Lithuania", "Luxembourg", "Macao SAR, China", "Macedonia, FYR", "Madagascar", "Malawi", "Malaysia", "Maldives", "Mali", "Malta", "Marshall Islands", "Mauritania", "Mauritius", "Mayotte", "Mexico", "Micronesia, Fed. Sts.", "Moldova", "Monaco", "Mongolia", "Montenegro", "Morocco", "Mozambique", "Myanmar", "Namibia", "Nepal", "Netherlands", "New Caledonia", "New Zealand", "Nicaragua", "Niger", "Nigeria", "Northern Mariana Islands", "Norway", "Oman", "Pakistan", "Palau", "Panama", "Papua New Guinea", "Paraguay", "Peru", "Philippines", "Poland", "Portugal", "Puerto Rico", "Qatar", "Romania", "Russian Federation", "Rwanda", "Samoa", "San Marino", "Sao Tome and Principe", "Saudi Arabia", "Senegal", "Serbia", "Seychelles", "Sierra Leone", "Singapore", "Slovak Republic", "Slovenia", "Solomon Islands", "Somalia", "South Africa", "South Sudan", "Spain", "Sri Lanka", "St. Kitts and Nevis", "St. Lucia", "St. Martin (French part)", "St. Vincent and the Grenadines", "Sudan", "Suriname", "Swaziland", "Sweden", "Switzerland", "Syrian Arab Republic", "Tajikistan", "Tanzania", "Thailand", "Timor-Leste", "Togo", "Tonga", "Trinidad and Tobago", "Tunisia", "Turkey", "Turkmenistan", "Turks and Caicos Islands", "Tuvalu", "Uganda", "Ukraine", "United Arab Emirates", "United Kingdom", "United States", "Uruguay", "Uzbekistan", "Vanuatu", "Venezuela, RB", "Vietnam", "Virgin Islands (U.S.)", "West Bank and Gaza", "Western Sahara", "Yemen, Rep.", "Zambia", "Zimbabwe"
+            ],
+            [
+                "numb", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0"
+            ]
+
+        ];
+
+        for (var i = 1; i < data[0].length; i++) {
+            var Name = data[0][i][0];
+            var numb = data[0][i][1];
+            for (var c = 1; c < data[0].length; c++) {
+                if (Name.toLowerCase() == MapDatas[1][c].toLowerCase()) {
+                    MapDatas[2][c] = numb;
+                }
+            }
+        }
+        TeacherMapChart('MapContainer', MapDatas);
+        var Table = document.getElementById('Table');
+        var Tag = '';
+        for (var i = 0; i < data[0].length; i++) {
+            Tag += '<tr><td>' + data[0][i][0] + '</td><td>data[0][i][1]</td></tr>';
+        }
+        Table.innerHTML = Tag;
+    }
+
+    function CreateBarData(data) {
+        var series = [{
+            name: 'language',
+            colorByPoint: true,
+            data: []
+        }];
+        for(var i =1 ; i < data[0].length ; i++){
+            var a= series[0].data;
+            a.push({name:data[0][i][0] , y: parseInt(data[0][i][1])});
+        }
+        BarChart('BarChart', series);
+    }
+
+
+</script>
+</body>
+</html>
