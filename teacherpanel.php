@@ -15,34 +15,35 @@ $adminid = $_SESSION['emailid'];
 include 'connection.php';
 
 
-$queryp = "select * from teacher where 	teacheremailid = '".$adminid."'";
+$queryp = "select * from teacher where 	teacheremailid = '" . $adminid . "'";
 
 $resultp = mysql_query($queryp);
 $adminName = "";
 $schoolId = "";
-while ($rowp = mysql_fetch_array($resultp)){
+while ($rowp = mysql_fetch_array($resultp)) {
 
-    $adminName = $rowp["firstname"]." ".$rowp["lastname"];
+    $adminName = $rowp["firstname"] . " " . $rowp["lastname"];
 
     $schoolId = $rowp["schoolid"];
 }
 
-function generateRandomColor(){
-    $randomcolor = '#' . strtoupper(dechex(rand(0,10000000)));
-    if (strlen($randomcolor) != 7){
+function generateRandomColor()
+{
+    $randomcolor = '#' . strtoupper(dechex(rand(0, 10000000)));
+    if (strlen($randomcolor) != 7) {
         $randomcolor = str_pad($randomcolor, 10, '0', STR_PAD_RIGHT);
-        $randomcolor = substr($randomcolor,0,7);
+        $randomcolor = substr($randomcolor, 0, 7);
     }
     return $randomcolor;
 }
 
 
 //school details
-$queryp = "select * from school where 	schoolid = '".$schoolId."'";
+$queryp = "select * from school where 	schoolid = '" . $schoolId . "'";
 $resultp = mysql_query($queryp);
 $schoolName = $city = $suburb = "";
 
-while ($rowp = mysql_fetch_array($resultp)){
+while ($rowp = mysql_fetch_array($resultp)) {
 
 
     $schoolName = $rowp["schoolname"];
@@ -52,7 +53,7 @@ while ($rowp = mysql_fetch_array($resultp)){
 }
 
 //class details
-$query = "select classname from classteacher where schoolid = '".$schoolId."' AND teacheremailid = '".$adminid."'";
+$query = "select classname from classteacher where schoolid = '" . $schoolId . "' AND teacheremailid = '" . $adminid . "'";
 $result = mysql_query($query);
 $className = "";
 
@@ -68,21 +69,20 @@ $className = $rowp["classname"];
 mysql_close($con);
 
 
-function makecsv($data, $csvfilename,$scriptrun = null)
+function makecsv($data, $csvfilename, $scriptrun = null)
 {
-    if (null === $scriptrun){
+    if (null === $scriptrun) {
         $scriptrun = true;
     }
     $list = $data;
 
-    $file = fopen($csvfilename,"w");
-    fputcsv($file,array($GLOBALS['schoolName'],
-            $GLOBALS['suburb']."/".$GLOBALS['city']."/Australia")
+    $file = fopen($csvfilename, "w");
+    fputcsv($file, array($GLOBALS['schoolName'],
+            $GLOBALS['suburb'] . "/" . $GLOBALS['city'] . "/Australia")
     );
 
-    foreach ($list as $line)
-    {
-        fputcsv($file,$line);
+    foreach ($list as $line) {
+        fputcsv($file, $line);
     }
 
     fclose($file);
@@ -93,7 +93,6 @@ function makecsv($data, $csvfilename,$scriptrun = null)
     }
 
 }
-
 
 
 ?>
@@ -131,7 +130,6 @@ function makecsv($data, $csvfilename,$scriptrun = null)
     <script src="scripts/jquery-ui.js"></script>
 
 
-
     <script src="page/js/ajax.js"></script>
 
 
@@ -144,66 +142,65 @@ function makecsv($data, $csvfilename,$scriptrun = null)
 
     <!--Jquery function to autocomplete country name -->
     <script>
-    $(function() {
+        $(function () {
 
-        $( "#sb" ).autocomplete({
-            source: 'autocompletecountry.php'
+            $("#sb").autocomplete({
+                source: 'autocompletecountry.php'
+            });
+
+            $("#m").autocomplete({
+                source: 'autocompletecountry.php'
+            });
+
+            $("#gfm").autocomplete({
+                source: 'autocompletecountry.php'
+            });
+
+            $("#gmm").autocomplete({
+                source: 'autocompletecountry.php'
+            });
+
+            $("#f").autocomplete({
+                source: 'autocompletecountry.php'
+            });
+
+            $("#gff").autocomplete({
+                source: 'autocompletecountry.php'
+            });
+
+            $("#gmf").autocomplete({
+                source: 'autocompletecountry.php'
+            });
         });
-
-        $( "#m" ).autocomplete({
-            source: 'autocompletecountry.php'
-        });
-
-        $( "#gfm" ).autocomplete({
-            source: 'autocompletecountry.php'
-        });
-
-        $( "#gmm" ).autocomplete({
-            source: 'autocompletecountry.php'
-        });
-
-        $( "#f" ).autocomplete({
-            source: 'autocompletecountry.php'
-        });
-
-        $( "#gff" ).autocomplete({
-            source: 'autocompletecountry.php'
-        });
-
-        $( "#gmf" ).autocomplete({
-            source: 'autocompletecountry.php'
-        });
-    });
-
 
 
     </script>
     <!--Jquery function to autocomplete country name -->
     <script>
-        $(function() {
-            $( "#beliefreligion" ).autocomplete({
+        $(function () {
+            $("#beliefreligion").autocomplete({
                 source: 'autocompletereligion.php'
             });
         });
 
     </script>
     <script>
-        $(document).ready(function(){
+        $(document).ready(function () {
 
-            $('#checko').change(function() {
+            $('#checko').change(function () {
 
 
-                if($(this).prop("checked") == true){
+                if ($(this).prop("checked") == true) {
 
-                    $("#beliefreligion").prop("readonly",true);
+                    $("#beliefreligion").prop("readonly", true);
                     $('#beliefreligion').val('Belief/Religion');
-                    $('#beliefreligion').css('color','#CCC');
+                    $('#beliefreligion').css('color', '#CCC');
 
                 }
-                else if($(this).prop("checked") == false){
-                    $("#beliefreligion").prop("readonly",false);
+                else if ($(this).prop("checked") == false) {
+                    $("#beliefreligion").prop("readonly", false);
                     $('#beliefreligion').val('');
-                    $('#beliefreligion').css('color','#000');
+                    $('#beliefreligion').css('color', '#000');
                 }
 
             });
@@ -213,16 +210,22 @@ function makecsv($data, $csvfilename,$scriptrun = null)
     <style>
 
         @font-face {
-            font-family:MuseoSans_300;
-            src:url(fonts/MuseoSans_300.ttf);
+            font-family: MuseoSans_300;
+            src: url(fonts/MuseoSans_300.ttf);
             font-weight: normal;
             font-style: normal;
 
         }
-        table.borderless td,table.borderless th{
-            border: none !important; height:0% auto !important; padding:0% !important;
+
+        table.borderless td, table.borderless th {
+            border: none !important;
+            height: 0% auto !important;
+            padding: 0% !important;
         }
-        table{ border:none !important;}
+
+        table {
+            border: none !important;
+        }
 
         .ui-autocomplete {
             z-index: 5000;
@@ -234,7 +237,7 @@ function makecsv($data, $csvfilename,$scriptrun = null)
     <script type="text/javascript">
 
         // Load Charts and the corechart package.
-        google.charts.load('current', {'packages':['corechart']});
+        google.charts.load('current', {'packages': ['corechart']});
         google.charts.setOnLoadCallback(drawRegionsMap);
 
         // Draw the donut chart .
@@ -244,7 +247,7 @@ function makecsv($data, $csvfilename,$scriptrun = null)
         google.charts.setOnLoadCallback(drawReligionChart);
 
 
-        $(window).resize(function(){
+        $(window).resize(function () {
             drawRegionsMap();
             drawLanguageChart();
             drawReligionChart();
@@ -261,7 +264,7 @@ function makecsv($data, $csvfilename,$scriptrun = null)
 
         function drawReligionChart() {
             var data = google.visualization.arrayToDataTable([
-                ["Religion", "NumberOfStudent" ],
+                ["Religion", "NumberOfStudent"],
                 <?php
                    include 'connection.php';
 
@@ -277,7 +280,7 @@ function makecsv($data, $csvfilename,$scriptrun = null)
                    while($row = mysql_fetch_assoc($result)) {
 
                    ?>
-                ['<?php echo $row['religion']; ?>',<?php echo $row['COUNT( religion )']; ?>],
+                ['<?php echo $row['religion']; ?>', <?php echo $row['COUNT( religion )']; ?>],
 
 
                 <?php  } ?>
@@ -286,17 +289,19 @@ function makecsv($data, $csvfilename,$scriptrun = null)
 
             var view = new google.visualization.DataView(data);
             view.setColumns([0, 1,
-                { calc: "stringify",
+                {
+                    calc: "stringify",
                     sourceColumn: 1,
                     type: "string",
-                    role: "annotation" }
+                    role: "annotation"
+                }
             ]);
 
             var options = {
                 pieHole: 0.4,
                 width: screen.width * 0.9,
-                height: screen.height/2,
-                backgroundColor: { fill:'transparent' }
+                height: screen.height / 2,
+                backgroundColor: {fill: 'transparent'}
             };
             var chart = new google.visualization.PieChart(document.getElementById("barchart_values"));
             chart.draw(view, options);
@@ -308,20 +313,15 @@ function makecsv($data, $csvfilename,$scriptrun = null)
                   makecsv($output, "teacherreligonout.csv", false);
             ?>
             //var religonchart = (chart.getImageURI());
-            document.getElementById('pngaddresstoexport').value  = ' + chart.getImageURI() + ';
+            document.getElementById('pngaddresstoexport').value = ' + chart.getImageURI() + ';
             //document.getElementById("pngaddresstoexport").value = chart.getImageURI();
 
         }
 
 
-
-
-
-
-
         function drawRegionsMap() {
             var data = google.visualization.arrayToDataTable([
-                ['Country','NumberofPersons'],
+                ['Country', 'NumberofPersons'],
 
                 <?php
                 include 'connection.php';
@@ -399,21 +399,20 @@ function makecsv($data, $csvfilename,$scriptrun = null)
                 while($row = mysql_fetch_assoc($result)) {
 
                 ?>
-                ['<?php echo $row['x']; ?>',<?php echo $row['COUNT( * )']; ?>], <?php } ?>
+                ['<?php echo $row['x']; ?>', <?php echo $row['COUNT( * )']; ?>], <?php } ?>
 
             ]);
 
             var options = {
 
 
-
-                colorAxis: {minValue: 0, colors: ['#f6cbcb','#af3634']},
+                colorAxis: {minValue: 0, colors: ['#f6cbcb', '#af3634']},
                 displayMode: 'regions',
                 //width: 900,
                 //height: 500,
                 width: "80%",
                 height: "500px",
-                backgroundColor: { fill:'transparent' }
+                backgroundColor: {fill: 'transparent'}
 
 
             };
@@ -424,7 +423,7 @@ function makecsv($data, $csvfilename,$scriptrun = null)
             // Wait for the chart to finish drawing before calling the getImageURI() method.
             google.visualization.events.addListener(chart, 'ready', function () {
                 var imgUri = chart.getImageURI();
-                document.getElementById('png').innerHTML  = '<a href="' + imgUri + '" target="_blank">Printable version</a>';
+                document.getElementById('png').innerHTML = '<a href="' + imgUri + '" target="_blank">Printable version</a>';
 
             });
 
@@ -445,7 +444,7 @@ function makecsv($data, $csvfilename,$scriptrun = null)
         function drawLanguageChart() {
 
             var data = google.visualization.arrayToDataTable([
-                ['Language', 'NumberOfStudent',{ role: 'style' }],
+                ['Language', 'NumberOfStudent', {role: 'style'}],
 
 
                 <?php
@@ -463,12 +462,10 @@ function makecsv($data, $csvfilename,$scriptrun = null)
                   while($row = mysql_fetch_assoc($result)) {
 
                   ?>
-                ['<?php echo $row['languagename']; ?>',<?php echo $row['COUNT( languagename )']; ?>,'<?php echo generateRandomColor(); ?>'],
+                ['<?php echo $row['languagename']; ?>', <?php echo $row['COUNT( languagename )']; ?>, '<?php echo generateRandomColor(); ?>'],
 
 
                 <?php  } ?>
-
-
 
 
             ]);
@@ -485,8 +482,8 @@ function makecsv($data, $csvfilename,$scriptrun = null)
                     //height: screen.height * 0.8
                 },
                 bar: {groupWidth: "95%"},
-                legend: { position: "none" },
-                backgroundColor: { fill:'transparent' }
+                legend: {position: "none"},
+                backgroundColor: {fill: 'transparent'}
             };
 
             languagechart = new google.visualization.ColumnChart(document.getElementById('languagechart'));
@@ -515,8 +512,8 @@ function makecsv($data, $csvfilename,$scriptrun = null)
     </script>
 
     <script>
-        $(document).ready(function(){
-            $('#checkoall').change(function() {
+        $(document).ready(function () {
+            $('#checkoall').change(function () {
                 ($(this).is(":checked") ? $('.checkboxes').prop("checked", true) : $('.checkboxes').prop("checked", false))
 
             });
@@ -528,19 +525,23 @@ function makecsv($data, $csvfilename,$scriptrun = null)
 
 <?php
 
-$currentClassName='';
-if(isset($_POST['classnamedropdown'])){ $currentClassName = $_POST['classnamedropdown']; }
+$currentClassName = '';
+if (isset($_POST['classnamedropdown'])) {
+    $currentClassName = $_POST['classnamedropdown'];
+}
 ?>
 
 <?php
-invite::invite_student($schoolId,$adminid);
+invite::invite_student($schoolId, $adminid);
 
-function test_input($data) {
+function test_input($data)
+{
     $data = trim($data);
     $data = stripslashes($data);
     $data = htmlspecialchars($data);
     return $data;
 }
+
 ?>
 
 
@@ -548,10 +549,10 @@ function test_input($data) {
 <div id="wrap">
 
     <div class="container-fluid">
-        <?php include 'headerteacher.php';?>
+        <?php include 'headerteacher.php'; ?>
 
 
-        <div class="row" >
+        <div class="row">
 
             <div class="col-sm-1">
             </div>
@@ -571,7 +572,7 @@ function test_input($data) {
 
                     <div class="col-sm-6 text-right">
                         <h2><?php echo $schoolName; ?></h2>
-                        <h5><?php echo $city." / ".$suburb; ?></h5>
+                        <h5><?php echo $city . " / " . $suburb; ?></h5>
                     </div>
 
                     <div class="col-sm-12" style="margin-top:2em;">
@@ -592,35 +593,30 @@ function test_input($data) {
                                 <br><br>
 
 
-
                                 <form method="post">
                                     <?php
 
-                                    if (!empty($_POST['classnamedropdownstutab']))
-                                    {
-                                        $className= $_POST['classnamedropdownstutab'];
+                                    if (!empty($_POST['classnamedropdownstutab'])) {
+                                        $className = $_POST['classnamedropdownstutab'];
                                         $currentClassName = $_POST['classnamedropdownstutab'];
                                     }
                                     include 'connection.php';
-                                    $queryp = "select classname from classteacher where teacheremailid = '".$adminid."' AND schoolid = '".$schoolId."'";
+                                    $queryp = "select classname from classteacher where teacheremailid = '" . $adminid . "' AND schoolid = '" . $schoolId . "'";
                                     $resultp = mysql_query($queryp);
                                     echo "Class Name: ";
                                     echo '<select name="classnamedropdownstutab" >';
-                                    while ($rowp = mysql_fetch_array($resultp)){
+                                    while ($rowp = mysql_fetch_array($resultp)) {
                                         $selected = ($rowp['classname'] == $currentClassName) ? 'selected="selected"' : '';
-                                        echo '<option value="'.$rowp['classname'].'"'.$selected.' >'.$rowp['classname'].'</option>';
+                                        echo '<option value="' . $rowp['classname'] . '"' . $selected . ' >' . $rowp['classname'] . '</option>';
                                     }
                                     echo '</select>';// Close your drop down box
                                     mysql_close($con);
                                     ?>
                                     <input type="submit" id="submitvalstutab" name="submitvalstutab" value="SUBMIT">
-                                    <a href="studentform/AA_Printable form.pdf" target="_blank" title="please click here for printable vesion of student form"style="color:#000;float:right; font-weight:bold; text-decoration:underline;">Printable Form</a>
-
-
-
-
-
-
+                                    <a href="studentform/AA_Printable form.pdf" target="_blank"
+                                       title="please click here for printable vesion of student form"
+                                       style="color:#000;float:right; font-weight:bold; text-decoration:underline;">Printable
+                                        Form</a>
 
 
                                     <br><br>
@@ -628,11 +624,11 @@ function test_input($data) {
 
                                     include 'connection.php';
 
-                                    $queryteachers = "select * from student where schoolid = '".$schoolId."' AND classname = '".$className."'" ;
+                                    $queryteachers = "select * from student where schoolid = '" . $schoolId . "' AND classname = '" . $className . "'";
                                     $resultteachers = mysql_query($queryteachers);
-                                    if($resultteachers == TRUE){
-                                    $j=1;
-                                    $k=1;
+                                    if ($resultteachers == TRUE){
+                                    $j = 1;
+                                    $k = 1;
 
                                     echo "<table class='table table-striped table-bordered' cellspacing='0' width='100%' >";
                                     echo "<thead>";
@@ -659,9 +655,12 @@ function test_input($data) {
                                     ?>
                                     <tr style="background-color:#CCC;">
                                         <td></td>
-                                        <td><input type="text" class="form-control" name="name" id="name" placeholder="Waiting student" value="<?php echo $name; ?>" >
+                                        <td><input type="text" class="form-control" name="name" id="name"
+                                                   placeholder="Waiting student" value="<?php echo $name; ?>">
                                         </td>
-                                        <td><input type="email" class="form-control" id="email" name="email" placeholder="Click here to add email address" value="<?php echo $email; ?>" >
+                                        <td><input type="email" class="form-control" id="email" name="email"
+                                                   placeholder="Click here to add email address"
+                                                   value="<?php echo $email; ?>">
                                         </td>
 
                                         <!--
@@ -677,44 +676,48 @@ function test_input($data) {
                                         <td></td>
                                         <td></td>
 
-                                        <td><button type="submit" class="btn btn-default" name="invite" id="invite" title="INVITE">INVITE</button></td>
+                                        <td>
+                                            <button type="submit" class="btn btn-default" name="invite" id="invite"
+                                                    title="INVITE">INVITE
+                                            </button>
+                                        </td>
 
                                     </tr>
                                 </form>
                                 <?php
                                 $countnum = 1;
-                                while ($rowj=mysql_fetch_array($resultteachers)){
+                                while ($rowj = mysql_fetch_array($resultteachers)) {
                                     $Temp1 = "";
-                                    if($rowj['SNO'] == "NULL"){
+                                    if ($rowj['SNO'] == "NULL") {
                                         $Temp1 = "Waiting acceptance";
-                                    }else{
-                                        $Temp1 =	$rowj['SNO'];
+                                    } else {
+                                        $Temp1 = $rowj['SNO'];
                                     }
                                     echo "<tr>";
                                     $studentNameTemp = "";
-                                    if($rowj['firstname'] == "NULL"){
+                                    if ($rowj['firstname'] == "NULL") {
                                         $studentNameTemp = "Waiting acceptance";
-                                    }else{
-                                        $studentNameTemp =	$rowj['firstname'];
+                                    } else {
+                                        $studentNameTemp = $rowj['firstname'];
                                     }
                                     echo "<tr>";
 
                                     echo "<td  style='padding:1%;' class='text-center'>";
-                                    echo "<span>".$countnum."</span>";
+                                    echo "<span>" . $countnum . "</span>";
                                     echo "</td>";
 
                                     echo "<td style='padding:1%;'>";
-                                    $lname='';
-                                    if($rowj['lastname'] != 'null'){
+                                    $lname = '';
+                                    if ($rowj['lastname'] != 'null') {
                                         $lname = $rowj['lastname'];
                                     }
-                                    echo "<span style='padding:0.7%;' id='j".$j."' >".$studentNameTemp." ".$lname."</span>&nbsp;&nbsp;&nbsp;";
+                                    echo "<span style='padding:0.7%;' id='j" . $j . "' >" . $studentNameTemp . " " . $lname . "</span>&nbsp;&nbsp;&nbsp;";
                                     $j = ++$j;
                                     $k = ++$k;
                                     echo "</td>";
 
                                     echo "<td  style='padding:1%;'>";
-                                    echo "<span>".$rowj['studentemailid']."</span>";
+                                    echo "<span>" . $rowj['studentemailid'] . "</span>";
                                     echo "</td>";
 
 
@@ -790,10 +793,10 @@ function test_input($data) {
 
                                     //CLICK FOR INFORMATION LINK
                                     echo "<td  style='padding:1%; '>";
-                                    if($rowj['status'] == 'active'){
+                                    if ($rowj['status'] == 'active') {
 
-                                        echo '<a style="text-decoration:underline; cursor:pointer;" name="view" id="'.$rowj['studentemailid'].'" data-toggle="modal" data-target="#dataModal" class="view_data"> View Profile</a>';
-                                    }else{
+                                        echo '<a style="text-decoration:underline; cursor:pointer;" name="view" id="' . $rowj['studentemailid'] . '" data-toggle="modal" data-target="#dataModal" class="view_data"> View Profile</a>';
+                                    } else {
                                         echo "Waiting approval";//<button class='btn btn-default' style='background-color:#A1C564; color:#FFF;'>Resned</button>";
                                     }
                                     echo "</td>";
@@ -801,12 +804,12 @@ function test_input($data) {
 
                                     //STATUS
                                     echo "<td  style='padding:1%;'>";
-                                    if($rowj['status'] == 'active'){
+                                    if ($rowj['status'] == 'active') {
                                         echo "<span> <img src='images/active.png'>&nbsp;active</span>";
-                                    }else if($rowj['status'] == 'pending'){
+                                    } else if ($rowj['status'] == 'pending') {
                                         echo "<span> <img src='images/pending.png'>&nbsp;pending</span>";
-                                    }else{
-                                        echo "<span>".$rowj['status']."</span>";
+                                    } else {
+                                        echo "<span>" . $rowj['status'] . "</span>";
                                     }
                                     echo "</td>";
 
@@ -817,14 +820,21 @@ function test_input($data) {
                                     ?>
 
 
-                                    <a href="#" data-href="deletestudent.php?id=<?php echo $rowj['studentemailid']; ?>" data-id="<?php echo $studentNameTemp." ".$lname; ?>" class="staffinfo" data-toggle="modal" data-target="#confirm-delete">
-                                        <img src='images/deletehover.png' width='16' height='16' onmouseover="this.src='images/delete.png';" onmouseout="this.src='images/deletehover.png';" />
+                                    <a href="#" data-href="deletestudent.php?id=<?php echo $rowj['studentemailid']; ?>"
+                                       data-id="<?php echo $studentNameTemp . " " . $lname; ?>" class="staffinfo"
+                                       data-toggle="modal" data-target="#confirm-delete">
+                                        <img src='images/deletehover.png' width='16' height='16'
+                                             onmouseover="this.src='images/delete.png';"
+                                             onmouseout="this.src='images/deletehover.png';"/>
                                     </a>
 
                                     <?php
-                                    if($rowj['status'] == 'active'){
-                                        ?> <a style="text-decoration:underline;cursor:pointer;" name="editstaff" id="<?php echo $rowj['studentemailid'] ?>"  class="editstaff_data">
-                                            <img src='images/edit.png' width='16' height='16' onmouseover="this.src='images/edithover.png';" onmouseout="this.src='images/edit.png';" />
+                                    if ($rowj['status'] == 'active') {
+                                        ?> <a style="text-decoration:underline;cursor:pointer;" name="editstaff"
+                                              id="<?php echo $rowj['studentemailid'] ?>" class="editstaff_data">
+                                            <img src='images/edit.png' width='16' height='16'
+                                                 onmouseover="this.src='images/edithover.png';"
+                                                 onmouseout="this.src='images/edit.png';"/>
                                         </a>
 
                                     <?php
@@ -844,7 +854,7 @@ function test_input($data) {
                                 }
 
                                 echo "</table>";
-                                }else{
+                                } else {
                                     echo "data fetching fail from teacher table.";
                                 }
 
@@ -856,12 +866,11 @@ function test_input($data) {
                                     ?></span>
 
 
-
-
                             </div>
 
                             <div id="maps" class="tab-pane fade">
                                 <br>
+
                                 <div>
                                     <div id="regions_div" style="float:left;"></div>
 
@@ -872,13 +881,13 @@ function test_input($data) {
 
                                                 <?php
                                                 include 'connection.php';
-                                                $queryp = "select classname from classteacher where teacheremailid = '".$adminid."' AND schoolid = '".$schoolId."'";
+                                                $queryp = "select classname from classteacher where teacheremailid = '" . $adminid . "' AND schoolid = '" . $schoolId . "'";
                                                 $resultp = mysql_query($queryp);
                                                 echo "Class Name:";
                                                 echo '<select name="classnamedropdown">';
-                                                while ($rowp = mysql_fetch_array($resultp)){
+                                                while ($rowp = mysql_fetch_array($resultp)) {
                                                     $selected = ($rowp['classname'] == $currentClassName) ? 'selected="selected"' : '';
-                                                    echo '<option value="'.$rowp['classname'].'"'.$selected.' >'.$rowp['classname'].'</option>';
+                                                    echo '<option value="' . $rowp['classname'] . '"' . $selected . ' >' . $rowp['classname'] . '</option>';
                                                 }
                                                 echo '</select>';// Close your drop down box
                                                 mysql_close($con);
@@ -889,16 +898,77 @@ function test_input($data) {
 
 
                                                 <br><br>
-                                                <input type="checkbox" id="checkoall" />&nbsp;All (select/unselect)<br />
-                                                <input type="checkbox" class="checkboxes" name="formDoor[]" value="S" <?php if(isset($_POST['formDoor'])){ $aDoor = $_POST['formDoor'];$N = count($aDoor);for($i=0; $i < $N; $i++){if($aDoor[$i] == 'S'){echo "checked='checked'";}}} ?>/>&nbsp;Student<br />
-                                                <input type="checkbox" class="checkboxes" name="formDoor[]" value="F" <?php if(isset($_POST['formDoor'])){ $aDoor = $_POST['formDoor'];$N = count($aDoor);for($i=0; $i < $N; $i++){if($aDoor[$i] == 'F'){echo "checked='checked'";}}} ?>/>&nbsp;Father<br />
-                                                <input type="checkbox" class="checkboxes" name="formDoor[]" value="M" <?php if(isset($_POST['formDoor'])){ $aDoor = $_POST['formDoor'];$N = count($aDoor);for($i=0; $i < $N; $i++){if($aDoor[$i] == 'M'){echo "checked='checked'";}}} ?>/>&nbsp;Mother<br />
-                                                <input type="checkbox" class="checkboxes" name="formDoor[]" value="GFFS" <?php if(isset($_POST['formDoor'])){ $aDoor = $_POST['formDoor'];$N = count($aDoor);for($i=0; $i < $N; $i++){if($aDoor[$i] == 'GFFS'){echo "checked='checked'";}}} ?> />&nbsp;Paternal GrandFather<br />
-                                                <input type="checkbox" class="checkboxes" name="formDoor[]" value="GMFS" <?php if(isset($_POST['formDoor'])){ $aDoor = $_POST['formDoor'];$N = count($aDoor);for($i=0; $i < $N; $i++){if($aDoor[$i] == 'GMFS'){echo "checked='checked'";}}} ?>/>&nbsp;Paternal GrandMother<br />
-                                                <input type="checkbox" class="checkboxes" name="formDoor[]" value="GFMS" <?php if(isset($_POST['formDoor'])){ $aDoor = $_POST['formDoor'];$N = count($aDoor);for($i=0; $i < $N; $i++){if($aDoor[$i] == 'GFMS'){echo "checked='checked'";}}} ?> />&nbsp;Maternal GrandFather<br />
-                                                <input type="checkbox" class="checkboxes" name="formDoor[]" value="GMMS" <?php if(isset($_POST['formDoor'])){ $aDoor = $_POST['formDoor'];$N = count($aDoor);for($i=0; $i < $N; $i++){if($aDoor[$i] == 'GMMS'){echo "checked='checked'";}}} ?>/>&nbsp;Maternal GrandMother<br />
-
-
+                                                <input type="checkbox" id="checkoall"/>&nbsp;All (select/unselect)<br/>
+                                                <input type="checkbox" class="checkboxes" name="formDoor[]"
+                                                       value="S" <?php if (isset($_POST['formDoor'])) {
+                                                    $aDoor = $_POST['formDoor'];
+                                                    $N = count($aDoor);
+                                                    for ($i = 0; $i < $N; $i++) {
+                                                        if ($aDoor[$i] == 'S') {
+                                                            echo "checked='checked'";
+                                                        }
+                                                    }
+                                                } ?>/>&nbsp;Student<br/>
+                                                <input type="checkbox" class="checkboxes" name="formDoor[]"
+                                                       value="F" <?php if (isset($_POST['formDoor'])) {
+                                                    $aDoor = $_POST['formDoor'];
+                                                    $N = count($aDoor);
+                                                    for ($i = 0; $i < $N; $i++) {
+                                                        if ($aDoor[$i] == 'F') {
+                                                            echo "checked='checked'";
+                                                        }
+                                                    }
+                                                } ?>/>&nbsp;Father<br/>
+                                                <input type="checkbox" class="checkboxes" name="formDoor[]"
+                                                       value="M" <?php if (isset($_POST['formDoor'])) {
+                                                    $aDoor = $_POST['formDoor'];
+                                                    $N = count($aDoor);
+                                                    for ($i = 0; $i < $N; $i++) {
+                                                        if ($aDoor[$i] == 'M') {
+                                                            echo "checked='checked'";
+                                                        }
+                                                    }
+                                                } ?>/>&nbsp;Mother<br/>
+                                                <input type="checkbox" class="checkboxes" name="formDoor[]"
+                                                       value="GFFS" <?php if (isset($_POST['formDoor'])) {
+                                                    $aDoor = $_POST['formDoor'];
+                                                    $N = count($aDoor);
+                                                    for ($i = 0; $i < $N; $i++) {
+                                                        if ($aDoor[$i] == 'GFFS') {
+                                                            echo "checked='checked'";
+                                                        }
+                                                    }
+                                                } ?> />&nbsp;Paternal GrandFather<br/>
+                                                <input type="checkbox" class="checkboxes" name="formDoor[]"
+                                                       value="GMFS" <?php if (isset($_POST['formDoor'])) {
+                                                    $aDoor = $_POST['formDoor'];
+                                                    $N = count($aDoor);
+                                                    for ($i = 0; $i < $N; $i++) {
+                                                        if ($aDoor[$i] == 'GMFS') {
+                                                            echo "checked='checked'";
+                                                        }
+                                                    }
+                                                } ?>/>&nbsp;Paternal GrandMother<br/>
+                                                <input type="checkbox" class="checkboxes" name="formDoor[]"
+                                                       value="GFMS" <?php if (isset($_POST['formDoor'])) {
+                                                    $aDoor = $_POST['formDoor'];
+                                                    $N = count($aDoor);
+                                                    for ($i = 0; $i < $N; $i++) {
+                                                        if ($aDoor[$i] == 'GFMS') {
+                                                            echo "checked='checked'";
+                                                        }
+                                                    }
+                                                } ?> />&nbsp;Maternal GrandFather<br/>
+                                                <input type="checkbox" class="checkboxes" name="formDoor[]"
+                                                       value="GMMS" <?php if (isset($_POST['formDoor'])) {
+                                                    $aDoor = $_POST['formDoor'];
+                                                    $N = count($aDoor);
+                                                    for ($i = 0; $i < $N; $i++) {
+                                                        if ($aDoor[$i] == 'GMMS') {
+                                                            echo "checked='checked'";
+                                                        }
+                                                    }
+                                                } ?>/>&nbsp;Maternal GrandMother<br/>
 
 
                                                 <br>
@@ -912,53 +982,64 @@ function test_input($data) {
                                         <br><br>
 
 
-
                                         <div>
                                             <?php
                                             include 'connection.php';
 
                                             $unionAllOption = 0;
                                             //starting query
-                                            $querytest ="";
+                                            $querytest = "";
 
 
-                                            if (!empty($_POST['formDoor'])){
+                                            if (!empty($_POST['formDoor'])) {
                                                 $querytest .= "select x , COUNT( * )  from(";
                                                 $aDoor = $_POST['formDoor'];
                                                 $N = count($aDoor);
-                                                for($i=0; $i < $N; $i++){
-                                                    if($aDoor[$i] == 'S'){
-                                                        $querytest .= " select `studentbirthplace` as x from studentbirthdetails where studentemailid IN(SELECT studentemailid FROM student where schoolid='".$schoolId."'  AND classname='".$className."')";
+                                                for ($i = 0; $i < $N; $i++) {
+                                                    if ($aDoor[$i] == 'S') {
+                                                        $querytest .= " select `studentbirthplace` as x from studentbirthdetails where studentemailid IN(SELECT studentemailid FROM student where schoolid='" . $schoolId . "'  AND classname='" . $className . "')";
                                                         $unionAllOption = 1;
                                                     }
-                                                    if($aDoor[$i] == 'F'){
-                                                        if($unionAllOption==1){$querytest .= " UNION ALL";}
-                                                        $querytest .= " select `studentfatherbirthplace` as x from studentbirthdetails  where studentemailid IN(SELECT studentemailid FROM student where schoolid='".$schoolId."'  AND classname='".$className."')";
+                                                    if ($aDoor[$i] == 'F') {
+                                                        if ($unionAllOption == 1) {
+                                                            $querytest .= " UNION ALL";
+                                                        }
+                                                        $querytest .= " select `studentfatherbirthplace` as x from studentbirthdetails  where studentemailid IN(SELECT studentemailid FROM student where schoolid='" . $schoolId . "'  AND classname='" . $className . "')";
                                                         $unionAllOption = 1;
                                                     }
-                                                    if($aDoor[$i] == 'M'){
-                                                        if($unionAllOption==1){$querytest .= " UNION ALL";}
-                                                        $querytest .= " select `studentmotherbirthplace` as x from studentbirthdetails  where studentemailid IN(SELECT studentemailid FROM student where schoolid='".$schoolId."'  AND classname='".$className."')";
+                                                    if ($aDoor[$i] == 'M') {
+                                                        if ($unionAllOption == 1) {
+                                                            $querytest .= " UNION ALL";
+                                                        }
+                                                        $querytest .= " select `studentmotherbirthplace` as x from studentbirthdetails  where studentemailid IN(SELECT studentemailid FROM student where schoolid='" . $schoolId . "'  AND classname='" . $className . "')";
                                                         $unionAllOption = 1;
                                                     }
-                                                    if($aDoor[$i] == 'GFFS'){
-                                                        if($unionAllOption==1){$querytest .= " UNION ALL";}
-                                                        $querytest .= " select `studentfathersfatherbirthplace` as x from studentbirthdetails  where studentemailid IN(SELECT studentemailid FROM student where schoolid='".$schoolId."'  AND classname='".$className."')";
+                                                    if ($aDoor[$i] == 'GFFS') {
+                                                        if ($unionAllOption == 1) {
+                                                            $querytest .= " UNION ALL";
+                                                        }
+                                                        $querytest .= " select `studentfathersfatherbirthplace` as x from studentbirthdetails  where studentemailid IN(SELECT studentemailid FROM student where schoolid='" . $schoolId . "'  AND classname='" . $className . "')";
                                                         $unionAllOption = 1;
                                                     }
-                                                    if($aDoor[$i] == 'GMFS'){
-                                                        if($unionAllOption==1){$querytest .= " UNION ALL";}
-                                                        $querytest .= " select `studentfathersmotherbirthplace` as x from studentbirthdetails  where studentemailid IN(SELECT studentemailid FROM student where schoolid='".$schoolId."'  AND classname='".$className."')";
+                                                    if ($aDoor[$i] == 'GMFS') {
+                                                        if ($unionAllOption == 1) {
+                                                            $querytest .= " UNION ALL";
+                                                        }
+                                                        $querytest .= " select `studentfathersmotherbirthplace` as x from studentbirthdetails  where studentemailid IN(SELECT studentemailid FROM student where schoolid='" . $schoolId . "'  AND classname='" . $className . "')";
                                                         $unionAllOption = 1;
                                                     }
-                                                    if($aDoor[$i] == 'GFMS'){
-                                                        if($unionAllOption==1){$querytest .= " UNION ALL";}
-                                                        $querytest .= " select `studentmothersfatherbirthplace` as x from studentbirthdetails  where studentemailid IN(SELECT studentemailid FROM student where schoolid='".$schoolId."'  AND classname='".$className."')";
+                                                    if ($aDoor[$i] == 'GFMS') {
+                                                        if ($unionAllOption == 1) {
+                                                            $querytest .= " UNION ALL";
+                                                        }
+                                                        $querytest .= " select `studentmothersfatherbirthplace` as x from studentbirthdetails  where studentemailid IN(SELECT studentemailid FROM student where schoolid='" . $schoolId . "'  AND classname='" . $className . "')";
                                                         $unionAllOption = 1;
                                                     }
-                                                    if($aDoor[$i] == 'GMMS'){
-                                                        if($unionAllOption==1){$querytest .= " UNION ALL";}
-                                                        $querytest .= " select `studentmothersmotherbirthplace` as x from studentbirthdetails  where studentemailid IN(SELECT studentemailid FROM student where schoolid='".$schoolId."'  AND classname='".$className."')";
+                                                    if ($aDoor[$i] == 'GMMS') {
+                                                        if ($unionAllOption == 1) {
+                                                            $querytest .= " UNION ALL";
+                                                        }
+                                                        $querytest .= " select `studentmothersmotherbirthplace` as x from studentbirthdetails  where studentemailid IN(SELECT studentemailid FROM student where schoolid='" . $schoolId . "'  AND classname='" . $className . "')";
                                                         $unionAllOption = 1;
                                                     }
                                                 }
@@ -967,13 +1048,13 @@ function test_input($data) {
                                             }
 
                                             // Default values goes here
-                                            if($querytest==""){
+                                            if ($querytest == "") {
 
-                                                $querytest = "select x , COUNT( * )  from( select `studentbirthplace` as x from studentbirthdetails where studentemailid IN(SELECT studentemailid FROM student where schoolid='".$schoolId."'  AND classname='".$className."') ) as temptable group by x";
+                                                $querytest = "select x , COUNT( * )  from( select `studentbirthplace` as x from studentbirthdetails where studentemailid IN(SELECT studentemailid FROM student where schoolid='" . $schoolId . "'  AND classname='" . $className . "') ) as temptable group by x";
                                             }
 
                                             $result = mysql_query($querytest);
-                                            while($row = mysql_fetch_assoc($result)) {
+                                            while ($row = mysql_fetch_assoc($result)) {
                                                 echo "<b>";
                                                 echo $row['x'];
                                                 echo ": </b>&nbsp;";
@@ -982,7 +1063,7 @@ function test_input($data) {
                                             }
                                             $result1 = mysql_query($querytest);
                                             $output = array();
-                                            while($row = mysql_fetch_assoc($result1)) {
+                                            while ($row = mysql_fetch_assoc($result1)) {
                                                 $output[] = $row;
                                             }
                                             makecsv($output, "regionout.csv")
@@ -1018,8 +1099,8 @@ function test_input($data) {
 								?>
                                 };
 
-                                for(var i =0 ; i < donutSeries.data.length ; i++){
-                                    donutSeries.data[i][1] =  parseFloat(donutSeries.data[i][1]);
+                                for (var i = 0; i < donutSeries.data.length; i++) {
+                                    donutSeries.data[i][1] = parseFloat(donutSeries.data[i][1]);
                                 }
 
                                 var series = [{
@@ -1031,13 +1112,13 @@ function test_input($data) {
 								?>
                                 }];
 
-                                for(var i =0 ; i < series[0].data.length ; i++){
-                                    series[0].data[i].y =  parseFloat(series[0].data[i].y);
+                                for (var i = 0; i < series[0].data.length; i++) {
+                                    series[0].data[i].y = parseFloat(series[0].data[i].y);
                                 }
 
                                 //_____ table Func
                                 var TableData = {
-                                    thName : ['Language' , 'Count'],
+                                    thName: ['Language', 'Count'],
                                     trData:<?php
 							$result = language::get_table_language_teacher($schoolId, $className);
 
@@ -1052,21 +1133,27 @@ function test_input($data) {
 
                             <script type="text/javascript">
                                 var flag = true;
-                                function init_PSCO_chart(){
+                                function init_PSCO_chart() {
                                     $("#PSCO_chart").ready(function () {
                                         try {
                                             flag = false;
                                             TabelCreateor(TableData, 'langTable');
                                             PieChart('ChartContainer', series);
 
-                                        }catch(e){
+                                        } catch (e) {
                                             console.log(e);
                                         }
                                     });
-                                    if(flag){setTimeout(function(){init_PSCO_chart();},1000);}
+                                    if (flag) {
+                                        setTimeout(function () {
+                                            init_PSCO_chart();
+                                        }, 1000);
+                                    }
                                 }
                                 $('#language').load('page/Chart_teacher.html');
-                                setTimeout(function(){init_PSCO_chart();},1000);
+                                setTimeout(function () {
+                                    init_PSCO_chart();
+                                }, 1000);
                             </script>
 
 
@@ -1083,8 +1170,8 @@ function test_input($data) {
 								?>
                                 };
 
-                                for(var i =0 ; i < donutSeries_religion.data.length ; i++){
-                                    donutSeries_religion.data[i][1] =  parseFloat(donutSeries_religion.data[i][1]);
+                                for (var i = 0; i < donutSeries_religion.data.length; i++) {
+                                    donutSeries_religion.data[i][1] = parseFloat(donutSeries_religion.data[i][1]);
                                 }
 
                                 var series_religion = [{
@@ -1096,13 +1183,13 @@ function test_input($data) {
 								?>
                                 }];
 
-                                for(var i =0 ; i < series_religion[0].data.length ; i++){
-                                    series_religion[0].data[i].y =  parseFloat(series_religion[0].data[i].y);
+                                for (var i = 0; i < series_religion[0].data.length; i++) {
+                                    series_religion[0].data[i].y = parseFloat(series_religion[0].data[i].y);
                                 }
 
                                 //_____ table Func
                                 var TableData_religion = {
-                                    thName : ['Religion' , 'Count'],
+                                    thName: ['Religion', 'Count'],
                                     trData:<?php
 							$result = religion::get_table_religion_teacher($schoolId, $className);
 							 echo $result;
@@ -1117,21 +1204,27 @@ function test_input($data) {
 
                             <script type="text/javascript">
                                 var flag = true;
-                                function init_PSCO_chart_religion(){
+                                function init_PSCO_chart_religion() {
                                     $("#PSCO_chart").ready(function () {
                                         try {
                                             flag = false;
                                             TabelCreateor(TableData_religion, 'langTable_religion');
                                             PieChart('ChartContainer_religion', series_religion);
 
-                                        }catch(e){
+                                        } catch (e) {
                                             console.log(e);
                                         }
                                     });
-                                    if(flag){setTimeout(function(){init_PSCO_chart_religion();},1000);}
+                                    if (flag) {
+                                        setTimeout(function () {
+                                            init_PSCO_chart_religion();
+                                        }, 1000);
+                                    }
                                 }
                                 $('#religion').load('page/Belief_chart_teacher.html');
-                                setTimeout(function(){init_PSCO_chart_religion();},1000);
+                                setTimeout(function () {
+                                    init_PSCO_chart_religion();
+                                }, 1000);
                             </script>
 
 
@@ -1149,51 +1242,33 @@ function test_input($data) {
 
 
                                 <?php
-                                echo PSCO_func::languages($schoolId,$className);
+                                echo PSCO_func::languages($schoolId, $className);
                                 echo "<br>";
-                                echo PSCO_func::different_faiths($schoolId,$className);
+                                echo PSCO_func::different_faiths($schoolId, $className);
                                 echo "<br>";
-                                echo PSCO_func::count_Languages($schoolId,$className);
+                                echo PSCO_func::count_Languages($schoolId, $className);
                                 echo "<br>";
-                                echo PSCO_func::grandparents($schoolId,$className);
+                                echo PSCO_func::grandparents($schoolId, $className);
                                 echo "<br>";
-                                echo PSCO_func::Highest_number($schoolId,$className);
+                                echo PSCO_func::Highest_number($schoolId, $className);
                                 echo "<br>";
-                                echo PSCO_func::How_many_number($schoolId,$className);
+                                echo PSCO_func::How_many_number($schoolId, $className);
 
                                 ?>
                             </div>
 
 
-
-
-
                             <div id="export" class="tab-pane fade">
-                                <div class="infogram-embed" data-id="ancestryatlas_teachers" data-type="interactive" data-title="AncestryAtlas teachers"></div><script>!function(e,t,s,i){var n="InfogramEmbeds",o=e.getElementsByTagName("script"),d=o[0],r=/^http:/.test(e.location)?"http:":"https:";if(/^\/{2}/.test(i)&&(i=r+i),window[n]&&window[n].initialized)window[n].process&&window[n].process();else if(!e.getElementById(s)){var a=e.createElement("script");a.async=1,a.id=s,a.src=i,d.parentNode.insertBefore(a,d)}}(document,0,"infogram-async","//e.infogr.am/js/dist/embed-loader-min.js");</script>
-
-                                <br>
-                                <form action="exportteacher.php" target="_blank" method="post">
-
-                                    <br>
-                                    <div id='png'></div>
-                                    <br>
-                                    <input type="hidden" id="pngaddresstoexport" name="pngaddresstoexport" value="var_value">
-                                    <input type="submit" value="Export">
-                                </form>
+                                <iframe src="page/TeacherMapChart.html" style="width: 100%;min-height: 1200px;border: none;"></iframe>
                             </div>
 
-
-
-
-
-
-
-
+                            <!-- <script type="text/javascript">
+                                 $('#export').load('page/TeacherMapChart.html');
+                             </script>-->
 
 
                         </div>
                     </div>
-
 
 
                 </div>
@@ -1217,9 +1292,10 @@ include 'footerteacher.php';
 ?>
 <script type="text/javascript">
 
-    function activaTab(tabID){
+    function activaTab(tabID) {
         $('.nav-tabs a[href="#' + tabID + '"]').tab('show');
-    };
+    }
+    ;
 
 </script>
 </body>
@@ -1236,8 +1312,7 @@ if (isset($_GET['logoutrequest'])) {
 }
 
 
-
-if(!isset($_SESSION['teacher'])){
+if (!isset($_SESSION['teacher'])) {
 
 
     header('Location:index.php');
@@ -1247,14 +1322,14 @@ if(!isset($_SESSION['teacher'])){
 ?>
 <script type="text/javascript">
 
-    $(document).ready(function(){
+    $(document).ready(function () {
 
         //ALL OPTION
-        $(".all-btn").click(function(){
+        $(".all-btn").click(function () {
 
             $("#genderbtn").html("All&nbsp;<span class='caret'></span>");
             var data = google.visualization.arrayToDataTable([
-                ['Language', 'NumberOfStudent',{ role: 'style' }],
+                ['Language', 'NumberOfStudent', {role: 'style'}],
 
 
                 <?php
@@ -1267,15 +1342,13 @@ if(!isset($_SESSION['teacher'])){
                   while($row = mysql_fetch_assoc($result)) {
 
                   ?>
-                ['<?php echo $row['languagename']; ?>',<?php echo $row['COUNT( languagename )']; ?>,'<?php echo generateRandomColor(); ?>'],
+                ['<?php echo $row['languagename']; ?>', <?php echo $row['COUNT( languagename )']; ?>, '<?php echo generateRandomColor(); ?>'],
 
 
                 <?php  }
 
                 mysql_close($con);
                  ?>
-
-
 
 
             ]);
@@ -1285,9 +1358,9 @@ if(!isset($_SESSION['teacher'])){
                 pieHole: 0.4,
                 //width: '900',
                 width: "100%",
-                height:'500',
+                height: '500',
                 //height:'500',
-                backgroundColor: { fill:'transparent' }
+                backgroundColor: {fill: 'transparent'}
             };
             languagechart.draw(data, options);
 
@@ -1312,13 +1385,11 @@ if(!isset($_SESSION['teacher'])){
         });
 
 
-
-
         //MALE OPTION
-        $(".male-btn").click(function(){
+        $(".male-btn").click(function () {
             $("#genderbtn").html("Male&nbsp;<span class='caret'></span>");
             var data = google.visualization.arrayToDataTable([
-                ['Language', 'NumberOfStudent',{ role: 'style' }],
+                ['Language', 'NumberOfStudent', {role: 'style'}],
 
 
                 <?php
@@ -1331,12 +1402,10 @@ if(!isset($_SESSION['teacher'])){
                   while($row = mysql_fetch_assoc($result)) {
 
                   ?>
-                ['<?php echo $row['languagename']; ?>',<?php echo $row['COUNT( languagename )']; ?>,'<?php echo generateRandomColor(); ?>'],
+                ['<?php echo $row['languagename']; ?>', <?php echo $row['COUNT( languagename )']; ?>, '<?php echo generateRandomColor(); ?>'],
 
 
                 <?php  } mysql_close($con);?>
-
-
 
 
             ]);
@@ -1346,8 +1415,8 @@ if(!isset($_SESSION['teacher'])){
                 pieHole: 0.4,
                 //width: '900',
                 width: "100%",
-                height:'500',
-                backgroundColor: { fill:'transparent' }
+                height: '500',
+                backgroundColor: {fill: 'transparent'}
             };
             languagechart.draw(data, options);
 
@@ -1371,15 +1440,12 @@ if(!isset($_SESSION['teacher'])){
         });
 
 
-
-
-
         // FEMALE OPTION
-        $(".female-btn").click(function(){
+        $(".female-btn").click(function () {
 
             $("#genderbtn").html("Female&nbsp;<span class='caret'></span>");
             var data = google.visualization.arrayToDataTable([
-                ['Language', 'NumberOfStudent',{ role: 'style' }],
+                ['Language', 'NumberOfStudent', {role: 'style'}],
 
 
                 <?php
@@ -1392,12 +1458,10 @@ if(!isset($_SESSION['teacher'])){
                   while($row = mysql_fetch_assoc($result)) {
 
                   ?>
-                ['<?php echo $row['languagename']; ?>',<?php echo $row['COUNT( languagename )']; ?>,'<?php echo generateRandomColor(); ?>'],
+                ['<?php echo $row['languagename']; ?>', <?php echo $row['COUNT( languagename )']; ?>, '<?php echo generateRandomColor(); ?>'],
 
 
                 <?php  }mysql_close($con); ?>
-
-
 
 
             ]);
@@ -1407,8 +1471,8 @@ if(!isset($_SESSION['teacher'])){
                 pieHole: 0.4,
                 //width: '900',
                 width: "100%",
-                height:'500',
-                backgroundColor: { fill:'transparent' }
+                height: '500',
+                backgroundColor: {fill: 'transparent'}
             };
             languagechart.draw(data, options);
             $("#languagetext").html("<?php
@@ -1431,13 +1495,12 @@ if(!isset($_SESSION['teacher'])){
         });
 
 
-
         //OTHER OPTION
-        $(".others-btn").click(function(){
+        $(".others-btn").click(function () {
 
             $("#genderbtn").html("Others&nbsp;<span class='caret'></span>");
             var data = google.visualization.arrayToDataTable([
-                ['Language', 'NumberOfStudent',{ role: 'style' }],
+                ['Language', 'NumberOfStudent', {role: 'style'}],
 
 
                 <?php
@@ -1450,12 +1513,10 @@ if(!isset($_SESSION['teacher'])){
                   while($row = mysql_fetch_assoc($result)) {
 
                   ?>
-                ['<?php echo $row['languagename']; ?>',<?php echo $row['COUNT( languagename )']; ?>,'<?php echo generateRandomColor(); ?>'],
+                ['<?php echo $row['languagename']; ?>', <?php echo $row['COUNT( languagename )']; ?>, '<?php echo generateRandomColor(); ?>'],
 
 
                 <?php  } mysql_close($con);?>
-
-
 
 
             ]);
@@ -1465,8 +1526,8 @@ if(!isset($_SESSION['teacher'])){
                 pieHole: 0.4,
                 //width: '900',
                 width: "100%",
-                height:'500',
-                backgroundColor: { fill:'transparent' }
+                height: '500',
+                backgroundColor: {fill: 'transparent'}
             };
             languagechart.draw(data, options);
 
@@ -1489,17 +1550,14 @@ if(!isset($_SESSION['teacher'])){
         });
 
 
-
-
     });
-
 
 
 </script>
 
 <?php
 
-if(isset($_POST['submitval'])){
+if (isset($_POST['submitval'])) {
 
     //$rr = $_REQUEST['qw'];
     $currentClassName = $_POST['classnamedropdown'];
@@ -1507,9 +1565,8 @@ if(isset($_POST['submitval'])){
     $className = $_POST['classnamedropdown'];
 
 
-
 }
-if(isset($_POST['submitvalstutab'])){
+if (isset($_POST['submitvalstutab'])) {
 
 
     $currentClassName = $_POST['classnamedropdownstutab'];
@@ -1519,7 +1576,7 @@ if(isset($_POST['submitvalstutab'])){
 
 }
 
-if(isset($_POST['submitvallantab'])){
+if (isset($_POST['submitvallantab'])) {
 
 
     $currentClassName = $_POST['classnamedropdownlantab'];
@@ -1528,7 +1585,7 @@ if(isset($_POST['submitvallantab'])){
 
 
 }
-if(isset($_POST['submitvalbeltab'])){
+if (isset($_POST['submitvalbeltab'])) {
 
 
     $currentClassName = $_POST['classnamedropdownbeltab'];
@@ -1556,17 +1613,16 @@ if(isset($_POST['submitvalbeltab'])){
 </div>
 
 
-
 <script>
-    $(document).ready(function(){
-        $(".view_data").click(function(){
+    $(document).ready(function () {
+        $(".view_data").click(function () {
 
             var employee_id = $(this).attr("id");
             $.ajax({
-                url:"selectstudentinfo.php",
-                method:"post",
-                data:{employee_id:employee_id},
-                success:function(data){
+                url: "selectstudentinfo.php",
+                method: "post",
+                data: {employee_id: employee_id},
+                success: function (data) {
                     $('#employee_detail').html(data);
                     $('#dataModal').modal("show");
                 }
@@ -1578,7 +1634,6 @@ if(isset($_POST['submitvalbeltab'])){
 </script>
 
 
-
 <!-- view profile MODAL-->
 <div id="modal_user_profile" class="modal fade">
     <div class="modal-dialog">
@@ -1587,7 +1642,7 @@ if(isset($_POST['submitvalbeltab'])){
             <div class="modal-body" id="user_profile">
                 <?php
 
-                echo user_profile::get_profile($_SESSION['emailid'],'teacheradmin');
+                echo user_profile::get_profile($_SESSION['emailid'], 'teacheradmin');
                 ?>
             </div>
 
@@ -1595,8 +1650,8 @@ if(isset($_POST['submitvalbeltab'])){
     </div>
 </div>
 <script>
-    $(document).ready(function(){
-        $('#btn_user_profile').click(function(){
+    $(document).ready(function () {
+        $('#btn_user_profile').click(function () {
             $('#modal_user_profile').modal("show");
         });
     });
@@ -1607,20 +1662,21 @@ if(isset($_POST['submitvalbeltab'])){
 
 </div>
 <script type="text/javascript">
-    $( "#modal_change_pass_user" ).load( "page/modal_change_pass_teacher.html" );
+    $("#modal_change_pass_user").load("page/modal_change_pass_teacher.html");
 </script>
 
 
-
 <!-- DELETE STAFF MODAL -->
-<div class="modal fade" id="confirm-delete" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+<div class="modal fade" id="confirm-delete" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+     aria-hidden="true">
     <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-header">
                 <h3 style="font-weight:bold;">Delete Staff</h3>
             </div>
             <div class="modal-body">
-                <h3>Are you sure you want to delete <span style="font-weight:bold;" id="specstaffinfo" name="specstaffinfo"></span> ?</h3>
+                <h3>Are you sure you want to delete <span style="font-weight:bold;" id="specstaffinfo"
+                                                          name="specstaffinfo"></span> ?</h3>
                 <br>
 
             </div>
@@ -1633,26 +1689,22 @@ if(isset($_POST['submitvalbeltab'])){
 </div>
 
 
-
 <script>
-    $(document).ready(function(){
+    $(document).ready(function () {
 
 
-        $('#confirm-delete').on('show.bs.modal', function(e) {
+        $('#confirm-delete').on('show.bs.modal', function (e) {
             $(this).find('.btn-ok').attr('href', $(e.relatedTarget).data('href'));
         });
 
 
         $(document).on("click", ".staffinfo", function () {
             var myspecstaffinfo = $(this).data('id');
-            $(".modal-body #specstaffinfo").text( myspecstaffinfo );
+            $(".modal-body #specstaffinfo").text(myspecstaffinfo);
 
         });
     });
 </script>
-
-
-
 
 
 <!-- EDIT STUDENT MODAL  -->
@@ -1663,32 +1715,39 @@ if(isset($_POST['submitvalbeltab'])){
         <div class="modal-content">
             <div class="modal-header">
                 <button type="button" class="close" data-dismiss="modal">&times;</button>
-                <h4 class="modal-title" style="text-align:center; "font-weight:bold; ">Update Student Details</h4>
+                <h4 class="modal-title" style="text-align:center; " font-weight:bold; ">Update Student Details</h4>
             </div>
             <div class="modal-body">
 
-                <form  method="post" id="update_form" class="form-horizontal">
-                    <h3 style="padding: 1% 0%; background-color:#FE8885; color:#FFF; text-align:center;  border-radius: 8px;">PERSONAL DETAILS</h3>
+                <form method="post" id="update_form" class="form-horizontal">
+                    <h3 style="padding: 1% 0%; background-color:#FE8885; color:#FFF; text-align:center;  border-radius: 8px;">
+                        PERSONAL DETAILS</h3>
+
                     <div class="form-group">
                         <label class="control-label col-sm-3" for="studentemail">Email ID:</label>
+
                         <div class="col-sm-9">
-                            <input type="email" class="form-control" id="studentemail" name="studentemail" readonly style="background-color:#e2e2e2;">
+                            <input type="email" class="form-control" id="studentemail" name="studentemail" readonly
+                                   style="background-color:#e2e2e2;">
                         </div>
                     </div>
                     <div class="form-group">
                         <label class="control-label col-sm-3" for="firstname">First Name:</label>
+
                         <div class="col-sm-9">
-                            <input type="text" class="form-control" id="firstname" name="firstname" >
+                            <input type="text" class="form-control" id="firstname" name="firstname">
                         </div>
                     </div>
                     <div class="form-group">
                         <label class="control-label col-sm-3" for="lastname">Last Name:</label>
+
                         <div class="col-sm-9">
-                            <input type="text" class="form-control" id="lastname" name="lastname" >
+                            <input type="text" class="form-control" id="lastname" name="lastname">
                         </div>
                     </div>
                     <div class="form-group">
                         <label class="control-label col-sm-3" for="gender">Gender:</label>
+
                         <div class="col-sm-9">
                             <select name="gender" id="gender" class="form-control">
                                 <option value="male">Male</option>
@@ -1699,6 +1758,7 @@ if(isset($_POST['submitvalbeltab'])){
                     </div>
                     <div class="form-group">
                         <label class="control-label col-sm-3" for="age">Age Group:</label>
+
                         <div class="col-sm-9">
                             <select name="age" id="age" class="form-control">
 
@@ -1710,68 +1770,80 @@ if(isset($_POST['submitvalbeltab'])){
                     </div>
                     <div class="form-group">
                         <label class="control-label col-sm-3" for="beliefreligion">Belief/Religion:</label>
+
                         <div class="col-sm-9">
-                            <div class="col-sm-6" >
-                                <input type="text" class="form-control" id="beliefreligion" name="beliefreligion" >
+                            <div class="col-sm-6">
+                                <input type="text" class="form-control" id="beliefreligion" name="beliefreligion">
                             </div>
                             <div class="col-sm-6">
-                                <input id="checko" type="checkbox" >
+                                <input id="checko" type="checkbox">
                                 <label style="margin-top:0.5em">&nbsp;Don&apos;t want to answer</label>
                             </div>
                         </div>
                     </div>
-                    <h3 style="padding: 1% 0%; background-color:#FE8885; color:#FFF; text-align:center;  border-radius: 8px;">BIRTH COUNTRIES</h3>
+                    <h3 style="padding: 1% 0%; background-color:#FE8885; color:#FFF; text-align:center;  border-radius: 8px;">
+                        BIRTH COUNTRIES</h3>
+
                     <div class="form-group">
                         <label class="control-label col-sm-3" for="sb">Student:</label>
+
                         <div class="col-sm-9">
-                            <input type="text" class="form-control" id="sb" name="sb" >
+                            <input type="text" class="form-control" id="sb" name="sb">
                         </div>
                     </div>
 
                     <hr>
                     <div class="form-group">
                         <label class="control-label col-sm-3" for="m">Mother:</label>
+
                         <div class="col-sm-9">
-                            <input type="text" class="form-control" id="m" name="m" >
+                            <input type="text" class="form-control" id="m" name="m">
                         </div>
                     </div>
                     <div class="form-group">
                         <label class="control-label col-sm-3" for="gfm">GrandFather:</label>
+
                         <div class="col-sm-9">
-                            <input type="text" class="form-control" id="gfm" name="gfm" >
+                            <input type="text" class="form-control" id="gfm" name="gfm">
                         </div>
                     </div>
                     <div class="form-group">
                         <label class="control-label col-sm-3" for="gmm">GrandMother:</label>
+
                         <div class="col-sm-9">
-                            <input type="text" class="form-control" id="gmm" name="gmm" >
+                            <input type="text" class="form-control" id="gmm" name="gmm">
                         </div>
                     </div>
 
                     <hr>
                     <div class="form-group">
                         <label class="control-label col-sm-3" for="f">Father:</label>
+
                         <div class="col-sm-9">
-                            <input type="text" class="form-control" id="f" name="f" >
+                            <input type="text" class="form-control" id="f" name="f">
                         </div>
                     </div>
                     <div class="form-group">
                         <label class="control-label col-sm-3" for="gff">GrandFather:</label>
+
                         <div class="col-sm-9">
-                            <input type="text" class="form-control" id="gff" name="gff" >
+                            <input type="text" class="form-control" id="gff" name="gff">
                         </div>
                     </div>
                     <div class="form-group">
                         <label class="control-label col-sm-3" for="gmf">GrandMother:</label>
+
                         <div class="col-sm-9">
-                            <input type="text" class="form-control" id="gmf" name="gmf" >
+                            <input type="text" class="form-control" id="gmf" name="gmf">
                         </div>
 
 
                     </div>
 
 
-                    <h3 style="padding: 1% 0%; background-color:#FE8885; color:#FFF; text-align:center;  border-radius: 8px;">LANGUAGES</h3>
+                    <h3 style="padding: 1% 0%; background-color:#FE8885; color:#FFF; text-align:center;  border-radius: 8px;">
+                        LANGUAGES</h3>
+
                     <div class="form-group">
                         <div class="col-sm-9">
                             <table class='table borderless table-responsive ' id="employee_lang">
@@ -1781,7 +1853,7 @@ if(isset($_POST['submitvalbeltab'])){
                     </div>
 
                     <br>
-                    <input type="submit" name="update" id="update" value="Save" class="btn btn-success "  />
+                    <input type="submit" name="update" id="update" value="Save" class="btn btn-success "/>
 
                 </form>
 
@@ -1793,39 +1865,39 @@ if(isset($_POST['submitvalbeltab'])){
 
 <script>
 
-    $(document).ready(function(){
-        $('#add').click(function(){
+    $(document).ready(function () {
+        $('#add').click(function () {
             $('#insert').val("Insert");
             $('#insert_form')[0].reset();
         });
 
-        $(document).on('click', '.editstaff_data', function(){
+        $(document).on('click', '.editstaff_data', function () {
             var employee_id = $(this).attr("id");
             $.ajax({
-                url:"fetchstudentinfo.php",
-                method:"POST",
-                data:{employee_id:employee_id},
-                dataType:"json",
-                success:function(data){
-                    var datastaff=data['arr1'];
-                    var datastaffbirth=data['arr2'];
+                url: "fetchstudentinfo.php",
+                method: "POST",
+                data: {employee_id: employee_id},
+                dataType: "json",
+                success: function (data) {
+                    var datastaff = data['arr1'];
+                    var datastaffbirth = data['arr2'];
                     var lang = data['arr4'];
                     $('#studentemail').val(datastaff.studentemailid);
                     $('#firstname').val(datastaff.firstname);
                     $('#lastname').val(datastaff.lastname);
                     $('#gender').val(datastaff.gender);
 
-                    if(datastaff.religion == 'Non Disclosed'){
+                    if (datastaff.religion == 'Non Disclosed') {
                         $('#checko').prop('checked', true);
-                        $('#beliefreligion').prop('readonly',true);
+                        $('#beliefreligion').prop('readonly', true);
                         $('#beliefreligion').val('Belief/Religion');
-                        $('#beliefreligion').css('color','#CCC');
+                        $('#beliefreligion').css('color', '#CCC');
 
-                    }else{
+                    } else {
                         $('#checko').prop('checked', false);
-                        $('#beliefreligion').prop("readonly",false);
+                        $('#beliefreligion').prop("readonly", false);
                         $('#beliefreligion').val(datastaff.religion);
-                        $('#beliefreligion').css('color','#000');
+                        $('#beliefreligion').css('color', '#000');
                     }
 
                     $('#sb').val(datastaffbirth.studentbirthplace);
@@ -1842,91 +1914,77 @@ if(isset($_POST['submitvalbeltab'])){
             });
         });
 
-        $('#update_form').on("submit", function(event){
+        $('#update_form').on("submit", function (event) {
             event.preventDefault();
-            if($('#studentemail').val() == "")
-            {
+            if ($('#studentemail').val() == "") {
                 alert("Email ID is required");
             }
-            else if($('#firstname').val() == '')
-            {
+            else if ($('#firstname').val() == '') {
                 alert("First Name is required");
             }
-            else if($('#gender').val() == '')
-            {
+            else if ($('#gender').val() == '') {
                 alert("Gender is required");
             }
-            else if($('#beliefreligion').val() == '')
-            {
+            else if ($('#beliefreligion').val() == '') {
                 alert("Belief/Religion is required");
             }
-            else if($('#sb').val() == '')
-            {
+            else if ($('#sb').val() == '') {
                 alert("Staff Birthplace is required");
             }
-            else if($('#m').val() == '')
-            {
+            else if ($('#m').val() == '') {
                 alert("Mother's Birthplace is required");
             }
-            else if($('#gfm').val() == '')
-            {
+            else if ($('#gfm').val() == '') {
                 alert("Grandfather (Mother's side) Birthplace is required");
             }
-            else if($('#gmm').val() == '')
-            {
+            else if ($('#gmm').val() == '') {
                 alert("Grandmother (Mother's side) Birthplace is required");
             }
-            else if($('#f').val() == '')
-            {
+            else if ($('#f').val() == '') {
                 alert("Father's Birthplace is required");
             }
-            else if($('#gff').val() == '')
-            {
+            else if ($('#gff').val() == '') {
                 alert("Grandfather (Father's side) Birthplace is required");
             }
-            else if($('#gmf').val() == '')
-            {
+            else if ($('#gmf').val() == '') {
                 alert("Grandmother (Father's side) Birthplace is required");
             }
-            else
-            {
-
+            else {
 
 
                 $.ajax({
-                    url:"validatecountryname.php",
-                    method:"POST",
-                    data:$('#update_form').serialize(),
-                    success:function(data){
+                    url: "validatecountryname.php",
+                    method: "POST",
+                    data: $('#update_form').serialize(),
+                    success: function (data) {
 
-                        if(data == "No error"){
+                        if (data == "No error") {
 
                             //SECOND CALL
                             $.ajax({
 
-                                url:"updatestudentdetails.php",
-                                method:"POST",
-                                data:$('#update_form').serialize(),
-                                success:function(data){
+                                url: "updatestudentdetails.php",
+                                method: "POST",
+                                data: $('#update_form').serialize(),
+                                success: function (data) {
 
-                                    if(data == "No error"){
+                                    if (data == "No error") {
 
                                         $('#edit_data_Modal').modal('hide');
                                         alert("Data updation successfull.");
                                         window.location.reload(true);
 
 
-                                    }else{
+                                    } else {
                                         alert(data);
                                     }
-
 
 
                                 }
                             });
 
 
-                        }else{
+                        } else {
                             //Displays error message of first call
                             alert(data);
                         }

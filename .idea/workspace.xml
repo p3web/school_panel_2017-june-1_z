@@ -2,7 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="676e04ff-6d34-48ac-9098-ebf739dc256d" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/documentation/timing/Time Sheet1.xlsx" afterPath="$PROJECT_DIR$/documentation/timing/Time Sheet1.xlsx" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/page/CssMapChart.css" afterPath="$PROJECT_DIR$/page/CssMapChart.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/page/TeacherMapChart.html" afterPath="$PROJECT_DIR$/page/TeacherMapChart.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/page/TeacherdonutChart.html" afterPath="$PROJECT_DIR$/page/TeacherdonutChart.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/page/js/ajax.js" afterPath="$PROJECT_DIR$/page/js/ajax.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/religion.php" afterPath="$PROJECT_DIR$/religion.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/teacherpanel.php" afterPath="$PROJECT_DIR$/teacherpanel.php" />
     </list>
     <ignored path="school_panel_2017-june-1_z.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -43,64 +48,64 @@
       <file leaf-file-name="teacherpanel.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/teacherpanel.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="29280">
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="30150">
               <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding>
-                <marker date="1497400175000" expanded="true" signature="294:354" placeholder="select * fro..teacher..." />
-                <marker date="1497400175000" expanded="true" signature="881:935" placeholder="select * fro..school..." />
-                <marker date="1497400175000" expanded="true" signature="1182:1285" placeholder="select class..classteacher..." />
-                <marker date="1497400175000" expanded="true" signature="1998:2048" placeholder="..." />
-                <marker date="1497400175000" expanded="true" signature="7093:7272" placeholder="SELECT relig..student..." />
-                <marker date="1497400175000" expanded="true" signature="7785:7964" placeholder="SELECT relig..student..." />
-                <marker date="1497400175000" expanded="true" signature="8011:8190" placeholder="SELECT relig..student..." />
-                <marker date="1497400175000" expanded="true" signature="10381:10560" placeholder="select `stud..." />
-                <marker date="1497400175000" expanded="true" signature="10809:10995" placeholder="select `stud..." />
-                <marker date="1497400175000" expanded="true" signature="11244:11430" placeholder="select `stud..." />
-                <marker date="1497400175000" expanded="true" signature="11682:11875" placeholder="select `stud..." />
-                <marker date="1497400175000" expanded="true" signature="12127:12320" placeholder="select `stud..." />
-                <marker date="1497400175000" expanded="true" signature="12572:12765" placeholder="select `stud..." />
-                <marker date="1497400175000" expanded="true" signature="13017:13210" placeholder="select `stud..." />
-                <marker date="1497400175000" expanded="true" signature="13517:13751" placeholder="select x , C..temptable..." />
-                <marker date="1497400175000" expanded="true" signature="13546:13725" placeholder="select `stud..." />
-                <marker date="1497400175000" expanded="true" signature="15771:16014" placeholder="SELECT langu..studentlanguage..." />
-                <marker date="1497400175000" expanded="true" signature="15859:15955" placeholder="SELECT stude..student..." />
-                <marker date="1497400175000" expanded="true" signature="16060:16303" placeholder="SELECT langu..studentlanguage..." />
-                <marker date="1497400175000" expanded="true" signature="16148:16244" placeholder="SELECT stude..student..." />
-                <marker date="1497400175000" expanded="true" signature="21010:21113" placeholder="select class..classteacher..." />
-                <marker date="1497400175000" expanded="true" signature="22462:22549" placeholder="select * fro..student..." />
-                <marker date="1497400175000" expanded="true" signature="23065:23074" placeholder="..." />
-                <marker date="1497400175000" expanded="true" signature="26751:26762" placeholder="..." />
-                <marker date="1497400175000" expanded="true" signature="26962:26973" placeholder="..." />
-                <marker date="1497400175000" expanded="true" signature="27542:27553" placeholder="..." />
-                <marker date="1497400175000" expanded="true" signature="31691:31703" placeholder="..." />
-                <marker date="1497400175000" expanded="true" signature="32400:32411" placeholder="..." />
-                <marker date="1497400175000" expanded="true" signature="33093:33104" placeholder="..." />
-                <marker date="1497400175000" expanded="true" signature="35770:35873" placeholder="select class..classteacher..." />
-                <marker date="1497400175000" expanded="true" signature="40397:40576" placeholder="select `stud..." />
-                <marker date="1497400175000" expanded="true" signature="40965:41151" placeholder="select `stud..." />
-                <marker date="1497400175000" expanded="true" signature="41540:41726" placeholder="select `stud..." />
-                <marker date="1497400175000" expanded="true" signature="42118:42311" placeholder="select `stud..." />
-                <marker date="1497400175000" expanded="true" signature="42703:42896" placeholder="select `stud..." />
-                <marker date="1497400175000" expanded="true" signature="43288:43481" placeholder="select `stud..." />
-                <marker date="1497400175000" expanded="true" signature="43873:44066" placeholder="select `stud..." />
-                <marker date="1497400175000" expanded="true" signature="44589:44823" placeholder="select x , C..temptable..." />
-                <marker date="1497400175000" expanded="true" signature="44618:44797" placeholder="select `stud..." />
-                <marker date="1497400175000" expanded="true" signature="56001:56245" placeholder="SELECT langu..studentlanguage..." />
-                <marker date="1497400175000" expanded="true" signature="56089:56185" placeholder="SELECT stude..student..." />
-                <marker date="1497400175000" expanded="true" signature="57000:57243" placeholder="SELECT langu..studentlanguage..." />
-                <marker date="1497400175000" expanded="true" signature="57088:57184" placeholder="SELECT stude..student..." />
-                <marker date="1497400175000" expanded="true" signature="57954:58219" placeholder="SELECT langu..studentlanguage..." />
-                <marker date="1497400175000" expanded="true" signature="58042:58160" placeholder="SELECT stude..student..." />
-                <marker date="1497400175000" expanded="true" signature="58906:59171" placeholder="SELECT langu..studentlanguage..." />
-                <marker date="1497400175000" expanded="true" signature="58994:59112" placeholder="SELECT stude..student..." />
-                <marker date="1497400175000" expanded="true" signature="59893:60158" placeholder="SELECT langu..studentlanguage..." />
-                <marker date="1497400175000" expanded="true" signature="59981:60099" placeholder="SELECT stude..student..." />
-                <marker date="1497400175000" expanded="true" signature="60844:61109" placeholder="SELECT langu..studentlanguage..." />
-                <marker date="1497400175000" expanded="true" signature="60932:61050" placeholder="SELECT stude..student..." />
-                <marker date="1497400175000" expanded="true" signature="61827:62092" placeholder="SELECT langu..studentlanguage..." />
-                <marker date="1497400175000" expanded="true" signature="61915:62033" placeholder="SELECT stude..student..." />
-                <marker date="1497400175000" expanded="true" signature="62779:63044" placeholder="SELECT langu..studentlanguage..." />
-                <marker date="1497400175000" expanded="true" signature="62867:62985" placeholder="SELECT stude..student..." />
+                <marker date="1497457543000" expanded="true" signature="294:358" placeholder="select * fro..teacher..." />
+                <marker date="1497457543000" expanded="true" signature="895:953" placeholder="select * fro..school..." />
+                <marker date="1497457543000" expanded="true" signature="1201:1312" placeholder="select class..classteacher..." />
+                <marker date="1497457543000" expanded="true" signature="2032:2082" placeholder="..." />
+                <marker date="1497457543000" expanded="true" signature="7271:7450" placeholder="SELECT relig..student..." />
+                <marker date="1497457543000" expanded="true" signature="7962:8141" placeholder="SELECT relig..student..." />
+                <marker date="1497457543000" expanded="true" signature="8188:8367" placeholder="SELECT relig..student..." />
+                <marker date="1497457543000" expanded="true" signature="10591:10770" placeholder="select `stud..." />
+                <marker date="1497457543000" expanded="true" signature="11019:11205" placeholder="select `stud..." />
+                <marker date="1497457543000" expanded="true" signature="11454:11640" placeholder="select `stud..." />
+                <marker date="1497457543000" expanded="true" signature="11892:12085" placeholder="select `stud..." />
+                <marker date="1497457543000" expanded="true" signature="12337:12530" placeholder="select `stud..." />
+                <marker date="1497457543000" expanded="true" signature="12782:12975" placeholder="select `stud..." />
+                <marker date="1497457543000" expanded="true" signature="13227:13420" placeholder="select `stud..." />
+                <marker date="1497457543000" expanded="true" signature="13727:13961" placeholder="select x , C..temptable..." />
+                <marker date="1497457543000" expanded="true" signature="13756:13935" placeholder="select `stud..." />
+                <marker date="1497457543000" expanded="true" signature="15979:16222" placeholder="SELECT langu..studentlanguage..." />
+                <marker date="1497457543000" expanded="true" signature="16067:16163" placeholder="SELECT stude..student..." />
+                <marker date="1497457543000" expanded="true" signature="16268:16511" placeholder="SELECT langu..studentlanguage..." />
+                <marker date="1497457543000" expanded="true" signature="16356:16452" placeholder="SELECT stude..student..." />
+                <marker date="1497457543000" expanded="true" signature="21196:21307" placeholder="select class..classteacher..." />
+                <marker date="1497457543000" expanded="true" signature="22782:22877" placeholder="select * fro..student..." />
+                <marker date="1497457543000" expanded="true" signature="23397:23406" placeholder="..." />
+                <marker date="1497457543000" expanded="true" signature="27428:27439" placeholder="..." />
+                <marker date="1497457543000" expanded="true" signature="27643:27654" placeholder="..." />
+                <marker date="1497457543000" expanded="true" signature="28239:28250" placeholder="..." />
+                <marker date="1497457543000" expanded="true" signature="32392:32404" placeholder="..." />
+                <marker date="1497457543000" expanded="true" signature="33109:33120" placeholder="..." />
+                <marker date="1497457543000" expanded="true" signature="33813:33824" placeholder="..." />
+                <marker date="1497457543000" expanded="true" signature="36806:36917" placeholder="select class..classteacher..." />
+                <marker date="1497457543000" expanded="true" signature="44936:45123" placeholder="select `stud..." />
+                <marker date="1497457543000" expanded="true" signature="45636:45830" placeholder="select `stud..." />
+                <marker date="1497457543000" expanded="true" signature="46343:46537" placeholder="select `stud..." />
+                <marker date="1497457543000" expanded="true" signature="47053:47254" placeholder="select `stud..." />
+                <marker date="1497457543000" expanded="true" signature="47770:47971" placeholder="select `stud..." />
+                <marker date="1497457543000" expanded="true" signature="48487:48688" placeholder="select `stud..." />
+                <marker date="1497457543000" expanded="true" signature="49204:49405" placeholder="select `stud..." />
+                <marker date="1497457543000" expanded="true" signature="49932:50174" placeholder="select x , C..temptable..." />
+                <marker date="1497457543000" expanded="true" signature="49961:50148" placeholder="select `stud..." />
+                <marker date="1497457543000" expanded="true" signature="61057:61301" placeholder="SELECT langu..studentlanguage..." />
+                <marker date="1497457543000" expanded="true" signature="61145:61241" placeholder="SELECT stude..student..." />
+                <marker date="1497457543000" expanded="true" signature="62056:62299" placeholder="SELECT langu..studentlanguage..." />
+                <marker date="1497457543000" expanded="true" signature="62144:62240" placeholder="SELECT stude..student..." />
+                <marker date="1497457543000" expanded="true" signature="63009:63274" placeholder="SELECT langu..studentlanguage..." />
+                <marker date="1497457543000" expanded="true" signature="63097:63215" placeholder="SELECT stude..student..." />
+                <marker date="1497457543000" expanded="true" signature="63961:64226" placeholder="SELECT langu..studentlanguage..." />
+                <marker date="1497457543000" expanded="true" signature="64049:64167" placeholder="SELECT stude..student..." />
+                <marker date="1497457543000" expanded="true" signature="64946:65211" placeholder="SELECT langu..studentlanguage..." />
+                <marker date="1497457543000" expanded="true" signature="65034:65152" placeholder="SELECT stude..student..." />
+                <marker date="1497457543000" expanded="true" signature="65897:66162" placeholder="SELECT langu..studentlanguage..." />
+                <marker date="1497457543000" expanded="true" signature="65985:66103" placeholder="SELECT stude..student..." />
+                <marker date="1497457543000" expanded="true" signature="66880:67145" placeholder="SELECT langu..studentlanguage..." />
+                <marker date="1497457543000" expanded="true" signature="66968:67086" placeholder="SELECT stude..student..." />
+                <marker date="1497457543000" expanded="true" signature="67832:68097" placeholder="SELECT langu..studentlanguage..." />
+                <marker date="1497457543000" expanded="true" signature="67920:68038" placeholder="SELECT stude..student..." />
               </folding>
             </state>
           </provider>
@@ -297,7 +302,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1920" height="1080" extended-state="0" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -946,64 +951,64 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/teacherpanel.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="29280">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="30150">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <marker date="1497400175000" expanded="true" signature="294:354" placeholder="select * fro..teacher..." />
-            <marker date="1497400175000" expanded="true" signature="881:935" placeholder="select * fro..school..." />
-            <marker date="1497400175000" expanded="true" signature="1182:1285" placeholder="select class..classteacher..." />
-            <marker date="1497400175000" expanded="true" signature="1998:2048" placeholder="..." />
-            <marker date="1497400175000" expanded="true" signature="7093:7272" placeholder="SELECT relig..student..." />
-            <marker date="1497400175000" expanded="true" signature="7785:7964" placeholder="SELECT relig..student..." />
-            <marker date="1497400175000" expanded="true" signature="8011:8190" placeholder="SELECT relig..student..." />
-            <marker date="1497400175000" expanded="true" signature="10381:10560" placeholder="select `stud..." />
-            <marker date="1497400175000" expanded="true" signature="10809:10995" placeholder="select `stud..." />
-            <marker date="1497400175000" expanded="true" signature="11244:11430" placeholder="select `stud..." />
-            <marker date="1497400175000" expanded="true" signature="11682:11875" placeholder="select `stud..." />
-            <marker date="1497400175000" expanded="true" signature="12127:12320" placeholder="select `stud..." />
-            <marker date="1497400175000" expanded="true" signature="12572:12765" placeholder="select `stud..." />
-            <marker date="1497400175000" expanded="true" signature="13017:13210" placeholder="select `stud..." />
-            <marker date="1497400175000" expanded="true" signature="13517:13751" placeholder="select x , C..temptable..." />
-            <marker date="1497400175000" expanded="true" signature="13546:13725" placeholder="select `stud..." />
-            <marker date="1497400175000" expanded="true" signature="15771:16014" placeholder="SELECT langu..studentlanguage..." />
-            <marker date="1497400175000" expanded="true" signature="15859:15955" placeholder="SELECT stude..student..." />
-            <marker date="1497400175000" expanded="true" signature="16060:16303" placeholder="SELECT langu..studentlanguage..." />
-            <marker date="1497400175000" expanded="true" signature="16148:16244" placeholder="SELECT stude..student..." />
-            <marker date="1497400175000" expanded="true" signature="21010:21113" placeholder="select class..classteacher..." />
-            <marker date="1497400175000" expanded="true" signature="22462:22549" placeholder="select * fro..student..." />
-            <marker date="1497400175000" expanded="true" signature="23065:23074" placeholder="..." />
-            <marker date="1497400175000" expanded="true" signature="26751:26762" placeholder="..." />
-            <marker date="1497400175000" expanded="true" signature="26962:26973" placeholder="..." />
-            <marker date="1497400175000" expanded="true" signature="27542:27553" placeholder="..." />
-            <marker date="1497400175000" expanded="true" signature="31691:31703" placeholder="..." />
-            <marker date="1497400175000" expanded="true" signature="32400:32411" placeholder="..." />
-            <marker date="1497400175000" expanded="true" signature="33093:33104" placeholder="..." />
-            <marker date="1497400175000" expanded="true" signature="35770:35873" placeholder="select class..classteacher..." />
-            <marker date="1497400175000" expanded="true" signature="40397:40576" placeholder="select `stud..." />
-            <marker date="1497400175000" expanded="true" signature="40965:41151" placeholder="select `stud..." />
-            <marker date="1497400175000" expanded="true" signature="41540:41726" placeholder="select `stud..." />
-            <marker date="1497400175000" expanded="true" signature="42118:42311" placeholder="select `stud..." />
-            <marker date="1497400175000" expanded="true" signature="42703:42896" placeholder="select `stud..." />
-            <marker date="1497400175000" expanded="true" signature="43288:43481" placeholder="select `stud..." />
-            <marker date="1497400175000" expanded="true" signature="43873:44066" placeholder="select `stud..." />
-            <marker date="1497400175000" expanded="true" signature="44589:44823" placeholder="select x , C..temptable..." />
-            <marker date="1497400175000" expanded="true" signature="44618:44797" placeholder="select `stud..." />
-            <marker date="1497400175000" expanded="true" signature="56001:56245" placeholder="SELECT langu..studentlanguage..." />
-            <marker date="1497400175000" expanded="true" signature="56089:56185" placeholder="SELECT stude..student..." />
-            <marker date="1497400175000" expanded="true" signature="57000:57243" placeholder="SELECT langu..studentlanguage..." />
-            <marker date="1497400175000" expanded="true" signature="57088:57184" placeholder="SELECT stude..student..." />
-            <marker date="1497400175000" expanded="true" signature="57954:58219" placeholder="SELECT langu..studentlanguage..." />
-            <marker date="1497400175000" expanded="true" signature="58042:58160" placeholder="SELECT stude..student..." />
-            <marker date="1497400175000" expanded="true" signature="58906:59171" placeholder="SELECT langu..studentlanguage..." />
-            <marker date="1497400175000" expanded="true" signature="58994:59112" placeholder="SELECT stude..student..." />
-            <marker date="1497400175000" expanded="true" signature="59893:60158" placeholder="SELECT langu..studentlanguage..." />
-            <marker date="1497400175000" expanded="true" signature="59981:60099" placeholder="SELECT stude..student..." />
-            <marker date="1497400175000" expanded="true" signature="60844:61109" placeholder="SELECT langu..studentlanguage..." />
-            <marker date="1497400175000" expanded="true" signature="60932:61050" placeholder="SELECT stude..student..." />
-            <marker date="1497400175000" expanded="true" signature="61827:62092" placeholder="SELECT langu..studentlanguage..." />
-            <marker date="1497400175000" expanded="true" signature="61915:62033" placeholder="SELECT stude..student..." />
-            <marker date="1497400175000" expanded="true" signature="62779:63044" placeholder="SELECT langu..studentlanguage..." />
-            <marker date="1497400175000" expanded="true" signature="62867:62985" placeholder="SELECT stude..student..." />
+            <marker date="1497457543000" expanded="true" signature="294:358" placeholder="select * fro..teacher..." />
+            <marker date="1497457543000" expanded="true" signature="895:953" placeholder="select * fro..school..." />
+            <marker date="1497457543000" expanded="true" signature="1201:1312" placeholder="select class..classteacher..." />
+            <marker date="1497457543000" expanded="true" signature="2032:2082" placeholder="..." />
+            <marker date="1497457543000" expanded="true" signature="7271:7450" placeholder="SELECT relig..student..." />
+            <marker date="1497457543000" expanded="true" signature="7962:8141" placeholder="SELECT relig..student..." />
+            <marker date="1497457543000" expanded="true" signature="8188:8367" placeholder="SELECT relig..student..." />
+            <marker date="1497457543000" expanded="true" signature="10591:10770" placeholder="select `stud..." />
+            <marker date="1497457543000" expanded="true" signature="11019:11205" placeholder="select `stud..." />
+            <marker date="1497457543000" expanded="true" signature="11454:11640" placeholder="select `stud..." />
+            <marker date="1497457543000" expanded="true" signature="11892:12085" placeholder="select `stud..." />
+            <marker date="1497457543000" expanded="true" signature="12337:12530" placeholder="select `stud..." />
+            <marker date="1497457543000" expanded="true" signature="12782:12975" placeholder="select `stud..." />
+            <marker date="1497457543000" expanded="true" signature="13227:13420" placeholder="select `stud..." />
+            <marker date="1497457543000" expanded="true" signature="13727:13961" placeholder="select x , C..temptable..." />
+            <marker date="1497457543000" expanded="true" signature="13756:13935" placeholder="select `stud..." />
+            <marker date="1497457543000" expanded="true" signature="15979:16222" placeholder="SELECT langu..studentlanguage..." />
+            <marker date="1497457543000" expanded="true" signature="16067:16163" placeholder="SELECT stude..student..." />
+            <marker date="1497457543000" expanded="true" signature="16268:16511" placeholder="SELECT langu..studentlanguage..." />
+            <marker date="1497457543000" expanded="true" signature="16356:16452" placeholder="SELECT stude..student..." />
+            <marker date="1497457543000" expanded="true" signature="21196:21307" placeholder="select class..classteacher..." />
+            <marker date="1497457543000" expanded="true" signature="22782:22877" placeholder="select * fro..student..." />
+            <marker date="1497457543000" expanded="true" signature="23397:23406" placeholder="..." />
+            <marker date="1497457543000" expanded="true" signature="27428:27439" placeholder="..." />
+            <marker date="1497457543000" expanded="true" signature="27643:27654" placeholder="..." />
+            <marker date="1497457543000" expanded="true" signature="28239:28250" placeholder="..." />
+            <marker date="1497457543000" expanded="true" signature="32392:32404" placeholder="..." />
+            <marker date="1497457543000" expanded="true" signature="33109:33120" placeholder="..." />
+            <marker date="1497457543000" expanded="true" signature="33813:33824" placeholder="..." />
+            <marker date="1497457543000" expanded="true" signature="36806:36917" placeholder="select class..classteacher..." />
+            <marker date="1497457543000" expanded="true" signature="44936:45123" placeholder="select `stud..." />
+            <marker date="1497457543000" expanded="true" signature="45636:45830" placeholder="select `stud..." />
+            <marker date="1497457543000" expanded="true" signature="46343:46537" placeholder="select `stud..." />
+            <marker date="1497457543000" expanded="true" signature="47053:47254" placeholder="select `stud..." />
+            <marker date="1497457543000" expanded="true" signature="47770:47971" placeholder="select `stud..." />
+            <marker date="1497457543000" expanded="true" signature="48487:48688" placeholder="select `stud..." />
+            <marker date="1497457543000" expanded="true" signature="49204:49405" placeholder="select `stud..." />
+            <marker date="1497457543000" expanded="true" signature="49932:50174" placeholder="select x , C..temptable..." />
+            <marker date="1497457543000" expanded="true" signature="49961:50148" placeholder="select `stud..." />
+            <marker date="1497457543000" expanded="true" signature="61057:61301" placeholder="SELECT langu..studentlanguage..." />
+            <marker date="1497457543000" expanded="true" signature="61145:61241" placeholder="SELECT stude..student..." />
+            <marker date="1497457543000" expanded="true" signature="62056:62299" placeholder="SELECT langu..studentlanguage..." />
+            <marker date="1497457543000" expanded="true" signature="62144:62240" placeholder="SELECT stude..student..." />
+            <marker date="1497457543000" expanded="true" signature="63009:63274" placeholder="SELECT langu..studentlanguage..." />
+            <marker date="1497457543000" expanded="true" signature="63097:63215" placeholder="SELECT stude..student..." />
+            <marker date="1497457543000" expanded="true" signature="63961:64226" placeholder="SELECT langu..studentlanguage..." />
+            <marker date="1497457543000" expanded="true" signature="64049:64167" placeholder="SELECT stude..student..." />
+            <marker date="1497457543000" expanded="true" signature="64946:65211" placeholder="SELECT langu..studentlanguage..." />
+            <marker date="1497457543000" expanded="true" signature="65034:65152" placeholder="SELECT stude..student..." />
+            <marker date="1497457543000" expanded="true" signature="65897:66162" placeholder="SELECT langu..studentlanguage..." />
+            <marker date="1497457543000" expanded="true" signature="65985:66103" placeholder="SELECT stude..student..." />
+            <marker date="1497457543000" expanded="true" signature="66880:67145" placeholder="SELECT langu..studentlanguage..." />
+            <marker date="1497457543000" expanded="true" signature="66968:67086" placeholder="SELECT stude..student..." />
+            <marker date="1497457543000" expanded="true" signature="67832:68097" placeholder="SELECT langu..studentlanguage..." />
+            <marker date="1497457543000" expanded="true" signature="67920:68038" placeholder="SELECT stude..student..." />
           </folding>
         </state>
       </provider>

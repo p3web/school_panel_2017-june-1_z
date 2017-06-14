@@ -11,6 +11,10 @@
     padding-left: 0;
 }
 
+/*Table*/
+#Table tr td:nth-child(even){
+    text-align: right;
+}
 /*Map*/
 .Chart {
     height: 300px;
@@ -56,6 +60,7 @@
 }
 
 .Footer p {
+    margin: 0 auto;
     margin-top: 20px;
     font-weight: 600;
     width: 80%;
@@ -74,7 +79,7 @@
     transform: rotate(-90deg);
     transform-origin: top right;
     position: absolute;
-    left: -181px;
+    left: -197px;
     top: 0;
     padding: 10px;
     font-size: 21px;
@@ -119,4 +124,9 @@
 
 #MapContainer svg > rect {
     stroke: none !important;
+}
+
+#copyright{
+    text-align: center;
+    margin-bottom: 50px;
 }

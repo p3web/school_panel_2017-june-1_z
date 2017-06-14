@@ -1,4 +1,19 @@
-<link rel="stylesheet" href="page/CssMapChart.css">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+            integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+    <style>
+
+    </style>
+    <link rel="stylesheet" href="CssMapChart.css">
+
+
+</head>
+<body onload="sendActions()">
 <div class="container-fluid">
     <div class="row">
         <div class="col-xs-12 col-md-10 no-padding">
@@ -38,7 +53,7 @@
             <div class="topBorder chartDivider" id="TopBorderDonut">
                 <div class="Chart OtherChart" id="DonutChart">
                     <iframe style="width:100%;height: 320px;overflow: hidden;border: none;"
-                            src="page/TeacherdonutChart.html"></iframe>
+                            src="TeacherdonutChart.html"></iframe>
                 </div>
             </div>
         </div>
@@ -53,20 +68,16 @@
     <div class="row">
         <div class="col-xs-12">
 
-            <div class="Footer"><p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh
-                euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis
-                nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem
-                vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu
-                feugiat nulla </p></div>
+            <div class="Footer"><p id="copyright" style="font-size: 14px"><b><a href="http://ancestryatlas.com/" rel="nofollow" target="_blank">Ancestry Atlas</a></b> is powered&nbsp;by <b>© <a href="http://culturalinfusion.org.au/" rel="nofollow" target="_blank">Cultural Infusion</a></p></b></font></div>
         </div>
     </div>
 </div>
 
 
 <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
-<script src="bootstrap-3.3.7-dist/js/bootstrap.js"></script>
 
-<script src="code/ajax.js"></script>
+
+<!--<script src="code/ajax.js"></script>-->
 
 <!--Map Script-->
 <script src="https://code.highcharts.com/maps/highmaps.js"></script>
@@ -81,7 +92,8 @@
 <script src="https://code.highcharts.com/modules/drilldown.js"></script>
 
 <!--myFunc-->
-<script src="Chart.js"></script>
+<script src="js/chart.js"></script>
+<script src="js/ajax.js"></script>
 
 <script>
 
@@ -178,16 +190,16 @@
                             }
                         },
                         tooltip: {
-                            valueSuffix: '/km²'
+                            valueSuffix: ''
                         }
                     }]
                 });
             },
             error: function () {
                 $('#container').html('<div class="loading">' +
-                    '<i class="icon-frown icon-large"></i> ' +
-                    'Error loading data from Google Spreadsheets' +
-                    '</div>');
+                '<i class="icon-frown icon-large"></i> ' +
+                'Error loading data from Google Spreadsheets' +
+                '</div>');
             }
         });
 
@@ -218,11 +230,11 @@
                 }
             }
         }
-        TeacherMapChart('MapContainer', MapDatas);
+        MapChart('MapContainer', MapDatas);
         var Table = document.getElementById('Table');
         var Tag = '';
         for (var i = 0; i < data[0].length; i++) {
-            Tag += '<tr><td>' + data[0][i][0] + '</td><td>data[0][i][1]</td></tr>';
+            Tag += '<tr><td>' + data[0][i][0] + '</td><td>'+data[0][i][1]+'</td></tr>';
         }
         Table.innerHTML = Tag;
     }
@@ -242,3 +254,5 @@
 
 
 </script>
+</body>
+</html>

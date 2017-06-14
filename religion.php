@@ -104,7 +104,7 @@ class religion {
 
         $data = self::get_religion_teacher($schoolId, $className);
 
-        csv_file::makecsv($data , 'teacherregionmapdataout.csv', false);
+        csv_file::makecsv($data , 'teacherreligonout.csv', false);
 
         $result = array();
 
