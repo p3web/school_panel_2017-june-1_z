@@ -2,20 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="676e04ff-6d34-48ac-9098-ebf739dc256d" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/page/logo.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/page/Belief_chart_teacher.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/page/Chart_teacher.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/page/CssMapChart.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/page/TeacherMapChart.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/page/TeacherdonutChart.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/page/TeamMapChart.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/page/TeamdonutChart.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/controller_teacher_admin.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/religion.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/documentation/timing/Time Sheet1.xlsx" afterPath="$PROJECT_DIR$/documentation/timing/Time Sheet1.xlsx" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/page/js/ajax.js" afterPath="$PROJECT_DIR$/page/js/ajax.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/language.php" afterPath="$PROJECT_DIR$/language.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/teacherpanel.php" afterPath="$PROJECT_DIR$/teacherpanel.php" />
     </list>
     <ignored path="school_panel_2017-june-1_z.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -310,7 +297,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1920" height="1080" extended-state="0" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
