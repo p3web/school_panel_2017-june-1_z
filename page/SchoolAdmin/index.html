@@ -17,24 +17,25 @@
 </head>
 <body>
 <div id="wrap">
+    <i class="glyphicon glyphicon-menu-hamburger" data-show="false" onclick="ToggleMenu(this)" id="menuIcon"></i>
     <div class="container-fluid">
         <!--Header-->
-        <div class="row" style="background-color:#ff9999;">
+        <div class="row">
             <div class="col-sm-1">
             </div>
 
 
-            <div class="col-sm-10 header" style="background-color:#ff9999; height:5.325em; margin-top:1em; ">
+            <div class="col-sm-10" style="height:5.325em; margin-top:1em; ">
+
 
                 <div style="margin-left:2em; margin-right:2em;">
+                    <a class="pull-left" id="LogoSM" href="#"><img src="../../images/logoM.png" title="Ancestry Atlas" alt="Ancestry Atlas"></a>
 
-                    <a href="#"><img src="../../images/logo.png" title="Ancestry Atlas" alt="Ancestry Atlas"></a>
+                    <a href="../../teamadminpanel.php?logoutrequest" class="btn btn-default navbar-btn logbutton submitbtunnew"
+                       style="float:right; border-radius:5px; margin:1.0em 0em; font-weight:bold;  text-decoration:none;">LOGOUT</a>
 
-                    <a href="../../teamadminpanel.php?logoutrequest" class="btn btn-default navbar-btn logbutton"
-                       style="float:right; border-radius:5px; margin:1.0em 0em; font-weight:bold;  text-decoration:none; color:#ff8a87; ">LOGOUT</a>
-
-                    <a id="btn_user_profile" href="#" class="btn btn-default navbar-btn logbutton"
-                       style="float:right; border-radius:5px; margin:1.0em 0em; font-weight:bold;  text-decoration:none; color:#ff8a87; margin-right: 1em;">PROFILE</a>
+                    <a id="btn_user_profile" href="#" class="btn btn-default navbar-btn logbutton submitbtunnew"
+                       style="float:right; border-radius:5px; margin:1.0em 0em; font-weight:bold;  text-decoration:none; margin-right: 1em;">PROFILE</a>
 
 
                 </div>
@@ -43,6 +44,45 @@
             <div class="col-sm-1">
             </div>
 
+        </div>
+        <!--Tab Control-->
+        <div class="panelControl" id="MenuPanel">
+            <a href="#"><img src="../../images/logo.png" title="Ancestry Atlas" alt="Ancestry Atlas"></a>
+            <ul class=" nav nav-tabs">
+                <li class="active"><a data-toggle="tab" href="#students"
+                                                                             aria-expanded="true"><i class="glyphicon glyphicon-user"></i> TEACHER</a>
+                </li>
+                <li  class=""><a onclick="loadPage(this)"
+                                                                       data-toggle="tab" data-Page=""
+                                                                       href="#classes"
+                                                                       aria-expanded="false"><i class="glyphicon glyphicon-blackboard"></i> CLASSES</a></li>
+                <li  class=""><a data-toggle="tab"
+                                                                       onclick="loadPage(this)" data-Page="Map"
+                                                                       href="#maps"
+                                                                       aria-expanded="false"><i class="glyphicon glyphicon-stats"></i> MAPS</a></li>
+                <li  class=""><a data-toggle="tab"
+                                                                       onclick="loadPage(this)"
+                                                                       data-Page="Language"
+                                                                       href="#language"
+                                                                       aria-expanded="false"><i class="glyphicon glyphicon-comment"></i> LANGUAGE</a></li>
+                <li  class=""><a data-toggle="tab"
+                                                                       onclick="loadPage(this)"
+                                                                       data-Page="Belief"
+                                                                       href="#Belief"
+                                                                       aria-expanded="false"><i class="glyphicon glyphicon-heart-empty"></i> BELIEF</a>
+                </li>
+                <li  class=""><a data-toggle="tab" data-Page=""
+
+                                                                       href="#Keyfact"
+                                                                       aria-expanded="false"><i class="glyphicon glyphicon-wrench
+"></i> KEY
+                    FACTS</a></li>
+                <li  class=""><a data-toggle="tab" data-Page="Export"
+                                                                       onclick="loadPage(this)" href="#export"
+                                                                       aria-expanded="false"><i class="glyphicon glyphicon-globe"></i> EXPORT</a>
+                </li>
+
+            </ul>
         </div>
         <!--Page Body-->
         <div class="row">
@@ -53,7 +93,7 @@
                 <div class="col-sm-12">
                     <div class="col-sm-6">
                         <h2>Welcome to your Ancestry Atlas</h2>
-                        <h5>Team admin -&gt; &nbsp;<b>Peter Mousaferiadis</b></h5>
+                        <h5>School Admin-&gt; &nbsp;<b>Peter Mousaferiadis</b></h5>
                     </div>
                     <div class="col-sm-6 text-right">
                         <h2>Cultural Infusion</h2>
@@ -64,44 +104,10 @@
 
                 <div class="col-sm-12" style="margin-top:2em;">
                     <!--tab body-->
-                    <ul class="nav nav-tabs">
-                        <li style="width:10em; text-align:center;" class="active"><a data-toggle="tab" href="#students"
-                                                                                     aria-expanded="true">STUDENT</a>
-                        </li>
-                        <li style="width:10em; text-align:center;" class=""><a onclick="loadPage(this)"
-                                                                               data-toggle="tab" data-Page=""
-                                                                               href="#classes"
-                                                                               aria-expanded="false">CLASSES</a></li>
-                        <li style="width:10em; text-align:center;" class=""><a data-toggle="tab"
-                                                                               onclick="loadPage(this)" data-Page="Map"
-                                                                               href="#maps"
-                                                                               aria-expanded="false">MAPS</a></li>
-                        <li style="width:10em; text-align:center;" class=""><a data-toggle="tab"
-                                                                               onclick="loadPage(this)"
-                                                                               data-Page="Language"
-                                                                               href="#language"
-                                                                               aria-expanded="false">LANGUAGE</a></li>
-                        <li style="width:10em; text-align:center;" class=""><a data-toggle="tab"
-                                                                               onclick="loadPage(this)"
-                                                                               data-Page="Belief"
-                                                                               href="#Belief"
-                                                                               aria-expanded="false">BELIEF</a>
-                        </li>
-                        <li style="width:10em; text-align:center;" class=""><a data-toggle="tab" data-Page=""
-
-                                                                               href="#Keyfact"
-                                                                               aria-expanded="false">KEY
-                            FACTS</a></li>
-                        <li style="width:10em; text-align:center;" class=""><a data-toggle="tab" data-Page="Export"
-                                                                               onclick="loadPage(this)" href="#export"
-                                                                               aria-expanded="false">EXPORT</a>
-                        </li>
-
-                    </ul>
                     <div class="tab-content">
                         <div id="students" class="tab-pane fade active in">
                             <br><br>
-                            <b> Team Name: </b><select name="classnamedropdownstutab" style="padding:0.3em;">
+                            <b style="display: none;"> Team Name: </b><select name="classnamedropdownstutab" style="padding:0.3em;">
                             <option value="CITeam">CITeam</option>
                         </select> <input type="submit" id="submitvalstutab" class="submitbtunnew"
                                          name="submitvalstutab" value="SUBMIT">
@@ -125,7 +131,6 @@
                         <div id="Belief" class="tab-pane fade in">
 
                         </div>
-
 
 
                         <div id="export" class="tab-pane fade in">
@@ -286,12 +291,12 @@
         if (isShow != 'true') {
 
             var TabID = elm.getAttribute('href');
-            if (pageName == 'Map' || pageName =='Export') {
+            if (pageName == 'Map' || pageName == 'Export') {
                 var frame = document.createElement('iframe');
-                frame.setAttribute('src', pageName+'.html');
-                if(pageName =='Export'){
+                frame.setAttribute('src', pageName + '.html');
+                if (pageName == 'Export') {
                     frame.style.cssText = 'width:100%;min-height:1200px;margin-top:20px;border:none;';
-                }else {
+                } else {
                     frame.style.cssText = 'width:100%;min-height:800px;margin-top:20px;border:none;';
                 }
                 TabID = TabID.split('#');
@@ -303,7 +308,18 @@
             elm.setAttribute('data-show', 'true');
         }
     }
-
+    function ToggleMenu(elem) {
+        var flag = elem.getAttribute('data-show');
+        if(flag=='true'){
+            document.getElementById('MenuPanel').style.cssText = '';
+            elem.style.cssText= '';
+            elem.setAttribute('data-show', 'false');
+        }else{
+            document.getElementById('MenuPanel').style.cssText = 'height:100vh;width:30vw';
+            elem.setAttribute('data-show', 'true');
+            elem.style.left = '31.5vw';
+        }
+    }
 </script>
 </body>
 </html>
