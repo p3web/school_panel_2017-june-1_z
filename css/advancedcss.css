@@ -1,0 +1,159 @@
+@charset "utf-8";
+/* CSS Document */
+
+/* colour sheet
+ff8a88 -- header light pink
+*/
+
+body {
+  height: 100%;
+  background-color:#ffffff;
+}
+
+
+#myNavbar ul li a:link,a:visited,a:active{
+	color:#FFF !important;
+	
+	padding-bottom:-10% !important;
+	/*padding-right:20%;*/
+	/*padding-left:2%;*/
+	/*margin-right:60% !important;*/
+}
+
+#myNavbar ul li a:hover{
+	border-bottom:#FFF 3px solid;
+}
+
+
+
+#homepage h1{
+	font-family: 'Open Sans', sans-serif; 
+	font-weight:700;
+	font-size:36pt;
+	}
+	
+	
+#homepage h2{
+	font-family: 'Open Sans', sans-serif; 
+	font-weight:700;
+	font-size:20pt;
+	}
+
+#homepage h3{
+	font-family: 'Open Sans', sans-serif; 
+	font-weight:400;
+	font-size:14pt;
+	line-height:18pt;
+	text-align:justify;
+	}
+
+
+/* Wrapper for page content to push down footer */
+#wrap {
+  min-height: 100%;
+  height: auto;
+  /* Negative indent footer by its height */
+  margin: 0 auto -60px;
+  /* Pad bottom by footer height */
+  padding: 0 0 60px;
+}
+
+/* Set the fixed height of the footer here */
+#footer {
+  height: 70px;
+  font-size:0.9vw; 
+  text-align:center; 
+  padding-top:21px;
+  background-color:#000;
+  color:#FFF;
+}
+
+#wrap .container-fluid .row .hheader{
+	background-color:#ff8a88; 
+	height:5.675em;
+}
+
+#wrap .container-fluid .row .hheader a{
+	margin-right:5%;
+	color:#FFF;
+}
+#wrap .container-fluid .row .hheader a:link,visited,active{
+	color:#FFF;
+}
+
+#wrap .container-fluid .row .hheader a:hover{
+	border-bottom: 2px solid  #FFF;
+}
+
+#wrap .container-fluid .row .hmainbackimage{
+	background-image:url(../images/img1.jpg);
+	background-size: 100% 100%;
+	background-repeat:no-repeat;
+	height:100% auto; 
+
+	
+}
+
+#wrap .container-fluid .row .hsmalllogo{ margin:7% 0 7% 0;}
+#wrap .container-fluid .row .hmaintextheading{ color:#FFF;}
+
+#wrap .container-fluid a{
+	text-decoration:none;
+	
+}
+#wrap .container-fluid .hbutton{
+	width:9.813em;
+	height:3.125em;
+	font-family: 'Open Sans', sans-serif; 
+	font-weight:400; 
+	font-size:14px;
+	background-color:#FFF;
+	color:#ff8a88;
+	border:none;
+	border-radius:0.3em;
+}
+#wrap .container-fluid .hbutton:link,visited,active{
+	background-color:#FFF;
+	color:#ff8a88;
+	}
+#wrap .container-fluid .hbutton:hover{
+	color:#FFF;
+	background-color:#ff8a88;
+	}
+#wrap .container-fluid .row .hsecondbutton{
+	width:13.813em;
+	height:2.125em;
+	font-family: 'Open Sans', sans-serif; 
+	font-weight:500; 
+	font-size:18px;
+	background-color:#cc3433;
+	color:#FFF;
+	border:#727677 1px solid;
+	margin-right:0px !important;
+	
+	
+}
+
+
+#wrap .container-fluid .hbuttoncontact{
+	width:9.813em;
+	height:3.125em;
+	font-family: 'Open Sans', sans-serif; 
+	font-weight:400; 
+	font-size:14px;
+	background-color:#ff8a88;
+	color:#FFF;
+	border:none;
+	border-radius:0.3em;
+}
+#wrap .container-fluid .hbuttoncontact:link,visited,active{
+	background-color:#ff8a88;
+	color:#FFF;
+	}
+#wrap .container-fluid .hbuttoncontact:hover{
+	color:#ff8a88;
+	background-color:#FFF;
+	border:1px solid #ff8a88;
+	}
+
+

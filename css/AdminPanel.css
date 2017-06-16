@@ -1,0 +1,68 @@
+.PGrid{
+    margin-top:50px;
+}
+.PGrid thead {
+    background-color: #FFD799;
+}
+.PGrid > .btn.btn-primary.btn-block{
+    font-weight: bold;
+    background-color: #ff8a87;
+    color: #fff;
+    padding: 0.3em;
+    border: none;
+    border-radius: 5px;
+}
+.PGrid > .btn.btn-primary.btn-block:hover, #PGrid > .btn.btn-primary.btn-block:active {
+    background-color: #000 !important;
+    color: #ff8a87;
+}
+.logbutton {
+    border-radius: 5px !important;
+    color: #ff8a87;
+    border: 2px solid #FFF;
+    background-color: #FFF;
+
+}
+
+.logbutton:link, .logbutton:visited {
+    border-radius: 5px !important;
+    color: #ff8a87;
+    border: 2px solid #FFF;
+    background-color: #FFF;
+}
+
+.logbutton:active, .logbutton:hover {
+    border-radius: 5px !important;
+    border: 2px solid #FFF;
+    background-color: #ff8a87;
+    color: white !important;
+
+}
+.submitbtunnew, .submitbtunnew:link, .submitbtunnew:visited {
+    font-weight: bold;
+    background-color: #ff8a87;
+    color: #fff;
+    padding: 0.3em;
+    border: none;
+    width: 6em;
+    border-radius: 5px;
+}
+
+.submitbtunnew:hover, .submitbtunnew:active {
+    background-color: #000 !important;
+    color: #ff8a87;
+}
+#Table{
+    margin-top: 30px;
+}
+
+.tab-pane{
+    padding-top: 10px;
+}
+
+.MapCountryDetails label{
+    display:block;
+}
+.Chart-table th {
+    text-align: center !important;
+}

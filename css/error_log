@@ -1,0 +1,4 @@
+[17-Apr-2017 21:18:00 UTC] PHP Warning:  include(header.php): failed to open stream: No such file or directory in /home/ancestryatlas/public_html/css/homepagetesttest.php on line 68
+[17-Apr-2017 21:18:00 UTC] PHP Warning:  include(): Failed opening 'header.php' for inclusion (include_path='.:/opt/cpanel/ea-php56/root/usr/share/pear') in /home/ancestryatlas/public_html/css/homepagetesttest.php on line 68
+[17-Apr-2017 21:18:00 UTC] PHP Warning:  include(footer.php): failed to open stream: No such file or directory in /home/ancestryatlas/public_html/css/homepagetesttest.php on line 236
+[17-Apr-2017 21:18:00 UTC] PHP Warning:  include(): Failed opening 'footer.php' for inclusion (include_path='.:/opt/cpanel/ea-php56/root/usr/share/pear') in /home/ancestryatlas/public_html/css/homepagetesttest.php on line 236
