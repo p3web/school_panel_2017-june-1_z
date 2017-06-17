@@ -15,7 +15,7 @@
 
 
 </head>
-<body>
+<body onload="LoadTable();">
 <div id="wrap">
     <i class="glyphicon glyphicon-menu-hamburger" data-show="false" onclick="ToggleMenu(this)" id="menuIcon"></i>
     <div class="container-fluid">
@@ -205,12 +205,20 @@
     </div>
 </div>
 
+<div id="Test"></div>
 
 <script src="../../scripts/jquery-1.10.2.js"></script>
-<!--<script src="../../scripts/bootstrap.js"></script>-->
+
+<!--ajax-->
+<script src="../js/ajax.js"></script>
+<!--loadPage-->
+<script src="js/load_pages/Index.js"></script>
+<!--bootstrap-->
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
         integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
         crossorigin="anonymous"></script>
+
+<!--PSCO_Grid-->
 <script src="../js/PSCO_Grid.js"></script>
 
 <!--Charts-->
@@ -220,69 +228,14 @@
 <script src="https://code.highcharts.com/modules/drilldown.js"></script>
 <script src="../js/chart.js"></script>
 
-<script type="text/javascript">
-    var jsonTest = [
-        {id: '1', name: 'Abdolnabi Zameni', email: 'Abdolnabi@icloud.com', info: '', status: 'pending'},
-        {
-            id: '2',
-            name: 'Alex Prior',
-            email: 'alex.p@paninternational.com.au',
-            info: 'View Profile',
-            status: 'active'
-        },
-        {
-            id: '3',
-            name: 'Angelina Halim',
-            email: '	Angelina.H@culturalinfusion.org.au',
-            info: 'View Profile',
-            status: 'active'
-        },
-        {id: '4', name: 'Abdolnabi Zameni', email: 'Abdolnabi@icloud.com', info: 'pending', status: 'active'},
-        {id: '5', name: 'Abdolnabi Zameni', email: 'Abdolnabi@icloud.com', info: '', status: 'pending'},
-        {
-            id: '6',
-            name: 'Alex Prior',
-            email: 'alex.p@paninternational.com.au',
-            info: 'View Profile',
-            status: 'active'
-        },
-        {
-            id: '7',
-            name: 'Angelina Halim',
-            email: '	Angelina.H@culturalinfusion.org.au',
-            info: 'View Profile',
-            status: 'active'
-        },
-        {id: '8', name: 'Abdolnabi Zameni', email: 'Abdolnabi@icloud.com', info: 'pending', status: 'active'},
-        {id: '9', name: 'Abdolnabi Zameni', email: 'Abdolnabi@icloud.com', info: '', status: 'pending'},
-        {
-            id: '10',
-            name: 'Alex Prior',
-            email: 'alex.p@paninternational.com.au',
-            info: 'View Profile',
-            status: 'active'
-        },
-        {
-            id: '11',
-            name: 'Angelina Halim',
-            email: '	Angelina.H@culturalinfusion.org.au',
-            info: 'View Profile',
-            status: 'active'
-        },
-        {id: '12', name: 'Abdolnabi Zameni', email: 'Abdolnabi@icloud.com', info: 'pending', status: 'active'}
-    ];
+<!--Dom To Image-->
+<script src="../js/dom-to-image.min.js"></script>
 
-    var grid = new PSCO_grid('grid');
-    grid.cols = [
-        {name: 'id', hidden: true},
-        {name: 'name', thname: 'Employee Name'},
-        {name: 'email', thname: 'Employee Email ID*'},
-        {name: 'info', thname: 'Info'},
-        {name: 'status', thname: 'Status'}
-    ];
-    grid.RightToLeft = false;
-    grid.data = jsonTest;
-    grid.render();
+
+<script type="text/javascript">
+
+
+
 
     function loadPage(elm) {
         var pageName = elm.getAttribute('data-Page');
@@ -294,6 +247,7 @@
             if (pageName == 'Map' || pageName == 'Export') {
                 var frame = document.createElement('iframe');
                 frame.setAttribute('src', pageName + '.html');
+                frame.setAttribute('id', pageName);
                 if (pageName == 'Export') {
                     frame.style.cssText = 'width:100%;min-height:1200px;margin-top:20px;border:none;';
                 } else {

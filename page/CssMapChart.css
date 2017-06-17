@@ -93,6 +93,7 @@
 
 #TopBorderBar::before {
     content: 'RELIGIONS';
+    left: -100px;
 }
 
 #TopBorderDonut::before {

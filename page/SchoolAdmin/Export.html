@@ -17,6 +17,7 @@
 <div class="container-fluid">
     <div class="row">
         <div class="col-xs-12 col-md-10 no-padding">
+            <div class="btn btn-default pull-left" style="margin-top:8px;margin-left: 5px;" id="ExportBtn" onclick="PrintExpot()">Print Export</div>
             <div class="topBorder" id="TopBorderMap">
                 <img src="../logo.jpg" id="Logo"/>
                 <div id="MapContainer" class="Chart">
@@ -51,8 +52,8 @@
     <div class="row">
         <div class="col-md-6 bottomBorder col-xs-12 no-padding">
             <div class="topBorder chartDivider" id="TopBorderDonut">
-                <div class="Chart OtherChart" id="DonutChart">
-                    <iframe style="width:95%;margin-left:-14%;height: 320px;overflow: hidden;border: none;"
+                <div class="Chart OtherChart" id="DonutChartDiv">
+                    <iframe id="IFRAME" style="width:95%;margin-left:-14%;height: 320px;overflow: hidden;border: none;"
                             src="ExportDonut.html"></iframe>
                 </div>
             </div>
@@ -94,8 +95,21 @@
 <!--myFunc-->
 <script src="../js/chart.js"></script>
 <script src="../js/ajax.js"></script>
+<script src="../js/PrintExport.js"></script>
 
+
+<script src="../js/dom-to-image.min.js"></script>
 <script>
+
+    function PrintExpot(){
+        var EXPBtn = document.getElementById('ExportBtn');
+        EXPBtn.style.display='none';
+        HandelIframeContent('IFRAME' , 'DonutChart' , 'DonutChartDiv');
+        setTimeout(function () {
+            EXPBtn.style.display='inline-block';
+        },1000)
+
+    }
 
     function sendActions() {
      /*   ajax.sender_data_callback({out : 'TRMDO'} , CreateMapData);

@@ -3,7 +3,7 @@
     text-align: center;
 }
 .PGrid th i{
-        font-size: 10px;
+    font-size: 10px;
     margin: 3px;
     color: #a9a9a9;
 }
@@ -28,7 +28,10 @@
 .PGrid .form-group input[type=text] {
     max-width: 80%;
 }
-
+.PGrid .fastSearch{
+    max-width: 70%;
+    display: inline-block;
+}
 .PGrid .btn-search{
     max-width: 45%;
     display: inline-block;
@@ -38,3 +41,13 @@
     cursor: pointer;
 }
 
+.deleteSearch-btn{
+    width:87%;
+}
+.PGrid tbody input[type=text] {
+    width: 62%;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    padding: 5px;
+    outline: none;
+}

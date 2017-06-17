@@ -168,8 +168,8 @@ ajax.sender_data_json_by_url_callback = function (url, param, callBack, Method) 
             ajax.get_data(data, callBack);
         }
     });
-}
+};
 
 ajax.cllback_getJSON = function (url, callBack) {
     $.getJSON(url, callBack(data));
-}
+};
