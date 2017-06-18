@@ -1,122 +1,74 @@
-
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <title>Title</title>
+    <title></title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
           integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-
     <link rel="stylesheet" href="../CssMapChart.css">
-
-
+    <link rel="stylesheet" href="../CssMapChart.css">
 </head>
-<body onload="sendActions()">
+<body>
 <div class="container-fluid">
     <div class="row">
-        <div class="col-xs-12 col-md-10 no-padding">
-            <div class="btn btn-default pull-left" style="margin-top:8px;margin-left: 5px;" id="ExportBtn" onclick="PrintExpot()">Print Export</div>
-            <div class="topBorder" id="TopBorderMap">
-                <img src="../logo.jpg" id="Logo"/>
-                <div id="MapContainer" class="Chart">
-                    <div class="loading">
-                        <i class="icon-spinner icon-spin icon-large"></i>
-                        Loading Map data ...
-                    </div>
+        <div class="col-xs-12 col-md-10">
+            <div id="MapContainer">
+                <div class="loading">
+                    <i class="icon-spinner icon-spin icon-large"></i>
+                    Loading Map data ...
                 </div>
             </div>
         </div>
-        <div class="hidden-xs hidden-sm col-md-2 no-padding">
-            <div class="MapDetails">
-                <div>
-                    <strong>
-                        <p>School / Organisation name</p>
-                        <p>Address</p>
-                        <p>State / Country / Year</p>
-                    </strong>
-                    <p>Number of people in Total</p>
-                    <p>Number Man</p>
-                    <p>Number Women</p>
-                </div>
-            </div>
+        <div class="hidden-xs hidden-sm col-md-2">
+
             <div class="MapCountryDetails">
-                <table id="Table">
+                <form method="post">
+
+                    Team Name:<select name="classnamedropdown"><option value="CITeam">CITeam</option></select>
+
+                    <br><br>
+                    <label>
+                    <input type="checkbox" id="checkoall">&nbsp;All (select/unselect)<br>
+                    </label>
+                    <label>
+                    <input type="checkbox" class="checkboxes" name="formDoor[]" value="S">&nbsp;Staff<br>
+                    </label>
+                    <label>
+                    <input type="checkbox" class="checkboxes" name="formDoor[]" value="F">&nbsp;Father<br>
+                    </label>
+                    <label>
+                    <input type="checkbox" class="checkboxes" name="formDoor[]" value="M">&nbsp;Mother<br>
+                    </label>
+                    <label>
+                    <input type="checkbox" class="checkboxes" name="formDoor[]" value="GFFS">&nbsp;Paternal GrandFather<br>
+                    </label>
+                    <label>
+                    <input type="checkbox" class="checkboxes" name="formDoor[]" value="GMFS">&nbsp;Paternal GrandMother<br>
+                    </label>
+                    <label>
+                    <input type="checkbox" class="checkboxes" name="formDoor[]" value="GFMS">&nbsp;Maternal GrandFather<br>
+                    </label>
+                    <label>
+                    <input type="checkbox" class="checkboxes" name="formDoor[]" value="GMMS">&nbsp;Maternal GrandMother<br>
+                    </label>
+
+                    <br>
+                    <input type="submit" id="submitval" name="submitval" value="SUBMIT">
+                </form>
+                <table id="Table" >
 
                 </table>
             </div>
         </div>
     </div>
-
-    <div class="row">
-        <div class="col-md-6 bottomBorder col-xs-12 no-padding">
-            <div class="topBorder chartDivider" id="TopBorderDonut">
-                <div class="Chart OtherChart" id="DonutChartDiv">
-                    <iframe id="IFRAME" src="ExportDonut.html"></iframe>
-                </div>
-            </div>
-        </div>
-        <div class="col-md-6 col-xs-12 bottomBorder no-padding-left">
-            <div class="topBorder chartDivider" id="TopBorderBar">
-                <div class="Chart OtherChart" id="BarChart">
-
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="row">
-        <div class="col-xs-12">
-
-            <div class="Footer"><p id="copyright" style="font-size: 14px"><b><a href="http://ancestryatlas.com/" rel="nofollow" target="_blank">Ancestry Atlas</a></b> is powered&nbsp;by <b>© <a href="http://culturalinfusion.org.au/" rel="nofollow" target="_blank">Cultural Infusion</a>, 2017</p></b></font></div>
-        </div>
-    </div>
 </div>
 
-
-<script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
-
-
-<!--<script src="code/ajax.js"></script>-->
-
-<!--Map Script-->
+<script src="../../scripts/jquery-1.10.2.js"></script>
 <script src="https://code.highcharts.com/maps/highmaps.js"></script>
 <script src="https://code.highcharts.com/maps/modules/data.js"></script>
 <script src="https://code.highcharts.com/mapdata/custom/world.js"></script>
 
-<!--chart Script-->
-<!--<script src="https://code.highcharts.com/highcharts.js"></script>-->
-
-<script src="https://code.highcharts.com/modules/exporting.js"></script>
-<script src="https://code.highcharts.com/modules/data.js"></script>
-<script src="https://code.highcharts.com/modules/drilldown.js"></script>
-
-<!--myFunc-->
 <script src="../js/chart.js"></script>
-<script src="../js/ajax.js"></script>
-<script src="../js/PrintExport.js"></script>
-
-
-<script src="../js/dom-to-image.min.js"></script>
 
 <script>
-
-    function PrintExpot(){
-        /*var EXPBtn = document.getElementById('ExportBtn');
-        EXPBtn.style.display='none';*/
-        //  HandelIframeContent('IFRAME' , 'DonutChart' , 'DonutChartDiv');
-        CreateIFRAME();
-        printPage();
-        /*setTimeout(function () {
-         EXPBtn.style.display='inline-block';
-         },1000)*/
-
-    }
-
-    function sendActions() {
-     /*   ajax.sender_data_callback({out : 'TRMDO'} , CreateMapData);
-        ajax.sender_data_callback({out : 'TRO'} , CreateBarData);*/
-    }
-
-
-
 
     function CreateMapData(data) {
         // _____ for Map
@@ -139,6 +91,7 @@
             for (var c = 1; c < MapDatas[0].length; c++) {
                 if (Name.toLowerCase() == MapDatas[1][c].toLowerCase()) {
                     MapDatas[2][c] = numb;
+                    break;
                 }
             }
         }
@@ -146,51 +99,18 @@
         var Table = document.getElementById('Table');
         var Tag = '';
         for (var i = 0; i < data[0].length; i++) {
-            Tag += '<tr><td>' + data[0][i][0] + '</td><td>'+data[0][i][1]+'</td></tr>';
+            Tag += '<tr><td>' + data[0][i][0] + '</td><td>' + data[0][i][1] + '</td></tr>';
         }
         Table.innerHTML = Tag;
     }
 
-    function CreateBarData(data) {
-        var series = [{
-            name: 'language',
-            colorByPoint: true,
-            data: []
-        }];
-        for(var i =1 ; i < data[0].length ; i++){
-            var a= series[0].data;
-            a.push({name:data[0][i][0] , y: parseInt(data[0][i][1])});
-        }
-        BarChart('BarChart', series);
-    }
-
-    var series = [{
-        name: 'language',
-        colorByPoint: true,
-        data: [{
-            name: 'US',
-            y: 56.33
-        }, {
-            name: 'persian',
-            y: 24.03
-
-        }, {
-            name: 'arabic',
-            y: 10.38
-        }, {
-            name: 'ger',
-            y: 4.77
-        }, {
-            name: 'fre',
-            y: 0.91
-        }, {
-            name: 'tur',
-            y: 0.2
-        }]
-    }];
-    BarChart('BarChart' , series);
-    var DataMap = [[['country' , 'number'] , ['Afghanistan' , '10']]];
-    CreateMapData(DataMap);
+    //___ temp
+    var Mapdata = [[
+        ['country', 'numb'],
+        ['Afghanistan', '10']
+    ]];
+    CreateMapData(Mapdata);
 </script>
+
 </body>
 </html>

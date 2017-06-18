@@ -1,4 +1,3 @@
-
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -6,15 +5,15 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
           integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 
-    <link rel="stylesheet" href="../CssMapChart.css">
+    <link rel="stylesheet" href="../CssMapChartPrint.css">
 
 
 </head>
 <body onload="sendActions()">
 <div class="container-fluid">
     <div class="row">
-        <div class="col-xs-12 col-md-10 no-padding">
-            <div class="btn btn-default pull-left" style="margin-top:8px;margin-left: 5px;" id="ExportBtn" onclick="PrintExpot()">Print Export</div>
+        <div class="col-xs-10 no-padding">
+
             <div class="topBorder" id="TopBorderMap">
                 <img src="../logo.jpg" id="Logo"/>
                 <div id="MapContainer" class="Chart">
@@ -25,7 +24,7 @@
                 </div>
             </div>
         </div>
-        <div class="hidden-xs hidden-sm col-md-2 no-padding">
+        <div class="col-xs-2 no-padding">
             <div class="MapDetails">
                 <div>
                     <strong>
@@ -47,14 +46,14 @@
     </div>
 
     <div class="row">
-        <div class="col-md-6 bottomBorder col-xs-12 no-padding">
+        <div class="col-xs-6 bottomBorder no-padding">
             <div class="topBorder chartDivider" id="TopBorderDonut">
                 <div class="Chart OtherChart" id="DonutChartDiv">
-                    <iframe id="IFRAME" src="ExportDonut.html"></iframe>
+                    <iframe id="IFRAME" src="ExportDonutPrint.html"></iframe>
                 </div>
             </div>
         </div>
-        <div class="col-md-6 col-xs-12 bottomBorder no-padding-left">
+        <div class="col-xs-6 bottomBorder no-padding-left">
             <div class="topBorder chartDivider" id="TopBorderBar">
                 <div class="Chart OtherChart" id="BarChart">
 
@@ -65,7 +64,11 @@
     <div class="row">
         <div class="col-xs-12">
 
-            <div class="Footer"><p id="copyright" style="font-size: 14px"><b><a href="http://ancestryatlas.com/" rel="nofollow" target="_blank">Ancestry Atlas</a></b> is powered&nbsp;by <b>© <a href="http://culturalinfusion.org.au/" rel="nofollow" target="_blank">Cultural Infusion</a>, 2017</p></b></font></div>
+            <div class="Footer"><p id="copyright" style="font-size: 14px"><b><a href="http://ancestryatlas.com/"
+                                                                                rel="nofollow" target="_blank">Ancestry
+                Atlas</a></b> is powered&nbsp;by <b>© <a href="http://culturalinfusion.org.au/" rel="nofollow"
+                                                         target="_blank">Cultural Infusion</a>, 2017</p></b></font>
+            </div>
         </div>
     </div>
 </div>
@@ -98,24 +101,21 @@
 
 <script>
 
-    function PrintExpot(){
-        /*var EXPBtn = document.getElementById('ExportBtn');
-        EXPBtn.style.display='none';*/
-        //  HandelIframeContent('IFRAME' , 'DonutChart' , 'DonutChartDiv');
-        CreateIFRAME();
+    function PrintExpot() {
+        var EXPBtn = document.getElementById('ExportBtn');
+        EXPBtn.style.display = 'none';
         printPage();
-        /*setTimeout(function () {
-         EXPBtn.style.display='inline-block';
-         },1000)*/
+        //  HandelIframeContent('IFRAME' , 'DonutChart' , 'DonutChartDiv');
+        setTimeout(function () {
+            EXPBtn.style.display = 'inline-block';
+        }, 1000)
 
     }
 
     function sendActions() {
-     /*   ajax.sender_data_callback({out : 'TRMDO'} , CreateMapData);
-        ajax.sender_data_callback({out : 'TRO'} , CreateBarData);*/
+        /*   ajax.sender_data_callback({out : 'TRMDO'} , CreateMapData);
+         ajax.sender_data_callback({out : 'TRO'} , CreateBarData);*/
     }
-
-
 
 
     function CreateMapData(data) {
@@ -146,7 +146,7 @@
         var Table = document.getElementById('Table');
         var Tag = '';
         for (var i = 0; i < data[0].length; i++) {
-            Tag += '<tr><td>' + data[0][i][0] + '</td><td>'+data[0][i][1]+'</td></tr>';
+            Tag += '<tr><td>' + data[0][i][0] + '</td><td>' + data[0][i][1] + '</td></tr>';
         }
         Table.innerHTML = Tag;
     }
@@ -157,9 +157,9 @@
             colorByPoint: true,
             data: []
         }];
-        for(var i =1 ; i < data[0].length ; i++){
-            var a= series[0].data;
-            a.push({name:data[0][i][0] , y: parseInt(data[0][i][1])});
+        for (var i = 1; i < data[0].length; i++) {
+            var a = series[0].data;
+            a.push({name: data[0][i][0], y: parseInt(data[0][i][1])});
         }
         BarChart('BarChart', series);
     }
@@ -188,8 +188,8 @@
             y: 0.2
         }]
     }];
-    BarChart('BarChart' , series);
-    var DataMap = [[['country' , 'number'] , ['Afghanistan' , '10']]];
+    BarChart('BarChart', series);
+    var DataMap = [[['country', 'number'], ['Afghanistan', '10']]];
     CreateMapData(DataMap);
 </script>
 </body>

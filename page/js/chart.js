@@ -26,14 +26,14 @@ function CheckScriptChart() {
 // CheckScriptChart();
 ///_____ End Check load
 
-function changeChartData(ContainerID, series,D_series) {
+function changeChartData(ContainerID, series, D_series) {
     if (Chart_Type == 'pie') {
         PieChart(ContainerID, series);
     }
     else if (Chart_Type == 'bar') {
         BarChart(ContainerID, series);
-    }else {
-        DonutChart(ContainerID,D_series)
+    } else {
+        DonutChart(ContainerID, D_series)
     }
 }
 
@@ -126,24 +126,28 @@ function MapChart(ContainerID, MapData) {
                     enabled: true
                 },
 
-                legend: {
-                    title: {
-                        text: 'Individuals per km²',
-                        style: {
-                            color: (Highcharts.theme && Highcharts.theme.textColor) || 'black'
-                        }
-                    },
-                    align: 'left',
-                    verticalAlign: 'bottom',
-                    floating: true,
-                    layout: 'vertical',
-                    valueDecimals: 0,
-                    backgroundColor: (Highcharts.theme && Highcharts.theme.legendBackgroundColor) || 'rgba(255, 255, 255, 0.85)',
-                    symbolRadius: 0,
-                    symbolHeight: 14
+
+                XAxis: {
+                    labels: {
+                        enabled: false
+                    }
+                    , enabled: false
                 },
 
                 colorAxis: {
+                    labels: {
+                        format: '{value}'
+                    }
+                },
+
+                legend: {
+                    layout: 'horizental',
+                    align: 'left',
+                    verticalAlign: 'bottom'
+                },
+
+
+         /*       colorAxis: {
                     dataClasses: [{
                         to: 8
                     }, {
@@ -164,7 +168,7 @@ function MapChart(ContainerID, MapData) {
                     }, {
                         from: 1000
                     }]
-                },
+                },*/
 
                 series: [{
                     data: data,
@@ -185,9 +189,9 @@ function MapChart(ContainerID, MapData) {
         },
         error: function () {
             $('#container').html('<div class="loading">' +
-            '<i class="icon-frown icon-large"></i> ' +
-            'Error loading data from Google Spreadsheets' +
-            '</div>');
+                '<i class="icon-frown icon-large"></i> ' +
+                'Error loading data from Google Spreadsheets' +
+                '</div>');
         }
     });
 
@@ -251,7 +255,7 @@ function PieChart(ContainerID, series) {
  ]
  };
 
-*/
+ */
 
 
 function DonutChart(ContainerID, series) {
@@ -297,10 +301,6 @@ function DonutChart(ContainerID, series) {
     });
     Chart_Type = 'Donut';
 }
-
-
-
-
 
 
 //_____ <table> must be Exist ...

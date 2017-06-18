@@ -11,6 +11,24 @@ function HandelIframeContent(IFRAMEID , ContentID , DividerId) {
     CreateJPEG(document.body);
 }
 
+function CreateIFRAME() {
+    var iframe ;
+    iframe = document.getElementById('PrintIFrame');
+    if(iframe == null) {
+        iframe = document.createElement('iframe');
+        iframe.style.cssText = 'position : fixed;top:0;left:20000vw; width:1648px;height:1191px;';
+        iframe.setAttribute('id', 'PrintIFrame');
+        iframe.setAttribute('src' , 'ExportPrint.html');
+        document.body.appendChild(iframe);
+    }
+}
+
+
+function printPage(){
+    var Export = document.getElementById('PrintIFrame');
+    Export.contentWindow.focus();
+    Export.contentWindow.print();
+}
 
 function CreateJPEG(elem) {
     domtoimage.toJpeg(elem, { quality: 1 })
