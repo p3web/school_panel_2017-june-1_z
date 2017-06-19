@@ -10,13 +10,13 @@ message.show = function (text , title , type , btn ) {
 
     try {
         swal({
-            title: (title == '' || title == undefined ? '' : __lang.translate(title)),
-            text: __lang.translate(text),
-            type: (type == '' || type == undefined ? '' : __lang.translate(type) ),
-            confirmButtonText: (btn== '' || btn == undefined ? __lang.translate("OK") : __lang.translate(btn))
+            title: (title == '' || title == undefined ? '' : title),
+            text: text,
+            type: (type == '' || type == undefined ? '' : type ),
+            confirmButtonText: (btn== '' || btn == undefined ? "OK" : btn)
         });
     }catch (e){
         console.log(e);
     }
 
-}
+};

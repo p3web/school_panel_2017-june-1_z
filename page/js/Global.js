@@ -1,0 +1,3 @@
+var GlobalFunc = {
+    userDetials : undefined
+};

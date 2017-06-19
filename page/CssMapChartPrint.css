@@ -148,3 +148,7 @@
 #IFRAME{
     width:95%;margin-left:-14%;height: 450px;overflow: hidden;border: none;
 }
+
+@page {
+    size: A4 landscape;
+}
