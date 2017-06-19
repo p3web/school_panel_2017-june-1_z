@@ -25,7 +25,7 @@ class controller_main_function
 
     public static function send_msg($msg, $title, $type = "error", $btn = "")
     {
-        send_result(array('msg' => $msg, 'title' => $title, 'type' => $type, 'btn' => $btn, 'act' => 'message'));
+        self::send_result(array('msg' => $msg, 'title' => $title, 'type' => $type, 'btn' => $btn, 'act' => 'message'));
         exit;
     }
 

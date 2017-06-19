@@ -8,6 +8,7 @@
 
 require_once 'PSCO_data.php';
 
+
 class access_school_admin_panel
 {
 
@@ -23,12 +24,21 @@ class access_school_admin_panel
 
     public static function get_teacher_by_schoolId($schoolId)
     {
-        $data = data::selects_join("`teacher`", "`teacher`.`teacheremailid`, `classteacher`.`classname`, `teacher`.`status`", " INNER JOIN `classteacher` on `classteacher`.`schoolid` =`teacher`.`schoolid` and `teacher`.`teacheremailid` =  `classteacher`.`teacheremailid` WHERE `classteacher`.`schoolid` = '$schoolId'");
+        $data = data::selects_join("`teacher`", "`teacher`.`teacheremailid`,CONCAT(`teacher`.`firstname`, ' ', `teacher`.`lastname`) As name ,`classteacher`.`classname`, `teacher`.`status`", " INNER JOIN `classteacher` on `classteacher`.`schoolid` =`teacher`.`schoolid` and `teacher`.`teacheremailid` =  `classteacher`.`teacheremailid` WHERE `classteacher`.`schoolid` = '$schoolId'");
         if (count($data[0]) != 0) {
             return $data;
         } else {
             return false;
         }
+    }
+
+    public static function get_teacher_by_teacherEmailId($teacheremailid)
+    {
+       return data::delete("`teacher`","`teacheremailid` = '$teacheremailid'");
+    }
+    public static function delete_teacher_by_teacherEmailId($teacheremailid)
+    {
+       return data::delete("`teacher`","`teacheremailid` = '$teacheremailid'");
     }
 
     public static function get_class_by_schoolId($schoolId)

@@ -39,6 +39,8 @@ session_cache_expire();
 session_start();
 require_once 'controller_main_function.php';
 require_once 'access_school_admin_panel.php';
+require_once 'access_school_key_fact.php';
+require_once 'lang.php';
 
 
 if (isset($_SESSION['emailid']) && $_SESSION['emailid'] != '' ) {
@@ -57,8 +59,6 @@ if (isset($_SESSION['emailid']) && $_SESSION['emailid'] != '' ) {
                 $data[0]['resetpasswordstatus'] = null;
                 $_SESSION['user'] = $data[0];
 
-               // print_r($_SESSION); exit;
-
                 $result = $_SESSION['user'];
 
                 controller_main_function::send_result($result);
@@ -67,9 +67,30 @@ if (isset($_SESSION['emailid']) && $_SESSION['emailid'] != '' ) {
                 $result = access_school_admin_panel::get_teacher_by_schoolId($_SESSION['user']['schoolid']);
                 controller_main_function::send_result($result);
                 break;
+
+            case 'get_teacher_by_teacheremailid':
+                $valid_data = controller_main_function::check_validation(array("teacheremailid"));
+                if (!isset($valid_data['is_valid']) || $valid_data['is_valid'] == false) {
+                    controller_main_function::send_msg(lang::$invalid_data, lang::$error);
+                }
+                access_school_admin_panel::delete_teacher_by_teacherEmailId($_REQUEST["teacheremailid"]);
+                controller_main_function::send_msg(lang::$success, lang::$message);
+                break;
+            case 'delete_teacher_by_teacheremailid':
+                $valid_data = controller_main_function::check_validation(array("teacheremailid"));
+                if (!isset($valid_data['is_valid']) || $valid_data['is_valid'] == false) {
+                    controller_main_function::send_msg(lang::$invalid_data, lang::$error);
+                }
+                access_school_admin_panel::delete_teacher_by_teacherEmailId($_REQUEST["teacheremailid"]);
+                controller_main_function::send_msg(lang::$success, lang::$message);
+                break;
             case 'get_tbl_classes':
                 $result = access_school_admin_panel::get_class_by_schoolId($_SESSION['user']['schoolid']);
                 controller_main_function::send_result($result);
+                break;
+
+            case 'get_key_fact':
+                echo access_school_key_fact::key_facts_to_string();
                 break;
         }
 
@@ -79,11 +100,6 @@ if (isset($_SESSION['emailid']) && $_SESSION['emailid'] != '' ) {
     }
 }else{
 
-    header('Location:  https://ancestryatlas.com/');
+    echo false;
 }
-
-
-
-
-
 
