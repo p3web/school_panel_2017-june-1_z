@@ -46,3 +46,15 @@ function CreateClassesTblData(Data) {
     }
     setData(ClassesData , ClassesGrid);
 }
+
+
+/*key fact*/
+function LoadKeyFact(){
+    ajax.sender_data_json_by_url_callback('/backend/controller_school_admin_panel.php',{act:'get_key_fact_json'},CreateKeyFactData);
+}
+function CreateKeyFactData(Data) {
+
+    $('#Keyfact').html(Data.data);
+
+}
+

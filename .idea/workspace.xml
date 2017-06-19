@@ -2,14 +2,40 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="676e04ff-6d34-48ac-9098-ebf739dc256d" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/access_org_admin_panel.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/access_school_key_fact.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lang.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/documentation/timing/Time Sheet1.xlsx" afterPath="$PROJECT_DIR$/documentation/timing/Time Sheet1.xlsx" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/access_school_admin_panel.php" afterPath="$PROJECT_DIR$/access_school_admin_panel.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/controller_main_function.php" afterPath="$PROJECT_DIR$/controller_main_function.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/controller_school_admin_panel.php" afterPath="$PROJECT_DIR$/controller_school_admin_panel.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/page/SchoolAdmin/temp/domvas.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/page/SchoolAdmin/temp/html2canvas.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/page/OrgAdmin/Belief.html" afterPath="$PROJECT_DIR$/page/OrgAdmin/Belief.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/page/SchoolAdmin/Belief.html" afterPath="$PROJECT_DIR$/page/SchoolAdmin/Belief.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/page/TeamAdmin/Belief.html" afterPath="$PROJECT_DIR$/page/TeamAdmin/Belief.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/page/CssMapChartPrint.css" afterPath="$PROJECT_DIR$/page/CssMapChartPrint.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/page/OrgAdmin/Export.html" afterPath="$PROJECT_DIR$/page/OrgAdmin/Export.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/page/SchoolAdmin/Export.html" afterPath="$PROJECT_DIR$/page/SchoolAdmin/Export.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/page/TeamAdmin/Export.html" afterPath="$PROJECT_DIR$/page/TeamAdmin/Export.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/page/OrgAdmin/ExportDonut.html" afterPath="$PROJECT_DIR$/page/OrgAdmin/ExportDonut.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/page/SchoolAdmin/ExportDonut.html" afterPath="$PROJECT_DIR$/page/SchoolAdmin/ExportDonut.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/page/TeamAdmin/ExportDonut.html" afterPath="$PROJECT_DIR$/page/TeamAdmin/ExportDonut.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/page/OrgAdmin/ExportDonutPrint.html" afterPath="$PROJECT_DIR$/page/OrgAdmin/ExportDonutPrint.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/page/SchoolAdmin/ExportDonutPrint.html" afterPath="$PROJECT_DIR$/page/SchoolAdmin/ExportDonutPrint.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/page/TeamAdmin/ExportDonutPrint.html" afterPath="$PROJECT_DIR$/page/TeamAdmin/ExportDonutPrint.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/page/OrgAdmin/ExportPrint.html" afterPath="$PROJECT_DIR$/page/OrgAdmin/ExportPrint.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/page/SchoolAdmin/ExportPrint.html" afterPath="$PROJECT_DIR$/page/SchoolAdmin/ExportPrint.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/page/TeamAdmin/ExportPrint.html" afterPath="$PROJECT_DIR$/page/TeamAdmin/ExportPrint.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/page/OrgAdmin/js/load_pages/Index.js" afterPath="$PROJECT_DIR$/page/OrgAdmin/js/load_pages/Index.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/page/SchoolAdmin/js/load_pages/Index.js" afterPath="$PROJECT_DIR$/page/SchoolAdmin/js/load_pages/Index.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/page/TeamAdmin/js/load_pages/Index.js" afterPath="$PROJECT_DIR$/page/TeamAdmin/js/load_pages/Index.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/page/OrgAdmin/Language.html" afterPath="$PROJECT_DIR$/page/OrgAdmin/Language.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/page/SchoolAdmin/Language.html" afterPath="$PROJECT_DIR$/page/SchoolAdmin/Language.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/page/TeamAdmin/Language.html" afterPath="$PROJECT_DIR$/page/TeamAdmin/Language.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/page/OrgAdmin/Map.html" afterPath="$PROJECT_DIR$/page/OrgAdmin/Map.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/page/SchoolAdmin/Map.html" afterPath="$PROJECT_DIR$/page/SchoolAdmin/Map.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/page/TeamAdmin/Map.html" afterPath="$PROJECT_DIR$/page/TeamAdmin/Map.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/page/js/PrintExport.js" afterPath="$PROJECT_DIR$/page/js/PrintExport.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/page/OrgAdmin/index.html" afterPath="$PROJECT_DIR$/page/OrgAdmin/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/page/SchoolAdmin/index.html" afterPath="$PROJECT_DIR$/page/SchoolAdmin/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/page/TeamAdmin/index.html" afterPath="$PROJECT_DIR$/page/TeamAdmin/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/page/js/sweetalert/msg.js" afterPath="$PROJECT_DIR$/page/js/sweetalert/msg.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/page/js/sweetalert/sweetalert2.css" afterPath="$PROJECT_DIR$/page/js/sweetalert/sweetalert2.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/page/js/sweetalert/sweetalert2.js" afterPath="$PROJECT_DIR$/page/js/sweetalert/sweetalert2.js" />
     </list>
     <ignored path="school_panel_2017-june-1_z.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -33,18 +59,7 @@
     <favorites_list name="school_panel_2017-june-1_z" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file leaf-file-name="access_org_admin_panel.php" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/access_org_admin_panel.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="313">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf />
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -153,24 +168,6 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="school_panel_2017-june-1_z" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="school_panel_2017-june-1_z" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="page" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="SchoolAdmin" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
         </subPane>
       </pane>
     </panes>
@@ -238,7 +235,7 @@
     <frame x="0" y="0" width="1366" height="768" extended-state="0" />
     <editor active="false" />
     <layout>
-      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.47707736" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.47707736" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -830,44 +827,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/page/SchoolAdmin/index.html">
+    <entry file="file://$PROJECT_DIR$/access_org_admin_panel.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-12.747603" vertical-offset="3990" max-vertical-offset="9015">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="n#style#0;n#div#1;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#a#1;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#a#2;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#1;n#div#1;n#div#2;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#b#0;n#div#0;n#div#0;n#div#1;n#div#1;n#div#2;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#select#0;n#div#0;n#div#0;n#div#1;n#div#1;n#div#2;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#ul#0;n#div#6;n#div#0;n#div#1;n#div#1;n#div#2;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#p#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#span#0;n#p#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#a#0;n#span#0;n#p#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#span#1;n#p#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#a#0;n#span#1;n#p#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#a#1;n#span#1;n#p#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#a#2;n#span#1;n#p#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#span#2;n#p#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#h4#0;n#div#0;n#div#0;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#h3#0;n#form#0;n#div#1;n#div#0;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#label#0;n#div#0;n#form#0;n#div#1;n#div#0;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#input#0;n#div#0;n#div#0;n#form#0;n#div#1;n#div#0;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#input#0;n#div#0;n#div#0;n#div#5;n#form#0;n#div#1;n#div#0;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#label#0;n#div#1;n#div#0;n#div#5;n#form#0;n#div#1;n#div#0;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#h3#1;n#form#0;n#div#1;n#div#0;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#h3#2;n#form#0;n#div#1;n#div#0;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
+        <state vertical-scroll-proportion="-2.5" vertical-offset="0" max-vertical-offset="150">
+          <caret line="9" column="0" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/access_org_admin_panel.php">
+    <entry file="file://$PROJECT_DIR$/page/js/ajax.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="150">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2700">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
