@@ -73,7 +73,15 @@
 .Chart-table th {
     text-align: center !important;
 }
-
+.labelBlock label{
+    display: block;
+    font-weight: 400;
+    margin-bottom: 0;
+}
+.labelBlock > form label{
+    display: block;
+    font-weight: 400;
+}
 /* Tab Control */
 
 .panelControl {
@@ -177,8 +185,17 @@
     -o-transition: all 0.5s;
     transition: all 0.5s;
     z-index: 2;
+    cursor: pointer;
 }
 
+.text-muted{
+    width:90%;
+    margin:0 auto;
+}
+.actionIcon{
+    cursor: pointer;
+    margin-left:5px;
+}
 @media (max-width: 992px) {
     .panelControl {
         height: 0;
