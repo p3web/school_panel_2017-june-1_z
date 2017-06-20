@@ -1230,6 +1230,7 @@ function test_input($data)
 
                             <div id="key_facts" class="tab-pane fade">
 
+                                <br><br>
                                 <!-- <br>
                       <strong> The description of the Key Facts goes here.</strong>
                     <br>
@@ -1242,17 +1243,71 @@ function test_input($data)
 
 
                                 <?php
+                                //$result_num_of_language_spoken = num_of_language_spoken($schoolId,$className,$deptName);
+                                echo "<ul style='color: black; line-height: 200%; font-size: medium;'>";
+                                echo "<li>";
                                 echo PSCO_func::languages($schoolId, $className);
-                                echo "<br>";
+                                echo "</li>";
+                                echo "<li>";
                                 echo PSCO_func::different_faiths($schoolId, $className);
-                                echo "<br>";
+                                echo "</li>";
+                                echo "<li>";
                                 echo PSCO_func::count_Languages($schoolId, $className);
-                                echo "<br>";
+                                echo "</li>";
+                                echo "<li>";
                                 echo PSCO_func::grandparents($schoolId, $className);
-                                echo "<br>";
+                                echo "</li>";
+                                echo "<li>";
                                 echo PSCO_func::Highest_number($schoolId, $className);
-                                echo "<br>";
+                                echo "</li>";
+                                echo "<li>";
                                 echo PSCO_func::How_many_number($schoolId, $className);
+                                echo "</li>";
+                                echo "<li>";
+                                echo PSCO_func::born_country($schoolId, $className)[0];
+                                echo "</li>";
+                                echo "<li>";
+                                echo PSCO_func::born_country($schoolId, $className)[1];
+                                echo "</li>";
+                                echo "<li>";
+                                echo PSCO_func::born_country($schoolId, $className)[2];
+                                echo "</li>";
+                                echo "<li>";
+                                echo PSCO_func::male_female_know_language($schoolId, $className);
+                                echo "</li>";
+                                echo "<li>";
+                                echo PSCO_func::cultures_country_influence($schoolId, $className);
+                                echo "</li>";
+                                echo "<li>";
+                                echo PSCO_func::top_migrant($schoolId, $className);
+                                echo "</li>";
+                                echo "<li>";
+                                echo PSCO_func::num_of_language_spoken($schoolId, $className)[0];
+                                echo "</li>";
+                                echo "<li>";
+                                echo PSCO_func::num_of_language_spoken($schoolId, $className)[1];
+                                echo "</li>";
+                                echo "<li>";
+                                echo PSCO_func::num_of_language_spoken($schoolId, $className)[2];
+                                echo "</li>";
+                                echo "<li>";
+                                echo PSCO_func::invitation_status($schoolId, $className);
+                                echo "</li>";
+                                echo "<li>";
+                                echo PSCO_func::parent_born_overseas($schoolId, $className);
+                                echo "</li>";
+                                echo "<li>";
+                                echo PSCO_func::gparent_born_overseas($schoolId, $className);
+                                echo "</li>";
+                                echo "<li>";
+                                echo PSCO_func::age_language_stats($schoolId, $className);
+                                echo "</li>";
+                                echo "<li>";
+                                echo PSCO_func::age_belief_stats($schoolId, $className);
+                                echo "</li>";
+
+
+                                echo "</ul>";
 
                                 ?>
                             </div>

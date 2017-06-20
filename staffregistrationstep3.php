@@ -360,7 +360,7 @@ $combineErr="";
 						if(!mysql_query("insert into stafflanguage(staffemailid, languagename, languagelevel) values('$email','$language','$languageLevel')",$con)){
 								$allDataInserted ="no";
 								$languageerror="yes";
-								die("ERROR: Data not inserted".mysql_error());
+								die("ERROR: Data not inserted ".mysql_error());
 								break;
 						}
 					}// for loop ends

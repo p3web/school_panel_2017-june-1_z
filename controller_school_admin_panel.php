@@ -73,15 +73,83 @@ if (isset($_SESSION['emailid']) && $_SESSION['emailid'] != '' ) {
                 if (!isset($valid_data['is_valid']) || $valid_data['is_valid'] == false) {
                     controller_main_function::send_msg(lang::$invalid_data, lang::$error);
                 }
-                access_school_admin_panel::delete_teacher_by_teacherEmailId($_REQUEST["teacheremailid"]);
+                access_school_admin_panel::get_teacher_by_teacheremailid($_REQUEST["teacheremailid"]);
                 controller_main_function::send_msg(lang::$success, lang::$message);
                 break;
-            case 'delete_teacher_by_teacheremailid':
+
+            case 'get_teacher_lang_by_teacherEmailId':
+                $valid_data = controller_main_function::check_validation(array("teacheremailid"));
+                if (!isset($valid_data['is_valid']) || $valid_data['is_valid'] == false) {
+                    controller_main_function::send_msg(lang::$invalid_data, lang::$error);
+                }
+                access_school_admin_panel::get_teacher_lang_by_teacherEmailId($_REQUEST["teacheremailid"]);
+                controller_main_function::send_msg(lang::$success, lang::$message);
+                break;
+            case 'get_teacher_birthDetails_by_teacherEmailId':
+                $valid_data = controller_main_function::check_validation(array("teacheremailid"));
+                if (!isset($valid_data['is_valid']) || $valid_data['is_valid'] == false) {
+                    controller_main_function::send_msg(lang::$invalid_data, lang::$error);
+                }
+                access_school_admin_panel::get_teacher_birthDetails_by_teacherEmailId($_REQUEST["teacheremailid"]);
+                controller_main_function::send_msg(lang::$success, lang::$message);
+                break;
+
+            case 'delete_teacher_by_teacherEmailId':
                 $valid_data = controller_main_function::check_validation(array("teacheremailid"));
                 if (!isset($valid_data['is_valid']) || $valid_data['is_valid'] == false) {
                     controller_main_function::send_msg(lang::$invalid_data, lang::$error);
                 }
                 access_school_admin_panel::delete_teacher_by_teacherEmailId($_REQUEST["teacheremailid"]);
+                controller_main_function::send_msg(lang::$success, lang::$message);
+                break;
+            case 'delete_teacher_birthDetails_by_teacherEmailId':
+                $valid_data = controller_main_function::check_validation(array("teacheremailid"));
+                if (!isset($valid_data['is_valid']) || $valid_data['is_valid'] == false) {
+                    controller_main_function::send_msg(lang::$invalid_data, lang::$error);
+                }
+                access_school_admin_panel::delete_teacher_birthDetails_by_teacherEmailId($_REQUEST["teacheremailid"]);
+                controller_main_function::send_msg(lang::$success, lang::$message);
+                break;
+
+            case 'delete_teacher_lang_by_langID':
+                $valid_data = controller_main_function::check_validation(array("id"));
+                if (!isset($valid_data['is_valid']) || $valid_data['is_valid'] == false) {
+                    controller_main_function::send_msg(lang::$invalid_data, lang::$error);
+                }
+                access_school_admin_panel::delete_teacher_lang_by_langID($_REQUEST["id"]);
+                controller_main_function::send_msg(lang::$success, lang::$message);
+                break;
+            case 'edit_teacher_by_teacherEmailId':
+                $valid_data = controller_main_function::check_validation(array("teacheremailid","firstname","lastname","gender","religion"));
+                if (!isset($valid_data['is_valid']) || $valid_data['is_valid'] == false) {
+                    controller_main_function::send_msg(lang::$invalid_data, lang::$error);
+                }
+                access_school_admin_panel::edit_teacher_by_teacherEmailId($_REQUEST["teacheremailid"],$_REQUEST["firstname"],$_REQUEST["lastname"],$_REQUEST["gender"],$_REQUEST["religion"]);
+                controller_main_function::send_msg(lang::$success, lang::$message);
+                break;
+             case 'edit_teacher_birthDetails_by_teacherEmailId':
+                $valid_data = controller_main_function::check_validation(array("teacheremailid","birthplace","fatherbirthplace","motherbirthplace","fatherfatherbirthplace","fathermotherbirthplace","motherfatherbirthplace","mothermotherbirthplace"));
+                if (!isset($valid_data['is_valid']) || $valid_data['is_valid'] == false) {
+                    controller_main_function::send_msg(lang::$invalid_data, lang::$error);
+                }
+                access_school_admin_panel::edit_teacher_birthDetails_by_teacherEmailId($_REQUEST["teacheremailid"],$_REQUEST["birthplace"],$_REQUEST["fatherbirthplace"],$_REQUEST["motherbirthplace"],$_REQUEST["fatherfatherbirthplace"],$_REQUEST["fathermotherbirthplace"],$_REQUEST["motherfatherbirthplace"],$_REQUEST["mothermotherbirthplace"]);
+                controller_main_function::send_msg(lang::$success, lang::$message);
+                break;
+
+            case 'edit_teacher_lang_bylangId':
+                $valid_data = controller_main_function::check_validation(array("id","languagename","languagelevel"));
+                if (!isset($valid_data['is_valid']) || $valid_data['is_valid'] == false) {
+                    controller_main_function::send_msg(lang::$invalid_data, lang::$error);
+                }
+                access_school_admin_panel::edit_teacher_lang_bylangId($_REQUEST["id"],$_REQUEST["languagename"],$_REQUEST["languagelevel"]);
+                controller_main_function::send_msg(lang::$success, lang::$message);
+                break;
+            case 'edit_class_by_schoolId':
+                $valid_data = controller_main_function::check_validation(array("schoolId","current_name","name"));
+                if (!isset($valid_data['is_valid']) || $valid_data['is_valid'] == false) {
+                    controller_main_function::send_msg(lang::$invalid_data, lang::$error);
+                }
+                access_school_admin_panel::edit_class_by_schoolId($_REQUEST["schoolId"],$_REQUEST["current_name"],$_REQUEST["name"]);
                 controller_main_function::send_msg(lang::$success, lang::$message);
                 break;
             case 'get_tbl_classes':
@@ -90,7 +158,12 @@ if (isset($_SESSION['emailid']) && $_SESSION['emailid'] != '' ) {
                 break;
 
             case 'get_key_fact':
-                echo access_school_key_fact::key_facts_to_string();
+            echo access_school_key_fact::key_facts_to_string($_SESSION['user']['schoolid'],'S1');
+            break;
+
+            case 'get_key_fact_json':
+                $result = array("data" =>  access_school_key_fact::key_facts_to_string($_SESSION['user']['schoolid'],'S1'));
+                controller_main_function::send_result($result);
                 break;
         }
 

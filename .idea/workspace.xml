@@ -2,7 +2,459 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="676e04ff-6d34-48ac-9098-ebf739dc256d" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/access_school_key_fact.php" afterPath="$PROJECT_DIR$/access_school_key_fact.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.ftpquota" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/AA-homepage_bg_image.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/AA-logo-animation.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/AA-logo-animation.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/AA-logo-animations.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/AA.zip" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/studentform/AA_Printable form.pdf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/brochure/AA_borchure_digital.pdf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/AA_homepage_top_banner_screen.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/AA_trusted-icon.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ChartImage.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/HELP.pdf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/fonts/MuseoSans-100.otf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/fonts/MuseoSans-100Italic.otf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/fonts/MuseoSans-300.otf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/fonts/MuseoSans-300Italic.otf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/fonts/MuseoSans-700Italic.otf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/fonts/MuseoSans-900Italic.otf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/fonts/MuseoSans_100.otf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/fonts/MuseoSans_100_Italic.otf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/fonts/MuseoSans_300.otf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/fonts/MuseoSans_300.ttf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/fonts/MuseoSans_300_Italic.otf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/fonts/MuseoSans_300_Italic.ttf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/fonts/MuseoSans_500.otf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/fonts/MuseoSans_500_Italic.otf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/fonts/MuseoSans_700.otf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/fonts/MuseoSans_900.otf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/phpmailertesting/PHPMailer_5.2.0.zip" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lessonplans/UNIT 1.pdf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lessonplans/UNIT 2.pdf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lessonplans/UNIT 3.pdf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lessonplans/UNIT 4.pdf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/active.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/phpmailertesting/PHPMailer_5.2.0/test_script/images/aikido.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/arrow-help.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/bg.JPG" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/bg1.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/bg2.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/bg3.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/bg_image_princing_corporate.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/bg_image_princing_school.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/phpmailertesting/PHPMailer_5.2.0/test_script/images/bkgrnd.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/brocher.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/brochure.zip" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/fpdf/tutorial/calligra.ttf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/fpdf/tutorial/calligra.z" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cgi-bin.zip" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/circle-help.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/phpmailertesting/PHPMailer_5.2.0/test_script/scripts/clipboard.swf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/venobox/close.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/corporatepricelist.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/crossy2.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/culturalinfusionlogo.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/delete.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/deletehover.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/edit.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/edithover.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/error_log_26052017.tgz" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/phpmailertesting/face.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/favicon.ico" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/galleryimage1.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/phpmailertesting/PHPMailer_5.2.0/test_script/styles/help.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/img1.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/img2.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/langout.xls" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/langout.xlsx" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/lessonplanicon.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/fpdf/tutorial/logo.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/logo.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/logoM.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/phpmailertesting/PHPMailer_5.2.0/test_script/styles/magnifier.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/mainlogo.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/venobox/next.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/off.PNG" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/on.PNG" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/phpmailertesting/PHPMailer_5.2.0/test_script/styles/page_white_code.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/phpmailertesting/PHPMailer_5.2.0/test_script/styles/page_white_copy.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/pending.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/phpmailertesting/PHPMailer_5.2.0/examples/images/phpmailer.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/phpmailertesting/PHPMailer_5.2.0/test_script/images/phpmailer.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/phpmailertesting/PHPMailer_5.2.0/examples/images/phpmailer_mini.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/play.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/venobox/preload-circle.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/venobox/preload-dots.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/venobox/preload-ios.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/venobox/preload-quads.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/venobox/preload.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/venobox/prev.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/price.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/pricelist.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/phpmailertesting/PHPMailer_5.2.0/test_script/styles/printer.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/regionout.xls" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/regionout.xlsx" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/regions.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/religonout.xls" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/religonout.xlsx" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/school.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/schoolpricelist.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/small1.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/small2.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/small3.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/teamadminregionout.xls" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/test.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/phpmailertesting/PHPMailer_5.2.0/test/test.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/phpmailertesting/PHPMailer_5.2.0/test_script/styles/wrapping.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.htaccess" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/fpdf/tutorial/20k_c1.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/fpdf/tutorial/20k_c2.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/404.shtml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/phpmailertesting/PHPMailer_5.2.0/docs/Callback_function_notes.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/phpmailertesting/PHPMailer_5.2.0/docs/DomainKeys_notes.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/fpdf/FAQ.htm" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/page/js/Global.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Infogramtest.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/phpmailertesting/PHPMailer_5.2.0/test_script/LGPLv3.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/phpmailertesting/PHPMailer_5.2.0/LICENSE" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/phpmailertesting/PHPMailer_5.2.0/docs/Note_for_SMTP_debugging.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/PSCO_data.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/PSCO_test.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/phpmailertesting/PHPMailer_5.2.0/README" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/fpdf/doc/__construct.htm" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/phpmailertesting/PHPMailer_5.2.0/aboutus.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/fpdf/doc/acceptpagebreak.htm" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/fpdf/doc/addfont.htm" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/fpdf/doc/addlink.htm" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/fpdf/doc/addpage.htm" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/adminpanel.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/adminpaneltest.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/adminregistration.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/adminregistrationtest.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/adminthanks.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/fpdf/doc/aliasnbpages.htm" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/autocompletecountry.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/autocompletelanguage.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/autocompletereligion.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/autocompleteschools.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/fpdf/tutorial/calligra.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cancel.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/fpdf/doc/cell.htm" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/fpdf/changelog.htm" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/phpmailertesting/PHPMailer_5.2.0/changelog.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/phpmailertesting/PHPMailer_5.2.0/class.phpmailer.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/phpmailertesting/PHPMailer_5.2.0/class.pop3.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/phpmailertesting/PHPMailer_5.2.0/class.smtp.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/fpdf/doc/close.htm" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/connection.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/contactus.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/contactusadmin.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/contactusteacher.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/phpmailertesting/PHPMailer_5.2.0/examples/contents.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/phpmailertesting/PHPMailer_5.2.0/test/contents.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/phpmailertesting/PHPMailer_5.2.0/test_script/contents.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/fpdf/tutorial/countries.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/fpdf/font/courier.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/fpdf/font/courierb.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/fpdf/font/courierbi.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/fpdf/font/courieri.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/fpdf/makefont/cp1250.map" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/fpdf/makefont/cp1251.map" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/fpdf/makefont/cp1252.map" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/fpdf/makefont/cp1253.map" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/fpdf/makefont/cp1254.map" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/fpdf/makefont/cp1255.map" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/fpdf/makefont/cp1257.map" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/fpdf/makefont/cp1258.map" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/fpdf/makefont/cp874.map" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/culturalinfusiongeochart.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dataout.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/deletestaff.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/deletestudent.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/departmentadminpanel.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/departmentregistrationstep2.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/deptthanks.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/phpmailertesting/PHPMailer_5.2.0/docs.ini" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/emailbodycontent.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/phpmailertesting/emailsending.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/fpdf/doc/error.htm" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/error_log" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/export/error_log" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/export/exp.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/exportteacher.php.old" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/exportteacher.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/phpmailertesting/PHPMailer_5.2.0/docs/extending.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/phpmailertesting/PHPMailer_5.2.0/docs/faq.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/faq.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/faqadmin.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/faqteacher.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/fpdf/doc/footer.htm" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/footer.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/footeradmin.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/footerteacher.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/forgetpassword.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/forgetpasswordstep1.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/fpdf/fpdf.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/fpdf/fpdf.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/fpdf/doc/getpageheight.htm" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/fpdf/doc/getpagewidth.htm" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/fpdf/doc/getstringwidth.htm" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/fpdf/doc/getx.htm" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/fpdf/doc/gety.htm" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/fpdf/doc/header.htm" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/header.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/headeradmin.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/headerteacher.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/help.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/fpdf/font/helvetica.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/fpdf/font/helveticab.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/fpdf/font/helveticabi.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/fpdf/font/helveticai.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/phpmailertesting/PHPMailer_5.2.0/extras/htmlfilter.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/fpdf/doc/image.htm" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/fpdf/doc/index.htm" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/fpdf/tutorial/index.htm" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/phpmailertesting/PHPMailer_5.2.0/examples/index.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/index.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/phpmailertesting/PHPMailer_5.2.0/test_script/index.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/indexaa.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/indexoldwepage.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/info.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/insertindivstudentdetails.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/fpdf/install.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/fpdf/makefont/iso-8859-1.map" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/fpdf/makefont/iso-8859-11.map" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/fpdf/makefont/iso-8859-15.map" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/fpdf/makefont/iso-8859-16.map" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/fpdf/makefont/iso-8859-2.map" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/fpdf/makefont/iso-8859-4.map" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/fpdf/makefont/iso-8859-5.map" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/fpdf/makefont/iso-8859-7.map" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/fpdf/makefont/iso-8859-9.map" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/jsondataout.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/fpdf/makefont/koi8-r.map" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/fpdf/makefont/koi8-u.map" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/langadmindataout.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/langout.csv" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/langteacherdataout.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/fpdf/license.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/fpdf/doc/line.htm" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/fpdf/doc/link.htm" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/fpdf/doc/ln.htm" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/login.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/loginold.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/logintest.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/fpdf/makefont/makefont.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/fpdf/tutorial/makefont.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/fpdf/doc/multicell.htm" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/org_admin_panel.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/orgadminregistration.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/organisationadminpanel.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/fpdf/doc/output.htm" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/fpdf/doc/pageno.htm" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/payment.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/peyman_test_teachpanel.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/phpinfo.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/phpmailertesting/PHPMailer_5.2.0/language/phpmailer.lang-ar.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/phpmailertesting/PHPMailer_5.2.0/language/phpmailer.lang-br.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/phpmailertesting/PHPMailer_5.2.0/language/phpmailer.lang-ca.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/phpmailertesting/PHPMailer_5.2.0/language/phpmailer.lang-ch.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/phpmailertesting/PHPMailer_5.2.0/language/phpmailer.lang-cz.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/phpmailertesting/PHPMailer_5.2.0/language/phpmailer.lang-de.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/phpmailertesting/PHPMailer_5.2.0/language/phpmailer.lang-dk.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/phpmailertesting/PHPMailer_5.2.0/language/phpmailer.lang-es.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/phpmailertesting/PHPMailer_5.2.0/language/phpmailer.lang-et.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/phpmailertesting/PHPMailer_5.2.0/language/phpmailer.lang-fi.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/phpmailertesting/PHPMailer_5.2.0/language/phpmailer.lang-fo.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/phpmailertesting/PHPMailer_5.2.0/language/phpmailer.lang-fr.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/phpmailertesting/PHPMailer_5.2.0/language/phpmailer.lang-hu.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/phpmailertesting/PHPMailer_5.2.0/language/phpmailer.lang-it.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/phpmailertesting/PHPMailer_5.2.0/language/phpmailer.lang-ja.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/phpmailertesting/PHPMailer_5.2.0/language/phpmailer.lang-nl.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/phpmailertesting/PHPMailer_5.2.0/language/phpmailer.lang-no.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/phpmailertesting/PHPMailer_5.2.0/language/phpmailer.lang-pl.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/phpmailertesting/PHPMailer_5.2.0/language/phpmailer.lang-ro.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/phpmailertesting/PHPMailer_5.2.0/language/phpmailer.lang-ru.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/phpmailertesting/PHPMailer_5.2.0/language/phpmailer.lang-se.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/phpmailertesting/PHPMailer_5.2.0/language/phpmailer.lang-tr.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/phpmailertesting/PHPMailer_5.2.0/language/phpmailer.lang-zh.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/phpmailertesting/PHPMailer_5.2.0/language/phpmailer.lang-zh_cn.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/phpmailertesting/PHPMailer_5.2.0/test/phpmailerTest.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/phpmailertesting/PHPMailer_5.2.0/docs/pop3_article.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/privacy.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/privacyadmin.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/privacyteacher.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/fpdf/doc/rect.htm" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/regionadmindataout.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/regionmapdataout.csv" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/regionout.csv" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/regionteacherdataout.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/religonadmindataout.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/religonout.csv" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/religonteacherdataout.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/robots.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/selectstaffinfo.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/selectstudentinfo.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/fpdf/doc/setauthor.htm" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/fpdf/doc/setautopagebreak.htm" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/fpdf/doc/setcompression.htm" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/fpdf/doc/setcreator.htm" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/fpdf/doc/setdisplaymode.htm" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/fpdf/doc/setdrawcolor.htm" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/fpdf/doc/setfillcolor.htm" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/fpdf/doc/setfont.htm" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/fpdf/doc/setfontsize.htm" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/fpdf/doc/setkeywords.htm" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/fpdf/doc/setleftmargin.htm" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/fpdf/doc/setlinewidth.htm" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/fpdf/doc/setlink.htm" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/fpdf/doc/setmargins.htm" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/fpdf/doc/setrightmargin.htm" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/fpdf/doc/setsubject.htm" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/fpdf/doc/settextcolor.htm" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/fpdf/doc/settitle.htm" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/fpdf/doc/settopmargin.htm" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/fpdf/doc/setx.htm" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/fpdf/doc/setxy.htm" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/fpdf/doc/sety.htm" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/phpmailertesting/PHPMailer_5.2.0/test_script/scripts/shBrushBash.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/phpmailertesting/PHPMailer_5.2.0/test_script/scripts/shBrushCSharp.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/phpmailertesting/PHPMailer_5.2.0/test_script/scripts/shBrushCpp.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/phpmailertesting/PHPMailer_5.2.0/test_script/scripts/shBrushCss.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/phpmailertesting/PHPMailer_5.2.0/test_script/scripts/shBrushDelphi.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/phpmailertesting/PHPMailer_5.2.0/test_script/scripts/shBrushDiff.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/phpmailertesting/PHPMailer_5.2.0/test_script/scripts/shBrushGroovy.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/phpmailertesting/PHPMailer_5.2.0/test_script/scripts/shBrushJScript.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/phpmailertesting/PHPMailer_5.2.0/test_script/scripts/shBrushJava.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/phpmailertesting/PHPMailer_5.2.0/test_script/scripts/shBrushPerl.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/phpmailertesting/PHPMailer_5.2.0/test_script/scripts/shBrushPhp.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/phpmailertesting/PHPMailer_5.2.0/test_script/scripts/shBrushPlain.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/phpmailertesting/PHPMailer_5.2.0/test_script/scripts/shBrushPython.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/phpmailertesting/PHPMailer_5.2.0/test_script/scripts/shBrushRuby.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/phpmailertesting/PHPMailer_5.2.0/test_script/scripts/shBrushScala.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/phpmailertesting/PHPMailer_5.2.0/test_script/scripts/shBrushSql.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/phpmailertesting/PHPMailer_5.2.0/test_script/scripts/shBrushVb.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/phpmailertesting/PHPMailer_5.2.0/test_script/scripts/shBrushXml.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/phpmailertesting/PHPMailer_5.2.0/test_script/styles/shCore.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/phpmailertesting/PHPMailer_5.2.0/test_script/scripts/shCore.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/phpmailertesting/PHPMailer_5.2.0/test_script/src/shCore.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/phpmailertesting/PHPMailer_5.2.0/test_script/scripts/shLegacy.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/phpmailertesting/PHPMailer_5.2.0/test_script/src/shLegacy.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/phpmailertesting/PHPMailer_5.2.0/test_script/styles/shThemeDefault.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/phpmailertesting/PHPMailer_5.2.0/test_script/styles/shThemeDjango.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/phpmailertesting/PHPMailer_5.2.0/test_script/styles/shThemeEmacs.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/phpmailertesting/PHPMailer_5.2.0/test_script/styles/shThemeFadeToGrey.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/phpmailertesting/PHPMailer_5.2.0/test_script/styles/shThemeMidnight.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/phpmailertesting/PHPMailer_5.2.0/test_script/styles/shThemeRDark.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/staffcount.csv" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/staffthanks.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/stcountout.csv" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/studentregistrationstep1old.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/studentregistrationstep2.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/studentregistrationstep2old.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/studentregistrationstep3old.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/studentthanks.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/styletestzain.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/css/styletestzain.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/success.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/fpdf/font/symbol.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/teacherlangout.csv" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/teacherpanelDynamictest.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/teacherpanelold.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/teacherpaneltestextreme.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/teacherpanelyahoo.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/teacherregionmapdataout.csv" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/teacherregistrationstep1old.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/teacherregistrationstep2.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/teacherregistrationstep2old.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/teacherregistrationstep3old.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/teacherreligonout.csv" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/teacherthanks.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/teamadminlangout.csv" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/teamadminpanelold.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/teamadminpaneltest.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/teamadminpaneltestzain.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/teamadminregionout.csv" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/teamadminreligonout.csv" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/teamregistrationstep2.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/teamthanks.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/phpmailertesting/PHPMailer_5.2.0/test_script/test.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/phpmailertesting/PHPMailer_5.2.0/test/test_callback.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/phpmailertesting/PHPMailer_5.2.0/examples/test_db_smtp_basic.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/phpmailertesting/PHPMailer_5.2.0/examples/test_mail_advanced.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/phpmailertesting/PHPMailer_5.2.0/examples/test_mail_basic.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/phpmailertesting/PHPMailer_5.2.0/examples/test_pop_before_smtp_advanced.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/phpmailertesting/PHPMailer_5.2.0/examples/test_pop_before_smtp_basic.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/phpmailertesting/PHPMailer_5.2.0/examples/test_sendmail_advanced.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/phpmailertesting/PHPMailer_5.2.0/examples/test_sendmail_basic.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/phpmailertesting/PHPMailer_5.2.0/examples/test_smtp_advanced.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/phpmailertesting/PHPMailer_5.2.0/examples/test_smtp_advanced_no_auth.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/phpmailertesting/PHPMailer_5.2.0/examples/test_smtp_basic.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/phpmailertesting/PHPMailer_5.2.0/examples/test_smtp_basic_no_auth.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/phpmailertesting/PHPMailer_5.2.0/examples/test_smtp_gmail_advanced.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/phpmailertesting/PHPMailer_5.2.0/examples/test_smtp_gmail_basic.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/phpmailertesting/PHPMailer_5.2.0/test/testemail.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/fpdf/doc/text.htm" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/fpdf/font/times.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/fpdf/font/timesb.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/fpdf/font/timesbi.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/fpdf/font/timesi.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/fpdf/makefont/ttfparser.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/fpdf/tutorial/tuto1.htm" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/fpdf/tutorial/tuto1.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/fpdf/tutorial/tuto2.htm" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/fpdf/tutorial/tuto2.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/fpdf/tutorial/tuto3.htm" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/fpdf/tutorial/tuto3.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/fpdf/tutorial/tuto4.htm" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/fpdf/tutorial/tuto4.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/fpdf/tutorial/tuto5.htm" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/fpdf/tutorial/tuto5.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/fpdf/tutorial/tuto6.htm" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/fpdf/tutorial/tuto6.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/fpdf/tutorial/tuto7.htm" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/fpdf/tutorial/tuto7.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/under_construction.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/phpmailertesting/PHPMailer_5.2.0/docs/use_gmail.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/validatecountryname.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/validindivdata.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/venobox/venobox.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/venobox/venobox.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/venobox/venobox.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/verify.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/verifydepartment.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/verifyforgetpassword.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/verifyorgadmin.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/verifystaff.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/verifystudent.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/verifyteacher.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/verifyteam.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/fpdf/doc/write.htm" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/fpdf/font/zapfdingbats.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/AdminPanel.css" afterPath="$PROJECT_DIR$/css/AdminPanel.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/page/CssMapChart.css" afterPath="$PROJECT_DIR$/page/CssMapChart.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/page/CssMapChartPrint.css" afterPath="$PROJECT_DIR$/page/CssMapChartPrint.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/page/SchoolAdmin/js/load_pages/Index.js" afterPath="$PROJECT_DIR$/page/SchoolAdmin/js/load_pages/Index.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/page/SchoolAdmin/Map.html" afterPath="$PROJECT_DIR$/page/SchoolAdmin/Map.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/page/js/PSCO_Grid.js" afterPath="$PROJECT_DIR$/page/js/PSCO_Grid.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/PSCO_GridStyle.css" afterPath="$PROJECT_DIR$/css/PSCO_GridStyle.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/PSCO_function.php" afterPath="$PROJECT_DIR$/PSCO_function.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/access_school_admin_panel.php" afterPath="$PROJECT_DIR$/access_school_admin_panel.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/carousel.css" afterPath="$PROJECT_DIR$/css/carousel.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/control/control_teacherpanel.php" afterPath="$PROJECT_DIR$/control/control_teacherpanel.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/controller_school_admin_panel.php" afterPath="$PROJECT_DIR$/controller_school_admin_panel.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/headerteamadmin.php" afterPath="$PROJECT_DIR$/headerteamadmin.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/page/SchoolAdmin/index.html" afterPath="$PROJECT_DIR$/page/SchoolAdmin/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/page/js/sweetalert/msg.js" afterPath="$PROJECT_DIR$/page/js/sweetalert/msg.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/peyman_test_teampanel.php" afterPath="$PROJECT_DIR$/peyman_test_teampanel.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/staffregistrationstep2.php" afterPath="$PROJECT_DIR$/staffregistrationstep2.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/staffregistrationstep3.php" afterPath="$PROJECT_DIR$/staffregistrationstep3.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/teacherpanel.php" afterPath="$PROJECT_DIR$/teacherpanel.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/teamadminpanel.php" afterPath="$PROJECT_DIR$/teamadminpanel.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="school_panel_2017-june-1_z.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -26,20 +478,7 @@
     <favorites_list name="school_panel_2017-june-1_z" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file leaf-file-name="access_school_key_fact.php" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/access_school_key_fact.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="646">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding>
-                <marker date="1497859676000" expanded="true" signature="272:323" placeholder="..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf />
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -79,8 +518,8 @@
         <option value="$PROJECT_DIR$/teacherpanel.php" />
         <option value="$PROJECT_DIR$/teamadminpanel.php" />
         <option value="$PROJECT_DIR$/language.php" />
-        <option value="$PROJECT_DIR$/control/control_teacherpanel.php" />
         <option value="$PROJECT_DIR$/page/SchoolAdmin/index.html" />
+        <option value="$PROJECT_DIR$/control/control_teacherpanel.php" />
       </list>
     </option>
   </component>
@@ -148,6 +587,20 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="school_panel_2017-june-1_z" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="school_panel_2017-june-1_z" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="brochure" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
     </panes>
@@ -157,6 +610,7 @@
     <property name="WebServerToolWindowFactoryState" value="true" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../../../projects PHP/SmartHome/server_side_android_manager/admin_panel" />
+    <property name="LayoutCode.rearrangeEntriesPHP" value="false" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -222,7 +676,7 @@
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.31722054" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.31722054" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -264,10 +718,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1485">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <marker date="1497396371000" expanded="true" signature="-1:-1" placeholder="UPDATE stude..." />
-            <marker date="1497396371000" expanded="true" signature="-1:-1" placeholder="UPDATE stude..." />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -275,63 +726,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="30150">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <marker date="1497457543000" expanded="true" signature="-1:-1" placeholder="select * fro..teacher..." />
-            <marker date="1497457543000" expanded="true" signature="-1:-1" placeholder="select * fro..school..." />
-            <marker date="1497457543000" expanded="true" signature="-1:-1" placeholder="select class..classteacher..." />
-            <marker date="1497457543000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1497457543000" expanded="true" signature="-1:-1" placeholder="SELECT relig..student..." />
-            <marker date="1497457543000" expanded="true" signature="-1:-1" placeholder="SELECT relig..student..." />
-            <marker date="1497457543000" expanded="true" signature="-1:-1" placeholder="SELECT relig..student..." />
-            <marker date="1497457543000" expanded="true" signature="-1:-1" placeholder="select `stud..." />
-            <marker date="1497457543000" expanded="true" signature="-1:-1" placeholder="select `stud..." />
-            <marker date="1497457543000" expanded="true" signature="-1:-1" placeholder="select `stud..." />
-            <marker date="1497457543000" expanded="true" signature="-1:-1" placeholder="select `stud..." />
-            <marker date="1497457543000" expanded="true" signature="-1:-1" placeholder="select `stud..." />
-            <marker date="1497457543000" expanded="true" signature="-1:-1" placeholder="select `stud..." />
-            <marker date="1497457543000" expanded="true" signature="-1:-1" placeholder="select `stud..." />
-            <marker date="1497457543000" expanded="true" signature="-1:-1" placeholder="select x , C..temptable..." />
-            <marker date="1497457543000" expanded="true" signature="-1:-1" placeholder="select `stud..." />
-            <marker date="1497457543000" expanded="true" signature="-1:-1" placeholder="SELECT langu..studentlanguage..." />
-            <marker date="1497457543000" expanded="true" signature="-1:-1" placeholder="SELECT stude..student..." />
-            <marker date="1497457543000" expanded="true" signature="-1:-1" placeholder="SELECT langu..studentlanguage..." />
-            <marker date="1497457543000" expanded="true" signature="-1:-1" placeholder="SELECT stude..student..." />
-            <marker date="1497457543000" expanded="true" signature="-1:-1" placeholder="select class..classteacher..." />
-            <marker date="1497457543000" expanded="true" signature="-1:-1" placeholder="select * fro..student..." />
-            <marker date="1497457543000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1497457543000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1497457543000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1497457543000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1497457543000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1497457543000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1497457543000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1497457543000" expanded="true" signature="-1:-1" placeholder="select class..classteacher..." />
-            <marker date="1497457543000" expanded="true" signature="-1:-1" placeholder="select `stud..." />
-            <marker date="1497457543000" expanded="true" signature="-1:-1" placeholder="select `stud..." />
-            <marker date="1497457543000" expanded="true" signature="-1:-1" placeholder="select `stud..." />
-            <marker date="1497457543000" expanded="true" signature="-1:-1" placeholder="select `stud..." />
-            <marker date="1497457543000" expanded="true" signature="-1:-1" placeholder="select `stud..." />
-            <marker date="1497457543000" expanded="true" signature="-1:-1" placeholder="select `stud..." />
-            <marker date="1497457543000" expanded="true" signature="-1:-1" placeholder="select `stud..." />
-            <marker date="1497457543000" expanded="true" signature="-1:-1" placeholder="select x , C..temptable..." />
-            <marker date="1497457543000" expanded="true" signature="-1:-1" placeholder="select `stud..." />
-            <marker date="1497457543000" expanded="true" signature="-1:-1" placeholder="SELECT langu..studentlanguage..." />
-            <marker date="1497457543000" expanded="true" signature="-1:-1" placeholder="SELECT stude..student..." />
-            <marker date="1497457543000" expanded="true" signature="-1:-1" placeholder="SELECT langu..studentlanguage..." />
-            <marker date="1497457543000" expanded="true" signature="-1:-1" placeholder="SELECT stude..student..." />
-            <marker date="1497457543000" expanded="true" signature="-1:-1" placeholder="SELECT langu..studentlanguage..." />
-            <marker date="1497457543000" expanded="true" signature="-1:-1" placeholder="SELECT stude..student..." />
-            <marker date="1497457543000" expanded="true" signature="-1:-1" placeholder="SELECT langu..studentlanguage..." />
-            <marker date="1497457543000" expanded="true" signature="-1:-1" placeholder="SELECT stude..student..." />
-            <marker date="1497457543000" expanded="true" signature="-1:-1" placeholder="SELECT langu..studentlanguage..." />
-            <marker date="1497457543000" expanded="true" signature="-1:-1" placeholder="SELECT stude..student..." />
-            <marker date="1497457543000" expanded="true" signature="-1:-1" placeholder="SELECT langu..studentlanguage..." />
-            <marker date="1497457543000" expanded="true" signature="-1:-1" placeholder="SELECT stude..student..." />
-            <marker date="1497457543000" expanded="true" signature="-1:-1" placeholder="SELECT langu..studentlanguage..." />
-            <marker date="1497457543000" expanded="true" signature="-1:-1" placeholder="SELECT stude..student..." />
-            <marker date="1497457543000" expanded="true" signature="-1:-1" placeholder="SELECT langu..studentlanguage..." />
-            <marker date="1497457543000" expanded="true" signature="-1:-1" placeholder="SELECT stude..student..." />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -339,71 +734,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="30930">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <marker date="1497461397000" expanded="true" signature="-1:-1" placeholder="select * fro..teamadmin..." />
-            <marker date="1497461397000" expanded="true" signature="-1:-1" placeholder="select * fro..organisationadmin..." />
-            <marker date="1497461397000" expanded="true" signature="-1:-1" placeholder="select deptn..orgteamdetail..." />
-            <marker date="1497461397000" expanded="true" signature="-1:-1" placeholder="select teamn..orgteamdetail..." />
-            <marker date="1497461397000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1497461397000" expanded="true" signature="-1:-1" placeholder="SELECT relig..staff..." />
-            <marker date="1497461397000" expanded="true" signature="-1:-1" placeholder="SELECT relig..staff..." />
-            <marker date="1497461397000" expanded="true" signature="-1:-1" placeholder="select `staf..." />
-            <marker date="1497461397000" expanded="true" signature="-1:-1" placeholder="select `staf..." />
-            <marker date="1497461397000" expanded="true" signature="-1:-1" placeholder="select `staf..." />
-            <marker date="1497461397000" expanded="true" signature="-1:-1" placeholder="select `staf..." />
-            <marker date="1497461397000" expanded="true" signature="-1:-1" placeholder="select `staf..." />
-            <marker date="1497461397000" expanded="true" signature="-1:-1" placeholder="select `staf..." />
-            <marker date="1497461397000" expanded="true" signature="-1:-1" placeholder="select `staf..." />
-            <marker date="1497461397000" expanded="true" signature="-1:-1" placeholder="select x , C..temptable..." />
-            <marker date="1497461397000" expanded="true" signature="-1:-1" placeholder="select `staf..." />
-            <marker date="1497461397000" expanded="true" signature="-1:-1" placeholder="SELECT langu..stafflanguage..." />
-            <marker date="1497461397000" expanded="true" signature="-1:-1" placeholder="SELECT staff..staff..." />
-            <marker date="1497461397000" expanded="true" signature="-1:-1" placeholder="SELECT langu..stafflanguage..." />
-            <marker date="1497461397000" expanded="true" signature="-1:-1" placeholder="SELECT staff..staff..." />
-            <marker date="1497461397000" expanded="true" signature="-1:-1" placeholder="select teamn..orgteamdetail..." />
-            <marker date="1497461397000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1497461397000" expanded="true" signature="-1:-1" placeholder="select * fro..staff..." />
-            <marker date="1497461397000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1497461397000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1497461397000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1497461397000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1497461397000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1497461397000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1497461397000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1497461397000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1497461397000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1497461397000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1497461397000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1497461397000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1497461397000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1497461397000" expanded="true" signature="-1:-1" placeholder="select teamn..orgteamdetail..." />
-            <marker date="1497461397000" expanded="true" signature="-1:-1" placeholder="select `staf..." />
-            <marker date="1497461397000" expanded="true" signature="-1:-1" placeholder="select `staf..." />
-            <marker date="1497461397000" expanded="true" signature="-1:-1" placeholder="select `staf..." />
-            <marker date="1497461397000" expanded="true" signature="-1:-1" placeholder="select `staf..." />
-            <marker date="1497461397000" expanded="true" signature="-1:-1" placeholder="select `staf..." />
-            <marker date="1497461397000" expanded="true" signature="-1:-1" placeholder="select `staf..." />
-            <marker date="1497461397000" expanded="true" signature="-1:-1" placeholder="select `staf..." />
-            <marker date="1497461397000" expanded="true" signature="-1:-1" placeholder="select x , C..temptable..." />
-            <marker date="1497461397000" expanded="true" signature="-1:-1" placeholder="select `staf..." />
-            <marker date="1497461397000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1497461397000" expanded="true" signature="-1:-1" placeholder="SELECT langu..stafflanguage..." />
-            <marker date="1497461397000" expanded="true" signature="-1:-1" placeholder="SELECT staff..staff..." />
-            <marker date="1497461397000" expanded="true" signature="-1:-1" placeholder="SELECT langu..stafflanguage..." />
-            <marker date="1497461397000" expanded="true" signature="-1:-1" placeholder="SELECT staff..staff..." />
-            <marker date="1497461397000" expanded="true" signature="-1:-1" placeholder="SELECT langu..stafflanguage..." />
-            <marker date="1497461397000" expanded="true" signature="-1:-1" placeholder="SELECT staff..staff..." />
-            <marker date="1497461397000" expanded="true" signature="-1:-1" placeholder="SELECT langu..stafflanguage..." />
-            <marker date="1497461397000" expanded="true" signature="-1:-1" placeholder="SELECT staff..staff..." />
-            <marker date="1497461397000" expanded="true" signature="-1:-1" placeholder="SELECT langu..stafflanguage..." />
-            <marker date="1497461397000" expanded="true" signature="-1:-1" placeholder="SELECT staff..staff..." />
-            <marker date="1497461397000" expanded="true" signature="-1:-1" placeholder="SELECT langu..stafflanguage..." />
-            <marker date="1497461397000" expanded="true" signature="-1:-1" placeholder="SELECT staff..staff..." />
-            <marker date="1497461397000" expanded="true" signature="-1:-1" placeholder="SELECT langu..stafflanguage..." />
-            <marker date="1497461397000" expanded="true" signature="-1:-1" placeholder="SELECT staff..staff..." />
-            <marker date="1497461397000" expanded="true" signature="-1:-1" placeholder="SELECT langu..stafflanguage..." />
-            <marker date="1497461397000" expanded="true" signature="-1:-1" placeholder="SELECT staff..staff..." />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -656,63 +987,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="30150">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <marker date="1497457543000" expanded="true" signature="-1:-1" placeholder="select * fro..teacher..." />
-            <marker date="1497457543000" expanded="true" signature="-1:-1" placeholder="select * fro..school..." />
-            <marker date="1497457543000" expanded="true" signature="-1:-1" placeholder="select class..classteacher..." />
-            <marker date="1497457543000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1497457543000" expanded="true" signature="-1:-1" placeholder="SELECT relig..student..." />
-            <marker date="1497457543000" expanded="true" signature="-1:-1" placeholder="SELECT relig..student..." />
-            <marker date="1497457543000" expanded="true" signature="-1:-1" placeholder="SELECT relig..student..." />
-            <marker date="1497457543000" expanded="true" signature="-1:-1" placeholder="select `stud..." />
-            <marker date="1497457543000" expanded="true" signature="-1:-1" placeholder="select `stud..." />
-            <marker date="1497457543000" expanded="true" signature="-1:-1" placeholder="select `stud..." />
-            <marker date="1497457543000" expanded="true" signature="-1:-1" placeholder="select `stud..." />
-            <marker date="1497457543000" expanded="true" signature="-1:-1" placeholder="select `stud..." />
-            <marker date="1497457543000" expanded="true" signature="-1:-1" placeholder="select `stud..." />
-            <marker date="1497457543000" expanded="true" signature="-1:-1" placeholder="select `stud..." />
-            <marker date="1497457543000" expanded="true" signature="-1:-1" placeholder="select x , C..temptable..." />
-            <marker date="1497457543000" expanded="true" signature="-1:-1" placeholder="select `stud..." />
-            <marker date="1497457543000" expanded="true" signature="-1:-1" placeholder="SELECT langu..studentlanguage..." />
-            <marker date="1497457543000" expanded="true" signature="-1:-1" placeholder="SELECT stude..student..." />
-            <marker date="1497457543000" expanded="true" signature="-1:-1" placeholder="SELECT langu..studentlanguage..." />
-            <marker date="1497457543000" expanded="true" signature="-1:-1" placeholder="SELECT stude..student..." />
-            <marker date="1497457543000" expanded="true" signature="-1:-1" placeholder="select class..classteacher..." />
-            <marker date="1497457543000" expanded="true" signature="-1:-1" placeholder="select * fro..student..." />
-            <marker date="1497457543000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1497457543000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1497457543000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1497457543000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1497457543000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1497457543000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1497457543000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1497457543000" expanded="true" signature="-1:-1" placeholder="select class..classteacher..." />
-            <marker date="1497457543000" expanded="true" signature="-1:-1" placeholder="select `stud..." />
-            <marker date="1497457543000" expanded="true" signature="-1:-1" placeholder="select `stud..." />
-            <marker date="1497457543000" expanded="true" signature="-1:-1" placeholder="select `stud..." />
-            <marker date="1497457543000" expanded="true" signature="-1:-1" placeholder="select `stud..." />
-            <marker date="1497457543000" expanded="true" signature="-1:-1" placeholder="select `stud..." />
-            <marker date="1497457543000" expanded="true" signature="-1:-1" placeholder="select `stud..." />
-            <marker date="1497457543000" expanded="true" signature="-1:-1" placeholder="select `stud..." />
-            <marker date="1497457543000" expanded="true" signature="-1:-1" placeholder="select x , C..temptable..." />
-            <marker date="1497457543000" expanded="true" signature="-1:-1" placeholder="select `stud..." />
-            <marker date="1497457543000" expanded="true" signature="-1:-1" placeholder="SELECT langu..studentlanguage..." />
-            <marker date="1497457543000" expanded="true" signature="-1:-1" placeholder="SELECT stude..student..." />
-            <marker date="1497457543000" expanded="true" signature="-1:-1" placeholder="SELECT langu..studentlanguage..." />
-            <marker date="1497457543000" expanded="true" signature="-1:-1" placeholder="SELECT stude..student..." />
-            <marker date="1497457543000" expanded="true" signature="-1:-1" placeholder="SELECT langu..studentlanguage..." />
-            <marker date="1497457543000" expanded="true" signature="-1:-1" placeholder="SELECT stude..student..." />
-            <marker date="1497457543000" expanded="true" signature="-1:-1" placeholder="SELECT langu..studentlanguage..." />
-            <marker date="1497457543000" expanded="true" signature="-1:-1" placeholder="SELECT stude..student..." />
-            <marker date="1497457543000" expanded="true" signature="-1:-1" placeholder="SELECT langu..studentlanguage..." />
-            <marker date="1497457543000" expanded="true" signature="-1:-1" placeholder="SELECT stude..student..." />
-            <marker date="1497457543000" expanded="true" signature="-1:-1" placeholder="SELECT langu..studentlanguage..." />
-            <marker date="1497457543000" expanded="true" signature="-1:-1" placeholder="SELECT stude..student..." />
-            <marker date="1497457543000" expanded="true" signature="-1:-1" placeholder="SELECT langu..studentlanguage..." />
-            <marker date="1497457543000" expanded="true" signature="-1:-1" placeholder="SELECT stude..student..." />
-            <marker date="1497457543000" expanded="true" signature="-1:-1" placeholder="SELECT langu..studentlanguage..." />
-            <marker date="1497457543000" expanded="true" signature="-1:-1" placeholder="SELECT stude..student..." />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -720,71 +995,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-1.152" vertical-offset="720" max-vertical-offset="30930">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <marker date="1497461397000" expanded="true" signature="-1:-1" placeholder="select * fro..teamadmin..." />
-            <marker date="1497461397000" expanded="true" signature="-1:-1" placeholder="select * fro..organisationadmin..." />
-            <marker date="1497461397000" expanded="true" signature="-1:-1" placeholder="select deptn..orgteamdetail..." />
-            <marker date="1497461397000" expanded="true" signature="-1:-1" placeholder="select teamn..orgteamdetail..." />
-            <marker date="1497461397000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1497461397000" expanded="true" signature="-1:-1" placeholder="SELECT relig..staff..." />
-            <marker date="1497461397000" expanded="true" signature="-1:-1" placeholder="SELECT relig..staff..." />
-            <marker date="1497461397000" expanded="true" signature="-1:-1" placeholder="select `staf..." />
-            <marker date="1497461397000" expanded="true" signature="-1:-1" placeholder="select `staf..." />
-            <marker date="1497461397000" expanded="true" signature="-1:-1" placeholder="select `staf..." />
-            <marker date="1497461397000" expanded="true" signature="-1:-1" placeholder="select `staf..." />
-            <marker date="1497461397000" expanded="true" signature="-1:-1" placeholder="select `staf..." />
-            <marker date="1497461397000" expanded="true" signature="-1:-1" placeholder="select `staf..." />
-            <marker date="1497461397000" expanded="true" signature="-1:-1" placeholder="select `staf..." />
-            <marker date="1497461397000" expanded="true" signature="-1:-1" placeholder="select x , C..temptable..." />
-            <marker date="1497461397000" expanded="true" signature="-1:-1" placeholder="select `staf..." />
-            <marker date="1497461397000" expanded="true" signature="-1:-1" placeholder="SELECT langu..stafflanguage..." />
-            <marker date="1497461397000" expanded="true" signature="-1:-1" placeholder="SELECT staff..staff..." />
-            <marker date="1497461397000" expanded="true" signature="-1:-1" placeholder="SELECT langu..stafflanguage..." />
-            <marker date="1497461397000" expanded="true" signature="-1:-1" placeholder="SELECT staff..staff..." />
-            <marker date="1497461397000" expanded="true" signature="-1:-1" placeholder="select teamn..orgteamdetail..." />
-            <marker date="1497461397000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1497461397000" expanded="true" signature="-1:-1" placeholder="select * fro..staff..." />
-            <marker date="1497461397000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1497461397000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1497461397000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1497461397000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1497461397000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1497461397000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1497461397000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1497461397000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1497461397000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1497461397000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1497461397000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1497461397000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1497461397000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1497461397000" expanded="true" signature="-1:-1" placeholder="select teamn..orgteamdetail..." />
-            <marker date="1497461397000" expanded="true" signature="-1:-1" placeholder="select `staf..." />
-            <marker date="1497461397000" expanded="true" signature="-1:-1" placeholder="select `staf..." />
-            <marker date="1497461397000" expanded="true" signature="-1:-1" placeholder="select `staf..." />
-            <marker date="1497461397000" expanded="true" signature="-1:-1" placeholder="select `staf..." />
-            <marker date="1497461397000" expanded="true" signature="-1:-1" placeholder="select `staf..." />
-            <marker date="1497461397000" expanded="true" signature="-1:-1" placeholder="select `staf..." />
-            <marker date="1497461397000" expanded="true" signature="-1:-1" placeholder="select `staf..." />
-            <marker date="1497461397000" expanded="true" signature="-1:-1" placeholder="select x , C..temptable..." />
-            <marker date="1497461397000" expanded="true" signature="-1:-1" placeholder="select `staf..." />
-            <marker date="1497461397000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1497461397000" expanded="true" signature="-1:-1" placeholder="SELECT langu..stafflanguage..." />
-            <marker date="1497461397000" expanded="true" signature="-1:-1" placeholder="SELECT staff..staff..." />
-            <marker date="1497461397000" expanded="true" signature="-1:-1" placeholder="SELECT langu..stafflanguage..." />
-            <marker date="1497461397000" expanded="true" signature="-1:-1" placeholder="SELECT staff..staff..." />
-            <marker date="1497461397000" expanded="true" signature="-1:-1" placeholder="SELECT langu..stafflanguage..." />
-            <marker date="1497461397000" expanded="true" signature="-1:-1" placeholder="SELECT staff..staff..." />
-            <marker date="1497461397000" expanded="true" signature="-1:-1" placeholder="SELECT langu..stafflanguage..." />
-            <marker date="1497461397000" expanded="true" signature="-1:-1" placeholder="SELECT staff..staff..." />
-            <marker date="1497461397000" expanded="true" signature="-1:-1" placeholder="SELECT langu..stafflanguage..." />
-            <marker date="1497461397000" expanded="true" signature="-1:-1" placeholder="SELECT staff..staff..." />
-            <marker date="1497461397000" expanded="true" signature="-1:-1" placeholder="SELECT langu..stafflanguage..." />
-            <marker date="1497461397000" expanded="true" signature="-1:-1" placeholder="SELECT staff..staff..." />
-            <marker date="1497461397000" expanded="true" signature="-1:-1" placeholder="SELECT langu..stafflanguage..." />
-            <marker date="1497461397000" expanded="true" signature="-1:-1" placeholder="SELECT staff..staff..." />
-            <marker date="1497461397000" expanded="true" signature="-1:-1" placeholder="SELECT langu..stafflanguage..." />
-            <marker date="1497461397000" expanded="true" signature="-1:-1" placeholder="SELECT staff..staff..." />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -792,17 +1003,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1485">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <marker date="1497396371000" expanded="true" signature="-1:-1" placeholder="UPDATE stude..." />
-            <marker date="1497396371000" expanded="true" signature="-1:-1" placeholder="UPDATE stude..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/control/control_teacherpanel.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.856" vertical-offset="920" max-vertical-offset="1545">
-          <caret line="102" column="0" selection-start-line="102" selection-start-column="0" selection-end-line="102" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -823,13 +1023,45 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/control/control_teacherpanel.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.72136223" vertical-offset="929" max-vertical-offset="1575">
+          <caret line="93" column="0" selection-start-line="93" selection-start-column="0" selection-end-line="94" selection-end-column="1" />
+          <folding>
+            <element signature="e#7#98#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/access_school_key_fact.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="615">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <marker date="1497859676000" expanded="true" signature="272:323" placeholder="..." />
-          </folding>
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/servere_data/css/error_log">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="670">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/controller_school_admin_panel.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.48452014" vertical-offset="632" max-vertical-offset="1590">
+          <caret line="68" column="22" selection-start-line="68" selection-start-column="22" selection-end-line="68" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/access_school_admin_panel.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="1.250774" vertical-offset="452" max-vertical-offset="1500">
+          <caret line="89" column="48" selection-start-line="89" selection-start-column="27" selection-end-line="89" selection-end-column="48" />
+          <folding />
         </state>
       </provider>
     </entry>
