@@ -150,6 +150,10 @@
 }
 
 @page {
+<<<<<<< HEAD
     size: A2 landscape;
     margin: 10%;
+=======
+    size: A4 landscape;
+>>>>>>> c084693ecc7fd6530420dd92abfd4c1d1856eb59
 }
