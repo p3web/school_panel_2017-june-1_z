@@ -290,10 +290,10 @@
                                 <input type="text" class="form-control ui-autocomplete-input" id="beliefreligion"
                                        name="beliefreligion" autocomplete="off" style="color: rgb(0, 0, 0);">
                             </div>
-                           <!-- <div class="col-sm-6">
-                                <input id="checko" type="checkbox">
-                                <label style="margin-top:0.5em">&nbsp;Don't want to answer</label>
-                            </div>-->
+                            <!-- <div class="col-sm-6">
+                                 <input id="checko" type="checkbox">
+                                 <label style="margin-top:0.5em">&nbsp;Don't want to answer</label>
+                             </div>-->
                         </div>
                     </div>
                     <h3 class="HeaderPink">BIRTH COUNTRIES</h3>
@@ -369,13 +369,15 @@
                                 </tbody>
                                 <script type="text/javascript">
 
-                            </script>
+                                </script>
                             </table>
                         </div>
                     </div>
 
                     <br>
-                    <button type="button" name="update" id="update" onclick="Teacher.Update.Update()" class="btn btn-success ">Save</button>
+                    <button type="button" name="update" id="update" onclick="Teacher.Update.Update()"
+                            class="btn btn-success ">Save
+                    </button>
                     <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
 
 
@@ -402,7 +404,8 @@
                     <h3 class="HeaderPink">Class Name</h3>
 
                     <div class="form-group">
-                        <label class="control-label col-sm-3" for="CurrentClassName" style="visibility: hidden;"></label>
+                        <label class="control-label col-sm-3" for="CurrentClassName"
+                               style="visibility: hidden;"></label>
 
                         <div class="col-sm-9">
                             <input type="email" class="form-control" id="CurrentClassName" name="staffemail" readonly=""
@@ -418,124 +421,135 @@
                     </div>
 
                     <br>
-                    <button type="button" name="update" id="updateClass"  onclick="Classes.Update()" class="btn btn-success">Save</button>
+                    <button type="button" name="update" id="updateClass" onclick="Classes.Update()"
+                            class="btn btn-success">Save
+                    </button>
                     <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
 
-            </div>
+                </div>
 
+            </div>
         </div>
     </div>
-</div>
 
-<script src="../../scripts/jquery-1.10.2.js"></script>
+    <script src="../../scripts/jquery-1.10.2.js"></script>
 
-<!--ajax-->
-<script src="../js/ajax.js"></script>
-<!--Global-->
-<script src="../js/Global.js"></script>
-<!--loadPage-->
-<script src="js/load_pages/Index.js"></script>
-<script src="js/load_pages/classes.js"></script>
-<!--bootstrap-->
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
-        integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
-        crossorigin="anonymous"></script>
+    <!--ajax-->
+    <script src="../js/ajax.js"></script>
+    <!--Global-->
+    <script src="../js/Global.js"></script>
+    <!--loadPage-->
+    <script src="js/load_pages/Index.js"></script>
+    <script src="js/load_pages/classes.js"></script>
+    <script src="js/load_pages/Belief.js"></script>
+    <script src="js/load_pages/Language.js"></script>
 
-<!--PSCO_Grid-->
-<script src="../js/PSCO_Grid.js"></script>
+    <!--bootstrap-->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
+            integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+            crossorigin="anonymous"></script>
 
-<!--Charts-->
-<script src="https://code.highcharts.com/highcharts.js"></script>
-<script src="https://code.highcharts.com/modules/exporting.js"></script>
-<script src="https://code.highcharts.com/modules/data.js"></script>
-<script src="https://code.highcharts.com/modules/drilldown.js"></script>
-<script src="../js/chart.js"></script>
+    <!--PSCO_Grid-->
+    <script src="../js/PSCO_Grid.js"></script>
 
-<!--Dom To Image-->
-<script src="../js/dom-to-image.min.js"></script>
+    <!--Charts-->
+    <script src="https://code.highcharts.com/highcharts.js"></script>
+    <script src="https://code.highcharts.com/modules/exporting.js"></script>
+    <script src="https://code.highcharts.com/modules/data.js"></script>
+    <script src="https://code.highcharts.com/modules/drilldown.js"></script>
+    <script src="../js/chart.js"></script>
 
-<!--Alert-->
-<script src="../js/sweetalert/sweetalert2.js"></script>
-<script src="../js/sweetalert/msg.js"></script>
+    <!--Dom To Image-->
+    <script src="../js/dom-to-image.min.js"></script>
 
-<script type="text/javascript">
-    /*Load age Group option*/
-    $('#age').load("../data_value/age_group_60.html");
+    <!--Alert-->
+    <script src="../js/sweetalert/sweetalert2.js"></script>
+    <script src="../js/sweetalert/msg.js"></script>
 
-    var ClassesGrid;
-    var TeacherGrid = new PSCO_grid('TeacherGrid');
-    TeacherGrid.cols = [
-        {name: 'name', thname: 'Teacher Name'},
-        {name: 'email', thname: 'Teacher Email ID*'},
-        {name: 'info', thname: 'Info', notSearch: true},
-        {name: 'status', thname: 'Status', notSearch: true},
-        {name: 'option', thname: 'Option', notSearch: true}
-    ];
-    TeacherGrid.RightToLeft = false;
-    TeacherGrid.embeddedRow = [[{}, {
-        name: 'Teacher Name',
-        id: 'NameInvite',
-        type: 'inputtext'
-    }, {name: 'Click here to add email address', id: 'EmailInvite', type: 'inputtext'}, {}, {}, {
-        name: 'Invite',
-        id: 'InviteBTN',
-        type: 'btn',
-        attribute: [{name: 'class', value: 'btn btn-success'}]
-    }]];
+    <script type="text/javascript">
+        /*Load age Group option*/
+        $('#age').load("../data_value/age_group_60.html");
+
+        var ClassesGrid;
+        var TeacherGrid = new PSCO_grid('TeacherGrid');
+        TeacherGrid.cols = [
+            {name: 'name', thname: 'Teacher Name'},
+            {name: 'email', thname: 'Teacher Email ID*'},
+            {name: 'info', thname: 'Info', notSearch: true},
+            {name: 'status', thname: 'Status', notSearch: true},
+            {name: 'option', thname: 'Option', notSearch: true}
+        ];
+        TeacherGrid.RightToLeft = false;
+        TeacherGrid.embeddedRow = [[{}, {
+            name: 'Teacher Name',
+            id: 'NameInvite',
+            type: 'inputtext'
+        }, {name: 'Click here to add email address', id: 'EmailInvite', type: 'inputtext'}, {}, {}, {
+            name: 'Invite',
+            id: 'InviteBTN',
+            type: 'btn',
+            attribute: [{name: 'class', value: 'btn btn-success'}]
+        }]];
 
 
-    function loadPage(elm) {
-        var pageName = elm.getAttribute('data-Page');
-        var isShow = elm.getAttribute('data-show'); //___ For one Load
+        function loadPage(elm) {
+            var pageName = elm.getAttribute('data-Page');
+            var isShow = elm.getAttribute('data-show'); //___ For one Load
 
-        if (isShow != 'true') {
+            if (isShow != 'true') {
 
-            var TabID = elm.getAttribute('href');
-            if (pageName == 'Map' || pageName == 'Export') {
-                //____ CREATE IFRAME
-                var frame = document.createElement('iframe');
-                frame.setAttribute('src', pageName + '.html');
-                frame.setAttribute('id', pageName);
+                var TabID = elm.getAttribute('href');
+                if (pageName == 'Map' || pageName == 'Export') {
+                    //____ CREATE IFRAME
+                    var frame = document.createElement('iframe');
+                    frame.setAttribute('src', pageName + '.html');
+                    frame.setAttribute('id', pageName);
 
-                if (pageName == 'Export') {
-                    frame.style.cssText = 'width:100%;min-height:1200px;margin-top:20px;border:none;';
+                    if (pageName == 'Export') {
+                        frame.style.cssText = 'width:100%;min-height:1200px;margin-top:20px;border:none;';
+                    } else {
+                        frame.style.cssText = 'width:100%;min-height:800px;margin-top:20px;border:none;';
+                    }
+                    TabID = TabID.split('#');
+                    TabID = TabID[1];
+                    document.getElementById(TabID).appendChild(frame);
+                } else if (pageName == 'KeyFacts') {
+                    KeyFacts.LoadKeyFact();
+
+                } else if (pageName == 'Classes') {
+                    //______LOAD CLASSES GRID
+                    ClassesGrid = new PSCO_grid('ClassesGrid');
+                    ClassesGrid.ContainerID = 'PClassGrid';
+                    ClassesGrid.cols = [
+                        {name: 'classname', thname: 'Class Name'},
+                        {name: 'option', thname: 'Option'}
+                    ];
+                    ClassesGrid.RightToLeft = false;
+                    Classes.LoadClassesTable(); //______ send Act
                 } else {
-                    frame.style.cssText = 'width:100%;min-height:800px;margin-top:20px;border:none;';
+                    //____ LOAD OTHER TAB FROM EXTERNAL PAGE
+                    $(TabID).load(pageName + '.html');
+                    if (pageName == 'Language') {
+                        setTimeout(function () {
+                            Language.sendAction();
+                        },200)
+                    }
                 }
-                TabID = TabID.split('#');
-                TabID = TabID[1];
-                document.getElementById(TabID).appendChild(frame);
-            } else if (pageName == 'KeyFacts') {
-                KeyFacts.LoadKeyFact();
-            } else if (pageName == 'Classes') {
-                //______LOAD CLASSES GRID
-                ClassesGrid = new PSCO_grid('ClassesGrid');
-                ClassesGrid.ContainerID = 'PClassGrid';
-                ClassesGrid.cols = [
-                    {name: 'classname', thname: 'Class Name'},
-                    {name: 'option', thname: 'Option'}
-                ];
-                ClassesGrid.RightToLeft = false;
-                Classes.LoadClassesTable(); //______ send Act
-            } else {
-                //____ LOAD OTHER TAB FROM EXTERNAL PAGE
-                $(TabID).load(pageName + '.html');
+                elm.setAttribute('data-show', 'true');
             }
-            elm.setAttribute('data-show', 'true');
         }
-    }
-    function ToggleMenu(elem) {
-        var flag = elem.getAttribute('data-show');
-        if (flag == 'true') {
-            document.getElementById('MenuPanel').style.cssText = '';
-            elem.style.cssText = '';
-            elem.setAttribute('data-show', 'false');
-        } else {
-            document.getElementById('MenuPanel').style.cssText = 'height:100vh;width:30vw';
-            elem.setAttribute('data-show', 'true');
-            elem.style.left = '31.5vw';
+        function ToggleMenu(elem) {
+            var flag = elem.getAttribute('data-show');
+            if (flag == 'true') {
+                document.getElementById('MenuPanel').style.cssText = '';
+                elem.style.cssText = '';
+                elem.setAttribute('data-show', 'false');
+            } else {
+                document.getElementById('MenuPanel').style.cssText = 'height:100vh;width:30vw';
+                elem.setAttribute('data-show', 'true');
+                elem.style.left = '31.5vw';
+            }
         }
-    }
-</script>
+    </script>
 </body>
 </html>

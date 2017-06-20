@@ -2,7 +2,7 @@
  * Created by peymanvalikhanli on 6/11/17 AD.
  */
 
-var Chart_Type = 'pie';
+var Chart_Type = 'bar';
 
 //_____ Check ChartLoad
 var ChartScriptLoad = {
