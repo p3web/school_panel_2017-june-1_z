@@ -30,7 +30,7 @@ message.Confirm = function (text, title, CallBack, param, type) {
         showCancelButton: true,
         confirmButtonColor: '#88d66d',
         cancelButtonColor: '#dd5e6d',
-        confirmButtonText: 'Yesx'
+        confirmButtonText: 'Yes'
     }).then(function () {
         CallBack(param);
     })
