@@ -2,10 +2,25 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="676e04ff-6d34-48ac-9098-ebf739dc256d" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/access_org_key_fact.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/controller_org_admin_panel.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/export/error_log" afterPath="$PROJECT_DIR$/export/error_log" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/error_log_26052017.tgz" afterPath="$PROJECT_DIR$/error_log_26052017.tgz" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/AdminPanel.css" afterPath="$PROJECT_DIR$/css/AdminPanel.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/page/SchoolAdmin/Belief.html" afterPath="$PROJECT_DIR$/page/SchoolAdmin/Belief.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/page/CssMapChartPrint.css" afterPath="$PROJECT_DIR$/page/CssMapChartPrint.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/page/js/Global.js" afterPath="$PROJECT_DIR$/page/js/Global.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/page/SchoolAdmin/js/load_pages/Index.js" afterPath="$PROJECT_DIR$/page/SchoolAdmin/js/load_pages/Index.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/page/SchoolAdmin/Language.html" afterPath="$PROJECT_DIR$/page/SchoolAdmin/Language.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/access_org_admin_panel.php" afterPath="$PROJECT_DIR$/access_org_admin_panel.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/access_school_admin_panel.php" afterPath="$PROJECT_DIR$/access_school_admin_panel.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/access_school_key_fact.php" afterPath="$PROJECT_DIR$/access_school_key_fact.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/controller_school_admin_panel.php" afterPath="$PROJECT_DIR$/controller_school_admin_panel.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/page/SchoolAdmin/index.html" afterPath="$PROJECT_DIR$/page/SchoolAdmin/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/page/js/sweetalert/msg.js" afterPath="$PROJECT_DIR$/page/js/sweetalert/msg.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/styletestzain.css" afterPath="$PROJECT_DIR$/css/styletestzain.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/teamadminpanel.php" afterPath="$PROJECT_DIR$/teamadminpanel.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="school_panel_2017-june-1_z.iws" />
     <ignored path=".idea/workspace.xml" />

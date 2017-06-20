@@ -885,7 +885,7 @@ function test_input($data)
                                                      onmouseout="this.src='images/edit.png';"/>
                                             </a>
 
-                                            <?php
+                                        <?php
                                         }
                                         ?>
 

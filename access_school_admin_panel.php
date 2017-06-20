@@ -142,19 +142,20 @@ class access_school_admin_panel
         return $data;
     }
 
-    public static function a()
-    {
-/*
-        //Staff:
-        $querytest .= " select staffbirthplace as x from staffbirthdetails where staffemailid IN(SELECT staffemailid FROM staff where orgid='" . $orgId . "' AND deptname='" . $deptName . "' AND teamname='" . $teamName . "')";
-        $unionAllOption = 1;
-        //Father:
-        $querytest .= " select stafffatherbirthplace as x from staffbirthdetails where staffemailid IN(SELECT staffemailid FROM staff where orgid='" . $orgId . "' AND deptname='" . $deptName . "' AND teamname='" . $teamName . "')";
-        $unionAllOption = 1;
-        //Mother:
-        $querytest .= " select staffmotherbirthplace as x from staffbirthdetails where staffemailid IN(SELECT staffemailid FROM staff where orgid='" . $orgId . "' AND deptname='" . $deptName . "' AND teamname='" . $teamName . "')";
-        $unionAllOption = 1;
-        //Paternal GrandFather:
-        $querytest .= " select stafffathersfatherbirthplace as x from staffbirthdetails where staffemailid IN(SELECT staffemailid FROM staff where orgid='" . $orgId . "' AND deptname='" . $deptName . "' AND teamname='" . $teamName . "')"; $unionAllOption = 1; Paternal GrandMother: $querytest .= " select stafffathersmotherbirthplace as x from staffbirthdetails where staffemailid IN(SELECT staffemailid FROM staff where orgid='" . $orgId . "' AND deptname='" . $deptName . "' AND teamname='" . $teamName . "')"; $unionAllOption = 1; Maternal GrandFather: $querytest .= " select staffmothersfatherbirthplace as x from staffbirthdetails where staffemailid IN(SELECT staffemailid FROM staff where orgid='" . $orgId . "' AND deptname='" . $deptName . "' AND teamname='" . $teamName . "')"; $unionAllOption = 1; Maternal GrandMother: $querytest .= " select staffmothersmotherbirthplace as x from staffbirthdetails where staffemailid IN(SELECT staffemailid FROM staff where orgid='" . $orgId . "' AND deptname='" . $deptName . "' AND teamname='" . $teamName . "')"; $unionAllOption = 1;}
-*/}
+    public static function get_teacher_age_group_by_teacherEmailId($teacheremailid){
+
+        $data = data::selects("`age_group`", "`user_id` = '$teacheremailid' and `type` = 4 ");
+        if (count($data[0]) != 0) {
+            return $data;
+        } else {
+            return false;
+        }
+    }
+
+    public static function edit_teacher_age_group_by_id($id , $age){
+
+       return $data = data::update("`age_group`","`age`= '$age'", "`id` = '$id' and `type` = 4 ");
+
+    }
+
 }

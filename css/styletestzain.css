@@ -196,38 +196,11 @@ input:focus{
 	padding-bottom:4%;
 }
 
-<<<<<<< HEAD
-=======
-
-	  
-}
-
->>>>>>> c084693ecc7fd6530420dd92abfd4c1d1856eb59
 @media (min-width: 768px) {
 .navbar-right {
 	margin-right: auto !important;
 }
 
-<<<<<<< HEAD
 #watermark{
 	margin-bottom:15%;
 }
-=======
-div#watermarkdiv p#watermark{
-	text-align:center !important;
-	font-size:10px !important;
-}
-
-/* @media print{ */
-	/* body{ */
-		/* visibility:hidden; */
-	/* } */
-	/* #regions_div{ */
-		/* visibility:visible; */
-	/* } */
-	/* #watermark{ */
-		/* visibility:visible; */
-	/* } */
-/* } */
-
->>>>>>> c084693ecc7fd6530420dd92abfd4c1d1856eb59
