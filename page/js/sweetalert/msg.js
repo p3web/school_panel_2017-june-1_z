@@ -5,18 +5,33 @@
 var message = {};
 
 
-
-message.show = function (text , title , type , btn ) {
+message.show = function (text, title, type, btn) {
 
     try {
         swal({
             title: (title == '' || title == undefined ? '' : title),
             text: text,
             type: (type == '' || type == undefined ? '' : type ),
-            confirmButtonText: (btn== '' || btn == undefined ? "OK" : btn)
+            confirmButtonText: (btn == '' || btn == undefined ? "OK" : btn)
         });
-    }catch (e){
+    } catch (e) {
         console.log(e);
     }
 
+};
+message.Confirm = function (text, title, CallBack, param, type) {
+    if (type == null) {
+        type = 'warning';
+    }
+    swal({
+        title: title,
+        text: text,
+        type: type,
+        showCancelButton: true,
+        confirmButtonColor: '#88d66d',
+        cancelButtonColor: '#dd5e6d',
+        confirmButtonText: 'Yesx'
+    }).then(function () {
+        CallBack(param);
+    })
 };

@@ -300,15 +300,18 @@
 .Chart-table th {
     text-align: center !important;
 }
-.labelBlock label{
+
+.labelBlock label {
     display: block;
     font-weight: 400;
     margin-bottom: 0;
 }
-.labelBlock > form label{
+
+.labelBlock > form label {
     display: block;
     font-weight: 400;
 }
+
 /* Tab Control */
 
 .panelControl {
@@ -361,7 +364,7 @@
     font-size: 2vh;
 }
 
-.panelControlShow{
+.panelControlShow {
     height: 100vh;
     width: 24vw;
 }
@@ -415,14 +418,39 @@
     cursor: pointer;
 }
 
-.text-muted{
-    width:90%;
-    margin:0 auto;
+.text-muted {
+    width: 90%;
+    margin: 0 auto;
 }
-.actionIcon{
+
+.actionIcon {
     cursor: pointer;
-    margin-left:5px;
+    margin-left: 5px;
 }
+
+/*ModalHEADER*/
+.HeaderPink {
+    padding: 1% 0%;
+    background-color: #FE8885;
+    color: #FFF;
+    text-align: center;
+    border-radius: 8px;
+}
+
+/*MODAL*/
+.ModalTable table tbody tr td {
+    width: 50%;
+    border: none;
+}
+
+.ModalTable table tbody tr td:first-child {
+    text-align: right;
+}
+
+.ModalTable h3 {
+    text-align: center;
+}
+
 @media (max-width: 992px) {
     .panelControl {
         height: 0;
@@ -446,9 +474,9 @@
 
 @media (max-width: 1140px) {
     /* FOOTER TEXT */
-    .text-muted{
-        width:80%;
-        margin:0 auto;
+    .text-muted {
+        width: 80%;
+        margin: 0 auto;
     }
 }
 >>>>>>> c084693ecc7fd6530420dd92abfd4c1d1856eb59
