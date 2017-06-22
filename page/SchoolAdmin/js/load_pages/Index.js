@@ -10,7 +10,7 @@ Global.ResultMessage = function (result) {
     }
 };
 
-Global.setData=function(Data, gridName) {
+Global.setData = function (Data, gridName) {
     gridName.data = Data;
     gridName.render();
 };
@@ -18,31 +18,28 @@ function showModal(ModalID) {
     $('#' + ModalID).modal('show');
 }
 function checkLogin(Data) {
-    if (Data == false) {
+    if (Data.data == false) {
         window.location = '/backend/login.php';
     } else {
         GlobalFunc.userDetials = Data;
         document.getElementById('UserFullName').innerText = Data.firstname + ' ' + Data.lastname;
-   /*     document.getElementById('SchoolName').innerText = Data.schoolname;
-        document.getElementById('City').innerText = Data.city + '/' + Data.suburb;*/
+        /*     document.getElementById('SchoolName').innerText = Data.schoolname;
+         document.getElementById('City').innerText = Data.city + '/' + Data.suburb;*/
     }
 }
-<<<<<<< HEAD
-/*TEACHER TABLE*/
-var Teacher = {};
-=======
 /*TEACHER TAB*/
 function Confirm(EmailID) {
     message.Confirm('Are you sure ?!', 'Confirm Delete', Teacher.DeleteRow, EmailID);
 }
 var Teacher = {
     Profile: {},
-    Edit: {},
+    Edit: {
+        trCounter: 0
+    },
     Update: {
         Result: []
     }
 };
->>>>>>> b002a728f4dcec2aa087814e06be3fc5418d47a1
 Teacher.LoadTeacherTable = function () {
     ajax.sender_data_json_by_url_callback(Global.url, {act: 'check_login'}, checkLogin);
     ajax.sender_data_json_by_url_callback(Global.url, {act: 'get_tbl_teachers'}, Teacher.CreateTeacherTblData);
@@ -52,21 +49,23 @@ Teacher.CreateTeacherTblData = function (data) {
     for (var i = 0; i < data.length; i++) {
 
         var Rows = {};
-
         Rows['name'] = data[i].name;
         Rows['email'] = data[i].teacheremailid;
         Rows['status'] = data[i].status;
         if (data[i].status == 'active') {
-            Rows['info'] = '<a href="#">View Profile</a>';
+            Rows['info'] = {
+                value: '',
+                htmlTag: '<a onclick="Teacher.ViewProfile(' + "'" + data[i].teacheremailid + "'" + ')" href="#">View Profile</a>'
+            };
             Rows['option'] = {
                 value: '',
-                htmlTag: '<i class="glyphicon glyphicon-remove actionIcon" onclick="Teacher.DeleteRow(' + "'" + data[i].teacheremailid + "'" + ')"></i>    <i class="glyphicon glyphicon-edit actionIcon"></i>'
+                htmlTag: '<i class="glyphicon glyphicon-remove actionIcon" onclick="Confirm(' + "'" + data[i].teacheremailid + "'" + ')"></i>    <i class="glyphicon glyphicon-edit actionIcon" onclick="Teacher.Edit.Edit(' + "'" + data[i].teacheremailid + "'" + ')""></i>'
             };
         } else {
-            Rows['info'] = 'pending';
+            Rows['info'] = 'Waiting approval';
             Rows['option'] = {
                 value: '',
-                htmlTag: '<i class="glyphicon glyphicon-remove actionIcon" onclick="Teacher.DeleteRow(' + "'" + data[i].teacheremailid + "'" + ')"></i>'
+                htmlTag: '<i class="glyphicon glyphicon-remove actionIcon" onclick="Confirm(' + "'" + data[i].teacheremailid + "'" + ')"></i>'
             };
         }
         TeacherData.push(Rows);
@@ -79,22 +78,6 @@ Teacher.DeleteRow = function (TeacherEmail) {
         teacheremailid: TeacherEmail
     }, console.log);
 };
-<<<<<<< HEAD
-
-/*Classes*/
-var Classes = {};
-Classes.LoadClassesTable = function () {
-    ajax.sender_data_json_by_url_callback(url, {act: 'get_tbl_classes'}, Classes.CreateClassesTblData);
-};
-Classes.CreateClassesTblData = function (Data) {
-    var ClassesData = [];
-
-    for (var i = 0; i < Data.length; i++) {
-        var Rows = {};
-        Rows['classname'] = Data[i].classname;
-
-        ClassesData.push(Rows);
-=======
 /*view Profile*/
 Teacher.Profile.CreatePersonalDetails = function (Data) {
     Data = Data[0];
@@ -169,6 +152,7 @@ Teacher.Profile.CreateLangDetails = function (Data) {
         Tag += '<tr>' +
             '<td><label>' + Data[Datakeys[i]].languagename + ':&nbsp;&nbsp;</label></td>' +
             '<td>' + Data[Datakeys[i]].languagelevel + '</td>' +
+            '<td></td>' +
             '</tr>';
     }
     Tag += '</tbody>';
@@ -271,6 +255,58 @@ Teacher.Edit.Edit = function (EmailID) {
         showModal('edit_data_Modal');
     }, 500);
 };
+Teacher.Edit.AddLanguage = function () {
+
+    var Tbody = document.querySelector('#LangEditTable');
+
+    var tr = document.createElement('tr');
+    tr.setAttribute('id', 'langtr' + Teacher.Edit.trCounter);
+
+    var Langtd = document.createElement('td');
+    var Leveltd = document.createElement('td');
+    var DeleteTd = document.createElement('td');
+
+    var Langselect = document.createElement('select');
+    var Levelselect = document.createElement('select');
+    var langoption = document.createElement('option');
+    var leveloption = document.createElement('option');
+
+    langoption.innerText = 'Select One';
+    leveloption.innerText = 'Select One';
+
+    var DeleteTrBtn = document.createElement('div');
+    DeleteTrBtn.setAttribute('class', 'btn Anim-toptoleft btn-danger btn-block');
+
+    Langselect.setAttribute('id', 'LangSelect' + Teacher.Edit.trCounter);
+    Levelselect.setAttribute('id', 'LevelSelect' + Teacher.Edit.trCounter);
+    Langselect.setAttribute('class', 'Anim-toptoleft form-control');
+    Levelselect.setAttribute('class', 'Anim-toptoleft form-control');
+    DeleteTrBtn.innerText = 'Delete This';
+    DeleteTrBtn.setAttribute('onclick' , "DeleteTr('langtr"+Teacher.Edit.trCounter+"')");
+
+    // ______ AppendChild
+    Langselect.appendChild(langoption);
+    Levelselect.appendChild(leveloption);
+    Langtd.appendChild(Langselect);
+    Leveltd.appendChild(Levelselect);
+    DeleteTd.appendChild(DeleteTrBtn);
+
+    tr.appendChild(Langtd);
+    tr.appendChild(Leveltd);
+    tr.appendChild(DeleteTd);
+
+    Tbody.appendChild(tr);
+    setTimeout(function () {
+        $('#LangSelect' + Teacher.Edit.trCounter).load('../data_value/lanuage.html');
+        $('#LevelSelect' + Teacher.Edit.trCounter).load('../data_value/lanuage_level.html');
+        Teacher.Edit.trCounter++;
+    }, 200);
+
+};
+function DeleteTr(id) {
+    var tr =document.getElementById(id);
+    tr.parentNode.removeChild(tr);
+}
 /*Update Teacher*/
 
 Teacher.Update.PersonalDetails = function () {
@@ -359,10 +395,6 @@ Teacher.Update.CheckResult = function (Data) {
             }
         }
         Global.ResultMessage(result);
-<<<<<<< HEAD
->>>>>>> b002a728f4dcec2aa087814e06be3fc5418d47a1
-=======
->>>>>>> b002a728f4dcec2aa087814e06be3fc5418d47a1
     }
 };
 
@@ -371,15 +403,7 @@ Teacher.Update.CheckResult = function (Data) {
 var KeyFacts = {};
 
 KeyFacts.LoadKeyFact = function () {
-<<<<<<< HEAD
-<<<<<<< HEAD
-    ajax.sender_data_json_by_url_callback(url , {act:'get_key_fact_json'} , KeyFacts.createKeyFact);
-=======
     ajax.sender_data_json_by_url_callback(Global.url, {act: 'get_key_fact_json'}, KeyFacts.createKeyFact);
->>>>>>> b002a728f4dcec2aa087814e06be3fc5418d47a1
-=======
-    ajax.sender_data_json_by_url_callback(Global.url, {act: 'get_key_fact_json'}, KeyFacts.createKeyFact);
->>>>>>> b002a728f4dcec2aa087814e06be3fc5418d47a1
 };
 
 KeyFacts.createKeyFact = function (Data) {

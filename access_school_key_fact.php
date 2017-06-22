@@ -20,6 +20,8 @@ class access_school_key_fact {
         // print_r($data); exit; //this line braekpoint for debuging
 
         $string_fact .= "<li> In total, there are ".$data[0]['count']." students registered on AncestryAtlas from this school.</li>";
+        $string_fact .= "<br>";
+
         //Country count
         $data = self::country_count($schoolid , $classname);
         $string_fact .= "<li> In total, students in this school are from ".$data[0]['count']." different countries. (including students, their parents and grandparents ).</li>";
@@ -35,18 +37,33 @@ class access_school_key_fact {
         $data = self::born_overseas($schoolid , $classname);
         $string_fact .= "<li>"/*.number_format($data[0]['percent'], 2, '.', ',' )*/."% of students in this school have at least one parent born overseas.</li>";
         $string_fact .= "<li>"/*.number_format($data[0]['percentGParents'], 2, '.', ',' )*/."% of students in this school have at least one Grandparent born overseas.</li>";
+        $string_fact .= "<br>";
+        //Total number of spoken languages
+        $data = self::languages($schoolid , $classname);
         $string_fact .= "<li> In total, students in this school can speak up to ".$data[0]['count']." languages.</li>";
         //most spoken language
         $data = self::count_Languages($schoolid , $classname);
         $string_fact .= "<li> The most spoken languages in this school are: ".$data[0]['languagename']."(".$data[0]['count']."), ".$data[1]['languagename']."(".$data[1]['count']."), ".$data[2]['languagename']."(".$data[2]['count'].") .</li>";
         //max language
         $data = self::Highest_number($schoolid , $classname);
-        //The maximum number of languages spoken by a student in this school is  “ MAX languages”.
         $string_fact .= "<li> The maximum number of languages spoken by a student in this school is ".$data[0]['count'].".</li>";
         //male female language known
         $data = self::male_female_know_language($schoolid , $classname);
-        //As an average girls understand 6.00 languages while boys  know 4.50 number of languages.
         $string_fact .= "<li> As an average girls understand ".number_format($data[0][0]['averageLanguage'], 2, '.', ',' )." languages while boys  know ".number_format($data[1][0]['averageLanguage'], 2, '.', ',' )." number of languages.</li>";
+        //how many people spoken 1,2,3 lang
+        $data = self::num_of_language_spoken($schoolid , $classname);
+        $string_fact .= "<li>".number_format($data[0][0]['percent'], 2, '.', ',' )."% of students in this school ( ".number_format($data[0][0]['numberStudents'], 2, '.', ',' )." people ) can speak only one language.</li>";
+        $string_fact .= "<li>".number_format($data[1][0]['percent'], 2, '.', ',' )."% of students in this school ( ".number_format($data[1][0]['numberStudents'], 2, '.', ',' )." people ) two or more languages.</li>";
+        $string_fact .= "<li>".number_format($data[2][0]['percent'], 2, '.', ',' )."% of students in this school ( ".number_format($data[2][0]['numberStudents'], 2, '.', ',' )." people ) three or more languages.</li>";
+        $string_fact .= "<br>";
+        //different faiths
+        $data = self::different_faiths($schoolid , $classname);
+        $string_fact .= "<li> In total, students in this school believe in ".number_format($data[0]['count'], 2, '.', ',' )." different beliefs.</li>";
+        //non-disclosed beliefs
+        $data = self::unclear_faiths($schoolid , $classname);
+        //•	8 students did not want to disclose their beliefs.
+        $string_fact .= "<li>".number_format($data[0]['count'], 2, '.', ',' ). " students did not want to disclose their beliefs.</li>";
+
 
 
         $string_fact.="</ul>";
@@ -55,7 +72,7 @@ class access_school_key_fact {
     }
 
     private static function registered_count ($schoolid , $classname){
-        //this function is just same asgrandparents in PSCO_function.php. of course that function should be renamed to this one.
+        //this function is just same as grandparents in PSCO_function.php. of course that function should be renamed to this one.
         $data = data::selects_col("`student`","count(studentemailid) as count", "schoolid= '$schoolid'");
         if (count($data[0]) != 0) {
             return $data;
@@ -104,6 +121,15 @@ class access_school_key_fact {
             return false;
         }
     }
+    private static function languages ($schoolid , $classname){
+        //SELECT COUNT( languagename ) FROM studentlanguage where studentemailid IN(SELECT studentemailid FROM student where schoolid='14')
+        $data = data::selects_col("`studentlanguage`","COUNT( languagename ) as count", "studentemailid IN (SELECT studentemailid FROM student where schoolid= '$schoolid')");
+        if (count($data[0]) != 0) {
+            return $data;
+        } else {
+            return false;
+        }
+    }
     private static function born_overseas ($schoolid , $classname){
         //SELECT COUNT( languagename ) FROM studentlanguage where studentemailid IN(SELECT studentemailid FROM student where schoolid='14')
         $data = data::selects_col("`studentlanguage`","COUNT( languagename ) as count", "studentemailid IN (SELECT studentemailid FROM student where schoolid= '$schoolid')");
@@ -137,6 +163,36 @@ class access_school_key_fact {
         $data[0] = data::selects_col("`numberLanguageGenderSchool`","MAX(numberLanguagesKnown/genderNumber) as averageLanguage", "schoolid= '$schoolid' and gender = 'female'");
         $data[1] = data::selects_col("`numberLanguageGenderSchool`","MAX(numberLanguagesKnown/genderNumber) as averageLanguage", "schoolid= '$schoolid' and gender = 'male'");
         if (count($data[0][0]) != 0) {
+            return $data;
+        } else {
+            return false;
+        }
+    }
+    private static function num_of_language_spoken ($schoolid , $classname){
+        //SELECT count(numberL) numberStudents, (count(numberL)*100)/allStudents as percent FROM `viewLanguageSchool` WHERE school = '14' and numberL = 1
+        //SELECT count(numberL) numberStudents, (count(numberL)*100)/allStudents as percent FROM `viewLanguageSchool` WHERE  school = '14' and numberL >= 2
+        $data[0] = data::selects_col("`viewLanguageSchool`","count(numberL) numberStudents, (count(numberL)*100)/allStudents as percent", "school= '$schoolid' and numberL = 1");
+        $data[1] = data::selects_col("`viewLanguageSchool`","count(numberL) numberStudents, (count(numberL)*100)/allStudents as percent", "school= '$schoolid' and numberL >= 2");
+        $data[2] = data::selects_col("`viewLanguageSchool`","count(numberL) numberStudents, (count(numberL)*100)/allStudents as percent", "school= '$schoolid' and numberL >= 3");
+        if (count($data[0][0]) != 0) {
+            return $data;
+        } else {
+            return false;
+        }
+    }
+    private static function different_faiths ($schoolid , $classname){
+        //SELECT count( DISTINCT religion) FROM student  where schoolid="14"
+        $data = data::selects_col("`student`","count( DISTINCT religion) as count", "schoolid= '$schoolid'");
+        if (count($data[0]) != 0) {
+            return $data;
+        } else {
+            return false;
+        }
+    }
+    private static function unclear_faiths ($schoolid , $classname){
+        //SELECT count(*) FROM `student`  where studentemailid IN(SELECT studentemailid FROM student where schoolid="14") and religion='no religion'
+        $data = data::selects_col("`student`","count(*) as count", "studentemailid IN(SELECT studentemailid FROM student where schoolid= '$schoolid') and religion='no religion'");
+        if (count($data[0]) != 0) {
             return $data;
         } else {
             return false;

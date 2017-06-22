@@ -92,7 +92,7 @@
 }
 
 #TopBorderBar::before {
-    content: 'RELIGIONS';
+    content: 'BELIEF';
     left: -100px;
 }
 

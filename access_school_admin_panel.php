@@ -22,6 +22,21 @@ class access_school_admin_panel
         }
     }
 
+    public static function get_school_profile_by_adminemailid($adminemailid)
+    {
+        $data = data::selects_col("`school`", "`schoolid`, `schoolname`, `adminemailid`, `firstname`, `lastname`, `country`, `state`, `city`, `suburb`, `postcode`", "`adminemailid` = '$adminemailid'");
+        if (count($data[0]) != 0) {
+            return $data;
+        } else {
+            return false;
+        }
+    }
+
+    public static function edit_school_profile_by_adminemailid($schoolid, $schoolname, $adminemailid, $firstname, $lastname, $country, $state, $city, $suburb, $postcode)
+    {
+        return data::update("`school`", "`schoolid`= '$schoolid' ,`schoolname` = '$schoolname' , `firstname`='$firstname',`lastname`='$lastname' , `country`= '$country' , `state` = '$state' , `city` = '$city' , `suburb` = '$suburb' , `postcode` = '$postcode'", "`adminemailid` = '$adminemailid'");
+    }
+
     public static function get_teacher_by_schoolId($schoolId)
     {
         $data = data::selects_join("`teacher`", "`teacher`.`teacheremailid`,CONCAT(`teacher`.`firstname`, ' ', `teacher`.`lastname`) As name ,`classteacher`.`classname`, `teacher`.`status`", " INNER JOIN `classteacher` on `classteacher`.`schoolid` =`teacher`.`schoolid` and `teacher`.`teacheremailid` =  `classteacher`.`teacheremailid` WHERE `classteacher`.`schoolid` = '$schoolId'");
@@ -72,6 +87,11 @@ class access_school_admin_panel
         return data::update("`teacher_language`", "`languagename`='$languagename',`languagelevel`= '$languagelevel' ", "`id`= $id");
     }
 
+    public static function set_teacher_lang_bylangId($teacheremailid, $languagename, $languagelevel)
+    {
+        return data::insertinto("`teacher_language`", "`teacheremailid`,`languagename`,`languagelevel`' ", "'$teacheremailid' , '$languagename' , '$languagelevel'");
+    }
+
     public static function get_teacher_birthDetails_by_teacherEmailId($teacheremailid)
     {
         $data = data::selects("`teacherbirthdetails`", "`teacheremailid` = '$teacheremailid'");
@@ -106,6 +126,12 @@ class access_school_admin_panel
     {
         return data::update("`class`", "`classname`='$name'", "`schoolid` = '$schoolId' and `classname`='$current_name'");
     }
+
+    public static function set_class_by_schoolId($schoolId, $name)
+    {
+        return data::insertinto("`class`", "`classname`, `schoolid`","'$name','$schoolId'");
+    }
+
 
     public static function get_religions($schoolId)
     {
@@ -142,7 +168,8 @@ class access_school_admin_panel
         return $data;
     }
 
-    public static function get_teacher_age_group_by_teacherEmailId($teacheremailid){
+    public static function get_teacher_age_group_by_teacherEmailId($teacheremailid)
+    {
 
         $data = data::selects("`age_group`", "`user_id` = '$teacheremailid' and `type` = 4 ");
         if (count($data[0]) != 0) {
@@ -152,10 +179,84 @@ class access_school_admin_panel
         }
     }
 
-    public static function edit_teacher_age_group_by_id($id , $age){
+    public static function edit_teacher_age_group_by_id($id, $age)
+    {
 
-       return $data = data::update("`age_group`","`age`= '$age'", "`id` = '$id' and `type` = 4 ");
+        return $data = data::update("`age_group`", "`age`= '$age'", "`id` = '$id' and `type` = 4 ");
 
     }
 
+    public static function get_map($schoolId ,$aDoor )
+    {
+        $unionAllOption = 0;
+        //starting query
+        $querytest = "";
+
+        if (!empty($aDoor)) {
+            $querytest .= "select x , COUNT( * ) as count from(";
+
+            $N = count($aDoor);
+            for ($i = 0; $i < $N; $i++) {
+                if ($aDoor[$i] == 'S') {
+                    $querytest .= " select `studentbirthplace` as x from studentbirthdetails where studentemailid IN(SELECT studentemailid FROM student where schoolid='$schoolId')";
+                    $unionAllOption = 1;
+                }
+                if ($aDoor[$i] == 'F') {
+                    if ($unionAllOption == 1) {
+                        $querytest .= " UNION ALL";
+                    }
+                    $querytest .= " select `studentfatherbirthplace` as x from studentbirthdetails  where studentemailid IN(SELECT studentemailid FROM student where schoolid='$schoolId')";
+                    $unionAllOption = 1;
+                }
+                if ($aDoor[$i] == 'M') {
+                    if ($unionAllOption == 1) {
+                        $querytest .= " UNION ALL";
+                    }
+                    $querytest .= " select `studentmotherbirthplace` as x from studentbirthdetails  where studentemailid IN(SELECT studentemailid FROM student where schoolid='$schoolId')";
+                    $unionAllOption = 1;
+                }
+                if ($aDoor[$i] == 'GFFS') {
+                    if ($unionAllOption == 1) {
+                        $querytest .= " UNION ALL";
+                    }
+                    $querytest .= " select `studentfathersfatherbirthplace` as x from studentbirthdetails  where studentemailid IN(SELECT studentemailid FROM student where schoolid='$schoolId')";
+                    $unionAllOption = 1;
+                }
+                if ($aDoor[$i] == 'GMFS') {
+                    if ($unionAllOption == 1) {
+                        $querytest .= " UNION ALL";
+                    }
+                    $querytest .= " select `studentfathersmotherbirthplace` as x from studentbirthdetails  where studentemailid IN(SELECT studentemailid FROM student where schoolid='$schoolId')";
+                    $unionAllOption = 1;
+                }
+                if ($aDoor[$i] == 'GFMS') {
+                    if ($unionAllOption == 1) {
+                        $querytest .= " UNION ALL";
+                    }
+                    $querytest .= " select `studentmothersfatherbirthplace` as x from studentbirthdetails  where studentemailid IN(SELECT studentemailid FROM student where schoolid='$schoolId')";
+                    $unionAllOption = 1;
+                }
+                if ($aDoor[$i] == 'GMMS') {
+                    if ($unionAllOption == 1) {
+                        $querytest .= " UNION ALL";
+                    }
+                    $querytest .= " select `studentmothersmotherbirthplace` as x from studentbirthdetails  where studentemailid IN(SELECT studentemailid FROM student where schoolid='$schoolId')";
+                    $unionAllOption = 1;
+                }
+            }
+
+            $querytest .= " ) as temptable group by x";
+        }
+
+        // Default values goes here
+        if ($querytest == "") {
+
+            $querytest = "select x , COUNT( * ) as count  from( select `studentbirthplace` as x from studentbirthdetails where studentemailid IN(SELECT studentemailid FROM student where schoolid='$schoolId') ) as temptable group by x";
+        }
+
+        return data::execute_non_qury($querytest);
+    }
+
 }
+
+

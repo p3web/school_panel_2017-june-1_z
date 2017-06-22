@@ -123,7 +123,7 @@ function MapChart(ContainerID, MapData) {
                 },
 
                 mapNavigation: {
-                    enabled: true
+                    enabled: false
                 },
 
 

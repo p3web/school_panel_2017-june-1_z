@@ -31,9 +31,7 @@ Language.CreateBarData = function (Data) {
         a.push({name: Data[i].languagename, y: parseInt(Data[i].count)});
     }
     Language.Series = series;
-    setTimeout(function () {
-        changeChartData('LangChartContainer' , Language.Series, Language.DonutSeries);
-    },200);
+    BarChart('LangChartContainer' , series);
 };
 
 
