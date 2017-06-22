@@ -19,4 +19,23 @@ message.show = function (text , title , type , btn ) {
         console.log(e);
     }
 
+<<<<<<< HEAD
+=======
+};
+message.Confirm = function (text, title, CallBack, param, type) {
+    if (type == null) {
+        type = 'warning';
+    }
+    swal({
+        title: title,
+        text: text,
+        type: type,
+        showCancelButton: true,
+        confirmButtonColor: '#88d66d',
+        cancelButtonColor: '#dd5e6d',
+        confirmButtonText: 'Yes'
+    }).then(function () {
+        CallBack(param);
+    })
+>>>>>>> b002a728f4dcec2aa087814e06be3fc5418d47a1
 };

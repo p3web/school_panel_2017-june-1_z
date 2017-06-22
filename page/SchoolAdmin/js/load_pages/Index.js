@@ -1,9 +1,19 @@
-var url = '/backend/controller_school_admin_panel.php';
 /*Global*/
-function setData(Data, gridName) {
+var Global = {
+    url: '/backend/controller_school_admin_panel.php',
+};
+Global.ResultMessage = function (result) {
+    if (result) {
+        message.show('Update was successfull', 'Success', 'success');
+    } else {
+        message.show('Update was unsuccessfull', 'Error', 'error');
+    }
+};
+
+Global.setData=function(Data, gridName) {
     gridName.data = Data;
     gridName.render();
-}
+};
 function showModal(ModalID) {
     $('#' + ModalID).modal('show');
 }
@@ -13,15 +23,29 @@ function checkLogin(Data) {
     } else {
         GlobalFunc.userDetials = Data;
         document.getElementById('UserFullName').innerText = Data.firstname + ' ' + Data.lastname;
-        document.getElementById('SchoolName').innerText = Data.schoolname;
-        document.getElementById('City').innerText = Data.city + '/' + Data.suburb;
+   /*     document.getElementById('SchoolName').innerText = Data.schoolname;
+        document.getElementById('City').innerText = Data.city + '/' + Data.suburb;*/
     }
 }
+<<<<<<< HEAD
 /*TEACHER TABLE*/
 var Teacher = {};
+=======
+/*TEACHER TAB*/
+function Confirm(EmailID) {
+    message.Confirm('Are you sure ?!', 'Confirm Delete', Teacher.DeleteRow, EmailID);
+}
+var Teacher = {
+    Profile: {},
+    Edit: {},
+    Update: {
+        Result: []
+    }
+};
+>>>>>>> b002a728f4dcec2aa087814e06be3fc5418d47a1
 Teacher.LoadTeacherTable = function () {
-    ajax.sender_data_json_by_url_callback(url, {act: 'check_login'}, checkLogin);
-    ajax.sender_data_json_by_url_callback(url, {act: 'get_tbl_teachers'}, Teacher.CreateTeacherTblData);
+    ajax.sender_data_json_by_url_callback(Global.url, {act: 'check_login'}, checkLogin);
+    ajax.sender_data_json_by_url_callback(Global.url, {act: 'get_tbl_teachers'}, Teacher.CreateTeacherTblData);
 };
 Teacher.CreateTeacherTblData = function (data) {
     var TeacherData = [];
@@ -47,14 +71,15 @@ Teacher.CreateTeacherTblData = function (data) {
         }
         TeacherData.push(Rows);
     }
-    setData(TeacherData, TeacherGrid);
+    Global.setData(TeacherData, TeacherGrid);
 };
 Teacher.DeleteRow = function (TeacherEmail) {
-    ajax.sender_data_json_by_url_callback(url, {
+    ajax.sender_data_json_by_url_callback(Global.url, {
         act: 'delete_teacher_by_teacheremailid',
         teacheremailid: TeacherEmail
     }, console.log);
 };
+<<<<<<< HEAD
 
 /*Classes*/
 var Classes = {};
@@ -69,8 +94,273 @@ Classes.CreateClassesTblData = function (Data) {
         Rows['classname'] = Data[i].classname;
 
         ClassesData.push(Rows);
+=======
+/*view Profile*/
+Teacher.Profile.CreatePersonalDetails = function (Data) {
+    Data = Data[0];
+    var Tag = '<tbody>' +
+        '<tr>' +
+        '<td><label>Name:&nbsp;&nbsp;</label></td>' +
+        '<td>' + Data.firstname + '&nbsp;' + Data.lastname + '</td>' +
+        '</tr>' +
+        '<tr>' +
+        '<td><label>Email:&nbsp;&nbsp;</label></td>' +
+        '<td >' + Data.teacheremailid + '</td>' +
+        '</tr>' +
+        '<tr>' +
+        '<td><label>Gender:&nbsp;&nbsp;</label></td>' +
+        '<td>' + Data.gender + '</td>' +
+        '</tr>' +
+        '<tr>' +
+        '<td ><label>Belief/Religion:&nbsp;&nbsp;</label></td>' +
+        '<td >' + Data.religion + '</td>' +
+        '</tr>' +
+        '</tbody>';
+    document.getElementById('TeacherPersonalTable').innerHTML = Tag;
+};
+Teacher.Profile.CreateBirthDetails = function (Data) {
+    Data = Data[0];
+    var Tag = '<tbody>' +
+        '<tr>' +
+        '<td><label>Brith Place:&nbsp;&nbsp;</label></td>' +
+        '<td>' + Data.birthplace + '</td>' +
+        '</tr>' +
+        '<tr>' +
+        '<td align="center" colspan="2">' +
+        '<hr style="padding 0; margin:1% auto; width:40%">' +
+        '</td>' +
+        '</tr>' +
+        '<tr>' +
+        '<td><label>Mother:&nbsp;&nbsp;</label></td>' +
+        '<td>' + Data.motherbirthplace + '</td>' +
+        '</tr>' +
+        '<tr>' +
+        '<td><label>Grandfather:&nbsp;&nbsp;</label></td>' +
+        '<td>' + Data.motherfatherbirthplace + '</td>' +
+        '</tr>' +
+        '<tr>' +
+        '<td><label>GrandMother:&nbsp;&nbsp;</label></td>' +
+        '<td>' + Data.mothermotherbirthplace + '</td>' +
+        '</tr>' +
+        '<tr>' +
+        '<td align="center" colspan="2">' +
+        '<hr style="padding 0; margin:1% auto; width:40%">' +
+        '</td>' +
+        '</tr>' +
+        '<tr>' +
+        '<td><label>Father:&nbsp;&nbsp;</label></td>' +
+        '<td>' + Data.fatherbirthplace + '</td>' +
+        '</tr>' +
+        '<tr>' +
+        '<td><label>Grandfather:&nbsp;&nbsp;</label></td>' +
+        '<td>' + Data.fatherfatherbirthplace + '</td>' +
+        '</tr>' +
+        '<tr>' +
+        '<td><label>GrandMother:&nbsp;&nbsp;</label></td>' +
+        '<td>' + Data.fathermotherbirthplace + '</td>' +
+        '</tr>' +
+        '</tbody>';
+    document.getElementById('TeacherBirthDetail').innerHTML = Tag;
+};
+Teacher.Profile.CreateLangDetails = function (Data) {
+    var Datakeys = Object.keys(Data);
+    var Tag = '<tbody>';
+    for (var i = 0; i < Datakeys.length; i++) {
+        Tag += '<tr>' +
+            '<td><label>' + Data[Datakeys[i]].languagename + ':&nbsp;&nbsp;</label></td>' +
+            '<td>' + Data[Datakeys[i]].languagelevel + '</td>' +
+            '</tr>';
     }
-    setData(ClassesData, ClassesGrid);
+    Tag += '</tbody>';
+    document.getElementById('TeacherLangDetails').innerHTML = Tag;
+
+};
+Teacher.ViewProfile = function (EmailID) {
+    ajax.sender_data_json_by_url_callback(Global.url, {
+        act: 'get_teacher_by_teacheremailid',
+        teacheremailid: EmailID
+    }, Teacher.Profile.CreatePersonalDetails);
+    ajax.sender_data_json_by_url_callback(Global.url, {
+        act: 'get_teacher_birthDetails_by_teacherEmailId',
+        teacheremailid: EmailID
+    }, Teacher.Profile.CreateBirthDetails);
+    ajax.sender_data_json_by_url_callback(Global.url, {
+        act: 'get_teacher_lang_by_teacherEmailId',
+        teacheremailid: EmailID
+    }, Teacher.Profile.CreateLangDetails);
+    setTimeout(function () {
+        showModal('dataModal');
+    }, 500);
+};
+
+/*Teacher Edit*/
+Teacher.Edit.FillInputPersonal = function (Data) {
+    Data = Data[0];
+    document.getElementById('Teacheremail').value = Data.teacheremailid;
+    document.getElementById('firstname').value = Data.firstname;
+    document.getElementById('lastname').value = Data.lastname;
+    document.getElementById('gender').value = Data.gender.toLowerCase();
+    document.getElementById('beliefreligion').value = Data.religion;
+};
+Teacher.Edit.FillInputBirth = function (Data) {
+    Data = Data[0];
+    document.getElementById('tb').value = Data.birthplace;
+    document.getElementById('m').value = Data.motherbirthplace;
+    document.getElementById('gfm').value = Data.motherfatherbirthplace;
+    document.getElementById('gmm').value = Data.mothermotherbirthplace;
+    document.getElementById('f').value = Data.fatherbirthplace;
+    document.getElementById('gff').value = Data.fatherfatherbirthplace;
+    document.getElementById('gmf').value = Data.fathermotherbirthplace;
+};
+Teacher.Edit.FillInputLang = function (Data) {
+    var DataKeys = Object.keys(Data);
+    var Tag = '';
+    var i;
+    for (i = 0; i < DataKeys.length; i++) {
+        Tag += '<tr>' +
+            '<td><select id="edit_teacher_language' + i + '" name="lang_91" data-LangID="' + Data[DataKeys[i]].id + '" class="PSCO_employee_language form-control" data-placeholder="Choose a Language..." form="update_form">' +
+            '</select>' +
+            '</td>' +
+            '<td>' +
+            '<select id="edit_teacher_language_level' + i + '" name="langlevel_91" class="PSCO_employee_language_level form-control" data-placeholder="Choose a Language level..." form="update_form">' +
+            '</select><br></td>' +
+            '</tr>';
+    }
+    document.getElementById('LangEditTable').innerHTML = Tag;
+    setTimeout(function () {
+        $('.PSCO_employee_language').ready(function () {
+            $('.PSCO_employee_language').load('../data_value/lanuage.html');
+        });
+        $('.PSCO_employee_language_level').ready(function () {
+            $('.PSCO_employee_language_level').load('../data_value/lanuage_level.html');
+        });
+
+    }, 100);
+    setTimeout(function () {
+        for (i = 0; i < DataKeys.length; i++) {
+            document.getElementById('edit_teacher_language' + i).value = Data[DataKeys[i]].languagename;
+            document.getElementById('edit_teacher_language_level' + i).value = Data[DataKeys[i]].languagelevel;
+        }
+    }, 1000);
+};
+Teacher.Edit.FillInputAgeGroup = function (Data) {
+    setTimeout(function () {
+        var age = document.getElementById('age');
+        age.value = Data[0].age;
+        age.setAttribute('data-age', Data[0].id);
+    }, 500);
+};
+Teacher.Edit.Edit = function (EmailID) {
+    ajax.sender_data_json_by_url_callback(Global.url, {
+        act: 'get_teacher_by_teacheremailid',
+        teacheremailid: EmailID
+    }, Teacher.Edit.FillInputPersonal);
+    ajax.sender_data_json_by_url_callback(Global.url, {
+        act: 'get_teacher_birthDetails_by_teacherEmailId',
+        teacheremailid: EmailID
+    }, Teacher.Edit.FillInputBirth);
+    ajax.sender_data_json_by_url_callback(Global.url, {
+        act: 'get_teacher_lang_by_teacherEmailId',
+        teacheremailid: EmailID
+    }, Teacher.Edit.FillInputLang);
+    ajax.sender_data_json_by_url_callback(Global.url, {
+        act: 'get_teacher_age_group_by_teacherEmailId',
+        teacheremailid: EmailID
+    }, Teacher.Edit.FillInputAgeGroup);
+    setTimeout(function () {
+        showModal('edit_data_Modal');
+    }, 500);
+};
+/*Update Teacher*/
+
+Teacher.Update.PersonalDetails = function () {
+    var EmailID = document.getElementById('Teacheremail').value;
+    var firstname = document.getElementById('firstname').value;
+    var lastname = document.getElementById('lastname').value;
+    var gender = document.getElementById('gender').value;
+    var beliefreligion = document.getElementById('beliefreligion').value;
+    ajax.sender_data_json_by_url_callback(Global.url, {
+        act: 'edit_teacher_by_teacherEmailId',
+        teacheremailid: EmailID,
+        firstname: firstname,
+        lastname: lastname,
+        gender: gender,
+        religion: beliefreligion
+    }, Teacher.Update.CheckResult)
+};
+Teacher.Update.BrithDetails = function () {
+    var EmailID = document.getElementById('Teacheremail').value;
+    var TeacherBirth = document.getElementById('tb').value;
+    var motherB = document.getElementById('m').value;
+    var gfm = document.getElementById('gfm').value;
+    var gmm = document.getElementById('gmm').value;
+    var fatherB = document.getElementById('f').value;
+    var gff = document.getElementById('gff').value;
+    var gmf = document.getElementById('gmf').value;
+    ajax.sender_data_json_by_url_callback(Global.url, {
+        act: 'edit_teacher_birthDetails_by_teacherEmailId',
+        teacheremailid: EmailID,
+        birthplace: TeacherBirth,
+        motherbirthplace: motherB,
+        motherfatherbirthplace: gfm,
+        mothermotherbirthplace: gmm,
+        fatherbirthplace: fatherB,
+        fatherfatherbirthplace: gff,
+        fathermotherbirthplace: gmf
+    }, Teacher.Update.CheckResult)
+};
+Teacher.Update.AgeGroup = function () {
+    var ageGp = document.getElementById('age');
+    var ageID = ageGp.getAttribute('data-age');
+    ageGp = ageGp.value;
+    ajax.sender_data_json_by_url_callback(Global.url, {
+        act: 'edit_teacher_age_group_by_id',
+        id: ageID,
+        age: ageGp
+    }, Teacher.Update.CheckResult);
+};
+Teacher.Update.LanguageDetails = function () {
+    var Langs = document.getElementsByClassName('PSCO_employee_language');
+    var Levels = document.getElementsByClassName('PSCO_employee_language_level');
+    var Language = [];
+    var id, lang, level;
+    for (var i = 0; i < Langs.length; i++) {
+        id = Langs[i].getAttribute('data-LangID');
+        lang = Langs[i].value;
+        level = Levels[i].value;
+
+        ajax.sender_data_json_by_url_callback(Global.url, {
+            act: 'edit_teacher_lang_bylangId',
+            id: id, languagename: lang, languagelevel: level
+        }, Teacher.Update.CheckResult);
+    }
+
+};
+
+Teacher.Update.Update = function () {
+    Teacher.Update.Result = [];
+    Teacher.Update.PersonalDetails();
+    Teacher.Update.BrithDetails();
+    Teacher.Update.AgeGroup();
+    Teacher.Update.LanguageDetails();
+};
+Teacher.Update.CheckResult = function (Data) {
+    if (Data.data == true) {
+        Teacher.Update.Result.push(true);
+    } else {
+        Teacher.Update.Result.push(false);
+    }
+    if (Teacher.Update.Result.length == 4) {
+        var result = true;
+        for (var i = 0; i < 4; i++) {
+            if (!Teacher.Update.Result[i]) {
+                result = false;
+                break;
+            }
+        }
+        Global.ResultMessage(result);
+>>>>>>> b002a728f4dcec2aa087814e06be3fc5418d47a1
+    }
 };
 
 
@@ -78,7 +368,11 @@ Classes.CreateClassesTblData = function (Data) {
 var KeyFacts = {};
 
 KeyFacts.LoadKeyFact = function () {
+<<<<<<< HEAD
     ajax.sender_data_json_by_url_callback(url , {act:'get_key_fact_json'} , KeyFacts.createKeyFact);
+=======
+    ajax.sender_data_json_by_url_callback(Global.url, {act: 'get_key_fact_json'}, KeyFacts.createKeyFact);
+>>>>>>> b002a728f4dcec2aa087814e06be3fc5418d47a1
 };
 
 KeyFacts.createKeyFact = function (Data) {

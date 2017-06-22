@@ -6,6 +6,7 @@
 
     <link rel="stylesheet" href="../CssMapChart.css">
 
+
 </head>
 <body >
 
@@ -20,48 +21,9 @@
 
 <script src="../js/chart.js"></script>
 <script src="../js/ajax.js"></script>
-
-<script>
-    function sendActions(){
-       // ajax.sender_data_callback({out:'TALO'} , createDonutData);
-    }
-    function createDonutData(Data) {
-        var donutSeries = {
-            name: 'language',
-            data: [
-
-
-            ]
-        };
-        for(var i = 1 ; i < Data[0].length ; i++){
-            donutSeries.data.push([Data[0][i][0] , parseInt(Data[0][i][1])]);
-        }
-        donutSeries.data.push({name: 'Proprietary or Undetectable', y: 0.2, dataLabels: {enabled: false}});
-        DonutChart('DonutChart' , donutSeries);
-    }
-    var donutSeries = {
-        name: 'Browser',
-        data: [
-            ['Firefox', 10.38],
-            ['IE', 56.33],
-            ['Chrome', 24.03],
-            ['Safari', 4.77],
-            ['Opera', 0.91],
-            {
-                name: 'Proprietary or Undetectable',
-                y: 0.2,
-                dataLabels: {
-                    enabled: false
-                }
-            }
-        ]
-    };
-
-    DonutChart('DonutChart' , donutSeries);
-
-</script>
+<script src="js/load_pages/Export.js"></script>
 </body>
 <script type="text/javascript">
-    sendActions();
+    Export.sendDonutActions();
 </script>
 </html>

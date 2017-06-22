@@ -1,7 +1,6 @@
-
 <div class="container-fluid">
     <div class="row">
-        <div class="col-xs-12 col-md-8 col-md-push-2">
+        <!--<div class="col-xs-12 col-md-8 col-md-push-2">
             <div class="dropdown" style="display: inline-block; margin-bottom: 50px">
                 <button id="TeamL" class="btn btn-default" type="button" data-toggle="dropdown" aria-haspopup="true"
                         aria-expanded="false">
@@ -14,9 +13,9 @@
 
                 </ul>
             </div>
-        </div>
+        </div>-->
         <div class="col-xs-12 col-md-8 col-md-push-2">
-            <div class="dropdown" style="display: inline-block;">
+            <!--<div class="dropdown" style="display: inline-block;">
                 <button id="GenderL" class="btn btn-primary" type="button" data-toggle="dropdown" aria-haspopup="true"
                         aria-expanded="false">
                     Select Gender
@@ -28,7 +27,7 @@
                     <li><a href="#"> Female</a></li>
                     <li><a href="#"> Other</a></li>
                 </ul>
-            </div>
+            </div>-->
             <div class="dropdown" style="display: inline-block;">
                 <button id="ChartTypel" class="btn btn-primary" type="button" data-toggle="dropdown"
                         aria-haspopup="true" aria-expanded="false">
@@ -36,9 +35,9 @@
                     <span class="caret"></span>
                 </button>
                 <ul class="dropdown-menu" aria-labelledby="dLabel">
-                    <li><a href="#" onclick="PieChart('ChartContainer' , series)"> Pie</a></li>
-                    <li><a href="#" onclick="BarChart('ChartContainer' , series)"> Bar</a></li>
-                    <li><a href="#" onclick="DonutChart('ChartContainer' , donutSeries)"> Donut</a></li>
+                    <li><a href="#" onclick="PieChart('ChartContainer' , Belief.Series)"> Pie</a></li>
+                    <li><a href="#" onclick="BarChart('ChartContainer' , Belief.Series)"> Bar</a></li>
+                    <li><a href="#" onclick="DonutChart('ChartContainer' , Belief.DonutSeries)"> Donut</a></li>
                 </ul>
             </div>
             <div class="btn btn-primary" style="display: inline-block;">Export CSV</div>
@@ -53,95 +52,6 @@
         </div>
     </div>
 </div>
-
-
 <script>
-
-    //_____ exampel Chart Data
-    var series = [{
-        name: 'language',
-        colorByPoint: true,
-        data: [{
-            name: 'US',
-            y: 56.33
-        }, {
-            name: 'persian',
-            y: 24.03
-
-        }, {
-            name: 'arabic',
-            y: 10.38
-        }, {
-            name: 'ger',
-            y: 4.77
-        }, {
-            name: 'fre',
-            y: 0.91
-        }, {
-            name: 'tur',
-            y: 0.2
-        }]
-    }];
-
-    var series2 = [{
-        name: 'language',
-        colorByPoint: true,
-        data: [{
-            name: 'aa',
-            y: 6.33
-        }, {
-            name: 'dsa',
-            y: 58.03
-
-        }, {
-            name: 'dsad',
-            y: 10.38
-        }, {
-            name: 'geasdasr',
-            y: 4.77
-        }, {
-            name: 'fffre',
-            y: 0.91
-        }, {
-            name: 'tusadr',
-            y: 0.2
-        }]
-    }];
-
-
-
-
-    //_____ examepl Data
-    var donutSeries = {
-        name: 'Browser',
-        data: [
-            ['Firefox', 10.38],
-            ['IE', 56.33],
-            ['Chrome', 24.03],
-            ['Safari', 4.77],
-            ['Opera', 0.91],
-            {
-                name: 'Proprietary or Undetectable',
-                y: 0.2,
-                dataLabels: {
-                    enabled: false
-                }
-            }
-        ]
-    };
-
-
-    //_____ table Func
-    var TableData = {
-        thName: ['language', 'percent'],
-        trData: [
-            ['persian', '20%'],
-            ['US', '20%']
-        ]
-    };
-    $(document).ready(function () {
-        PieChart('ChartContainer', series);
-        TabelCreateor(TableData, 'BelieflangTable');
-    });
-
+    Belief.sendAction();
 </script>

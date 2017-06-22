@@ -24,7 +24,7 @@ require_once 'lang.php';
 
             case 'get_key_fact':
                 //TODO: nabi jan vodi haye function ro inja bezani mituni test koni
-                echo access_org_key_fact::key_facts_to_string('','');
+                echo access_org_key_fact::key_facts_to_string(1);
                 break;
 
 

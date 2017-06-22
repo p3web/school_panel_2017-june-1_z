@@ -26,7 +26,15 @@
             <div class="col-sm-1">
             </div>
 
+            <div class="col-sm-10 no-padding-left">
+                <div class=" Lightbackground headerLight " style="border-left: none; ">
+                    <div class="headerIconDiv">
+                        <img id="headerIcon" src="../../images/MenuIcons/Pen.png"/>
+                        <b>Welcome, <b id="UserFullName"></b></b>
+                    </div>
+                </div>
 
+<<<<<<< HEAD
             <div class="col-sm-10" style="height:5.325em; margin-top:1em; ">
 
 
@@ -41,27 +49,45 @@
 
                     <a id="btn_user_profile" href="#" class="btn btn-default navbar-btn logbutton submitbtunnew"
                     style="float:right; border-radius:5px; margin:1.0em 0em; font-weight:bold;  text-decoration:none; margin-right: 1em;">PROFILE</a>
+=======
+                <div>
+                 <!--   <a class="pull-left hidden-xs" id="LogoSM" href="#"><img src="../../images/logoM.png"
+                                                                             title="Ancestry Atlas"
+                                                                             alt="Ancestry Atlas"></a>
+-->
+
+                    <!--
+                                        <a id="btn_user_profile" href="#" class="btn btn-default navbar-btn logbutton submitbtunnew"
+                                           style="float:right; border-radius:5px; margin:1.0em 0em; font-weight:bold;  text-decoration:none; margin-right: 1em;">PROFILE</a>-->
+>>>>>>> b002a728f4dcec2aa087814e06be3fc5418d47a1
 
 
                 </div>
             </div>
 
-            <div class="col-sm-1">
+            <div class="col-sm-1 no-padding Lightbackground headerLight" style="border-right: none">
+                <a href="../../teamadminpanel.php?logoutrequest" id="logOutBtn"
+                   class="btn btn-default navbar-btn logbutton submitbtunnew"><span id="logoutSpan">LOGOUT</span><i id="logoutIcon" class="glyphicon glyphicon-off"></i> </a>
             </div>
 
         </div>
         <!--Tab Control-->
         <div class="panelControl" id="MenuPanel">
-            <a href="#"><img src="../../images/logo.png" title="Ancestry Atlas" alt="Ancestry Atlas"></a>
+            <a href="#"><img src="../../images/MenuIcons/MenuLogo.png" title="Ancestry Atlas" alt="Ancestry Atlas"></a>
             <ul class=" nav nav-tabs">
                 <li class="active"><a data-toggle="tab" href="#students"
+<<<<<<< HEAD
                     aria-expanded="true"><i class="glyphicon glyphicon-user"></i> TEACHER</a>
+=======
+                                      aria-expanded="true"><img src="../../images/MenuIcons/person.png"> TEACHER</a>
+>>>>>>> b002a728f4dcec2aa087814e06be3fc5418d47a1
                 </li>
                 <li class=""><a onclick="loadPage(this)"
                     data-toggle="tab" data-Page="Classes"
                     href="#classes"
                     aria-expanded="false"><i class="glyphicon glyphicon-blackboard"></i> CLASSES</a></li>
                 <li class=""><a data-toggle="tab"
+<<<<<<< HEAD
                     onclick="loadPage(this)" data-Page="Map"
                     href="#maps"
                     aria-expanded="false"><i class="glyphicon glyphicon-stats"></i> MAPS</a></li>
@@ -85,6 +111,30 @@
                 <li class=""><a data-toggle="tab" data-Page="Export"
                     onclick="loadPage(this)" href="#export"
                     aria-expanded="false"><i class="glyphicon glyphicon-globe"></i> EXPORT</a>
+=======
+                                onclick="loadPage(this)" data-Page="Map"
+                                href="#maps"
+                                aria-expanded="false"><img src="../../images/MenuIcons/Map.png"> MAPS</a></li>
+                <li class=""><a data-toggle="tab"
+                                onclick="loadPage(this)"
+                                data-Page="Language"
+                                href="#language"
+                                aria-expanded="false"><img src="../../images/MenuIcons/comment.png"> LANGUAGE</a></li>
+                <li class=""><a data-toggle="tab"
+                                onclick="loadPage(this)"
+                                data-Page="Belief"
+                                href="#Belief"
+                                aria-expanded="false"><img src="../../images/MenuIcons/heart.png"> BELIEF</a>
+                </li>
+                <li class=""><a data-toggle="tab" data-Page="KeyFacts"
+                                onclick="loadPage(this)"
+                                href="#Keyfact"
+                                aria-expanded="false"><img src="../../images/MenuIcons/star.png"> KEY
+                    FACTS</a></li>
+                <li class=""><a data-toggle="tab" data-Page="Export"
+                                onclick="loadPage(this)" href="#export"
+                                aria-expanded="false"><img src="../../images/MenuIcons/Compass.png"> EXPORT</a>
+>>>>>>> b002a728f4dcec2aa087814e06be3fc5418d47a1
                 </li>
 
             </ul>
@@ -93,37 +143,41 @@
         <div class="row">
             <div class="col-sm-1">
             </div>
-            <div class="col-sm-10">
+            <div class="col-sm-11">
                 <!--navigation-->
-                <div class="col-sm-12">
+            <!--    <div class="col-sm-12">
                     <div class="col-sm-6">
                         <h2>Welcome to school administration panel</h2>
                         <h5>School Admin-&gt; &nbsp;<b id="UserFullName"></b></h5>
                     </div>
                     <div class="col-sm-6 text-right">
-                        <h2 id="SchoolName"></h2>
+                            <h2 id="SchoolName"></h2>
                         <h5 id="City"></h5>
                     </div>
-                </div>
-
+                </div>-->
 
                 <div class="col-sm-12" style="margin-top:2em;">
                     <!--tab body-->
-                    <div class="tab-content">
+                    <div class="tab-content Lightbackground">
                         <div id="students" class="tab-pane fade active in">
-                            <br><br>
                             <b style="display: none;"> Team Name: </b><select name="classnamedropdownstutab"
                             style="padding:0.3em;display: none;">
                             <option value="CITeam">CITeam</option>
                         </select> <input style="display: none;" type="submit" id="submitvalstutab" class="submitbtunnew"
+<<<<<<< HEAD
                             name="submitvalstutab" value="SUBMIT">
 
+=======
+                                         name="submitvalstutab" value="SUBMIT">
+                        <div class="headerContent">TEACHER</div>
+>>>>>>> b002a728f4dcec2aa087814e06be3fc5418d47a1
                             <div id="PGrid">
 
                             </div>
                         </div>
 
                         <div id="classes" class="tab-pane fade in">
+                            <div class="headerContent">CLASSESS</div>
                             <div id="PClassGrid">
 
                             </div>
@@ -131,34 +185,37 @@
 
 
                         <div id="maps" class="tab-pane fade in">
-
+                            <div class="headerContent">MAP</div>
                         </div>
 
 
                         <div id="language" class="tab-pane fade in">
-
+                            <div class="headerContent">LANGUAGE</div>
+                            <div class="TABContent"></div>
                         </div>
 
 
                         <div id="Belief" class="tab-pane fade in">
-
+                            <div class="headerContent">BELIEF</div>
+                            <div class="TABContent"></div>
                         </div>
 
 
                         <div id="export" class="tab-pane fade in">
-
+                            <div class="headerContent">EXPORT</div>
                         </div>
 
 
                         <div id="Keyfact" class="tab-pane fade in">
-
+                            <div class="headerContent">KEY FACTS</div>
+                            <div class="TABContent"></div>
                         </div>
 
 
                     </div>
                 </div>
             </div>
-            <div class="col-sm-1"></div>
+            <!--<div class="col-sm-1"></div>-->
         </div>
 
 
@@ -196,9 +253,14 @@
             </div>
             <div class="modal-body">
 
+<<<<<<< HEAD
                 <form method="post" id="update_form" class="form-horizontal">
                     <h3 style="padding: 1% 0%; background-color:#FE8885; color:#FFF; text-align:center;  border-radius: 8px;">
                         PERSONAL DETAILS</h3>
+=======
+                <div id="update_form" class="form-horizontal">
+                    <h3 class="HeaderPink">PERSONAL DETAILS</h3>
+>>>>>>> b002a728f4dcec2aa087814e06be3fc5418d47a1
 
                     <div class="form-group">
                         <label class="control-label col-sm-3" for="staffemail" style="visibility: hidden;">Email
@@ -253,9 +315,12 @@
                                 <option value="50-55">50-55</option>
                                 <option value="55-60">55-60+</option>
                             </select>
+<<<<<<< HEAD
                             <script type="text/javascript">
                                 $('#age').load("page/data_value/age_group_60.html");
                             </script>
+=======
+>>>>>>> b002a728f4dcec2aa087814e06be3fc5418d47a1
                         </div>
                     </div>
                     <div class="form-group">
@@ -266,10 +331,17 @@
                                 <input type="text" class="form-control ui-autocomplete-input" id="beliefreligion"
                                        name="beliefreligion" autocomplete="off" style="color: rgb(0, 0, 0);">
                             </div>
+<<<<<<< HEAD
                             <div class="col-sm-6">
                                 <input id="checko" type="checkbox">
                                 <label style="margin-top:0.5em">&nbsp;Don't want to answer</label>
                             </div>
+=======
+                            <!-- <div class="col-sm-6">
+                                 <input id="checko" type="checkbox">
+                                 <label style="margin-top:0.5em">&nbsp;Don't want to answer</label>
+                             </div>-->
+>>>>>>> b002a728f4dcec2aa087814e06be3fc5418d47a1
                         </div>
                     </div>
                     <h3 style="padding: 1% 0%; background-color:#FE8885; color:#FFF; text-align:center;  border-radius: 8px;">
@@ -429,6 +501,7 @@
                                     </select><br></td>
                                 </tr>
                                 <script type="text/javascript">
+<<<<<<< HEAD
                                     $('.PSCO_employee_language').ready(function () {
                                         $('.PSCO_employee_language').load('page/data_value/lanuage.html');
                                     });
@@ -444,16 +517,26 @@
                                     }, 1000);
                                 </script>
                                 </tbody>
+=======
+
+                                </script>
+>>>>>>> b002a728f4dcec2aa087814e06be3fc5418d47a1
                             </table>
                         </div>
                     </div>
 
                     <br>
+<<<<<<< HEAD
                     <input type="submit" name="update" id="update" value="Save" class="btn btn-success ">
+=======
+                    <button type="button" name="update" id="update" onclick="Teacher.Update.Update()"
+                            class="btn btn-success ">Save
+                    </button>
+>>>>>>> b002a728f4dcec2aa087814e06be3fc5418d47a1
                     <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
 
 
-                </form>
+                </div>
 
             </div>
 
@@ -461,6 +544,49 @@
     </div>
 </div>
 
+<!--classes MODAL-->
+<!--Edit Modals-->
+<div id="edit_Classes_Modal" class="modal fade in">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">×</button>
+                <h4 class="modal-title" style="text-align:center;font-weight:bold;">Update Class</h4>
+            </div>
+            <div class="modal-body">
+
+                <div class="form-horizontal">
+                    <h3 class="HeaderPink">Class Name</h3>
+
+                    <div class="form-group">
+                        <label class="control-label col-sm-3" for="CurrentClassName"
+                               style="visibility: hidden;"></label>
+
+                        <div class="col-sm-9">
+                            <input type="email" class="form-control" id="CurrentClassName" name="staffemail" readonly=""
+                                   style="background-color:#e2e2e2;visibility: hidden;">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label col-sm-3" for="ClassNameinp">Class Name:</label>
+
+                        <div class="col-sm-9">
+                            <input type="text" class="form-control" id="ClassNameinp">
+                        </div>
+                    </div>
+
+                    <br>
+                    <button type="button" name="update" id="updateClass" onclick="Classes.Update()"
+                            class="btn btn-success">Save
+                    </button>
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
 <script src="../../scripts/jquery-1.10.2.js"></script>
 
 <!--ajax-->
@@ -469,6 +595,10 @@
 <script src="../js/Global.js"></script>
 <!--loadPage-->
 <script src="js/load_pages/Index.js"></script>
+<script src="js/load_pages/classes.js"></script>
+<script src="js/load_pages/Belief.js"></script>
+<script src="js/load_pages/Language.js"></script>
+
 <!--bootstrap-->
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
         integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
@@ -492,6 +622,8 @@
 <script src="../js/sweetalert/msg.js"></script>
 
 <script type="text/javascript">
+    /*Load age Group option*/
+    $('#age').load("../data_value/age_group_60.html");
 
     var ClassesGrid;
     var TeacherGrid = new PSCO_grid('TeacherGrid');
@@ -538,18 +670,25 @@
                 document.getElementById(TabID).appendChild(frame);
             } else if (pageName == 'KeyFacts') {
                 KeyFacts.LoadKeyFact();
+
             } else if (pageName == 'Classes') {
                 //______LOAD CLASSES GRID
                 ClassesGrid = new PSCO_grid('ClassesGrid');
                 ClassesGrid.ContainerID = 'PClassGrid';
                 ClassesGrid.cols = [
-                    {name: 'classname', thname: 'Class Name'}
+                    {name: 'classname', thname: 'Class Name'},
+                    {name: 'option', thname: 'Option'}
                 ];
                 ClassesGrid.RightToLeft = false;
                 Classes.LoadClassesTable(); //______ send Act
             } else {
                 //____ LOAD OTHER TAB FROM EXTERNAL PAGE
-                $(TabID).load(pageName + '.html');
+                $(TabID + ' .TABContent').load(pageName + '.html');
+                if (pageName == 'Language') {
+                    setTimeout(function () {
+                        Language.sendAction();
+                    }, 200)
+                }
             }
             elm.setAttribute('data-show', 'true');
         }

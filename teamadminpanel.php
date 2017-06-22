@@ -585,18 +585,17 @@ function test_input($data)
 
         <!--Tab Control-->
         <div class="panelControl" id="MenuPanel">
-            <a href="#"><img src="images/logo.png" title="Ancestry Atlas" alt="Ancestry Atlas"></a>
+            <a href="#"><img src="images/MenuIcons/MenuLogo.png" title="Ancestry Atlas" alt="Ancestry Atlas"></a>
             <ul class="nav nav-tabs">
                 <li class="active"><a data-toggle="tab"
-                                      href="#students"><i class="glyphicon glyphicon-user"></i> STAFF</a></li>
-                <li><a data-toggle="tab" href="#maps"><i class="glyphicon glyphicon-stats"></i> MAPS</a></li>
+                                      href="#students"><img src="images/MenuIcons/person.png"> STAFF</a></li>
+                <li><a data-toggle="tab" href="#maps"><img src="images/MenuIcons/Map.png"> MAPS</a></li>
                 <li><a data-toggle="tab"
-                       href="#language"><i class="glyphicon glyphicon-comment"></i> LANGUAGE</a></li>
-                <li><a data-toggle="tab" href="#religion"><i class="glyphicon glyphicon-heart-empty"></i> BELIEF</a>
+                       href="#language"><img src="images/MenuIcons/comment.png"> LANGUAGE</a></li>
+                <li><a data-toggle="tab" href="#religion"><img src="images/MenuIcons/heart.png"> BELIEF</a>
                 </li>
-                <li><a data-toggle="tab" href="#key_facts"><i class="glyphicon glyphicon-wrench
-                    "></i> KEY FACTS</a></li>
-                <li><a data-toggle="tab" href="#export"><i class="glyphicon glyphicon-globe"></i> EXPORT</a>
+                <li><a data-toggle="tab" href="#key_facts"><img src="images/MenuIcons/star.png"> KEY FACTS</a></li>
+                <li><a data-toggle="tab" href="#export"><img src="images/MenuIcons/Compass.png"> EXPORT</a>
                 </li>
 
             </ul>
@@ -609,8 +608,8 @@ function test_input($data)
             <div class="col-sm-10" style="margin-top:2em;">
                 <div class="col-sm-12">
                     <div class="col-sm-6">
-                        <h2>Welcome to your Ancestry Atlas</h2>
-                        <h5>Team admin -> &nbsp;<b><?php echo $adminName; ?></b></h5>
+                       <!-- <h2>Welcome to your Ancestry Atlas</h2>
+                        <h5>Team admin -> &nbsp;<b><?php /*echo $adminName; */?></b></h5>-->
                         <!--
                         <p style="margin-top:1.5em;">As a teacher, you can now invite your students to register for Ancestry Atlas. <br>
 
@@ -619,18 +618,18 @@ function test_input($data)
        </p>-->
                     </div>
 
-                    <div class="col-sm-6 text-right">
-                        <h2><?php echo $orgName; ?></h2>
-                        <h5><?php echo $city . " / " . $suburb; ?></h5>
-                    </div>
+       <!--             <div class="col-sm-6 text-right">
+                        <h2><?php /*echo $orgName; */?></h2>
+                        <h5><?php /*echo $city . " / " . $suburb; */?></h5>
+                    </div>-->
 
                     <div class="col-sm-12" style="margin-top:2em;">
 
 
-                        <div class="tab-content">
+                        <div class="tab-content Lightbackground">
                             <div id="students" class="tab-pane fade in active">
-                                <br><br>
-
+                                <div class="headerContent">STAFF</div>
+                                <!--<br><br>-->
 
                                 <form method="post" style="overflow: auto">
                                     <?php
@@ -918,12 +917,14 @@ function test_input($data)
 
 
                             <div id="maps" class="tab-pane fade">
+                                <div class="headerContent">MAPS</div>
                                 <br>
 
                                 <div>
-                                    <div id="regions_div" style="float:left;"></div>
+                                    <iframe src="page/TeamAdminMap.html" style="border: none;width: 80%;height:500px;"></iframe>
+                                    <div id="regions_div" style="display: none;float:left;"></div>
 
-                                    <div style="float:right;">
+                                    <div style="display: inline-block;">
 
                                         <div>
                                             <form method="post">
@@ -1166,7 +1167,10 @@ function test_input($data)
                             </script>
 
                             <div id="language" class="tab-pane fade">
+                                <div class="headerContent">LANGUAGE</div>
+                                <div class="TABContent">
 
+                                </div>
                             </div>
 
                             <script type="text/javascript">
@@ -1188,10 +1192,12 @@ function test_input($data)
                                         }, 1000);
                                     }
                                 }
-                                $('#language').load('page/Chart.html');
-                                setTimeout(function () {
-                                    init_PSCO_chart();
-                                }, 1000);
+                                $('#language .TABContent').load('page/Chart.html',function () {
+                                    setTimeout(function () {
+                                        init_PSCO_chart();
+                                    }, 1000);
+                                });
+
                             </script>
 
 
@@ -1237,7 +1243,10 @@ function test_input($data)
 
 
                             <div id="religion" class="tab-pane fade">
+                                <div class="headerContent">BELIEF</div>
+                                <div class="TABContent">
 
+                                </div>
                             </div>
 
                             <script type="text/javascript">
@@ -1259,16 +1268,18 @@ function test_input($data)
                                         }, 1000);
                                     }
                                 }
-                                $('#religion').load('page/Belief_chart.html');
-                                setTimeout(function () {
-                                    init_PSCO_chart_religion();
-                                }, 1000);
+                                $('#religion .TABContent').load('page/Belief_chart.html',function () {
+                                    setTimeout(function () {
+                                        init_PSCO_chart_religion();
+                                    }, 1000);
+                                });
+
                             </script>
 
 
                             <div id="key_facts" class="tab-pane fade">
 
-
+                                <div class="headerContent">KEY FACTS</div>
                                 <br><br>
                                 <!--<br>
                       <strong> The description of the Key Facts goes here.</strong>
@@ -1284,64 +1295,80 @@ function test_input($data)
                                 <?php
                                 //$result_num_of_language_spoken = num_of_language_spoken($orgId,$teamName,$deptName);
                                 echo "<ul style='color: black; line-height: 200%; font-size: medium;'>";
-                                echo "<li>";
-                                echo PSCO_func::languages($orgId, $teamName, $deptName);
-                                echo "</li>";
-                                echo "<li>";
-                                echo PSCO_func::different_faiths($orgId, $teamName, $deptName);
-                                echo "</li>";
-                                echo "<li>";
-                                echo PSCO_func::count_Languages($orgId, $teamName, $deptName);
-                                echo "</li>";
-                                echo "<li>";
-                                echo PSCO_func::grandparents($orgId, $teamName, $deptName);
-                                echo "</li>";
-                                echo "<li>";
-                                echo PSCO_func::Highest_number($orgId, $teamName, $deptName);
-                                echo "</li>";
-                                echo "<li>";
-                                echo PSCO_func::How_many_number($orgId, $teamName, $deptName);
-                                echo "</li>";
-                                echo "<li>";
-                                echo PSCO_func::born_country($orgId, $teamName, $deptName)[0];
-                                echo "</li>";
-                                echo "<li>";
-                                echo PSCO_func::born_country($orgId, $teamName, $deptName)[1];
-                                echo "</li>";
-                                echo "<li>";
-                                echo PSCO_func::born_country($orgId, $teamName, $deptName)[2];
-                                echo "</li>";
-                                echo "<li>";
-                                echo PSCO_func::male_female_know_language($orgId, $teamName, $deptName);
-                                echo "</li>";
-                                echo "<li>";
-                                echo PSCO_func::cultures_country_influence($orgId, $teamName, $deptName);
-                                echo "</li>";
-                                echo "<li>";
-                                echo PSCO_func::top_migrant($orgId, $teamName, $deptName);
-                                echo "</li>";
-                                echo "<li>";
-                                echo PSCO_func::num_of_language_spoken($orgId, $teamName, $deptName)[0];
-                                echo "</li>";
-                                echo "<li>";
-                                echo PSCO_func::num_of_language_spoken($orgId, $teamName, $deptName)[1];
-                                echo "</li>";
-                                echo "<li>";
-                                echo PSCO_func::num_of_language_spoken($orgId, $teamName, $deptName)[2];
-                                echo "</li>";
-                                echo "<li>";
+                                //the first section of key facts.
+                                echo "<li>";//16
                                 echo PSCO_func::invitation_status($orgId, $teamName, $deptName);
                                 echo "</li>";
-                                echo "<li>";
+                                // spacer between key fact section one and two.
+                                echo "<br><br>";
+                                //the second section of key facts.
+                                echo "<li>";//1
+                                echo PSCO_func::languages($orgId, $teamName, $deptName);
+                                echo "</li>";
+                                echo "<li>";//4
+                                echo PSCO_func::grandparents($orgId, $teamName, $deptName);
+                                echo "</li>";
+                                echo "<li>";//7
+                                echo PSCO_func::born_country($orgId, $teamName, $deptName)[0];
+                                echo "</li>";
+                                echo "<li>";//8
+                                echo PSCO_func::born_country($orgId, $teamName, $deptName)[1];
+                                echo "</li>";
+                                echo "<li>";//12
+                                echo PSCO_func::top_migrant($orgId, $teamName, $deptName);
+                                echo "</li>";
+                                echo "<li>";//9
+                                echo PSCO_func::born_country($orgId, $teamName, $deptName)[2];
+                                echo "</li>";
+                                echo "<li>";//11
+                                echo PSCO_func::cultures_country_influence($orgId, $teamName, $deptName);
+                                echo "</li>";
+                                echo "<li>";//17
                                 echo PSCO_func::parent_born_overseas($orgId, $teamName, $deptName);
                                 echo "</li>";
-                                echo "<li>";
+                                echo "<li>";//18
                                 echo PSCO_func::gparent_born_overseas($orgId, $teamName, $deptName);
                                 echo "</li>";
-                                echo "<li>";
+                                // spacer between key fact section two and three.
+                                echo "<br><br>";
+                                //the third section of key facts.
+                                echo "<li>";//1
+                                echo PSCO_func::languages($orgId, $teamName, $deptName);
+                                echo "</li>";
+                                echo "<li>";//3
+                                echo PSCO_func::count_Languages($orgId, $teamName, $deptName);
+                                echo "</li>";
+                                echo "<li>";//5
+                                echo PSCO_func::Highest_number($orgId, $teamName, $deptName);
+                                echo "</li>";
+                                echo "<li>";//10
+                                echo PSCO_func::male_female_know_language($orgId, $teamName, $deptName);
+                                echo "</li>";
+                                echo "<li>";//13
+                                echo PSCO_func::num_of_language_spoken($orgId, $teamName, $deptName)[0];
+                                echo "</li>";
+                                echo "<li>";//14
+                                echo PSCO_func::num_of_language_spoken($orgId, $teamName, $deptName)[1];
+                                echo "</li>";
+                                echo "<li>";//15
+                                echo PSCO_func::num_of_language_spoken($orgId, $teamName, $deptName)[2];
+                                echo "</li>";
+                                // spacer between key fact section three and four.
+                                echo "<br><br>";
+                                //the forth section of key facts.
+                                echo "<li>";//2
+                                echo PSCO_func::different_faiths($orgId, $teamName, $deptName);
+                                echo "</li>";
+                                echo "<li>";//6
+                                echo PSCO_func::How_many_number($orgId, $teamName, $deptName);
+                                echo "</li>";
+                                // spacer between key fact section four and five.
+                                echo "<br><br>";
+                                //the forth section of key facts.
+                                echo "<li>";//19
                                 echo PSCO_func::age_language_stats($orgId, $teamName, $deptName);
                                 echo "</li>";
-                                echo "<li>";
+                                echo "<li>";//20
                                 echo PSCO_func::age_belief_stats($orgId, $teamName, $deptName);
                                 echo "</li>";
 
@@ -1352,6 +1379,7 @@ function test_input($data)
 
 
                             <div id="export" class="tab-pane fade">
+                                <div class="headerContent">EXPORT</div>
                                 <iframe src="page/TeamMapChart.html"
                                         style="width: 100%;min-height: 1200px;border: none;"></iframe>
                             </div>

@@ -13,7 +13,7 @@
 
 html,
 body {
-  height: 100%;
+  /*height: 100%;*/
   background-color:#f9f9f9;
   font-family:MuseoSans_300;
   /* The html and body elements cannot have any padding or margin. */

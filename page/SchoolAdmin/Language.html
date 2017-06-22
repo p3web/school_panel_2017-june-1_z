@@ -1,8 +1,14 @@
 
+<script src="js/load_pages/Language.js"></script>
 <div class="container-fluid">
     <div class="row">
+<<<<<<< HEAD
         <!--<div class="col-xs-12 col-md-8 col-md-push-2">
             <div class="dropdown" style="display: inline-block; margin-bottom: 50px">
+=======
+        <div class="col-xs-12 col-md-8 col-md-push-2">
+            <!--<div class="dropdown" style="display: inline-block; margin-bottom: 50px">
+>>>>>>> b002a728f4dcec2aa087814e06be3fc5418d47a1
                 <button id="LangTeamL" class="btn btn-default" type="button" data-toggle="dropdown" aria-haspopup="true"
                         aria-expanded="false">
                     Team Select
@@ -13,8 +19,13 @@
                     <li><a href="#" onclick="changeChartData('LangChartContainer' , series2)"> Team 2</a></li>
 
                 </ul>
+<<<<<<< HEAD
             </div>
         </div>-->
+=======
+            </div>-->
+        </div>
+>>>>>>> b002a728f4dcec2aa087814e06be3fc5418d47a1
         <div class="col-xs-12 col-md-8 col-md-push-2">
             <div class="dropdown" style="display: inline-block;">
                 <button id="LangGenderL" class="btn btn-primary" type="button" data-toggle="dropdown" aria-haspopup="true"
@@ -23,10 +34,10 @@
                     <span class="caret"></span>
                 </button>
                 <ul class="dropdown-menu" aria-labelledby="dLabel">
-                    <li><a href="#"> All</a></li>
-                    <li><a href="#"> Male</a></li>
-                    <li><a href="#"> Female</a></li>
-                    <li><a href="#"> Other</a></li>
+                    <li><a onclick="Language.sendAction('all')" href="#"> All</a></li>
+                    <li><a onclick="Language.sendAction('male')" href="#"> Male</a></li>
+                    <li><a onclick="Language.sendAction('female')" href="#"> Female</a></li>
+                    <li><a onclick="Language.sendAction('other')" href="#"> Other</a></li>
                 </ul>
             </div>
             <div class="dropdown" style="display: inline-block;">
@@ -36,9 +47,9 @@
                     <span class="caret"></span>
                 </button>
                 <ul class="dropdown-menu" aria-labelledby="dLabel">
-                    <li><a href="#" onclick="PieChart('LangChartContainer' , series)"> Pie</a></li>
-                    <li><a href="#" onclick="BarChart('LangChartContainer' , series)"> Bar</a></li>
-                    <li><a href="#" onclick="DonutChart('LangChartContainer' , donutSeries)"> Donut</a></li>
+                    <li><a href="#" onclick="PieChart('LangChartContainer' , Language.Series)"> Pie</a></li>
+                    <li><a href="#" onclick="BarChart('LangChartContainer' , Language.Series)"> Bar</a></li>
+                    <li><a href="#" onclick="DonutChart('LangChartContainer' , Language.DonutSeries)"> Donut</a></li>
                 </ul>
             </div>
             <div class="btn btn-primary" style="display: inline-block;">Export CSV</div>
@@ -56,8 +67,7 @@
 
 
 <script>
-
-    //_____ exampel Chart Data
+    /*//_____ exampel Chart Data
     var series = [{
         name: 'language',
         colorByPoint: true,
@@ -142,6 +152,6 @@
     $(document).ready(function () {
         BarChart('LangChartContainer', series);
         TabelCreateor(TableData, 'langTable');
-    });
+    });*/
 
 </script>
