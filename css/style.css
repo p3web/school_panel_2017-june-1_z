@@ -43,6 +43,8 @@ input:focus{
   font-size:11px; 
   text-align:center; 
   padding-top:20px;
+	z-index: 200;
+	position: relative;
 }
 
 

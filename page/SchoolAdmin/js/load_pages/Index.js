@@ -10,7 +10,7 @@ Global.ResultMessage = function (result) {
     }
 };
 
-Global.setData=function(Data, gridName) {
+Global.setData = function (Data, gridName) {
     gridName.data = Data;
     gridName.render();
 };
@@ -23,8 +23,8 @@ function checkLogin(Data) {
     } else {
         GlobalFunc.userDetials = Data;
         document.getElementById('UserFullName').innerText = Data.firstname + ' ' + Data.lastname;
-   /*     document.getElementById('SchoolName').innerText = Data.schoolname;
-        document.getElementById('City').innerText = Data.city + '/' + Data.suburb;*/
+        /*     document.getElementById('SchoolName').innerText = Data.schoolname;
+         document.getElementById('City').innerText = Data.city + '/' + Data.suburb;*/
     }
 }
 /*TEACHER TAB*/
@@ -33,7 +33,9 @@ function Confirm(EmailID) {
 }
 var Teacher = {
     Profile: {},
-    Edit: {},
+    Edit: {
+        trCounter: 0
+    },
     Update: {
         Result: []
     }
@@ -150,6 +152,7 @@ Teacher.Profile.CreateLangDetails = function (Data) {
         Tag += '<tr>' +
             '<td><label>' + Data[Datakeys[i]].languagename + ':&nbsp;&nbsp;</label></td>' +
             '<td>' + Data[Datakeys[i]].languagelevel + '</td>' +
+            '<td></td>' +
             '</tr>';
     }
     Tag += '</tbody>';
@@ -252,6 +255,58 @@ Teacher.Edit.Edit = function (EmailID) {
         showModal('edit_data_Modal');
     }, 500);
 };
+Teacher.Edit.AddLanguage = function () {
+
+    var Tbody = document.querySelector('#LangEditTable');
+
+    var tr = document.createElement('tr');
+    tr.setAttribute('id', 'langtr' + Teacher.Edit.trCounter);
+
+    var Langtd = document.createElement('td');
+    var Leveltd = document.createElement('td');
+    var DeleteTd = document.createElement('td');
+
+    var Langselect = document.createElement('select');
+    var Levelselect = document.createElement('select');
+    var langoption = document.createElement('option');
+    var leveloption = document.createElement('option');
+
+    langoption.innerText = 'Select One';
+    leveloption.innerText = 'Select One';
+
+    var DeleteTrBtn = document.createElement('div');
+    DeleteTrBtn.setAttribute('class', 'btn Anim-toptoleft btn-danger btn-block');
+
+    Langselect.setAttribute('id', 'LangSelect' + Teacher.Edit.trCounter);
+    Levelselect.setAttribute('id', 'LevelSelect' + Teacher.Edit.trCounter);
+    Langselect.setAttribute('class', 'Anim-toptoleft form-control');
+    Levelselect.setAttribute('class', 'Anim-toptoleft form-control');
+    DeleteTrBtn.innerText = 'Delete This';
+    DeleteTrBtn.setAttribute('onclick', "DeleteTr('langtr" + Teacher.Edit.trCounter + "')");
+
+    // ______ AppendChild
+    Langselect.appendChild(langoption);
+    Levelselect.appendChild(leveloption);
+    Langtd.appendChild(Langselect);
+    Leveltd.appendChild(Levelselect);
+    DeleteTd.appendChild(DeleteTrBtn);
+
+    tr.appendChild(Langtd);
+    tr.appendChild(Leveltd);
+    tr.appendChild(DeleteTd);
+
+    Tbody.appendChild(tr);
+    setTimeout(function () {
+        $('#LangSelect' + Teacher.Edit.trCounter).load('../data_value/lanuage.html');
+        $('#LevelSelect' + Teacher.Edit.trCounter).load('../data_value/lanuage_level.html');
+        Teacher.Edit.trCounter++;
+    }, 200);
+
+};
+function DeleteTr(id) {
+    var tr = document.getElementById(id);
+    tr.parentNode.removeChild(tr);
+}
 /*Update Teacher*/
 
 Teacher.Update.PersonalDetails = function () {

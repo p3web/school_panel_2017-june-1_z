@@ -35,10 +35,10 @@
                 </div>
 
                 <div>
-                 <!--   <a class="pull-left hidden-xs" id="LogoSM" href="#"><img src="../../images/logoM.png"
-                                                                             title="Ancestry Atlas"
-                                                                             alt="Ancestry Atlas"></a>
--->
+                    <!--   <a class="pull-left hidden-xs" id="LogoSM" href="#"><img src="../../images/logoM.png"
+                                                                                title="Ancestry Atlas"
+                                                                                alt="Ancestry Atlas"></a>
+   -->
 
                     <!--
                                         <a id="btn_user_profile" href="#" class="btn btn-default navbar-btn logbutton submitbtunnew"
@@ -49,8 +49,10 @@
             </div>
 
             <div class="col-sm-1 no-padding Lightbackground headerLight" style="border-right: none">
+                <a id="btn_user_profile" href="#" class="btn btn-default navbar-btn logbutton submitbtunnew HeaderBtn " style="/*float:right; border-radius:5px; margin:1.0em 0em; font-weight:bold;  text-decoration:none; margin-right: 1em;*/">PROFILE</a>
                 <a href="../../teamadminpanel.php?logoutrequest" id="logOutBtn"
-                   class="btn btn-default navbar-btn logbutton submitbtunnew"><span id="logoutSpan">LOGOUT</span><i id="logoutIcon" class="glyphicon glyphicon-off"></i> </a>
+                   class="btn btn-default navbar-btn logbutton submitbtunnew HeaderBtn " ><span id="logoutSpan">LOGOUT</span><i
+                        id="logoutIcon" class="glyphicon glyphicon-off"></i> </a>
             </div>
 
         </div>
@@ -98,16 +100,16 @@
             </div>
             <div class="col-sm-11">
                 <!--navigation-->
-            <!--    <div class="col-sm-12">
-                    <div class="col-sm-6">
-                        <h2>Welcome to school administration panel</h2>
-                        <h5>School Admin-&gt; &nbsp;<b id="UserFullName"></b></h5>
-                    </div>
-                    <div class="col-sm-6 text-right">
-                            <h2 id="SchoolName"></h2>
-                        <h5 id="City"></h5>
-                    </div>
-                </div>-->
+                <!--    <div class="col-sm-12">
+                        <div class="col-sm-6">
+                            <h2>Welcome to school administration panel</h2>
+                            <h5>School Admin-&gt; &nbsp;<b id="UserFullName"></b></h5>
+                        </div>
+                        <div class="col-sm-6 text-right">
+                                <h2 id="SchoolName"></h2>
+                            <h5 id="City"></h5>
+                        </div>
+                    </div>-->
 
                 <div class="col-sm-12" style="margin-top:2em;">
                     <!--tab body-->
@@ -118,7 +120,7 @@
                             <option value="CITeam">CITeam</option>
                         </select> <input style="display: none;" type="submit" id="submitvalstutab" class="submitbtunnew"
                                          name="submitvalstutab" value="SUBMIT">
-                        <div class="headerContent">TEACHER</div>
+                            <div class="headerContent">TEACHER</div>
                             <div id="PGrid">
 
                             </div>
@@ -367,14 +369,20 @@
                     <h3 class="HeaderPink">LANGUAGES</h3>
 
                     <div class="form-group">
-                        <div class="col-sm-9">
+                        <div class="col-sm-10 col-sm-push-1">
                             <table class="table borderless table-responsive " id="employee_lang">
                                 <tbody id="LangEditTable">
 
                                 </tbody>
-                                <script type="text/javascript">
-
-                                </script>
+                                <tfoot>
+                                <tr>
+                                    <td colspan="2">
+                                        <div class="btn btn-primary btn-block" onclick="Teacher.Edit.AddLanguage()">
+                                            Add Language
+                                        </div>
+                                    </td>
+                                </tr>
+                                </tfoot>
                             </table>
                         </div>
                     </div>

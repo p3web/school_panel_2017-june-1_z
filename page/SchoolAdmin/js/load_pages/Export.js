@@ -58,7 +58,7 @@ Export.CreateMapData = function (data) {
         var Name = data[i][0];
         var numb = data[i][1];
         for (var c = 1; c < MapDatas[0].length; c++) {
-            if (Name.toLowerCase() == MapDatas[1][c].toLowerCase()) {
+            if (MapDatas[1][c].toLowerCase().search(Name.toLowerCase()) > -1) {
                 MapDatas[2][c] = numb;
             }
         }

@@ -504,6 +504,17 @@ function makecsv($data, $csvfilename, $scriptrun = null)
                 $output[] = $row;
             }
             makecsv($output, 'teacherlangout.csv', false);
+
+            $femalecount = count(PSCO_func::get_lang_count_all_male_fmale($orgId, $teamName, 'f'));
+            $malecount = count(PSCO_func::get_lang_count_all_male_fmale($orgId, $teamName, 'm'));
+            $totalcount = $femalecount + $malecount;
+            $temp = array();
+            $temp = array(
+                array($totalcount, 'Total number of students'),
+                array($malecount, 'Number of Boys'),
+                array($femalecount, 'Number of Girls')
+            );
+            makecsv($temp, "studentcount.csv", false);
             ?>
         }
 

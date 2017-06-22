@@ -9,7 +9,7 @@
     <style>
 
     </style>
-    <link rel="stylesheet" href="CssMapChart.css">
+    <link rel="stylesheet" href="CssMapChartPrint.css">
 
 
 </head>
@@ -32,7 +32,9 @@
                 <div>
                     <strong>
                         <p>School / Organisation name</p>
+                        <p id="school"></p>
                         <p>Address</p>
+                        <p id="address"></p>
                         <p>State / Country / Year</p>
                     </strong>
                     <p>Number of people in Total</p>
@@ -101,9 +103,13 @@
     function sendActions() {
         ajax.sender_data_callback({out : 'TRMDO'} , CreateMapData);
         ajax.sender_data_callback({out : 'TRO'} , CreateBarData);
+        ajax.sender_data_callback({out:'TRO' , metadata:'1'} , CreateMapdetails)
     }
 
-
+    function CreateMapdetails(data) {
+        document.getElementById('school').innerText = data[0][1][0];
+        document.getElementById('address').innerText = data[0][1][1];
+    }
 
 
     function CreateMapData(data) {
@@ -125,7 +131,7 @@
             var Name = data[0][i][0];
             var numb = data[0][i][1];
             for (var c = 1; c < MapDatas[0].length; c++) {
-                if (Name.toLowerCase() == MapDatas[1][c].toLowerCase()) {
+                if (MapDatas[1][c].toLowerCase().search(Name.toLowerCase()) > -1) {
                     MapDatas[2][c] = numb;
                 }
             }
