@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+
+    <link rel="stylesheet" href="CssMapChart.css">
+
+</head>
+<body >
+
+
+<div class="Chart OtherChart" style="width: 100%;" id="DonutChart">
+
+</div>
+<script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+<script src="https://code.highcharts.com/highcharts.js"></script>
+
+<script  src="https://code.highcharts.com/modules/exporting.js"></script>
+
+<script src="js/chart.js"></script>
+<script src="js/ajax.js"></script>
+
+<script>
+    function sendActions(){
+        ajax.sender_data_callback({out:'TLO'} , createDonutData);
+    }
+    function createDonutData(Data) {
+        var donutSeries = {
+            name: 'language',
+            data: [
+
+
+            ]
+        };
+        for(var i = 1 ; i < Data[0].length ; i++){
+            donutSeries.data.push([Data[0][i][0] , parseInt(Data[0][i][1])]);
+        }
+        donutSeries.data.push({name: 'Proprietary or Undetectable', y: 0.2, dataLabels: {enabled: false}});
+        DonutChart('DonutChart' , donutSeries);
+    }
+
+</script>
+</body>
+<script type="text/javascript">
+    sendActions();
+</script>
+</html>

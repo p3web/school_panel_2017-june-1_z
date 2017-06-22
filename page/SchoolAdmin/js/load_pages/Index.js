@@ -23,8 +23,8 @@ function checkLogin(Data) {
     } else {
         GlobalFunc.userDetials = Data;
         document.getElementById('UserFullName').innerText = Data.firstname + ' ' + Data.lastname;
-        document.getElementById('SchoolName').innerText = Data.schoolname;
-        document.getElementById('City').innerText = Data.city + '/' + Data.suburb;
+   /*     document.getElementById('SchoolName').innerText = Data.schoolname;
+        document.getElementById('City').innerText = Data.city + '/' + Data.suburb;*/
     }
 }
 /*TEACHER TAB*/

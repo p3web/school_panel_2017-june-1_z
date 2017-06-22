@@ -26,36 +26,40 @@
             <div class="col-sm-1">
             </div>
 
+            <div class="col-sm-10 no-padding-left">
+                <div class=" Lightbackground headerLight " style="border-left: none; ">
+                    <div class="headerIconDiv">
+                        <img id="headerIcon" src="../../images/MenuIcons/Pen.png"/>
+                        <b>Welcome, <b id="UserFullName"></b></b>
+                    </div>
+                </div>
 
-            <div class="col-sm-10" style="height:5.325em; margin-top:1em; ">
-
-
-                <div style="margin-left:2em; margin-right:2em;">
-                    <a class="pull-left hidden-xs" id="LogoSM" href="#"><img src="../../images/logoM.png"
+                <div>
+                 <!--   <a class="pull-left hidden-xs" id="LogoSM" href="#"><img src="../../images/logoM.png"
                                                                              title="Ancestry Atlas"
                                                                              alt="Ancestry Atlas"></a>
+-->
 
-                    <a href="../../teamadminpanel.php?logoutrequest"
-                       class="btn btn-default navbar-btn logbutton submitbtunnew"
-                       style="float:right; border-radius:5px; margin:1.0em 0em; font-weight:bold;  text-decoration:none;">LOGOUT</a>
-
-                    <a id="btn_user_profile" href="#" class="btn btn-default navbar-btn logbutton submitbtunnew"
-                       style="float:right; border-radius:5px; margin:1.0em 0em; font-weight:bold;  text-decoration:none; margin-right: 1em;">PROFILE</a>
+                    <!--
+                                        <a id="btn_user_profile" href="#" class="btn btn-default navbar-btn logbutton submitbtunnew"
+                                           style="float:right; border-radius:5px; margin:1.0em 0em; font-weight:bold;  text-decoration:none; margin-right: 1em;">PROFILE</a>-->
 
 
                 </div>
             </div>
 
-            <div class="col-sm-1">
+            <div class="col-sm-1 no-padding Lightbackground headerLight" style="border-right: none">
+                <a href="../../teamadminpanel.php?logoutrequest" id="logOutBtn"
+                   class="btn btn-default navbar-btn logbutton submitbtunnew"><span id="logoutSpan">LOGOUT</span><i id="logoutIcon" class="glyphicon glyphicon-off"></i> </a>
             </div>
 
         </div>
         <!--Tab Control-->
         <div class="panelControl" id="MenuPanel">
-            <a href="#"><img src="../../images/logo.png" title="Ancestry Atlas" alt="Ancestry Atlas"></a>
+            <a href="#"><img src="../../images/MenuIcons/MenuLogo.png" title="Ancestry Atlas" alt="Ancestry Atlas"></a>
             <ul class=" nav nav-tabs">
                 <li class="active"><a data-toggle="tab" href="#students"
-                                      aria-expanded="true"><i class="glyphicon glyphicon-user"></i> TEACHER</a>
+                                      aria-expanded="true"><img src="../../images/MenuIcons/person.png"> TEACHER</a>
                 </li>
                 <li class=""><a onclick="loadPage(this)"
                                 data-toggle="tab" data-Page="Classes"
@@ -64,27 +68,26 @@
                 <li class=""><a data-toggle="tab"
                                 onclick="loadPage(this)" data-Page="Map"
                                 href="#maps"
-                                aria-expanded="false"><i class="glyphicon glyphicon-stats"></i> MAPS</a></li>
+                                aria-expanded="false"><img src="../../images/MenuIcons/Map.png"> MAPS</a></li>
                 <li class=""><a data-toggle="tab"
                                 onclick="loadPage(this)"
                                 data-Page="Language"
                                 href="#language"
-                                aria-expanded="false"><i class="glyphicon glyphicon-comment"></i> LANGUAGE</a></li>
+                                aria-expanded="false"><img src="../../images/MenuIcons/comment.png"> LANGUAGE</a></li>
                 <li class=""><a data-toggle="tab"
                                 onclick="loadPage(this)"
                                 data-Page="Belief"
                                 href="#Belief"
-                                aria-expanded="false"><i class="glyphicon glyphicon-heart-empty"></i> BELIEF</a>
+                                aria-expanded="false"><img src="../../images/MenuIcons/heart.png"> BELIEF</a>
                 </li>
                 <li class=""><a data-toggle="tab" data-Page="KeyFacts"
                                 onclick="loadPage(this)"
                                 href="#Keyfact"
-                                aria-expanded="false"><i class="glyphicon glyphicon-wrench
-                    "></i> KEY
+                                aria-expanded="false"><img src="../../images/MenuIcons/star.png"> KEY
                     FACTS</a></li>
                 <li class=""><a data-toggle="tab" data-Page="Export"
                                 onclick="loadPage(this)" href="#export"
-                                aria-expanded="false"><i class="glyphicon glyphicon-globe"></i> EXPORT</a>
+                                aria-expanded="false"><img src="../../images/MenuIcons/Compass.png"> EXPORT</a>
                 </li>
 
             </ul>
@@ -93,37 +96,36 @@
         <div class="row">
             <div class="col-sm-1">
             </div>
-            <div class="col-sm-10">
+            <div class="col-sm-11">
                 <!--navigation-->
-                <div class="col-sm-12">
+            <!--    <div class="col-sm-12">
                     <div class="col-sm-6">
                         <h2>Welcome to school administration panel</h2>
                         <h5>School Admin-&gt; &nbsp;<b id="UserFullName"></b></h5>
                     </div>
                     <div class="col-sm-6 text-right">
-                        <h2 id="SchoolName"></h2>
+                            <h2 id="SchoolName"></h2>
                         <h5 id="City"></h5>
                     </div>
-                </div>
-
+                </div>-->
 
                 <div class="col-sm-12" style="margin-top:2em;">
                     <!--tab body-->
-                    <div class="tab-content">
+                    <div class="tab-content Lightbackground">
                         <div id="students" class="tab-pane fade active in">
-                            <br><br>
                             <b style="display: none;"> Team Name: </b><select name="classnamedropdownstutab"
                                                                               style="padding:0.3em;display: none;">
                             <option value="CITeam">CITeam</option>
                         </select> <input style="display: none;" type="submit" id="submitvalstutab" class="submitbtunnew"
                                          name="submitvalstutab" value="SUBMIT">
-
+                        <div class="headerContent">TEACHER</div>
                             <div id="PGrid">
 
                             </div>
                         </div>
 
                         <div id="classes" class="tab-pane fade in">
+                            <div class="headerContent">CLASSESS</div>
                             <div id="PClassGrid">
 
                             </div>
@@ -131,34 +133,37 @@
 
 
                         <div id="maps" class="tab-pane fade in">
-
+                            <div class="headerContent">MAP</div>
                         </div>
 
 
                         <div id="language" class="tab-pane fade in">
-
+                            <div class="headerContent">LANGUAGE</div>
+                            <div class="TABContent"></div>
                         </div>
 
 
                         <div id="Belief" class="tab-pane fade in">
-
+                            <div class="headerContent">BELIEF</div>
+                            <div class="TABContent"></div>
                         </div>
 
 
                         <div id="export" class="tab-pane fade in">
-
+                            <div class="headerContent">EXPORT</div>
                         </div>
 
 
                         <div id="Keyfact" class="tab-pane fade in">
-
+                            <div class="headerContent">KEY FACTS</div>
+                            <div class="TABContent"></div>
                         </div>
 
 
                     </div>
                 </div>
             </div>
-            <div class="col-sm-1"></div>
+            <!--<div class="col-sm-1"></div>-->
         </div>
 
 
@@ -431,125 +436,125 @@
             </div>
         </div>
     </div>
+</div>
+<script src="../../scripts/jquery-1.10.2.js"></script>
 
-    <script src="../../scripts/jquery-1.10.2.js"></script>
+<!--ajax-->
+<script src="../js/ajax.js"></script>
+<!--Global-->
+<script src="../js/Global.js"></script>
+<!--loadPage-->
+<script src="js/load_pages/Index.js"></script>
+<script src="js/load_pages/classes.js"></script>
+<script src="js/load_pages/Belief.js"></script>
+<script src="js/load_pages/Language.js"></script>
 
-    <!--ajax-->
-    <script src="../js/ajax.js"></script>
-    <!--Global-->
-    <script src="../js/Global.js"></script>
-    <!--loadPage-->
-    <script src="js/load_pages/Index.js"></script>
-    <script src="js/load_pages/classes.js"></script>
-    <script src="js/load_pages/Belief.js"></script>
-    <script src="js/load_pages/Language.js"></script>
+<!--bootstrap-->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
+        integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+        crossorigin="anonymous"></script>
 
-    <!--bootstrap-->
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
-            integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
-            crossorigin="anonymous"></script>
+<!--PSCO_Grid-->
+<script src="../js/PSCO_Grid.js"></script>
 
-    <!--PSCO_Grid-->
-    <script src="../js/PSCO_Grid.js"></script>
+<!--Charts-->
+<script src="https://code.highcharts.com/highcharts.js"></script>
+<script src="https://code.highcharts.com/modules/exporting.js"></script>
+<script src="https://code.highcharts.com/modules/data.js"></script>
+<script src="https://code.highcharts.com/modules/drilldown.js"></script>
+<script src="../js/chart.js"></script>
 
-    <!--Charts-->
-    <script src="https://code.highcharts.com/highcharts.js"></script>
-    <script src="https://code.highcharts.com/modules/exporting.js"></script>
-    <script src="https://code.highcharts.com/modules/data.js"></script>
-    <script src="https://code.highcharts.com/modules/drilldown.js"></script>
-    <script src="../js/chart.js"></script>
+<!--Dom To Image-->
+<script src="../js/dom-to-image.min.js"></script>
 
-    <!--Dom To Image-->
-    <script src="../js/dom-to-image.min.js"></script>
+<!--Alert-->
+<script src="../js/sweetalert/sweetalert2.js"></script>
+<script src="../js/sweetalert/msg.js"></script>
 
-    <!--Alert-->
-    <script src="../js/sweetalert/sweetalert2.js"></script>
-    <script src="../js/sweetalert/msg.js"></script>
+<script type="text/javascript">
+    /*Load age Group option*/
+    $('#age').load("../data_value/age_group_60.html");
 
-    <script type="text/javascript">
-        /*Load age Group option*/
-        $('#age').load("../data_value/age_group_60.html");
-
-        var ClassesGrid;
-        var TeacherGrid = new PSCO_grid('TeacherGrid');
-        TeacherGrid.cols = [
-            {name: 'name', thname: 'Teacher Name'},
-            {name: 'email', thname: 'Teacher Email ID*'},
-            {name: 'info', thname: 'Info', notSearch: true},
-            {name: 'status', thname: 'Status', notSearch: true},
-            {name: 'option', thname: 'Option', notSearch: true}
-        ];
-        TeacherGrid.RightToLeft = false;
-        TeacherGrid.embeddedRow = [[{}, {
-            name: 'Teacher Name',
-            id: 'NameInvite',
-            type: 'inputtext'
-        }, {name: 'Click here to add email address', id: 'EmailInvite', type: 'inputtext'}, {}, {}, {
-            name: 'Invite',
-            id: 'InviteBTN',
-            type: 'btn',
-            attribute: [{name: 'class', value: 'btn btn-success'}]
-        }]];
+    var ClassesGrid;
+    var TeacherGrid = new PSCO_grid('TeacherGrid');
+    TeacherGrid.cols = [
+        {name: 'name', thname: 'Teacher Name'},
+        {name: 'email', thname: 'Teacher Email ID*'},
+        {name: 'info', thname: 'Info', notSearch: true},
+        {name: 'status', thname: 'Status', notSearch: true},
+        {name: 'option', thname: 'Option', notSearch: true}
+    ];
+    TeacherGrid.RightToLeft = false;
+    TeacherGrid.embeddedRow = [[{}, {
+        name: 'Teacher Name',
+        id: 'NameInvite',
+        type: 'inputtext'
+    }, {name: 'Click here to add email address', id: 'EmailInvite', type: 'inputtext'}, {}, {}, {
+        name: 'Invite',
+        id: 'InviteBTN',
+        type: 'btn',
+        attribute: [{name: 'class', value: 'btn btn-success'}]
+    }]];
 
 
-        function loadPage(elm) {
-            var pageName = elm.getAttribute('data-Page');
-            var isShow = elm.getAttribute('data-show'); //___ For one Load
+    function loadPage(elm) {
+        var pageName = elm.getAttribute('data-Page');
+        var isShow = elm.getAttribute('data-show'); //___ For one Load
 
-            if (isShow != 'true') {
+        if (isShow != 'true') {
 
-                var TabID = elm.getAttribute('href');
-                if (pageName == 'Map' || pageName == 'Export') {
-                    //____ CREATE IFRAME
-                    var frame = document.createElement('iframe');
-                    frame.setAttribute('src', pageName + '.html');
-                    frame.setAttribute('id', pageName);
+            var TabID = elm.getAttribute('href');
+            if (pageName == 'Map' || pageName == 'Export') {
+                //____ CREATE IFRAME
+                var frame = document.createElement('iframe');
+                frame.setAttribute('src', pageName + '.html');
+                frame.setAttribute('id', pageName);
 
-                    if (pageName == 'Export') {
-                        frame.style.cssText = 'width:100%;min-height:1200px;margin-top:20px;border:none;';
-                    } else {
-                        frame.style.cssText = 'width:100%;min-height:800px;margin-top:20px;border:none;';
-                    }
-                    TabID = TabID.split('#');
-                    TabID = TabID[1];
-                    document.getElementById(TabID).appendChild(frame);
-                } else if (pageName == 'KeyFacts') {
-                    KeyFacts.LoadKeyFact();
-
-                } else if (pageName == 'Classes') {
-                    //______LOAD CLASSES GRID
-                    ClassesGrid = new PSCO_grid('ClassesGrid');
-                    ClassesGrid.ContainerID = 'PClassGrid';
-                    ClassesGrid.cols = [
-                        {name: 'classname', thname: 'Class Name'},
-                        {name: 'option', thname: 'Option'}
-                    ];
-                    ClassesGrid.RightToLeft = false;
-                    Classes.LoadClassesTable(); //______ send Act
+                if (pageName == 'Export') {
+                    frame.style.cssText = 'width:100%;min-height:1200px;margin-top:20px;border:none;';
                 } else {
-                    //____ LOAD OTHER TAB FROM EXTERNAL PAGE
-                    $(TabID).load(pageName + '.html');
-                    if (pageName == 'Language') {
-                        setTimeout(function () {
-                            Language.sendAction();
-                        },200)
-                    }
+                    frame.style.cssText = 'width:100%;min-height:800px;margin-top:20px;border:none;';
                 }
-                elm.setAttribute('data-show', 'true');
-            }
-        }
-        function ToggleMenu(elem) {
-            var flag = elem.getAttribute('data-show');
-            if (flag == 'true') {
-                document.getElementById('MenuPanel').style.cssText = '';
-                elem.style.cssText = '';
-                elem.setAttribute('data-show', 'false');
+                TabID = TabID.split('#');
+                TabID = TabID[1];
+                document.getElementById(TabID).appendChild(frame);
+            } else if (pageName == 'KeyFacts') {
+                KeyFacts.LoadKeyFact();
+
+            } else if (pageName == 'Classes') {
+                //______LOAD CLASSES GRID
+                ClassesGrid = new PSCO_grid('ClassesGrid');
+                ClassesGrid.ContainerID = 'PClassGrid';
+                ClassesGrid.cols = [
+                    {name: 'classname', thname: 'Class Name'},
+                    {name: 'option', thname: 'Option'}
+                ];
+                ClassesGrid.RightToLeft = false;
+                Classes.LoadClassesTable(); //______ send Act
             } else {
-                document.getElementById('MenuPanel').style.cssText = 'height:100vh;width:30vw';
-                elem.setAttribute('data-show', 'true');
-                elem.style.left = '31.5vw';
+                //____ LOAD OTHER TAB FROM EXTERNAL PAGE
+                $(TabID + ' .TABContent').load(pageName + '.html');
+                if (pageName == 'Language') {
+                    setTimeout(function () {
+                        Language.sendAction();
+                    }, 200)
+                }
             }
+            elm.setAttribute('data-show', 'true');
         }
-    </script>
+    }
+    function ToggleMenu(elem) {
+        var flag = elem.getAttribute('data-show');
+        if (flag == 'true') {
+            document.getElementById('MenuPanel').style.cssText = '';
+            elem.style.cssText = '';
+            elem.setAttribute('data-show', 'false');
+        } else {
+            document.getElementById('MenuPanel').style.cssText = 'height:100vh;width:30vw';
+            elem.setAttribute('data-show', 'true');
+            elem.style.left = '31.5vw';
+        }
+    }
+</script>
 </body>
 </html>

@@ -17,6 +17,9 @@
 <div class="container-fluid">
     <div class="row">
         <div class="col-xs-12 col-md-10 no-padding">
+            <div class="btn btn-default pull-left" style="margin-top:8px;margin-left: 5px;" id="ExportBtn"
+                 onclick="PrintExpot()">Print Export
+            </div>
             <div class="topBorder" id="TopBorderMap">
                 <img src="logo.jpg" id="Logo"/>
                 <div id="MapContainer" class="Chart">
@@ -95,7 +98,11 @@
 <script src="js/chart.js"></script>
 <script src="js/ajax.js"></script>
 
+<!--Print Export-->
+<script src="js/PrintExport.js"></script>
 <script>
+
+
 
     function sendActions() {
         ajax.sender_data_callback({out : 'TARO'} , CreateMapData);
@@ -151,7 +158,10 @@
         BarChart('BarChart', series);
     }
 
-
+    function PrintExpot() {
+        printPage();
+    }
+    CreateIFRAME('TeacherMapChartPrint.html');
 </script>
 </body>
 </html>

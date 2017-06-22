@@ -11,14 +11,14 @@ function HandelIframeContent(IFRAMEID , ContentID , DividerId) {
     CreateJPEG(document.body);
 }
 
-function CreateIFRAME() {
+function CreateIFRAME(src) {
     var iframe ;
     iframe = document.getElementById('PrintIFrame');
     if(iframe == null) {
         iframe = document.createElement('iframe');
         iframe.style.cssText = 'position : fixed;top:0;left:20000vw; width:1648px;height:1191px;';
         iframe.setAttribute('id', 'PrintIFrame');
-        iframe.setAttribute('src' , 'ExportPrint.html');
+        iframe.setAttribute('src' , src);
         document.body.appendChild(iframe);
     }
 }

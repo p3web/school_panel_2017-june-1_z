@@ -562,18 +562,17 @@ function test_input($data)
         <?php include 'headerteacher.php'; ?>
         <!--Tab Control-->
         <div class="panelControl" id="MenuPanel">
-            <a href="#"><img src="images/logo.png" title="Ancestry Atlas" alt="Ancestry Atlas"></a>
+            <a href="#"><img src="images/MenuIcons/MenuLogo.png" title="Ancestry Atlas" alt="Ancestry Atlas"></a>
             <ul class="nav nav-tabs">
-                <li class="active"><a data-toggle="tab" href="#students"><i class="glyphicon glyphicon-user"></i>Students</a>
+                <li class="active"><a data-toggle="tab" href="#students"><img src="images/MenuIcons/person.png">Students</a>
                 </li>
-                <li><a data-toggle="tab" href="#maps"><i class="glyphicon glyphicon-stats"></i>Maps</a></li>
-                <li><a data-toggle="tab" href="#language"><i class="glyphicon glyphicon-comment"></i>Language</a></li>
-                <li><a data-toggle="tab" href="#religion"><i class="glyphicon glyphicon-heart-empty"></i>Belief</a></li>
+                <li><a data-toggle="tab" href="#maps"><img src="images/MenuIcons/Map.png">Maps</a></li>
+                <li><a data-toggle="tab" href="#language"><img src="images/MenuIcons/comment.png"> Language</a></li>
+                <li><a data-toggle="tab" href="#religion"><img src="images/MenuIcons/heart.png">Belief</a></li>
                 <li><a data-toggle="tab" href="#lessonplans"><i class="glyphicon glyphicon-blackboard"></i>Lesson Plans</a>
                 </li>
-                <li><a data-toggle="tab" href="#key_facts"><i class="glyphicon glyphicon-wrench
-                    "></i> Key Facts</a></li>
-                <li><a data-toggle="tab" href="#export"><i class="glyphicon glyphicon-globe">Export</a></li>
+                <li><a data-toggle="tab" href="#key_facts"><img src="images/MenuIcons/star.png"> Key Facts</a></li>
+                <li><a data-toggle="tab" href="#export"><img src="images/MenuIcons/Compass.png">Export</a></li>
 
 
             </ul>
@@ -588,27 +587,27 @@ function test_input($data)
 
             <div class="col-sm-10" style="margin-top:2em;">
                 <div class="col-sm-12">
-                    <div class="col-sm-6">
+<!--                    <div class="col-sm-6">
                         <h2>Welcome to your Ancestry Atlas</h2>
-                        <h5>Teacher -> &nbsp;<b><?php echo $adminName; ?></b></h5>
+                        <h5>Teacher -> &nbsp;<b><?php /*echo $adminName; */?></b></h5>
                         <!--
                         <p style="margin-top:1.5em;">As a teacher, you can now invite your students to register for Ancestry Atlas. <br>
 
            Track student registration below.<br>
            Preview your diversity maps at anytime
        </p>-->
-                    </div>
+             <!--       </div>
 
                     <div class="col-sm-6 text-right">
-                        <h2><?php echo $schoolName; ?></h2>
-                        <h5><?php echo $city . " / " . $suburb; ?></h5>
+                        <h2><?php /*echo $schoolName; */?></h2>
+                        <h5><?php /*echo $city . " / " . $suburb; */?></h5>
                     </div>
-
+-->
                     <div class="col-sm-12" style="margin-top:2em;">
 
-                        <div class="tab-content">
+                        <div class="tab-content Lightbackground">
                             <div id="students" class="tab-pane fade in active">
-                                <br><br>
+                                <div class="headerContent">STUDENT</div>
 
 
                                 <form method="post">
@@ -649,7 +648,7 @@ function test_input($data)
                                     $k = 1;
 
                                     echo "<table class='table table-striped table-bordered' cellspacing='0' width='100%' >";
-                                    echo "<thead>";
+                                    echo "<thead style='background-color: #FFD799 !important;'>";
                                     echo "<tr>";
                                     echo "<th style='width:1%;'>S.No</th>";
                                     echo "<th>Student Name</th>";
@@ -887,10 +886,11 @@ function test_input($data)
                             </div>
 
                             <div id="maps" class="tab-pane fade">
-                                <br>
+                                <div class="headerContent">MAPS</div>
 
                                 <div>
-                                    <div id="regions_div" style="float:left;"></div>
+                                    <iframe src="page/TeacherPanelMap.html" style="width:75%;height:500px;border:none;"></iframe>
+                                    <div  id="regions_div" style="display: none;float:left;"></div>
 
                                     <div style="float:right;">
 
@@ -1087,6 +1087,7 @@ function test_input($data)
 
 
                                             ?>
+
                                             <a href="regionout.csv" id="CSVFILE">EXPORT To CSV</a> <br>
 
                                         </div>
@@ -1141,7 +1142,10 @@ function test_input($data)
                             </script>
 
                             <div id="language" class="tab-pane fade">
+                                <div class="headerContent">LANGUAGE</div>
+                                <div class="TABContent">
 
+                                </div>
                             </div>
 
                             <script type="text/javascript">
@@ -1151,7 +1155,7 @@ function test_input($data)
                                         try {
                                             flag = false;
                                             TabelCreateor(TableData, 'langTable');
-                                            PieChart('ChartContainer', series);
+                                            BarChart('ChartContainer', series);
 
                                         } catch (e) {
                                             console.log(e);
@@ -1163,10 +1167,12 @@ function test_input($data)
                                         }, 1000);
                                     }
                                 }
-                                $('#language').load('page/Chart_teacher.html');
-                                setTimeout(function () {
-                                    init_PSCO_chart();
-                                }, 1000);
+                                $('#language .TABContent').load('page/Chart_teacher.html' , function () {
+                                    setTimeout(function () {
+                                        init_PSCO_chart();
+                                    }, 1000);
+                                });
+
                             </script>
 
 
@@ -1212,7 +1218,10 @@ function test_input($data)
 
 
                             <div id="religion" class="tab-pane fade">
+                                <div class="headerContent">BELIEF</div>
+                                <div class="TABContent">
 
+                                </div>
                             </div>
 
                             <script type="text/javascript">
@@ -1234,15 +1243,17 @@ function test_input($data)
                                         }, 1000);
                                     }
                                 }
-                                $('#religion').load('page/Belief_chart_teacher.html');
-                                setTimeout(function () {
-                                    init_PSCO_chart_religion();
-                                }, 1000);
+                                $('#religion .TABContent').load('page/Belief_chart_teacher.html',function () {
+                                    setTimeout(function () {
+                                        init_PSCO_chart_religion();
+                                    }, 1000);
+                                });
+
                             </script>
 
 
                             <div id="key_facts" class="tab-pane fade">
-
+                                <div class="headerContent">KEY FACTS</div>
                                 <br><br>
                                 <!-- <br>
                       <strong> The description of the Key Facts goes here.</strong>
@@ -1341,6 +1352,7 @@ function test_input($data)
 
 
                             <div id="export" class="tab-pane fade">
+                                <div class="headerContent">EXPORT</div>
                                 <iframe src="page/TeacherMapChart.html"
                                         style="width: 100%;min-height: 1200px;border: none;"></iframe>
                             </div>

@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
-      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
-            integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+          integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 
     <style>
 
@@ -17,6 +17,9 @@
 <div class="container-fluid">
     <div class="row">
         <div class="col-xs-12 col-md-10 no-padding">
+            <div class="btn btn-default pull-left" style="margin-top:8px;margin-left: 5px;" id="ExportBtn"
+                 onclick="PrintExpot()">Print Export
+            </div>
             <div class="topBorder" id="TopBorderMap">
                 <img src="logo.jpg" id="Logo"/>
                 <div id="MapContainer" class="Chart">
@@ -68,7 +71,11 @@
     <div class="row">
         <div class="col-xs-12">
 
-            <div class="Footer"><p id="copyright" style="font-size: 14px"><b><a href="http://ancestryatlas.com/" rel="nofollow" target="_blank">Ancestry Atlas</a></b> is powered&nbsp;by <b>© <a href="http://culturalinfusion.org.au/" rel="nofollow" target="_blank">Cultural Infusion</a>, 2017</p></b></font></div>
+            <div class="Footer"><p id="copyright" style="font-size: 14px"><b><a href="http://ancestryatlas.com/"
+                                                                                rel="nofollow" target="_blank">Ancestry
+                Atlas</a></b> is powered&nbsp;by <b>© <a href="http://culturalinfusion.org.au/" rel="nofollow"
+                                                         target="_blank">Cultural Infusion</a>, 2017</p></b></font>
+            </div>
         </div>
     </div>
 </div>
@@ -94,15 +101,14 @@
 <!--myFunc-->
 <script src="js/chart.js"></script>
 <script src="js/ajax.js"></script>
-
+<!--Print Export-->
+<script src="js/PrintExport.js"></script>
 <script>
 
     function sendActions() {
-        ajax.sender_data_callback({out : 'TRMDO'} , CreateMapData);
-        ajax.sender_data_callback({out : 'TRO'} , CreateBarData);
+        ajax.sender_data_callback({out: 'TRMDO'}, CreateMapData);
+        ajax.sender_data_callback({out: 'TRO'}, CreateBarData);
     }
-
-
 
 
     function CreateMapData(data) {
@@ -133,7 +139,7 @@
         var Table = document.getElementById('Table');
         var Tag = '';
         for (var i = 0; i < data[0].length; i++) {
-            Tag += '<tr><td>' + data[0][i][0] + '</td><td>'+data[0][i][1]+'</td></tr>';
+            Tag += '<tr><td>' + data[0][i][0] + '</td><td>' + data[0][i][1] + '</td></tr>';
         }
         Table.innerHTML = Tag;
     }
@@ -144,14 +150,17 @@
             colorByPoint: true,
             data: []
         }];
-        for(var i =1 ; i < data[0].length ; i++){
-            var a= series[0].data;
-            a.push({name:data[0][i][0] , y: parseInt(data[0][i][1])});
+        for (var i = 1; i < data[0].length; i++) {
+            var a = series[0].data;
+            a.push({name: data[0][i][0], y: parseInt(data[0][i][1])});
         }
         BarChart('BarChart', series);
     }
 
-
+    function PrintExpot() {
+        printPage();
+    }
+    CreateIFRAME('TeacherMapChartPrint.html');
 </script>
 </body>
 </html>
