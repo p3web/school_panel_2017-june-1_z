@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
-      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
-            integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+          integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 
     <style>
 
@@ -33,14 +33,21 @@
         <div class="hidden-xs hidden-sm col-md-2 no-padding">
             <div class="MapDetails">
                 <div>
-                    <strong>
-                        <p>School / Organisation name</p>
-                        <p>Address</p>
-                        <p>State / Country / Year</p>
+<strong>
+                    <p id="SchoolTitle"><!--School / Organisation name--></p>
+                    <p id="school"></p>
+                    <p id="addressTitle"><!--Address--></p>
+                    <p id="address"></p>
+                    <p id="bottomTitle1"><!--State / Country / Year--></p>
+                    <p id="bottom1"></p>
                     </strong>
-                    <p>Number of people in Total</p>
-                    <p>Number Man</p>
-                    <p>Number Women</p>
+                    <p id="bottomTitle2"><!--Number of people in Total--></p>
+                    <p id="bottom2"></p>
+                    <p id="bottomTitle3"><!--Number Man--></p>
+                    <p id="bottom3"></p>
+                    <p id="bottomTitle4"><!--Women--></p>
+                    <p id="bottom4"></p>
+
                 </div>
             </div>
             <div class="MapCountryDetails">
@@ -71,7 +78,11 @@
     <div class="row">
         <div class="col-xs-12">
 
-            <div class="Footer"><p id="copyright" style="font-size: 14px"><b><a href="http://ancestryatlas.com/" rel="nofollow" target="_blank">Ancestry Atlas</a></b> is powered&nbsp;by <b>© <a href="http://culturalinfusion.org.au/" rel="nofollow" target="_blank">Cultural Infusion</a>, 2017</p></b></font></div>
+            <div class="Footer"><p id="copyright" style="font-size: 14px"><b><a href="http://ancestryatlas.com/"
+                                                                                rel="nofollow" target="_blank">Ancestry
+                Atlas</a></b> is powered&nbsp;by <b>© <a href="http://culturalinfusion.org.au/" rel="nofollow"
+                                                         target="_blank">Cultural Infusion</a>, 2017</p></b></font>
+            </div>
         </div>
     </div>
 </div>
@@ -103,11 +114,13 @@
 <script>
 
 
-
     function sendActions() {
-        ajax.sender_data_callback({out : 'TARO'} , CreateMapData);
-        ajax.sender_data_callback({out : 'TALO'} , CreateBarData);
+        ajax.sender_data_callback({out: 'TARO'}, CreateMapData);
+        ajax.sender_data_callback({out: 'TALO'}, CreateBarData);
+        ajax.sender_data_callback({out: 'TARO', metadata: '1'}, CreateMapdetails);
+        ajax.sender_data_callback({out: 'SCT'}, CreateMapBottomDetails);
     }
+
 
 
     function CreateMapData(data) {
@@ -138,11 +151,10 @@
         var Table = document.getElementById('Table');
         var Tag = '';
         for (var i = 0; i < data[0].length; i++) {
-            Tag += '<tr><td>' + data[0][i][0] + '</td><td>'+data[0][i][1]+'</td></tr>';
+            Tag += '<tr><td>' + data[0][i][0] + '</td><td>' + data[0][i][1] + '</td></tr>';
         }
         Table.innerHTML = Tag;
     }
-
 
 
     function CreateBarData(data) {
@@ -151,9 +163,9 @@
             colorByPoint: true,
             data: []
         }];
-        for(var i =1 ; i < data[0].length ; i++){
-            var a= series[0].data;
-            a.push({name:data[0][i][0] , y: parseInt(data[0][i][1])});
+        for (var i = 1; i < data[0].length; i++) {
+            var a = series[0].data;
+            a.push({name: data[0][i][0], y: parseInt(data[0][i][1])});
         }
         BarChart('BarChart', series);
     }

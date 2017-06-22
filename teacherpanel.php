@@ -596,7 +596,7 @@ function test_input($data)
             <div class="col-sm-1">
             </div>
 
-            <div class="col-sm-10" style="margin-top:2em;">
+            <div class="col-sm-11" style="margin-top:2em;">
                 <div class="col-sm-12">
 <!--                    <div class="col-sm-6">
                         <h2>Welcome to your Ancestry Atlas</h2>
@@ -1381,9 +1381,9 @@ function test_input($data)
 
 
             </div>
-
+<!--
             <div class="col-sm-1">
-            </div>
+            </div>-->
 
         </div>
     </div>

@@ -323,3 +323,21 @@ function TabelCreateor(data, tableId) {
 }
 
 
+/*MAPDETAILS*/
+function CreateMapdetails(data) {
+    //document.getElementById('SchoolTitle').innerText = data[0][0][0];
+    //document.getElementById('addressTitle').innerText = data[0][0][1];
+    document.getElementById('school').innerText = data[0][1][0];
+    document.getElementById('address').innerText = data[0][1][1];
+}
+function CreateMapBottomDetails(data) {
+    //document.getElementById('bottomTitle1').innerText = data[0][0][1] + '/' + data[0][0][1];
+    //document.getElementById('bottom1').innerText = data[0][0][0];
+    document.getElementById('bottomTitle2').innerText = data[0][1][1];
+    document.getElementById('bottom2').innerText = data[0][1][0];
+    document.getElementById('bottomTitle3').innerText = data[0][2][1];
+    document.getElementById('bottom3').innerText = data[0][2][0];
+    document.getElementById('bottomTitle4').innerText = data[0][3][1];
+    document.getElementById('bottom4').innerText = data[0][3][0];
+
+}
