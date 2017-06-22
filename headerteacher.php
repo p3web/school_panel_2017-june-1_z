@@ -1,6 +1,10 @@
 <style>
     
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+/*
+>>>>>>> b002a728f4dcec2aa087814e06be3fc5418d47a1
 =======
 /*
 >>>>>>> b002a728f4dcec2aa087814e06be3fc5418d47a1
@@ -32,6 +36,10 @@
     background-color:#FFF !important;
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+*/
+>>>>>>> b002a728f4dcec2aa087814e06be3fc5418d47a1
 =======
 */
 >>>>>>> b002a728f4dcec2aa087814e06be3fc5418d47a1
@@ -40,6 +48,7 @@
 </style>
 
 <div class="row">
+<<<<<<< HEAD
 <<<<<<< HEAD
         <div class="col-sm-12 header" style="background-color:#ff9999; height:5.325em; ">
         	    
@@ -53,6 +62,8 @@
                 </div>
         </div>
 =======
+=======
+>>>>>>> b002a728f4dcec2aa087814e06be3fc5418d47a1
     <div class="col-sm-1">
     </div>
 
@@ -85,5 +96,8 @@
                     id="logoutIcon" class="glyphicon glyphicon-off"></i> </a>
     </div>
 
+<<<<<<< HEAD
+>>>>>>> b002a728f4dcec2aa087814e06be3fc5418d47a1
+=======
 >>>>>>> b002a728f4dcec2aa087814e06be3fc5418d47a1
 </div>

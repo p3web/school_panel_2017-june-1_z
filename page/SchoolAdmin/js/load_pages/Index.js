@@ -359,6 +359,9 @@ Teacher.Update.CheckResult = function (Data) {
             }
         }
         Global.ResultMessage(result);
+<<<<<<< HEAD
+>>>>>>> b002a728f4dcec2aa087814e06be3fc5418d47a1
+=======
 >>>>>>> b002a728f4dcec2aa087814e06be3fc5418d47a1
     }
 };
@@ -369,7 +372,11 @@ var KeyFacts = {};
 
 KeyFacts.LoadKeyFact = function () {
 <<<<<<< HEAD
+<<<<<<< HEAD
     ajax.sender_data_json_by_url_callback(url , {act:'get_key_fact_json'} , KeyFacts.createKeyFact);
+=======
+    ajax.sender_data_json_by_url_callback(Global.url, {act: 'get_key_fact_json'}, KeyFacts.createKeyFact);
+>>>>>>> b002a728f4dcec2aa087814e06be3fc5418d47a1
 =======
     ajax.sender_data_json_by_url_callback(Global.url, {act: 'get_key_fact_json'}, KeyFacts.createKeyFact);
 >>>>>>> b002a728f4dcec2aa087814e06be3fc5418d47a1
