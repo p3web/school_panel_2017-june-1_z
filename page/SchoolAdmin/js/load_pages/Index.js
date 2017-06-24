@@ -283,7 +283,11 @@ Teacher.Edit.AddLanguage = function () {
     Levelselect.setAttribute('class', 'Anim-toptoleft form-control');
     DeleteTrBtn.innerText = 'Delete This';
 <<<<<<< HEAD
+<<<<<<< HEAD
     DeleteTrBtn.setAttribute('onclick', "DeleteTr('langtr" + Teacher.Edit.trCounter + "')");
+=======
+    DeleteTrBtn.setAttribute('onclick' , "DeleteTr('langtr"+Teacher.Edit.trCounter+"')");
+>>>>>>> aef1755e47a99604f69700ecdc90fbd94e63981d
 =======
     DeleteTrBtn.setAttribute('onclick' , "DeleteTr('langtr"+Teacher.Edit.trCounter+"')");
 >>>>>>> aef1755e47a99604f69700ecdc90fbd94e63981d
@@ -309,7 +313,11 @@ Teacher.Edit.AddLanguage = function () {
 };
 function DeleteTr(id) {
 <<<<<<< HEAD
+<<<<<<< HEAD
     var tr = document.getElementById(id);
+=======
+    var tr =document.getElementById(id);
+>>>>>>> aef1755e47a99604f69700ecdc90fbd94e63981d
 =======
     var tr =document.getElementById(id);
 >>>>>>> aef1755e47a99604f69700ecdc90fbd94e63981d
