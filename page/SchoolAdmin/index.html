@@ -49,29 +49,11 @@
             </div>
 
             <div class="col-sm-1 no-padding Lightbackground headerLight" style="border-right: none">
-                <a id="btn_user_profile" href="#" class="btn btn-default navbar-btn logbutton submitbtunnew HeaderBtn " style="/*float:right; border-radius:5px; margin:1.0em 0em; font-weight:bold;  text-decoration:none; margin-right: 1em;*/">PROFILE</a>
+                <a id="btn_user_profile" href="#" class="btn btn-default navbar-btn logbutton submitbtunnew HeaderBtn "
+                 onclick="Teacher.AdminProfile.ShowProfile()"  style="/*float:right; border-radius:5px; margin:1.0em 0em; font-weight:bold;  text-decoration:none; margin-right: 1em;*/">PROFILE</a>
                 <a href="../../teamadminpanel.php?logoutrequest" id="logOutBtn"
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-                   class="btn btn-default navbar-btn logbutton submitbtunnew HeaderBtn " ><span id="logoutSpan">LOGOUT</span><i
-=======
-                   class="btn btn-default navbar-btn logbutton submitbtunnew"><span id="logoutSpan">LOGOUT</span><i
->>>>>>> aef1755e47a99604f69700ecdc90fbd94e63981d
-=======
-                   class="btn btn-default navbar-btn logbutton submitbtunnew"><span id="logoutSpan">LOGOUT</span><i
->>>>>>> aef1755e47a99604f69700ecdc90fbd94e63981d
-=======
-                   class="btn btn-default navbar-btn logbutton submitbtunnew"><span id="logoutSpan">LOGOUT</span><i
->>>>>>> aef1755e47a99604f69700ecdc90fbd94e63981d
-=======
-                   class="btn btn-default navbar-btn logbutton submitbtunnew"><span id="logoutSpan">LOGOUT</span><i
->>>>>>> aef1755e47a99604f69700ecdc90fbd94e63981d
-=======
-                   class="btn btn-default navbar-btn logbutton submitbtunnew"><span id="logoutSpan">LOGOUT</span><i
->>>>>>> aef1755e47a99604f69700ecdc90fbd94e63981d
+                   class="btn btn-default navbar-btn logbutton submitbtunnew HeaderBtn "><span
+                        id="logoutSpan">LOGOUT</span><i
                         id="logoutIcon" class="glyphicon glyphicon-off"></i> </a>
             </div>
 
@@ -140,36 +122,7 @@
                             <option value="CITeam">CITeam</option>
                         </select> <input style="display: none;" type="submit" id="submitvalstutab" class="submitbtunnew"
                                          name="submitvalstutab" value="SUBMIT">
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-                        <div class="headerContent">TEACHER</div>
->>>>>>> b002a728f4dcec2aa087814e06be3fc5418d47a1
-=======
-                                         name="submitvalstutab" value="SUBMIT">
-<<<<<<< HEAD
                             <div class="headerContent">TEACHER</div>
-=======
-                        <div class="headerContent">TEACHER</div>
->>>>>>> b002a728f4dcec2aa087814e06be3fc5418d47a1
->>>>>>> fc138cb3f5cd19bb77d974aa2aa4e9603313fd78
-=======
-                            <div class="headerContent">TEACHER</div>
->>>>>>> aef1755e47a99604f69700ecdc90fbd94e63981d
-=======
-                            <div class="headerContent">TEACHER</div>
->>>>>>> aef1755e47a99604f69700ecdc90fbd94e63981d
-=======
-                            <div class="headerContent">TEACHER</div>
->>>>>>> aef1755e47a99604f69700ecdc90fbd94e63981d
-=======
-                            <div class="headerContent">TEACHER</div>
->>>>>>> aef1755e47a99604f69700ecdc90fbd94e63981d
-=======
-                            <div class="headerContent">TEACHER</div>
->>>>>>> aef1755e47a99604f69700ecdc90fbd94e63981d
                             <div id="PGrid">
 
                             </div>
@@ -242,6 +195,163 @@
 
     </div>
 </div>
+<!--Admin Panel Modal-->
+<div id="modal_Admin_profile" class="modal fade in">
+    <div class="modal-dialog">
+        <div class="modal-content">
+
+            <div class="modal-body" id="user_profile">
+
+
+                <h3 id="user_profile_header" style="text-align: center;"> User profile</h3>
+                <img src="../../images/mainlogo.png" width="73" height="73" class="loglogo"
+                     style="margin: 0 auto;display: block;">
+                <hr>
+                    <h3>PERSONAL DETAILS</h3>
+                    <table class="table borderless table-responsive">
+                        <tbody>
+                        <tr>
+                            <td>Email:</td>
+                            <td><input id="Adminemail" class="form-control" type="email" placeholder="Email" readonly=""
+                                       ><br></td>
+                        </tr>
+                        <tr>
+                            <td>First name:</td>
+                            <td><input id="Adminfirstname" class="psco_readonly form-control" type="email"
+                                       placeholder="Email" readonly="" value="Peter"><br></td>
+                        </tr>
+                        <tr>
+                            <td>Last name:</td>
+                            <td><input id="Adminlasttname" class="psco_readonly form-control" type="email"
+                                       placeholder="Email" readonly="" value="Mousaferiadis"><br></td>
+                        </tr>
+                        <tr>
+                            <td>School name:</td>
+                            <td id="schoolNameTd">
+
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Country:</td>
+                            <td>
+                                <select id="Admincountry" class="PSCO_country form-control" disabled>
+
+                                </select>
+                                <br></td>
+                        </tr>
+                        <tr>
+                            <td>City:</td>
+                            <td>
+                                <input id="Admincity" class="psco_readonly form-control" type="text" placeholder="city" readonly="">
+                                <br></td>
+                        </tr>
+                        <tr>
+                            <td>State:</td>
+                            <td>
+                                <input id="Adminstate" class="psco_readonly form-control" type="text" placeholder="State"
+                                       readonly="">
+                                <br></td>
+                        </tr>
+                        <tr>
+                            <td>Suburb:</td>
+                            <td>
+                                <input id="Adminsuburb" class="psco_readonly form-control" type="text" placeholder="Suburb"
+                                       readonly="">
+                                <br></td>
+                        </tr>
+                        <tr>
+                            <td>Post code:</td>
+                            <td>
+                                <input id="Adminpostcode" class="psco_readonly form-control" type="number" placeholder="postcode" readonly="">
+                                <br></td>
+                        </tr>
+
+                        <tr>
+                            <td>Password:</td>
+                            <td>
+                                <button id="btn_change_pass_user" type="button" class="btn btn-warning"
+                                        style="margin: 0 auto;display: block;width: 45%;padding: 2%;">Update My Password
+                                </button>
+                                <br></td>
+                        </tr>
+                        </tbody>
+                    </table>
+
+                    <br>
+                    <hr>
+                    <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                    <input type="hidden" name="act" value="edit_team_user">
+                    <button id="btn_profile_edit" name="edit" type="button" class="btn btn-warning"
+                            onclick="Teacher.AdminProfile.btn_user_profile_edit()">Edit
+                    </button>
+
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<!--Admin Change Pass-->
+<div id="modal_change_pass_user" class="modal fade in"><div class="modal-dialog modal-lg">
+    <div class="modal-content">
+        <div class="modal-body" id="change_pass_user">
+            <div id="ChangePasswrap">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-sm-4"></div>
+                        <div class="col-sm-6 col-sm-pull-1 text-center">
+
+                            <h2>CHANGE PASSWORD</h2>
+
+                            <div class="col-sm-12 text-center" style="background-color:#FFF; margin-bottom:30px;  padding-bottom:30px;">
+                                <div class="row">
+                                    <br>
+                                    <div class="col-sm-4 text-left" style="margin-left:1.5%; margin-top:3.5%;"><span style=" font-weight:bold; font-size:1.5em; color:#71908a;"></span>
+                                    </div>
+                                    <div class="col-sm-4 text-center">
+                                        <img src="../../images/mainlogo.png" alt="" title="" width="73" height="73" class="loglogo">
+                                    </div>
+                                    <div class="col-sm-4">
+                                    </div>
+                                </div>
+                                <form id="frm_change_pass" method="post" action="../../controller_user.php">
+                                    <div class="form-group form-inline">
+                                        <br>
+                                        <!--<input type="password" class="form-control inputfield" style="margin-left:1.5%; width:90%;" name="current_password" id="current_password" placeholder="Current Password*" >-->
+                                        <input type="password" class="form-control inputfield" style="margin-left:1.5%; width:90%;" name="password" id="password" placeholder="New Password*">
+                                        <input type="password" class="form-control inputfield" style="margin-left:1.5%; width:90%;" name="confirmPassword" id="confirmPassword" placeholder="Confirm New Password*">
+                                    </div>
+                                    <span style="float:left; margin-left:2.5em;">* Mandatory fields</span><br>
+                                    <div class="col-sm-12 text-left">
+                			                <span id="error_box" style="clear:both; float:left; margin-left:3em;">
+
+											</span>
+                                        <input type="hidden" name="act" id="change_pass_act" value="team_user_change_pass">
+                                        <button id="btn_change_pass" type="button" class="btn btn-default loginbutton" title="SAVE" style=" float:right; width:98%; padding:5%; padding-bottom: 12%;">SAVE</button>
+                                    </div>
+                                    <script type="text/javascript">
+                                        $('#btn_change_pass').click(function(){
+                                            var pass1 = $('#password').val();
+                                            var pass2 = $('#confirmPassword').val();
+                                            if(pass1 == pass2 && pass1 != "" && pass1 != undefined){
+                                                $( "#frm_change_pass" ).submit();
+                                            }else{
+                                                $('#error_box').text('password not match.');
+                                            }
+                                        });
+                                    </script>
+
+                                </form>
+
+                            </div>
+                        </div>
+                        <div class="col-sm-3"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div></div>
 <!--view Profile Modal-->
 <div id="dataModal" class="modal fade in">
     <div class="modal-dialog">
@@ -253,10 +363,19 @@
                 <button type="button" class="close" data-dismiss="modal">×</button>
 
                 <div class="table-responsive">
+                    <input type="hidden" id="AdminSchoolID">
                     <h3>PERSONAL DETAILS</h3>
                     <table id="TeacherPersonalTable" class="table borderless">
 
 
+                    </table>
+                    <table class="table borderless" style=" margin-top: -24px;">
+                        <tbody>
+                        <tr>
+                            <td><strong>Age Group</strong></td>
+                            <td id="ageGroup"></td>
+                        </tr>
+                        </tbody>
                     </table>
                 </div>
 
@@ -420,31 +539,10 @@
                     <div class="form-group">
                         <div class="col-sm-10 col-sm-push-1">
                             <table class="table borderless table-responsive " id="employee_lang">
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> aef1755e47a99604f69700ecdc90fbd94e63981d
-=======
->>>>>>> aef1755e47a99604f69700ecdc90fbd94e63981d
-=======
->>>>>>> aef1755e47a99604f69700ecdc90fbd94e63981d
-=======
->>>>>>> aef1755e47a99604f69700ecdc90fbd94e63981d
-=======
->>>>>>> aef1755e47a99604f69700ecdc90fbd94e63981d
                                 <tbody id="LangEditTable">
 
                                 </tbody>
-                                <tfoot>
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
+                                <tfoot style="display: none;">
                                 <tr>
                                     <td colspan="2">
                                         <div class="btn btn-primary btn-block" onclick="Teacher.Edit.AddLanguage()">
@@ -453,70 +551,6 @@
                                     </td>
                                 </tr>
                                 </tfoot>
-=======
-                                <tbody>
-=======
->>>>>>> aef1755e47a99604f69700ecdc90fbd94e63981d
-=======
->>>>>>> aef1755e47a99604f69700ecdc90fbd94e63981d
-=======
->>>>>>> aef1755e47a99604f69700ecdc90fbd94e63981d
-=======
->>>>>>> aef1755e47a99604f69700ecdc90fbd94e63981d
-=======
->>>>>>> aef1755e47a99604f69700ecdc90fbd94e63981d
-                                <tr>
-                                    <td colspan="2">
-                                        <div class="btn btn-primary btn-block" onclick="Teacher.Edit.AddLanguage()">
-                                            Add Language
-                                        </div>
-                                    </td>
-                                </tr>
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-                                <script type="text/javascript">
-<<<<<<< HEAD
-                                    $('.PSCO_employee_language').ready(function () {
-                                        $('.PSCO_employee_language').load('page/data_value/lanuage.html');
-                                    });
-                                    $('.PSCO_employee_language_level').ready(function () {
-                                        $('.PSCO_employee_language_level').load('page/data_value/lanuage_level.html');
-                                    });
-                                    setTimeout(function () {
-                                        $('#age').val('50-55');
-
-
-                                        $('#edit_employee_language0').val('English');
-                                        $('#edit_employee_language_level0').val('advanced');
-                                    }, 1000);
-                                </script>
-                                </tbody>
-=======
-
-                                </script>
-<<<<<<< HEAD
->>>>>>> b002a728f4dcec2aa087814e06be3fc5418d47a1
-=======
->>>>>>> b002a728f4dcec2aa087814e06be3fc5418d47a1
->>>>>>> fc138cb3f5cd19bb77d974aa2aa4e9603313fd78
-=======
-                                </tfoot>
->>>>>>> aef1755e47a99604f69700ecdc90fbd94e63981d
-=======
-                                </tfoot>
->>>>>>> aef1755e47a99604f69700ecdc90fbd94e63981d
-=======
-                                </tfoot>
->>>>>>> aef1755e47a99604f69700ecdc90fbd94e63981d
-=======
-                                </tfoot>
->>>>>>> aef1755e47a99604f69700ecdc90fbd94e63981d
-=======
-                                </tfoot>
->>>>>>> aef1755e47a99604f69700ecdc90fbd94e63981d
                             </table>
                         </div>
                     </div>
@@ -615,7 +649,11 @@
 
 <script type="text/javascript">
     /*Load age Group option*/
-    $('#age').load("../data_value/age_group_60.html");
+    $(document).ready(function(){
+        $('#Admincountry').load('../data_value/country.html'); // load admin profile Country
+        $('#age').load("../data_value/age_group_60.html");
+    });
+
 
     var ClassesGrid;
     var TeacherGrid = new PSCO_grid('TeacherGrid');

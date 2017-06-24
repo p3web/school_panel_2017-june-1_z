@@ -170,7 +170,6 @@ function makecsv($data, $csvfilename, $scriptrun = null)
     </script>
 
 
-<<<<<<< HEAD
     <!--Jquery function to autocomplete country name -->
     <script>
         $(function () {
@@ -184,27 +183,9 @@ function makecsv($data, $csvfilename, $scriptrun = null)
 
             $('#checko').change(function () {
 
-=======
-    </script>
-
-    <!--Jquery function to autocomplete country name -->
-    <
-    script >
-    $(function () {
-        $("#beliefreligion").autocomplete({
-            source: 'autocompletereligion.php'
-        });
-    });
-    </script>
-    <script>
-        $(document).ready(function () {
-
-            $('#checko').change(function () {
->>>>>>> fc138cb3f5cd19bb77d974aa2aa4e9603313fd78
 
                 if ($(this).prop("checked") == true) {
 
-<<<<<<< HEAD
                     $("#beliefreligion").prop("readonly", true);
                     $('#beliefreligion').val('Belief/Religion');
                     $('#beliefreligion').css('color', '#CCC');
@@ -260,72 +241,6 @@ function makecsv($data, $csvfilename, $scriptrun = null)
                width: 6em;
                border-radius: 5px;
            }
-=======
-                if ($(this).prop("checked") == true) {
-
-                    $("#beliefreligion").prop("readonly", true);
-                    $('#beliefreligion').val('Belief/Religion');
-                    $('#beliefreligion').css('color', '#CCC');
-
-                }
-                else if ($(this).prop("checked") == false) {
-                    $("#beliefreligion").prop("readonly", false);
-                    $('#beliefreligion').val('');
-                    $('#beliefreligion').css('color', '#000');
-                }
-
-            });
-        });
-    </script>
-
-    <style>
-        @font-face {
-            font-family: MuseoSans_300;
-            src: url(fonts/MuseoSans_300.ttf);
-            font-weight: normal;
-            font-style: normal;
-
-        }
-
-        table.borderless td, table.borderless th {
-            border: none !important;
-            height: 0% auto !important;
-            padding: 0% !important;
-        }
-
-        table {
-            border: none !important;
-        }
-
-        .ui-autocomplete {
-            z-index: 5000;
-        }
-
-        .table-hover tbody tr:hover td, .table-hover tbody tr:hover th {
-            background-color: #e3f3f4;
-        }
-
-        .submitbtunnew, .submitbtunnew:link, .submitbtunnew:visited {
-            font-weight: bold;
-            background-color: #ff8a87;
-            color: #fff;
-            padding: 0.3em;
-            border: none;
-            width: 6em;
-            border-radius: 5px;
-        }
-
-        .submitbtunnew:hover, .submitbtunnew:active {
-            background-color: #000 !important;
-            font-weight: bold;
-            color: #ff8a87;
-            padding: 0.3em;
-            border: none;
-            width: 6em;
-            border-radius: 5px;
-        }
-    </style>
->>>>>>> fc138cb3f5cd19bb77d974aa2aa4e9603313fd78
 
            .submitbtunnew:hover, .submitbtunnew:active {
                background-color: #000 !important;
@@ -338,7 +253,6 @@ function makecsv($data, $csvfilename, $scriptrun = null)
            }*/
     </style>
 
-<<<<<<< HEAD
 
     <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
     <script type="text/javascript">
@@ -352,28 +266,8 @@ function makecsv($data, $csvfilename, $scriptrun = null)
 
         //Draw religion bar chart
         google.charts.setOnLoadCallback(drawReligionChart);
-=======
-    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
-    <script type="text/javascript">
 
-        // Load Charts and the corechart package.
-        google.charts.load('current', {'packages': ['corechart']});
-        google.charts.setOnLoadCallback(drawRegionsMap);
 
-        // Draw the donut chart .
-        google.charts.setOnLoadCallback(drawLanguageChart);
-
-        //Draw religion bar chart
-        google.charts.setOnLoadCallback(drawReligionChart);
-
->>>>>>> fc138cb3f5cd19bb77d974aa2aa4e9603313fd78
-
-        $(window).resize(function () {
-            drawRegionsMap();
-            drawLanguageChart();
-            drawReligionChart();
-
-<<<<<<< HEAD
         $(window).resize(function () {
             drawRegionsMap();
             drawLanguageChart();
@@ -381,15 +275,10 @@ function makecsv($data, $csvfilename, $scriptrun = null)
 
         });
 
-=======
-        });
-
->>>>>>> fc138cb3f5cd19bb77d974aa2aa4e9603313fd78
         function drawReligionChart() {
             var data = google.visualization.arrayToDataTable([
                 ["Religion", "NumberOfStaff"],
                 <?php
-<<<<<<< HEAD
                 include 'connection.php';
 
                 if (!empty($_POST['classnamedropdownbeltab'])) {
@@ -404,23 +293,6 @@ function makecsv($data, $csvfilename, $scriptrun = null)
                 while($row = mysql_fetch_assoc($result)) {
 
                 ?>
-=======
-                   include 'connection.php';
-
-                     if (!empty($_POST['classnamedropdownbeltab']))
-                     {
-                       $teamName= $_POST['classnamedropdownbeltab'];
-                     }
-
-                   $result = mysql_query("SELECT religion, COUNT( religion ) FROM staff where orgid='".$orgId."' AND deptname='".$deptName."' AND teamname='".$teamName."' AND status='active' GROUP BY religion ORDER BY COUNT( religion ) DESC");
-                   $result1 = mysql_query("SELECT religion, COUNT( religion ) FROM staff where orgid='".$orgId."' AND deptname='".$deptName."' AND teamname='".$teamName."' AND status='active' GROUP BY religion ORDER BY COUNT( religion ) DESC");
-
-
-
-                   while($row = mysql_fetch_assoc($result)) {
-
-                   ?>
->>>>>>> fc138cb3f5cd19bb77d974aa2aa4e9603313fd78
                 ['<?php echo $row['religion']; ?>', <?php echo $row['COUNT( religion )']; ?>],
 
 
@@ -457,19 +329,11 @@ function makecsv($data, $csvfilename, $scriptrun = null)
             //var chart = new google.visualization.ColumnChart(document.getElementById("barchart_values"));
             chart.draw(view, options);
             <?php
-<<<<<<< HEAD
             $output = array();
             while ($row = mysql_fetch_assoc($result1)) {
                 $output[] = $row;
             }
             makecsv($output, "teamadminreligonout.csv", false);
-=======
-                  $output = array();
-                  while($row = mysql_fetch_assoc($result1)) {
-                      $output[] = $row;
-                  }
-                  makecsv($output, "teamadminreligonout.csv", false);
->>>>>>> fc138cb3f5cd19bb77d974aa2aa4e9603313fd78
             ?>
         }
 
@@ -565,7 +429,6 @@ function makecsv($data, $csvfilename, $scriptrun = null)
 
                 ?>
                 ['<?php echo $row['x']; ?>', <?php echo $row['COUNT( * )']; ?>], <?php } ?>
-<<<<<<< HEAD
 
             ]);
             var options = {
@@ -579,29 +442,13 @@ function makecsv($data, $csvfilename, $scriptrun = null)
                 height: '500',
                 backgroundColor: {fill: 'transparent'}
 
-=======
-
-            ]);
-            var options = {
->>>>>>> fc138cb3f5cd19bb77d974aa2aa4e9603313fd78
 
             };
             var chart = new google.visualization.GeoChart(document.getElementById('regions_div'));
 
-<<<<<<< HEAD
-=======
-                colorAxis: {minValue: 0, colors: ['#f6cbcb', '#af3634']},
-                displayMode: 'regions',
-                //width: 900,
-                //height: 500,
-                width: "100%",
-                height: '500',
-                backgroundColor: {fill: 'transparent'}
->>>>>>> fc138cb3f5cd19bb77d974aa2aa4e9603313fd78
 
             // Wait for the chart to finish drawing before calling the getImageURI() method.
 
-<<<<<<< HEAD
             chart.draw(data, options);
             <?php
             $output = array();
@@ -635,48 +482,6 @@ function makecsv($data, $csvfilename, $scriptrun = null)
                 while($row = mysql_fetch_assoc($result)) {
 
                 ?>
-=======
-            };
-            var chart = new google.visualization.GeoChart(document.getElementById('regions_div'));
-
-
-            // Wait for the chart to finish drawing before calling the getImageURI() method.
-
-            chart.draw(data, options);
-            <?php
-                 $output = array();
-                 while($row = mysql_fetch_assoc($result1)) {
-                     $output[] = $row;
-                 }
-                 makecsv($output, 'teamadminregionout.csv', false);
-           ?>
-        }
-
-        //function to draw language chart
-        var languagechart;
-
-        function drawLanguageChart() {
-
-            var data = google.visualization.arrayToDataTable([
-                ['Language', 'NumberOfStaff', {role: 'style'}],
-
-
-                <?php
-                  include 'connection.php';
-
-                  if (!empty($_POST['classnamedropdownlantab']))
-                    {
-                      $teamName= $_POST['classnamedropdownlantab'];
-                    }
-
-                  $result = mysql_query("SELECT languagename, COUNT( languagename ) FROM stafflanguage where staffemailid IN(SELECT staffemailid FROM staff where orgid='".$orgId."' AND teamname='".$teamName."' AND deptname='".$deptName."') GROUP BY languagename ORDER BY COUNT( languagename ) DESC");
-                  $result1 = mysql_query("SELECT languagename, COUNT( languagename ) FROM stafflanguage where staffemailid IN(SELECT staffemailid FROM staff where orgid='".$orgId."' AND teamname='".$teamName."' AND deptname='".$deptName."') GROUP BY languagename ORDER BY COUNT( languagename ) DESC");
-
-
-                  while($row = mysql_fetch_assoc($result)) {
-
-                  ?>
->>>>>>> fc138cb3f5cd19bb77d974aa2aa4e9603313fd78
                 //
                 ['<?php echo $row['languagename']; ?>', <?php echo $row['COUNT( languagename )']; ?>, '<?php echo generateRandomColor(); ?>'],
 
@@ -704,7 +509,6 @@ function makecsv($data, $csvfilename, $scriptrun = null)
             languagechart = new google.visualization.ColumnChart(document.getElementById('languagechart'));
             languagechart.draw(data, options);
             <?php
-<<<<<<< HEAD
             $output = array();
             while ($row = mysql_fetch_assoc($result1)) {
                 $output[] = $row;
@@ -722,25 +526,6 @@ function makecsv($data, $csvfilename, $scriptrun = null)
             );
             makecsv($temp, "staffcount.csv", false);
             ?>
-=======
-                $output = array();
-                while($row = mysql_fetch_assoc($result1)) {
-                    $output[] = $row;
-                }
-                makecsv($output, 'teamadminlangout.csv', false);
-
-         $femalecount =  count(PSCO_func::get_lang_count_all_male_fmale($orgId ,$teamName , $deptName , 'f'));
-         $malecount = count(PSCO_func::get_lang_count_all_male_fmale($orgId ,$teamName , $deptName , 'm'));
-         $totalcount = $femalecount + $malecount;
-         $temp  =array();
-         $temp  =array(
-            array($totalcount , 'Total number of employees'),
-            array($malecount , 'Number of Males'),
-            array($femalecount, 'Number of Females')
-                 );
-         makecsv($temp, "staffcount.csv", false);
-          ?>
->>>>>>> fc138cb3f5cd19bb77d974aa2aa4e9603313fd78
         }
     </script>
 
@@ -789,17 +574,11 @@ function test_input($data)
     $data = htmlspecialchars($data);
     return $data;
 }
-<<<<<<< HEAD
-=======
-
-?>
->>>>>>> fc138cb3f5cd19bb77d974aa2aa4e9603313fd78
 
 ?>
 
 
 <div id="wrap">
-<<<<<<< HEAD
     <i class="glyphicon glyphicon-menu-hamburger" data-show="false" onclick="ToggleMenu(this)" id="menuIcon"></i>
     <div class="container-fluid">
         <?php include 'headerteamadmin.php'; ?>
@@ -821,13 +600,6 @@ function test_input($data)
 
             </ul>
         </div>
-=======
-
-    <div class="container-fluid">
-        <?php include 'headerteamadmin.php'; ?>
-
-
->>>>>>> fc138cb3f5cd19bb77d974aa2aa4e9603313fd78
         <div class="row">
 
             <div class="col-sm-1">
@@ -836,13 +608,8 @@ function test_input($data)
             <div class="col-sm-10" style="margin-top:2em;">
                 <div class="col-sm-12">
                     <div class="col-sm-6">
-<<<<<<< HEAD
                         <!-- <h2>Welcome to your Ancestry Atlas</h2>
                         <h5>Team admin -> &nbsp;<b><?php /*echo $adminName; */?></b></h5>-->
-=======
-                        <h2>Welcome to your Ancestry Atlas</h2>
-                        <h5>Team admin -> &nbsp;<b><?php echo $adminName; ?></b></h5>
->>>>>>> fc138cb3f5cd19bb77d974aa2aa4e9603313fd78
                         <!--
                         <p style="margin-top:1.5em;">As a teacher, you can now invite your students to register for Ancestry Atlas. <br>
 
@@ -851,7 +618,6 @@ function test_input($data)
        </p>-->
                     </div>
 
-<<<<<<< HEAD
                     <!--             <div class="col-sm-6 text-right">
                         <h2><?php /*echo $orgName; */?></h2>
                         <h5><?php /*echo $city . " / " . $suburb; */?></h5>
@@ -866,35 +632,6 @@ function test_input($data)
                                 <!--<br><br>-->
 
                                 <form method="post" style="overflow: auto">
-=======
-                    <div class="col-sm-6 text-right">
-                        <h2><?php echo $orgName; ?></h2>
-                        <h5><?php echo $city . " / " . $suburb; ?></h5>
-                    </div>
-
-                    <div class="col-sm-12" style="margin-top:2em;">
-                        <ul class="nav nav-tabs">
-                            <li style="width:10em; text-align:center;" class="active"><a data-toggle="tab"
-                                                                                         href="#students">STAFF</a></li>
-                            <li style="width:10em; text-align:center;"><a data-toggle="tab" href="#maps">MAPS</a></li>
-                            <li style="width:10em; text-align:center;"><a data-toggle="tab"
-                                                                          href="#language">LANGUAGE</a></li>
-                            <li style="width:10em; text-align:center;"><a data-toggle="tab" href="#religion">BELIEF</a>
-                            </li>
-                            <li style="width:10em; text-align:center;"><a data-toggle="tab" href="#key_facts">KEY
-                                    FACTS</a></li>
-                            <li style="width:10em; text-align:center;"><a data-toggle="tab" href="#export">EXPORT</a>
-                            </li>
-
-                        </ul>
-
-                        <div class="tab-content">
-                            <div id="students" class="tab-pane fade in active">
-                                <br><br>
-
-
-                                <form method="post">
->>>>>>> fc138cb3f5cd19bb77d974aa2aa4e9603313fd78
                                     <?php
 
 
@@ -1004,8 +741,6 @@ function test_input($data)
                                         echo "<td  style='padding:1%;' class='text-center'>";
                                         echo "<span>" . $countnum . "</span>";
                                         echo "</td>";
-<<<<<<< HEAD
-=======
 
                                         echo "<td style='padding:1%;'>";
                                         $lname = '';
@@ -1017,23 +752,8 @@ function test_input($data)
                                         $j = ++$j;
                                         $k = ++$k;
                                         echo "</td>";
->>>>>>> fc138cb3f5cd19bb77d974aa2aa4e9603313fd78
-
-                                        echo "<td style='padding:1%;'>";
-                                        $lname = '';
-                                        if ($rowj['lastname'] != 'null') {
-                                            $lname = $rowj['lastname'];
-                                        }
-
-<<<<<<< HEAD
-                                        echo "<span style='padding:0.7%;' id='j" . $j . "' >" . $studentNameTemp . " " . $lname . "</span>&nbsp;&nbsp;&nbsp;";
-                                        $j = ++$j;
-                                        $k = ++$k;
-                                        echo "</td>";
 
 
-=======
->>>>>>> fc138cb3f5cd19bb77d974aa2aa4e9603313fd78
                                         echo "<td  style='padding:1%;'>";
                                         /*echo "<span>".$rowj['staffemailid']."</span>";
                                         echo "</td>";*/
@@ -1130,7 +850,6 @@ function test_input($data)
                                             echo "Waiting approval";//  <button class='btn btn-default' style='background-color:#A1C564; color:#FFF;'>Resned</button>";
                                         }
                                         echo "</td>";
-<<<<<<< HEAD
 
                                         //STATUS
                                         echo "<td  style='padding:1%;'>";
@@ -1539,407 +1258,6 @@ function test_input($data)
                                             TabelCreateor(TableData_religion, 'langTable_religion');
                                             PieChart('ChartContainer_religion', series_religion);
 
-=======
-
-                                        //STATUS
-                                        echo "<td  style='padding:1%;'>";
-                                        if ($rowj['status'] == 'active') {
-                                            echo "<span> <img src='images/active.png'>&nbsp;active</span>";
-                                        } else if ($rowj['status'] == 'pending') {
-                                            echo "<span> <img src='images/pending.png'>&nbsp;pending</span>";
-                                        } else {
-                                            echo "<span>" . $rowj['status'] . "</span>";
-                                        }
-                                        echo "</td>";
-
-
-                                        //EDIT and DELETE
-                                        echo "<td  style='padding:1%; '>";
-
-                                        ?>
-                                        <a href="#" data-href="deletestaff.php?id=<?php echo $rowj['staffemailid']; ?>"
-                                           data-id="<?php echo $studentNameTemp . " " . $lname; ?>" class="staffinfo"
-                                           data-toggle="modal" data-target="#confirm-delete">
-                                            <img src='images/deletehover.png' width='16' height='16'
-                                                 onmouseover="this.src='images/delete.png';"
-                                                 onmouseout="this.src='images/deletehover.png';"/>
-                                        </a>
-
-                                        <?php
-                                        if ($rowj['status'] == 'active' && $rowj['firstname'] != "*******") {
-                                            ?> <a style="text-decoration:underline;cursor:pointer;" name="editstaff"
-                                                  id="<?php echo $rowj['staffemailid'] ?>" class="editstaff_data">
-                                                <img src='images/edit.png' width='16' height='16'
-                                                     onmouseover="this.src='images/edithover.png';"
-                                                     onmouseout="this.src='images/edit.png';"/>
-                                            </a>
-
-                                        <?php
-                                        }
-                                        ?>
-
-
-                                        <?php
-                                        echo "</td>";
-
-                                        echo "</tr>";
-
-                                        $countnum++;
-                                    }
-                                    ?>
-
-                                </form>
-                                <?php
-                                echo "</table>";
-                                } else {
-                                    echo "data fetching fail from teacher table.";
-                                }
-
-                                ?>
-
-                                <span style="clear:both; float:left; margin-left:3em; color:red;" id="error"><?php
-                                    echo $combineErr;
-
-                                    ?></span>
-
-
-                            </div>
-
-
-                            <div id="maps" class="tab-pane fade">
-                                <br>
-
-                                <div>
-                                    <div id="regions_div" style="float:left;"></div>
-
-                                    <div style="float:right;">
-
-                                        <div>
-                                            <form method="post">
-
-                                                <?php
-                                                include 'connection.php';
-                                                $queryp = "select teamname from orgteamdetail where teamemailid	= '" . $adminid . "' AND orgid = '" . $orgId . "'";
-                                                $resultp = mysql_query($queryp);
-                                                echo "Team Name:";
-                                                echo '<select name="classnamedropdown">';
-                                                while ($rowp = mysql_fetch_array($resultp)) {
-                                                    $selected = ($rowp['teamname'] == $currentClassName) ? 'selected="selected"' : '';
-                                                    echo '<option value="' . $rowp['teamname'] . '"' . $selected . ' >' . $rowp['teamname'] . '</option>';
-                                                }
-                                                echo '</select>';// Close your drop down box
-                                                mysql_close($con);
-
-
-
-                                                ?>
-
-
-                                                <br><br>
-
-                                                <input type="checkbox" id="checkoall"/>&nbsp;All (select/unselect)<br/>
-                                                <input type="checkbox" class="checkboxes" name="formDoor[]"
-                                                       value="S" <?php if (isset($_POST['formDoor'])) {
-                                                    $aDoor = $_POST['formDoor'];
-                                                    $N = count($aDoor);
-                                                    for ($i = 0; $i < $N; $i++) {
-                                                        if ($aDoor[$i] == 'S') {
-                                                            echo "checked='checked'";
-                                                        }
-                                                    }
-                                                } ?>/>&nbsp;Staff<br/>
-                                                <input type="checkbox" class="checkboxes" name="formDoor[]"
-                                                       value="F" <?php if (isset($_POST['formDoor'])) {
-                                                    $aDoor = $_POST['formDoor'];
-                                                    $N = count($aDoor);
-                                                    for ($i = 0; $i < $N; $i++) {
-                                                        if ($aDoor[$i] == 'F') {
-                                                            echo "checked='checked'";
-                                                        }
-                                                    }
-                                                } ?>/>&nbsp;Father<br/>
-                                                <input type="checkbox" class="checkboxes" name="formDoor[]"
-                                                       value="M" <?php if (isset($_POST['formDoor'])) {
-                                                    $aDoor = $_POST['formDoor'];
-                                                    $N = count($aDoor);
-                                                    for ($i = 0; $i < $N; $i++) {
-                                                        if ($aDoor[$i] == 'M') {
-                                                            echo "checked='checked'";
-                                                        }
-                                                    }
-                                                } ?>/>&nbsp;Mother<br/>
-                                                <input type="checkbox" class="checkboxes" name="formDoor[]"
-                                                       value="GFFS" <?php if (isset($_POST['formDoor'])) {
-                                                    $aDoor = $_POST['formDoor'];
-                                                    $N = count($aDoor);
-                                                    for ($i = 0; $i < $N; $i++) {
-                                                        if ($aDoor[$i] == 'GFFS') {
-                                                            echo "checked='checked'";
-                                                        }
-                                                    }
-                                                } ?> />&nbsp;Paternal GrandFather<br/>
-                                                <input type="checkbox" class="checkboxes" name="formDoor[]"
-                                                       value="GMFS" <?php if (isset($_POST['formDoor'])) {
-                                                    $aDoor = $_POST['formDoor'];
-                                                    $N = count($aDoor);
-                                                    for ($i = 0; $i < $N; $i++) {
-                                                        if ($aDoor[$i] == 'GMFS') {
-                                                            echo "checked='checked'";
-                                                        }
-                                                    }
-                                                } ?>/>&nbsp;Paternal GrandMother<br/>
-                                                <input type="checkbox" class="checkboxes" name="formDoor[]"
-                                                       value="GFMS" <?php if (isset($_POST['formDoor'])) {
-                                                    $aDoor = $_POST['formDoor'];
-                                                    $N = count($aDoor);
-                                                    for ($i = 0; $i < $N; $i++) {
-                                                        if ($aDoor[$i] == 'GFMS') {
-                                                            echo "checked='checked'";
-                                                        }
-                                                    }
-                                                } ?> />&nbsp;Maternal GrandFather<br/>
-                                                <input type="checkbox" class="checkboxes" name="formDoor[]"
-                                                       value="GMMS" <?php if (isset($_POST['formDoor'])) {
-                                                    $aDoor = $_POST['formDoor'];
-                                                    $N = count($aDoor);
-                                                    for ($i = 0; $i < $N; $i++) {
-                                                        if ($aDoor[$i] == 'GMMS') {
-                                                            echo "checked='checked'";
-                                                        }
-                                                    }
-                                                } ?>/>&nbsp;Maternal GrandMother<br/>
-
-
-                                                <br>
-                                                <input type="submit" id="submitval" name="submitval" value="SUBMIT">
-                                            </form>
-
-                                            <br><br>
-
-
-                                        </div>
-                                        <br><br>
-
-
-                                        <div>
-                                            <?php
-                                            include 'connection.php';
-
-                                            $unionAllOption = 0;
-                                            //starting query
-                                            $querytest = "";
-
-
-                                            if (!empty($_POST['formDoor'])) {
-                                                $querytest .= "select x , COUNT( * )  from(";
-                                                $aDoor = $_POST['formDoor'];
-                                                $N = count($aDoor);
-                                                for ($i = 0; $i < $N; $i++) {
-                                                    if ($aDoor[$i] == 'S') {
-                                                        $querytest .= " select `staffbirthplace` as x from staffbirthdetails where staffemailid IN(SELECT staffemailid FROM staff where orgid='" . $orgId . "'  AND deptname='" . $deptName . "' AND teamname='" . $teamName . "')";
-                                                        $unionAllOption = 1;
-                                                    }
-                                                    if ($aDoor[$i] == 'F') {
-                                                        if ($unionAllOption == 1) {
-                                                            $querytest .= " UNION ALL";
-                                                        }
-                                                        $querytest .= " select `stafffatherbirthplace` as x from staffbirthdetails where staffemailid IN(SELECT staffemailid FROM staff where orgid='" . $orgId . "'  AND deptname='" . $deptName . "' AND teamname='" . $teamName . "')";
-                                                        $unionAllOption = 1;
-                                                    }
-                                                    if ($aDoor[$i] == 'M') {
-                                                        if ($unionAllOption == 1) {
-                                                            $querytest .= " UNION ALL";
-                                                        }
-                                                        $querytest .= " select `staffmotherbirthplace` as x from staffbirthdetails where staffemailid IN(SELECT staffemailid FROM staff where orgid='" . $orgId . "'  AND deptname='" . $deptName . "' AND teamname='" . $teamName . "')";
-                                                        $unionAllOption = 1;
-                                                    }
-                                                    if ($aDoor[$i] == 'GFFS') {
-                                                        if ($unionAllOption == 1) {
-                                                            $querytest .= " UNION ALL";
-                                                        }
-                                                        $querytest .= " select `stafffathersfatherbirthplace` as x from staffbirthdetails where staffemailid IN(SELECT staffemailid FROM staff where orgid='" . $orgId . "'  AND deptname='" . $deptName . "' AND teamname='" . $teamName . "')";
-                                                        $unionAllOption = 1;
-                                                    }
-                                                    if ($aDoor[$i] == 'GMFS') {
-                                                        if ($unionAllOption == 1) {
-                                                            $querytest .= " UNION ALL";
-                                                        }
-                                                        $querytest .= " select `stafffathersmotherbirthplace` as x from staffbirthdetails where staffemailid IN(SELECT staffemailid FROM staff where orgid='" . $orgId . "'  AND deptname='" . $deptName . "' AND teamname='" . $teamName . "')";
-                                                        $unionAllOption = 1;
-                                                    }
-                                                    if ($aDoor[$i] == 'GFMS') {
-                                                        if ($unionAllOption == 1) {
-                                                            $querytest .= " UNION ALL";
-                                                        }
-                                                        $querytest .= " select `staffmothersfatherbirthplace` as x from staffbirthdetails where staffemailid IN(SELECT staffemailid FROM staff where orgid='" . $orgId . "'  AND deptname='" . $deptName . "' AND teamname='" . $teamName . "')";
-                                                        $unionAllOption = 1;
-                                                    }
-                                                    if ($aDoor[$i] == 'GMMS') {
-                                                        if ($unionAllOption == 1) {
-                                                            $querytest .= " UNION ALL";
-                                                        }
-                                                        $querytest .= " select `staffmothersmotherbirthplace` as x from staffbirthdetails where staffemailid IN(SELECT staffemailid FROM staff where orgid='" . $orgId . "'  AND deptname='" . $deptName . "' AND teamname='" . $teamName . "')";
-                                                        $unionAllOption = 1;
-                                                    }
-                                                }
-
-                                                $querytest .= " ) as temptable group by x";
-                                            }
-
-                                            // Default values goes here
-                                            if ($querytest == "") {
-
-                                                $querytest = "select x , COUNT( * )  from( select `staffbirthplace` as x from staffbirthdetails where staffemailid IN(SELECT staffemailid FROM staff where orgid='" . $orgId . "'  AND deptname='" . $deptName . "' AND teamname='" . $teamName . "') ) as temptable group by x";
-                                            }
-
-
-                                            $result = mysql_query($querytest);
-                                            while ($row = mysql_fetch_assoc($result)) {
-                                                echo "<b>";
-                                                echo $row['x'];
-                                                echo ": </b>&nbsp;";
-                                                echo $row['COUNT( * )'];
-                                                echo "<br/>";
-                                            } ?>
-
-                                        </div>
-                                        <a href="teamadminregionout.csv" id="CSVFILE">EXPORT To CSV</a>
-                                    </div>
-
-                                </div>
-
-
-                            </div>
-
-                            <script type="text/javascript">
-
-                                //_____ set base var
-                                window.orgId = '<?php echo $orgId ?>';
-                                window.deptName = '<?php echo $deptName ?>';
-                                window.teamName = '<?php echo $teamName ?>';
-
-                                //_____ exampel Chart Data
-
-                                var donutSeries = {
-                                    name: 'Language',
-                                    data: <?php
-							$result = language::get_chart_donut_language($orgId,$deptName,$teamName);
-							 echo $result;
-								?>
-                                };
-
-                                for (var i = 0; i < donutSeries.data.length; i++) {
-                                    donutSeries.data[i][1] = parseFloat(donutSeries.data[i][1]);
-                                }
-
-                                var series = [{
-                                    name: 'Language',
-                                    colorByPoint: true,
-                                    data: <?php
-							$result = language::get_chart_language($orgId,$deptName,$teamName);
-							 echo $result;
-								?>
-                                }];
-
-                                for (var i = 0; i < series[0].data.length; i++) {
-                                    series[0].data[i].y = parseFloat(series[0].data[i].y);
-                                }
-
-                                //_____ table Func
-                                var TableData = {
-                                    thName: ['Language', 'Count'],
-                                    trData:<?php
-							$result = language::get_table_language($orgId,$deptName,$teamName);
-							 echo $result;
-								?>
-                                };
-                            </script>
-
-                            <div id="language" class="tab-pane fade">
-
-                            </div>
-
-                            <script type="text/javascript">
-                                var flag = true;
-                                function init_PSCO_chart() {
-                                    $("#PSCO_chart").ready(function () {
-                                        try {
-                                            flag = false;
-                                            TabelCreateor(TableData, 'langTable');
-                                            PieChart('ChartContainer', series);
-
-                                        } catch (e) {
-                                            console.log(e);
-                                        }
-                                    });
-                                    if (flag) {
-                                        setTimeout(function () {
-                                            init_PSCO_chart();
-                                        }, 1000);
-                                    }
-                                }
-                                $('#language').load('page/Chart.html');
-                                setTimeout(function () {
-                                    init_PSCO_chart();
-                                }, 1000);
-                            </script>
-
-
-                            <!-- ganerat data religion chart -->
-
-                            <script type="text/javascript">
-
-                                //_____ exampel Chart Data
-                                var donutSeries_religion = {
-                                    name: 'Religion',
-                                    data: <?php
-							$result = religion::get_chart_donut_religion($orgId,$deptName,$teamName);
-							 echo $result;
-								?>
-                                };
-
-                                for (var i = 0; i < donutSeries_religion.data.length; i++) {
-                                    donutSeries_religion.data[i][1] = parseFloat(donutSeries_religion.data[i][1]);
-                                }
-
-                                var series_religion = [{
-                                    name: 'Religion',
-                                    colorByPoint: true,
-                                    data: <?php
-							$result = religion::get_chart_religion($orgId,$deptName,$teamName);
-							 echo $result;
-								?>
-                                }];
-
-                                for (var i = 0; i < series_religion[0].data.length; i++) {
-                                    series_religion[0].data[i].y = parseFloat(series_religion[0].data[i].y);
-                                }
-
-                                //_____ table Func
-                                var TableData_religion = {
-                                    thName: ['Religion', 'Count'],
-                                    trData:<?php
-							$result = religion::get_table_religion($orgId,$deptName,$teamName);
-							 echo $result;
-								?>
-                                };
-                            </script>
-
-
-                            <div id="religion" class="tab-pane fade">
-
-                            </div>
-
-                            <script type="text/javascript">
-                                var flag = true;
-                                function init_PSCO_chart_religion() {
-                                    $("#PSCO_chart").ready(function () {
-                                        try {
-                                            flag = false;
-                                            TabelCreateor(TableData_religion, 'langTable_religion');
-                                            PieChart('ChartContainer_religion', series_religion);
-
->>>>>>> fc138cb3f5cd19bb77d974aa2aa4e9603313fd78
                                         } catch (e) {
                                             console.log(e);
                                         }
@@ -1950,29 +1268,18 @@ function test_input($data)
                                         }, 1000);
                                     }
                                 }
-<<<<<<< HEAD
                                 $('#religion .TABContent').load('page/Belief_chart.html',function () {
                                     setTimeout(function () {
                                         init_PSCO_chart_religion();
                                     }, 1000);
                                 });
 
-=======
-                                $('#religion').load('page/Belief_chart.html');
-                                setTimeout(function () {
-                                    init_PSCO_chart_religion();
-                                }, 1000);
->>>>>>> fc138cb3f5cd19bb77d974aa2aa4e9603313fd78
                             </script>
 
 
                             <div id="key_facts" class="tab-pane fade">
 
-<<<<<<< HEAD
                                 <div class="headerContent">KEY FACTS</div>
-=======
-
->>>>>>> fc138cb3f5cd19bb77d974aa2aa4e9603313fd78
                                 <br><br>
                                 <!--<br>
                       <strong> The description of the Key Facts goes here.</strong>
@@ -1988,7 +1295,6 @@ function test_input($data)
                                 <?php
                                 //$result_num_of_language_spoken = num_of_language_spoken($orgId,$teamName,$deptName);
                                 echo "<ul style='color: black; line-height: 200%; font-size: medium;'>";
-<<<<<<< HEAD
                                 //the first section of key facts.
                                 echo "<li>";//16
                                 echo PSCO_func::invitation_status($orgId, $teamName, $deptName);
@@ -2066,64 +1372,6 @@ function test_input($data)
                                 echo PSCO_func::age_belief_stats($orgId, $teamName, $deptName);
                                 echo "</li>";
 
-=======
-                                echo "<li>";
-                                echo PSCO_func::languages($orgId, $teamName, $deptName);
-                                echo "</li>";
-                                echo "<li>";
-                                echo PSCO_func::different_faiths($orgId, $teamName, $deptName);
-                                echo "</li>";
-                                echo "<li>";
-                                echo PSCO_func::count_Languages($orgId, $teamName, $deptName);
-                                echo "</li>";
-                                echo "<li>";
-                                echo PSCO_func::grandparents($orgId, $teamName, $deptName);
-                                echo "</li>";
-                                echo "<li>";
-                                echo PSCO_func::Highest_number($orgId, $teamName, $deptName);
-                                echo "</li>";
-                                echo "<li>";
-                                echo PSCO_func::How_many_number($orgId, $teamName, $deptName);
-                                echo "</li>";
-                                echo "<li>";
-                                echo PSCO_func::born_country($orgId, $teamName, $deptName)[0];
-                                echo "</li>";
-                                echo "<li>";
-                                echo PSCO_func::born_country($orgId, $teamName, $deptName)[1];
-                                echo "</li>";
-                                echo "<li>";
-                                echo PSCO_func::born_country($orgId, $teamName, $deptName)[2];
-                                echo "</li>";
-                                echo "<li>";
-                                echo PSCO_func::male_female_know_language($orgId, $teamName, $deptName);
-                                echo "</li>";
-                                echo "<li>";
-                                echo PSCO_func::cultures_country_influence($orgId, $teamName, $deptName);
-                                echo "</li>";
-                                echo "<li>";
-                                echo PSCO_func::top_migrant($orgId, $teamName, $deptName);
-                                echo "</li>";
-                                echo "<li>";
-                                echo PSCO_func::num_of_language_spoken($orgId, $teamName, $deptName)[0];
-                                echo "</li>";
-                                echo "<li>";
-                                echo PSCO_func::num_of_language_spoken($orgId, $teamName, $deptName)[1];
-                                echo "</li>";
-                                echo "<li>";
-                                echo PSCO_func::num_of_language_spoken($orgId, $teamName, $deptName)[2];
-                                echo "</li>";
-                                echo "<li>";
-                                echo PSCO_func::invitation_status($orgId, $teamName, $deptName);
-                                echo "</li>";
-                                echo "<li>";
-                                echo PSCO_func::parent_born_overseas($orgId, $teamName, $deptName);
-                                echo "</li>";
-                                echo "<li>";
-                                echo PSCO_func::gparent_born_overseas($orgId, $teamName, $deptName);
-                                echo "</li>";
-
-
->>>>>>> fc138cb3f5cd19bb77d974aa2aa4e9603313fd78
                                 echo "</ul>";
 
                                 ?>
@@ -2131,13 +1379,9 @@ function test_input($data)
 
 
                             <div id="export" class="tab-pane fade">
-<<<<<<< HEAD
                                 <div class="headerContent">EXPORT</div>
                                 <iframe src="page/TeamMapChart.html"
                                         style="width: 100%;min-height: 1200px;border: none;"></iframe>
-=======
-                                <iframe src="page/TeamMapChart.html" style="width: 100%;min-height: 1200px;border: none;"></iframe>
->>>>>>> fc138cb3f5cd19bb77d974aa2aa4e9603313fd78
                             </div>
 
 
@@ -2184,7 +1428,6 @@ if (!isset($_SESSION['teamorg'])) {
 <script type="text/javascript">
 
     $(document).ready(function () {
-<<<<<<< HEAD
 
         //ALL OPTION
         $(".all-btn").click(function () {
@@ -2192,71 +1435,27 @@ if (!isset($_SESSION['teamorg'])) {
             $("#genderbtn").html("All&nbsp;<span class='caret'></span>");
             var data = google.visualization.arrayToDataTable([
                 ['Language', 'NumberOfStudent', {role: 'style'}],
-=======
 
-        //ALL OPTION
-        $(".all-btn").click(function () {
->>>>>>> fc138cb3f5cd19bb77d974aa2aa4e9603313fd78
 
-            $("#genderbtn").html("All&nbsp;<span class='caret'></span>");
-            var data = google.visualization.arrayToDataTable([
-                ['Language', 'NumberOfStudent', {role: 'style'}],
-
-<<<<<<< HEAD
                 <?php
                 include 'connection.php';
-=======
->>>>>>> fc138cb3f5cd19bb77d974aa2aa4e9603313fd78
-
-                <?php
-                  include 'connection.php';
 
 
-<<<<<<< HEAD
+
                 $result = mysql_query("SELECT languagename, COUNT( languagename ) FROM stafflanguage where staffemailid IN(SELECT staffemailid FROM staff where orgid='" . $orgId . "' AND teamname='" . $teamName . "' AND deptname='" . $deptName . "') GROUP BY languagename ORDER BY COUNT( languagename ) DESC");
 
                 while($row = mysql_fetch_assoc($result)) {
 
                 ?>
                 ['<?php echo $row['languagename']; ?>', <?php echo $row['COUNT( languagename )']; ?>, '<?php echo generateRandomColor(); ?>'],
-=======
 
-                  $result = mysql_query("SELECT languagename, COUNT( languagename ) FROM stafflanguage where staffemailid IN(SELECT staffemailid FROM staff where orgid='".$orgId."' AND teamname='".$teamName."' AND deptname='".$deptName."') GROUP BY languagename ORDER BY COUNT( languagename ) DESC");
 
-                  while($row = mysql_fetch_assoc($result)) {
->>>>>>> fc138cb3f5cd19bb77d974aa2aa4e9603313fd78
-
-                  ?>
-                ['<?php echo $row['languagename']; ?>', <?php echo $row['COUNT( languagename )']; ?>, '<?php echo generateRandomColor(); ?>'],
-
-<<<<<<< HEAD
                 <?php  }
 
                 mysql_close($con);
                 ?>
-=======
 
-                <?php  }
->>>>>>> fc138cb3f5cd19bb77d974aa2aa4e9603313fd78
 
-                mysql_close($con);
-                 ?>
-
-            ]);
-
-<<<<<<< HEAD
-            var options = {
-
-                pieHole: 0.4,
-                //width: '900',
-                width: "100%",
-                height: '500',
-                //height:'500',
-                backgroundColor: {fill: 'transparent'}
-            };
-            languagechart.draw(data, options);
-
-=======
             ]);
 
             var options = {
@@ -2269,12 +1468,11 @@ if (!isset($_SESSION['teamorg'])) {
                 backgroundColor: {fill: 'transparent'}
             };
             languagechart.draw(data, options);
->>>>>>> fc138cb3f5cd19bb77d974aa2aa4e9603313fd78
+
 
             $("#languagetext").html("<?php
                 include 'connection.php';
 
-<<<<<<< HEAD
 
                 $result = mysql_query("SELECT languagename, COUNT( languagename ) FROM stafflanguage where staffemailid IN(SELECT staffemailid FROM staff where orgid='" . $orgId . "' AND teamname='" . $teamName . "' AND deptname='" . $deptName . "') GROUP BY languagename ORDER BY COUNT( languagename ) DESC");
 
@@ -2289,34 +1487,8 @@ if (!isset($_SESSION['teamorg'])) {
                 } mysql_close($con);?>");
 
         });
-=======
-            $("#languagetext").html("<?php
-								include 'connection.php';
-								
-								 
-								$result = mysql_query("SELECT languagename, COUNT( languagename ) FROM stafflanguage where staffemailid IN(SELECT staffemailid FROM staff where orgid='".$orgId."' AND teamname='".$teamName."' AND deptname='".$deptName."') GROUP BY languagename ORDER BY COUNT( languagename ) DESC");
-							
-								
-								
-								while($row = mysql_fetch_assoc($result)) { 
-									echo "<b>";
-									echo $row['languagename'];
-									echo ": </b>&nbsp;"; 
-									echo $row['COUNT( languagename )'];
-									echo "<br/>"; 
-									} mysql_close($con);?>");
 
-        });
 
->>>>>>> fc138cb3f5cd19bb77d974aa2aa4e9603313fd78
-
-        //MALE OPTION
-        $(".male-btn").click(function () {
-            $("#genderbtn").html("Male&nbsp;<span class='caret'></span>");
-            var data = google.visualization.arrayToDataTable([
-                ['Language', 'NumberOfStudent', {role: 'style'}],
-
-<<<<<<< HEAD
         //MALE OPTION
         $(".male-btn").click(function () {
             $("#genderbtn").html("Male&nbsp;<span class='caret'></span>");
@@ -2334,28 +1506,11 @@ if (!isset($_SESSION['teamorg'])) {
 
                 ?>
                 ['<?php echo $row['languagename']; ?>', <?php echo $row['COUNT( languagename )']; ?>, '<?php echo generateRandomColor(); ?>'],
-=======
 
-                <?php
-                  include 'connection.php';
-                  $gen="male";
-
-                  $result = mysql_query("SELECT languagename, COUNT( languagename ) FROM stafflanguage where staffemailid IN(SELECT staffemailid FROM staff where orgid='".$orgId."' AND teamname='".$teamName."' AND deptname='".$deptName."' AND gender='".$gen."') GROUP BY languagename ORDER BY COUNT( languagename ) DESC");
-
-                  while($row = mysql_fetch_assoc($result)) {
-
-                  ?>
-                ['<?php echo $row['languagename']; ?>', <?php echo $row['COUNT( languagename )']; ?>, '<?php echo generateRandomColor(); ?>'],
-
->>>>>>> fc138cb3f5cd19bb77d974aa2aa4e9603313fd78
 
                 <?php  } mysql_close($con);?>
 
-                <?php  } mysql_close($con);?>
 
-            ]);
-
-<<<<<<< HEAD
             ]);
 
             var options = {
@@ -2375,35 +1530,6 @@ if (!isset($_SESSION['teamorg'])) {
 
 
 
-=======
-            var options = {
-
-                pieHole: 0.4,
-                //width: '900',
-                width: "100%",
-                height: '500',
-                backgroundColor: {fill: 'transparent'}
-            };
-            languagechart.draw(data, options);
-
-            $("#languagetext").html("<?php
-								include 'connection.php';
-								
-								$result = mysql_query("SELECT languagename, COUNT( languagename ) FROM stafflanguage where staffemailid IN(SELECT staffemailid FROM staff where orgid='".$orgId."' AND teamname='".$teamName."' AND deptname='".$deptName."' AND gender='".$gen."') GROUP BY languagename ORDER BY COUNT( languagename ) DESC");
-								
-							
-								
-								
-								while($row = mysql_fetch_assoc($result)) { 
-									echo "<b>";
-									echo $row['languagename'];
-									echo ": </b>&nbsp;"; 
-									echo $row['COUNT( languagename )'];
-									echo "<br/>"; 
-									} mysql_close($con);?>");
-
-        });
->>>>>>> fc138cb3f5cd19bb77d974aa2aa4e9603313fd78
 
                 while ($row = mysql_fetch_assoc($result)) {
                     echo "<b>";
@@ -2413,72 +1539,37 @@ if (!isset($_SESSION['teamorg'])) {
                     echo "<br/>";
                 } mysql_close($con);?>");
 
-<<<<<<< HEAD
         });
 
-=======
+
         // FEMALE OPTION
         $(".female-btn").click(function () {
 
             $("#genderbtn").html("Female&nbsp;<span class='caret'></span>");
             var data = google.visualization.arrayToDataTable([
                 ['Language', 'NumberOfStudent', {role: 'style'}],
->>>>>>> fc138cb3f5cd19bb77d974aa2aa4e9603313fd78
 
-        // FEMALE OPTION
-        $(".female-btn").click(function () {
-
-<<<<<<< HEAD
-            $("#genderbtn").html("Female&nbsp;<span class='caret'></span>");
-            var data = google.visualization.arrayToDataTable([
-                ['Language', 'NumberOfStudent', {role: 'style'}],
-
-=======
-                <?php
-                  include 'connection.php';
-                  $gen="female";
-
-                  $result = mysql_query("SELECT languagename, COUNT( languagename ) FROM stafflanguage where staffemailid IN(SELECT staffemailid FROM staff where orgid='".$orgId."' AND teamname='".$teamName."' AND deptname='".$deptName."' AND gender='".$gen."') GROUP BY languagename ORDER BY COUNT( languagename ) DESC");
->>>>>>> fc138cb3f5cd19bb77d974aa2aa4e9603313fd78
 
                 <?php
                 include 'connection.php';
                 $gen = "female";
 
-<<<<<<< HEAD
                 $result = mysql_query("SELECT languagename, COUNT( languagename ) FROM stafflanguage where staffemailid IN(SELECT staffemailid FROM staff where orgid='" . $orgId . "' AND teamname='" . $teamName . "' AND deptname='" . $deptName . "' AND gender='" . $gen . "') GROUP BY languagename ORDER BY COUNT( languagename ) DESC");
 
-=======
-                  while($row = mysql_fetch_assoc($result)) {
-
-                  ?>
-                ['<?php echo $row['languagename']; ?>', <?php echo $row['COUNT( languagename )']; ?>, '<?php echo generateRandomColor(); ?>'],
->>>>>>> fc138cb3f5cd19bb77d974aa2aa4e9603313fd78
 
                 while($row = mysql_fetch_assoc($result)) {
 
-<<<<<<< HEAD
                 ?>
                 ['<?php echo $row['languagename']; ?>', <?php echo $row['COUNT( languagename )']; ?>, '<?php echo generateRandomColor(); ?>'],
 
 
                 <?php  }mysql_close($con); ?>
-=======
-                <?php  }mysql_close($con); ?>
 
 
-            ]);
->>>>>>> fc138cb3f5cd19bb77d974aa2aa4e9603313fd78
-
-            var options = {
-
-<<<<<<< HEAD
             ]);
 
             var options = {
 
-=======
->>>>>>> fc138cb3f5cd19bb77d974aa2aa4e9603313fd78
                 pieHole: 0.4,
                 //width: '900',
                 width: "100%",
@@ -2487,7 +1578,6 @@ if (!isset($_SESSION['teamorg'])) {
             };
             languagechart.draw(data, options);
             $("#languagetext").html("<?php
-<<<<<<< HEAD
                 include 'connection.php';
 
                 $result = mysql_query("SELECT languagename, COUNT( languagename ) FROM stafflanguage where staffemailid IN(SELECT staffemailid FROM staff where orgid='" . $orgId . "' AND teamname='" . $teamName . "' AND deptname='" . $deptName . "' AND gender='" . $gen . "') GROUP BY languagename ORDER BY COUNT( languagename ) DESC");
@@ -2502,21 +1592,6 @@ if (!isset($_SESSION['teamorg'])) {
                     echo $row['COUNT( languagename )'];
                     echo "<br/>";
                 } mysql_close($con);?>");
-=======
-								include 'connection.php';
-								
-								$result = mysql_query("SELECT languagename, COUNT( languagename ) FROM stafflanguage where staffemailid IN(SELECT staffemailid FROM staff where orgid='".$orgId."' AND teamname='".$teamName."' AND deptname='".$deptName."' AND gender='".$gen."') GROUP BY languagename ORDER BY COUNT( languagename ) DESC");
-								
-							
-								
-								
-								while($row = mysql_fetch_assoc($result)) { 
-									echo "<b>";
-									echo $row['languagename'];
-									echo ": </b>&nbsp;"; 
-									echo $row['COUNT( languagename )'];
-									echo "<br/>"; 
-									} mysql_close($con);?>");
 
         });
 
@@ -2527,57 +1602,21 @@ if (!isset($_SESSION['teamorg'])) {
             $("#genderbtn").html("Others&nbsp;<span class='caret'></span>");
             var data = google.visualization.arrayToDataTable([
                 ['Language', 'NumberOfStudent', {role: 'style'}],
->>>>>>> fc138cb3f5cd19bb77d974aa2aa4e9603313fd78
 
-        });
-
-<<<<<<< HEAD
-
-        //OTHER OPTION
-        $(".others-btn").click(function () {
-=======
-                <?php
-                  include 'connection.php';
-                  $gen="others";
-
-                  $result = mysql_query("SELECT languagename, COUNT( languagename ) FROM stafflanguage where staffemailid IN(SELECT staffemailid FROM staff where orgid='".$orgId."' AND teamname='".$teamName."' AND deptname='".$deptName."' AND gender='".$gen."') GROUP BY languagename ORDER BY COUNT( languagename ) DESC");
->>>>>>> fc138cb3f5cd19bb77d974aa2aa4e9603313fd78
-
-            $("#genderbtn").html("Others&nbsp;<span class='caret'></span>");
-            var data = google.visualization.arrayToDataTable([
-                ['Language', 'NumberOfStudent', {role: 'style'}],
-
-<<<<<<< HEAD
 
                 <?php
                 include 'connection.php';
                 $gen = "others";
-=======
-                  while($row = mysql_fetch_assoc($result)) {
-
-                  ?>
-                ['<?php echo $row['languagename']; ?>', <?php echo $row['COUNT( languagename )']; ?>, '<?php echo generateRandomColor(); ?>'],
->>>>>>> fc138cb3f5cd19bb77d974aa2aa4e9603313fd78
 
                 $result = mysql_query("SELECT languagename, COUNT( languagename ) FROM stafflanguage where staffemailid IN(SELECT staffemailid FROM staff where orgid='" . $orgId . "' AND teamname='" . $teamName . "' AND deptname='" . $deptName . "' AND gender='" . $gen . "') GROUP BY languagename ORDER BY COUNT( languagename ) DESC");
 
-<<<<<<< HEAD
-=======
-                <?php  } mysql_close($con);?>
->>>>>>> fc138cb3f5cd19bb77d974aa2aa4e9603313fd78
 
                 while($row = mysql_fetch_assoc($result)) {
 
-<<<<<<< HEAD
                 ?>
                 ['<?php echo $row['languagename']; ?>', <?php echo $row['COUNT( languagename )']; ?>, '<?php echo generateRandomColor(); ?>'],
-=======
-            ]);
->>>>>>> fc138cb3f5cd19bb77d974aa2aa4e9603313fd78
 
-            var options = {
 
-<<<<<<< HEAD
                 <?php  } mysql_close($con);?>
 
 
@@ -2610,35 +1649,6 @@ if (!isset($_SESSION['teamorg'])) {
                 } mysql_close($con);?>");
         });
 
-=======
-                pieHole: 0.4,
-                //width: '900',
-                width: "100%",
-                height: '500',
-                backgroundColor: {fill: 'transparent'}
-            };
-            languagechart.draw(data, options);
-
-            $("#languagetext").html("<?php
-								include 'connection.php';
-								
-								$result = mysql_query("SELECT languagename, COUNT( languagename ) FROM stafflanguage where staffemailid IN(SELECT staffemailid FROM staff where orgid='".$orgId."' AND teamname='".$teamName."' AND deptname='".$deptName."' AND gender='".$gen."') GROUP BY languagename ORDER BY COUNT( languagename ) DESC");
-								
-							
-								
-								
-								while($row = mysql_fetch_assoc($result)) { 
-									echo "<b>";
-									echo $row['languagename'];
-									echo ": </b>&nbsp;"; 
-									echo $row['COUNT( languagename )'];
-									echo "<br/>"; 
-									} mysql_close($con);?>");
-        });
-
-
-    });
->>>>>>> fc138cb3f5cd19bb77d974aa2aa4e9603313fd78
 
     });
 
@@ -3106,8 +2116,4 @@ if (isset($_POST['submitvalbeltab'])) {
         });
 
     });
-<<<<<<< HEAD
 </script>
-=======
-</script>
->>>>>>> fc138cb3f5cd19bb77d974aa2aa4e9603313fd78

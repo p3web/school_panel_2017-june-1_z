@@ -14,8 +14,8 @@
                     <span class="caret"></span>
                 </button>
                 <ul class="dropdown-menu" aria-labelledby="dLabel">
-                    <li><a href="#" onclick="changeChartData('ChartContainer' , series);window.className='S1';" >S1</a></li>
-                    <li><a href="#" onclick="changeChartData('ChartContainer' , series);window.className='S2';" >S2</a></li>
+                    <li><a href="#" onclick="changeChartData('ChartContainer' , series , 'language');window.className='S1';" >S1</a></li>
+                    <li><a href="#" onclick="changeChartData('ChartContainer' , series, 'language');window.className='S2';" >S2</a></li>
                 </ul>
             </div>
         </div>
@@ -38,9 +38,9 @@
                     <span class="caret"></span>
                 </button>
                 <ul class="dropdown-menu" aria-labelledby="dLabel">
-                    <li><a href="#" onclick="PieChart('ChartContainer' , series)" > Pie</a></li>
-                    <li><a href="#" onclick="BarChart('ChartContainer' , series)"> Bar</a></li>
-                    <li><a href="#" onclick="DonutChart('ChartContainer' , donutSeries)"> Donut</a></li>
+                    <li><a href="#" onclick="PieChart('ChartContainer' , series , 'language')" > Pie</a></li>
+                    <li><a href="#" onclick="BarChart('ChartContainer' , series ,'language')"> Bar</a></li>
+                    <li><a href="#" onclick="DonutChart('ChartContainer' , donutSeries , 'language')"> Donut</a></li>
                 </ul>
             </div>
             <a href="teacherlangout.csv" class="btn btn-primary" style="display: inline-block;">Export CSV</a>
@@ -151,7 +151,7 @@
             }
 
             TabelCreateor(TableData, 'langTable');
-            changeChartData('ChartContainer', series ,donutSeries );
+            changeChartData('ChartContainer', series ,donutSeries  , 'language');
         }else {
 
             setTimeout(function () {

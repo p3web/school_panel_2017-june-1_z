@@ -140,6 +140,8 @@ function makecsv($data, $csvfilename, $scriptrun = null)
 
     <script src="page/js/chart.js"></script>
 
+    <script src="page/js/TeacherAdmin.js"></script>
+
     <!--Jquery function to autocomplete country name -->
     <script>
         $(function () {
@@ -505,8 +507,8 @@ function makecsv($data, $csvfilename, $scriptrun = null)
             }
             makecsv($output, 'teacherlangout.csv', false);
 
-            $femalecount = count(PSCO_func::get_lang_count_all_male_fmale($orgId, $teamName, 'f'));
-            $malecount = count(PSCO_func::get_lang_count_all_male_fmale($orgId, $teamName, 'm'));
+            $femalecount = count(PSCO_func::get_lang_count_all_male_fmale($schoolId, $className, 'f'));
+            $malecount = count(PSCO_func::get_lang_count_all_male_fmale($schoolId, $className, 'm'));
             $totalcount = $femalecount + $malecount;
             $temp = array();
             $temp = array(
@@ -2025,7 +2027,21 @@ if (isset($_POST['submitvalbeltab'])) {
                     $('#gff').val(datastaffbirth.studentfathersfatherbirthplace);
                     $('#gmf').val(datastaffbirth.studentfathersmotherbirthplace);
                     $('#employee_lang').html(lang.data);
-
+                    /*P.N*/
+                    // Create add Language Btn ....
+                /*    var tfoot = document.createElement('tfoot');
+                    var tr = document.createElement('tr');
+                    var td = document.createElement('td');
+                    td.setAttribute('colspan', '2');
+                    var btn = document.createElement('div');
+                    btn.setAttribute('class' , 'btn btn-primary btn-block');
+                    btn.setAttribute('onclick' , 'Profile.Addlanguage()');
+                    btn.innerText = 'Add Language';
+                    // append Child
+                    td.appendChild(btn);
+                    tr.appendChild(td);
+                    tfoot.appendChild(tr);
+                    document.getElementById('employee_lang').appendChild(tfoot); */
                     $('#edit_data_Modal').modal('show');
                 }
             });

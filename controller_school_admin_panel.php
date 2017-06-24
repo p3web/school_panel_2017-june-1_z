@@ -72,13 +72,15 @@ if (isset($_SESSION['emailid']) && $_SESSION['emailid'] != '' ) {
             case 'edit_school_profile_by_adminemailid':
                 //($schoolid,$schoolname,$adminemailid,$firstname,$lastname,$country,$state,$city,$suburb,$postcode)
                 $valid_data = controller_main_function::check_validation(array("schoolid","schoolname","adminemailid","firstname","lastname","country","state","city","suburb","postcode"));
+
                 if (!isset($valid_data['is_valid']) || $valid_data['is_valid'] == false) {
                     controller_main_function::send_msg(lang::$invalid_data, lang::$error);
                 }
                 access_school_admin_panel::edit_school_profile_by_adminemailid($_REQUEST["schoolid"],$_REQUEST["schoolname"],$_REQUEST["adminemailid"],$_REQUEST["firstname"],$_REQUEST["lastname"],$_REQUEST["country"],$_REQUEST["state"],$_REQUEST["city"],$_REQUEST["suburb"],$_REQUEST["postcode"]);
-                //controller_main_function::send_msg(lang::$success, lang::$message);
-                $result = array('data'=> true);
-                controller_main_function::send_result($result);
+                $type = 'success';
+                controller_main_function::send_msg(lang::$success, lang::$message , $type);
+               // $result = array('data'=> true);
+                //controller_main_function::send_result($result);
                 break;
 
             case 'get_tbl_teachers':

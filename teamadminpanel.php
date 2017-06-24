@@ -133,6 +133,9 @@ function makecsv($data, $csvfilename, $scriptrun = null)
     <script src="page/js/chart.js"></script>
 
 
+    <script src="page/js/TeamAdmin.js"></script>
+
+
     <!--Jquery function to autocomplete country name -->
     <script>
         $(function () {
@@ -608,8 +611,8 @@ function test_input($data)
             <div class="col-sm-11" style="margin-top:2em;">
                 <div class="col-sm-12">
                     <div class="col-sm-6">
-                       <!-- <h2>Welcome to your Ancestry Atlas</h2>
-                        <h5>Team admin -> &nbsp;<b><?php /*echo $adminName; */?></b></h5>-->
+                        <!-- <h2>Welcome to your Ancestry Atlas</h2>
+                        <h5>Team admin -> &nbsp;<b><?php /*echo $adminName; */ ?></b></h5>-->
                         <!--
                         <p style="margin-top:1.5em;">As a teacher, you can now invite your students to register for Ancestry Atlas. <br>
 
@@ -618,9 +621,9 @@ function test_input($data)
        </p>-->
                     </div>
 
-       <!--             <div class="col-sm-6 text-right">
-                        <h2><?php /*echo $orgName; */?></h2>
-                        <h5><?php /*echo $city . " / " . $suburb; */?></h5>
+                    <!--             <div class="col-sm-6 text-right">
+                        <h2><?php /*echo $orgName; */ ?></h2>
+                        <h5><?php /*echo $city . " / " . $suburb; */ ?></h5>
                     </div>-->
 
                     <div class="col-sm-12" style="margin-top:2em;">
@@ -884,7 +887,7 @@ function test_input($data)
                                                      onmouseout="this.src='images/edit.png';"/>
                                             </a>
 
-                                        <?php
+                                            <?php
                                         }
                                         ?>
 
@@ -921,7 +924,8 @@ function test_input($data)
                                 <br>
 
                                 <div>
-                                    <iframe src="page/TeamAdminMap.html" style="border: none;width: 80%;height:500px;"></iframe>
+                                    <iframe src="page/TeamAdminMap.html"
+                                            style="border: none;width: 80%;height:500px;"></iframe>
                                     <div id="regions_div" style="display: none;float:left;"></div>
 
                                     <div style="display: inline-block;">
@@ -1192,7 +1196,7 @@ function test_input($data)
                                         }, 1000);
                                     }
                                 }
-                                $('#language .TABContent').load('page/Chart.html',function () {
+                                $('#language .TABContent').load('page/Chart.html', function () {
                                     setTimeout(function () {
                                         init_PSCO_chart();
                                     }, 1000);
@@ -1268,7 +1272,7 @@ function test_input($data)
                                         }, 1000);
                                     }
                                 }
-                                $('#religion .TABContent').load('page/Belief_chart.html',function () {
+                                $('#religion .TABContent').load('page/Belief_chart.html', function () {
                                     setTimeout(function () {
                                         init_PSCO_chart_religion();
                                     }, 1000);
@@ -1394,10 +1398,10 @@ function test_input($data)
 
             </div>
 
-       <!--     <div class="col-sm-1">
+            <!--     <div class="col-sm-1">
 
-            </div>
--->
+                 </div>
+     -->
         </div>
     </div>
 
@@ -2013,7 +2017,21 @@ if (isset($_POST['submitvalbeltab'])) {
                     $('#gff').val(datastaffbirth.stafffathersfatherbirthplace);
                     $('#gmf').val(datastaffbirth.stafffathersmotherbirthplace);
                     $('#employee_lang').html(lang.data);
-
+                    /*P.N*/
+                    // Create add Language Btn ....
+                  /*  var tfoot = document.createElement('tfoot');
+                    var tr = document.createElement('tr');
+                    var td = document.createElement('td');
+                    td.setAttribute('colspan', '2');
+                    var btn = document.createElement('div');
+                    btn.setAttribute('class' , 'btn btn-primary btn-block');
+                    btn.setAttribute('onclick' , 'Profile.Addlanguage()');
+                    btn.innerText = 'Add Language';
+                    // append Child
+                    td.appendChild(btn);
+                    tr.appendChild(td);
+                    tfoot.appendChild(tr);
+                    document.getElementById('employee_lang').appendChild(tfoot);*/
                     $('#edit_data_Modal').modal('show');
                 }
             });

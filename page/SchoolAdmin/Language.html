@@ -24,10 +24,10 @@
                     <span class="caret"></span>
                 </button>
                 <ul class="dropdown-menu" aria-labelledby="dLabel">
-                    <li><a onclick="Language.sendAction('all')" href="#"> All</a></li>
-                    <li><a onclick="Language.sendAction('male')" href="#"> Male</a></li>
-                    <li><a onclick="Language.sendAction('female')" href="#"> Female</a></li>
-                    <li><a onclick="Language.sendAction('other')" href="#"> Other</a></li>
+                    <li><a onclick="Language.sendAction('A')" href="#"> All</a></li>
+                    <li><a onclick="Language.sendAction('M')" href="#"> Male</a></li>
+                    <li><a onclick="Language.sendAction('F')" href="#"> Female</a></li>
+                    <li><a onclick="Language.sendAction('O')" href="#"> Other</a></li>
                 </ul>
             </div>
             <div class="dropdown" style="display: inline-block;">
@@ -37,9 +37,9 @@
                     <span class="caret"></span>
                 </button>
                 <ul class="dropdown-menu" aria-labelledby="dLabel">
-                    <li><a href="#" onclick="PieChart('LangChartContainer' , Language.Series)"> Pie</a></li>
-                    <li><a href="#" onclick="BarChart('LangChartContainer' , Language.Series)"> Bar</a></li>
-                    <li><a href="#" onclick="DonutChart('LangChartContainer' , Language.DonutSeries)"> Donut</a></li>
+                    <li><a href="#" onclick="PieChart('LangChartContainer' , Language.Series , 'language')"> Pie</a></li>
+                    <li><a href="#" onclick="BarChart('LangChartContainer' , Language.Series , 'language')"> Bar</a></li>
+                    <li><a href="#" onclick="DonutChart('LangChartContainer' , Language.DonutSeries , 'language')"> Donut</a></li>
                 </ul>
             </div>
             <div class="btn btn-primary" style="display: inline-block;">Export CSV</div>

@@ -32,6 +32,7 @@ function Confirm(EmailID) {
     message.Confirm('Are you sure ?!', 'Confirm Delete', Teacher.DeleteRow, EmailID);
 }
 var Teacher = {
+    AdminProfile: {},
     Profile: {},
     Edit: {
         trCounter: 0
@@ -100,6 +101,9 @@ Teacher.Profile.CreatePersonalDetails = function (Data) {
         '</tr>' +
         '</tbody>';
     document.getElementById('TeacherPersonalTable').innerHTML = Tag;
+};
+Teacher.Profile.CreateAgeGroup = function (Data) {
+    document.getElementById('ageGroup').innerText = Data[0].age;
 };
 Teacher.Profile.CreateBirthDetails = function (Data) {
     Data = Data[0];
@@ -172,6 +176,10 @@ Teacher.ViewProfile = function (EmailID) {
         act: 'get_teacher_lang_by_teacherEmailId',
         teacheremailid: EmailID
     }, Teacher.Profile.CreateLangDetails);
+    ajax.sender_data_json_by_url_callback(Global.url, {
+        act: 'get_teacher_age_group_by_teacherEmailId',
+        teacheremailid: EmailID
+    }, Teacher.Profile.CreateAgeGroup);
     setTimeout(function () {
         showModal('dataModal');
     }, 500);
@@ -255,6 +263,7 @@ Teacher.Edit.Edit = function (EmailID) {
         showModal('edit_data_Modal');
     }, 500);
 };
+/*add Language View*/
 Teacher.Edit.AddLanguage = function () {
 
     var Tbody = document.querySelector('#LangEditTable');
@@ -281,20 +290,10 @@ Teacher.Edit.AddLanguage = function () {
     Levelselect.setAttribute('id', 'LevelSelect' + Teacher.Edit.trCounter);
     Langselect.setAttribute('class', 'Anim-toptoleft form-control');
     Levelselect.setAttribute('class', 'Anim-toptoleft form-control');
+    Langselect.setAttribute('data-addedLang', 'true'); //---> for select added select Tag in update function
+    Levelselect.setAttribute('data-addedLevel', 'true'); //---> for select added select Tag in update function
     DeleteTrBtn.innerText = 'Delete This';
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
     DeleteTrBtn.setAttribute('onclick', "DeleteTr('langtr" + Teacher.Edit.trCounter + "')");
-=======
-    DeleteTrBtn.setAttribute('onclick' , "DeleteTr('langtr"+Teacher.Edit.trCounter+"')");
->>>>>>> aef1755e47a99604f69700ecdc90fbd94e63981d
-=======
-    DeleteTrBtn.setAttribute('onclick' , "DeleteTr('langtr"+Teacher.Edit.trCounter+"')");
->>>>>>> aef1755e47a99604f69700ecdc90fbd94e63981d
-=======
-    DeleteTrBtn.setAttribute('onclick' , "DeleteTr('langtr"+Teacher.Edit.trCounter+"')");
->>>>>>> aef1755e47a99604f69700ecdc90fbd94e63981d
 
     // ______ AppendChild
     Langselect.appendChild(langoption);
@@ -316,19 +315,7 @@ Teacher.Edit.AddLanguage = function () {
 
 };
 function DeleteTr(id) {
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
     var tr = document.getElementById(id);
-=======
-    var tr =document.getElementById(id);
->>>>>>> aef1755e47a99604f69700ecdc90fbd94e63981d
-=======
-    var tr =document.getElementById(id);
->>>>>>> aef1755e47a99604f69700ecdc90fbd94e63981d
-=======
-    var tr =document.getElementById(id);
->>>>>>> aef1755e47a99604f69700ecdc90fbd94e63981d
     tr.parentNode.removeChild(tr);
 }
 /*Update Teacher*/
@@ -384,16 +371,60 @@ Teacher.Update.LanguageDetails = function () {
     var Levels = document.getElementsByClassName('PSCO_employee_language_level');
     var Language = [];
     var id, lang, level;
-    for (var i = 0; i < Langs.length; i++) {
-        id = Langs[i].getAttribute('data-LangID');
-        lang = Langs[i].value;
-        level = Levels[i].value;
+    var i = 0;
+    var Loop = function () {
+        if (i < Langs.length) {
+            setTimeout(function () {
+                id = Langs[i].getAttribute('data-LangID');
+                lang = Langs[i].value;
+                level = Levels[i].value;
 
-        ajax.sender_data_json_by_url_callback(Global.url, {
-            act: 'edit_teacher_lang_bylangId',
-            id: id, languagename: lang, languagelevel: level
-        }, Teacher.Update.CheckResult);
-    }
+                ajax.sender_data_json_by_url_callback(Global.url, {
+                    act: 'edit_teacher_lang_bylangId',
+                    id: id, languagename: lang, languagelevel: level
+                }, Teacher.Update.CheckResult);
+                i++;
+                Loop();
+            }, 80);
+        }
+    };
+    Loop();
+    /*for (var i = 0; i < Langs.length; i++) {
+     id = Langs[i].getAttribute('data-LangID');
+     lang = Langs[i].value;
+     level = Levels[i].value;
+
+     ajax.sender_data_json_by_url_callback(Global.url, {
+     act: 'edit_teacher_lang_bylangId',
+     id: id, languagename: lang, languagelevel: level
+     }, Teacher.Update.CheckResult);
+     }*/
+
+};
+Teacher.Update.AddLanguage = function () {
+    var EmailID = document.getElementById('Teacheremail').value;
+    var Languages = document.querySelectorAll('select[data-addedLang=true]');
+    var Levels = document.querySelectorAll('select[data-addedLevel=true]');
+    var LangValue, LevelValue;
+    var i = 0;
+    var Loop = function () {
+        if (i < Languages.length) {
+            setTimeout(function () {
+                LangValue = Languages[i].value;
+                LevelValue = Levels[i].value;
+                if (LangValue != '' && LevelValue != '' && LangValue != undefined && LevelValue != undefined) {
+                    ajax.sender_data_json_by_url_callback(Global.url, {
+                        act: 'set_teacher_lang_bylangId',
+                        teacheremailid: EmailID, languagename: LangValue, languagelevel: LevelValue
+                    }, console.log);
+                }
+
+                i++;
+                Loop();
+            }, 80);
+        }
+    };
+    Loop();
 
 };
 
@@ -403,6 +434,7 @@ Teacher.Update.Update = function () {
     Teacher.Update.BrithDetails();
     Teacher.Update.AgeGroup();
     Teacher.Update.LanguageDetails();
+    Teacher.Update.AddLanguage();
 };
 Teacher.Update.CheckResult = function (Data) {
     if (Data.data == true) {
@@ -432,4 +464,126 @@ KeyFacts.LoadKeyFact = function () {
 
 KeyFacts.createKeyFact = function (Data) {
     document.getElementById('Keyfact').innerHTML = Data.data;
+};
+
+
+/*Admin Profile*/
+Teacher.AdminProfile.ShowProfile = function () {
+    ajax.sender_data_json_by_url_callback(Global.url, {
+        act: 'get_school_profile_by_adminemailid',
+        adminemailid: GlobalFunc.userDetials.adminemailid
+    }, Teacher.AdminProfile.setData);
+};
+Teacher.AdminProfile.btn_user_profile_edit = function () {
+    var btn_edit = $('#btn_profile_edit');
+    if (btn_edit.attr('name') == 'edit') {
+        $('.psco_readonly').prop('readonly', false);
+        $('#SchoolName').prop('disabled', false);
+        $('.PSCO_country').prop('disabled', false);
+        btn_edit.html('Save');
+        btn_edit.attr('name', 'save');
+        $('#user_profile_header').html('Edit user profile');
+    } else {
+        Teacher.AdminProfile.Update();
+        $('.psco_readonly').prop('readonly', true);
+        $('#SchoolName').prop('disabled', true);
+        $('.PSCO_country').prop('disabled', true);
+        $('.PSCO_language').prop('disabled', true);
+        $('.PSCO_language_level').prop('disabled', true);
+        btn_edit.html('Edit');
+        btn_edit.attr('name', 'edit');
+        $('#user_profile_header').html('User profile');
+    }
+};
+Teacher.AdminProfile.Update = function () {
+    var adminemailid = document.getElementById('Adminemail').value;
+    var firstname = document.getElementById('Adminfirstname').value;
+    var lastname = document.getElementById('Adminlasttname').value;
+
+    var country = document.getElementById('Admincountry').value;
+    var city = document.getElementById('Admincity').value;
+    var state = document.getElementById('Adminstate').value;
+    var suburb = document.getElementById('Adminsuburb').value;
+    var postcode = document.getElementById('Adminpostcode').value;
+    var schoolid = document.getElementById('AdminSchoolID').value;
+    var SchoolName = document.getElementById('SchoolName').value;
+    ajax.sender_data_json_by_url_callback(Global.url, {
+        act: 'edit_school_profile_by_adminemailid',
+        schoolid: schoolid,
+        postcode: postcode,
+        suburb: suburb,
+        state: state,
+        city: city,
+        country: country,
+        lastname: lastname,
+        firstname: firstname,
+        adminemailid: adminemailid,
+        schoolname: SchoolName
+    })
+};
+Teacher.AdminProfile.ChangePass = function () {
+
+};
+// ____ set Admin Data in profile inputs
+Teacher.AdminProfile.setData = function (Data) {
+    Data = Data[0];
+    //______ if country is australia ---> create select Tag and fill australia School from dataValue folder
+    var schoolTD = document.getElementById('schoolNameTd');
+    schoolTD.innerHTML = '';
+    if (Data.country.toLowerCase() == 'australia') {
+        var selectTag = document.createElement('select');
+        selectTag.setAttribute('id', 'SchoolName');
+        selectTag.setAttribute('class', 'form-control');
+        selectTag.setAttribute('disabled', 'true');
+        schoolTD.appendChild(selectTag);
+        setTimeout(function () {
+            $('#SchoolName').load('../data_value/AustraliaSchool.html', function () {
+                $('#SchoolName').val(Data.schoolname);
+            });
+        }, 200);
+    } else { //if not australia ----> create input Text
+        var input = document.createElement('input');
+        input.setAttribute('class', 'psco_readonly form-control');
+        input.setAttribute('type', 'text');
+        input.setAttribute('placeholder', 'School Name');
+        input.setAttribute('readonly', 'true');
+        input.setAttribute('id', 'SchoolName');
+        input.value = Data.schoolname;
+        schoolTD.appendChild(input);
+    }
+
+    document.getElementById('Adminemail').value = Data.adminemailid;
+    document.getElementById('Adminfirstname').value = Data.firstname;
+    document.getElementById('Adminlasttname').value = Data.lastname;
+
+    document.getElementById('Admincountry').value = Data.country;
+    document.getElementById('Admincity').value = Data.city;
+    document.getElementById('Adminstate').value = Data.state;
+    document.getElementById('Adminsuburb').value = Data.suburb;
+    document.getElementById('Adminpostcode').value = Data.postcode;
+    document.getElementById('AdminSchoolID').value = Data.schoolid;
+    showModal('modal_Admin_profile');
+
+    /*    setTimeout(function () {
+
+
+     $('#frm_edit_user_age').val('30-35');
+
+     $('#edit_profile_language0').val('English');
+     $('#edit_profile_language_level0').val('advanced');
+
+     $('#edit_profile_language1').val('Greek');
+     $('#edit_profile_language_level1').val('intermediate');
+
+     $('#edit_profile_language2').val('Italian');
+     $('#edit_profile_language_level2').val('basic');
+
+     $('#profile_country_self').val('Australia');
+     $('#profile_country_Mother').val('Greece');
+     $('#profile_country_Mother_Grandfather').val('Turkey');
+     $('#profile_country_Father').val('Greece');
+     $('#profile_country_Father_Grandfather').val('Turkey');
+     $('#profile_country_Father_GrandMother').val('Greece');
+
+     }, 3000);*/
 };

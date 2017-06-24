@@ -21,40 +21,38 @@
         <div class="hidden-xs hidden-sm col-md-2">
 
             <div class="MapCountryDetails labelBlock">
-                <form method="post">
 
-                  <!--  Team Name:<select name="classnamedropdown"><option value="CITeam">CITeam</option></select>-->
+                <!--  Team Name:<select name="classnamedropdown"><option value="CITeam">CITeam</option></select>-->
 
-                    <br><br>
-                    <label>
+                <br><br>
+                <label>
                     <input type="checkbox" id="checkoall">&nbsp;All (select/unselect)<br>
-                    </label>
-                    <label>
-                    <input type="checkbox" class="checkboxes" name="formDoor[]" value="S">&nbsp;student<br>
-                    </label>
-                    <label>
-                    <input type="checkbox" class="checkboxes" name="formDoor[]" value="F">&nbsp;Father<br>
-                    </label>
-                    <label>
-                    <input type="checkbox" class="checkboxes" name="formDoor[]" value="M">&nbsp;Mother<br>
-                    </label>
-                    <label>
-                    <input type="checkbox" class="checkboxes" name="formDoor[]" value="GFFS">&nbsp;Paternal GrandFather<br>
-                    </label>
-                    <label>
-                    <input type="checkbox" class="checkboxes" name="formDoor[]" value="GMFS">&nbsp;Paternal GrandMother<br>
-                    </label>
-                    <label>
-                    <input type="checkbox" class="checkboxes" name="formDoor[]" value="GFMS">&nbsp;Maternal GrandFather<br>
-                    </label>
-                    <label>
-                    <input type="checkbox" class="checkboxes" name="formDoor[]" value="GMMS">&nbsp;Maternal GrandMother<br>
-                    </label>
+                </label>
+                <label>
+                    <input type="checkbox" class="checkboxes mapCheck" value="S">&nbsp;student<br>
+                </label>
+                <label>
+                    <input type="checkbox" class="checkboxes mapCheck" value="F">&nbsp;Father<br>
+                </label>
+                <label>
+                    <input type="checkbox" class="checkboxes mapCheck" value="M">&nbsp;Mother<br>
+                </label>
+                <label>
+                    <input type="checkbox" class="checkboxes mapCheck" value="GFFS">&nbsp;Paternal GrandFather<br>
+                </label>
+                <label>
+                    <input type="checkbox" class="checkboxes mapCheck" value="GMFS">&nbsp;Paternal GrandMother<br>
+                </label>
+                <label>
+                    <input type="checkbox" class="checkboxes mapCheck" value="GFMS">&nbsp;Maternal GrandFather<br>
+                </label>
+                <label>
+                    <input type="checkbox" class="checkboxes mapCheck" value="GMMS">&nbsp;Maternal GrandMother<br>
+                </label>
 
-                    <br>
-                    <input type="submit" id="submitval" name="submitval" value="SUBMIT">
-                </form>
-                <table id="Table" >
+                <br>
+                <input type="button" id="submitval" onclick="Map.setValue()" value="SUBMIT">
+                <table id="Table">
 
                 </table>
             </div>
@@ -68,7 +66,8 @@
 <script src="https://code.highcharts.com/mapdata/custom/world.js"></script>
 
 <script src="../js/chart.js"></script>
-
+<script src="../js/ajax.js"></script>
+<script src="js/load_pages/Map.js"></script>
 <script>
 
     function CreateMapData(data) {
@@ -90,7 +89,7 @@
             var Name = data[0][i][0];
             var numb = data[0][i][1];
             for (var c = 1; c < MapDatas[0].length; c++) {
-                if (Name.toLowerCase() == MapDatas[1][c].toLowerCase()) {
+                if (MapDatas[1][c].toLowerCase().search(Name.toLowerCase()) > -1) {
                     MapDatas[2][c] = numb;
                     break;
                 }
