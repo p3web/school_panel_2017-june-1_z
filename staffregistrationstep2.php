@@ -118,7 +118,6 @@ $combineErr="";
 				
 		  //religion
 		  $religion = test_input($_POST["religion"]);
-		   
 		   if( $religion == 'Belief/Religion'){
 				$religion = "Non Disclosed";  		
 		   }else if($religion == NULL){
@@ -134,13 +133,9 @@ $combineErr="";
 					{
 						$('#religion').css('background-color', '#ffb0b0');
 					}); </script>";
-				
-			}else{
-		   
-		   
-		   
-		   
-		   
+		  }
+		  
+		 else{
         		  $_SESSION["r"] = $religion;
         		 
         	     
@@ -155,7 +150,7 @@ $combineErr="";
         				
         				$howmanyfields++;
         			}
-        			
+        		
         			echo $capture_field_vals;
         			echo $howmanyfields;
         			//echo $_POST['lan0'];
@@ -163,6 +158,7 @@ $combineErr="";
         				echo $_POST['lan'.$i];
         				$_SESSION['lanlevel'.$i] = $_POST['lan'.$i];
         			}
+        			
         			$_SESSION['howmanylanguages'] = $howmanyfields;
         			
         			echo $_SESSION["r"];
@@ -175,9 +171,9 @@ $combineErr="";
 		
 			}
 	
-		  
 		
     }
+    
     
     
 	function test_input($data) {
@@ -209,7 +205,7 @@ function check_religion($religion){
 		mysql_close($con);
 		return $dataMatched;
   }	
-	
+  
     ?>
 
 <div id="wrap">

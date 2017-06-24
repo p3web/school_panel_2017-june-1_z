@@ -18,7 +18,7 @@ function showModal(ModalID) {
     $('#' + ModalID).modal('show');
 }
 function checkLogin(Data) {
-    if (Data.data == false) {
+    if (Data == false) {
         window.location = '/backend/login.php';
     } else {
         GlobalFunc.userDetials = Data;
@@ -27,6 +27,10 @@ function checkLogin(Data) {
          document.getElementById('City').innerText = Data.city + '/' + Data.suburb;*/
     }
 }
+<<<<<<< HEAD
+/*TEACHER TABLE*/
+var Teacher = {};
+=======
 /*TEACHER TAB*/
 function Confirm(EmailID) {
     message.Confirm('Are you sure ?!', 'Confirm Delete', Teacher.DeleteRow, EmailID);
@@ -40,6 +44,7 @@ var Teacher = {
         Result: []
     }
 };
+>>>>>>> b002a728f4dcec2aa087814e06be3fc5418d47a1
 Teacher.LoadTeacherTable = function () {
     ajax.sender_data_json_by_url_callback(Global.url, {act: 'check_login'}, checkLogin);
     ajax.sender_data_json_by_url_callback(Global.url, {act: 'get_tbl_teachers'}, Teacher.CreateTeacherTblData);
@@ -49,23 +54,21 @@ Teacher.CreateTeacherTblData = function (data) {
     for (var i = 0; i < data.length; i++) {
 
         var Rows = {};
+
         Rows['name'] = data[i].name;
         Rows['email'] = data[i].teacheremailid;
         Rows['status'] = data[i].status;
         if (data[i].status == 'active') {
-            Rows['info'] = {
-                value: '',
-                htmlTag: '<a onclick="Teacher.ViewProfile(' + "'" + data[i].teacheremailid + "'" + ')" href="#">View Profile</a>'
-            };
+            Rows['info'] = '<a href="#">View Profile</a>';
             Rows['option'] = {
                 value: '',
-                htmlTag: '<i class="glyphicon glyphicon-remove actionIcon" onclick="Confirm(' + "'" + data[i].teacheremailid + "'" + ')"></i>    <i class="glyphicon glyphicon-edit actionIcon" onclick="Teacher.Edit.Edit(' + "'" + data[i].teacheremailid + "'" + ')""></i>'
+                htmlTag: '<i class="glyphicon glyphicon-remove actionIcon" onclick="Teacher.DeleteRow(' + "'" + data[i].teacheremailid + "'" + ')"></i>    <i class="glyphicon glyphicon-edit actionIcon"></i>'
             };
         } else {
-            Rows['info'] = 'Waiting approval';
+            Rows['info'] = 'pending';
             Rows['option'] = {
                 value: '',
-                htmlTag: '<i class="glyphicon glyphicon-remove actionIcon" onclick="Confirm(' + "'" + data[i].teacheremailid + "'" + ')"></i>'
+                htmlTag: '<i class="glyphicon glyphicon-remove actionIcon" onclick="Teacher.DeleteRow(' + "'" + data[i].teacheremailid + "'" + ')"></i>'
             };
         }
         TeacherData.push(Rows);
@@ -78,6 +81,22 @@ Teacher.DeleteRow = function (TeacherEmail) {
         teacheremailid: TeacherEmail
     }, console.log);
 };
+<<<<<<< HEAD
+
+/*Classes*/
+var Classes = {};
+Classes.LoadClassesTable = function () {
+    ajax.sender_data_json_by_url_callback(url, {act: 'get_tbl_classes'}, Classes.CreateClassesTblData);
+};
+Classes.CreateClassesTblData = function (Data) {
+    var ClassesData = [];
+
+    for (var i = 0; i < Data.length; i++) {
+        var Rows = {};
+        Rows['classname'] = Data[i].classname;
+
+        ClassesData.push(Rows);
+=======
 /*view Profile*/
 Teacher.Profile.CreatePersonalDetails = function (Data) {
     Data = Data[0];
@@ -395,6 +414,10 @@ Teacher.Update.CheckResult = function (Data) {
             }
         }
         Global.ResultMessage(result);
+<<<<<<< HEAD
+>>>>>>> b002a728f4dcec2aa087814e06be3fc5418d47a1
+=======
+>>>>>>> b002a728f4dcec2aa087814e06be3fc5418d47a1
     }
 };
 
@@ -403,7 +426,15 @@ Teacher.Update.CheckResult = function (Data) {
 var KeyFacts = {};
 
 KeyFacts.LoadKeyFact = function () {
+<<<<<<< HEAD
+<<<<<<< HEAD
+    ajax.sender_data_json_by_url_callback(url , {act:'get_key_fact_json'} , KeyFacts.createKeyFact);
+=======
     ajax.sender_data_json_by_url_callback(Global.url, {act: 'get_key_fact_json'}, KeyFacts.createKeyFact);
+>>>>>>> b002a728f4dcec2aa087814e06be3fc5418d47a1
+=======
+    ajax.sender_data_json_by_url_callback(Global.url, {act: 'get_key_fact_json'}, KeyFacts.createKeyFact);
+>>>>>>> b002a728f4dcec2aa087814e06be3fc5418d47a1
 };
 
 KeyFacts.createKeyFact = function (Data) {

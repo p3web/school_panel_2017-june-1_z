@@ -196,29 +196,11 @@ input:focus{
 	padding-bottom:4%;
 }
 
-
-	  
-}
-
 @media (min-width: 768px) {
 .navbar-right {
 	margin-right: auto !important;
 }
 
-div#watermarkdiv p#watermark{
-	text-align:center !important;
-	font-size:10px !important;
+#watermark{
+	margin-bottom:15%;
 }
-
-/* @media print{ */
-	/* body{ */
-		/* visibility:hidden; */
-	/* } */
-	/* #regions_div{ */
-		/* visibility:visible; */
-	/* } */
-	/* #watermark{ */
-		/* visibility:visible; */
-	/* } */
-/* } */
-

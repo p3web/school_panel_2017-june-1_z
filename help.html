@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head><meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+    
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+	<title>Ancestry Atlas</title>
+	
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link href="https://fonts.googleapis.com/css?<br />family=Open+Sans:400,500,700,800" rel="stylesheet"> 
+	
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+    <!-- Bootstrap core CSS -->
+
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <link href="css/ie10-viewport-bug-workaround.css" rel="stylesheet">
+
+    <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
+    <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
+    <script src="scripts/ie-emulation-modes-warning.js"></script>
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Custom styles for this template -->
+    <link href="css/carousel.css" rel="stylesheet">
+	<script>
+		$(document).ready(function(){
+			$("#cop").click(function(){
+				$("#cop").css({'background-color':'#8575b6','color':'#FFF'});
+				$("#sch").css({'background-color':'transparent', 'color':'#747474'});
+				
+				$("#pricing").css('background-image', 'url(images/bg_image_princing_corporate.jpg)');
+				$("#schpricelist").attr('src','images/corporatepricelist.png');
+				$("#bulk").text("PLEASE CONTACT US FOR BULK LICENSING COSTS FOR OVER 4000 MEMBERS");
+				
+			});
+			
+			 $("#sch").click(function(){
+				$("#sch").css({'background-color':'#cc3333','color':'#FFF'});
+				$("#cop").css({'background-color':'transparent', 'color':'#747474'});
+				
+				$("#pricing").css('background-image', 'url(images/bg_image_princing_school.jpg)');
+				$("#schpricelist").attr('src','images/schoolpricelist.png');
+				$("#bulk").text("PLEASE CONTACT US FOR BULK LICENSING COSTS FOR OVER 1000 MEMBERS");
+				
+			});
+		});
+</script>
+<style>
+    
+    #myNavbar ul li .logbutton{
+    border-radius:0 !important;
+    border:none;
+    
+}
+ #myNavbar ul li .logbutton:link,visited,active{
+    border-radius:0 !important; color:#ff8a87;
+    border:none;
+    
+    background-color:#FFF;
+}
+#myNavbar ul li .logbutton:visited{
+    border-radius:0 !important; color:#ff8a87;border:none;
+    
+    background-color:#FFF !important;
+}
+ #myNavbar ul li .logbutton:hover{
+    color:#FFF;
+    background-color:#FFF;
+    border:none;
+    
+}
+#myNavbar ul li .logbutton:active{
+    border-radius:0 !important; 
+    color:#ff8a87;
+    background-color:#FFF !important;
+}
+
+#wrap .container-fluid .row #pricing .hsecondbuttonside{
+	width:13.813em;
+	height:2.125em;
+	font-family: 'Open Sans', sans-serif; 
+	font-weight:500; 
+	font-size:18px;
+	background-color:transparent;
+	color:#FFF;
+	border:#727677 1px solid;
+	margin-left:-0.4% !important;
+	
+	
+}
+.center-pills {
+    display: flex;
+    justify-content: center;
+}
+
+</style>
+  </head>
+<!-- NAVBAR
+================================================== -->
+  <body id="homepage">
+    <div class="navbar-wrapper">
+      <div class="container">
+
+            
+    <nav class="navbar navbar-inverse" style="background-color:#ff8a87;  border:none; border-radius: 0 !important; margin-bottom:0px;
+  -moz-border-radius: 0 !important;">
+  
+    <div class="navbar-header" style="margin-left:10%; ">
+      <button type="button" class="navbar-toggle" style="border-color:#FFF;" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+      <a href="index.php"><img src="images/logo.png"></a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar" >
+      <ul class="nav navbar-nav navbar-right ">
+        <li><a href="index.php">home</a></li>
+      <li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</li>
+      <li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</li>
+      <li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</li> 
+      </ul>
+      
+    </div>
+  
+</nav>
+
+
+      </div>
+    </div>
+
+
+    <!-- Carousel
+    ================================================== -->
+    <div class="empty_box">
+	 <h2 class="featurette-heading" >How to use Ancestry Atlas guide. </h2>
+	</div>
+
+    <!-- Marketing messaging and featurettes
+    ================================================== -->
+    <!-- Wrap the rest of the page in another container to center all the content. -->
+
+    <div class="container marketing">
+
+      <!-- Three columns of text below the carousel -->
+      <div class="row placeholders">
+        <div class="col-md-2 col-md-offset-1">
+          <img class="img-circle" src="images/circle-help.png" alt="Generic placeholder image" width="22%"><span id="order_number">1<span>
+          <br />
+          <br />
+          <br />
+		  <img class="img-rectangle" src="images/arrow-help.png" alt="Generic placeholder image" width="70%">
+		 	  
+         <span class="arrow-title"><h4>Administrator </h4><br /><h4>setup</h4></span>
+          <p align="left">
+		  <ul>
+			<li>A subscription is purchased to Ancestry Atlas</li>
+			<li>An administrator for the school registers using an email address</li>
+			<li>The administrator invites teachers to join the school's private Ancestry Atlas</li>
+			<li>The teachers receive an email inviting them to activate their registration and provide details of their Ancestry</li>
+		  </ul>
+		  </p>
+        </div><!-- /.col-xs-6 -->
+        <div class="col-md-2">
+          <img class="img-circle" src="images/circle-help.png" alt="Generic placeholder image" width="22%"><span id="order_number">2<span>
+          <br />
+          <br />
+          <br />
+		  <img class="img-rectangle" src="images/arrow-help.png" alt="Generic placeholder image" width="70%">
+		 	  
+         <span class="arrow-title"><h4>Ask for </h4><br /><h4> information</h4></span>
+          <p align="left">
+			<ul>
+				<li>The teacher signs in to Ancestry Atlas and enters an email address of all students they wish to invite to join their Ancestry Atlas class group</li>
+				<li>The students receive an email to activate their registration </li>
+				<li>The students individually enter their Ancestry details through a simple web form </li>
+				<li>Adding details of languages and beliefs is entirely optional and confidential</li>
+			</ul>
+		  </p>
+        </div><!-- /.col-xs-6 -->
+        <div class="col-md-2">
+          <img class="img-circle" src="images/circle-help.png" alt="Generic placeholder image" width="22%"><span id="order_number">3<span>
+          <br />
+          <br />
+          <br />
+		  <img class="img-rectangle" src="images/arrow-help.png" alt="Generic placeholder image" width="70%">
+		 	  
+         <span class="arrow-title"><h4>Make the </h4><br /><h4>infographic</h4></span>
+          <p align="left">
+			<ul>
+				<li>The Ancestry Atlas website automatically generates an infographic </li>
+				<li>Each country of the world is shaded darker commensurate with the population of the class from that location </li>
+				<li>The Infographic shows languages spoken at home and religious beliefs </li>
+				<li>An interactive table of data is available to view the data based on filters (eg: gender)</li>
+			</ul>
+		  </p>
+        </div><!-- /.col-xs-6 -->
+        <div class="col-md-2">
+          <img class="img-circle" src="images/circle-help.png" alt="Generic placeholder image" width="22%"><span id="order_number">4<span>
+          <br />
+          <br />
+          <br />
+		  <img class="img-rectangle" src="images/arrow-help.png" alt="Generic placeholder image" width="70%">
+		 	  
+         <span class="arrow-title"><h4>Share your </h4><br /><h4>Infographic</h4></span>
+          <p align="left">
+			<ul>
+				<li>The class discusses how they would like to share these maps (if at all) </li>
+				<li>A digital version can be shared using Social Media </li>
+				<li>Printouts of the image can be distributed </li>
+				<li>High Resolution for large size printing can be ordered online</li>
+			</ul>
+		  </p>
+        </div><!-- /.col-xs-6 -->
+        <div class="col-md-2">
+          <img class="img-circle" src="images/circle-help.png" alt="Generic placeholder image" width="22%"><span id="order_number">5<span>
+          <br />
+          <br />
+          <br />
+		  <img class="img-rectangle" src="images/arrow-help.png" alt="Generic placeholder image" width="70%">
+		 	  
+         <span class="arrow-title"><h4>Follow up </h4><br /><h4>activities</h4></span>
+          <p align="left">
+		  	<ul>			
+				<li>The infographic is a conversation prompt for Intercultural understanding </li>
+				<li>Compare your image to an international school through a teleconference tool </li>
+				<li>Ancestry Atlas provides Lesson Plans as part of the subscription fee. For example, a Secondary class can use this activity as part of a lesson on Country borders versus 'Nations' such as First Nations original territories, Tribal or Ethnic groups (eg. Kurdish)
+			</ul>	
+		  </p>
+        </div><!-- /.col-xs-6 -->
+      </div><!-- /.row -->
+
+
+      <!-- START THE FEATURETTES -->
+
+      <hr class="featurette-divider">
+
+      <div class="row featurette">
+        <div class="empty_box">
+
+          <h2 class="featurette-heading">FAQ for Ancestry Atlas:</h2><br /><br />
+          <p class="lead">These are the common FAQ's for visitors to Ancestry Atlas. For further enquiries, please use the Contact Us link at the bottom of this page. We are continually improving the Ancestry Atlas website so would be happy to hear from you.<br /><br />
+1. What if I don't know where my parents or their parents were born?<br />
+If you are unable to find information about your ancestry, please select the Not Applicable option from the drop down list. Alternatively, there are a number of websites you may be able use to help you learn about your heritage. Try https://www.ancestry.com/family-tree/ Ancestry Atlas is a conversation starter, and those conversations are not always simple and easy. There is a form available for print that can be taken home to encourage family conversations, eform. We are developing curriculum guides to guide teachers in having these conversations in a culturally sensitive manner. Within fractured communities these questions can open up wounds, so please be gentle.<br /><br />
+2. What if I don't want to reveal my beliefs?<br />
+Ancestry Atlas follows strict privacy and security policies to protect the data of an individual. If you don't want to reveal your beliefs please select the Not Applicable option from the drop down list. Please read our privacy policy for more information.<br /><br />
+3. What if my country, language or belief is not represented?<br />
+The list of countries in the Ancestry Atlas database has been derived from the list of countries recognized by the UN. If you think the name of a country has been accidentally excluded, please let us know here Contact here.<br /><br />
+4. What about disputed territories?<br /> Ancestry Atlas relies on a standard list of countries recognized by the UN. We admit that there are a number of territories around the world that are under dispute and apologize that we have not discovered a way to accommodate them at this time. If you disagree with the country border location please let us know, select an approximation or select Not Applicable from the drop down list.<br /><br />
+5. What about disputed territories?<br />
+Ancestry Atlas relies on a standard list of countries recognized by the UN. We admit that there are a number of territories around the world that are under dispute and apologize that we have not discovered a way to accommodate them at this time. If you disagree with the country border location please let us know, select an approximation or select Not Applicable from the drop down list.<br /><br />
+6. What if twins or siblings are in the same class?<br />
+They should enter the information as standard so their individual contribution is recognized.<br /><br />
+7. How can I introduce Ancestry Atlas to my friends?<br />
+By clicking on the "Share with Friends" option from the website an individual can send the emailinvitation to friends about Ancestry Atlas.<br /><br />
+8. How do you preserve the privacy of our information?<br />
+Ancestry Atlas uses privacy and security policies to protect the data of an individual. Providing privacy to the user information is of the highest priority of Ancestry Atlas. Each person can use a number/code/ alias (fake name) if preferred as the final output does not require personal
+identification. See our privacy policy for our commitment to respecting your rights. <br /><br />
+9. How can I access the cultural diversity maps of previous years?<br />
+Choose any one of the years from the drop down list in the maps section to access the cultural diversity map of previous year. <br /><br />
+10. What if a country, empire or state does not exist anymore?<br /> (Such as the Ottoman Empire,
+Sudan, and Yugoslavia etc.)<br />
+As this is a visual mapping tool please use the current country borders and your entry will be reflected accurately. Ancestry Atlas uses a list of countries recognized by the UN. Country borders have shifted many times throughout history across the world. If you have any suggestions for how we can better accommodate and visually represent this, please don't hesitate to contact us Contact here.<br /><br />
+11. What if I haven't received activation link to E-mail?<br />
+Please check the spam and junk folders in your E-mail. If you haven't receive any activation link within 10 minutes please don’t hesitate to contact us Contact here</p>
+        </div>
+        <div class="col-md-5">
+          <!--<img class="featurette-image img-responsive center-block" data-src="holder.js/500x500/auto" alt="Generic placeholder image">-->
+        </div>
+      </div>
+
+  <!-- FOOTER -->
+            <div id="footer" style="font-family: 'Open Sans', sans-serif; font-weight:400; ">
+      <div class="container" >
+        <p class="text-muted">
+            <span style="float:left; color:#FFF;"> &copy; <?<br />php echo date('Y');?<br />> CULTURAL INFUSION OR ITS AFFILIATED COMPANIES. ALL RIGHTS RESERVED.</span>
+             <span style="font-family: 'Open Sans', sans-serif; font-weight:400; color:#FFF; ">ANCESTRY ATLAS IS POWERED BY<img src="images/culturalinfusionlogo.png" onclick="window.open('http://culturalinfusion.org.au/', '_blank');" width = "9.5%" align="middle"  style="cursor:pointer; margin-top:-1.5%;"></span>
+            <span style="float:right; color:#FFF;">
+            	<a style="color:#FFF;" target="_blank" href="HELP.pdf" title="HELP">HELP</a> | 
+            	<a style="color:#FFF;" href="privacy.php" title="PRIVACY">PRIVACY</a> |
+                <a style="color:#FFF;" href="contactus.php" title="CONTACT US">CONTACT US</a>  
+                
+            </span>
+        </p>
+        
+      </div>
+ </div>
+
+
+    </div><!-- /.container -->
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <!-- Just to make our placeholder images work. Don't actually copy the next line! -->
+    <script src="scripts/holder.min.js"></script>
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="scripts/ie10-viewport-bug-workaround.js"></script>
+  </body>
+</html>

@@ -1,0 +1,212 @@
+@charset "utf-8";
+/* CSS Document */
+
+
+@font-face {	
+	font-family:'MuseoSans_300';
+    src:url('../fonts/MuseoSans_300.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+	
+}
+
+
+html,
+body {
+  height: 100%;
+  background-color:#f9f9f9;
+  font-family:MuseoSans_300;
+  /* The html and body elements cannot have any padding or margin. */
+}
+
+input:focus{
+	background-color:#E4F3F2;
+	border:none;
+}
+
+
+
+/* Wrapper for page content to push down footer */
+#wrap {
+  min-height: 100%;
+  height: auto;
+  /* Negative indent footer by its height */
+  margin: 0 auto -60px;
+  /* Pad bottom by footer height */
+  padding: 0 0 60px;
+}
+
+/* Set the fixed height of the footer here */
+#footer {
+  height: 60px;
+  
+  font-size:11px; 
+  text-align:center; 
+  padding-top:20px;
+}
+
+
+	
+
+/*---header----*/
+.header{
+	background-color:#ff9999 !important; 
+	height:5.325em;
+}
+
+
+/*----index----*/
+.welcome{
+	
+}
+ 
+.mainlogo{
+	
+	padding:0.625em;
+	width:80%;
+	min-height:12em;
+	min-width:12em;
+	
+}   
+
+.indexbuttons{
+	width:55% !important; 
+	height:2.125em !important;
+	border:#000 solid 1px; 
+	background:none;
+	color:#000;
+	margin-top:1.125em;
+}   
+
+
+.indexbuttons:hover{
+	background-color:#c7e2b5;
+	
+	}
+	
+	
+
+.buttonalignmentschool{
+	padding-top:5%;
+	
+}
+.buttonalignmentschool a{
+	text-decoration:none;
+	}
+
+.buttonalignmentorg{
+	
+	padding-top:5%;
+}
+.buttonalignmentorg a{
+	text-decoration:none;
+	}
+  
+.footer{
+	margin:20% 0% 2% 0%;
+	
+	}
+
+	
+
+	
+	/*------------LOGIN------------------*/	
+	
+
+
+.logcanvas{
+	margin:5.0em 0px;	
+}
+
+.loglogo{
+	margin:3%;
+}	
+
+.inputfield{
+	width:90%; 
+	margin-left:5%;
+	margin-bottom:1.125em; 
+	-webkit-border-radius: 0 !important;
+    -moz-border-radius: 0 !important;
+    border-radius: 0 !important; 
+	background-color:#bfe2e0; 
+	height:3.250em; 
+	border:none;
+	color:#000;
+}
+
+.loginbutton{
+	width:20%; 
+	-webkit-border-radius: 0 !important;
+    -moz-border-radius: 0 !important;
+    border-radius: 0 !important; 
+	background-color:#a3c366; 
+	height:1.5em; 
+	border:none;
+	color:#FFF;
+	padding-bottom: 1.5em;
+}
+.loginbutton:hover{
+	background-color:#759438;
+	color:#FFF;
+}
+
+.logforget{
+	margin:1% 0% 2% 0% !important;
+	
+	}
+	
+.logforget a{
+	text-decoration:underline;
+	color:#F00;
+	}
+
+.btn {
+    font-size: 1.1 vw !important;
+}	
+	
+/*-------------ADMIN PANEL -----------------*/
+
+#adminpanel{ font:MuseoSans_300;}
+	
+	
+	
+/*----media queries for resposiveness-----*/
+@media screen and (max-width: 767px) {
+.navbar-right {
+	margin-right: auto !important;
+}
+.welcome {
+   	padding:2em;
+     }
+.mainlogo{
+	padding:0.625em;
+	width:40%;
+}  
+
+
+.buttonalignmentschool{
+	text-align:center;
+	padding-top:2%;
+	padding-bottom:4%;
+	}
+
+.buttonalignmentorg{
+	text-align:center;
+	padding-top:2%;
+	padding-bottom:4%;
+}
+
+
+	  
+}
+
+@media (min-width: 768px) {
+.navbar-right {
+	margin-right: auto !important;
+}
+
+#watermark {
+  color: #000000;
+  font-size: 20px;
+}

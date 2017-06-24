@@ -170,27 +170,32 @@ class PSCO_func
             $class="team";
             $staff = "staff";
 			//SELECT allStaff, count(born.staffCountry) as numberStaffCountry, (100*count(born.staffCountry))/allstaff as percentStaff, sum(born.father+born.mother)/2 as parents, (100*(sum(born.father+born.mother)/2)/allstaff) as percentParents, sum(born.grandfather1+born.grandmother1+born.grandfather2+born.grandmother2)/4 as gparents, (100*(sum(born.grandfather1+born.grandmother1+born.grandfather2+born.grandmother2)/4)/(allStaff)) as percentGParents FROM born where (orgid = 1) and deptname = 'Database' and teamname = 'CITeam'
-            $A= data::selects_col('`born` ','allStaff , staffCountry ,  count(born.staffCountry) as numberStaffCountry, (100*count(born.staffCountry))/allstaff as percentStaff, sum(born.father+born.mother)/2 as parents, (100*(sum(born.father+born.mother)/2)/allstaff) as percentParents, sum(born.grandfather1+born.grandmother1+born.grandfather2+born.grandmother2)/4 as gparents, (100*(sum(born.grandfather1+born.grandmother1+born.grandfather2+born.grandmother2)/4)/(allStaff)) as percentGParents', 'orgid="'.$id.'" AND teamname="'.$name.'" AND deptname="'.$deptname.'"');
-		//4.19 % of staff are born in "First Country"
-        //Only 14.51 % of staff have both parents born in "First country 
-        //12.09 % of staff in this community are from "First Country" for the last two generations ( All parents and grandparents are born in "first country "  )
-       $result[0] = number_format($A[0]['percentStaff'], 2, '.', ',' )."%"." of $staff are born in ".$A[0]['staffCountry'].".";
-       $result[1] = "Only ".number_format($A[0]['percentParents'], 0, '.', ',' )."%"." of $staff have both parents born in  ".$A[0]['staffCountry'].".";
-       $result[2] = number_format($A[0]['percentGParents'], 2, '.', ',' )."%"." of $staff in this community are from ".$A[0]['staffCountry']." for the last two generations ( All parents and grandparents are born in ".$A[0]['staffCountry'].").";
+            $A= data::selects_col('`born` ','allStaff , staffCountry as Country,  count(born.staffCountry) as numberStaffCountry, (100*count(born.staffCountry))/allstaff as percent, sum(born.father+born.mother)/2 as parents, (100*(sum(born.father+born.mother)/2)/allstaff) as percentParents, sum(born.grandfather1+born.grandmother1+born.grandfather2+born.grandmother2)/4 as gparents, (100*(sum(born.grandfather1+born.grandmother1+born.grandfather2+born.grandmother2)/4)/(allStaff)) as percentGParents', 'orgid="'.$id.'" AND teamname="'.$name.'" AND deptname="'.$deptname.'"');
+            //4.19 % of staff are born in "First Country"
+            //Only 14.51 % of staff have both parents born in "First country
+            //12.09 % of staff in this community are from "First Country" for the last two generations ( All parents and grandparents are born in "first country "  )
+            //$result[0] = number_format($A[0]['percentStaff'], 2, '.', ',' )."%"." of $staff are born in ".$A[0]['staffCountry'].".";
+            //$result[1] = "Only ".number_format($A[0]['percentParents'], 0, '.', ',' )."%"." of $staff have both parents born in  ".$A[0]['staffCountry'].".";
+            //$result[2] = number_format($A[0]['percentGParents'], 2, '.', ',' )."%"." of $staff in this community are from ".$A[0]['staffCountry']." for the last two generations ( All parents and grandparents are born in ".$A[0]['staffCountry'].").";
 
         }else{
             $class="class";
             $staff = "student";
             //SELECT b.allStudent, count(b.studentCountry) as numberStudentCountry, (100*count(b.studentCountry))/allStudent as percentStudent, sum(b.father+b.mother)/2 as parents, (100*(sum(b.father+b.mother)/2)/allStudent) as percentParents, sum(b.grandfather1+b.grandmother1+b.grandfather2+b.grandmother2)/4  as gparents, (100*(sum(b.grandfather1+b.grandmother1+b.grandfather2+b.grandmother2)/4)/(allStudent)) as percentGParents  FROM bornSchool b where (b.schoolid = 14) and b.classname = 'S2'
-			$A= data::selects_col('`bornSchool` b','b.allStudent, studentCountry, count(b.studentCountry) as numberStudentCountry, (100*count(b.studentCountry))/allStudent as percentStudent, sum(b.father+b.mother)/2 as parents, (100*(sum(b.father+b.mother)/2)/allStudent) as percentParents, sum(b.grandfather1+b.grandmother1+b.grandfather2+b.grandmother2)/4  as gparents, (100*(sum(b.grandfather1+b.grandmother1+b.grandfather2+b.grandmother2)/4)/(allStudent)) as percentGParents', 'schoolid="'.$id.'" AND classname="'.$name.'"');
-		//4.19 % of student are born in "First Country"
-        //Only 14.51 % of staff have both parents born in "First country 
-        //12.09 % of staff in this community are from "First Country" for the last two generations ( All parents and grandparents are born in "first country "  )
-		$result[0]= number_format($A[0]['percentStudent'], 2, '.', ',' )."%"." of $staff are born in ".$A[0]['studentCountry'].".";
-		$result[1]= "Only ".number_format($A[0]['percentParents'], 0, '.', ',' )."%"." of $staff have both parents born in  ".$A[0]['studentCountry'].".";
-		$result[2]= number_format($A[0]['percentGParents'], 2, '.', ',' )."%"." of $staff in this community are from ".$A[0]['staffCountry']." for the last two generations ( All parents and grandparents are born in ".$A[0]['studentCountry'].").";
-       
+            //SELECT b.allStudent, count(b.studentCountry) as numberStudentCountry, (100*count(b.studentCountry))/allStudent as percentStudent, sum(b.father+b.mother)/2 as parents, (100*(sum(b.father+b.mother)/2)/allStudent) as percentParents, sum(b.grandfather1+b.grandmother1+b.grandfather2+b.grandmother2)/4  as gparents, (100*(sum(b.grandfather1+b.grandmother1+b.grandfather2+b.grandmother2)/4)/(allStudent)) as percentGParents  FROM bornSchool b where (b.schoolid = 14) and b.classname = 'S2'
+            $A= data::selects_col('`bornSchool`','allStudent, studentCountry as Country, count(studentCountry) as numberStudentCountry, (100*count(studentCountry))/allStudent as percent, sum(father+mother)/2 as parents, (100*(sum(father+mother)/2)/allStudent) as percentParents, sum(grandfather1+grandmother1+grandfather2+grandmother2)/4  as gparents, (100*(sum(grandfather1+grandmother1+grandfather2+grandmother2)/4)/(allStudent)) as percentGParents', 'schoolid="'.$id.'" AND classname="'.$name.'"');
+            //4.19 % of student are born in "First Country"
+            //Only 14.51 % of staff have both parents born in "First country
+            //12.09 % of staff in this community are from "First Country" for the last two generations ( All parents and grandparents are born in "first country "  )
+            //$result[0]= number_format($A[0]['percentStudent'], 2, '.', ',' ).$A[0]['percentStudent']."%"." of $staff are born in ".$A[0]['studentCountry'].".";
+            //$result[1]= "Only ".number_format($A[0]['percentStudent'], 0, '.', ',' )."%"." of $staff have both parents born in  ".$A[0]['studentCountry'].".";
+            //$result[2]= number_format($A[0]['percentStudent'], 2, '.', ',' )."%"." of $staff in this community are from ".$A[0]['studentCountry']." for the last two generations ( All parents and grandparents are born in ".$A[0]['studentCountry'].").";
+
         }
+        $result[0]= number_format($A[0]['percent'], 2, '.', ',' )."% of $staff are born in ".$A[0]['Country'].".";
+        $result[1]= "Only ".number_format($A[0]['percent'], 0, '.', ',' )."%"." of $staff have both parents born in  ".$A[0]['Country'].".";
+        $result[2]= number_format($A[0]['percent'], 2, '.', ',' )."%"." of $staff in this community are from ".$A[0]['Country']." for the last two generations ( All parents and grandparents are born in ".$A[0]['Country'].").";
+
         return $result ;
 
     }
@@ -379,7 +384,54 @@ class PSCO_func
         return $result ;
 
     }
-	
+	public static function age_language_stats ($id ,$name , $deptname = false){
+        //	People between 20-40 years in this team, know A languages in average, while people above 40 know B languages in average
+
+		
+        if($deptname != false){
+            $class="team";
+            $staff = "staff";
+			//SELECT (sum(age20.langcount)/count(age20.user_id)) as avglanguageage20to40,(sum(age60.langcount)/count(age60.user_id)) as avglanguageage40to60  FROM `age2040` as age20, age4060 as age60 where age20.teamname = 'CITeam' and age20.orgid = 1 and age20.deptname = 'Database'
+
+            $A= data::selects_col('`age2040` as age20, age4060 as age60','(sum(age20.langcount)/count(age20.user_id)) as avglanguageage20to40,(sum(age60.langcount)/count(age60.user_id)) as avglanguageage40to60', 'age20.orgid ="'.$id.'" AND age20.teamname="'.$name.'" AND age20.deptname="'.$deptname.'"');
+              
+            
+        }else{
+            $class="class";
+            $staff = "student";
+ 
+
+        }
+        //		There are A staff in the team, of which B are still awaiting to accept the invitation
+        $result = "People between 20-40 years in this $class, know ".number_format($A[0]['avglanguageage20to40'], 2, '.', ',' )." languages in average, while people above 40 know ".number_format($A[0]['avglanguageage40to60'], 2, '.', ',' )." languages in average.";
+        return $result ;
+
+    }
+	public static function age_belief_stats ($id ,$name , $deptname = false){
+        // A% of people in this team who are below 40 are non-believers  ( No religion/Atheist/Agnostic/Humanist), while B% of staff over 40 consider themselves as non-believers
+
+		
+        if($deptname != false){
+            $class="team";
+            $staff = "staff";
+			//1.	SELECT count(age2040.user_id) as totalstaff, ( select count(*)  FROM `age2040` WHERE religion in ('Atheist','No religion','Agnostic','Humanist')) as count , (select (count*100)/count(age2040.user_id)) as below40 from age2040 where teamname = 'CITeam' and orgid = 1 and deptname = 'Database'
+			//2.	SELECT count(age4060.user_id) as totalstaff, ( select count(*)  FROM `age4060` WHERE religion in ('Atheist','No religion','Agnostic','Humanist')) as count , (select (count*100)/count(age4060.user_id)) as above40 from age4060 where teamname = 'CITeam' and orgid = 1 and deptname = 'Database'
+
+            $A= data::selects_col('`age2040`','count(age2040.user_id) as totalstaff, ( select count(*)', 'religion in (\'Atheist\',\'No religion\',\'Agnostic\',\'Humanist\')) as count , (select (count*100)/count(age2040.user_id)) as below40 from age2040 where orgid ="'.$id.'" AND teamname="'.$name.'" AND deptname="'.$deptname.'"');
+            $B= data::selects_col('`age4060`','count(age4060.user_id) as totalstaff, ( select count(*)  FROM `age4060` WHERE religion in (\'Atheist\',\'No religion\',\'Agnostic\',\'Humanist\')) as count , (select (count*100)/count(age4060.user_id)) as above40', 'orgid ="'.$id.'" AND teamname="'.$name.'" AND deptname="'.$deptname.'"');
+              
+            
+        }else{
+            $class="class";
+            $staff = "student";
+ 
+
+        }
+        // A% of people in this team who are below 40 are non-believers  ( No religion/Atheist/Agnostic/Humanist), while B% of staff over 40 consider themselves as non-believers
+        $result = number_format($A[0]['below40'], 2, '.', ',' )."% of people in this $class who are below 40 are non-believers ( No religion/Atheist/Agnostic/Humanist), while ".number_format($B[0]['above40'], 2, '.', ',' )."% of $class over 40 consider themselves as non-believers.";
+        return $result ;
+
+    }
     public static function get_lang_count_all_male_fmale ($orgId ,$teamName , $deptName , $mode = 'a'){
         //  How many number  of students/staff are not willing to revile their belief.
 

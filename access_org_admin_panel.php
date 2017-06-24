@@ -7,3 +7,10 @@
  */
 
 require_once 'PSCO_data.php';
+
+
+class access_org_admin_panel
+{
+
+
+}
