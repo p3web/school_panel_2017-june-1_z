@@ -287,9 +287,27 @@ class data
 		//return  mysql_query($con,"DELETE FROM $table WHERE $where");
 
 	}
-	public static function execute_non_qury()
+	public static function execute_non_qury($cmd)
 	{
+		$con=self::connection_open();
 
+
+		//echo $cmd ; exit;
+		try {
+
+			$stmt = $con->prepare($cmd);
+			$stmt->execute();
+			$result = $stmt->setFetchMode(PDO::FETCH_ASSOC);
+			$r=$stmt->fetchAll();
+
+			self::connection_close();
+			return $r;
+
+		}
+
+		catch(PDOException $e) {
+			return $row= "Error: " . $e->getMessage();
+		}
 	}
 	public static function execute_reader()
 	{

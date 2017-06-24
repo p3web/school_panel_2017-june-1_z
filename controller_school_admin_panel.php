@@ -64,6 +64,23 @@ if (isset($_SESSION['emailid']) && $_SESSION['emailid'] != '' ) {
                 controller_main_function::send_result($result);
                 break;
 
+            case 'get_school_profile_by_adminemailid':
+                $result = access_school_admin_panel::get_school_profile_by_adminemailid($_SESSION['emailid']);
+                controller_main_function::send_result($result);
+                break;
+
+            case 'edit_school_profile_by_adminemailid':
+                //($schoolid,$schoolname,$adminemailid,$firstname,$lastname,$country,$state,$city,$suburb,$postcode)
+                $valid_data = controller_main_function::check_validation(array("schoolid","schoolname","adminemailid","firstname","lastname","country","state","city","suburb","postcode"));
+                if (!isset($valid_data['is_valid']) || $valid_data['is_valid'] == false) {
+                    controller_main_function::send_msg(lang::$invalid_data, lang::$error);
+                }
+                access_school_admin_panel::edit_school_profile_by_adminemailid($_REQUEST["schoolid"],$_REQUEST["schoolname"],$_REQUEST["adminemailid"],$_REQUEST["firstname"],$_REQUEST["lastname"],$_REQUEST["country"],$_REQUEST["state"],$_REQUEST["city"],$_REQUEST["suburb"],$_REQUEST["postcode"]);
+                //controller_main_function::send_msg(lang::$success, lang::$message);
+                $result = array('data'=> true);
+                controller_main_function::send_result($result);
+                break;
+
             case 'get_tbl_teachers':
                 $result = access_school_admin_panel::get_teacher_by_schoolId($_SESSION['user']['schoolid']);
                 controller_main_function::send_result($result);
@@ -114,15 +131,6 @@ if (isset($_SESSION['emailid']) && $_SESSION['emailid'] != '' ) {
                 controller_main_function::send_msg(lang::$success, lang::$message);
                 break;
 
-            case 'delete_teacher_lang_by_langID':
-                $valid_data = controller_main_function::check_validation(array("id"));
-                if (!isset($valid_data['is_valid']) || $valid_data['is_valid'] == false) {
-                    controller_main_function::send_msg(lang::$invalid_data, lang::$error);
-                }
-                access_school_admin_panel::delete_teacher_lang_by_langID($_REQUEST["id"]);
-                controller_main_function::send_msg(lang::$success, lang::$message);
-                break;
-
             case 'edit_teacher_by_teacherEmailId':
                 $valid_data = controller_main_function::check_validation(array("teacheremailid","firstname","lastname","gender","religion"));
                 if (!isset($valid_data['is_valid']) || $valid_data['is_valid'] == false) {
@@ -167,8 +175,31 @@ if (isset($_SESSION['emailid']) && $_SESSION['emailid'] != '' ) {
                 controller_main_function::send_result($result);
                 break;
 
+            case 'set_teacher_lang_bylangId':
+                $valid_data = controller_main_function::check_validation(array("teacherEmailId","languagename","languagelevel"));
+                if (!isset($valid_data['is_valid']) || $valid_data['is_valid'] == false) {
+                    controller_main_function::send_msg(lang::$invalid_data, lang::$error);
+                }
+                access_school_admin_panel::set_teacher_lang_bylangId($_REQUEST["teacherEmailId"],$_REQUEST["languagename"],$_REQUEST["languagelevel"]);
+                //controller_main_function::send_msg(lang::$success, lang::$message);
+                $result = array('data'=> true);
+                controller_main_function::send_result($result);
+                break;
+
             case 'get_tbl_classes':
                 $result = access_school_admin_panel::get_class_by_schoolId($_SESSION['user']['schoolid']);
+                controller_main_function::send_result($result);
+                break;
+
+            case 'set_class_by_schoolId':
+                //set_class_by_schoolId($schoolId, $name)
+                $valid_data = controller_main_function::check_validation(array("name"));
+                if (!isset($valid_data['is_valid']) || $valid_data['is_valid'] == false) {
+                    controller_main_function::send_msg(lang::$invalid_data, lang::$error);
+                }
+                access_school_admin_panel::set_class_by_schoolId($_SESSION['user']['schoolid'],$_REQUEST["name"]);
+                //controller_main_function::send_msg(lang::$success, lang::$message);
+                $result = array('data'=> true);
                 controller_main_function::send_result($result);
                 break;
 
@@ -203,6 +234,7 @@ if (isset($_SESSION['emailid']) && $_SESSION['emailid'] != '' ) {
                 $result = access_school_admin_panel::get_teacher_age_group_by_teacherEmailId($_REQUEST["teacheremailid"]);
                 controller_main_function::send_result($result);
                 break;
+
             case 'edit_teacher_age_group_by_id':
                 $valid_data = controller_main_function::check_validation(array("id","age"));
                 if (!isset($valid_data['is_valid']) || $valid_data['is_valid'] == false) {
@@ -215,6 +247,10 @@ if (isset($_SESSION['emailid']) && $_SESSION['emailid'] != '' ) {
 
                 break;
 
+            case 'get_map':
+                $result = access_school_admin_panel:: get_map($_SESSION['user']['schoolid'] ,$_POST['formDoor'] );
+                controller_main_function::send_result($result);
+                break;
         }
 
     } else {

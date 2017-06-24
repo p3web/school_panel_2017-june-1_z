@@ -15,6 +15,13 @@ if ( isset( $_GET['out'] ) && $_GET['out'] ) {
       "Quantity");
 
 	}
+	elseif ($_GET['out'] === "STCT"){
+		$csvinputfile = "studentcount.csv";
+		$headerrow = array("Student",
+
+      "Quantity");
+
+	}
 	elseif ($_GET['out'] === "TRMDO"){
 		$csvinputfile = "teacherregionmapdataout.csv";
 		$headerrow = array("Region",
@@ -73,7 +80,7 @@ while(! feof($file))
 fclose($file);
 
 $metacontent = array(
-		array(['School Name', 'City'],$data_from_file[1])
+		array(['Name', 'Address'],$data_from_file[1])
 		);
 unset($data_from_file[1]);
 $data_from_file= array_values($data_from_file);

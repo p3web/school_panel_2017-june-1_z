@@ -1041,8 +1041,15 @@ function test_input($data)
                                             $unionAllOption = 0;
                                             //starting query
                                             $querytest = "";
-
-
+											echo "Sort by:";
+											echo '<select name="birthplace" style="padding:0.3em;" >';
+											while ($rowp = mysql_fetch_array($resultp)) {
+												$selected = ($rowp['birthplace'] == $currentClassName) ? 'selected="selected"' : '';
+												echo '<option value="' . $rowp['birthplace'] . '"' . $selected . ' >' . $rowp['teamname'] . '</option>';
+												//$teamName = $rowp['teamname'];
+											}
+											echo '</select>';// Close dropdown box
+									
                                             if (!empty($_POST['formDoor'])) {
                                                 $querytest .= "select x , COUNT( * )  from(";
                                                 $aDoor = $_POST['formDoor'];
@@ -1105,7 +1112,9 @@ function test_input($data)
                                                 $querytest = "select x , COUNT( * )  from( select `staffbirthplace` as x from staffbirthdetails where staffemailid IN(SELECT staffemailid FROM staff where orgid='" . $orgId . "'  AND deptname='" . $deptName . "' AND teamname='" . $teamName . "') ) as temptable group by x";
                                             }
 
+											
                                             $result = mysql_query($querytest);
+											
                                             while ($row = mysql_fetch_assoc($result)) {
                                                 echo "<b>";
                                                 echo $row['x'];

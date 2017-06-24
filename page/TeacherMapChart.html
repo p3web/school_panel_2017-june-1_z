@@ -34,12 +34,20 @@
             <div class="MapDetails">
                 <div>
                     <strong>
+<<<<<<< HEAD
                         <p id="SchoolTitle"><!--School / Organisation name--></p>
                         <p id="school"></p>
                         <p id="addressTitle"><!--Address--></p>
                         <p id="address"></p>
                         <p id="bottomTitle1"><!--State / Country / Year--></p>
                         <p id="bottom1"></p>
+=======
+                        <p>School / Organisation name</p>
+                        <p id="school"></p>
+                        <p>Address</p>
+                        <p id="address"></p>
+                        <p>State / Country / Year</p>
+>>>>>>> aef1755e47a99604f69700ecdc90fbd94e63981d
                     </strong>
                     <p id="bottomTitle2"><!--Number of people in Total--></p>
                     <p id="bottom2"></p>
@@ -114,11 +122,18 @@
     function sendActions() {
         ajax.sender_data_callback({out: 'TRMDO'}, CreateMapData);
         ajax.sender_data_callback({out: 'TRO'}, CreateBarData);
+<<<<<<< HEAD
         ajax.sender_data_callback({out:'TRO' , metadata:'1'} , CreateMapdetails);
         ajax.sender_data_callback({out:'STCT'} , CreateMapBottomDetails);
+=======
+        ajax.sender_data_callback({out:'TRO' , metadata:'1'} , CreateMapdetails)
+>>>>>>> aef1755e47a99604f69700ecdc90fbd94e63981d
     }
 
-
+    function CreateMapdetails(data) {
+        document.getElementById('school').innerText = data[0][1][0];
+        document.getElementById('address').innerText = data[0][1][1];
+    }
     function CreateMapData(data) {
         // _____ for Map
         var MapDatas = [
@@ -172,7 +187,11 @@
 
 
     }
+<<<<<<< HEAD
 
+=======
+    ;
+>>>>>>> aef1755e47a99604f69700ecdc90fbd94e63981d
     CreateIFRAME('TeacherMapChartPrint.html');
 </script>
 </body>
