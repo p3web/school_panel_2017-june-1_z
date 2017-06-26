@@ -88,7 +88,7 @@ function makecsv($data, $csvfilename, $scriptrun = null)
     fclose($file);
     if ($scriptrun) {
         echo "<script type='text/javascript'>
-				location.replace($csvfilename);
+				try{location.replace($csvfilename);}catch (e){}
 				</script>";
     }
 
@@ -110,6 +110,10 @@ function makecsv($data, $csvfilename, $scriptrun = null)
     <script src="https://cdn.datatables.net/1.10.13/js/jquery.dataTables.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <script src="https://cdn.datatables.net/1.10.13/js/dataTables.bootstrap.min.js"></script>
+    <!--sweet alert-->
+    <link href="page/js/sweetalert/sweetalert2.css" rel="stylesheet"/>
+    <script src="page/js/sweetalert/sweetalert2.js"></script>
+    <script src="page/js/sweetalert/msg.js"></script>
 
     <!--
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
@@ -122,6 +126,11 @@ function makecsv($data, $csvfilename, $scriptrun = null)
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <script src="https://cdn.datatables.net/1.10.13/js/dataTables.bootstrap.min.js"></script>
     -->
+
+    <script type="text/javascript">
+        window.adminid ='<?php echo $adminid; ?>';
+    </script>
+
 
     <link rel="stylesheet" type="text/css" href="css/style.css">
 
@@ -139,6 +148,8 @@ function makecsv($data, $csvfilename, $scriptrun = null)
     <script src="https://code.highcharts.com/modules/drilldown.js"></script>
 
     <script src="page/js/chart.js"></script>
+
+    <script src="page/js/TeacherAdmin.js"></script>
 
     <!--Jquery function to autocomplete country name -->
     <script>
@@ -505,8 +516,8 @@ function makecsv($data, $csvfilename, $scriptrun = null)
             }
             makecsv($output, 'teacherlangout.csv', false);
 
-            $femalecount = count(PSCO_func::get_lang_count_all_male_fmale($orgId, $teamName, 'f'));
-            $malecount = count(PSCO_func::get_lang_count_all_male_fmale($orgId, $teamName, 'm'));
+            $femalecount = count(PSCO_func::get_lang_count_all_male_fmale($schoolId, $className, 'f'));
+            $malecount = count(PSCO_func::get_lang_count_all_male_fmale($schoolId, $className, 'm'));
             $totalcount = $femalecount + $malecount;
             $temp = array();
             $temp = array(
@@ -600,7 +611,7 @@ function test_input($data)
                 <div class="col-sm-12">
                     <!--                    <div class="col-sm-6">
                         <h2>Welcome to your Ancestry Atlas</h2>
-                        <h5>Teacher -> &nbsp;<b><?php /*echo $adminName; */?></b></h5>
+                        <h5>Teacher -> &nbsp;<b><?php /*echo $adminName; */ ?></b></h5>
                         <!--
                         <p style="margin-top:1.5em;">As a teacher, you can now invite your students to register for Ancestry Atlas. <br>
 
@@ -610,8 +621,8 @@ function test_input($data)
                     <!--       </div>
 
                     <div class="col-sm-6 text-right">
-                        <h2><?php /*echo $schoolName; */?></h2>
-                        <h5><?php /*echo $city . " / " . $suburb; */?></h5>
+                        <h2><?php /*echo $schoolName; */ ?></h2>
+                        <h5><?php /*echo $city . " / " . $suburb; */ ?></h5>
                     </div>
 -->
                     <div class="col-sm-12" style="margin-top:2em;">
@@ -632,7 +643,7 @@ function test_input($data)
                                     $queryp = "select classname from classteacher where teacheremailid = '" . $adminid . "' AND schoolid = '" . $schoolId . "'";
                                     $resultp = mysql_query($queryp);
                                     echo "Class Name: ";
-                                    echo '<select name="classnamedropdownstutab" >';
+                                    echo '<select name="classnamedropdownstutab" onchange="submit();" >';
                                     while ($rowp = mysql_fetch_array($resultp)) {
                                         $selected = ($rowp['classname'] == $currentClassName) ? 'selected="selected"' : '';
                                         echo '<option value="' . $rowp['classname'] . '"' . $selected . ' >' . $rowp['classname'] . '</option>';
@@ -896,12 +907,32 @@ function test_input($data)
 
                             </div>
 
+                            <div id="lessonplans" class="tab-pane fade">
+                                <div class="headerContent">Lesson plans</div>
+                                <br>
+                                <ul style="list-style-image:url(images/lessonplanicon.png);">
+                                    <li><a href="lessonplans/UNIT 1.pdf" target="_blank" style="color:#000;">Unit 1 (5-7
+                                            years+)</a></li>
+                                    <br>
+                                    <li><a href="lessonplans/UNIT 2.pdf" target="_blank" style="color:#000;">Unit 2 (8-9
+                                            years+) </a></li>
+                                    <br>
+                                    <li><a href="lessonplans/UNIT 3.pdf" target="_blank" style="color:#000;">Unit 3
+                                            (10-12 years+) </a></li>
+                                    <br>
+                                    <li><a href="lessonplans/UNIT 4.pdf" target="_blank" style="color:#000;">Unit 4 (All
+                                            Age Groups)</a></li>
+                                    <br>
+                                </ul>
+                            </div>
+
                             <div id="maps" class="tab-pane fade">
                                 <div class="headerContent">MAPS</div>
 
                                 <div>
-                                    <iframe src="page/TeacherPanelMap.html" style="width:75%;height:500px;border:none;"></iframe>
-                                    <div  id="regions_div" style="display: none;float:left;"></div>
+                                    <iframe src="page/TeacherPanelMap.html"
+                                            style="width:75%;height:500px;border:none;"></iframe>
+                                    <div id="regions_div" style="display: none;float:left;"></div>
 
                                     <div style="float:right;">
 
@@ -997,6 +1028,7 @@ function test_input($data)
                                                         }
                                                     }
                                                 } ?>/>&nbsp;Maternal GrandMother<br/>
+                                                <input type="hidden" value="submitval" name="submitval" id="submitval">
 
 
                                                 <br>
@@ -1178,7 +1210,7 @@ function test_input($data)
                                         }, 1000);
                                     }
                                 }
-                                $('#language .TABContent').load('page/Chart_teacher.html' , function () {
+                                $('#language .TABContent').load('page/Chart_teacher.html', function () {
                                     setTimeout(function () {
                                         init_PSCO_chart();
                                     }, 1000);
@@ -1254,7 +1286,7 @@ function test_input($data)
                                         }, 1000);
                                     }
                                 }
-                                $('#religion .TABContent').load('page/Belief_chart_teacher.html',function () {
+                                $('#religion .TABContent').load('page/Belief_chart_teacher.html', function () {
                                     setTimeout(function () {
                                         init_PSCO_chart_religion();
                                     }, 1000);
@@ -1381,9 +1413,9 @@ function test_input($data)
 
 
             </div>
-
-          <!--  <div class="col-sm-1">
-            </div>-->
+            <!--
+                        <div class="col-sm-1">
+                        </div>-->
 
         </div>
     </div>
@@ -1818,11 +1850,11 @@ if (isset($_POST['submitvalbeltab'])) {
         <div class="modal-content">
             <div class="modal-header">
                 <button type="button" class="close" data-dismiss="modal">&times;</button>
-                <h4 class="modal-title" style="text-align:center; " font-weight:bold; ">Update Student Details</h4>
+                <h4 class="modal-title" style="text-align:center;font-weight:bold; ">Update Student Details</h4>
             </div>
             <div class="modal-body">
 
-                <form method="post" id="update_form" class="form-horizontal">
+                <form method="post" id="update_form" action="" class="form-horizontal">
                     <h3 style="padding: 1% 0%; background-color:#FE8885; color:#FFF; text-align:center;  border-radius: 8px;">
                         PERSONAL DETAILS</h3>
 
@@ -1891,7 +1923,8 @@ if (isset($_POST['submitvalbeltab'])) {
                         <label class="control-label col-sm-3" for="sb">Student:</label>
 
                         <div class="col-sm-9">
-                            <input type="text" class="form-control" id="sb" name="sb">
+                            <select name="sb" id="sb" class="form-control PSCO_country"></select>
+                            <!--<input type="text" class="form-control" id="sb" name="sb">-->
                         </div>
                     </div>
 
@@ -1900,21 +1933,24 @@ if (isset($_POST['submitvalbeltab'])) {
                         <label class="control-label col-sm-3" for="m">Mother:</label>
 
                         <div class="col-sm-9">
-                            <input type="text" class="form-control" id="m" name="m">
+                            <select name="m" id="m" class="form-control PSCO_country"></select>
+                            <!--<input type="text" class="form-control" id="m" name="m">-->
                         </div>
                     </div>
                     <div class="form-group">
                         <label class="control-label col-sm-3" for="gfm">GrandFather:</label>
 
                         <div class="col-sm-9">
-                            <input type="text" class="form-control" id="gfm" name="gfm">
+                            <select name="gfm" id="gfm" class="form-control PSCO_country"></select>
+                            <!--<input type="text" class="form-control" id="gfm" name="gfm">-->
                         </div>
                     </div>
                     <div class="form-group">
                         <label class="control-label col-sm-3" for="gmm">GrandMother:</label>
 
                         <div class="col-sm-9">
-                            <input type="text" class="form-control" id="gmm" name="gmm">
+                            <select name="gmm" id="gmm" class="form-control PSCO_country"></select>
+                            <!--<input type="text" class="form-control" id="gmm" name="gmm">-->
                         </div>
                     </div>
 
@@ -1923,21 +1959,24 @@ if (isset($_POST['submitvalbeltab'])) {
                         <label class="control-label col-sm-3" for="f">Father:</label>
 
                         <div class="col-sm-9">
-                            <input type="text" class="form-control" id="f" name="f">
+                            <select name="f" id="f" class="form-control PSCO_country"></select>
+                            <!--<input type="text" class="form-control" id="f" name="f">-->
                         </div>
                     </div>
                     <div class="form-group">
                         <label class="control-label col-sm-3" for="gff">GrandFather:</label>
 
                         <div class="col-sm-9">
-                            <input type="text" class="form-control" id="gff" name="gff">
+                            <select name="gff" id="gff" class="form-control PSCO_country"></select>
+                            <!--<input type="text" class="form-control" id="gff" name="gff">-->
                         </div>
                     </div>
                     <div class="form-group">
                         <label class="control-label col-sm-3" for="gmf">GrandMother:</label>
 
                         <div class="col-sm-9">
-                            <input type="text" class="form-control" id="gmf" name="gmf">
+                            <select name="gmf" id="gmf" class="form-control PSCO_country"></select>
+                            <!--<input type="text" class="form-control" id="gmf" name="gmf">-->
                         </div>
 
 
@@ -1948,15 +1987,15 @@ if (isset($_POST['submitvalbeltab'])) {
                         LANGUAGES</h3>
 
                     <div class="form-group">
-                        <div class="col-sm-9">
-                            <table class='table borderless table-responsive ' id="employee_lang">
+                        <div class="col-sm-12">
+                            <table id="employee_lang_edit_profile" class='table borderless table-responsive'>
 
                             </table>
                         </div>
                     </div>
 
                     <br>
-                    <input type="submit" name="update" id="update" value="Save" class="btn btn-success "/>
+                    <input type="button" onclick="Profile.SaveLang()" name="update" id="update" value="Save" class="btn btn-success "/>
 
                 </form>
 
@@ -1999,35 +2038,71 @@ if (isset($_POST['submitvalbeltab'])) {
                     var datastaff = data['arr1'];
                     var datastaffbirth = data['arr2'];
                     var lang = data['arr4'];
-                    $('#studentemail').val(datastaff.studentemailid);
-                    $('#firstname').val(datastaff.firstname);
-                    $('#lastname').val(datastaff.lastname);
-                    $('#gender').val(datastaff.gender);
+                    if (datastaff != null) {
+                        $('#studentemail').val(datastaff.studentemailid);
+                        $('#firstname').val(datastaff.firstname);
+                        $('#lastname').val(datastaff.lastname);
+                        $('#gender').val(datastaff.gender);
 
-                    if (datastaff.religion == 'Non Disclosed') {
-                        $('#checko').prop('checked', true);
-                        $('#beliefreligion').prop('readonly', true);
-                        $('#beliefreligion').val('Belief/Religion');
-                        $('#beliefreligion').css('color', '#CCC');
+                        if (datastaff.religion == 'Non Disclosed') {
+                            $('#checko').prop('checked', true);
+                            $('#beliefreligion').prop('readonly', true);
+                            $('#beliefreligion').val('Belief/Religion');
+                            $('#beliefreligion').css('color', '#CCC');
 
-                    } else {
-                        $('#checko').prop('checked', false);
-                        $('#beliefreligion').prop("readonly", false);
-                        $('#beliefreligion').val(datastaff.religion);
-                        $('#beliefreligion').css('color', '#000');
+                        } else {
+                            $('#checko').prop('checked', false);
+                            $('#beliefreligion').prop("readonly", false);
+                            $('#beliefreligion').val(datastaff.religion);
+                            $('#beliefreligion').css('color', '#000');
+                        }
+                    }
+                    if (datastaffbirth != null) {
+                        $('#sb').val(datastaffbirth.studentbirthplace);
+                        $('#m').val(datastaffbirth.studentmotherbirthplace);
+                        $('#gfm').val(datastaffbirth.studentmothersfatherbirthplace);
+                        $('#gmm').val(datastaffbirth.studentmothersmotherbirthplace);
+                        $('#f').val(datastaffbirth.studentfatherbirthplace);
+                        $('#gff').val(datastaffbirth.studentfathersfatherbirthplace);
+                        $('#gmf').val(datastaffbirth.studentfathersmotherbirthplace);
+                    }
+                    $('#employee_lang_edit_profile').html(lang.data);
+
+                    /*P.N*/
+
+                    Profile.CreateAdd('employee_lang_edit_profile');
+
+                   /* // reset AddLanguage
+                    Profile.ResetAdd();
+                    //_______ create Delete Language Btn
+                    var Tbody = document.querySelector('#employee_lang_edit_profile > tbody');
+                    for (var i = 0; i < Tbody.childElementCount; i++) {
+                        var deletetd = document.createElement('td');
+                        var deletebtn = document.createElement('div');
+                        deletebtn.setAttribute('onclick', 'DeleteLanguage(this)');
+                        deletebtn.setAttribute('class', 'btn btn-block btn-danger');
+                        deletebtn.innerText = 'Delete language';
+                        deletetd.appendChild(deletebtn);
+                        Tbody.children[i].appendChild(deletetd);
+                    }
+                        // Create add Language Btn ....
+                        var tfoot = document.createElement('tfoot');
+                        var tr = document.createElement('tr');
+                        var td = document.createElement('td');
+                        td.setAttribute('colspan', '3');
+                        var btn = document.createElement('div');
+                        btn.setAttribute('class', 'btn btn-primary btn-block');
+                        btn.setAttribute('onclick', 'Profile.Addlanguage()');
+                        btn.setAttribute('id', 'AddlanguageBTN');
+                        btn.innerText = 'Add Language';
+                        // append Child
+                        td.appendChild(btn);
+                        tr.appendChild(td);
+                        tfoot.appendChild(tr);
+                        document.getElementById('employee_lang_edit_profile').appendChild(tfoot);*/
+                        $('#edit_data_Modal').modal('show');
                     }
 
-                    $('#sb').val(datastaffbirth.studentbirthplace);
-                    $('#m').val(datastaffbirth.studentmotherbirthplace);
-                    $('#gfm').val(datastaffbirth.studentmothersfatherbirthplace);
-                    $('#gmm').val(datastaffbirth.studentmothersmotherbirthplace);
-                    $('#f').val(datastaffbirth.studentfatherbirthplace);
-                    $('#gff').val(datastaffbirth.studentfathersfatherbirthplace);
-                    $('#gmf').val(datastaffbirth.studentfathersmotherbirthplace);
-                    $('#employee_lang').html(lang.data);
-
-                    $('#edit_data_Modal').modal('show');
-                }
             });
         });
 
@@ -2117,6 +2192,4 @@ if (isset($_POST['submitvalbeltab'])) {
 
     });
 </script>
- 
- 
  
