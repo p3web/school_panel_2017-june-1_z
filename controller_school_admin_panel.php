@@ -117,12 +117,16 @@ if (isset($_SESSION['emailid']) && $_SESSION['emailid'] != '' ) {
                 break;
 
             case 'delete_teacher_by_teacherEmailId':
-                $valid_data = controller_main_function::check_validation(array("teacheremailid"));
+                $valid_data = controller_main_function::check_validation(array("teacheremailid","classname"));
                 if (!isset($valid_data['is_valid']) || $valid_data['is_valid'] == false) {
                     controller_main_function::send_msg(lang::$invalid_data, lang::$error);
                 }
-                access_school_admin_panel::delete_teacher_by_teacherEmailId($_REQUEST["teacheremailid"]);
-                controller_main_function::send_msg(lang::$success, lang::$message);
+                //access_school_admin_panel::delete_teacher_lang_by_teacheremailid($_REQUEST["teacheremailid"]);
+                //access_school_admin_panel::delete_teacher_birthDetails_by_teacherEmailId($_REQUEST["teacheremailid"]);
+                //access_school_admin_panel::delete_teacher_by_teacherEmailId($_REQUEST["teacheremailid"]);
+                $result = access_school_admin_panel::delete_teacher_class($_REQUEST["teacheremailid"],$_SESSION['user']['schoolid'],$_REQUEST["classname"]);
+                controller_main_function::send_msg(lang::$success, lang::$message,"success");
+                //controller_main_function::send_msg($result, lang::$message,"success");
                 break;
 
             case 'delete_teacher_birthDetails_by_teacherEmailId':

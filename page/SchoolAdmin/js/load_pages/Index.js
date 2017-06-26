@@ -81,23 +81,25 @@ Teacher.CreateTeacherTblData = function (data) {
             };
             Rows['option'] = {
                 value: '',
-                htmlTag: '<i class="glyphicon glyphicon-remove actionIcon" onclick="Confirm(' + "'" + data[i].teacheremailid + "'" + ')"></i>    <i class="glyphicon glyphicon-edit actionIcon" onclick="Teacher.Edit.Edit(' + "'" + data[i].teacheremailid + "'" + ')""></i>'
+                htmlTag: '<i class="glyphicon glyphicon-remove actionIcon" onclick="Confirm(' + "'" + data[i].teacheremailid+'||'+ data[i].classname + "'" + ')"></i>    <i class="glyphicon glyphicon-edit actionIcon" onclick="Teacher.Edit.Edit(' + "'" + data[i].teacheremailid + "'" + ')""></i>'
             };
         } else {
             Rows['info'] = 'Waiting approval';
             Rows['option'] = {
                 value: '',
-                htmlTag: '<i class="glyphicon glyphicon-remove actionIcon" onclick="Confirm(' + "'" + data[i].teacheremailid + "'" + ')"></i>'
+                htmlTag: '<i class="glyphicon glyphicon-remove actionIcon" onclick="Confirm(' + "'" +  data[i].teacheremailid+'||'+ data[i].classname + "'" + ')"></i>'
             };
         }
         TeacherData.push(Rows);
     }
     Global.setData(TeacherData, TeacherGrid);
 };
-Teacher.DeleteRow = function (TeacherEmail) {
+Teacher.DeleteRow = function (data) {
+    data = data.split("||");
     ajax.sender_data_json_by_url_callback(Global.url, {
-        act: 'delete_teacher_by_teacheremailid',
-        teacheremailid: TeacherEmail
+        act: 'delete_teacher_by_teacherEmailId',
+        teacheremailid: data[0],
+        classname:data[1]
     }, console.log);
 };
 /*view Profile*/
