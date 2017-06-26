@@ -507,8 +507,13 @@ function makecsv($data, $csvfilename, $scriptrun = null)
             }
             makecsv($output, 'teacherlangout.csv', false);
 
+<<<<<<< HEAD
             $femalecount = count(PSCO_func::get_lang_count_all_male_fmale($schoolId, $className, 'f'));
             $malecount = count(PSCO_func::get_lang_count_all_male_fmale($schoolId, $className, 'm'));
+=======
+            $femalecount = count(PSCO_func::get_lang_count_all_male_fmale($orgId, $teamName, 'f'));
+            $malecount = count(PSCO_func::get_lang_count_all_male_fmale($orgId, $teamName, 'm'));
+>>>>>>> 6e97550486ba155f7a7cb6b86dfc474f92657f4b
             $totalcount = $femalecount + $malecount;
             $temp = array();
             $temp = array(
@@ -867,7 +872,7 @@ function test_input($data)
                                                  onmouseout="this.src='images/edit.png';"/>
                                         </a>
 
-                                    <?php
+                                        <?php
                                     }
 
 
@@ -898,6 +903,7 @@ function test_input($data)
 
                             </div>
 
+<<<<<<< HEAD
                             <div id="lessonplans" class="tab-pane fade">
                                 <div class="headerContent">Lesson plans</div>
                                 <br>
@@ -909,6 +915,8 @@ function test_input($data)
                                 </ul>
                             </div>
 
+=======
+>>>>>>> 6e97550486ba155f7a7cb6b86dfc474f92657f4b
                             <div id="maps" class="tab-pane fade">
                                 <div class="headerContent">MAPS</div>
 
@@ -1395,9 +1403,15 @@ function test_input($data)
 
 
             </div>
+<<<<<<< HEAD
             <!--
                         <div class="col-sm-1">
                         </div>-->
+=======
+
+          <!--  <div class="col-sm-1">
+            </div>-->
+>>>>>>> 6e97550486ba155f7a7cb6b86dfc474f92657f4b
 
         </div>
     </div>
