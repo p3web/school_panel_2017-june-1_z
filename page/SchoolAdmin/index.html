@@ -16,6 +16,9 @@
     <link rel="stylesheet" href="../js/sweetalert/sweetalert2.css">
 
 
+
+
+
 </head>
 <body onload="Teacher.LoadTeacherTable();">
 <div id="wrap">
@@ -123,6 +126,10 @@
                         </select> <input style="display: none;" type="submit" id="submitvalstutab" class="submitbtunnew"
                                          name="submitvalstutab" value="SUBMIT">
                             <div class="headerContent">TEACHER</div>
+                            <p>As school administrator, you can now invite teachers to register for Ancestry Atlas</p>
+                            <h4>How?</h4>
+                            <p>Enter each teacher's email address, their class name and hit INVITE.</p>
+                            <p>Teachers can now register and start mapping their classroom cultural diversity</p>
                             <div id="PGrid">
 
                             </div>
@@ -630,6 +637,18 @@
         integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
         crossorigin="anonymous"></script>
 
+<!--data validation-->
+<script src="../js/validate.min.js"></script>
+<!--load lang.json for message and text page -->
+<script src="../js/lang.js"></script>
+<script type="text/javascript">
+    var __lang = undefined;
+
+    $.getJSON('../data_value/lang.json', function(data){
+        __lang = new lang(data);
+    } );
+</script>
+
 <!--PSCO_Grid-->
 <script src="../js/PSCO_Grid.js"></script>
 
@@ -660,6 +679,7 @@
     TeacherGrid.cols = [
         {name: 'name', thname: 'Teacher Name'},
         {name: 'email', thname: 'Teacher Email ID*'},
+        {name: 'classname', thname: 'Class*'},
         {name: 'info', thname: 'Info', notSearch: true},
         {name: 'status', thname: 'Status', notSearch: true},
         {name: 'option', thname: 'Option', notSearch: true}
@@ -669,11 +689,23 @@
         name: 'Teacher Name',
         id: 'NameInvite',
         type: 'inputtext'
-    }, {name: 'Click here to add email address', id: 'EmailInvite', type: 'inputtext'}, {}, {}, {
+    }, {
+        name: 'Click here to add email address',
+        id: 'EmailInvite',
+        type: 'inputtext'
+    }, {
+    name: {value:'',htmlTag:'<select class="form-control" id="classComboBox"></select>'},
+        id: 'classInvite',
+        type: ''
+
+    },{}, {}, {
         name: 'Invite',
         id: 'InviteBTN',
         type: 'btn',
-        attribute: [{name: 'class', value: 'btn btn-success'}]
+        attribute: [
+            {name: 'class', value: 'btn btn-success'},
+            {name: 'onclick', value: 'Teacher.invite()'}
+        ]
     }]];
 
 
@@ -710,6 +742,20 @@
                     {name: 'option', thname: 'Option'}
                 ];
                 ClassesGrid.RightToLeft = false;
+                ClassesGrid.embeddedRow = [[{}, {
+                    name: 'Class name',
+                    id: 'classNameAdd',
+                    type: 'inputtext'
+                },  {
+                    name: 'Add',
+                    id: 'ClassAddBTN',
+                    type: 'btn',
+                    attribute: [
+                        {name: 'class', value: 'btn btn-success'},
+                        {name: 'onclick', value: 'class_data.add_new_class()'}
+                    ]
+
+                }]];
                 Classes.LoadClassesTable(); //______ send Act
             } else {
                 //____ LOAD OTHER TAB FROM EXTERNAL PAGE
