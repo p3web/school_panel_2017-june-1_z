@@ -1987,7 +1987,11 @@ if (isset($_POST['submitvalbeltab'])) {
                         LANGUAGES</h3>
 
                     <div class="form-group">
+<<<<<<< HEAD
                         <div class="col-sm-12">
+=======
+                        <div class="col-sm-9">
+>>>>>>> 00fa650991cd8d44a416dda2eff7b5777dca6709
                             <table id="employee_lang_edit_profile" class='table borderless table-responsive'>
 
                             </table>
@@ -2069,11 +2073,14 @@ if (isset($_POST['submitvalbeltab'])) {
                     $('#employee_lang_edit_profile').html(lang.data);
 
                     /*P.N*/
+<<<<<<< HEAD
 
                     Profile.CreateAdd('employee_lang_edit_profile');
 
                    /* // reset AddLanguage
                     Profile.ResetAdd();
+=======
+>>>>>>> 00fa650991cd8d44a416dda2eff7b5777dca6709
                     //_______ create Delete Language Btn
                     var Tbody = document.querySelector('#employee_lang_edit_profile > tbody');
                     for (var i = 0; i < Tbody.childElementCount; i++) {
@@ -2093,13 +2100,20 @@ if (isset($_POST['submitvalbeltab'])) {
                         var btn = document.createElement('div');
                         btn.setAttribute('class', 'btn btn-primary btn-block');
                         btn.setAttribute('onclick', 'Profile.Addlanguage()');
+<<<<<<< HEAD
                         btn.setAttribute('id', 'AddlanguageBTN');
+=======
+>>>>>>> 00fa650991cd8d44a416dda2eff7b5777dca6709
                         btn.innerText = 'Add Language';
                         // append Child
                         td.appendChild(btn);
                         tr.appendChild(td);
                         tfoot.appendChild(tr);
+<<<<<<< HEAD
                         document.getElementById('employee_lang_edit_profile').appendChild(tfoot);*/
+=======
+                        document.getElementById('employee_lang_edit_profile').appendChild(tfoot);
+>>>>>>> 00fa650991cd8d44a416dda2eff7b5777dca6709
                         $('#edit_data_Modal').modal('show');
                     }
 

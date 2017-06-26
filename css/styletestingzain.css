@@ -13,7 +13,7 @@
 
 html,
 body {
-  height: 100%;
+  /*height: 100%;*/
   background-color:#f9f9f9;
   font-family:MuseoSans_300;
   /* The html and body elements cannot have any padding or margin. */
@@ -43,7 +43,10 @@ input:focus{
   font-size:11px; 
   text-align:center; 
   padding-top:20px;
+	z-index: 200;
+	position: relative;
 }
+
 
 	
 
@@ -196,11 +199,15 @@ input:focus{
 	padding-bottom:4%;
 }
 
+
+	  
+}
+
 @media (min-width: 768px) {
 .navbar-right {
 	margin-right: auto !important;
 }
 
-#watermark{
-	margin-bottom:15%;
+@page{
+	size: A2 landscape;
 }

@@ -103,6 +103,7 @@ class language
     private static function get_lang_teacher($schoolId, $className,$genderMode='A')
     {
 
+
         switch($genderMode) {
             case 'F':
                 $gen="female";
@@ -124,7 +125,6 @@ class language
                 $data = data::selects_col("student_language", "languagename, COUNT( languagename ) as count", "studentemailid IN(SELECT studentemailid FROM student where schoolid='" . $schoolId . "' AND classname='" . $className . "' ) GROUP BY languagename ORDER BY COUNT( languagename ) DESC ");
 
         }
-
         if (count($data[0]) != 0) {
             return $data;
         } else {

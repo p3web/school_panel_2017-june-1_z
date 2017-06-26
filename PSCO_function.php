@@ -432,25 +432,44 @@ class PSCO_func
         return $result ;
 
     }
-    public static function get_lang_count_all_male_fmale ($orgId ,$teamName , $deptName , $mode = 'a'){
+    public static function get_lang_count_all_male_fmale ($orgId ,$teamName , $deptname = false , $mode = 'a'){
         //  How many number  of students/staff are not willing to revile their belief.
-
-        switch($mode){
-            case 'a':
-                //"SELECT  FROM stafflanguage where staffemailid IN(SELECT staffemailid FROM staff where orgid='".$orgId."' AND teamname='".$teamName."' AND deptname='".$deptName."') GROUP BY languagename ORDER BY COUNT( languagename ) DESC"
-                $result= data::selects_col('`stafflanguage` ','languagename, COUNT( languagename ) as count',"staffemailid IN(SELECT staffemailid FROM staff where orgid='".$orgId."' AND teamname='".$teamName."' AND deptname='".$deptName."') GROUP BY languagename ORDER BY COUNT( languagename ) DESC");
-                break;
-            case 'm':
-                $gen="male";
-                $result= data::selects_col('`stafflanguage` ','languagename, COUNT( languagename ) as count',"staffemailid IN(SELECT staffemailid FROM staff where orgid='".$orgId."' AND teamname='".$teamName."' AND deptname='".$deptName."' AND gender='".$gen."') GROUP BY languagename ORDER BY COUNT( languagename ) DESC");
-                break;
-            case 'f':
-                $gen="female";
-                //SELECT languagename, COUNT( languagename ) FROM stafflanguage where staffemailid IN(SELECT staffemailid FROM staff where orgid='1' AND teamname='CITeam' AND deptname='Database' AND gender='others') GROUP BY languagename ORDER BY COUNT( languagename ) DESC
-                //"SELECT languagename, COUNT( languagename ) FROM stafflanguage where staffemailid IN(SELECT staffemailid FROM staff where orgid='".$orgId."' AND teamname='".$teamName."' AND deptname='".$deptName."' AND gender='".$gen."') GROUP BY languagename ORDER BY COUNT( languagename ) DESC"
-                $result= data::selects_col('`stafflanguage` ','languagename, COUNT( languagename ) as count',"staffemailid IN(SELECT staffemailid FROM staff where orgid='".$orgId."' AND teamname='".$teamName."' AND deptname='".$deptName."' AND gender='".$gen."') GROUP BY languagename ORDER BY COUNT( languagename ) DESC");
-                break;
+        if($deptname != false){
+            switch($mode){
+                case 'a':
+                    //"SELECT  FROM stafflanguage where staffemailid IN(SELECT staffemailid FROM staff where orgid='".$orgId."' AND teamname='".$teamName."' AND deptname='".$deptName."') GROUP BY languagename ORDER BY COUNT( languagename ) DESC"
+                    $result= data::selects_col('`stafflanguage` ','languagename, COUNT( languagename ) as count',"staffemailid IN(SELECT staffemailid FROM staff where orgid='".$orgId."' AND teamname='".$teamName."' AND deptname='".$deptname."') GROUP BY languagename ORDER BY COUNT( languagename ) DESC");
+                    break;
+                case 'm':
+                    $gen="male";
+                    $result= data::selects_col('`stafflanguage` ','languagename, COUNT( languagename ) as count',"staffemailid IN(SELECT staffemailid FROM staff where orgid='".$orgId."' AND teamname='".$teamName."' AND deptname='".$deptname."' AND gender='".$gen."') GROUP BY languagename ORDER BY COUNT( languagename ) DESC");
+                    break;
+                case 'f':
+                    $gen="female";
+                    //SELECT languagename, COUNT( languagename ) FROM stafflanguage where staffemailid IN(SELECT staffemailid FROM staff where orgid='1' AND teamname='CITeam' AND deptname='Database' AND gender='others') GROUP BY languagename ORDER BY COUNT( languagename ) DESC
+                    //"SELECT languagename, COUNT( languagename ) FROM stafflanguage where staffemailid IN(SELECT staffemailid FROM staff where orgid='".$orgId."' AND teamname='".$teamName."' AND deptname='".$deptName."' AND gender='".$gen."') GROUP BY languagename ORDER BY COUNT( languagename ) DESC"
+                    $result= data::selects_col('`stafflanguage` ','languagename, COUNT( languagename ) as count',"staffemailid IN(SELECT staffemailid FROM staff where orgid='".$orgId."' AND teamname='".$teamName."' AND deptname='".$deptname."' AND gender='".$gen."') GROUP BY languagename ORDER BY COUNT( languagename ) DESC");
+                    break;
+            }
+        }else {
+            switch ($mode) {
+                case 'a':
+                    //"SELECT  FROM stafflanguage where staffemailid IN(SELECT staffemailid FROM staff where orgid='".$orgId."' AND teamname='".$teamName."' AND deptname='".$deptName."') GROUP BY languagename ORDER BY COUNT( languagename ) DESC"
+                    $result = data::selects_col('`studentlanguage` ', 'languagename, COUNT( languagename ) as count', "studentemailid IN(SELECT staffemailid FROM staff where schoolid='" .$orgId. "' AND classname='" .$teamName. "') GROUP BY languagename ORDER BY COUNT( languagename ) DESC");
+                    break;
+                case 'm':
+                    $gen = "male";
+                    $result = data::selects_col('`studentlanguage` ', 'languagename, COUNT( languagename ) as count', "studentemailid IN(SELECT staffemailid FROM staff where schoolid='" .$orgId. "' AND classname='" .$teamName. "' AND gender='" . $gen . "') GROUP BY languagename ORDER BY COUNT( languagename ) DESC");
+                    break;
+                case 'f':
+                    $gen = "female";
+                    //SELECT languagename, COUNT( languagename ) FROM stafflanguage where staffemailid IN(SELECT staffemailid FROM staff where orgid='1' AND teamname='CITeam' AND deptname='Database' AND gender='others') GROUP BY languagename ORDER BY COUNT( languagename ) DESC
+                    //"SELECT languagename, COUNT( languagename ) FROM stafflanguage where staffemailid IN(SELECT staffemailid FROM staff where orgid='".$orgId."' AND teamname='".$teamName."' AND deptname='".$deptName."' AND gender='".$gen."') GROUP BY languagename ORDER BY COUNT( languagename ) DESC"
+                    $result = data::selects_col('`studentlanguage` ', 'languagename, COUNT( languagename ) as count', "studentemailid IN(SELECT staffemailid FROM staff where schoolid='" .$orgId. "' AND classname='" .$teamName. "' AND gender='" . $gen . "') GROUP BY languagename ORDER BY COUNT( languagename ) DESC");
+                    break;
+            }
         }
+
 
         if (count($result[0]) != 0) {
             return $result;

@@ -89,7 +89,7 @@ class access_school_admin_panel
 
     public static function set_teacher_lang_bylangId($teacheremailid, $languagename, $languagelevel)
     {
-        return data::insertinto("`teacher_language`", "`teacheremailid`,`languagename`,`languagelevel`' ", "'$teacheremailid' , '$languagename' , '$languagelevel'");
+        return data::insertinto("`teacher_language`", "`teacheremailid`,`languagename`,`languagelevel`", "'$teacheremailid' , '$languagename' , '$languagelevel'");
     }
 
     public static function get_teacher_birthDetails_by_teacherEmailId($teacheremailid)
@@ -255,6 +255,35 @@ class access_school_admin_panel
         }
 
         return data::execute_non_qury($querytest);
+    }
+
+    // poster details --> top right of export
+    public static function get_address_map_poster($schoolid){
+        //SELECT FROM school where schoolid='14'
+        $data = data::selects_col("`school`","schoolname, state, country", "`schoolid` = '$schoolid'");
+        if (count($data[0]) != 0) {
+            return $data;
+        } else {
+            return false;
+        }
+    }
+    public static function get_all_student_count_map_pooster ($schoolid){
+        //SELECT count(gender) FROM student where schoolid='14'
+        $data = data::selects_col("`student`" ,"count(gender) as count","schoolid='$schoolid'");
+        if (count($data[0]) != 0) {
+            return $data;
+        } else {
+            return false;
+        }
+    }
+    public static function get_gender_count_map_pooster ($schoolid , $gender){
+        //SELECT count(gender) FROM student where schoolid='14' AND gender='female'
+        $data = data::selects_col("`student`" , "count(gender) as count_".$gender , "schoolid='$schoolid' AND gender='$gender'");
+        if (count($data[0]) != 0) {
+            return $data;
+        } else {
+            return false;
+        }
     }
 
 }

@@ -2,64 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="676e04ff-6d34-48ac-9098-ebf739dc256d" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/MenuIcons/Compass.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/MenuIcons/Map.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/MenuIcons/MenuLogo.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/MenuIcons/Pen.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/MenuIcons/comment.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/MenuIcons/heart.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/MenuIcons/person.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/MenuIcons/star.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/studentcount.csv" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/team_admin_key_fact.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/documentation/timing/Time Sheet1.xlsx" afterPath="$PROJECT_DIR$/documentation/timing/Time Sheet1.xlsx" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/error_log_26052017.tgz" afterPath="$PROJECT_DIR$/error_log_26052017.tgz" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/AdminPanel.css" afterPath="$PROJECT_DIR$/css/AdminPanel.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/page/OrgAdmin/js/load_pages/Belief.js" afterPath="$PROJECT_DIR$/page/OrgAdmin/js/load_pages/Belief.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/page/SchoolAdmin/js/load_pages/Belief.js" afterPath="$PROJECT_DIR$/page/SchoolAdmin/js/load_pages/Belief.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/page/TeamAdmin/js/load_pages/Belief.js" afterPath="$PROJECT_DIR$/page/TeamAdmin/js/load_pages/Belief.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/page/CssMapChart.css" afterPath="$PROJECT_DIR$/page/CssMapChart.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/page/CssMapChartPrint.css" afterPath="$PROJECT_DIR$/page/CssMapChartPrint.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/page/OrgAdmin/js/load_pages/Export.js" afterPath="$PROJECT_DIR$/page/OrgAdmin/js/load_pages/Export.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/page/SchoolAdmin/js/load_pages/Export.js" afterPath="$PROJECT_DIR$/page/SchoolAdmin/js/load_pages/Export.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/page/TeamAdmin/js/load_pages/Export.js" afterPath="$PROJECT_DIR$/page/TeamAdmin/js/load_pages/Export.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/page/SchoolAdmin/js/load_pages/Index.js" afterPath="$PROJECT_DIR$/page/SchoolAdmin/js/load_pages/Index.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/page/SchoolAdmin/Language.html" afterPath="$PROJECT_DIR$/page/SchoolAdmin/Language.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/page/OrgAdmin/js/load_pages/Language.js" afterPath="$PROJECT_DIR$/page/OrgAdmin/js/load_pages/Language.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/page/SchoolAdmin/js/load_pages/Language.js" afterPath="$PROJECT_DIR$/page/SchoolAdmin/js/load_pages/Language.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/page/TeamAdmin/js/load_pages/Language.js" afterPath="$PROJECT_DIR$/page/TeamAdmin/js/load_pages/Language.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/PSCO_data.php" afterPath="$PROJECT_DIR$/PSCO_data.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/page/TeacherMapChart.html" afterPath="$PROJECT_DIR$/page/TeacherMapChart.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/page/TeacherMapChartPrint.html" afterPath="$PROJECT_DIR$/page/TeacherMapChartPrint.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/page/TeacherPanelMap.html" afterPath="$PROJECT_DIR$/page/TeacherPanelMap.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/page/TeacherdonutChartPrint.html" afterPath="$PROJECT_DIR$/page/TeacherdonutChartPrint.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/page/TeamAdminMap.html" afterPath="$PROJECT_DIR$/page/TeamAdminMap.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/page/TeamMapChartPrint.html" afterPath="$PROJECT_DIR$/page/TeamMapChartPrint.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/page/TeamdonutChartPrint.html" afterPath="$PROJECT_DIR$/page/TeamdonutChartPrint.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/access_org_key_fact.php" afterPath="$PROJECT_DIR$/access_org_key_fact.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/access_school_admin_panel.php" afterPath="$PROJECT_DIR$/access_school_admin_panel.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/access_school_key_fact.php" afterPath="$PROJECT_DIR$/access_school_key_fact.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/page/js/ajax.js" afterPath="$PROJECT_DIR$/page/js/ajax.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/page/js/chart.js" afterPath="$PROJECT_DIR$/page/js/chart.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/page/OrgAdmin/js/load_pages/classes.js" afterPath="$PROJECT_DIR$/page/OrgAdmin/js/load_pages/classes.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/page/SchoolAdmin/js/load_pages/classes.js" afterPath="$PROJECT_DIR$/page/SchoolAdmin/js/load_pages/classes.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/page/TeamAdmin/js/load_pages/classes.js" afterPath="$PROJECT_DIR$/page/TeamAdmin/js/load_pages/classes.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/controller_school_admin_panel.php" afterPath="$PROJECT_DIR$/controller_school_admin_panel.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/export/error_log" afterPath="$PROJECT_DIR$/export/error_log" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/headerteacher.php" afterPath="$PROJECT_DIR$/headerteacher.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/headerteamadmin.php" afterPath="$PROJECT_DIR$/headerteamadmin.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/page/SchoolAdmin/index.html" afterPath="$PROJECT_DIR$/page/SchoolAdmin/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jsondataout.php" afterPath="$PROJECT_DIR$/jsondataout.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/page/data_value/lanuage.html" afterPath="$PROJECT_DIR$/page/data_value/lanuage.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/page/data_value/lanuage_level.html" afterPath="$PROJECT_DIR$/page/data_value/lanuage_level.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/page/js/sweetalert/msg.js" afterPath="$PROJECT_DIR$/page/js/sweetalert/msg.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/style.css" afterPath="$PROJECT_DIR$/css/style.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/teacherlangout.csv" afterPath="$PROJECT_DIR$/teacherlangout.csv" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/teacherpanel.php" afterPath="$PROJECT_DIR$/teacherpanel.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/teamadminlangout.csv" afterPath="$PROJECT_DIR$/teamadminlangout.csv" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/teamadminpaneltestzain.php" afterPath="$PROJECT_DIR$/teamadminpaneltestzain.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/teamadminregionout.csv" afterPath="$PROJECT_DIR$/teamadminregionout.csv" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/teamadminreligonout.csv" afterPath="$PROJECT_DIR$/teamadminreligonout.csv" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="school_panel_2017-june-1_z.iws" />
@@ -181,20 +123,6 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="school_panel_2017-june-1_z" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="school_panel_2017-june-1_z" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="brochure" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
         </subPane>
       </pane>
     </panes>
@@ -233,15 +161,15 @@
       <BehatRunner />
       <method />
     </configuration>
-    <configuration default="true" type="PhpUnitRemoteRunConfigurationType" factoryName="PHPUnit on Server">
-      <method />
-    </configuration>
     <configuration default="true" type="js.build_tools.gulp" factoryName="Gulp.js">
       <node-options />
       <gulpfile />
       <tasks />
       <pass-parent-envs>true</pass-parent-envs>
       <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="PhpUnitRemoteRunConfigurationType" factoryName="PHPUnit on Server">
       <method />
     </configuration>
     <list size="0" />
@@ -270,7 +198,7 @@
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32055378" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32374868" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -308,318 +236,18 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/updatestudentdetails.php">
+    <entry file="file://$PROJECT_DIR$/access_org_admin_panel.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1485">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="240">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/teacherpanel.php">
+    <entry file="file://$PROJECT_DIR$/page/js/ajax.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="30150">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="100">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/teamadminpanel.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="30930">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/model/access/user_profile.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="452" max-vertical-offset="1410">
-          <caret line="88" column="0" selection-start-line="88" selection-start-column="0" selection-end-line="88" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/peyman_test_teampanel.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="29550">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/model/access/user_profile.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="704" max-vertical-offset="1410">
-          <caret line="88" column="0" selection-start-line="88" selection-start-column="0" selection-end-line="88" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/peyman_test_teampanel.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="28844" max-vertical-offset="29550">
-          <caret line="1964" column="9" selection-start-line="1964" selection-start-column="9" selection-end-line="1964" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/template/JSON/lang/lang.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0782881" vertical-offset="0" max-vertical-offset="958">
-          <caret line="5" column="1" selection-start-line="5" selection-start-column="1" selection-end-line="5" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/model/language/lang.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.14091858" vertical-offset="0" max-vertical-offset="958">
-          <caret line="9" column="5" selection-start-line="9" selection-start-column="5" selection-end-line="9" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/control/utilities/session.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-5.625" vertical-offset="0" max-vertical-offset="795">
-          <caret line="14" column="9" selection-start-line="14" selection-start-column="9" selection-end-line="14" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/config.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-16.25" vertical-offset="0" max-vertical-offset="495">
-          <caret line="26" column="42" selection-start-line="26" selection-start-column="30" selection-end-line="26" selection-end-column="42" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/template/js/teacherpanel/main.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="465">
-          <caret line="26" column="0" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/template/css/teacherpanel/main.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.24439919" vertical-offset="0" max-vertical-offset="982">
-          <caret line="16" column="0" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/template/js/teacherpanel/country_name.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="645">
-          <caret line="39" column="3" selection-start-line="39" selection-start-column="3" selection-end-line="39" selection-end-column="3" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/model/database/data.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-13.75" vertical-offset="1035" max-vertical-offset="4950">
-          <caret line="91" column="8" selection-start-line="91" selection-start-column="8" selection-end-line="91" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/template/js/teacherpanel/google_chart.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="443" max-vertical-offset="1425">
-          <caret line="89" column="1" selection-start-line="89" selection-start-column="1" selection-end-line="89" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/staffregistrationstep2.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="84.375" vertical-offset="2025" max-vertical-offset="5220">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/model/access/test_file.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.23219815" vertical-offset="0" max-vertical-offset="646">
-          <caret line="10" column="0" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="72" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/religonteacherdataout(peyman edit check bugs).php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-23.166666" vertical-offset="599" max-vertical-offset="1245">
-          <caret line="77" column="2" selection-start-line="77" selection-start-column="2" selection-end-line="77" selection-end-column="2" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/model/access/key_facts_function.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.43841335" vertical-offset="645" max-vertical-offset="3180">
-          <caret line="15" column="0" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/admin_teacher.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-5.611171" vertical-offset="15004" max-vertical-offset="31845">
-          <caret line="652" column="0" selection-start-line="652" selection-start-column="0" selection-end-line="652" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/backup/teamadminpanel (1).php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="29085">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/temp/teacherpanel.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.24843423" vertical-offset="56312" max-vertical-offset="57330">
-          <caret line="3770" column="0" selection-start-line="3770" selection-start-column="0" selection-end-line="3770" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/temp/teampanel.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.27974948" vertical-offset="28067" max-vertical-offset="29085">
-          <caret line="1889" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="1933" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/view_teacherpanel.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.6419624" vertical-offset="0" max-vertical-offset="958">
-          <caret line="41" column="0" selection-start-line="41" selection-start-column="0" selection-end-line="41" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/teamadminpanel(peyman edit check bugs).php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-7.265136" vertical-offset="7080" max-vertical-offset="33330">
-          <caret line="8" column="0" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/headerteamadmin.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.43841335" vertical-offset="0" max-vertical-offset="958">
-          <caret line="28" column="38" selection-start-line="28" selection-start-column="38" selection-end-line="28" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/peyman_test_teampanel.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.37682673" vertical-offset="27869" max-vertical-offset="29550">
-          <caret line="1882" column="13" selection-start-line="1882" selection-start-column="13" selection-end-line="1882" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/model/access/invite.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.21920668" vertical-offset="105" max-vertical-offset="5685">
-          <caret line="26" column="8" selection-start-line="26" selection-start-column="8" selection-end-line="30" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/model/access/access_teacherpanel.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.83716077" vertical-offset="908" max-vertical-offset="1890">
-          <caret line="119" column="12" selection-start-line="116" selection-start-column="7" selection-end-line="120" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/model/access/user_profile.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.90605426" vertical-offset="452" max-vertical-offset="1410">
-          <caret line="88" column="0" selection-start-line="88" selection-start-column="0" selection-end-line="88" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/control/utilities/csv_file.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.51670146" vertical-offset="0" max-vertical-offset="958">
-          <caret line="38" column="0" selection-start-line="38" selection-start-column="0" selection-end-line="38" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/PSCO_function.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="6270">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/page/page/js/ajax.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2700">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/csv_file.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="982">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/teacherregistrationstep3.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="8205">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/updatestaffdetails.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1500">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/invite.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="5685">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/teacherpanel.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="30150">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/teamadminpanel.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-1.152" vertical-offset="720" max-vertical-offset="30930">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/updatestudentdetails.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1485">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/control/control_teacherpanel.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.72136223" vertical-offset="929" max-vertical-offset="1575">
-          <caret line="93" column="0" selection-start-line="93" selection-start-column="0" selection-end-line="94" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/controller_school_admin_panel.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.48452014" vertical-offset="632" max-vertical-offset="1590">
-          <caret line="68" column="22" selection-start-line="68" selection-start-column="22" selection-end-line="68" selection-end-column="22" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/controller_org_admin_panel.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.18789144" vertical-offset="0" max-vertical-offset="958">
-          <caret line="17" column="17" selection-start-line="17" selection-start-column="17" selection-end-line="17" selection-end-column="17" />
           <folding />
         </state>
       </provider>

@@ -88,7 +88,7 @@ function makecsv($data, $csvfilename, $scriptrun = null)
     fclose($file);
     if ($scriptrun) {
         echo "<script type='text/javascript'>
-				location.replace($csvfilename);
+				try{location.replace($csvfilename);}catch (e){}
 				</script>";
     }
 
@@ -634,7 +634,7 @@ function test_input($data)
                                     $queryp = "select classname from classteacher where teacheremailid = '" . $adminid . "' AND schoolid = '" . $schoolId . "'";
                                     $resultp = mysql_query($queryp);
                                     echo "Class Name: ";
-                                    echo '<select name="classnamedropdownstutab" >';
+                                    echo '<select name="classnamedropdownstutab" onchange="submit();" >';
                                     while ($rowp = mysql_fetch_array($resultp)) {
                                         $selected = ($rowp['classname'] == $currentClassName) ? 'selected="selected"' : '';
                                         echo '<option value="' . $rowp['classname'] . '"' . $selected . ' >' . $rowp['classname'] . '</option>';
@@ -898,6 +898,17 @@ function test_input($data)
 
                             </div>
 
+                            <div id="lessonplans" class="tab-pane fade">
+
+                                <br>
+                                <ul style="list-style-image:url(images/lessonplanicon.png);">
+                                    <li><a href="lessonplans/UNIT 1.pdf" target="_blank" style="color:#000;">Unit 1 (5-7 years+)</a></li><br>
+                                    <li><a href="lessonplans/UNIT 2.pdf" target="_blank" style="color:#000;">Unit 2 (8-9 years+) </a></li><br>
+                                    <li><a href="lessonplans/UNIT 3.pdf" target="_blank" style="color:#000;">Unit 3 (10-12 years+) </a></li><br>
+                                    <li><a href="lessonplans/UNIT 4.pdf" target="_blank" style="color:#000;">Unit 4 (All Age Groups)</a></li><br>
+                                </ul>
+                            </div>
+
                             <div id="maps" class="tab-pane fade">
                                 <div class="headerContent">MAPS</div>
 
@@ -999,10 +1010,11 @@ function test_input($data)
                                                         }
                                                     }
                                                 } ?>/>&nbsp;Maternal GrandMother<br/>
+                                                <input type="hidden" value="submitval" name="submitval" id="submitval">
 
 
                                                 <br>
-                                                <input type="submit" id="submitval" name="submitval" value="SUBMIT">
+                                            <input type="submit" id="submitval" name="submitval" value="SUBMIT">
                                             </form>
 
                                             <br><br>
@@ -1820,7 +1832,7 @@ if (isset($_POST['submitvalbeltab'])) {
         <div class="modal-content">
             <div class="modal-header">
                 <button type="button" class="close" data-dismiss="modal">&times;</button>
-                <h4 class="modal-title" style="text-align:center; " font-weight:bold; ">Update Student Details</h4>
+                <h4 class="modal-title" style="text-align:center;font-weight:bold; ">Update Student Details</h4>
             </div>
             <div class="modal-body">
 
@@ -1951,7 +1963,7 @@ if (isset($_POST['submitvalbeltab'])) {
 
                     <div class="form-group">
                         <div class="col-sm-9">
-                            <table class='table borderless table-responsive ' id="employee_lang">
+                            <table class='table borderless table-responsive'>
 
                             </table>
                         </div>
@@ -2029,7 +2041,7 @@ if (isset($_POST['submitvalbeltab'])) {
                     $('#employee_lang').html(lang.data);
                     /*P.N*/
                     // Create add Language Btn ....
-                /*    var tfoot = document.createElement('tfoot');
+                    var tfoot = document.createElement('tfoot');
                     var tr = document.createElement('tr');
                     var td = document.createElement('td');
                     td.setAttribute('colspan', '2');
@@ -2041,7 +2053,7 @@ if (isset($_POST['submitvalbeltab'])) {
                     td.appendChild(btn);
                     tr.appendChild(td);
                     tfoot.appendChild(tr);
-                    document.getElementById('employee_lang').appendChild(tfoot); */
+                    document.getElementById('employee_lang').appendChild(tfoot);
                     $('#edit_data_Modal').modal('show');
                 }
             });
@@ -2133,6 +2145,4 @@ if (isset($_POST['submitvalbeltab'])) {
 
     });
 </script>
- 
- 
  

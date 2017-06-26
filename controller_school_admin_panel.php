@@ -42,7 +42,6 @@ require_once 'access_school_admin_panel.php';
 require_once 'access_school_key_fact.php';
 require_once 'lang.php';
 
-
 if (isset($_SESSION['emailid']) && $_SESSION['emailid'] != '' ) {
 
     if (isset($_REQUEST['act']) && $_REQUEST['act'] != '' && $_REQUEST['act'] != null) {
@@ -252,6 +251,18 @@ if (isset($_SESSION['emailid']) && $_SESSION['emailid'] != '' ) {
             case 'get_map':
                 $result = access_school_admin_panel:: get_map($_SESSION['user']['schoolid'] ,$_POST['formDoor'] );
                 controller_main_function::send_result($result);
+                break;
+
+            case 'get_map_poster':
+
+                $result = access_school_admin_panel::get_address_map_poster($_SESSION['user']['schoolid']);
+                $result3 = access_school_admin_panel::get_all_student_count_map_pooster($_SESSION['user']['schoolid']);
+                $result1 = access_school_admin_panel::get_gender_count_map_pooster($_SESSION['user']['schoolid'] , 'female');
+                $result2 = access_school_admin_panel::get_gender_count_map_pooster($_SESSION['user']['schoolid'] , 'male');
+                $export = array_merge($result, $result1);
+                $export = array_merge($export, $result2);
+                $export = array_merge($export, $result3);
+                controller_main_function::send_result($export);
                 break;
         }
 

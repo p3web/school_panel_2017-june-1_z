@@ -345,7 +345,8 @@ function TabelCreateor(data, tableId) {
     for (i = 0; i < data.trData.length; i++) {
         tableData += '<tr><td>' + (i + 1) + '</td>';
         for (var a = 0; a < data.trData[i].length; a++) {
-            tableData += '<td>' + data.trData[i][a] + '</td>';
+            var tdata = data.trData[i][a]== null ? '-' : data.trData[i][a] ;
+            tableData += '<td>' +tdata + '</td>';
         }
         tableData += '</tr>';
     }

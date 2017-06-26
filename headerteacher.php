@@ -57,12 +57,13 @@
                     
                     <a href="teacherpanel.php?logoutrequest" class="btn btn-default navbar-btn logbutton submitbtunnew" style="float:right; border-radius:5px; margin:1.0em 0em; font-weight:bold;  text-decoration:none; ">LOGOUT</a>
 
-                    <a id="btn_user_profile" href="#" class="btn btn-default navbar-btn logbutton submitbtunnew" style="float:right; border-radius:5px; margin:1.0em 0em; font-weight:bold;  text-decoration:none; margin-right: 1em;">PROFILE</a>
+
                 </div>
         </div>-->
     <div class="col-sm-1 no-padding Lightbackground headerLight" style="border-right: none">
+        <a id="btn_user_profile" href="#" class="btn HeaderBtn btn-default navbar-btn logbutton submitbtunnew" style="/*float:right; border-radius:5px; margin:1.0em 0em; font-weight:bold;  text-decoration:none; margin-right: 1em;*/">PROFILE</a>
         <a href="teacherpanel.php?logoutrequest" id="logOutBtn"
-           class="btn btn-default navbar-btn logbutton submitbtunnew"><span id="logoutSpan">LOGOUT</span><i
+           class="btn btn-default navbar-btn logbutton HeaderBtn submitbtunnew"><span id="logoutSpan">LOGOUT</span><i
                     id="logoutIcon" class="glyphicon glyphicon-off"></i> </a>
     </div>
 
