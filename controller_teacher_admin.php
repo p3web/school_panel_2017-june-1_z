@@ -71,7 +71,9 @@ if(isset($_REQUEST['act'])) {
                 controller_main_function::send_msg(lang::$invalid_data, lang::$error);
             }
             user_profile::set_student_language($_REQUEST["studentemailid"], $_REQUEST['languagename'], $_REQUEST['languagelevel']);
-            controller_main_function::send_msg(lang::$success, lang::$message);
+            //controller_main_function::send_msg(lang::$success, lang::$message);
+            $data = user_profile::get_student_language($_REQUEST['studentemailid']);
+            controller_main_function::send_result($data);
             break;
 
         case 'get_student_language':
@@ -84,12 +86,14 @@ if(isset($_REQUEST['act'])) {
             break;
 
         case 'delete_student_language':
-            $valid_data = controller_main_function::check_validation(array("id"));
+            $valid_data = controller_main_function::check_validation(array("id","studentemailid"));
             if (!isset($valid_data['is_valid']) || $valid_data['is_valid'] == false) {
                 controller_main_function::send_msg(lang::$invalid_data, lang::$error);
             }
             user_profile::delete_student_language($_REQUEST["id"]);
-            controller_main_function::send_msg(lang::$success, lang::$message);
+            //controller_main_function::send_msg(lang::$success, lang::$message);
+            $data = user_profile::get_student_language($_REQUEST['studentemailid']);
+            controller_main_function::send_result($data);
             break;
 
         case 'belief_class':

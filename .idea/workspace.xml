@@ -2,7 +2,33 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="676e04ff-6d34-48ac-9098-ebf739dc256d" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.ftpquota" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.htaccess" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/page/js/lang.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/page/data_value/lang.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/page/js/validate.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/page/SchoolAdmin/js/load_pages/Index.js" afterPath="$PROJECT_DIR$/page/SchoolAdmin/js/load_pages/Index.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/page/js/PSCO_Grid.js" afterPath="$PROJECT_DIR$/page/js/PSCO_Grid.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/PSCO_data.php" afterPath="$PROJECT_DIR$/PSCO_data.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/page/js/TeacherAdmin.js" afterPath="$PROJECT_DIR$/page/js/TeacherAdmin.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/access_org_key_fact.php" afterPath="$PROJECT_DIR$/access_org_key_fact.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/access_school_admin_panel.php" afterPath="$PROJECT_DIR$/access_school_admin_panel.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/controller_school_admin_panel.php" afterPath="$PROJECT_DIR$/controller_school_admin_panel.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/controller_teacher_admin.php" afterPath="$PROJECT_DIR$/controller_teacher_admin.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/controller_user.php" afterPath="$PROJECT_DIR$/controller_user.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/error_log" afterPath="$PROJECT_DIR$/error_log" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fetchstudentinfo.php" afterPath="$PROJECT_DIR$/fetchstudentinfo.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/headerteacher.php" afterPath="$PROJECT_DIR$/headerteacher.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/page/SchoolAdmin/index.html" afterPath="$PROJECT_DIR$/page/SchoolAdmin/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/invite.php" afterPath="$PROJECT_DIR$/invite.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lang.php" afterPath="$PROJECT_DIR$/lang.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/peyman_test_teachpanel.php" afterPath="$PROJECT_DIR$/peyman_test_teachpanel.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/staffcount.csv" afterPath="$PROJECT_DIR$/staffcount.csv" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/teacherlangout.csv" afterPath="$PROJECT_DIR$/teacherlangout.csv" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/teamadminlangout.csv" afterPath="$PROJECT_DIR$/teamadminlangout.csv" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/teamadminregionout.csv" afterPath="$PROJECT_DIR$/teamadminregionout.csv" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/teamadminreligonout.csv" afterPath="$PROJECT_DIR$/teamadminreligonout.csv" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/user_profile.php" afterPath="$PROJECT_DIR$/user_profile.php" />
     </list>
     <ignored path="school_panel_2017-june-1_z.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -26,7 +52,18 @@
     <favorites_list name="school_panel_2017-june-1_z" />
   </component>
   <component name="FileEditorManager">
-    <leaf />
+    <leaf>
+      <file leaf-file-name="ajax.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/page/js/ajax.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="982">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -123,6 +160,38 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="school_panel_2017-june-1_z" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="school_panel_2017-june-1_z" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="page" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="school_panel_2017-june-1_z" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="school_panel_2017-june-1_z" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="page" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="js" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
     </panes>
@@ -198,7 +267,7 @@
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32374868" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32374868" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -236,14 +305,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/access_org_admin_panel.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="240">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/page/js/ajax.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="100">

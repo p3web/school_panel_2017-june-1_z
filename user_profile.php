@@ -31,27 +31,33 @@ class user_profile
 
     }
 
-    public static function set_teacher_language($email, $languagename, $languagelevel){
-        return data::insertinto("teacherlanguage", "`teacheremailid`, `languagename`, `languagelevel`", "'$email', '$languagename', '$languagelevel'");
+    public static function set_teacher_language($email, $languagename, $languagelevel)
+    {
+        return data::insertinto("teacher_language", "`teacheremailid`, `languagename`, `languagelevel`", "'$email', '$languagename', '$languagelevel'");
     }
 
-    public static function delete_teacher_language($id){
+    public static function delete_teacher_language($id)
+    {
         return data::delete("teacher_language", "`id` = '$id'");
     }
 
-    public static function set_student_language($email, $languagename, $languagelevel){
-        return data::insertinto("studentlanguage", "`studentemailid`, `languagename`, `languagelevel`", "'$email', '$languagename', '$languagelevel'");
+    public static function set_student_language($email, $languagename, $languagelevel)
+    {
+        return data::insertinto("student_language", "`studentemailid`, `languagename`, `languagelevel`", "'$email', '$languagename', '$languagelevel'");
     }
 
-    public static function delete_student_language($id){
+    public static function delete_student_language($id)
+    {
         return data::delete("student_language", "`id` = '$id'");
     }
 
-    public static function set_staff_language($email, $languagename, $languagelevel){
-        return data::insertinto("stafflanguage", "`staffemailid`, `languagename`, `languagelevel`", "'$email', '$languagename', '$languagelevel'");
+    public static function set_staff_language($email, $languagename, $languagelevel)
+    {
+        return data::insertinto("staff_language", "`staffemailid`, `languagename`, `languagelevel`", "'$email', '$languagename', '$languagelevel'");
     }
 
-    public static function delete_staff_language($id){
+    public static function delete_staff_language($id)
+    {
         return data::delete("staff_language", "`id` = '$id'");
     }
 
@@ -104,12 +110,36 @@ class user_profile
 
     }
 
-    public static function edit_teacher_profile($email, $firstname, $lasttname, $gender, $department, $birthplace, $fatherbirthplace, $motherbirthplace, $fatherfatherbirthplace, $fathermotherbirthplace, $motherfatherbirthplace, $mothermotherbirthplace)
+    public static function edit_teacher_profile($email, $firstname, $lasttname, $religion, $gender, $schoolid, $birthplace, $fatherbirthplace, $motherbirthplace, $fatherfatherbirthplace, $fathermotherbirthplace, $motherfatherbirthplace, $mothermotherbirthplace)
     {
+        //the parameter $result_teacher added to check whether the transaction is successful or failure
+        $result_teacher = data::update("`teacher`", "`schoolid`='$schoolid',`firstname`='$firstname',`lastname`='$lasttname', `religion`='$religion', `gender`='$gender'", "`teacheremailid`='$email'");
+        //this line just added to check the transaction result and in case of error return false
+        if (strpos($result_teacher, 'rror') !== false) {
+            return false;
+        }
+        //the parameter $result_birth added to check whether the transaction is successful or failure
+        $result_birth = data::update("`teacherbirthdetails`", "`birthplace`='$birthplace', `fatherbirthplace`='$fatherbirthplace', `motherbirthplace`='$motherbirthplace', `fatherfatherbirthplace`='$fatherfatherbirthplace', `fathermotherbirthplace`='$fathermotherbirthplace', `motherfatherbirthplace`='$motherfatherbirthplace', `mothermotherbirthplace`='$mothermotherbirthplace'", "`teacheremailid`='$email'");
+        //this line just added to check the transaction result and in case of error return false
+        if (strpos($result_birth, 'rror') !== false) {
+            return false;
+        }
+    }
 
-        data::update("`teacher`", "`deptname`='$department',`firstname`='$firstname',`lastname`='$lasttname', `gender`='$gender'", "`teacheremailid`='$email'");
-
-        data::update("`teacherbirthdetails`", "`birthplace`='$birthplace', `fatherbirthplace`='$fatherbirthplace', `motherbirthplace`='$motherbirthplace', `fatherfatherbirthplace`='$fatherfatherbirthplace', `fathermotherbirthplace`='$fathermotherbirthplace', `motherfatherbirthplace`='$motherfatherbirthplace', `mothermotherbirthplace`='$mothermotherbirthplace'", "`teacheremailid`='$email'");
+    public static function edit_student_profile($email, $firstname, $lasttname, $religion, $gender, $schoolid, $birthplace, $fatherbirthplace, $motherbirthplace, $fatherfatherbirthplace, $fathermotherbirthplace, $motherfatherbirthplace, $mothermotherbirthplace)
+    {
+        //the parameter $result_teacher added to check whether the transaction is successful or failure
+        $result_teacher = data::update("`student`", "`schoolid`='$schoolid',`firstname`='$firstname',`lastname`='$lasttname', `religion`='$religion', `gender`='$gender'", "`studentemailid`='$email'");
+        //this line just added to check the transaction result and in case of error return false
+        if (strpos($result_teacher, 'rror') !== false) {
+            return false;
+        }
+        //the parameter $result_birth added to check whether the transaction is successful or failure
+        $result_birth = data::update("`studentbirthdetails`", "`birthplace`='$birthplace', `fatherbirthplace`='$fatherbirthplace', `motherbirthplace`='$motherbirthplace', `fatherfatherbirthplace`='$fatherfatherbirthplace', `fathermotherbirthplace`='$fathermotherbirthplace', `motherfatherbirthplace`='$motherfatherbirthplace', `mothermotherbirthplace`='$mothermotherbirthplace'", "`studentemailid`='$email'");
+        //this line just added to check the transaction result and in case of error return false
+        if (strpos($result_birth, 'rror') !== false) {
+            return false;
+        }
     }
 
     public static function edit_teacher_language($data)
@@ -313,7 +343,7 @@ class user_profile
 
     }
 
-    public static function get_class_by_schoolId($adminid,$schoolId)
+    public static function get_class_by_schoolId($adminid, $schoolId)
     {
         $data = data::selects_col("`classteacher`", " `classname`", "teacheremailid = '$adminid' AND schoolid = '$schoolId'");
         if (count($data[0]) != 0) {
@@ -347,9 +377,11 @@ class user_profile
                         $('.PSCO_language').prop('disabled', false);
                         $('.PSCO_language_level').prop('disabled', false);
                         btn_edit.html('Save');
-                        btn_edit.attr('name','save');
+                        btn_edit.attr('name','save');                        
                         $('#user_profile_header').html('Edit user profile');
-                                 //_______ create Delete Language Btn
+                        
+                            Profile.CreateAdd('employee_lang');
+/*                                 //_______ create Delete Language Btn
                         var Tbody = document.querySelector('#employee_lang > tbody');
                         for(var i = 0 ; i < Tbody.childElementCount ; i++) {
 	                        var deletetd = document.createElement('td');
@@ -374,9 +406,10 @@ class user_profile
                     td.appendChild(btn);
                     tr.appendChild(td);
                     tfoot.appendChild(tr);
-                    document.getElementById('employee_lang').appendChild(tfoot);
+                    document.getElementById('employee_lang').appendChild(tfoot);*/
                     }else{
-                        $('#frm_edit_user').submit();
+                        //$('#frm_edit_user').submit();    
+                         Profile.SaveLang();                        
                         $('.psco_readonly').prop('readonly', true);
                         $('#frm_edit_user_gender').prop('disabled', true);
                         $('#frm_edit_user_department').prop('disabled', true);
@@ -408,19 +441,15 @@ class user_profile
                     </select><br></td></tr><tr><td>Age Group:</td><td><select name='age' id='frm_edit_user_age' class='form-control' form='frm_edit_user' disabled >
 
                     </select><br></td></tr>
-                    <tr><td>Department:</td><td> <select name='department' class='form-control' id='frm_edit_user_department' form='frm_edit_user' disabled>
-                        <option value='Database' " . ($data[0]['deptname'] == "Database" ? "selected" : "") . ">Database</option>
-                        <option value='HR' " . ($data[0]['deptname'] == "HR" ? "selected" : "") . ">HR</option>
-                        <option value='IT' " . ($data[0]['deptname'] == "IT" ? "selected" : "") . ">IT</option>
-                    </select><br></td></tr>
+                
                     <tr><td>Religion:</td><td> <select name='religion' class='form-control' id='frm_edit_user_religion' form='frm_edit_user' disabled>
-                        <option value='Database' " . ($data[0]['religion'] == "Buddhism" ? "selected" : "") . ">Buddhism</option>
-                        <option value='HR' " . ($data[0]['religion'] == "Christianity" ? "selected" : "") . ">Christianity</option>
-                        <option value='IT' " . ($data[0]['religion'] == "hindu" ? "selected" : "") . ">hindu</option>
-                        <option value='IT' " . ($data[0]['religion'] == "Islam" ? "selected" : "") . ">Islam</option>
-                        <option value='IT' " . ($data[0]['religion'] == "Nation Of Islam" ? "selected" : "") . ">Nation Of Islam</option>
-                        <option value='IT' " . ($data[0]['religion'] == "Pluralist" ? "selected" : "") . ">Pluralist</option>
-                        <option value='IT' " . ($data[0]['religion'] == "Sikhism" ? "selected" : "") . ">Sikhism</option>
+                        <option value='Buddhism' " . ($data[0]['religion'] == "Buddhism" ? "selected" : "") . ">Buddhism</option>
+                        <option value='Christianity' " . ($data[0]['religion'] == "Christianity" ? "selected" : "") . ">Christianity</option>
+                        <option value='hindu' " . ($data[0]['religion'] == "hindu" ? "selected" : "") . ">hindu</option>
+                        <option value='Islam' " . ($data[0]['religion'] == "Islam" ? "selected" : "") . ">Islam</option>
+                        <option value='Nation Of Islam' " . ($data[0]['religion'] == "Nation Of Islam" ? "selected" : "") . ">Nation Of Islam</option>
+                        <option value='Pluralist' " . ($data[0]['religion'] == "Pluralist" ? "selected" : "") . ">Pluralist</option>
+                        <option value='Sikhism' " . ($data[0]['religion'] == "Sikhism" ? "selected" : "") . ">Sikhism</option>
                     </select><br></td></tr>
                     <tr><td>Password:</td><td><button id='btn_change_pass_user' type='button' class='btn btn-warning' style='margin: 0 auto;display: block;width: 45%;padding: 2%;' >Update My Password</button><br></td></tr>
                 </table>
@@ -446,9 +475,22 @@ class user_profile
                 <br><hr>
                 <button type='button' class='btn btn-danger'  data-dismiss='modal'>Close</button>
                 <input type='hidden' name='act' value='edit_teacher_user'>
+                <input type='hidden' id='edit_teacher_profile_page_name' name='edit_teacher_profile_page_name' >
+                <input type='hidden' id='schoolid' name='schoolid' >
                 <button id='btn_profile_edit' name='edit' type='button' class='btn btn-warning' onclick='btn_user_profile_edit()'>Edit</button>
             </form>
             <script type='text/javascript'>
+               $('#edit_teacher_profile_page_name').ready(function(){
+            var page = window.location.href;
+            page = page.split('/');
+            page = page[page.length-1];
+            $('#edit_teacher_profile_page_name').val(page);
+           
+            });
+               $('#schoolid').ready(function() {
+                 $('#schoolid').val(window.schoolId);
+               });
+            
                 $('.PSCO_country').ready(function(){
                     $('.PSCO_country').load( 'page/data_value/country.html' );
                 });
@@ -471,16 +513,18 @@ class user_profile
 
 
                  $('#frm_edit_user_age').val('" . $age[0]['age'] . "');
+
                 ";
 
         for ($lang_index = 0; $lang_index < count($language); $lang_index++) {
-            $temp .= "
-                $('#edit_profile_language$lang_index').val('" . $language[$lang_index]['languagename'] . "');
-                $('#edit_profile_language_level$lang_index').val('" . $language[$lang_index]['languagelevel'] . "');
-                ";
+            $temp .= "setTimeout(function(){
+                document.getElementById('edit_profile_language$lang_index').value ='" . $language[$lang_index]['languagename'] . "';
+                document.getElementById('edit_profile_language_level$lang_index').value ='" . $language[$lang_index]['languagelevel'] . "';
+                }," . 100 * $lang_index . ");";
         }
 
         $temp .= "
+
                 $('#profile_country_self').val('" . $birthdetails[0]['birthplace'] . "');
                 $('#profile_country_Mother').val('" . $birthdetails[0]['motherbirthplace'] . "');
                 $('#profile_country_Mother_Grandfather').val('" . $birthdetails[0]['fathermotherbirthplace'] . "');
@@ -490,6 +534,7 @@ class user_profile
                 $('#profile_country_Father_GrandMother').val('" . $birthdetails[0]['motherfatherbirthplace'] . "');
 
                 }, 3000);
+                
                 </script>";
 
         return $temp;

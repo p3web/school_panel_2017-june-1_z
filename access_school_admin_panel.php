@@ -286,6 +286,13 @@ class access_school_admin_panel
         }
     }
 
+    public static function set_teacher_class($teacheremailid, $schoolid ,$classname )
+    {
+        //insert into classteacher(schoolid, teacheremailid, classname) values('$schoolId','$email','$class')
+        return data::insertinto("`classteacher`", "`schoolid`, `teacheremailid`, `classname`", "'$schoolid' , '$teacheremailid' , '$classname'");
+    }
+
+
 }
 
 

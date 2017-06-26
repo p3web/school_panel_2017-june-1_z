@@ -1854,7 +1854,7 @@ if (isset($_POST['submitvalbeltab'])) {
             </div>
             <div class="modal-body">
 
-                <form method="post" id="update_form" class="form-horizontal">
+                <form method="post" id="update_form" action="" class="form-horizontal">
                     <h3 style="padding: 1% 0%; background-color:#FE8885; color:#FFF; text-align:center;  border-radius: 8px;">
                         PERSONAL DETAILS</h3>
 
@@ -1923,7 +1923,8 @@ if (isset($_POST['submitvalbeltab'])) {
                         <label class="control-label col-sm-3" for="sb">Student:</label>
 
                         <div class="col-sm-9">
-                            <input type="text" class="form-control" id="sb" name="sb">
+                            <select name="sb" id="sb" class="form-control PSCO_country"></select>
+                            <!--<input type="text" class="form-control" id="sb" name="sb">-->
                         </div>
                     </div>
 
@@ -1932,21 +1933,24 @@ if (isset($_POST['submitvalbeltab'])) {
                         <label class="control-label col-sm-3" for="m">Mother:</label>
 
                         <div class="col-sm-9">
-                            <input type="text" class="form-control" id="m" name="m">
+                            <select name="m" id="m" class="form-control PSCO_country"></select>
+                            <!--<input type="text" class="form-control" id="m" name="m">-->
                         </div>
                     </div>
                     <div class="form-group">
                         <label class="control-label col-sm-3" for="gfm">GrandFather:</label>
 
                         <div class="col-sm-9">
-                            <input type="text" class="form-control" id="gfm" name="gfm">
+                            <select name="gfm" id="gfm" class="form-control PSCO_country"></select>
+                            <!--<input type="text" class="form-control" id="gfm" name="gfm">-->
                         </div>
                     </div>
                     <div class="form-group">
                         <label class="control-label col-sm-3" for="gmm">GrandMother:</label>
 
                         <div class="col-sm-9">
-                            <input type="text" class="form-control" id="gmm" name="gmm">
+                            <select name="gmm" id="gmm" class="form-control PSCO_country"></select>
+                            <!--<input type="text" class="form-control" id="gmm" name="gmm">-->
                         </div>
                     </div>
 
@@ -1955,21 +1959,24 @@ if (isset($_POST['submitvalbeltab'])) {
                         <label class="control-label col-sm-3" for="f">Father:</label>
 
                         <div class="col-sm-9">
-                            <input type="text" class="form-control" id="f" name="f">
+                            <select name="f" id="f" class="form-control PSCO_country"></select>
+                            <!--<input type="text" class="form-control" id="f" name="f">-->
                         </div>
                     </div>
                     <div class="form-group">
                         <label class="control-label col-sm-3" for="gff">GrandFather:</label>
 
                         <div class="col-sm-9">
-                            <input type="text" class="form-control" id="gff" name="gff">
+                            <select name="gff" id="gff" class="form-control PSCO_country"></select>
+                            <!--<input type="text" class="form-control" id="gff" name="gff">-->
                         </div>
                     </div>
                     <div class="form-group">
                         <label class="control-label col-sm-3" for="gmf">GrandMother:</label>
 
                         <div class="col-sm-9">
-                            <input type="text" class="form-control" id="gmf" name="gmf">
+                            <select name="gmf" id="gmf" class="form-control PSCO_country"></select>
+                            <!--<input type="text" class="form-control" id="gmf" name="gmf">-->
                         </div>
 
 
@@ -1980,7 +1987,7 @@ if (isset($_POST['submitvalbeltab'])) {
                         LANGUAGES</h3>
 
                     <div class="form-group">
-                        <div class="col-sm-9">
+                        <div class="col-sm-12">
                             <table id="employee_lang_edit_profile" class='table borderless table-responsive'>
 
                             </table>
@@ -1988,7 +1995,7 @@ if (isset($_POST['submitvalbeltab'])) {
                     </div>
 
                     <br>
-                    <input type="submit" name="update" id="update" value="Save" class="btn btn-success "/>
+                    <input type="button" onclick="Profile.SaveLang()" name="update" id="update" value="Save" class="btn btn-success "/>
 
                 </form>
 
@@ -2062,6 +2069,11 @@ if (isset($_POST['submitvalbeltab'])) {
                     $('#employee_lang_edit_profile').html(lang.data);
 
                     /*P.N*/
+
+                    Profile.CreateAdd('employee_lang_edit_profile');
+
+                   /* // reset AddLanguage
+                    Profile.ResetAdd();
                     //_______ create Delete Language Btn
                     var Tbody = document.querySelector('#employee_lang_edit_profile > tbody');
                     for (var i = 0; i < Tbody.childElementCount; i++) {
@@ -2081,12 +2093,13 @@ if (isset($_POST['submitvalbeltab'])) {
                         var btn = document.createElement('div');
                         btn.setAttribute('class', 'btn btn-primary btn-block');
                         btn.setAttribute('onclick', 'Profile.Addlanguage()');
+                        btn.setAttribute('id', 'AddlanguageBTN');
                         btn.innerText = 'Add Language';
                         // append Child
                         td.appendChild(btn);
                         tr.appendChild(td);
                         tfoot.appendChild(tr);
-                        document.getElementById('employee_lang_edit_profile').appendChild(tfoot);
+                        document.getElementById('employee_lang_edit_profile').appendChild(tfoot);*/
                         $('#edit_data_Modal').modal('show');
                     }
 

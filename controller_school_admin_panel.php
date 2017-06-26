@@ -40,7 +40,9 @@ session_start();
 require_once 'controller_main_function.php';
 require_once 'access_school_admin_panel.php';
 require_once 'access_school_key_fact.php';
+require_once 'invite.php';
 require_once 'lang.php';
+
 
 if (isset($_SESSION['emailid']) && $_SESSION['emailid'] != '' ) {
 
@@ -198,10 +200,10 @@ if (isset($_SESSION['emailid']) && $_SESSION['emailid'] != '' ) {
                 if (!isset($valid_data['is_valid']) || $valid_data['is_valid'] == false) {
                     controller_main_function::send_msg(lang::$invalid_data, lang::$error);
                 }
-                access_school_admin_panel::set_class_by_schoolId($_SESSION['user']['schoolid'],$_REQUEST["name"]);
-                //controller_main_function::send_msg(lang::$success, lang::$message);
-                $result = array('data'=> true);
-                controller_main_function::send_result($result);
+                $result =  access_school_admin_panel::set_class_by_schoolId($_SESSION['user']['schoolid'],$_REQUEST["name"]);
+                controller_main_function::send_msg(lang::$success, lang::$message, "success");
+//                $result = array('data'=> true);
+//                controller_main_function::send_result($result);
                 break;
 
             case 'get_key_fact':
@@ -264,6 +266,30 @@ if (isset($_SESSION['emailid']) && $_SESSION['emailid'] != '' ) {
                 $export = array_merge($export, $result3);
                 controller_main_function::send_result($export);
                 break;
+
+            case 'invite_teecher':
+                // for invite you must set $_post['invite'] = true
+                $valid_data = controller_main_function::check_validation(array("invite" , "name" , "email" , "classname"));
+                if (!isset($valid_data['is_valid']) || $valid_data['is_valid'] == false) {
+                    controller_main_function::send_msg(lang::$invalid_data, lang::$error);
+                }
+               // print_r($_REQUEST);
+                $result = invite::invite_teecher($_SESSION['user']['schoolid'],$_SESSION['user']['adminemailid']);
+                if($result == 1 ) {
+                    $result = access_school_admin_panel::set_teacher_class($_REQUEST['email'], $_SESSION['user']['schoolid'], $_REQUEST['classname']);
+
+                    if (strpos($result, 'Duplicate') != false) {
+                        access_school_admin_panel::delete_teacher_by_teacherEmailId($_REQUEST['email']);
+                        $result = lang::$error_duplicate_class_name;
+                        controller_main_function::send_msg($result, lang::$message);
+                    }else{
+                        $result = lang::$success;
+                        controller_main_function::send_msg($result, lang::$message,"success");
+                    }
+                }
+
+                break;
+
         }
 
     } else {

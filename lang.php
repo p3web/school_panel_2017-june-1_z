@@ -11,8 +11,22 @@ class lang{
     public static $success       = 'data success';
     public static $failed        = 'this action is failed.';
     public static $invalid_data  = 'data is not valid.';
+
     public static $error   = 'Error!';
     public static $message = 'Message';
     public static $empty = "Empty!";
+
+    public static $error_duplicate_class_name = "this class name is last registered.";
+
+
+
+    public static function error_hande($error , $display = ""){
+        if($display == ""){
+            return $error;
+        }else{
+            return $display;
+        }
+
+    }
 
 }

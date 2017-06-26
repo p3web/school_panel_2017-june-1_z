@@ -10,10 +10,26 @@ Global.ResultMessage = function (result) {
     }
 };
 
+function set_invite_class_name(data){
+    var opt = '<optgroup label="Class name"></optgroup>';
+    for(var i = 0 ; i<data.length ; i++){
+        opt+= '<option value="'+data[i].classname+'">'+data[i].classname+'</option>';
+    }
+    $("#classInvite").html(opt);
+}
+
 Global.setData = function (Data, gridName) {
     gridName.data = Data;
     gridName.render();
+    //peyman
+    ajax.sender_data_json_by_url_callback(Global.url, {
+        act: 'get_tbl_classes'
+    }, set_invite_class_name);
 };
+
+
+
+
 function showModal(ModalID) {
     $('#' + ModalID).modal('show');
 }
@@ -50,9 +66,14 @@ Teacher.CreateTeacherTblData = function (data) {
     for (var i = 0; i < data.length; i++) {
 
         var Rows = {};
-        Rows['name'] = data[i].name;
+        if(data[i].name != null) {
+            Rows['name'] = data[i].name;
+        }else{
+            Rows['name'] = '_';
+        }
         Rows['email'] = data[i].teacheremailid;
         Rows['status'] = data[i].status;
+        Rows['classname'] = data[i].classname;
         if (data[i].status == 'active') {
             Rows['info'] = {
                 value: '',
@@ -454,6 +475,34 @@ Teacher.Update.CheckResult = function (Data) {
     }
 };
 
+Teacher.invite = function(){
+
+    var email = $("#EmailInvite").val();
+    var classname = $("#classInvite").val();
+    var name = $("#NameInvite").val();
+    var constraints = {from: {email: true}};
+    if (validate({from: email}, constraints) != undefined) {
+        message.show(__lang.translate("teacher email is not valid"),__lang.translate("Error"));
+        return;
+    }
+
+    ajax.sender_data_json_by_url_callback(Global.url, {
+        act: 'invite_teecher',
+        invite : true ,
+        name: name,
+        email : email,
+        classname : classname
+
+
+    }, class_data.add_new_class.result);
+
+    $("#EmailInvite").val("")
+    $("#classInvite").val("");;
+    $("#NameInvite").val("");
+}
+Teacher.invite.result = function(data){}
+
+
 
 /*Key Facts*/
 var KeyFacts = {};
@@ -587,3 +636,27 @@ Teacher.AdminProfile.setData = function (Data) {
 
      }, 3000);*/
 };
+
+
+//____________add className
+var class_data = {};
+
+class_data.add_new_class = function(){
+    var classname = $('#classNameAdd').val();
+    if(classname == "" || classname == undefined || classname == null){
+        message.show(__lang.translate("please Enter class name"),__lang.translate("Error"));
+        return;
+    }
+    ajax.sender_data_json_by_url_callback(Global.url, {
+        act: 'set_class_by_schoolId',
+        name: classname
+    }, class_data.add_new_class.result);
+
+    $('#classNameAdd').val("");
+}
+class_data.add_new_class.result = function(data){};
+
+
+
+
+
