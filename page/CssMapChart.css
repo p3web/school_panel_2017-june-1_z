@@ -55,7 +55,7 @@
     position: absolute;
     z-index: 2;
     width: 12%;
-    left: 50%;
+    left: 63.5%;
     top: -28px;
 }
 
@@ -92,7 +92,7 @@
 }
 
 #TopBorderBar::before {
-    content: 'BELIEF';
+    content: 'RELIGIONS';
     left: -100px;
 }
 

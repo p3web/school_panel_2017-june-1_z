@@ -25,7 +25,7 @@ Belief.CreateBarData = function (Data) {
         a.push({name: Data[i].religion, y: parseInt(Data[i].count)});
     }
     Belief.Series = series;
-    PieChart('ChartContainer', series);
+    BarChart('ChartContainer', series);
 };
 
 
