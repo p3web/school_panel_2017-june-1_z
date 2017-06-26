@@ -49,8 +49,14 @@
             var Name = data[0][i][0];
             var numb = data[0][i][1];
             for (var c = 1; c < MapDatas[0].length; c++) {
-                if (Name.toLowerCase() == MapDatas[1][c].toLowerCase()) {
-                    MapDatas[2][c] = numb;
+                if(Name != 'France') {
+                    if (MapDatas[1][c].toLowerCase().search(Name.toLowerCase()) > -1) {
+                        MapDatas[2][c] = numb;
+                    }
+                }else{
+                    if (MapDatas[1][c] == Name.toLowerCase()) {
+                        MapDatas[2][c] = numb;
+                    }
                 }
             }
         }
@@ -60,7 +66,11 @@
         for (var i = 0; i < data[0].length; i++) {
             Tag += '<tr><td>' + data[0][i][0] + '</td><td>'+data[0][i][1]+'</td></tr>';
         }
-        Table.innerHTML = Tag;
+        try {
+            Table.innerHTML = Tag;
+        }catch (e){
+
+        }
     }
 
 </script>

@@ -31,14 +31,14 @@ body {
     margin-left: 1em;
 }
 
-#logOutBtn {
+.HeaderBtn {
     /* float: right; */
     border-radius: 5px;
     display: block;
     margin: 0 auto;
     font-weight: bold;
     text-decoration: none;
-    margin-top: 1.5em;
+    margin-top: 0.5em;
 }
 
 #logoutIcon {
@@ -327,7 +327,12 @@ body {
 .ModalTable h3 {
     text-align: center;
 }
-
+#ChangePasswrap {
+    min-height: 100%;
+    height: auto;
+    margin: 0 auto -60px;
+    padding: 0 0 60px;
+}
 @media (max-width: 992px) {
     .panelControl {
         height: 0;
@@ -351,7 +356,7 @@ body {
         display: none;
     }
 
-    #logOutBtn {
+    .HeaderBtn {
         width: 80%;
     }
 

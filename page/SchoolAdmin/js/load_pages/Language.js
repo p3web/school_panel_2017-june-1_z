@@ -1,11 +1,11 @@
 var Language = {
-    Series:[],
+    Series: [],
     DonutSeries: []
 };
 
 
 Language.sendAction = function (gender) {
-    if (gender == null){
+    if (gender == null) {
         gender = 'all'
     }
     ajax.sender_data_json_by_url_callback(Global.url, {
@@ -31,7 +31,8 @@ Language.CreateBarData = function (Data) {
         a.push({name: Data[i].languagename, y: parseInt(Data[i].count)});
     }
     Language.Series = series;
-    BarChart('LangChartContainer' , series);
+    //BarChart('LangChartContainer' , series);
+    changeChartData('LangChartContainer', Language.Series, Language.DonutSeries, 'language');
 };
 
 

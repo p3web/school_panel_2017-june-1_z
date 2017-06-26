@@ -14,7 +14,7 @@
                     <span class="caret"></span>
                 </button>
                 <ul class="dropdown-menu" aria-labelledby="dLabel">
-                    <li><a href="#" onclick="changeChartData('ChartContainer_religion' , series_religion)" >CITeam</a></li>
+                    <li><a href="#" onclick="changeChartData('ChartContainer_religion' , series_religion , 'belief')" >CITeam</a></li>
                 </ul>
             </div>
         </div>
@@ -25,9 +25,9 @@ Z                    Select Chart Type
                     <span class="caret"></span>
                 </button>
                 <ul class="dropdown-menu" aria-labelledby="dLabel">
-                    <li><a href="#" onclick="PieChart('ChartContainer_religion' , series_religion)" > Pie</a></li>
-                    <li><a href="#" onclick="BarChart('ChartContainer_religion' , series_religion)"> Bar</a></li>
-                    <li><a href="#" onclick="DonutChart('ChartContainer_religion' , donutSeries_religion)"> Donut</a></li>
+                    <li><a href="#" onclick="PieChart('ChartContainer_religion' , series_religion , 'belief')" > Pie</a></li>
+                    <li><a href="#" onclick="BarChart('ChartContainer_religion' , series_religion , 'belief')"> Bar</a></li>
+                    <li><a href="#" onclick="DonutChart('ChartContainer_religion' , donutSeries_religion, 'belief')"> Donut</a></li>
                 </ul>
             </div>
             <a href="teamadminreligonout.csv" class="btn btn-primary" style="display: inline-block;">Export CSV</a>

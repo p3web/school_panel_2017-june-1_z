@@ -63,8 +63,9 @@
 
 
     <div class="col-sm-1 no-padding Lightbackground headerLight" style="border-right: none">
+        <a id="btn_user_profile" href="#" class="btn btn-default navbar-btn logbutton submitbtunnew HeaderBtn " style="/*float:right; border-radius:5px; margin:1.0em 0em; font-weight:bold;  text-decoration:none; margin-right: 1em;*/">PROFILE</a>
         <a href="teamadminpanel.php?logoutrequest" id="logOutBtn"
-           class="btn btn-default navbar-btn logbutton submitbtunnew"><span id="logoutSpan">LOGOUT</span><i
+           class="btn btn-default navbar-btn logbutton submitbtunnew HeaderBtn"><span id="logoutSpan">LOGOUT</span><i
                     id="logoutIcon" class="glyphicon glyphicon-off"></i> </a>
     </div>
 

@@ -2,7 +2,10 @@
  * Created by peymanvalikhanli on 6/11/17 AD.
  */
 
-var Chart_Type = 'bar';
+var Chart_Type = {
+    language: 'bar',
+    belief: 'pie'
+};
 
 //_____ Check ChartLoad
 var ChartScriptLoad = {
@@ -26,11 +29,18 @@ function CheckScriptChart() {
 // CheckScriptChart();
 ///_____ End Check load
 
-function changeChartData(ContainerID, series, D_series) {
-    if (Chart_Type == 'pie') {
+function changeChartData(ContainerID, series, D_series, chartName) {
+    var type;
+    if (chartName == 'language') {
+        type = Chart_Type.language;
+    }
+    else if (chartName == 'belief') {
+        type = Chart_Type.belief;
+    }
+    if (type == 'pie') {
         PieChart(ContainerID, series);
     }
-    else if (Chart_Type == 'bar') {
+    else if (type == 'bar') {
         BarChart(ContainerID, series);
     } else {
         DonutChart(ContainerID, D_series)
@@ -38,7 +48,7 @@ function changeChartData(ContainerID, series, D_series) {
 }
 
 
-function BarChart(ContainerID, series) {
+function BarChart(ContainerID, series, chartName) {
     // Create the chart
     document.getElementById(ContainerID).innerHTML = '';
     Highcharts.chart(ContainerID, {
@@ -83,7 +93,13 @@ function BarChart(ContainerID, series) {
 
         series: series
     });
-    Chart_Type = 'bar';
+
+    if (chartName == 'language') {
+        Chart_Type.language = 'bar';
+    }
+    else if (chartName == 'belief') {
+        Chart_Type.belief = 'bar';
+    }
 
 }
 
@@ -147,28 +163,28 @@ function MapChart(ContainerID, MapData) {
                 },
 
 
-         /*       colorAxis: {
-                    dataClasses: [{
-                        to: 8
-                    }, {
-                        from: 3,
-                        to: 10
-                    }, {
-                        from: 10,
-                        to: 30
-                    }, {
-                        from: 30,
-                        to: 100
-                    }, {
-                        from: 100,
-                        to: 300
-                    }, {
-                        from: 300,
-                        to: 1000
-                    }, {
-                        from: 1000
-                    }]
-                },*/
+                /*       colorAxis: {
+                 dataClasses: [{
+                 to: 8
+                 }, {
+                 from: 3,
+                 to: 10
+                 }, {
+                 from: 10,
+                 to: 30
+                 }, {
+                 from: 30,
+                 to: 100
+                 }, {
+                 from: 100,
+                 to: 300
+                 }, {
+                 from: 300,
+                 to: 1000
+                 }, {
+                 from: 1000
+                 }]
+                 },*/
 
                 series: [{
                     data: data,
@@ -197,7 +213,7 @@ function MapChart(ContainerID, MapData) {
 
 }
 
-function PieChart(ContainerID, series) {
+function PieChart(ContainerID, series , chartName) {
     document.getElementById(ContainerID).innerHTML = '';
     // Build the chart
     Highcharts.chart(ContainerID, {
@@ -231,7 +247,14 @@ function PieChart(ContainerID, series) {
         },
         series: series
     });
-    Chart_Type = 'pie';
+
+    if (chartName == 'language') {
+        Chart_Type.language = 'pie';
+    }
+    else if (chartName == 'belief') {
+        Chart_Type.belief = 'pie';
+    }
+
 
 }
 
@@ -258,7 +281,7 @@ function PieChart(ContainerID, series) {
  */
 
 
-function DonutChart(ContainerID, series) {
+function DonutChart(ContainerID, series , chartName) {
     document.getElementById(ContainerID).innerHTML = '';
     Highcharts.chart(ContainerID, {
         credits: {
@@ -299,7 +322,15 @@ function DonutChart(ContainerID, series) {
             data: series.data
         }]
     });
-    Chart_Type = 'Donut';
+
+    if (chartName == 'language') {
+        Chart_Type.language = 'Donut';
+    }
+    else if (chartName == 'belief') {
+        Chart_Type.belief = 'Donut';
+    }
+
+
 }
 
 
@@ -314,7 +345,8 @@ function TabelCreateor(data, tableId) {
     for (i = 0; i < data.trData.length; i++) {
         tableData += '<tr><td>' + (i + 1) + '</td>';
         for (var a = 0; a < data.trData[i].length; a++) {
-            tableData += '<td>' + data.trData[i][a] + '</td>';
+            var tdata = data.trData[i][a]== null ? '-' : data.trData[i][a] ;
+            tableData += '<td>' +tdata + '</td>';
         }
         tableData += '</tr>';
     }
@@ -323,3 +355,21 @@ function TabelCreateor(data, tableId) {
 }
 
 
+/*MAPDETAILS*/
+function CreateMapdetails(data) {
+    //document.getElementById('SchoolTitle').innerText = data[0][0][0];
+    //document.getElementById('addressTitle').innerText = data[0][0][1];
+    document.getElementById('school').innerText = data[0][1][0];
+    document.getElementById('address').innerText = data[0][1][1];
+}
+function CreateMapBottomDetails(data) {
+    //document.getElementById('bottomTitle1').innerText = data[0][0][1] + '/' + data[0][0][1];
+    //document.getElementById('bottom1').innerText = data[0][0][0];
+    document.getElementById('bottomTitle2').innerText = data[0][1][1];
+    document.getElementById('bottom2').innerText = data[0][1][0];
+    document.getElementById('bottomTitle3').innerText = data[0][2][1];
+    document.getElementById('bottom3').innerText = data[0][2][0];
+    document.getElementById('bottomTitle4').innerText = data[0][3][1];
+    document.getElementById('bottom4').innerText = data[0][3][0];
+
+}

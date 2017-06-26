@@ -14,7 +14,7 @@
                     <span class="caret"></span>
                 </button>
                 <ul class="dropdown-menu" aria-labelledby="dLabel">
-                    <li><a href="#" onclick="changeChartData('ChartContainer' , series)" >CITeam</a></li>
+                    <li><a href="#" onclick="changeChartData('ChartContainer' , series , 'language')" >CITeam</a></li>
                 </ul>
             </div>
         </div>
@@ -37,9 +37,9 @@
                     <span class="caret"></span>
                 </button>
                 <ul class="dropdown-menu" aria-labelledby="dLabel">
-                    <li><a href="#" onclick="PieChart('ChartContainer' , series)" > Pie</a></li>
-                    <li><a href="#" onclick="BarChart('ChartContainer' , series)"> Bar</a></li>
-                    <li><a href="#" onclick="DonutChart('ChartContainer' , donutSeries)"> Donut</a></li>
+                    <li><a href="#" onclick="PieChart('ChartContainer' , series , 'language')" > Pie</a></li>
+                    <li><a href="#" onclick="BarChart('ChartContainer' , series, 'language')"> Bar</a></li>
+                    <li><a href="#" onclick="DonutChart('ChartContainer' , donutSeries , 'language')"> Donut</a></li>
                 </ul>
             </div>
             <a href="teamadminlangout.csv" class="btn btn-primary" style="display: inline-block;">Export CSV</a>
@@ -153,7 +153,7 @@
             }
 
             TabelCreateor(TableData, 'langTable');
-            changeChartData('ChartContainer', series ,donutSeries );
+            changeChartData('ChartContainer', series ,donutSeries , 'language' ); //----> last param for name of the chart !
         }else {
 
             setTimeout(function () {

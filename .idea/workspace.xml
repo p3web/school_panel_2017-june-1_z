@@ -2,64 +2,613 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="676e04ff-6d34-48ac-9098-ebf739dc256d" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/MenuIcons/Compass.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/MenuIcons/Map.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/MenuIcons/MenuLogo.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/MenuIcons/Pen.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/MenuIcons/comment.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/MenuIcons/heart.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/MenuIcons/person.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/MenuIcons/star.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/studentcount.csv" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/team_admin_key_fact.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/documentation/timing/Time Sheet1.xlsx" afterPath="$PROJECT_DIR$/documentation/timing/Time Sheet1.xlsx" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/error_log_26052017.tgz" afterPath="$PROJECT_DIR$/error_log_26052017.tgz" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/AdminPanel.css" afterPath="$PROJECT_DIR$/css/AdminPanel.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/page/OrgAdmin/js/load_pages/Belief.js" afterPath="$PROJECT_DIR$/page/OrgAdmin/js/load_pages/Belief.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/page/SchoolAdmin/js/load_pages/Belief.js" afterPath="$PROJECT_DIR$/page/SchoolAdmin/js/load_pages/Belief.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/page/TeamAdmin/js/load_pages/Belief.js" afterPath="$PROJECT_DIR$/page/TeamAdmin/js/load_pages/Belief.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/page/CssMapChart.css" afterPath="$PROJECT_DIR$/page/CssMapChart.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/page/CssMapChartPrint.css" afterPath="$PROJECT_DIR$/page/CssMapChartPrint.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/page/OrgAdmin/js/load_pages/Export.js" afterPath="$PROJECT_DIR$/page/OrgAdmin/js/load_pages/Export.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/page/SchoolAdmin/js/load_pages/Export.js" afterPath="$PROJECT_DIR$/page/SchoolAdmin/js/load_pages/Export.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/page/TeamAdmin/js/load_pages/Export.js" afterPath="$PROJECT_DIR$/page/TeamAdmin/js/load_pages/Export.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/page/SchoolAdmin/js/load_pages/Index.js" afterPath="$PROJECT_DIR$/page/SchoolAdmin/js/load_pages/Index.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/page/SchoolAdmin/Language.html" afterPath="$PROJECT_DIR$/page/SchoolAdmin/Language.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/page/OrgAdmin/js/load_pages/Language.js" afterPath="$PROJECT_DIR$/page/OrgAdmin/js/load_pages/Language.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/page/SchoolAdmin/js/load_pages/Language.js" afterPath="$PROJECT_DIR$/page/SchoolAdmin/js/load_pages/Language.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/page/TeamAdmin/js/load_pages/Language.js" afterPath="$PROJECT_DIR$/page/TeamAdmin/js/load_pages/Language.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/PSCO_data.php" afterPath="$PROJECT_DIR$/PSCO_data.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/page/TeacherMapChart.html" afterPath="$PROJECT_DIR$/page/TeacherMapChart.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/page/TeacherMapChartPrint.html" afterPath="$PROJECT_DIR$/page/TeacherMapChartPrint.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/page/TeacherPanelMap.html" afterPath="$PROJECT_DIR$/page/TeacherPanelMap.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/page/TeacherdonutChartPrint.html" afterPath="$PROJECT_DIR$/page/TeacherdonutChartPrint.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/page/TeamAdminMap.html" afterPath="$PROJECT_DIR$/page/TeamAdminMap.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/page/TeamMapChartPrint.html" afterPath="$PROJECT_DIR$/page/TeamMapChartPrint.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/page/TeamdonutChartPrint.html" afterPath="$PROJECT_DIR$/page/TeamdonutChartPrint.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/access_org_key_fact.php" afterPath="$PROJECT_DIR$/access_org_key_fact.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/access_school_admin_panel.php" afterPath="$PROJECT_DIR$/access_school_admin_panel.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/access_school_key_fact.php" afterPath="$PROJECT_DIR$/access_school_key_fact.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/page/js/ajax.js" afterPath="$PROJECT_DIR$/page/js/ajax.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/page/js/chart.js" afterPath="$PROJECT_DIR$/page/js/chart.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/page/OrgAdmin/js/load_pages/classes.js" afterPath="$PROJECT_DIR$/page/OrgAdmin/js/load_pages/classes.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/page/SchoolAdmin/js/load_pages/classes.js" afterPath="$PROJECT_DIR$/page/SchoolAdmin/js/load_pages/classes.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/page/TeamAdmin/js/load_pages/classes.js" afterPath="$PROJECT_DIR$/page/TeamAdmin/js/load_pages/classes.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/controller_school_admin_panel.php" afterPath="$PROJECT_DIR$/controller_school_admin_panel.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/export/error_log" afterPath="$PROJECT_DIR$/export/error_log" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/headerteacher.php" afterPath="$PROJECT_DIR$/headerteacher.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/headerteamadmin.php" afterPath="$PROJECT_DIR$/headerteamadmin.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/page/SchoolAdmin/index.html" afterPath="$PROJECT_DIR$/page/SchoolAdmin/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jsondataout.php" afterPath="$PROJECT_DIR$/jsondataout.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/page/data_value/lanuage.html" afterPath="$PROJECT_DIR$/page/data_value/lanuage.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/page/data_value/lanuage_level.html" afterPath="$PROJECT_DIR$/page/data_value/lanuage_level.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/page/js/sweetalert/msg.js" afterPath="$PROJECT_DIR$/page/js/sweetalert/msg.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/style.css" afterPath="$PROJECT_DIR$/css/style.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/teacherlangout.csv" afterPath="$PROJECT_DIR$/teacherlangout.csv" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/teacherpanel.php" afterPath="$PROJECT_DIR$/teacherpanel.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/teamadminlangout.csv" afterPath="$PROJECT_DIR$/teamadminlangout.csv" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/teamadminpaneltestzain.php" afterPath="$PROJECT_DIR$/teamadminpaneltestzain.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/teamadminregionout.csv" afterPath="$PROJECT_DIR$/teamadminregionout.csv" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/teamadminreligonout.csv" afterPath="$PROJECT_DIR$/teamadminreligonout.csv" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.ftpquota" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.gitignore" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.htaccess" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/404.shtml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/AA.zip" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ChartImage.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/HELP.pdf" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Infogramtest.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/PSCO_data.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/PSCO_function.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/PSCO_test.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/access_org_admin_panel.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/access_org_key_fact.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/access_school_admin_panel.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/access_school_key_fact.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/admin_teacher.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/adminpanel.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/adminpaneltest.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/adminregistration.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/adminregistrationtest.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/adminthanks.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/autocompletecountry.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/autocompletelanguage.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/autocompletereligion.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/autocompleteschools.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/backup/teacherpanel (2).php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/backup/teamadminpanel (1).php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/brochure.zip" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/brochure/AA_borchure_digital.pdf" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/cancel.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/cgi-bin.zip" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/config.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/connection.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/contactus.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/contactusadmin.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/contactusteacher.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/control/control_teacherpanel.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/control/utilities/csv_file.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/control/utilities/session.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/controller_main_function.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/controller_org_admin_panel.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/controller_school_admin_panel.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/controller_teacher_admin.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/controller_team_admin.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/controller_user.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/css/AdminPanel.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/css/PSCO_GridStyle.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/css/advancedcss.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/css/carousel.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/css/error_log" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/css/ie10-viewport-bug-workaround.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/css/jquery-ui.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/css/style.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/css/styletestzain.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/css/teamadminpanel.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/csv_file.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/culturalinfusiongeochart.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dataout.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/deletestaff.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/deletestudent.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/departmentadminpanel.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/departmentregistrationstep1.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/departmentregistrationstep2.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/departmentregistrationstep3.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/deptthanks.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/documentation/timing/Time Sheet1.xlsx" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/emailbodycontent.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/error_log" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/error_log_26052017.tgz" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/export/error_log" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/export/exp.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/exportteacher.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/exportteacher.php.old" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/faq.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/faqadmin.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/faqteacher.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/favicon.ico" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/fetchstaffinfo.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/fetchstudentinfo.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/fonts/MuseoSans-100.otf" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/fonts/MuseoSans-100Italic.otf" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/fonts/MuseoSans-300.otf" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/fonts/MuseoSans-300Italic.otf" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/fonts/MuseoSans-700Italic.otf" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/fonts/MuseoSans-900Italic.otf" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/fonts/MuseoSans_100.otf" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/fonts/MuseoSans_100_Italic.otf" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/fonts/MuseoSans_300.otf" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/fonts/MuseoSans_300.ttf" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/fonts/MuseoSans_300_Italic.otf" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/fonts/MuseoSans_300_Italic.ttf" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/fonts/MuseoSans_500.otf" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/fonts/MuseoSans_500_Italic.otf" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/fonts/MuseoSans_700.otf" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/fonts/MuseoSans_900.otf" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/footer.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/footeradmin.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/footerteacher.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/forgetpassword.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/forgetpasswordstep1.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/fpdf/FAQ.htm" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/fpdf/changelog.htm" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/fpdf/doc/__construct.htm" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/fpdf/doc/acceptpagebreak.htm" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/fpdf/doc/addfont.htm" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/fpdf/doc/addlink.htm" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/fpdf/doc/addpage.htm" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/fpdf/doc/aliasnbpages.htm" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/fpdf/doc/cell.htm" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/fpdf/doc/close.htm" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/fpdf/doc/error.htm" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/fpdf/doc/footer.htm" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/fpdf/doc/getpageheight.htm" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/fpdf/doc/getpagewidth.htm" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/fpdf/doc/getstringwidth.htm" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/fpdf/doc/getx.htm" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/fpdf/doc/gety.htm" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/fpdf/doc/header.htm" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/fpdf/doc/image.htm" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/fpdf/doc/index.htm" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/fpdf/doc/line.htm" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/fpdf/doc/link.htm" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/fpdf/doc/ln.htm" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/fpdf/doc/multicell.htm" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/fpdf/doc/output.htm" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/fpdf/doc/pageno.htm" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/fpdf/doc/rect.htm" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/fpdf/doc/setauthor.htm" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/fpdf/doc/setautopagebreak.htm" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/fpdf/doc/setcompression.htm" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/fpdf/doc/setcreator.htm" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/fpdf/doc/setdisplaymode.htm" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/fpdf/doc/setdrawcolor.htm" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/fpdf/doc/setfillcolor.htm" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/fpdf/doc/setfont.htm" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/fpdf/doc/setfontsize.htm" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/fpdf/doc/setkeywords.htm" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/fpdf/doc/setleftmargin.htm" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/fpdf/doc/setlinewidth.htm" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/fpdf/doc/setlink.htm" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/fpdf/doc/setmargins.htm" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/fpdf/doc/setrightmargin.htm" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/fpdf/doc/setsubject.htm" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/fpdf/doc/settextcolor.htm" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/fpdf/doc/settitle.htm" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/fpdf/doc/settopmargin.htm" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/fpdf/doc/setx.htm" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/fpdf/doc/setxy.htm" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/fpdf/doc/sety.htm" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/fpdf/doc/text.htm" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/fpdf/doc/write.htm" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/fpdf/font/courier.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/fpdf/font/courierb.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/fpdf/font/courierbi.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/fpdf/font/courieri.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/fpdf/font/helvetica.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/fpdf/font/helveticab.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/fpdf/font/helveticabi.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/fpdf/font/helveticai.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/fpdf/font/symbol.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/fpdf/font/times.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/fpdf/font/timesb.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/fpdf/font/timesbi.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/fpdf/font/timesi.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/fpdf/font/zapfdingbats.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/fpdf/fpdf.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/fpdf/fpdf.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/fpdf/install.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/fpdf/license.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/fpdf/makefont/cp1250.map" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/fpdf/makefont/cp1251.map" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/fpdf/makefont/cp1252.map" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/fpdf/makefont/cp1253.map" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/fpdf/makefont/cp1254.map" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/fpdf/makefont/cp1255.map" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/fpdf/makefont/cp1257.map" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/fpdf/makefont/cp1258.map" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/fpdf/makefont/cp874.map" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/fpdf/makefont/iso-8859-1.map" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/fpdf/makefont/iso-8859-11.map" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/fpdf/makefont/iso-8859-15.map" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/fpdf/makefont/iso-8859-16.map" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/fpdf/makefont/iso-8859-2.map" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/fpdf/makefont/iso-8859-4.map" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/fpdf/makefont/iso-8859-5.map" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/fpdf/makefont/iso-8859-7.map" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/fpdf/makefont/iso-8859-9.map" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/fpdf/makefont/koi8-r.map" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/fpdf/makefont/koi8-u.map" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/fpdf/makefont/makefont.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/fpdf/makefont/ttfparser.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/fpdf/tutorial/20k_c1.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/fpdf/tutorial/20k_c2.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/fpdf/tutorial/calligra.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/fpdf/tutorial/calligra.ttf" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/fpdf/tutorial/calligra.z" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/fpdf/tutorial/countries.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/fpdf/tutorial/index.htm" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/fpdf/tutorial/logo.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/fpdf/tutorial/makefont.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/fpdf/tutorial/tuto1.htm" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/fpdf/tutorial/tuto1.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/fpdf/tutorial/tuto2.htm" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/fpdf/tutorial/tuto2.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/fpdf/tutorial/tuto3.htm" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/fpdf/tutorial/tuto3.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/fpdf/tutorial/tuto4.htm" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/fpdf/tutorial/tuto4.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/fpdf/tutorial/tuto5.htm" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/fpdf/tutorial/tuto5.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/fpdf/tutorial/tuto6.htm" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/fpdf/tutorial/tuto6.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/fpdf/tutorial/tuto7.htm" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/fpdf/tutorial/tuto7.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/header.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/headeradmin.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/headerteacher.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/headerteamadmin.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/help.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/images/AA-homepage_bg_image.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/images/AA-logo-animation.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/images/AA-logo-animation.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/images/AA-logo-animations.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/images/AA_homepage_top_banner_screen.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/images/AA_trusted-icon.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/images/MenuIcons/Compass.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/images/MenuIcons/Map.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/images/MenuIcons/MenuLogo.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/images/MenuIcons/Pen.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/images/MenuIcons/comment.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/images/MenuIcons/heart.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/images/MenuIcons/person.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/images/MenuIcons/star.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/images/active.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/images/arrow-help.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/images/bg.JPG" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/images/bg1.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/images/bg2.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/images/bg3.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/images/bg_image_princing_corporate.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/images/bg_image_princing_school.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/images/brocher.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/images/circle-help.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/images/corporatepricelist.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/images/crossy2.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/images/culturalinfusionlogo.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/images/delete.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/images/deletehover.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/images/edit.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/images/edithover.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/images/galleryimage1.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/images/img1.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/images/img2.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/images/lessonplanicon.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/images/logo.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/images/logoM.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/images/mainlogo.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/images/off.PNG" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/images/on.PNG" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/images/pending.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/images/play.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/images/price.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/images/pricelist.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/images/school.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/images/schoolpricelist.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/images/small1.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/images/small2.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/images/small3.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/images/test.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/index.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/indexaa.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/indexoldwepage.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/info.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/insertindivstudentdetails.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/invite.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/jsondataout.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/lang.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/langadmindataout.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/langout.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/langout.xls" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/langout.xlsx" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/langteacherdataout.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/language.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/lessonplans/UNIT 1.pdf" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/lessonplans/UNIT 2.pdf" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/lessonplans/UNIT 3.pdf" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/lessonplans/UNIT 4.pdf" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/login.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/loginold.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/logintest.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/model/access/access_teacherpanel.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/model/access/invite.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/model/access/key_facts_function.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/model/access/test_file.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/model/access/user_profile.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/model/database/data.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/model/language/lang.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/org_admin_panel.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/orgadminregistration.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/organisationadminpanel.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/page/Belief_chart.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/page/Belief_chart_teacher.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/page/Chart.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/page/Chart_teacher.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/page/CssMapChart.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/page/CssMapChartPrint.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/page/OrgAdmin/Belief.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/page/OrgAdmin/Export.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/page/OrgAdmin/ExportDonut.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/page/OrgAdmin/ExportDonutPrint.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/page/OrgAdmin/ExportPrint.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/page/OrgAdmin/Language.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/page/OrgAdmin/Map.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/page/OrgAdmin/index.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/page/OrgAdmin/js/load_pages/Belief.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/page/OrgAdmin/js/load_pages/Export.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/page/OrgAdmin/js/load_pages/Index.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/page/OrgAdmin/js/load_pages/Language.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/page/OrgAdmin/js/load_pages/classes.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/page/OrgAdmin/temp/bootstrap.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/page/SchoolAdmin/Belief.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/page/SchoolAdmin/Export.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/page/SchoolAdmin/ExportDonut.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/page/SchoolAdmin/ExportDonutPrint.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/page/SchoolAdmin/ExportPrint.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/page/SchoolAdmin/Language.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/page/SchoolAdmin/Map.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/page/SchoolAdmin/index.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/page/SchoolAdmin/js/load_pages/Belief.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/page/SchoolAdmin/js/load_pages/Export.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/page/SchoolAdmin/js/load_pages/Index.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/page/SchoolAdmin/js/load_pages/Language.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/page/SchoolAdmin/js/load_pages/classes.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/page/SchoolAdmin/temp/bootstrap.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/page/SchoolAdmin/temp/domvas.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/page/SchoolAdmin/temp/html2canvas.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/page/TeacherMapChart.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/page/TeacherMapChartPrint.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/page/TeacherPanelMap.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/page/TeacherdonutChart.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/page/TeacherdonutChartPrint.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/page/TeamAdmin/Belief.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/page/TeamAdmin/Export.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/page/TeamAdmin/ExportDonut.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/page/TeamAdmin/ExportDonutPrint.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/page/TeamAdmin/ExportPrint.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/page/TeamAdmin/Language.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/page/TeamAdmin/Map.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/page/TeamAdmin/index.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/page/TeamAdmin/js/load_pages/Belief.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/page/TeamAdmin/js/load_pages/Export.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/page/TeamAdmin/js/load_pages/Index.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/page/TeamAdmin/js/load_pages/Language.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/page/TeamAdmin/js/load_pages/classes.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/page/TeamAdmin/temp/bootstrap.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/page/TeamAdminMap.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/page/TeamMapChart.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/page/TeamMapChartPrint.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/page/TeamdonutChart.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/page/TeamdonutChartPrint.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/page/data_value/age_group_20.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/page/data_value/age_group_60.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/page/data_value/country.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/page/data_value/lanuage.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/page/data_value/lanuage_level.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/page/js/Global.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/page/js/PSCO_Grid.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/page/js/PrintExport.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/page/js/ajax.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/page/js/chart.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/page/js/dom-to-image.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/page/js/sweetalert/msg.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/page/js/sweetalert/sweetalert2.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/page/js/sweetalert/sweetalert2.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/page/js/sweetalert/sweetalert2.min.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/page/js/sweetalert/sweetalert2.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/page/logo.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/page/modal_change_pass_teacher.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/page/modal_change_pass_user.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/page/page/Belief_chart.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/page/page/Chart.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/page/page/data_value/country.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/page/page/data_value/lanuage.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/page/page/data_value/lanuage_level.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/page/page/js/ajax.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/page/page/js/chart.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/page/page/modal_change_pass_user.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/payment.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/peyman_test_teachpanel.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/peyman_test_teampanel.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpinfo.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpmailertesting/PHPMailer_5.2.0.zip" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpmailertesting/PHPMailer_5.2.0/LICENSE" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpmailertesting/PHPMailer_5.2.0/README" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpmailertesting/PHPMailer_5.2.0/aboutus.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpmailertesting/PHPMailer_5.2.0/changelog.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpmailertesting/PHPMailer_5.2.0/class.phpmailer.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpmailertesting/PHPMailer_5.2.0/class.pop3.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpmailertesting/PHPMailer_5.2.0/class.smtp.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpmailertesting/PHPMailer_5.2.0/docs.ini" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpmailertesting/PHPMailer_5.2.0/docs/Callback_function_notes.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpmailertesting/PHPMailer_5.2.0/docs/DomainKeys_notes.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpmailertesting/PHPMailer_5.2.0/docs/Note_for_SMTP_debugging.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpmailertesting/PHPMailer_5.2.0/docs/extending.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpmailertesting/PHPMailer_5.2.0/docs/faq.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpmailertesting/PHPMailer_5.2.0/docs/pop3_article.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpmailertesting/PHPMailer_5.2.0/docs/use_gmail.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpmailertesting/PHPMailer_5.2.0/examples/contents.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpmailertesting/PHPMailer_5.2.0/examples/images/phpmailer.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpmailertesting/PHPMailer_5.2.0/examples/images/phpmailer_mini.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpmailertesting/PHPMailer_5.2.0/examples/index.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpmailertesting/PHPMailer_5.2.0/examples/test_db_smtp_basic.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpmailertesting/PHPMailer_5.2.0/examples/test_mail_advanced.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpmailertesting/PHPMailer_5.2.0/examples/test_mail_basic.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpmailertesting/PHPMailer_5.2.0/examples/test_pop_before_smtp_advanced.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpmailertesting/PHPMailer_5.2.0/examples/test_pop_before_smtp_basic.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpmailertesting/PHPMailer_5.2.0/examples/test_sendmail_advanced.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpmailertesting/PHPMailer_5.2.0/examples/test_sendmail_basic.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpmailertesting/PHPMailer_5.2.0/examples/test_smtp_advanced.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpmailertesting/PHPMailer_5.2.0/examples/test_smtp_advanced_no_auth.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpmailertesting/PHPMailer_5.2.0/examples/test_smtp_basic.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpmailertesting/PHPMailer_5.2.0/examples/test_smtp_basic_no_auth.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpmailertesting/PHPMailer_5.2.0/examples/test_smtp_gmail_advanced.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpmailertesting/PHPMailer_5.2.0/examples/test_smtp_gmail_basic.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpmailertesting/PHPMailer_5.2.0/extras/htmlfilter.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpmailertesting/PHPMailer_5.2.0/language/phpmailer.lang-ar.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpmailertesting/PHPMailer_5.2.0/language/phpmailer.lang-br.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpmailertesting/PHPMailer_5.2.0/language/phpmailer.lang-ca.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpmailertesting/PHPMailer_5.2.0/language/phpmailer.lang-ch.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpmailertesting/PHPMailer_5.2.0/language/phpmailer.lang-cz.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpmailertesting/PHPMailer_5.2.0/language/phpmailer.lang-de.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpmailertesting/PHPMailer_5.2.0/language/phpmailer.lang-dk.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpmailertesting/PHPMailer_5.2.0/language/phpmailer.lang-es.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpmailertesting/PHPMailer_5.2.0/language/phpmailer.lang-et.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpmailertesting/PHPMailer_5.2.0/language/phpmailer.lang-fi.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpmailertesting/PHPMailer_5.2.0/language/phpmailer.lang-fo.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpmailertesting/PHPMailer_5.2.0/language/phpmailer.lang-fr.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpmailertesting/PHPMailer_5.2.0/language/phpmailer.lang-hu.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpmailertesting/PHPMailer_5.2.0/language/phpmailer.lang-it.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpmailertesting/PHPMailer_5.2.0/language/phpmailer.lang-ja.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpmailertesting/PHPMailer_5.2.0/language/phpmailer.lang-nl.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpmailertesting/PHPMailer_5.2.0/language/phpmailer.lang-no.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpmailertesting/PHPMailer_5.2.0/language/phpmailer.lang-pl.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpmailertesting/PHPMailer_5.2.0/language/phpmailer.lang-ro.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpmailertesting/PHPMailer_5.2.0/language/phpmailer.lang-ru.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpmailertesting/PHPMailer_5.2.0/language/phpmailer.lang-se.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpmailertesting/PHPMailer_5.2.0/language/phpmailer.lang-tr.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpmailertesting/PHPMailer_5.2.0/language/phpmailer.lang-zh.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpmailertesting/PHPMailer_5.2.0/language/phpmailer.lang-zh_cn.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpmailertesting/PHPMailer_5.2.0/test/contents.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpmailertesting/PHPMailer_5.2.0/test/phpmailerTest.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpmailertesting/PHPMailer_5.2.0/test/test.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpmailertesting/PHPMailer_5.2.0/test/test_callback.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpmailertesting/PHPMailer_5.2.0/test/testemail.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpmailertesting/PHPMailer_5.2.0/test_script/LGPLv3.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpmailertesting/PHPMailer_5.2.0/test_script/contents.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpmailertesting/PHPMailer_5.2.0/test_script/images/aikido.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpmailertesting/PHPMailer_5.2.0/test_script/images/bkgrnd.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpmailertesting/PHPMailer_5.2.0/test_script/images/phpmailer.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpmailertesting/PHPMailer_5.2.0/test_script/index.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpmailertesting/PHPMailer_5.2.0/test_script/scripts/clipboard.swf" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpmailertesting/PHPMailer_5.2.0/test_script/scripts/shBrushBash.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpmailertesting/PHPMailer_5.2.0/test_script/scripts/shBrushCSharp.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpmailertesting/PHPMailer_5.2.0/test_script/scripts/shBrushCpp.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpmailertesting/PHPMailer_5.2.0/test_script/scripts/shBrushCss.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpmailertesting/PHPMailer_5.2.0/test_script/scripts/shBrushDelphi.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpmailertesting/PHPMailer_5.2.0/test_script/scripts/shBrushDiff.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpmailertesting/PHPMailer_5.2.0/test_script/scripts/shBrushGroovy.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpmailertesting/PHPMailer_5.2.0/test_script/scripts/shBrushJScript.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpmailertesting/PHPMailer_5.2.0/test_script/scripts/shBrushJava.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpmailertesting/PHPMailer_5.2.0/test_script/scripts/shBrushPerl.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpmailertesting/PHPMailer_5.2.0/test_script/scripts/shBrushPhp.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpmailertesting/PHPMailer_5.2.0/test_script/scripts/shBrushPlain.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpmailertesting/PHPMailer_5.2.0/test_script/scripts/shBrushPython.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpmailertesting/PHPMailer_5.2.0/test_script/scripts/shBrushRuby.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpmailertesting/PHPMailer_5.2.0/test_script/scripts/shBrushScala.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpmailertesting/PHPMailer_5.2.0/test_script/scripts/shBrushSql.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpmailertesting/PHPMailer_5.2.0/test_script/scripts/shBrushVb.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpmailertesting/PHPMailer_5.2.0/test_script/scripts/shBrushXml.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpmailertesting/PHPMailer_5.2.0/test_script/scripts/shCore.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpmailertesting/PHPMailer_5.2.0/test_script/scripts/shLegacy.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpmailertesting/PHPMailer_5.2.0/test_script/src/shCore.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpmailertesting/PHPMailer_5.2.0/test_script/src/shLegacy.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpmailertesting/PHPMailer_5.2.0/test_script/styles/help.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpmailertesting/PHPMailer_5.2.0/test_script/styles/magnifier.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpmailertesting/PHPMailer_5.2.0/test_script/styles/page_white_code.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpmailertesting/PHPMailer_5.2.0/test_script/styles/page_white_copy.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpmailertesting/PHPMailer_5.2.0/test_script/styles/printer.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpmailertesting/PHPMailer_5.2.0/test_script/styles/shCore.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpmailertesting/PHPMailer_5.2.0/test_script/styles/shThemeDefault.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpmailertesting/PHPMailer_5.2.0/test_script/styles/shThemeDjango.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpmailertesting/PHPMailer_5.2.0/test_script/styles/shThemeEmacs.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpmailertesting/PHPMailer_5.2.0/test_script/styles/shThemeFadeToGrey.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpmailertesting/PHPMailer_5.2.0/test_script/styles/shThemeMidnight.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpmailertesting/PHPMailer_5.2.0/test_script/styles/shThemeRDark.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpmailertesting/PHPMailer_5.2.0/test_script/styles/wrapping.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpmailertesting/PHPMailer_5.2.0/test_script/test.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpmailertesting/emailsending.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/phpmailertesting/face.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/privacy.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/privacyadmin.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/privacyteacher.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/regionadmindataout.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/regionmapdataout.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/regionout.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/regionout.xls" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/regionout.xlsx" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/regions.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/regionteacherdataout.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/religion.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/religonadmindataout.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/religonout.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/religonout.xls" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/religonout.xlsx" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/religonteacherdataout(peyman edit check bugs).php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/religonteacherdataout.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/robots.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/scripts/bootstrap.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/scripts/bootstrap.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/scripts/holder.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/scripts/ie-emulation-modes-warning.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/scripts/ie10-viewport-bug-workaround.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/scripts/jquery-1.10.2.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/scripts/jquery-ui.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/scripts/npm.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/selectstaffinfo.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/selectstudentinfo.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/staffcount.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/staffregistrationstep1.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/staffregistrationstep2.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/staffregistrationstep3.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/staffthanks.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/stcountout.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/studentcount.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/studentform/AA_Printable form.pdf" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/studentregistrationstep1.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/studentregistrationstep1old.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/studentregistrationstep2.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/studentregistrationstep2old.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/studentregistrationstep3.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/studentregistrationstep3old.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/studentthanks.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/styletestzain.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/success.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/teacherlangout.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/teacherpanel.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/teacherpanelDynamictest.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/teacherpanelold.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/teacherpaneltestextreme.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/teacherpanelyahoo.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/teacherregionmapdataout.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/teacherregistrationstep1.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/teacherregistrationstep1old.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/teacherregistrationstep2.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/teacherregistrationstep2old.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/teacherregistrationstep3.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/teacherregistrationstep3old.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/teacherreligonout.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/teacherthanks.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/team_admin_key_fact.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/teamadminlangout.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/teamadminpanel(peyman edit check bugs).php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/teamadminpanel.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/teamadminpanelold.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/teamadminpaneltest.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/teamadminpaneltestzain.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/teamadminregionout.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/teamadminregionout.xls" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/teamadminreligonout.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/teamregistrationstep1.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/teamregistrationstep2.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/teamregistrationstep3.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/teamthanks.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/temp/teacherpanel.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/temp/teampanel.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/template/JSON/lang/lang.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/template/css/teacherpanel/main.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/template/js/teacherpanel/country_name.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/template/js/teacherpanel/google_chart.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/template/js/teacherpanel/main.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/test.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/under_construction.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/updatestaffdetails.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/updatestudentdetails.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/user_profile.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/validatecountryname.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/validindivdata.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/venobox/close.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/venobox/next.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/venobox/preload-circle.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/venobox/preload-dots.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/venobox/preload-ios.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/venobox/preload-quads.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/venobox/preload.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/venobox/prev.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/venobox/venobox.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/venobox/venobox.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/venobox/venobox.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verify.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verifydepartment.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verifyforgetpassword.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verifyorgadmin.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verifystaff.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verifystudent.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verifyteacher.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/verifyteam.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/view_teacherpanel.php" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="school_panel_2017-june-1_z.iws" />
@@ -171,30 +720,6 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
           </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="school_panel_2017-june-1_z" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="school_panel_2017-june-1_z" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="school_panel_2017-june-1_z" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="school_panel_2017-june-1_z" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="brochure" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
         </subPane>
       </pane>
     </panes>
@@ -261,7 +786,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1920" height="1080" extended-state="0" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.47707736" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -308,174 +833,10 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/updatestudentdetails.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1485">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/teacherpanel.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="30150">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/teamadminpanel.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="30930">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/model/access/user_profile.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="452" max-vertical-offset="1410">
-          <caret line="88" column="0" selection-start-line="88" selection-start-column="0" selection-end-line="88" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/peyman_test_teampanel.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="29550">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/model/access/user_profile.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="704" max-vertical-offset="1410">
-          <caret line="88" column="0" selection-start-line="88" selection-start-column="0" selection-end-line="88" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/peyman_test_teampanel.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="28844" max-vertical-offset="29550">
-          <caret line="1964" column="9" selection-start-line="1964" selection-start-column="9" selection-end-line="1964" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/template/JSON/lang/lang.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0782881" vertical-offset="0" max-vertical-offset="958">
-          <caret line="5" column="1" selection-start-line="5" selection-start-column="1" selection-end-line="5" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/model/language/lang.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.14091858" vertical-offset="0" max-vertical-offset="958">
-          <caret line="9" column="5" selection-start-line="9" selection-start-column="5" selection-end-line="9" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/control/utilities/session.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-5.625" vertical-offset="0" max-vertical-offset="795">
-          <caret line="14" column="9" selection-start-line="14" selection-start-column="9" selection-end-line="14" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/config.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-16.25" vertical-offset="0" max-vertical-offset="495">
-          <caret line="26" column="42" selection-start-line="26" selection-start-column="30" selection-end-line="26" selection-end-column="42" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/template/js/teacherpanel/main.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="465">
-          <caret line="26" column="0" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/template/css/teacherpanel/main.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.24439919" vertical-offset="0" max-vertical-offset="982">
-          <caret line="16" column="0" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/template/js/teacherpanel/country_name.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="645">
-          <caret line="39" column="3" selection-start-line="39" selection-start-column="3" selection-end-line="39" selection-end-column="3" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/model/database/data.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-13.75" vertical-offset="1035" max-vertical-offset="4950">
-          <caret line="91" column="8" selection-start-line="91" selection-start-column="8" selection-end-line="91" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/template/js/teacherpanel/google_chart.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="443" max-vertical-offset="1425">
-          <caret line="89" column="1" selection-start-line="89" selection-start-column="1" selection-end-line="89" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/staffregistrationstep2.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="84.375" vertical-offset="2025" max-vertical-offset="5220">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/model/access/test_file.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.23219815" vertical-offset="0" max-vertical-offset="646">
-          <caret line="10" column="0" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="72" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/religonteacherdataout(peyman edit check bugs).php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-23.166666" vertical-offset="599" max-vertical-offset="1245">
           <caret line="77" column="2" selection-start-line="77" selection-start-column="2" selection-end-line="77" selection-end-column="2" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/model/access/key_facts_function.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.43841335" vertical-offset="645" max-vertical-offset="3180">
-          <caret line="15" column="0" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/admin_teacher.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-5.611171" vertical-offset="15004" max-vertical-offset="31845">
-          <caret line="652" column="0" selection-start-line="652" selection-start-column="0" selection-end-line="652" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/backup/teamadminpanel (1).php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="29085">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/temp/teacherpanel.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.24843423" vertical-offset="56312" max-vertical-offset="57330">
-          <caret line="3770" column="0" selection-start-line="3770" selection-start-column="0" selection-end-line="3770" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/temp/teampanel.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.27974948" vertical-offset="28067" max-vertical-offset="29085">
-          <caret line="1889" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="1933" selection-end-column="9" />
         </state>
       </provider>
     </entry>
@@ -493,133 +854,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/headerteamadmin.php">
+    <entry file="file://$PROJECT_DIR$/peyman_test_teachpanel.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.43841335" vertical-offset="0" max-vertical-offset="958">
-          <caret line="28" column="38" selection-start-line="28" selection-start-column="38" selection-end-line="28" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/peyman_test_teampanel.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.37682673" vertical-offset="27869" max-vertical-offset="29550">
-          <caret line="1882" column="13" selection-start-line="1882" selection-start-column="13" selection-end-line="1882" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/model/access/invite.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.21920668" vertical-offset="105" max-vertical-offset="5685">
-          <caret line="26" column="8" selection-start-line="26" selection-start-column="8" selection-end-line="30" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/model/access/access_teacherpanel.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.83716077" vertical-offset="908" max-vertical-offset="1890">
-          <caret line="119" column="12" selection-start-line="116" selection-start-column="7" selection-end-line="120" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/model/access/user_profile.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.90605426" vertical-offset="452" max-vertical-offset="1410">
-          <caret line="88" column="0" selection-start-line="88" selection-start-column="0" selection-end-line="88" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/control/utilities/csv_file.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.51670146" vertical-offset="0" max-vertical-offset="958">
-          <caret line="38" column="0" selection-start-line="38" selection-start-column="0" selection-end-line="38" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/PSCO_function.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="6270">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="31905">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/page/page/js/ajax.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2700">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/csv_file.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="982">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/teacherregistrationstep3.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="8205">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/updatestaffdetails.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1500">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/invite.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="5685">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/teacherpanel.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="30150">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/teamadminpanel.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-1.152" vertical-offset="720" max-vertical-offset="30930">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/updatestudentdetails.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1485">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/control/control_teacherpanel.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.72136223" vertical-offset="929" max-vertical-offset="1575">
-          <caret line="93" column="0" selection-start-line="93" selection-start-column="0" selection-end-line="94" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/controller_school_admin_panel.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.48452014" vertical-offset="632" max-vertical-offset="1590">
-          <caret line="68" column="22" selection-start-line="68" selection-start-column="22" selection-end-line="68" selection-end-column="22" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/controller_org_admin_panel.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.18789144" vertical-offset="0" max-vertical-offset="958">
-          <caret line="17" column="17" selection-start-line="17" selection-start-column="17" selection-end-line="17" selection-end-column="17" />
           <folding />
         </state>
       </provider>

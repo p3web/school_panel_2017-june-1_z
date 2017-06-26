@@ -31,13 +31,19 @@
             <div class="MapDetails">
                 <div>
                     <strong>
-                        <p>School / Organisation name</p>
-                        <p>Address</p>
-                        <p>State / Country / Year</p>
+                        <p id="SchoolTitle"><!--School / Organisation name--></p>
+                        <p id="school"></p>
+                        <p id="addressTitle"><!--Address--></p>
+                        <p id="address"></p>
+                        <p id="bottomTitle1"><!--State / Country / Year--></p>
+                        <p id="bottom1"></p>
                     </strong>
-                    <p>Number of people in Total</p>
-                    <p>Number Man</p>
-                    <p>Number Women</p>
+                    <p id="bottomTitle2"><!--Number of people in Total--></p>
+                    <p id="bottom2"></p>
+                    <p id="bottomTitle3"><!--Number Man--></p>
+                    <p id="bottom3"></p>
+                    <p id="bottomTitle4"><!--Women--></p>
+                    <p id="bottom4"></p>
                 </div>
             </div>
             <div class="MapCountryDetails">
@@ -98,8 +104,10 @@
 <script>
 
     function sendActions() {
-        ajax.sender_data_callback({out : 'TARO'} , CreateMapData);
-        ajax.sender_data_callback({out : 'TALO'} , CreateBarData);
+        ajax.sender_data_callback({out: 'TARO'}, CreateMapData);
+        ajax.sender_data_callback({out: 'TALO'}, CreateBarData);
+        ajax.sender_data_callback({out: 'TARO', metadata: '1'}, CreateMapdetails);
+        ajax.sender_data_callback({out: 'SCT'}, CreateMapBottomDetails);
     }
 
 

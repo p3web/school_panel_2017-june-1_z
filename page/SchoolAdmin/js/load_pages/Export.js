@@ -5,9 +5,13 @@ var Export = {
 Export.sendActions = function () {
     //ajax.sender_data_callback(Export.url , {act: 'TRMDO'} , Export.CreateMapData);
     ajax.sender_data_json_by_url_callback(Export.url, {act: 'get_religions'}, Export.CreateBarData);
+    ajax.sender_data_json_by_url_callback(Export.url, {act: 'get_map_poster'}, Export.mapposter);
 };
 Export.sendDonutActions = function () {
-    ajax.sender_data_json_by_url_callback(Export.url, {act: 'get_languge_by_gender', gender: 'all'}, Export.createDonutData);
+    ajax.sender_data_json_by_url_callback(Export.url, {
+        act: 'get_languge_by_gender',
+        gender: 'all'
+    }, Export.createDonutData);
 };
 
 
@@ -75,7 +79,14 @@ Export.CreateMapData = function (data) {
     }
 };
 
+Export.mapposter = function (Data) {
+    document.getElementById('schoolname').innerText = Data[0].schoolname;
+    document.getElementById('schoolAddress').innerText = Data[0].country + '/' + Data[0].state;
+    document.getElementById('AllCount').innerText = Data[3].count;
+    document.getElementById('MaleCount').innerText = Data[2].count_male;
+    document.getElementById('FemaleCount').innerText = Data[1].count_female;
 
+};
 /*var donutSeries = {
  name: 'Browser',
  data: [

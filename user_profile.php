@@ -31,6 +31,30 @@ class user_profile
 
     }
 
+    public static function set_teacher_language($email, $languagename, $languagelevel){
+        return data::insertinto("teacherlanguage", "`teacheremailid`, `languagename`, `languagelevel`", "'$email', '$languagename', '$languagelevel'");
+    }
+
+    public static function delete_teacher_language($id){
+        return data::delete("teacher_language", "`id` = '$id'");
+    }
+
+    public static function set_student_language($email, $languagename, $languagelevel){
+        return data::insertinto("studentlanguage", "`studentemailid`, `languagename`, `languagelevel`", "'$email', '$languagename', '$languagelevel'");
+    }
+
+    public static function delete_student_language($id){
+        return data::delete("student_language", "`id` = '$id'");
+    }
+
+    public static function set_staff_language($email, $languagename, $languagelevel){
+        return data::insertinto("stafflanguage", "`staffemailid`, `languagename`, `languagelevel`", "'$email', '$languagename', '$languagelevel'");
+    }
+
+    public static function delete_staff_language($id){
+        return data::delete("staff_language", "`id` = '$id'");
+    }
+
     public static function get_age_user($email, $type)
     {
         $data = data::selects("`age_group`", "`user_id` = '$email' and `type` = $type ");
@@ -132,6 +156,16 @@ class user_profile
         }
     }
 
+    public static function get_teacher_language($email)
+    {
+        $data = data::selects("`teacher_language`", "`teacheremailid` = '$email'");
+        if (count($data[0]) != 0) {
+            return $data;
+        } else {
+            return false;
+        }
+    }
+
     private static function get_teame_profile($email)
     {
         $data = data::selects('`teamadmin`', "`teamemailid` = '$email'");
@@ -182,7 +216,7 @@ class user_profile
             <form id='frm_edit_user' method='post' style='margin: 0 auto;display: block;' action='controller_user.php'>
             <h3>PERSONAL DETAILS</h3>
                 <table class='table borderless table-responsive'>
-                    <tr><td>Email:</td><td><input name='email' class='form-control'  type='email' placeholder='Email' readonly value='" . $data[0]['teamemailid'] . "'><br></td></tr>
+                    <tr><td>Email:</td><td><input id='emailId' name='email' class='form-control'  type='email' placeholder='Email' readonly value='" . $data[0]['teamemailid'] . "'><br></td></tr>
                     <tr><td>First name:</td><td><input name='firstname' class='psco_readonly form-control' type='email' placeholder='Email' readonly value='" . $data[0]['firstname'] . "'><br></td></tr>
                     <tr><td>Last name:</td><td><input name='lasttname' class='psco_readonly form-control' type='email' placeholder='Email' readonly value='" . $data[0]['lastname'] . "'><br></td></tr>
                     <tr><td>Gender:</td><td><select name='gender' id='frm_edit_user_gender' class='form-control' form='frm_edit_user' disabled >
@@ -305,6 +339,32 @@ class user_profile
                         btn_edit.html('Save');
                         btn_edit.attr('name','save');
                         $('#user_profile_header').html('Edit user profile');
+                                 //_______ create Delete Language Btn
+                        var Tbody = document.querySelector('#employee_lang > tbody');
+                        for(var i = 0 ; i < Tbody.childElementCount ; i++) {
+	                        var deletetd = document.createElement('td');
+	                        var deletebtn = document.createElement('div');
+	                        deletebtn.setAttribute('onclick' , 'DeleteLanguage(this)');
+	                        deletebtn.setAttribute('class' , 'btn btn-block btn-danger');
+	                        deletebtn.innerText = 'Delete language';
+	                        deletetd.appendChild(deletebtn);
+	                        Tbody.children[i].appendChild(deletetd);
+                        }      
+                        // create add language                              
+                    var tfoot = document.createElement('tfoot');
+                    var tr = document.createElement('tr');
+                    var td = document.createElement('td');
+                    td.setAttribute('colspan', '3');
+                    var btn = document.createElement('div');
+                    btn.setAttribute('class' , 'btn btn-primary btn-block');
+                    btn.setAttribute('onclick' , 'Profile.Addlanguage()');
+                    btn.setAttribute('id' , 'AddlanguageBTN');
+                    btn.innerText = 'Add Language';
+                    // append Child
+                    td.appendChild(btn);
+                    tr.appendChild(td);
+                    tfoot.appendChild(tr);
+                    document.getElementById('employee_lang').appendChild(tfoot);
                     }else{
                         $('#frm_edit_user').submit();
                         $('.psco_readonly').prop('readonly', true);
@@ -329,7 +389,7 @@ class user_profile
             <form id='frm_edit_user' method='post' style='margin: 0 auto;display: block;' action='controller_user.php'>
             <h3>PERSONAL DETAILS</h3>
                 <table class='table borderless table-responsive'>
-                    <tr><td>Email:</td><td><input name='email' class='form-control'  type='email' placeholder='Email' readonly value='" . $data[0]['teacheremailid'] . "'><br></td></tr>
+                    <tr><td>Email:</td><td><input id='emailId' name='email' class='form-control'  type='email' placeholder='Email' readonly value='" . $data[0]['teacheremailid'] . "'><br></td></tr>
                     <tr><td>First name:</td><td><input name='firstname' class='psco_readonly form-control' type='email' placeholder='Email' readonly value='" . $data[0]['firstname'] . "'><br></td></tr>
                     <tr><td>Last name:</td><td><input name='lasttname' class='psco_readonly form-control' type='email' placeholder='Email' readonly value='" . $data[0]['lastname'] . "'><br></td></tr>
                     <tr><td>Gender:</td><td><select name='gender' id='frm_edit_user_gender' class='form-control' form='frm_edit_user' disabled >
@@ -367,7 +427,7 @@ class user_profile
                 </table>
                 <br><hr>
                 <h3>LANGUAGES</h3>
-                <table class='table borderless table-responsive'>";
+                <table class='table borderless table-responsive' id='employee_lang'>";
         for ($lang_index = 0; $lang_index < count($language); $lang_index++) {
             $temp .= "<tr><td><select id='edit_profile_language$lang_index' name='lang_" . $language[$lang_index]['id'] . "' class='PSCO_language form-control' data-placeholder='Choose a Language...' form='frm_edit_user'  disabled></select></td><td><select id='edit_profile_language_level$lang_index' name='langlevel_" . $language[$lang_index]['id'] . "' class='PSCO_language_level form-control' data-placeholder='Choose a Language level...' form='frm_edit_user' disabled></select><br></td></tr>";
         }
