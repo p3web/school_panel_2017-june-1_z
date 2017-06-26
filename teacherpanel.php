@@ -2041,11 +2041,7 @@ if (isset($_POST['submitvalbeltab'])) {
                     $('#employee_lang').html(lang.data);
                     /*P.N*/
                     // Create add Language Btn ....
-<<<<<<< HEAD
                     var tfoot = document.createElement('tfoot');
-=======
-                /*    var tfoot = document.createElement('tfoot');
->>>>>>> 6e97550486ba155f7a7cb6b86dfc474f92657f4b
                     var tr = document.createElement('tr');
                     var td = document.createElement('td');
                     td.setAttribute('colspan', '2');
@@ -2057,11 +2053,7 @@ if (isset($_POST['submitvalbeltab'])) {
                     td.appendChild(btn);
                     tr.appendChild(td);
                     tfoot.appendChild(tr);
-<<<<<<< HEAD
                     document.getElementById('employee_lang').appendChild(tfoot);
-=======
-                    document.getElementById('employee_lang').appendChild(tfoot); */
->>>>>>> 6e97550486ba155f7a7cb6b86dfc474f92657f4b
                     $('#edit_data_Modal').modal('show');
                 }
             });

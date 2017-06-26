@@ -313,6 +313,16 @@ class user_profile
 
     }
 
+    public static function get_class_by_schoolId($adminid,$schoolId)
+    {
+        $data = data::selects_col("`classteacher`", " `classname`", "teacheremailid = '$adminid' AND schoolid = '$schoolId'");
+        if (count($data[0]) != 0) {
+            return $data;
+        } else {
+            return false;
+        }
+    }
+
     private static function get_teacher_profile($email)
     {
         $data = data::selects('`teacher`', "`teacheremailid` = '$email'");

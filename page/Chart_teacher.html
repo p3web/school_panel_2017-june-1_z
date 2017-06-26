@@ -5,30 +5,49 @@
     }
 </style>
 <script>
-    window.className='S1';
-    window.gender_lang='A';
-    var className_select_html = window.className + '<span class="caret" style="margin-left: 13px;"></span>';
-    $('#TeamL').html(className_select_html);
+    var data_request = {
 
-    var gender_select_html_lang = '';
-    switch (window.gender_lang){
-        case 'A':
-            gender_select_html_lang = 'All';
-            break;
-        case 'M':
-            gender_select_html_lang = 'Male';
-            break;
-        case 'F':
-            gender_select_html_lang = 'Female';
-            break;
-        case 'O':
-            gender_select_html_lang = 'Other';
-            break;
+        act: 'get_class_teacher',
+        schoolId: window.schoolId,
+        adminid: window.adminid
+
+
+    };
+
+    ajax.sender_data_json_by_url_callback('controller_teacher_admin.php',data_request, create_class_name_lang,'POST');
+
+    function create_class_name_lang(data) {
+        var class_item = '';
+        for(var i = 0 ; i< data.length ; i++){
+            class_item+= '<li><a href="#" onclick="window.className=\''+data[i].classname+'\';chart_select_gender();" >'+data[i].classname+'</a></li>'
+        }
+        $('#class_colect_lang').html(class_item);
+
+        window.className = data[0].classname;
+        window.gender_lang = 'A';
+        var className_select_html = window.className + '<span class="caret" style="margin-left: 13px;"></span>';
+        $('#TeamL').html(className_select_html);
+
+        var gender_select_html_lang = '';
+        switch (window.gender_lang) {
+            case 'A':
+                gender_select_html_lang = 'All';
+                break;
+            case 'M':
+                gender_select_html_lang = 'Male';
+                break;
+            case 'F':
+                gender_select_html_lang = 'Female';
+                break;
+            case 'O':
+                gender_select_html_lang = 'Other';
+                break;
+        }
+
+        gender_select_html_lang += '<span class="caret" style="margin-left: 13px;"></span>';
+
+        $('#GenderL').html(gender_select_html_lang);
     }
-
-    gender_select_html_lang += '<span class="caret" style="margin-left: 13px;"></span>';
-
-    $('#GenderL').html(gender_select_html_lang);
 </script>
 <br>
 <div id="PSCO_chart" class="container-fluid">
@@ -40,15 +59,9 @@
                     Select class
                     <span class="caret" style="margin-left: 13px;"></span>
                 </button>
-<<<<<<< HEAD
-                <ul class="dropdown-menu" style="min-width: 89px;margin: 2px 83px 0;" aria-labelledby="dLabel">
-                    <li><a href="#" onclick="window.className='S1';chart_select_gender();" >S1</a></li>
-                    <li><a href="#" onclick="window.className='S2';chart_select_gender();" >S2</a></li>
-=======
-                <ul class="dropdown-menu" aria-labelledby="dLabel">
-                    <li><a href="#" onclick="changeChartData('ChartContainer' , series , 'language');window.className='S1';" >S1</a></li>
-                    <li><a href="#" onclick="changeChartData('ChartContainer' , series, 'language');window.className='S2';" >S2</a></li>
->>>>>>> 6e97550486ba155f7a7cb6b86dfc474f92657f4b
+                <ul id="class_colect_lang" class="dropdown-menu" style="min-width: 89px;margin: 2px 83px 0;" aria-labelledby="dLabel">
+                    <!--<li><a href="#" onclick="window.className='S1';chart_select_gender();" >S1</a></li>-->
+                    <!--<li><a href="#" onclick="window.className='S2';chart_select_gender();" >S2</a></li>-->
                 </ul>
             </div>
         </div>

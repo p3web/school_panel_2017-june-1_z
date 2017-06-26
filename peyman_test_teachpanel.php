@@ -110,6 +110,10 @@ function makecsv($data, $csvfilename, $scriptrun = null)
     <script src="https://cdn.datatables.net/1.10.13/js/jquery.dataTables.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <script src="https://cdn.datatables.net/1.10.13/js/dataTables.bootstrap.min.js"></script>
+    <!--sweet alert-->
+    <link href="page/js/sweetalert/sweetalert2.css" rel="stylesheet"/>
+    <script src="page/js/sweetalert/sweetalert2.js"></script>
+    <script src="page/js/sweetalert/msg.js"></script>
 
     <!--
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
@@ -122,6 +126,11 @@ function makecsv($data, $csvfilename, $scriptrun = null)
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <script src="https://cdn.datatables.net/1.10.13/js/dataTables.bootstrap.min.js"></script>
     -->
+
+    <script type="text/javascript">
+        window.adminid ='<?php echo $adminid; ?>';
+    </script>
+
 
     <link rel="stylesheet" type="text/css" href="css/style.css">
 
@@ -507,13 +516,8 @@ function makecsv($data, $csvfilename, $scriptrun = null)
             }
             makecsv($output, 'teacherlangout.csv', false);
 
-<<<<<<< HEAD
             $femalecount = count(PSCO_func::get_lang_count_all_male_fmale($schoolId, $className, 'f'));
             $malecount = count(PSCO_func::get_lang_count_all_male_fmale($schoolId, $className, 'm'));
-=======
-            $femalecount = count(PSCO_func::get_lang_count_all_male_fmale($orgId, $teamName, 'f'));
-            $malecount = count(PSCO_func::get_lang_count_all_male_fmale($orgId, $teamName, 'm'));
->>>>>>> 6e97550486ba155f7a7cb6b86dfc474f92657f4b
             $totalcount = $femalecount + $malecount;
             $temp = array();
             $temp = array(
@@ -607,7 +611,7 @@ function test_input($data)
                 <div class="col-sm-12">
                     <!--                    <div class="col-sm-6">
                         <h2>Welcome to your Ancestry Atlas</h2>
-                        <h5>Teacher -> &nbsp;<b><?php /*echo $adminName; */?></b></h5>
+                        <h5>Teacher -> &nbsp;<b><?php /*echo $adminName; */ ?></b></h5>
                         <!--
                         <p style="margin-top:1.5em;">As a teacher, you can now invite your students to register for Ancestry Atlas. <br>
 
@@ -617,8 +621,8 @@ function test_input($data)
                     <!--       </div>
 
                     <div class="col-sm-6 text-right">
-                        <h2><?php /*echo $schoolName; */?></h2>
-                        <h5><?php /*echo $city . " / " . $suburb; */?></h5>
+                        <h2><?php /*echo $schoolName; */ ?></h2>
+                        <h5><?php /*echo $city . " / " . $suburb; */ ?></h5>
                     </div>
 -->
                     <div class="col-sm-12" style="margin-top:2em;">
@@ -903,26 +907,32 @@ function test_input($data)
 
                             </div>
 
-<<<<<<< HEAD
                             <div id="lessonplans" class="tab-pane fade">
                                 <div class="headerContent">Lesson plans</div>
                                 <br>
                                 <ul style="list-style-image:url(images/lessonplanicon.png);">
-                                    <li><a href="lessonplans/UNIT 1.pdf" target="_blank" style="color:#000;">Unit 1 (5-7 years+)</a></li><br>
-                                    <li><a href="lessonplans/UNIT 2.pdf" target="_blank" style="color:#000;">Unit 2 (8-9 years+) </a></li><br>
-                                    <li><a href="lessonplans/UNIT 3.pdf" target="_blank" style="color:#000;">Unit 3 (10-12 years+) </a></li><br>
-                                    <li><a href="lessonplans/UNIT 4.pdf" target="_blank" style="color:#000;">Unit 4 (All Age Groups)</a></li><br>
+                                    <li><a href="lessonplans/UNIT 1.pdf" target="_blank" style="color:#000;">Unit 1 (5-7
+                                            years+)</a></li>
+                                    <br>
+                                    <li><a href="lessonplans/UNIT 2.pdf" target="_blank" style="color:#000;">Unit 2 (8-9
+                                            years+) </a></li>
+                                    <br>
+                                    <li><a href="lessonplans/UNIT 3.pdf" target="_blank" style="color:#000;">Unit 3
+                                            (10-12 years+) </a></li>
+                                    <br>
+                                    <li><a href="lessonplans/UNIT 4.pdf" target="_blank" style="color:#000;">Unit 4 (All
+                                            Age Groups)</a></li>
+                                    <br>
                                 </ul>
                             </div>
 
-=======
->>>>>>> 6e97550486ba155f7a7cb6b86dfc474f92657f4b
                             <div id="maps" class="tab-pane fade">
                                 <div class="headerContent">MAPS</div>
 
                                 <div>
-                                    <iframe src="page/TeacherPanelMap.html" style="width:75%;height:500px;border:none;"></iframe>
-                                    <div  id="regions_div" style="display: none;float:left;"></div>
+                                    <iframe src="page/TeacherPanelMap.html"
+                                            style="width:75%;height:500px;border:none;"></iframe>
+                                    <div id="regions_div" style="display: none;float:left;"></div>
 
                                     <div style="float:right;">
 
@@ -1200,7 +1210,7 @@ function test_input($data)
                                         }, 1000);
                                     }
                                 }
-                                $('#language .TABContent').load('page/Chart_teacher.html' , function () {
+                                $('#language .TABContent').load('page/Chart_teacher.html', function () {
                                     setTimeout(function () {
                                         init_PSCO_chart();
                                     }, 1000);
@@ -1276,7 +1286,7 @@ function test_input($data)
                                         }, 1000);
                                     }
                                 }
-                                $('#religion .TABContent').load('page/Belief_chart_teacher.html',function () {
+                                $('#religion .TABContent').load('page/Belief_chart_teacher.html', function () {
                                     setTimeout(function () {
                                         init_PSCO_chart_religion();
                                     }, 1000);
@@ -1403,15 +1413,9 @@ function test_input($data)
 
 
             </div>
-<<<<<<< HEAD
             <!--
                         <div class="col-sm-1">
                         </div>-->
-=======
-
-          <!--  <div class="col-sm-1">
-            </div>-->
->>>>>>> 6e97550486ba155f7a7cb6b86dfc474f92657f4b
 
         </div>
     </div>
@@ -1977,7 +1981,7 @@ if (isset($_POST['submitvalbeltab'])) {
 
                     <div class="form-group">
                         <div class="col-sm-9">
-                            <table  id="employee_lang_edit_profile" class='table borderless table-responsive'>
+                            <table id="employee_lang_edit_profile" class='table borderless table-responsive'>
 
                             </table>
                         </div>
@@ -2027,50 +2031,65 @@ if (isset($_POST['submitvalbeltab'])) {
                     var datastaff = data['arr1'];
                     var datastaffbirth = data['arr2'];
                     var lang = data['arr4'];
-                    $('#studentemail').val(datastaff.studentemailid);
-                    $('#firstname').val(datastaff.firstname);
-                    $('#lastname').val(datastaff.lastname);
-                    $('#gender').val(datastaff.gender);
+                    if (datastaff != null) {
+                        $('#studentemail').val(datastaff.studentemailid);
+                        $('#firstname').val(datastaff.firstname);
+                        $('#lastname').val(datastaff.lastname);
+                        $('#gender').val(datastaff.gender);
 
-                    if (datastaff.religion == 'Non Disclosed') {
-                        $('#checko').prop('checked', true);
-                        $('#beliefreligion').prop('readonly', true);
-                        $('#beliefreligion').val('Belief/Religion');
-                        $('#beliefreligion').css('color', '#CCC');
+                        if (datastaff.religion == 'Non Disclosed') {
+                            $('#checko').prop('checked', true);
+                            $('#beliefreligion').prop('readonly', true);
+                            $('#beliefreligion').val('Belief/Religion');
+                            $('#beliefreligion').css('color', '#CCC');
 
-                    } else {
-                        $('#checko').prop('checked', false);
-                        $('#beliefreligion').prop("readonly", false);
-                        $('#beliefreligion').val(datastaff.religion);
-                        $('#beliefreligion').css('color', '#000');
+                        } else {
+                            $('#checko').prop('checked', false);
+                            $('#beliefreligion').prop("readonly", false);
+                            $('#beliefreligion').val(datastaff.religion);
+                            $('#beliefreligion').css('color', '#000');
+                        }
                     }
-
-                    $('#sb').val(datastaffbirth.studentbirthplace);
-                    $('#m').val(datastaffbirth.studentmotherbirthplace);
-                    $('#gfm').val(datastaffbirth.studentmothersfatherbirthplace);
-                    $('#gmm').val(datastaffbirth.studentmothersmotherbirthplace);
-                    $('#f').val(datastaffbirth.studentfatherbirthplace);
-                    $('#gff').val(datastaffbirth.studentfathersfatherbirthplace);
-                    $('#gmf').val(datastaffbirth.studentfathersmotherbirthplace);
+                    if (datastaffbirth != null) {
+                        $('#sb').val(datastaffbirth.studentbirthplace);
+                        $('#m').val(datastaffbirth.studentmotherbirthplace);
+                        $('#gfm').val(datastaffbirth.studentmothersfatherbirthplace);
+                        $('#gmm').val(datastaffbirth.studentmothersmotherbirthplace);
+                        $('#f').val(datastaffbirth.studentfatherbirthplace);
+                        $('#gff').val(datastaffbirth.studentfathersfatherbirthplace);
+                        $('#gmf').val(datastaffbirth.studentfathersmotherbirthplace);
+                    }
                     $('#employee_lang_edit_profile').html(lang.data);
 
                     /*P.N*/
-                    // Create add Language Btn ....
-                    var tfoot = document.createElement('tfoot');
-                    var tr = document.createElement('tr');
-                    var td = document.createElement('td');
-                    td.setAttribute('colspan', '2');
-                    var btn = document.createElement('div');
-                    btn.setAttribute('class' , 'btn btn-primary btn-block');
-                    btn.setAttribute('onclick' , 'Profile.Addlanguage()');
-                    btn.innerText = 'Add Language';
-                    // append Child
-                    td.appendChild(btn);
-                    tr.appendChild(td);
-                    tfoot.appendChild(tr);
-                    document.getElementById('employee_lang').appendChild(tfoot);
-                    $('#edit_data_Modal').modal('show');
-                }
+                    //_______ create Delete Language Btn
+                    var Tbody = document.querySelector('#employee_lang_edit_profile > tbody');
+                    for (var i = 0; i < Tbody.childElementCount; i++) {
+                        var deletetd = document.createElement('td');
+                        var deletebtn = document.createElement('div');
+                        deletebtn.setAttribute('onclick', 'DeleteLanguage(this)');
+                        deletebtn.setAttribute('class', 'btn btn-block btn-danger');
+                        deletebtn.innerText = 'Delete language';
+                        deletetd.appendChild(deletebtn);
+                        Tbody.children[i].appendChild(deletetd);
+                    }
+                        // Create add Language Btn ....
+                        var tfoot = document.createElement('tfoot');
+                        var tr = document.createElement('tr');
+                        var td = document.createElement('td');
+                        td.setAttribute('colspan', '3');
+                        var btn = document.createElement('div');
+                        btn.setAttribute('class', 'btn btn-primary btn-block');
+                        btn.setAttribute('onclick', 'Profile.Addlanguage()');
+                        btn.innerText = 'Add Language';
+                        // append Child
+                        td.appendChild(btn);
+                        tr.appendChild(td);
+                        tfoot.appendChild(tr);
+                        document.getElementById('employee_lang_edit_profile').appendChild(tfoot);
+                        $('#edit_data_Modal').modal('show');
+                    }
+
             });
         });
 

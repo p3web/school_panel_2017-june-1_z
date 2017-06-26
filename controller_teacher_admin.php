@@ -6,7 +6,7 @@
  * Time: 21:07
  */
 //print_r($_REQUEST);exit;
-
+require_once 'lang.php';
 require_once 'language.php';
 require_once 'controller_main_function.php';
 require_once 'user_profile.php';
@@ -40,7 +40,9 @@ if(isset($_REQUEST['act'])) {
                 controller_main_function::send_msg(lang::$invalid_data, lang::$error);
             }
             user_profile::set_teacher_language($_REQUEST["teacheremailid"], $_REQUEST['languagename'], $_REQUEST['languagelevel']);
-            controller_main_function::send_msg(lang::$success, lang::$message);
+            //controller_main_function::send_msg(lang::$success, lang::$message , 'success');
+            $data = user_profile::get_teacher_language($_REQUEST['teacheremailid']);
+            controller_main_function::send_result($data);
             break;
 
         case 'get_teacher_language':
@@ -53,12 +55,14 @@ if(isset($_REQUEST['act'])) {
             break;
 
         case 'delete_teacher_language':
-            $valid_data = controller_main_function::check_validation(array("id"));
+            $valid_data = controller_main_function::check_validation(array("id","teacheremailid"));
             if (!isset($valid_data['is_valid']) || $valid_data['is_valid'] == false) {
                 controller_main_function::send_msg(lang::$invalid_data, lang::$error);
             }
             user_profile::delete_teacher_language($_REQUEST["id"]);
-            controller_main_function::send_msg(lang::$success, lang::$message);
+            //controller_main_function::send_msg(lang::$success, lang::$message);
+            $data = user_profile::get_teacher_language($_REQUEST['teacheremailid']);
+            controller_main_function::send_result($data);
             break;
 
         case 'set_student_language':
@@ -106,12 +110,12 @@ if(isset($_REQUEST['act'])) {
             }
             break;
 
-        case 'get_class_by_schoolid':
-            $valid_data = controller_main_function::check_validation(array("schoolid"));
+        case 'get_class_teacher':
+            $valid_data = controller_main_function::check_validation(array("adminid","schoolId"));
             if (!isset($valid_data['is_valid']) || $valid_data['is_valid'] == false) {
                 controller_main_function::send_msg(lang::$invalid_data, lang::$error);
             }
-            $data = access_school_admin_panel::get_class_by_schoolId($_REQUEST['schoolId']);
+            $data = user_profile::get_class_by_schoolId($_REQUEST['adminid'],$_REQUEST['schoolId']);
             controller_main_function::send_result($data);
             break;
 
