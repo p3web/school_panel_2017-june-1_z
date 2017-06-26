@@ -1991,6 +1991,9 @@ if (isset($_POST['submitvalbeltab'])) {
                         <div class="col-sm-12">
 =======
                         <div class="col-sm-9">
+<<<<<<< HEAD
+>>>>>>> 00fa650991cd8d44a416dda2eff7b5777dca6709
+=======
 >>>>>>> 00fa650991cd8d44a416dda2eff7b5777dca6709
                             <table id="employee_lang_edit_profile" class='table borderless table-responsive'>
 
@@ -2074,11 +2077,14 @@ if (isset($_POST['submitvalbeltab'])) {
 
                     /*P.N*/
 <<<<<<< HEAD
+<<<<<<< HEAD
 
                     Profile.CreateAdd('employee_lang_edit_profile');
 
                    /* // reset AddLanguage
                     Profile.ResetAdd();
+=======
+>>>>>>> 00fa650991cd8d44a416dda2eff7b5777dca6709
 =======
 >>>>>>> 00fa650991cd8d44a416dda2eff7b5777dca6709
                     //_______ create Delete Language Btn
@@ -2101,7 +2107,10 @@ if (isset($_POST['submitvalbeltab'])) {
                         btn.setAttribute('class', 'btn btn-primary btn-block');
                         btn.setAttribute('onclick', 'Profile.Addlanguage()');
 <<<<<<< HEAD
+<<<<<<< HEAD
                         btn.setAttribute('id', 'AddlanguageBTN');
+=======
+>>>>>>> 00fa650991cd8d44a416dda2eff7b5777dca6709
 =======
 >>>>>>> 00fa650991cd8d44a416dda2eff7b5777dca6709
                         btn.innerText = 'Add Language';
@@ -2110,7 +2119,11 @@ if (isset($_POST['submitvalbeltab'])) {
                         tr.appendChild(td);
                         tfoot.appendChild(tr);
 <<<<<<< HEAD
+<<<<<<< HEAD
                         document.getElementById('employee_lang_edit_profile').appendChild(tfoot);*/
+=======
+                        document.getElementById('employee_lang_edit_profile').appendChild(tfoot);
+>>>>>>> 00fa650991cd8d44a416dda2eff7b5777dca6709
 =======
                         document.getElementById('employee_lang_edit_profile').appendChild(tfoot);
 >>>>>>> 00fa650991cd8d44a416dda2eff7b5777dca6709

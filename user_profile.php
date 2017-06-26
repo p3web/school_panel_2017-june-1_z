@@ -33,7 +33,11 @@ class user_profile
 
     public static function set_teacher_language($email, $languagename, $languagelevel){
 <<<<<<< HEAD
+<<<<<<< HEAD
         return data::insertinto("teacher_language", "`teacheremailid`, `languagename`, `languagelevel`", "'$email', '$languagename', '$languagelevel'");
+=======
+        return data::insertinto("teacherlanguage", "`teacheremailid`, `languagename`, `languagelevel`", "'$email', '$languagename', '$languagelevel'");
+>>>>>>> 00fa650991cd8d44a416dda2eff7b5777dca6709
 =======
         return data::insertinto("teacherlanguage", "`teacheremailid`, `languagename`, `languagelevel`", "'$email', '$languagename', '$languagelevel'");
 >>>>>>> 00fa650991cd8d44a416dda2eff7b5777dca6709
@@ -45,7 +49,11 @@ class user_profile
 
     public static function set_student_language($email, $languagename, $languagelevel){
 <<<<<<< HEAD
+<<<<<<< HEAD
         return data::insertinto("student_language", "`studentemailid`, `languagename`, `languagelevel`", "'$email', '$languagename', '$languagelevel'");
+=======
+        return data::insertinto("studentlanguage", "`studentemailid`, `languagename`, `languagelevel`", "'$email', '$languagename', '$languagelevel'");
+>>>>>>> 00fa650991cd8d44a416dda2eff7b5777dca6709
 =======
         return data::insertinto("studentlanguage", "`studentemailid`, `languagename`, `languagelevel`", "'$email', '$languagename', '$languagelevel'");
 >>>>>>> 00fa650991cd8d44a416dda2eff7b5777dca6709
@@ -57,7 +65,11 @@ class user_profile
 
     public static function set_staff_language($email, $languagename, $languagelevel){
 <<<<<<< HEAD
+<<<<<<< HEAD
         return data::insertinto("staff_language", "`staffemailid`, `languagename`, `languagelevel`", "'$email', '$languagename', '$languagelevel'");
+=======
+        return data::insertinto("stafflanguage", "`staffemailid`, `languagename`, `languagelevel`", "'$email', '$languagename', '$languagelevel'");
+>>>>>>> 00fa650991cd8d44a416dda2eff7b5777dca6709
 =======
         return data::insertinto("stafflanguage", "`staffemailid`, `languagename`, `languagelevel`", "'$email', '$languagename', '$languagelevel'");
 >>>>>>> 00fa650991cd8d44a416dda2eff7b5777dca6709
@@ -362,9 +374,13 @@ class user_profile
                         btn_edit.attr('name','save');                        
                         $('#user_profile_header').html('Edit user profile');
 <<<<<<< HEAD
+<<<<<<< HEAD
                         
                             Profile.CreateAdd('employee_lang');
 /*                                 //_______ create Delete Language Btn
+=======
+                                 //_______ create Delete Language Btn
+>>>>>>> 00fa650991cd8d44a416dda2eff7b5777dca6709
 =======
                                  //_______ create Delete Language Btn
 >>>>>>> 00fa650991cd8d44a416dda2eff7b5777dca6709
@@ -393,7 +409,11 @@ class user_profile
                     tr.appendChild(td);
                     tfoot.appendChild(tr);
 <<<<<<< HEAD
+<<<<<<< HEAD
                     document.getElementById('employee_lang').appendChild(tfoot);*/
+=======
+                    document.getElementById('employee_lang').appendChild(tfoot);
+>>>>>>> 00fa650991cd8d44a416dda2eff7b5777dca6709
 =======
                     document.getElementById('employee_lang').appendChild(tfoot);
 >>>>>>> 00fa650991cd8d44a416dda2eff7b5777dca6709
