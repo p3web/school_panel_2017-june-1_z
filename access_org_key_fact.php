@@ -23,7 +23,7 @@ class access_org_key_fact {
 
         //Country count
         $data = self::country_count($orgid);
-        $string_fact .= "<li> In total, students in this school are from ".$data[0]['count']." different countries. (including students, their parents and grandparents ).</li>";
+        $string_fact .= "<li> In total, staff in this organization are from ".$data[0]['count']." different countries. (including students, their parents and grandparents ).</li>";
         //Birth country
         $data = self::born_country($orgid);
         $string_fact .= "<li>".number_format($data[0]['percent'], 2, '.', ',' )."% of staff in this organisation are born in \"First Country\"</li>";

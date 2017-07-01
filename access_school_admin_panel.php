@@ -82,6 +82,13 @@ class access_school_admin_panel
         return data::delete("`teacher_language`", "`id`= $id");
     }
 
+    public static function delete_teacher_lang_by_teacheremailid($teacheremailid)
+    {
+        data::delete("`teacherlanguage`", "`teacheremailid`= $teacheremailid");
+        return data::delete("`teacher_language`", "`teacheremailid`= $teacheremailid");
+
+    }
+
     public static function edit_teacher_lang_bylangId($id, $languagename, $languagelevel)
     {
         return data::update("`teacher_language`", "`languagename`='$languagename',`languagelevel`= '$languagelevel' ", "`id`= $id");
@@ -285,6 +292,18 @@ class access_school_admin_panel
             return false;
         }
     }
+
+    public static function set_teacher_class($teacheremailid, $schoolid ,$classname )
+    {
+        //insert into classteacher(schoolid, teacheremailid, classname) values('$schoolId','$email','$class')
+        return data::insertinto("`classteacher`", "`schoolid`, `teacheremailid`, `classname`", "'$schoolid' , '$teacheremailid' , '$classname'");
+    }
+    public static function delete_teacher_class($teacheremailid, $schoolid ,$classname )
+    {
+        //insert into classteacher(schoolid, teacheremailid, classname) values('$schoolId','$email','$class')
+        return data::delete("`classteacher`", "`schoolid`='$schoolid'  and  `teacheremailid`='$teacheremailid' and  `classname`='$classname'");
+    }
+
 
 }
 

@@ -96,7 +96,12 @@ class invite{
        return data::insertinto("`student`", "`studentemailid`, `schoolid`, `classname`, `firstname`, `gender`, `religion`, `token`, `status`", "'$email', '$schoolid', '$classname', '$firstname', '$gender', '$religion', '$token','pending'");
     }
 
-    private static function send_mail($adminid,$email,$token,$is_staff=true){
+    private static function set_teacher($email,$schoolid,$token,$lastname){
+       // insert into teacher(teacheremailid, schoolid, token, status) values('$email','$schoolId','$token','pending')
+       return data::insertinto("`teacher`", "`teacheremailid`, `schoolid`, `token`, `lastname`, `status`", "'$email', '$schoolid', '$token','$lastname','pending'");
+    }
+
+    private static function send_mail($adminid,$email,$token,$is_staff="sttaf"){
 
         require("/home/ancestryatlas/public_html/phpmailertesting/PHPMailer_5.2.0/class.phpmailer.php");
 
@@ -121,11 +126,14 @@ class invite{
 
         $mail->Subject = "Account Confirmation";
         include 'emailbodycontent.php';
-        if($is_staff) {
+        if($is_staff=="sttaf") {
             $ccvv = emailbodyteamadmintostaff($adminid, $email, $token);
-        }else {
+        }else if($is_staff == false) {
             $ccvv = emailbodyteachertostudent($adminid, $email, $token);
+        }else if($is_staff == "teacher"){
+            $ccvv = emailbodyadmintoteacher($adminid, $email, $token);
         }
+
         $mail->Body    = "".$ccvv."";
         $mail->AltBody = "This is the body in plain text for non-HTML mail clients";
         return $mail->Send();
@@ -134,6 +142,9 @@ class invite{
 
     private static function delete_staff_by_staffemailid($email){
         return data::delete("`staff`", "staffemailid = '$email'");
+    }
+    private static function delete_teacher_by_staffemailid($email){
+        return data::delete("`teacher`", "teacheremailid = '$email'");
     }
     private static function delete_student_by_studentemailid($email){
         return data::delete("`student`", "studentemailid = '$email'");
@@ -147,7 +158,7 @@ class invite{
         if (isset($_REQUEST['invite'])) {
 
             //name
-            $name = test_input($_POST["name"]);
+            $name = $_POST["name"];
 
 
 
@@ -264,7 +275,7 @@ class invite{
         if (isset($_REQUEST['invite'])) {
 
             //name
-            $name = test_input($_POST["name"]);
+            $name = $_POST["name"];
 
 
 
@@ -372,7 +383,124 @@ class invite{
         }
     }
 
+    public static function invite_teecher($schoolid,$adminid){
 
+        $combineErr="";
+        $emailErr = "";
+        $email = $name = "";
+
+        if (isset($_REQUEST['invite'])) {
+
+            //name
+            $name = $_REQUEST["name"];
+
+
+
+            //EMAIL VALIDATION
+            if (empty($_REQUEST["email"])) {
+                $emailErr = "Email is required";
+                $combineErr = $combineErr."<br>".$emailErr;
+//                echo "<script type='text/javascript'>
+//				$(document).ready(function()
+//				{
+//					$('#email').css('background-color', '#ffb0b0');
+//				}); </script>";
+            } else {
+
+                $email = $_REQUEST["email"];
+                // check if e-mail address is well-formed
+                if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
+                    $emailErr = "Invalid email format";
+                    $combineErr = $combineErr."<br>".$emailErr;
+//                    echo "<script type='text/javascript'>
+//				$(document).ready(function()
+//				{
+//					$('#email').css('background-color', '#ffb0b0');
+//				}); </script>";
+                }else{
+
+
+
+                    $dataMatched ="no";
+
+                    $register_on_staff = self::check_mail_in_staff(strtolower($email));
+
+                    $register_on_teamadmin = self::check_mail_in_teamadmin(strtolower($email));
+
+                    $register_on_organisationadmin = self::check_mail_in_organisationadmin(strtolower($email));
+
+                    $register_on_deptadmin = self::check_mail_in_deptadmin(strtolower($email));
+
+                    $register_on_school = self::check_mail_in_school(strtolower($email));
+
+                    $register_on_teacher = self::check_mail_in_teacher(strtolower($email));
+
+                    $register_on_student = self::check_mail_in_student(strtolower($email));
+
+                    if($register_on_staff != false) {
+                        if ($register_on_teamadmin != false) {
+                            if (!$register_on_organisationadmin != false) {
+                                if (!$register_on_deptadmin != false) {
+                                    if (!$register_on_school != false) {
+                                        if (!$register_on_teacher != false) {
+                                            if (!$register_on_student != false) {
+                                                $emailErr = "Email already registered.";
+                                                $combineErr = $combineErr . "<br>" . $emailErr;
+//                                                echo "<script type='text/javascript'>
+//                                            $(document).ready(function()
+//                                            {
+//                                                $('#email').css('background-color', '#ffb0b0');
+//                                            }); </script>";
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+
+                }
+            }
+
+            //EVERTHING IS OK NOW
+            if(empty($emailErr)){
+
+                if($name == ""){
+                    $name="NULL";
+                }
+
+
+
+                $bytes = openssl_random_pseudo_bytes(32);
+                $token = bin2hex($bytes);
+
+
+                $set_result = self::set_teacher($email,$schoolid,$token,$name);
+
+                if($set_result!=0){
+
+                    die("ERROR: Data not inserted");
+                }
+                else{
+                    $result_send_mail = self::send_mail($adminid,$email,$token,"teacher");
+
+                    if(!$result_send_mail || $combineErr !="")
+                    {
+                        self::delete_teacher_by_staffemailid($email);
+
+                        $combineErr .= "Email Unsuccessful. please try again. or contact us";
+                        return $combineErr;
+                    }else{
+                        //Email sent Successfully. Staff can check their email and fill data.
+                        return 1;
+                    }
+                }
+
+            }
+
+
+        }
+    }
 }
 
 

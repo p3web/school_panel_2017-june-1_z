@@ -16,6 +16,9 @@
     <link rel="stylesheet" href="../js/sweetalert/sweetalert2.css">
 
 
+
+
+
 </head>
 <body onload="Teacher.LoadTeacherTable();">
 <div id="wrap">
@@ -130,8 +133,16 @@
                                          name="submitvalstutab" value="SUBMIT">
 
                             <div class="headerContent">TEACHER</div>
+<<<<<<< HEAD
                             <p>As a school administrator, you can now invite teachers to register for Ancestry Atlas</p>
                             <h4>How?</h4>
+=======
+                            <p>As school administrator, you can now invite teachers to register for Ancestry Atlas</p>
+                            <h4>How?</h4>
+                            <p>Enter each teacher's email address, their class name and hit INVITE.</p>
+                            <p>Teachers can now register and start mapping their classroom cultural diversity</p>
+                            <div id="PGrid">
+>>>>>>> e1239fba462841e40c4d47613dc439a92857dc5d
 
                             <p>Enter each teacher's email address, their class name and hit INVITE.</p>
 
@@ -668,9 +679,15 @@
 <script type="text/javascript">
     var __lang = undefined;
 
+<<<<<<< HEAD
     $.getJSON('../data_value/lang.json', function (data) {
         __lang = new lang(data);
     });
+=======
+    $.getJSON('../data_value/lang.json', function(data){
+        __lang = new lang(data);
+    } );
+>>>>>>> e1239fba462841e40c4d47613dc439a92857dc5d
 </script>
 
 <!--PSCO_Grid-->
@@ -735,12 +752,21 @@
         id: 'EmailInvite',
         type: 'inputtext'
     }, {
+<<<<<<< HEAD
         name: {
             value: '',
             htmlTag: ' <input class="PGrid-InputStyle" list="classnameInvite" name="classInvite" id="classInvite" placeholder="Class name"  > <datalist id="classnameInvite"></datalist>'
         }
 
     }, {}, {}, {
+=======
+    name: {
+        value:'',
+        htmlTag:'<select class="form-control" id="classInvite"></select>'
+    }
+
+    },{}, {}, {
+>>>>>>> e1239fba462841e40c4d47613dc439a92857dc5d
         name: 'Invite',
         id: 'InviteBTN',
         type: 'btn',
@@ -788,6 +814,7 @@
                     name: 'Class name',
                     id: 'classNameAdd',
                     type: 'inputtext'
+<<<<<<< HEAD
                 }, {
                     name: 'Add',
                     id: 'ClassAddBTN',
@@ -827,6 +854,10 @@
                     type: 'inputtext'
                 },  {
                    name: 'Add',
+=======
+                },  {
+                    name: 'Add',
+>>>>>>> e1239fba462841e40c4d47613dc439a92857dc5d
                     id: 'ClassAddBTN',
                     type: 'btn',
                     attribute: [
@@ -834,8 +865,13 @@
                         {name: 'onclick', value: 'class_data.add_new_class()'}
                     ]
 
+<<<<<<< HEAD
                 }]];*/
                 student.LoadStudentTable(); //______ send Act
+=======
+                }]];
+                Classes.LoadClassesTable(); //______ send Act
+>>>>>>> e1239fba462841e40c4d47613dc439a92857dc5d
             } else {
                 //____ LOAD OTHER TAB FROM EXTERNAL PAGE
                 $(TabID + ' .TABContent').load(pageName + '.html');
