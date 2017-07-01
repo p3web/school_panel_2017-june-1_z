@@ -1854,7 +1854,7 @@ if (isset($_POST['submitvalbeltab'])) {
             </div>
             <div class="modal-body">
 
-                <form method="post" id="update_form" action="" class="form-horizontal">
+                <form method="post" id="update_form" action="controller_user.php" class="form-horizontal">
                     <h3 style="padding: 1% 0%; background-color:#FE8885; color:#FFF; text-align:center;  border-radius: 8px;">
                         PERSONAL DETAILS</h3>
 
@@ -1862,7 +1862,7 @@ if (isset($_POST['submitvalbeltab'])) {
                         <label class="control-label col-sm-3" for="studentemail">Email ID:</label>
 
                         <div class="col-sm-9">
-                            <input type="email" class="form-control" id="studentemail" name="studentemail" readonly
+                            <input type="email" class="form-control" id="studentemail" name="email" readonly
                                    style="background-color:#e2e2e2;">
                         </div>
                     </div>
@@ -1877,7 +1877,7 @@ if (isset($_POST['submitvalbeltab'])) {
                         <label class="control-label col-sm-3" for="lastname">Last Name:</label>
 
                         <div class="col-sm-9">
-                            <input type="text" class="form-control" id="lastname" name="lastname">
+                            <input type="text" class="form-control" id="lastname" name="lasttname">
                         </div>
                     </div>
                     <div class="form-group">
@@ -1908,7 +1908,7 @@ if (isset($_POST['submitvalbeltab'])) {
 
                         <div class="col-sm-9">
                             <div class="col-sm-6">
-                                <input type="text" class="form-control" id="beliefreligion" name="beliefreligion">
+                                <input type="text" class="form-control" id="beliefreligion" name="religion">
                             </div>
                             <div class="col-sm-6">
                                 <input id="checko" type="checkbox">
@@ -1923,7 +1923,7 @@ if (isset($_POST['submitvalbeltab'])) {
                         <label class="control-label col-sm-3" for="sb">Student:</label>
 
                         <div class="col-sm-9">
-                            <select name="sb" id="sb" class="form-control PSCO_country"></select>
+                            <select name="Self" id="sb" class="form-control PSCO_country"></select>
                             <!--<input type="text" class="form-control" id="sb" name="sb">-->
                         </div>
                     </div>
@@ -1933,7 +1933,7 @@ if (isset($_POST['submitvalbeltab'])) {
                         <label class="control-label col-sm-3" for="m">Mother:</label>
 
                         <div class="col-sm-9">
-                            <select name="m" id="m" class="form-control PSCO_country"></select>
+                            <select name="Mother" id="m" class="form-control PSCO_country"></select>
                             <!--<input type="text" class="form-control" id="m" name="m">-->
                         </div>
                     </div>
@@ -1941,7 +1941,7 @@ if (isset($_POST['submitvalbeltab'])) {
                         <label class="control-label col-sm-3" for="gfm">GrandFather:</label>
 
                         <div class="col-sm-9">
-                            <select name="gfm" id="gfm" class="form-control PSCO_country"></select>
+                            <select name="m_Grandfather" id="gfm" class="form-control PSCO_country"></select>
                             <!--<input type="text" class="form-control" id="gfm" name="gfm">-->
                         </div>
                     </div>
@@ -1949,7 +1949,7 @@ if (isset($_POST['submitvalbeltab'])) {
                         <label class="control-label col-sm-3" for="gmm">GrandMother:</label>
 
                         <div class="col-sm-9">
-                            <select name="gmm" id="gmm" class="form-control PSCO_country"></select>
+                            <select name="m_GrandMother" id="gmm" class="form-control PSCO_country"></select>
                             <!--<input type="text" class="form-control" id="gmm" name="gmm">-->
                         </div>
                     </div>
@@ -1959,7 +1959,7 @@ if (isset($_POST['submitvalbeltab'])) {
                         <label class="control-label col-sm-3" for="f">Father:</label>
 
                         <div class="col-sm-9">
-                            <select name="f" id="f" class="form-control PSCO_country"></select>
+                            <select name="Father" id="f" class="form-control PSCO_country"></select>
                             <!--<input type="text" class="form-control" id="f" name="f">-->
                         </div>
                     </div>
@@ -1967,7 +1967,7 @@ if (isset($_POST['submitvalbeltab'])) {
                         <label class="control-label col-sm-3" for="gff">GrandFather:</label>
 
                         <div class="col-sm-9">
-                            <select name="gff" id="gff" class="form-control PSCO_country"></select>
+                            <select name="f_Grandfather" id="gff" class="form-control PSCO_country"></select>
                             <!--<input type="text" class="form-control" id="gff" name="gff">-->
                         </div>
                     </div>
@@ -1975,7 +1975,7 @@ if (isset($_POST['submitvalbeltab'])) {
                         <label class="control-label col-sm-3" for="gmf">GrandMother:</label>
 
                         <div class="col-sm-9">
-                            <select name="gmf" id="gmf" class="form-control PSCO_country"></select>
+                            <select name="f_GrandMother" id="gmf" class="form-control PSCO_country"></select>
                             <!--<input type="text" class="form-control" id="gmf" name="gmf">-->
                         </div>
 
@@ -1987,14 +1987,7 @@ if (isset($_POST['submitvalbeltab'])) {
                         LANGUAGES</h3>
 
                     <div class="form-group">
-<<<<<<< HEAD
                         <div class="col-sm-12">
-=======
-                        <div class="col-sm-9">
-<<<<<<< HEAD
->>>>>>> 00fa650991cd8d44a416dda2eff7b5777dca6709
-=======
->>>>>>> 00fa650991cd8d44a416dda2eff7b5777dca6709
                             <table id="employee_lang_edit_profile" class='table borderless table-responsive'>
 
                             </table>
@@ -2002,6 +1995,9 @@ if (isset($_POST['submitvalbeltab'])) {
                     </div>
 
                     <br>
+                    <input type="hidden" name="act" id="act" value="edit_student_user">
+                    <input type="hidden" name="schoolid" id="schoolIDStudent">
+                    <input type="hidden" name="edit_teacher_profile_page_name" id="StudentPaGeNAme">
                     <input type="button" onclick="Profile.SaveLang()" name="update" id="update" value="Save" class="btn btn-success "/>
 
                 </form>
@@ -2029,6 +2025,11 @@ if (isset($_POST['submitvalbeltab'])) {
 <script>
 
     $(document).ready(function () {
+        var pageStudent = window.location.href;
+        pageStudent = pageStudent.split('/');
+        pageStudent = pageStudent[pageStudent.length-1];
+        $('#StudentPaGeNAme').val(pageStudent);
+        $('#schoolIDStudent').val(window.schoolId);
         $('#add').click(function () {
             $('#insert').val("Insert");
             $('#insert_form')[0].reset();
@@ -2076,17 +2077,11 @@ if (isset($_POST['submitvalbeltab'])) {
                     $('#employee_lang_edit_profile').html(lang.data);
 
                     /*P.N*/
-<<<<<<< HEAD
-<<<<<<< HEAD
 
                     Profile.CreateAdd('employee_lang_edit_profile');
 
                    /* // reset AddLanguage
                     Profile.ResetAdd();
-=======
->>>>>>> 00fa650991cd8d44a416dda2eff7b5777dca6709
-=======
->>>>>>> 00fa650991cd8d44a416dda2eff7b5777dca6709
                     //_______ create Delete Language Btn
                     var Tbody = document.querySelector('#employee_lang_edit_profile > tbody');
                     for (var i = 0; i < Tbody.childElementCount; i++) {
@@ -2106,27 +2101,13 @@ if (isset($_POST['submitvalbeltab'])) {
                         var btn = document.createElement('div');
                         btn.setAttribute('class', 'btn btn-primary btn-block');
                         btn.setAttribute('onclick', 'Profile.Addlanguage()');
-<<<<<<< HEAD
-<<<<<<< HEAD
                         btn.setAttribute('id', 'AddlanguageBTN');
-=======
->>>>>>> 00fa650991cd8d44a416dda2eff7b5777dca6709
-=======
->>>>>>> 00fa650991cd8d44a416dda2eff7b5777dca6709
                         btn.innerText = 'Add Language';
                         // append Child
                         td.appendChild(btn);
                         tr.appendChild(td);
                         tfoot.appendChild(tr);
-<<<<<<< HEAD
-<<<<<<< HEAD
                         document.getElementById('employee_lang_edit_profile').appendChild(tfoot);*/
-=======
-                        document.getElementById('employee_lang_edit_profile').appendChild(tfoot);
->>>>>>> 00fa650991cd8d44a416dda2eff7b5777dca6709
-=======
-                        document.getElementById('employee_lang_edit_profile').appendChild(tfoot);
->>>>>>> 00fa650991cd8d44a416dda2eff7b5777dca6709
                         $('#edit_data_Modal').modal('show');
                     }
 
