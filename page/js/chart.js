@@ -213,7 +213,7 @@ function MapChart(ContainerID, MapData) {
 
 }
 
-function PieChart(ContainerID, series , chartName) {
+function PieChart(ContainerID, series, chartName) {
     document.getElementById(ContainerID).innerHTML = '';
     // Build the chart
     Highcharts.chart(ContainerID, {
@@ -281,9 +281,9 @@ function PieChart(ContainerID, series , chartName) {
  */
 
 
-function DonutChart(ContainerID, series , chartName) {
+function DonutChart(ContainerID, series, chartName) {
     document.getElementById(ContainerID).innerHTML = '';
-    Highcharts.chart(ContainerID, {
+        Highcharts.chart(ContainerID, {
         credits: {
             enabled: false
         },
@@ -345,7 +345,8 @@ function TabelCreateor(data, tableId) {
     for (i = 0; i < data.trData.length; i++) {
         tableData += '<tr><td>' + (i + 1) + '</td>';
         for (var a = 0; a < data.trData[i].length; a++) {
-            tableData += '<td>' + data.trData[i][a] + '</td>';
+            var tdata = data.trData[i][a] == null ? '-' : data.trData[i][a];
+            tableData += '<td>' + tdata + '</td>';
         }
         tableData += '</tr>';
     }
@@ -371,4 +372,14 @@ function CreateMapBottomDetails(data) {
     document.getElementById('bottomTitle4').innerText = data[0][3][1];
     document.getElementById('bottom4').innerText = data[0][3][0];
 
+}
+
+function checkData(Data) {
+    if (Data.length == 0) {
+        try {
+            message.show('Data is empty', 'Warning', 'warning');
+        }catch (e){}
+        return false;
+    }
+    return true;
 }

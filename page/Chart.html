@@ -1,6 +1,5 @@
-
 <style>
-    .Chart-table th{
+    .Chart-table th {
         text-align: center !important;
     }
 </style>
@@ -9,35 +8,38 @@
     <div class="row">
         <div class="col-xs-12 col-md-8 col-md-push-2">
             <div class="dropdown" style="display: inline-block; margin-bottom: 50px">
-                <button id="TeamL" class="btn btn-default" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <button id="TeamL" class="btn btn-default" type="button" data-toggle="dropdown" aria-haspopup="true"
+                        aria-expanded="false">
                     Team Select
                     <span class="caret"></span>
                 </button>
                 <ul class="dropdown-menu" aria-labelledby="dLabel">
-                    <li><a href="#" onclick="changeChartData('ChartContainer' , series , 'language')" >CITeam</a></li>
+                    <li><a href="#" onclick="changeChartData('ChartContainer' , series , 'language')">CITeam</a></li>
                 </ul>
             </div>
         </div>
         <div class="col-xs-12 col-md-8 col-md-push-2">
             <div class="dropdown" style="display: inline-block;">
-                <button id="GenderL" class="btn btn-primary" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <button id="GenderL" class="btn btn-primary" type="button" data-toggle="dropdown" aria-haspopup="true"
+                        aria-expanded="false">
                     Select Gender
                     <span class="caret"></span>
                 </button>
                 <ul class="dropdown-menu" aria-labelledby="dLabel">
-                  <li><a href="#" onclick="chart_select_gender('A')"> All</a></li>
+                    <li><a href="#" onclick="chart_select_gender('A')"> All</a></li>
                     <li><a href="#" onclick="chart_select_gender('M')"> Male</a></li>
                     <li><a href="#" onclick="chart_select_gender('F')"> Female</a></li>
                     <li><a href="#" onclick="chart_select_gender('O')"> Other</a></li>
                 </ul>
             </div>
             <div class="dropdown" style="display: inline-block;">
-                <button id="ChartTypel" class="btn btn-primary" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <button id="ChartTypel" class="btn btn-primary" type="button" data-toggle="dropdown"
+                        aria-haspopup="true" aria-expanded="false">
                     Select Chart Type
                     <span class="caret"></span>
                 </button>
                 <ul class="dropdown-menu" aria-labelledby="dLabel">
-                    <li><a href="#" onclick="PieChart('ChartContainer' , series , 'language')" > Pie</a></li>
+                    <li><a href="#" onclick="PieChart('ChartContainer' , series , 'language')"> Pie</a></li>
                     <li><a href="#" onclick="BarChart('ChartContainer' , series, 'language')"> Bar</a></li>
                     <li><a href="#" onclick="DonutChart('ChartContainer' , donutSeries , 'language')"> Donut</a></li>
                 </ul>
@@ -60,41 +62,47 @@
 
 <script type="text/javascript">
 
-    var get_valid_data_chart={};
+    var get_valid_data_chart = {};
 
 
-    function get_chart_data(data){
-         series = [{
-            name: 'Language',
-            colorByPoint: true,
-            data: data
-    }];
+    function get_chart_data(data) {
+        var dataCheck = checkData(data); //----> if Data empty show alert and return false
+        if (dataCheck) {
+            series = [{
+                name: 'Language',
+                colorByPoint: true,
+                data: data
+            }];
+        }
         get_valid_data_chart.chart = true;
     }
 
-    function get_donut_data(data){
-         donutSeries = {
-            name: 'Language',
-            data: data
-    };
-        get_valid_data_chart.donut = true ;
+    function get_donut_data(data) {
+        var dataCheck = checkData(data); //----> if Data empty show alert and return false
+        if (dataCheck) {
+            donutSeries = {
+                name: 'Language',
+                data: data
+            };
+        }
+        get_valid_data_chart.donut = true;
     }
 
-    function get_table_data(data){
-         TableData = {
+    function get_table_data(data) {
+        TableData = {
             thName: ['Language', 'Count'],
             trData: data
-    };
-        get_valid_data_chart.table = true ;
+        };
+        get_valid_data_chart.table = true;
     }
 
 
     function chart_select_gender(gender) {
 
         get_valid_data_chart = {
-            chart:false ,
-            donut:false,
-            table:false
+            chart: false,
+            donut: false,
+            table: false
         };
 
         var data_request = {
@@ -104,11 +112,11 @@
             orgId: window.orgId,
             deptName: window.deptName,
             teamName: window.teamName,
-            gender:gender
+            gender: gender
 
         };
 
-        ajax.sender_data_json_by_url_callback('controller_team_admin.php',data_request, get_chart_data,'POST');
+        ajax.sender_data_json_by_url_callback('controller_team_admin.php', data_request, get_chart_data, 'POST');
 
         data_request = {
 
@@ -117,11 +125,11 @@
             orgId: window.orgId,
             deptName: window.deptName,
             teamName: window.teamName,
-            gender:gender
+            gender: gender
 
         };
 
-        ajax.sender_data_json_by_url_callback('controller_team_admin.php',data_request, get_donut_data,'POST');
+        ajax.sender_data_json_by_url_callback('controller_team_admin.php', data_request, get_donut_data, 'POST');
 
         data_request = {
 
@@ -130,11 +138,11 @@
             orgId: window.orgId,
             deptName: window.deptName,
             teamName: window.teamName,
-            gender:gender
+            gender: gender
 
         };
 
-        ajax.sender_data_json_by_url_callback('controller_team_admin.php',data_request, get_table_data,'POST');
+        ajax.sender_data_json_by_url_callback('controller_team_admin.php', data_request, get_table_data, 'POST');
 
         render_page_chart();
 
@@ -142,7 +150,7 @@
 
     function render_page_chart() {
 
-        if(get_valid_data_chart.chart && get_valid_data_chart.donut && get_valid_data_chart.table ) {
+        if (get_valid_data_chart.chart && get_valid_data_chart.donut && get_valid_data_chart.table) {
 
             for (var i = 0; i < donutSeries.data.length; i++) {
                 donutSeries.data[i][1] = parseFloat(donutSeries.data[i][1]);
@@ -153,8 +161,13 @@
             }
 
             TabelCreateor(TableData, 'langTable');
-            changeChartData('ChartContainer', series ,donutSeries , 'language' ); //----> last param for name of the chart !
-        }else {
+            if (series[0].data[0].y != NaN && series[0].data.length > 1) { //-----> if data empty alert and clear chart
+                changeChartData('ChartContainer', series, donutSeries, 'language'); //----> last param for name of the chart !
+            }else{
+                document.getElementById('ChartContainer').innerHTML = '';
+                message.show('Data is empty' , 'Warning' , 'warning');
+            }
+        } else {
 
             setTimeout(function () {
                 render_page_chart();

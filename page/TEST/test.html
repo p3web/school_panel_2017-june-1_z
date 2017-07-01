@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+
+</head>
+<body onload="  ajax.sender_data_json_by_url_callback('/backend/controller_school_admin_panel.php', {act: 'get_tbl_classes'}, createClassDropDown);">
+<div id="PstudentGrid"></div>
+
+
+<script src="../../scripts/jquery-1.10.2.js"></script>
+
+<script src="../js/ajax.js"></script>
+<!--Global-->
+<script src="../js/Global.js"></script>
+<script src="../js/PSCO_Grid.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
+        integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+        crossorigin="anonymous"></script>
+<script>
+
+   var StudentGrid = new PSCO_grid('StudentGrid');
+    StudentGrid.ContainerID = 'PstudentGrid';
+    StudentGrid.cols = [
+        {name: 'firstname', thname: 'Student Name'},
+        {name: 'studentemailid', thname: 'Student Email ID*'},
+        {name: 'info', thname: 'Info', notSearch: true},
+        {name: 'status', thname: 'Status', notSearch: true},
+        {name: 'option', thname: 'Option', notSearch: true},
+        {name: 'gender', notSearch: true , hidden:true},
+        {name: 'lastname', hidden:true},
+        {name: 'religion', notSearch: true , hidden:true},
+        {name: 'schoolid', notSearch: true , hidden:true},
+        {name: 'token', notSearch: true , hidden:true}
+    ];
+    StudentGrid.RightToLeft = false;
+function createClassDropDown(data) {
+
+    ajax.sender_data_json_by_url_callback('/backend/controller_school_admin_panel.php', {
+        act: 'get_tbl_student',
+        classname: data[0].classname
+    }, CreateStudentTblData);
+}
+function CreateStudentTblData(Data) {
+
+    var ClassesData = [];
+
+    for (var i = 0; i < Data.length; i++) {
+        var Rows = {};
+        Rows['firstname'] = Data[i].firstname + ' ' + Data[i].lastname;
+        Rows['studentemailid'] = Data[i].studentemailid;
+        if (Data[i].status == 'active') {
+            Rows['info'] = {
+                value: '',
+                htmlTag: '<a class="InheritactionLink" onclick="student.ViewProfile(' + "'" + Data[i].studentemailid + "'" + ')" href="#"><i class="glyphicon glyphicon-eye-open"></i></i></a> <i class="glyphicon glyphicon-edit actionIcon" onclick="student.Edit.Edit(' + "'" + Data[i].teacheremailid + "'" + ')""></i>'
+            };
+            Rows['option'] = {
+                value: '',
+                htmlTag: '<i class="glyphicon glyphicon-remove actionIcon" onclick="Confirm(' + "'" + Data[i].studentemailid + "'" + ')"></i>'
+            };
+        } else {
+            Rows['info'] = 'Waiting approval';
+            Rows['option'] = {
+                value: '',
+                htmlTag: '<i class="glyphicon glyphicon-remove actionIcon" onclick="Confirm(' + "'" + Data[i].studentemailid + "'" + ')"></i>'
+            };
+        }
+        Rows['gender'] = Data[i].gender;
+        Rows['lastname'] = Data[i].lastname;
+        Rows['religion'] = Data[i].religion;
+        Rows['schoolid'] = Data[i].schoolid;
+        Rows['token'] = Data[i].token;
+        ClassesData.push(Rows);
+    }
+    StudentGrid.data = ClassesData;
+    StudentGrid.render();
+}
+</script>
+</body>
+</html>

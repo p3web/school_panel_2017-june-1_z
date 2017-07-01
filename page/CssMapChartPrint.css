@@ -148,8 +148,11 @@
 #IFRAME{
     width:95%;margin-left:-14%;height: 450px;overflow: hidden;border: none;
 }
+@media print
+{
+    @page
+    {
+        size: 594mm 420mm;
+    }
 
-@page {
-    size: A4 landscape;
-    margin: 0;
 }

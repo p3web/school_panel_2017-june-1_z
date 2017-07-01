@@ -132,8 +132,16 @@
             var Name = data[0][i][0];
             var numb = data[0][i][1];
             for (var c = 1; c < MapDatas[0].length; c++) {
-                if (MapDatas[1][c].toLowerCase().search(Name.toLowerCase()) > -1) {
-                    MapDatas[2][c] = numb;
+                if (Name != "") {
+                    if (Name != 'France') {
+                        if (MapDatas[1][c].toLowerCase().search(Name.toLowerCase()) > -1) {
+                            MapDatas[2][c] = numb;
+                        }
+                    } else {
+                        if (MapDatas[1][c] == Name.toLowerCase()) {
+                            MapDatas[2][c] = numb;
+                        }
+                    }
                 }
             }
         }
@@ -147,19 +155,25 @@
     }
 
     function CreateBarData(data) {
-        var series = [{
-            name: 'language',
-            colorByPoint: true,
-            data: []
-        }];
-        for(var i =1 ; i < data[0].length ; i++){
-            var a= series[0].data;
-            a.push({name:data[0][i][0] , y: parseInt(data[0][i][1])});
+        var dataCheck = checkData(data); //----> if Data empty show alert and return false
+        if (dataCheck) {
+            var series = [{
+                name: 'language',
+                colorByPoint: true,
+                data: []
+            }];
+            for (var i = 1; i < data[0].length; i++) {
+                var a = series[0].data;
+                a.push({name: data[0][i][0], y: parseInt(data[0][i][1])});
+            }
+            BarChart('BarChart', series);
+        }else{
+            document.getElementById('BarChart').innerHTML = '';
         }
-        BarChart('BarChart', series);
     }
 
 
 </script>
+<embed id="plugin" type="application/x-google-chrome-pdf" src="chrome://print/11/0/print.pdf" stream-url="chrome://print/11/0/print.pdf" headers="" background-color="0xFF525659" top-toolbar-height="0" top-level-url="undefined">
 </body>
 </html>

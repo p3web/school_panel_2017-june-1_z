@@ -16,13 +16,11 @@
     <link rel="stylesheet" href="../js/sweetalert/sweetalert2.css">
 
 
-
-
-
 </head>
 <body onload="Teacher.LoadTeacherTable();">
 <div id="wrap">
     <i class="glyphicon glyphicon-menu-hamburger" data-show="false" onclick="ToggleMenu(this)" id="menuIcon"></i>
+
     <div class="container-fluid">
         <!--Header-->
         <div class="row">
@@ -32,7 +30,7 @@
             <div class="col-sm-10 no-padding-left">
                 <div class=" Lightbackground headerLight " style="border-left: none; ">
                     <div class="headerIconDiv">
-                        <img id="headerIcon" src="../../images/MenuIcons/Pen.png"/>
+                        <img id="btn_user_profile" class="userProfile" onclick="Teacher.AdminProfile.ShowProfile()" src="../../images/MenuIcons/PenHeader.png" />
                         <b>Welcome, <b id="UserFullName"></b></b>
                     </div>
                 </div>
@@ -52,8 +50,9 @@
             </div>
 
             <div class="col-sm-1 no-padding Lightbackground headerLight" style="border-right: none">
-                <a id="btn_user_profile" href="#" class="btn btn-default navbar-btn logbutton submitbtunnew HeaderBtn "
-                 onclick="Teacher.AdminProfile.ShowProfile()"  style="/*float:right; border-radius:5px; margin:1.0em 0em; font-weight:bold;  text-decoration:none; margin-right: 1em;*/">PROFILE</a>
+                <!--<a id="btn_user_profile" href="#" class="btn btn-default navbar-btn logbutton submitbtunnew HeaderBtn "
+                   onclick="Teacher.AdminProfile.ShowProfile()"
+                   style="/*float:right; border-radius:5px; margin:1.0em 0em; font-weight:bold;  text-decoration:none; margin-right: 1em;*/">PROFILE</a>-->
                 <a href="../../teamadminpanel.php?logoutrequest" id="logOutBtn"
                    class="btn btn-default navbar-btn logbutton submitbtunnew HeaderBtn "><span
                         id="logoutSpan">LOGOUT</span><i
@@ -68,10 +67,14 @@
                 <li class="active"><a data-toggle="tab" href="#students"
                                       aria-expanded="true"><img src="../../images/MenuIcons/person.png"> TEACHER</a>
                 </li>
+                <!--<li class=""><a onclick="loadPage(this)"-->
+                <!--data-toggle="tab" data-Page="Classes"-->
+                <!--href="#classes"-->
+                <!--aria-expanded="false"><i class="glyphicon glyphicon-blackboard"></i> CLASSES</a></li>-->
                 <li class=""><a onclick="loadPage(this)"
-                                data-toggle="tab" data-Page="Classes"
-                                href="#classes"
-                                aria-expanded="false"><i class="glyphicon glyphicon-blackboard"></i> CLASSES</a></li>
+                                data-toggle="tab" data-Page="student"
+                                href="#Pstudent"
+                                aria-expanded="false"><i class="glyphicon glyphicon-blackboard"></i>STUDENT</a></li>
                 <li class=""><a data-toggle="tab"
                                 onclick="loadPage(this)" data-Page="Map"
                                 href="#maps"
@@ -125,23 +128,33 @@
                             <option value="CITeam">CITeam</option>
                         </select> <input style="display: none;" type="submit" id="submitvalstutab" class="submitbtunnew"
                                          name="submitvalstutab" value="SUBMIT">
-                            <div class="headerContent">TEACHER</div>
-                            <p>As school administrator, you can now invite teachers to register for Ancestry Atlas</p>
-                            <h4>How?</h4>
-                            <p>Enter each teacher's email address, their class name and hit INVITE.</p>
-                            <p>Teachers can now register and start mapping their classroom cultural diversity</p>
-                            <div id="PGrid">
 
-                            </div>
+                            <div class="headerContent">TEACHER</div>
+                            <p>As a school administrator, you can now invite teachers to register for Ancestry Atlas</p>
+                            <h4>How?</h4>
+
+                            <p>Enter each teacher's email address, their class name and hit INVITE.</p>
+
+                            <p>Teachers can now register and start mapping their classroom cultural diversity</p>
+
+                            <div id="PGrid"></div>
                         </div>
 
                         <div id="classes" class="tab-pane fade in">
                             <div class="headerContent">CLASSESS</div>
-                            <div id="PClassGrid">
-
-                            </div>
+                            <div id="PClassGrid"></div>
                         </div>
 
+                        <div id="Pstudent" class="tab-pane fade in">
+                            <div class="headerContent">STUDENT</div>
+                            <div>
+                            <b> Teacher Name: </b>
+                                <select id="studentTeacherNameDropDown" style="padding:0.3em;"></select>
+                            <b> Class Name: </b>
+                                <select id="studentClassNameDropDown" style="padding:0.3em;"></select>
+                            </div>
+                            <div id="PstudentGrid"></div>
+                        </div>
 
                         <div id="maps" class="tab-pane fade in">
                             <div class="headerContent">MAP</div>
@@ -187,7 +200,8 @@
 
 
             <span style="float:left;">ANCESTRY ATLAS IS POWERED BY <a href="http://culturalinfusion.org.au/"
-                                                                      target="_blank" style="color:#ff9999;">CULTURAL INFUSION</a></span>
+                                                                      target="_blank" style="color:#ff9999;">CULTURAL
+                INFUSION</a></span>
             <span style="float:right; ">
                 	<a style="rgb(219,87,87);outline: none;" target="_blank"
                        href="http://ancestryatlas.com/how-to-use-ancestry-atlas/" title="FAQ">FAQ</a> |
@@ -214,83 +228,85 @@
                 <img src="../../images/mainlogo.png" width="73" height="73" class="loglogo"
                      style="margin: 0 auto;display: block;">
                 <hr>
-                    <h3>PERSONAL DETAILS</h3>
-                    <table class="table borderless table-responsive">
-                        <tbody>
-                        <tr>
-                            <td>Email:</td>
-                            <td><input id="Adminemail" class="form-control" type="email" placeholder="Email" readonly=""
-                                       ><br></td>
-                        </tr>
-                        <tr>
-                            <td>First name:</td>
-                            <td><input id="Adminfirstname" class="psco_readonly form-control" type="email"
-                                       placeholder="Email" readonly="" value="Peter"><br></td>
-                        </tr>
-                        <tr>
-                            <td>Last name:</td>
-                            <td><input id="Adminlasttname" class="psco_readonly form-control" type="email"
-                                       placeholder="Email" readonly="" value="Mousaferiadis"><br></td>
-                        </tr>
-                        <tr>
-                            <td>School name:</td>
-                            <td id="schoolNameTd">
+                <h3>PERSONAL DETAILS</h3>
+                <table class="table borderless table-responsive">
+                    <tbody>
+                    <tr>
+                        <td>Email:</td>
+                        <td><input id="Adminemail" class="form-control" type="email" placeholder="Email" readonly=""
+                                ><br></td>
+                    </tr>
+                    <tr>
+                        <td>First name:</td>
+                        <td><input id="Adminfirstname" class="psco_readonly form-control" type="email"
+                                   placeholder="Email" readonly="" value="Peter"><br></td>
+                    </tr>
+                    <tr>
+                        <td>Last name:</td>
+                        <td><input id="Adminlasttname" class="psco_readonly form-control" type="email"
+                                   placeholder="Email" readonly="" value="Mousaferiadis"><br></td>
+                    </tr>
+                    <tr>
+                        <td>School name:</td>
+                        <td id="schoolNameTd">
 
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>Country:</td>
-                            <td>
-                                <select id="Admincountry" class="PSCO_country form-control" disabled>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Country:</td>
+                        <td>
+                            <select id="Admincountry" class="PSCO_country form-control" disabled>
 
-                                </select>
-                                <br></td>
-                        </tr>
-                        <tr>
-                            <td>City:</td>
-                            <td>
-                                <input id="Admincity" class="psco_readonly form-control" type="text" placeholder="city" readonly="">
-                                <br></td>
-                        </tr>
-                        <tr>
-                            <td>State:</td>
-                            <td>
-                                <input id="Adminstate" class="psco_readonly form-control" type="text" placeholder="State"
-                                       readonly="">
-                                <br></td>
-                        </tr>
-                        <tr>
-                            <td>Suburb:</td>
-                            <td>
-                                <input id="Adminsuburb" class="psco_readonly form-control" type="text" placeholder="Suburb"
-                                       readonly="">
-                                <br></td>
-                        </tr>
-                        <tr>
-                            <td>Post code:</td>
-                            <td>
-                                <input id="Adminpostcode" class="psco_readonly form-control" type="number" placeholder="postcode" readonly="">
-                                <br></td>
-                        </tr>
+                            </select>
+                            <br></td>
+                    </tr>
+                    <tr>
+                        <td>City:</td>
+                        <td>
+                            <input id="Admincity" class="psco_readonly form-control" type="text" placeholder="city"
+                                   readonly="">
+                            <br></td>
+                    </tr>
+                    <tr>
+                        <td>State:</td>
+                        <td>
+                            <input id="Adminstate" class="psco_readonly form-control" type="text" placeholder="State"
+                                   readonly="">
+                            <br></td>
+                    </tr>
+                    <tr>
+                        <td>Suburb:</td>
+                        <td>
+                            <input id="Adminsuburb" class="psco_readonly form-control" type="text" placeholder="Suburb"
+                                   readonly="">
+                            <br></td>
+                    </tr>
+                    <tr>
+                        <td>Post code:</td>
+                        <td>
+                            <input id="Adminpostcode" class="psco_readonly form-control" type="number"
+                                   placeholder="postcode" readonly="">
+                            <br></td>
+                    </tr>
 
-                        <tr>
-                            <td>Password:</td>
-                            <td>
-                                <button id="btn_change_pass_user" type="button" class="btn btn-warning"
-                                        style="margin: 0 auto;display: block;width: 45%;padding: 2%;">Update My Password
-                                </button>
-                                <br></td>
-                        </tr>
-                        </tbody>
-                    </table>
+                    <tr>
+                        <td>Password:</td>
+                        <td>
+                            <button id="btn_change_pass_user" type="button" class="btn btn-warning"
+                                    style="margin: 0 auto;display: block;width: 45%;padding: 2%;">Update My Password
+                            </button>
+                            <br></td>
+                    </tr>
+                    </tbody>
+                </table>
 
-                    <br>
-                    <hr>
-                    <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
-                    <input type="hidden" name="act" value="edit_team_user">
-                    <button id="btn_profile_edit" name="edit" type="button" class="btn btn-warning"
-                            onclick="Teacher.AdminProfile.btn_user_profile_edit()">Edit
-                    </button>
+                <br>
+                <hr>
+                <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                <input type="hidden" name="act" value="edit_team_user">
+                <button id="btn_profile_edit" name="edit" type="button" class="btn btn-warning"
+                        onclick="Teacher.AdminProfile.btn_user_profile_edit()">Edit
+                </button>
 
             </div>
 
@@ -299,66 +315,72 @@
 </div>
 
 <!--Admin Change Pass-->
-<div id="modal_change_pass_user" class="modal fade in"><div class="modal-dialog modal-lg">
-    <div class="modal-content">
-        <div class="modal-body" id="change_pass_user">
-            <div id="ChangePasswrap">
-                <div class="container-fluid">
-                    <div class="row">
-                        <div class="col-sm-4"></div>
-                        <div class="col-sm-6 col-sm-pull-1 text-center">
+<div id="modal_change_pass_user" class="modal fade in">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-body" id="change_pass_user">
+                <div id="ChangePasswrap">
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div class="col-sm-4"></div>
+                            <div class="col-sm-6 col-sm-pull-1 text-center">
 
-                            <h2>CHANGE PASSWORD</h2>
+                                <h2>CHANGE PASSWORD</h2>
 
-                            <div class="col-sm-12 text-center" style="background-color:#FFF; margin-bottom:30px;  padding-bottom:30px;">
-                                <div class="row">
-                                    <br>
-                                    <div class="col-sm-4 text-left" style="margin-left:1.5%; margin-top:3.5%;"><span style=" font-weight:bold; font-size:1.5em; color:#71908a;"></span>
-                                    </div>
-                                    <div class="col-sm-4 text-center">
-                                        <img src="../../images/mainlogo.png" alt="" title="" width="73" height="73" class="loglogo">
-                                    </div>
-                                    <div class="col-sm-4">
-                                    </div>
-                                </div>
-                                <form id="frm_change_pass" method="post" action="../../controller_user.php">
-                                    <div class="form-group form-inline">
+                                <div class="col-sm-12 text-center"
+                                     style="background-color:#FFF; margin-bottom:30px;  padding-bottom:30px;">
+                                    <div class="row">
                                         <br>
-                                        <!--<input type="password" class="form-control inputfield" style="margin-left:1.5%; width:90%;" name="current_password" id="current_password" placeholder="Current Password*" >-->
-                                        <input type="password" class="form-control inputfield" style="margin-left:1.5%; width:90%;" name="password" id="password" placeholder="New Password*">
-                                        <input type="password" class="form-control inputfield" style="margin-left:1.5%; width:90%;" name="confirmPassword" id="confirmPassword" placeholder="Confirm New Password*">
+
+                                        <div class="col-sm-4 text-left" style="margin-left:1.5%; margin-top:3.5%;"><span
+                                                style=" font-weight:bold; font-size:1.5em; color:#71908a;"></span>
+                                        </div>
+                                        <div class="col-sm-4 text-center">
+                                            <img src="../../images/mainlogo.png" alt="" title="" width="73" height="73"
+                                                 class="loglogo">
+                                        </div>
+                                        <div class="col-sm-4">
+                                        </div>
                                     </div>
-                                    <span style="float:left; margin-left:2.5em;">* Mandatory fields</span><br>
-                                    <div class="col-sm-12 text-left">
+                                    <form id="frm_change_pass" method="post" action="../../controller_user.php">
+                                        <div class="form-group form-inline">
+                                            <br>
+                                            <!--<input type="password" class="form-control inputfield" style="margin-left:1.5%; width:90%;" name="current_password" id="current_password" placeholder="Current Password*" >-->
+                                            <input type="password" class="form-control inputfield"
+                                                   style="margin-left:1.5%; width:90%;" name="password" id="password"
+                                                   placeholder="New Password*">
+                                            <input type="password" class="form-control inputfield"
+                                                   style="margin-left:1.5%; width:90%;" name="confirmPassword"
+                                                   id="confirmPassword" placeholder="Confirm New Password*">
+                                        </div>
+                                        <span style="float:left; margin-left:2.5em;">* Mandatory fields</span><br>
+
+                                        <div class="col-sm-12 text-left">
                 			                <span id="error_box" style="clear:both; float:left; margin-left:3em;">
 
 											</span>
-                                        <input type="hidden" name="act" id="change_pass_act" value="team_user_change_pass">
-                                        <button id="btn_change_pass" type="button" class="btn btn-default loginbutton" title="SAVE" style=" float:right; width:98%; padding:5%; padding-bottom: 12%;">SAVE</button>
-                                    </div>
-                                    <script type="text/javascript">
-                                        $('#btn_change_pass').click(function(){
-                                            var pass1 = $('#password').val();
-                                            var pass2 = $('#confirmPassword').val();
-                                            if(pass1 == pass2 && pass1 != "" && pass1 != undefined){
-                                                $( "#frm_change_pass" ).submit();
-                                            }else{
-                                                $('#error_box').text('password not match.');
-                                            }
-                                        });
-                                    </script>
+                                            <input type="hidden" name="act" id="change_pass_act"
+                                                   value="team_user_change_pass">
+                                            <button id="btn_change_pass" type="button"
+                                                    class="btn btn-default loginbutton" title="SAVE"
+                                                    style=" float:right; width:98%; padding:5%; padding-bottom: 12%;">
+                                                SAVE
+                                            </button>
+                                        </div>
 
-                                </form>
 
+                                    </form>
+
+                                </div>
                             </div>
+                            <div class="col-sm-3"></div>
                         </div>
-                        <div class="col-sm-3"></div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-</div></div>
+</div>
 <!--view Profile Modal-->
 <div id="dataModal" class="modal fade in">
     <div class="modal-dialog">
@@ -371,6 +393,7 @@
 
                 <div class="table-responsive">
                     <input type="hidden" id="AdminSchoolID">
+
                     <h3>PERSONAL DETAILS</h3>
                     <table id="TeacherPersonalTable" class="table borderless">
 
@@ -629,6 +652,7 @@
 <!--loadPage-->
 <script src="js/load_pages/Index.js"></script>
 <script src="js/load_pages/classes.js"></script>
+<script src="js/load_pages/student.js"></script>
 <script src="js/load_pages/Belief.js"></script>
 <script src="js/load_pages/Language.js"></script>
 
@@ -644,9 +668,9 @@
 <script type="text/javascript">
     var __lang = undefined;
 
-    $.getJSON('../data_value/lang.json', function(data){
+    $.getJSON('../data_value/lang.json', function (data) {
         __lang = new lang(data);
-    } );
+    });
 </script>
 
 <!--PSCO_Grid-->
@@ -665,16 +689,33 @@
 <!--Alert-->
 <script src="../js/sweetalert/sweetalert2.js"></script>
 <script src="../js/sweetalert/msg.js"></script>
+<script type="text/javascript">
 
+    $('#btn_change_pass').click(function () {
+        var pass1 = $('#password').val();
+        var pass2 = $('#confirmPassword').val();
+        if (pass1 == pass2 && pass1 != "" && pass1 != undefined) {
+            $("#frm_change_pass").submit();
+        } else {
+            $('#error_box').text('password not match.');
+        }
+    });
+</script>
 <script type="text/javascript">
     /*Load age Group option*/
-    $(document).ready(function(){
+    $(document).ready(function () {
         $('#Admincountry').load('../data_value/country.html'); // load admin profile Country
         $('#age').load("../data_value/age_group_60.html");
+        $('#studentTeacherNameDropDown').on('change' , function(){
+            student.getClassByTeacher(this.value);
+        });
+        $('#studentClassNameDropDown').on('change' , function(){
+            Global.RefreshGrid('PstudentGrid' , {act:'get_tbl_student' , classname : this.value} , Global.url , student.CreateStudentTblData)
+        })
     });
 
-
-    var ClassesGrid;
+    var StuGrid;
+    /*var ClassesGrid;*/
     var TeacherGrid = new PSCO_grid('TeacherGrid');
     TeacherGrid.cols = [
         {name: 'name', thname: 'Teacher Name'},
@@ -694,11 +735,12 @@
         id: 'EmailInvite',
         type: 'inputtext'
     }, {
-    name: {value:'',htmlTag:'<select class="form-control" id="classComboBox"></select>'},
-        id: 'classInvite',
-        type: ''
+        name: {
+            value: '',
+            htmlTag: ' <input class="PGrid-InputStyle" list="classnameInvite" name="classInvite" id="classInvite" placeholder="Class name"  > <datalist id="classnameInvite"></datalist>'
+        }
 
-    },{}, {}, {
+    }, {}, {}, {
         name: 'Invite',
         id: 'InviteBTN',
         type: 'btn',
@@ -735,7 +777,7 @@
 
             } else if (pageName == 'Classes') {
                 //______LOAD CLASSES GRID
-                ClassesGrid = new PSCO_grid('ClassesGrid');
+          /*      ClassesGrid = new PSCO_grid('ClassesGrid');
                 ClassesGrid.ContainerID = 'PClassGrid';
                 ClassesGrid.cols = [
                     {name: 'classname', thname: 'Class Name'},
@@ -746,7 +788,7 @@
                     name: 'Class name',
                     id: 'classNameAdd',
                     type: 'inputtext'
-                },  {
+                }, {
                     name: 'Add',
                     id: 'ClassAddBTN',
                     type: 'btn',
@@ -755,8 +797,45 @@
                         {name: 'onclick', value: 'class_data.add_new_class()'}
                     ]
 
-                }]];
-                Classes.LoadClassesTable(); //______ send Act
+                }]];*/
+           //     Classes.LoadClassesTable(); //______ send Act
+            } else if (pageName == 'student') {
+                //______LOAD CLASSES GRID
+                StuGrid = new PSCO_grid('StuGrid');
+                StuGrid.ContainerID = 'PstudentGrid';
+                StuGrid.cols = [
+
+                    {name:'firstname' , thname:'Student Name'},
+                    {name:'studentemailid' , thname:'Email ID*'},
+                    {name:'classname' , thname:'Class Name'},
+                    {name:'info' , thname:'Info'},
+                    {name:'gender' , thname:'gender', hidden:true , notSearch : true},
+                    {name:'lastname' , thname:'lastname' , hidden:true , notSearch : true},
+                    {name:'religion' , thname:'religion' , hidden:true , notSearch : true},
+                    {name:'schoolid' , thname:'schoolid' , hidden:true , notSearch : true},
+                    {name:'status' , thname:'status', hidden:true , notSearch : true},
+
+
+                    {name:'token' , thname:'token', hidden:true},
+                    {name:'option' , thname:'option'}
+                    ];
+                StuGrid.RightToLeft = false;
+
+               /*StudentGrid.embeddedRow = [[{}, {
+                    name: 'Class name',
+                    id: 'classNameAdd',
+                    type: 'inputtext'
+                },  {
+                   name: 'Add',
+                    id: 'ClassAddBTN',
+                    type: 'btn',
+                    attribute: [
+                        {name: 'class', value: 'btn btn-success'},
+                        {name: 'onclick', value: 'class_data.add_new_class()'}
+                    ]
+
+                }]];*/
+                student.LoadStudentTable(); //______ send Act
             } else {
                 //____ LOAD OTHER TAB FROM EXTERNAL PAGE
                 $(TabID + ' .TABContent').load(pageName + '.html');
@@ -781,6 +860,9 @@
             elem.style.left = '31.5vw';
         }
     }
+
+
+
 </script>
 </body>
 </html>

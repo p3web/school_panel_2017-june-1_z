@@ -5,17 +5,44 @@
     }
 </style>
 <br>
+
+<script>
+    var data_request = {
+
+        act: 'get_class_teacher',
+        schoolId: window.schoolId,
+        adminid: window.adminid
+
+
+    };
+
+    ajax.sender_data_json_by_url_callback('controller_teacher_admin.php',data_request, create_class_name_belief,'POST');
+
+    function create_class_name_belief(data) {
+        var class_item = '';
+        for (var i = 0; i < data.length; i++) {
+            class_item += '<li><a href="#" onclick="window.className_B=\'' + data[i].classname + '\';chart_select_class_B();" >' + data[i].classname + '</a></li>'
+        }
+        $('#class_colect_belief').html(class_item);
+        window.className_B = 'S1';
+        var className_select_html = window.className_B + '<span class="caret" style="margin-left: 13px;"></span>';
+        $('#class_name_B').html(className_select_html);
+    }
+
+</script>
+
 <div id="PSCO_chart" class="container-fluid">
     <div class="row">
         <div class="col-xs-12 col-md-8 col-md-push-2">
             <div class="dropdown" style="display: inline-block; margin-bottom: 50px">
-                <button id="TeamL" class="btn btn-default" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    Class Name
-                    <span class="caret"></span>
+                <span>Class name : </span>
+                <button id="class_name_B" class="btn btn-default" style="min-width: 86px;text-align: right;" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Select class
+                    <span class="caret" style="margin-left: 13px;"></span>
                 </button>
-                <ul class="dropdown-menu" aria-labelledby="dLabel">
-                    <li><a href="#" onclick="changeChartData('ChartContainer_religion' , series_religion , 'belief')" >S1</a></li>
-                    <li><a href="#" onclick="changeChartData('ChartContainer_religion' , series_religion , 'belief')" >S2</a></li>
+                <ul class="dropdown-menu" id="class_colect_belief"  style="min-width: 89px;margin: 2px 83px 0;" aria-labelledby="dLabel">
+                    <!--<li><a href="#" onclick="window.className_B='S1';chart_select_class_B();" >S1</a></li>-->
+                    <!--<li><a href="#" onclick="window.className_B='S2';chart_select_class_B();" >S2</a></li>-->
                 </ul>
             </div>
         </div>
@@ -45,6 +72,122 @@
         </div>
     </div>
 </div>
+
+<script type="text/javascript">
+
+    var get_valid_data_chart={};
+
+
+    function get_chart_data_B(data){
+        var dataCheck = checkData(data); //----> if Data empty show alert and return false
+        if (dataCheck) {
+            series = [{
+                name: 'Religion',
+                colorByPoint: true,
+                data: data
+            }];
+            get_valid_data_chart.chart = true;
+        }
+    }
+
+    function get_donut_data_B(data){
+        var dataCheck = checkData(data); //----> if Data empty show alert and return false
+        if (dataCheck) {
+            donutSeries = {
+                name: 'Religion',
+                data: data
+            };
+            get_valid_data_chart.donut = true;
+        }
+    }
+
+    function get_table_data_B(data){
+        TableData = {
+            thName: ['Religion', 'Count'],
+            trData: data
+        };
+        get_valid_data_chart.table = true ;
+    }
+
+
+    function chart_select_class_B() {
+        var className_select_html = window.className_B + '<span class="caret" style="margin-left: 13px;"></span>';
+        $('#class_name_B').html(className_select_html);
+
+
+        get_valid_data_chart = {
+            chart:false ,
+            donut:false,
+            table:false
+        };
+
+        var data_request = {
+
+            act: 'belief_class',
+            datatype: 'chart',
+            schoolId: window.schoolId,
+            className: window.className_B
+
+        };
+
+        ajax.sender_data_json_by_url_callback('controller_teacher_admin.php',data_request, get_chart_data_B,'POST');
+
+        data_request = {
+
+            act: 'belief_class',
+            datatype: 'donut',
+            schoolId: window.schoolId,
+            className: window.className_B
+
+        };
+
+        ajax.sender_data_json_by_url_callback('controller_teacher_admin.php',data_request, get_donut_data_B,'POST');
+
+        data_request = {
+
+            act: 'belief_class',
+            datatype: 'table',
+            schoolId: window.schoolId,
+            className: window.className_B
+
+
+        };
+
+        ajax.sender_data_json_by_url_callback('controller_teacher_admin.php',data_request, get_table_data_B,'POST');
+
+        render_page_chart_B();
+
+    }
+
+    function render_page_chart_B() {
+
+        if(get_valid_data_chart.chart && get_valid_data_chart.donut && get_valid_data_chart.table ) {
+
+            for (var i = 0; i < donutSeries.data.length; i++) {
+                donutSeries.data[i][1] = parseFloat(donutSeries.data[i][1]);
+            }
+
+            for (var i = 0; i < series[0].data.length; i++) {
+                series[0].data[i].y = parseFloat(series[0].data[i].y);
+            }
+
+            TabelCreateor(TableData, 'langTable_religion');
+            if (series[0].data[0].y != NaN && series[0].data.length > 1) { //-----> if data empty alert and clear chart
+                changeChartData('ChartContainer_religion', series, donutSeries, 'belief');
+            }else{
+                document.getElementById('ChartContainer_religion').innerHTML = '';
+                message.show('Data is empty' , 'Warning' , 'warning');
+            }
+        }else {
+
+            setTimeout(function () {
+                render_page_chart_B();
+            }, 100);
+        }
+    }
+
+
+</script>
 
 
 

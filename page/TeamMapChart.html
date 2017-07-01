@@ -158,16 +158,21 @@
 
 
     function CreateBarData(data) {
-        var series = [{
-            name: 'language',
-            colorByPoint: true,
-            data: []
-        }];
-        for (var i = 1; i < data[0].length; i++) {
-            var a = series[0].data;
-            a.push({name: data[0][i][0], y: parseInt(data[0][i][1])});
+        var dataCheck = checkData(data); //----> if Data empty show alert and return false
+        if (dataCheck) {
+            var series = [{
+                name: 'language',
+                colorByPoint: true,
+                data: []
+            }];
+            for (var i = 1; i < data[0].length; i++) {
+                var a = series[0].data;
+                a.push({name: data[0][i][0], y: parseInt(data[0][i][1])});
+            }
+            BarChart('BarChart', series);
+        }else{
+            document.getElementById('BarChart').innerHTML = '';
         }
-        BarChart('BarChart', series);
     }
 
     function PrintExpot() {

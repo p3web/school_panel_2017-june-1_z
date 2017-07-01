@@ -831,10 +831,10 @@ function test_input($data)
 
 
                                     //CLICK FOR INFORMATION LINK
-                                    echo "<td  style='padding:1%; '>";
+                                    echo "<td  style='padding:1%;text-align: center; '>";
                                     if ($rowj['status'] == 'active') {
 
-                                        echo '<a style="text-decoration:underline; cursor:pointer;" name="view" id="' . $rowj['studentemailid'] . '" data-toggle="modal" data-target="#dataModal" class="view_data"> View Profile</a>';
+                                        echo '<a style="text-decoration:underline; cursor:pointer;" name="view" id="' . $rowj['studentemailid'] . '" data-toggle="modal" data-target="#dataModal" class="view_data"> <i class="glyphicon glyphicon-eye-open"></i></a> <a style="text-decoration:underline;cursor:pointer;margin-left:5px;" name="editstaff" id="'. $rowj['studentemailid'] .'" class="editstaff_data"> <i class="glyphicon glyphicon-pencil"></i></a>';
                                     } else {
                                         echo "Waiting approval";//<button class='btn btn-default' style='background-color:#A1C564; color:#FFF;'>Resned</button>";
                                     }
@@ -867,20 +867,7 @@ function test_input($data)
                                              onmouseout="this.src='images/deletehover.png';"/>
                                     </a>
 
-                                    <?php
-                                    if ($rowj['status'] == 'active') {
-                                        ?> <a style="text-decoration:underline;cursor:pointer;" name="editstaff"
-                                              id="<?php echo $rowj['studentemailid'] ?>" class="editstaff_data">
-                                            <img src='images/edit.png' width='16' height='16'
-                                                 onmouseover="this.src='images/edithover.png';"
-                                                 onmouseout="this.src='images/edit.png';"/>
-                                        </a>
 
-                                        <?php
-                                    }
-
-
-                                    ?>
 
 
                                     <!-- <a style="text-decoration:underline;cursor:pointer;" name="editstaff" id="<?php echo $rowj['studentemailid'] ?>"  class="editstaff_data"> Edit</a> -->
@@ -1801,17 +1788,17 @@ if (isset($_POST['submitvalbeltab'])) {
 </script>
 
 
-<!-- DELETE STAFF MODAL -->
+<!-- DELETE STUDENT MODAL -->
 <div class="modal fade" id="confirm-delete" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
      aria-hidden="true">
     <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-header">
-                <h3 style="font-weight:bold;">Delete Staff</h3>
+                <h3 style="font-weight:bold;">Delete Student</h3>
             </div>
             <div class="modal-body">
-                <h3>Are you sure you want to delete <span style="font-weight:bold;" id="specstaffinfo"
-                                                          name="specstaffinfo"></span> ?</h3>
+                <h3>Are you sure you want to delete <!--<span style="font-weight:bold;" id="specstaffinfo"
+                                                          name="specstaffinfo"></span>--> ?</h3>
                 <br>
 
             </div>

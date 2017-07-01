@@ -1,6 +1,6 @@
 /*Global*/
 var Global = {
-    url: '/backend/controller_school_admin_panel.php',
+    url: '/backend/controller_school_admin_panel.php'
 };
 Global.ResultMessage = function (result) {
     if (result) {
@@ -10,21 +10,39 @@ Global.ResultMessage = function (result) {
     }
 };
 
+Global.RefreshGrid = function (ContainerID , param , url , callBack) {
+    document.getElementById(ContainerID).innerHTML = '';
+    ajax.sender_data_json_by_url_callback(url , param ,callBack);
+};
+Global.RemoveRepeate= function(arr) {
+    var arrResult = {};
+    for (i = 0, n = arr.length; i < n; i++) {
+        var item = arr[i];
+        arrResult[ item.title + " - " + item.artist ] = item;
+    }
+    var i = 0;
+    var nonDuplicatedArray = [];
+    for(var item in arrResult) {
+        nonDuplicatedArray[i++] = arrResult[item];
+    }
+    return nonDuplicatedArray;
+};
+
 function set_invite_class_name(data){
-    var opt = '<optgroup label="Class name"></optgroup>';
+    var opt = '';//'<optgroup label="Class name"></optgroup>';
     for(var i = 0 ; i<data.length ; i++){
         opt+= '<option value="'+data[i].classname+'">'+data[i].classname+'</option>';
     }
-    $("#classInvite").html(opt);
+    $("#classnameInvite").html(opt);
 }
 
 Global.setData = function (Data, gridName) {
     gridName.data = Data;
     gridName.render();
     //peyman
-    ajax.sender_data_json_by_url_callback(Global.url, {
+/*    ajax.sender_data_json_by_url_callback(Global.url, {
         act: 'get_tbl_classes'
-    }, set_invite_class_name);
+    }, set_invite_class_name);*/
 };
 
 
@@ -77,27 +95,29 @@ Teacher.CreateTeacherTblData = function (data) {
         if (data[i].status == 'active') {
             Rows['info'] = {
                 value: '',
-                htmlTag: '<a onclick="Teacher.ViewProfile(' + "'" + data[i].teacheremailid + "'" + ')" href="#">View Profile</a>'
+                htmlTag: '<a class="InheritactionLink" onclick="Teacher.ViewProfile(' + "'" + data[i].teacheremailid + "'" + ')" href="#"><i class="glyphicon glyphicon-eye-open"></i></i></a> <i class="glyphicon glyphicon-edit actionIcon" onclick="Teacher.Edit.Edit(' + "'" + data[i].teacheremailid + "'" + ')""></i>'
             };
             Rows['option'] = {
                 value: '',
-                htmlTag: '<i class="glyphicon glyphicon-remove actionIcon" onclick="Confirm(' + "'" + data[i].teacheremailid + "'" + ')"></i>    <i class="glyphicon glyphicon-edit actionIcon" onclick="Teacher.Edit.Edit(' + "'" + data[i].teacheremailid + "'" + ')""></i>'
+                htmlTag: '<i class="glyphicon glyphicon-remove actionIcon" onclick="Confirm(' + "'" + data[i].teacheremailid+'||'+ data[i].classname + "'" + ')"></i>'
             };
         } else {
             Rows['info'] = 'Waiting approval';
             Rows['option'] = {
                 value: '',
-                htmlTag: '<i class="glyphicon glyphicon-remove actionIcon" onclick="Confirm(' + "'" + data[i].teacheremailid + "'" + ')"></i>'
+                htmlTag: '<i class="glyphicon glyphicon-remove actionIcon" onclick="Confirm(' + "'" +  data[i].teacheremailid+'||'+ data[i].classname + "'" + ')"></i>'
             };
         }
         TeacherData.push(Rows);
     }
     Global.setData(TeacherData, TeacherGrid);
 };
-Teacher.DeleteRow = function (TeacherEmail) {
+Teacher.DeleteRow = function (data) {
+    data = data.split("||");
     ajax.sender_data_json_by_url_callback(Global.url, {
-        act: 'delete_teacher_by_teacheremailid',
-        teacheremailid: TeacherEmail
+        act: 'delete_teacher_by_teacherEmailId',
+        teacheremailid: data[0],
+        classname:data[1]
     }, console.log);
 };
 /*view Profile*/
@@ -653,10 +673,6 @@ class_data.add_new_class = function(){
     }, class_data.add_new_class.result);
 
     $('#classNameAdd').val("");
-}
+};
 class_data.add_new_class.result = function(data){};
-
-
-
-
 
