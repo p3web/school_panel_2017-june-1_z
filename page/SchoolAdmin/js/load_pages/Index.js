@@ -11,6 +11,7 @@ Global.ResultMessage = function (result) {
 };
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 Global.RefreshGrid = function (ContainerID , param , url , callBack) {
     document.getElementById(ContainerID).innerHTML = '';
     ajax.sender_data_json_by_url_callback(url , param ,callBack);
@@ -36,12 +37,17 @@ function set_invite_class_name(data){
     }
     $("#classnameInvite").html(opt);
 =======
+=======
+>>>>>>> e1239fba462841e40c4d47613dc439a92857dc5d
 function set_invite_class_name(data){
     var opt = '<optgroup label="Class name"></optgroup>';
     for(var i = 0 ; i<data.length ; i++){
         opt+= '<option value="'+data[i].classname+'">'+data[i].classname+'</option>';
     }
     $("#classInvite").html(opt);
+<<<<<<< HEAD
+>>>>>>> e1239fba462841e40c4d47613dc439a92857dc5d
+=======
 >>>>>>> e1239fba462841e40c4d47613dc439a92857dc5d
 }
 
@@ -50,9 +56,15 @@ Global.setData = function (Data, gridName) {
     gridName.render();
     //peyman
 <<<<<<< HEAD
+<<<<<<< HEAD
 /*    ajax.sender_data_json_by_url_callback(Global.url, {
         act: 'get_tbl_classes'
     }, set_invite_class_name);*/
+=======
+    ajax.sender_data_json_by_url_callback(Global.url, {
+        act: 'get_tbl_classes'
+    }, set_invite_class_name);
+>>>>>>> e1239fba462841e40c4d47613dc439a92857dc5d
 =======
     ajax.sender_data_json_by_url_callback(Global.url, {
         act: 'get_tbl_classes'
@@ -115,7 +127,11 @@ Teacher.CreateTeacherTblData = function (data) {
             Rows['option'] = {
                 value: '',
 <<<<<<< HEAD
+<<<<<<< HEAD
                 htmlTag: '<i class="glyphicon glyphicon-remove actionIcon" onclick="Confirm(' + "'" + data[i].teacheremailid+'||'+ data[i].classname + "'" + ')"></i>'
+=======
+                htmlTag: '<i class="glyphicon glyphicon-remove actionIcon" onclick="Confirm(' + "'" + data[i].teacheremailid+'||'+ data[i].classname + "'" + ')"></i>    <i class="glyphicon glyphicon-edit actionIcon" onclick="Teacher.Edit.Edit(' + "'" + data[i].teacheremailid + "'" + ')""></i>'
+>>>>>>> e1239fba462841e40c4d47613dc439a92857dc5d
 =======
                 htmlTag: '<i class="glyphicon glyphicon-remove actionIcon" onclick="Confirm(' + "'" + data[i].teacheremailid+'||'+ data[i].classname + "'" + ')"></i>    <i class="glyphicon glyphicon-edit actionIcon" onclick="Teacher.Edit.Edit(' + "'" + data[i].teacheremailid + "'" + ')""></i>'
 >>>>>>> e1239fba462841e40c4d47613dc439a92857dc5d
@@ -693,10 +709,13 @@ class_data.add_new_class = function(){
 
     $('#classNameAdd').val("");
 <<<<<<< HEAD
+<<<<<<< HEAD
 };
 class_data.add_new_class.result = function(data){};
 
 =======
+=======
+>>>>>>> e1239fba462841e40c4d47613dc439a92857dc5d
 }
 class_data.add_new_class.result = function(data){};
 
@@ -704,4 +723,7 @@ class_data.add_new_class.result = function(data){};
 
 
 
+<<<<<<< HEAD
+>>>>>>> e1239fba462841e40c4d47613dc439a92857dc5d
+=======
 >>>>>>> e1239fba462841e40c4d47613dc439a92857dc5d
