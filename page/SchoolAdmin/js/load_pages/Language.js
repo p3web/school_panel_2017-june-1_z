@@ -21,31 +21,41 @@ Language.getData = function (Data) {
 };
 
 Language.CreateBarData = function (Data) {
-    var series = [{
-        name: 'Language',
-        colorByPoint: true,
-        data: []
-    }];
-    for (var i = 0; i < Data.length; i++) {
-        var a = series[0].data;
-        a.push({name: Data[i].languagename, y: parseInt(Data[i].count)});
+    if (Data.length != 0) {
+        var series = [{
+            name: 'Language',
+            colorByPoint: true,
+            data: []
+        }];
+        for (var i = 0; i < Data.length; i++) {
+            var a = series[0].data;
+            a.push({name: Data[i].languagename, y: parseInt(Data[i].count)});
+        }
+        Language.Series = series;
+        //BarChart('LangChartContainer' , series);
+        changeChartData('LangChartContainer', Language.Series, Language.DonutSeries, 'language');
+    } else {
+        document.getElementById('LangChartContainer').innerHTML = '';
+        message.show('Data is empty', 'Warning', 'warning');
     }
-    Language.Series = series;
-    //BarChart('LangChartContainer' , series);
-    changeChartData('LangChartContainer', Language.Series, Language.DonutSeries, 'language');
 };
 
 
 Language.createDonutData = function (Data) {
-    var donutSeries = {
-        name: 'Language',
-        data: []
-    };
-    for (var i = 0; i < Data.length; i++) {
-        donutSeries.data.push([Data[i].languagename, parseInt(Data[i].count)]);
-    }
-    donutSeries.data.push({name: 'Proprietary or Undetectable', y: 0.2, dataLabels: {enabled: false}});
-    Language.DonutSeries = donutSeries;
+    if(Data.length != 0) {
+        var donutSeries = {
+            name: 'Language',
+            data: []
+        };
+        for (var i = 0; i < Data.length; i++) {
+            donutSeries.data.push([Data[i].languagename, parseInt(Data[i].count)]);
+        }
+        donutSeries.data.push({name: 'Proprietary or Undetectable', y: 0.2, dataLabels: {enabled: false}});
+        Language.DonutSeries = donutSeries;
+    } else {
+    document.getElementById('LangChartContainer').innerHTML = '';
+    message.show('Data is empty', 'Warning', 'warning');
+}
 };
 
 Language.CreateTableData = function (data) {

@@ -2,7 +2,15 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+	
+    <title>Ancestry Atlas poster </title>
+	<script type="text/javascript">
+	//var today = new Date();
+	//var this_year = d.getFullYear();
+	//document.title += this_year;
+	document.title += '\xa0';
+	document.title += new Date().getFullYear();
+	</script>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
           integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 
@@ -14,8 +22,9 @@
 <div class="container-fluid">
     <div class="row">
         <div class="col-xs-12 col-md-10 no-padding">
-            <div class="btn btn-default pull-left" style="margin-top:8px;margin-left: 5px;" id="ExportBtn" onclick="PrintExpot()">Print Export</div>
+            <div class="btn btn-default pull-left" style="margin-top:8px;margin-left: 5px;" id="ExportBtn" onclick="PrintExpot()">Print</div>
             <div class="topBorder" id="TopBorderMap">
+                <div class="textLabel">BIRTH COUNTRIES</div>
                 <img src="../logo.jpg" id="Logo"/>
                 <div id="MapContainer" class="Chart">
                     <div class="loading">
@@ -29,13 +38,15 @@
             <div class="MapDetails">
                 <div>
                     <strong>
-                        <p>School / Organisation name</p>
-                        <p>Address</p>
-                        <p>State / Country / Year</p>
+                        <p id="schoolname"></p>
+                        <p id="schoolAddress"></p>
                     </strong>
                     <p>Number of people in Total</p>
+                    <p id="AllCount"></p>
                     <p>Number Man</p>
+                    <p id="MaleCount"></p>
                     <p>Number Women</p>
+                    <p id="FemaleCount"></p>
                 </div>
             </div>
             <div class="MapCountryDetails">
@@ -49,13 +60,15 @@
     <div class="row">
         <div class="col-md-6 bottomBorder col-xs-12 no-padding">
             <div class="topBorder chartDivider" id="TopBorderDonut">
+                <div class="textLabel">SPOKEN LANGUAGE</div>
                 <div class="Chart OtherChart" id="DonutChartDiv">
                     <iframe id="IFRAME" src="ExportDonut.html"></iframe>
                 </div>
             </div>
         </div>
         <div class="col-md-6 col-xs-12 bottomBorder no-padding-left">
-            <div class="topBorder chartDivider" id="TopBorderBar">
+            <div class="topBorder chartDivider" >
+                <div class="textLabel" id="TopBorderBar">BELIEF</div>
                 <div class="Chart OtherChart" id="BarChart">
 
                 </div>
@@ -101,8 +114,7 @@
     function PrintExpot() {
         printPage();
     };
-    var DataMap = [[['country' , 'number'] , ['Afghanistan' , '10']]];
-    Export.CreateMapData(DataMap);
 </script>
+<!-- Go to www.addthis.com/dashboard to customize your tools --> <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-595871243e386d34"></script> 
 </body>
 </html>

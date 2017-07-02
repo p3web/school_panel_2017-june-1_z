@@ -64,7 +64,9 @@
         var Table = document.getElementById('Table');
         var Tag = '';
         for (var i = 0; i < data[0].length; i++) {
-            Tag += '<tr><td>' + data[0][i][0] + '</td><td>' + data[0][i][1] + '</td></tr>';
+            if (data[0][i][0] != '') {
+                Tag += '<tr><td>' + data[0][i][0] + '</td><td>' + data[0][i][1] + '</td></tr>';
+            }
         }
         try {
             Table.innerHTML = Tag;

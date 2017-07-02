@@ -63,3 +63,11 @@ function PrintIframe(){
     frm.focus();// focus on contentWindow is needed on some ie versions
     frm.print();
 }
+
+function SvgSendOut(){ ///----> get Svg from Iframe and append to iframe container ........ For image export
+    var IFRAME = document.getElementById('DonutChart').children[0];
+    var iDoc = IFRAME.contentDocument || IFRAME.contentWindow.document;
+    var contentid = iDoc.getElementById('DonutChart');
+    IFRAME.style.display = 'none';
+    document.getElementById('DonutChart').appendChild(contentid);
+}

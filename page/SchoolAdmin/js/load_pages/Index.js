@@ -10,69 +10,440 @@ Global.ResultMessage = function (result) {
     }
 };
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-Global.RefreshGrid = function (ContainerID , param , url , callBack) {
+Global.RefreshGrid = function (ContainerID, param, url, callBack) { //----> send reQuest with this func and then refresh Grid ajax
     document.getElementById(ContainerID).innerHTML = '';
-    ajax.sender_data_json_by_url_callback(url , param ,callBack);
+    ajax.sender_data_json_by_url_callback(url, param, callBack);
 };
-Global.RemoveRepeate= function(arr) {
-    var arrResult = {};
-    for (i = 0, n = arr.length; i < n; i++) {
-        var item = arr[i];
-        arrResult[ item.title + " - " + item.artist ] = item;
+Global.RemoveRepeate =function(originalArray, prop) {
+    var objInArray = [];
+    for(var a = 0 ; a < originalArray.length ; a++){
+        objInArray.push(originalArray[a]);
     }
-    var i = 0;
-    var nonDuplicatedArray = [];
-    for(var item in arrResult) {
-        nonDuplicatedArray[i++] = arrResult[item];
+    originalArray = objInArray;
+    var newArray = [];
+    var lookupObject  = {};
+
+    for(var i in originalArray) {
+        lookupObject[originalArray[i][prop]] = originalArray[i];
     }
-    return nonDuplicatedArray;
+
+    for(i in lookupObject) {
+        newArray.push(lookupObject[i]);
+    }
+    return newArray;
 };
 
-function set_invite_class_name(data){
+/*Add Language*/
+
+var Profile = {
+    LangCounter: 0,
+    CanAdd: true, //----> for one language add
+    deletedTrid: undefined,
+    currentTableId: undefined // ---- > save Id off current modal LanguageTable
+};
+
+
+
+/* AddLanguage View */
+Profile.Addlanguage = function (TableID) {
+    /*if (Profile.CanAdd) {*/
+    Profile.currentTableId = TableID;
+    var Tbody = document.querySelector('#' + TableID + ' > tbody');
+
+    var tr = document.createElement('tr');
+    tr.setAttribute('id', 'langtr' + Profile.LangCounter);
+    tr.setAttribute('class', 'newLang');
+
+    var Langtd = document.createElement('td');
+    var Leveltd = document.createElement('td');
+    var DeleteTd = document.createElement('td');
+
+    var Langselect = document.createElement('select');
+    var Levelselect = document.createElement('select');
+    var langoption = document.createElement('option');
+    var leveloption = document.createElement('option');
+
+    langoption.innerText = 'Select One';
+    leveloption.innerText = 'Select One';
+
+    var DeleteTrBtn = document.createElement('div');
+    DeleteTrBtn.setAttribute('class', 'btn Anim-toptoleft btn-danger');
+
+    Langselect.setAttribute('id', 'LangSelect' + Profile.LangCounter);
+    Levelselect.setAttribute('id', 'LevelSelect' + Profile.LangCounter);
+    Langselect.setAttribute('class', 'Anim-toptoleft form-control');
+    Levelselect.setAttribute('class', 'Anim-toptoleft form-control');
+    /*Langselect.setAttribute('data-addedLang', 'true'); //---> for select added select Tag in update function
+     Levelselect.setAttribute('data-addedLevel', 'true'); //---> for select added select Tag in update function*/
+    //DeleteTrBtn.innerText = 'Delete This';
+    DeleteTrBtn.innerHTML = '<i class="glyphicon glyphicon-minus"></i>'; //----> add delete New Row btn
+    DeleteTrBtn.setAttribute('onclick', "DeleteTr('langtr" + Profile.LangCounter + "')");
+
+
+    var AddlanguageBTN = document.getElementById('AddlanguageBTN'); // --- > get Add BTN
+    AddlanguageBTN.setAttribute('class', 'Anim-toptoleft btn btn-primary');
+    // ______ AppendChild
+    Langselect.appendChild(langoption);
+    Levelselect.appendChild(leveloption);
+    Langtd.appendChild(Langselect);
+    Leveltd.appendChild(Levelselect);
+    DeleteTd.appendChild(DeleteTrBtn);
+
+    DeleteTd.appendChild(AddlanguageBTN); //-----> cut addBtn in last Row
+
+    tr.appendChild(Langtd);
+    tr.appendChild(Leveltd);
+    tr.appendChild(DeleteTd);
+
+    Tbody.appendChild(tr);
+    setTimeout(function () {
+        $('#LangSelect' + Profile.LangCounter).load('page/data_value/lanuage.html');
+        $('#LevelSelect' + Profile.LangCounter).load('page/data_value/lanuage_level.html');
+        Profile.LangCounter++;
+    }, 200);
+
+    /*var AddlanguageBTN = document.getElementById('AddlanguageBTN');
+     AddlanguageBTN.innerText = 'Save this language';
+     AddlanguageBTN.setAttribute('onclick', 'Profile.SaveLang()');
+     AddlanguageBTN.setAttribute('class', 'btn btn-block btn-success');
+     Profile.isrRegisetrNewLang = false;*/
+    /*}*/
+
+};
+
+//____ create All language select in profile after save one new language
+
+Profile.getAllLang = function (Data) {
+    var langtd, leveltd, btntd, tr, langselect, levelSelect, tbody, btn;
+    var Table = document.querySelector('#' + Profile.currentTableId);
+    Table.innerHTML = '';
+    tbody = document.createElement('tbody');
+    for (var i = 0; i < Data.length; i++) {
+        tr = document.createElement('tr');
+
+        langtd = document.createElement('td');
+        leveltd = document.createElement('td');
+        /*  btntd = document.createElement('td');*/
+
+        langselect = document.createElement('select');
+        levelSelect = document.createElement('select');
+        /*btn = document.createElement('div');
+         */
+        langselect.setAttribute('class', 'PSCO_language form-control');
+        levelSelect.setAttribute('class', 'PSCO_language_level form-control');
+
+        langselect.setAttribute('name', 'lang_' + Data[i].id);
+        levelSelect.setAttribute('name', 'langlevel_' + Data[i].id);
+
+        langselect.setAttribute('id', 'lang_' + Data[i].id);
+        levelSelect.setAttribute('id', 'langlevel_' + Data[i].id);
+
+        /*btn.setAttribute('class', 'btn btn-block btn-danger');
+         btn.setAttribute('onclick', 'DeleteLanguage(this)');
+         btn.innerText = 'Delete language';
+         */
+        langtd.appendChild(langselect);
+        leveltd.appendChild(levelSelect);
+        //btntd.appendChild(btn);
+
+        tr.appendChild(langtd);
+        tr.appendChild(leveltd);
+        //tr.appendChild(btntd);
+
+        tbody.appendChild(tr);
+    }
+    Table.appendChild(tbody);
+    Profile.CreateAdd(Profile.currentTableId);
+    Profile.setAddLang();
+    setTimeout(function () {
+        //_____ loade countries and levels
+        $('.PSCO_language').load('page/data_value/lanuage.html');
+        $('.PSCO_language_level').load('page/data_value/lanuage_level.html');
+        setTimeout(function () {
+            // ___ fill Country
+            var i = 0;
+            var fillcountry = function () {
+                if (i < Data.length) {
+                    setTimeout(function () {
+                        document.getElementById('lang_' + Data[i].id).value = Data[i].languagename;
+                        i++;
+                        fillcountry();
+                    }, 20);
+                }
+            };
+            fillcountry();
+        }, 1000);
+        setTimeout(function () {
+            // ___ fill level
+            var a = 0;
+            var fillLevel = function () {
+                if (a < Data.length) {
+                    setTimeout(function () {
+                        document.getElementById('langlevel_' + Data[a].id).value = Data[a].languagelevel;
+                        a++;
+                        fillLevel();
+                    }, 30);
+                }
+            };
+            fillLevel();
+        }, 1000)
+    }, 700);
+};
+
+function DeleteLanguage(DeleteBtn) {
+    Profile.deletedTrid = DeleteBtn.parentElement.parentElement; //---> tr deleted
+    var LanguageID = Profile.deletedTrid.children[0].children[0];
+    LanguageID = LanguageID.name; //-----> get name of select tag from
+    LanguageID = LanguageID.split('_');
+    LanguageID = LanguageID[1];
+    var emailID;
+    if (Profile.currentTableId == 'employee_lang_edit_profile') {
+        emailID = 'studentemail'
+    } else {
+        emailID = 'emailId';
+    }
+
+    var email = document.getElementById(emailID).value;
+    email = email.toLowerCase();
+    if (Profile.currentTableId == 'employee_lang_edit_profile') { //--- > delete student language
+        ajax.sender_data_json_by_url_callback(Profile.Url, {
+            act: 'delete_student_language',
+            id: LanguageID,
+            studentemailid: email
+        }, console.log);
+    }
+    else {
+        ajax.sender_data_json_by_url_callback(Profile.Url, { //--- > delete teacher language
+            act: 'delete_teacher_language',
+            id: LanguageID,
+            teacheremailid: email
+        }, console.log);
+
+    }
+    var tr = Profile.deletedTrid;
+    tr.style.display = 'none';
+    //Profile.setAddLang();
+
+
+    var Tbody = document.querySelector('#' + Profile.currentTableId + '> tbody');
+
+    // _____ check if this tr is last add btn then cut add btn in last row - 1
+    if (Tbody.children[Tbody.childElementCount - 1].style.display == 'none') {
+        var addBtn = document.getElementById('AddlanguageBTN');
+        Tbody.children[Tbody.childElementCount - 2].lastChild.appendChild(addBtn);
+    }
+    tr.parentNode.removeChild(tr);
+}
+
+Profile.SaveLang = function () {
+    /* var lang = document.getElementById('LangSelect' + (Profile.LangCounter - 1)).value;
+     var level = document.getElementById('LevelSelect' + (Profile.LangCounter - 1)).value;*/
+    var NewLang, NewLevel, i;
+    var lang = [];
+    var level = [];
+    var newLangTrs = document.getElementsByClassName('newLang');
+    for (i = 0; i < newLangTrs.length; i++) {
+        NewLang = newLangTrs[i].children[0].children[0];
+        NewLevel = newLangTrs[i].children[1].children[0];
+        if (NewLang.value != '' && NewLevel.value != '') {
+            lang.push(NewLang.value);
+            level.push(NewLevel.value);
+        }
+    }
+    var emailID;
+    if (Profile.currentTableId == 'employee_lang_edit_profile') {
+        emailID = 'studentemail';
+    } else {
+
+        emailID = 'emailId';
+
+    }
+    var email = document.getElementById(emailID).value;
+    email = email.toLowerCase();
+
+    i = 0;
+    var SendNewLang = function () {
+        if (i < lang.length) {
+            setTimeout(function () {
+                if (Profile.currentTableId == 'employee_lang_edit_profile') {
+                    ajax.sender_data_json_by_url_callback(Profile.Url, {
+                        act: 'set_student_language',
+                        languagename: lang[i],
+                        languagelevel: level[i],
+                        studentemailid: email
+                    }, console.log);
+
+
+                } else {
+                    ajax.sender_data_json_by_url_callback(Profile.Url, {
+                        act: 'set_teacher_language',
+                        languagename: lang[i],
+                        languagelevel: level[i],
+                        teacheremailid: email
+                    }, console.log);
+
+                }
+                // _____ submit form if all Language sent
+                if (i == lang.length - 1) {
+                    if (Profile.currentTableId == 'employee_lang_edit_profile') {
+                        document.getElementById('update_form').submit();
+                    } else {
+                        document.getElementById('frm_edit_user').submit();
+                    }
+                }
+                i++;
+                SendNewLang();
+            }, 2000)
+        }
+    };
+    if(lang.length == 0){
+        if (Profile.currentTableId == 'employee_lang_edit_profile') {
+            document.getElementById('update_form').submit();
+        } else {
+            document.getElementById('frm_edit_user').submit();
+        }
+    }else {
+        SendNewLang();
+    }
+    /*if (lang != 'Select One' && level != 'Select One') {
+     if (Profile.currentTableId == 'employee_lang_edit_profile') {
+     ajax.sender_data_json_by_url_callback(Profile.Url, {
+     act: 'set_student_language',
+     languagename: lang,
+     languagelevel: level,
+     studentemailid: email
+     }, Profile.getAllLang)
+     } else {
+     ajax.sender_data_json_by_url_callback(Profile.Url, {
+     act: 'set_teacher_language',
+     languagename: lang,
+     languagelevel: level,
+     teacheremailid: email
+     }, Profile.getAllLang)
+     }
+     }*/
+};
+
+// ____ reset addLanguage when open profileModal
+
+Profile.ResetAdd = function () {
+    var Addedtr, i, DeleteTd;
+    var deleteBtn = document.getElementsByClassName('glyphicon-minus');
+    //_______ Delete td of delete BTN
+    for (i = 0; i < deleteBtn.length; i++) {
+        DeleteTd = deleteBtn[i].parentNode.parentNode;
+        DeleteTd.parentNode.removeChild(DeleteTd);
+    }
+    for (i = 0; i < Profile.LangCounter; i++) {
+        Addedtr = document.getElementById('langtr' + i);
+        try {
+            Addedtr.parentNode.removeChild(Addedtr); ///---remove tr
+        } catch (e) {
+        }
+    }
+
+    var addBtn = document.getElementById('AddlanguageBTN');
+    try {
+        addBtn.parentNode.removeChild(addBtn); /// --- remove add btn
+    } catch (e) {
+    }
+    Profile.currentTableId = undefined;
+    // Profile.CanAdd = true;
+    Profile.LangCounter = 0;
+};
+
+function DeleteTr(id) {
+    var tr = document.getElementById(id);
+    tr.style.display = 'none';
+    //Profile.setAddLang();
+
+
+    var Tbody = document.querySelector('#' + Profile.currentTableId + '> tbody');
+
+    // _____ check if this tr is last add btn then cut add btn in last row - 1
+    if (Tbody.children[Tbody.childElementCount - 1].style.display == 'none') {
+        var addBtn = document.getElementById('AddlanguageBTN');
+        Tbody.children[Tbody.childElementCount - 2].lastChild.appendChild(addBtn);
+    }
+    tr.parentNode.removeChild(tr);
+}
+
+Profile.CreateAdd = function (TableId) {
+/*    if (Profile.currentTableId == 'edit_data_Modal') { // --->disable Editable Teacher Profile
+        DisableTeacherProfile();
+    }*/
+    // reset AddLanguage
+    Profile.ResetAdd();
+    //_______ create Delete Language Btn
+    Profile.currentTableId = TableId;
+    var Tbody = document.querySelector('#' + TableId + ' > tbody');
+    if (Tbody != null) {
+        for (var i = 0; i < Tbody.childElementCount; i++) {
+            var deletetd = document.createElement('td');
+            var deletebtn = document.createElement('div');
+            deletebtn.setAttribute('onclick', 'DeleteLanguage(this)');
+            deletebtn.setAttribute('class', 'btn btn-danger');
+            //deletebtn.innerText = 'Delete language';
+            deletebtn.innerHTML = '<i class="glyphicon glyphicon-minus"></i>';
+            deletetd.appendChild(deletebtn);
+            var last_td = Tbody.childElementCount - 1;
+            if (Profile.currentTableId != 'employee_lang') {
+                last_td = Tbody.childElementCount - 2;
+            }
+            if (i == last_td) {
+                var AddBTN = document.createElement('div');
+                AddBTN.setAttribute('class', 'btn btn-primary');
+                AddBTN.setAttribute('id', 'AddlanguageBTN');
+                AddBTN.setAttribute('onclick', "Profile.Addlanguage('" + TableId + "')");
+                AddBTN.style.marginLeft = '5px';
+                AddBTN.innerHTML = '<i class="glyphicon glyphicon-plus"></i>';
+                deletetd.appendChild(AddBTN);
+            }
+            Tbody.children[i].appendChild(deletetd);
+        }
+    } else {
+        Tbody = document.createElement('tbody');
+        var table = document.getElementById(TableId);
+        table.appendChild(Tbody);
+    }
+    /*    // create add language
+     var tfoot = document.createElement('tfoot');
+     var tr = document.createElement('tr');
+     var td = document.createElement('td');
+     td.setAttribute('colspan', '3');
+     var btn = document.createElement('div');
+     btn.setAttribute('class', 'btn btn-primary btn-block');
+     btn.setAttribute('onclick', "Profile.Addlanguage('" + TableId + "')");
+     btn.setAttribute('id', 'AddlanguageBTN');
+     btn.innerText = 'Add Language';
+     // append Child
+     td.appendChild(btn);
+     tr.appendChild(td);
+     tfoot.appendChild(tr);
+     document.getElementById(TableId).appendChild(tfoot);*/
+};
+
+
+
+
+/*End Add Language*/
+
+function set_invite_class_name(data) {
     var opt = '';//'<optgroup label="Class name"></optgroup>';
-    for(var i = 0 ; i<data.length ; i++){
-        opt+= '<option value="'+data[i].classname+'">'+data[i].classname+'</option>';
+    for (var i = 0; i < data.length; i++) {
+        opt += '<option value="' + data[i].classname + '">' + data[i].classname + '</option>';
     }
     $("#classnameInvite").html(opt);
-=======
-=======
->>>>>>> e1239fba462841e40c4d47613dc439a92857dc5d
-function set_invite_class_name(data){
-    var opt = '<optgroup label="Class name"></optgroup>';
-    for(var i = 0 ; i<data.length ; i++){
-        opt+= '<option value="'+data[i].classname+'">'+data[i].classname+'</option>';
-    }
-    $("#classInvite").html(opt);
-<<<<<<< HEAD
->>>>>>> e1239fba462841e40c4d47613dc439a92857dc5d
-=======
->>>>>>> e1239fba462841e40c4d47613dc439a92857dc5d
 }
 
 Global.setData = function (Data, gridName) {
     gridName.data = Data;
     gridName.render();
     //peyman
-<<<<<<< HEAD
-<<<<<<< HEAD
-/*    ajax.sender_data_json_by_url_callback(Global.url, {
-        act: 'get_tbl_classes'
-    }, set_invite_class_name);*/
-=======
-    ajax.sender_data_json_by_url_callback(Global.url, {
-        act: 'get_tbl_classes'
-    }, set_invite_class_name);
->>>>>>> e1239fba462841e40c4d47613dc439a92857dc5d
-=======
-    ajax.sender_data_json_by_url_callback(Global.url, {
-        act: 'get_tbl_classes'
-    }, set_invite_class_name);
->>>>>>> e1239fba462841e40c4d47613dc439a92857dc5d
+    /*    ajax.sender_data_json_by_url_callback(Global.url, {
+     act: 'get_tbl_classes'
+     }, set_invite_class_name);*/
 };
-
-
 
 
 function showModal(ModalID) {
@@ -93,7 +464,9 @@ function Confirm(EmailID) {
     message.Confirm('Are you sure ?!', 'Confirm Delete', Teacher.DeleteRow, EmailID);
 }
 var Teacher = {
-    AdminProfile: {},
+    AdminProfile: {
+        isAustralia: false
+    },
     Profile: {},
     Edit: {
         trCounter: 0
@@ -111,9 +484,9 @@ Teacher.CreateTeacherTblData = function (data) {
     for (var i = 0; i < data.length; i++) {
 
         var Rows = {};
-        if(data[i].name != null) {
+        if (data[i].name != null) {
             Rows['name'] = data[i].name;
-        }else{
+        } else {
             Rows['name'] = '_';
         }
         Rows['email'] = data[i].teacheremailid;
@@ -126,21 +499,13 @@ Teacher.CreateTeacherTblData = function (data) {
             };
             Rows['option'] = {
                 value: '',
-<<<<<<< HEAD
-<<<<<<< HEAD
-                htmlTag: '<i class="glyphicon glyphicon-remove actionIcon" onclick="Confirm(' + "'" + data[i].teacheremailid+'||'+ data[i].classname + "'" + ')"></i>'
-=======
-                htmlTag: '<i class="glyphicon glyphicon-remove actionIcon" onclick="Confirm(' + "'" + data[i].teacheremailid+'||'+ data[i].classname + "'" + ')"></i>    <i class="glyphicon glyphicon-edit actionIcon" onclick="Teacher.Edit.Edit(' + "'" + data[i].teacheremailid + "'" + ')""></i>'
->>>>>>> e1239fba462841e40c4d47613dc439a92857dc5d
-=======
-                htmlTag: '<i class="glyphicon glyphicon-remove actionIcon" onclick="Confirm(' + "'" + data[i].teacheremailid+'||'+ data[i].classname + "'" + ')"></i>    <i class="glyphicon glyphicon-edit actionIcon" onclick="Teacher.Edit.Edit(' + "'" + data[i].teacheremailid + "'" + ')""></i>'
->>>>>>> e1239fba462841e40c4d47613dc439a92857dc5d
+                htmlTag: '<i class="glyphicon glyphicon-remove actionIcon" onclick="Confirm(' + "'" + data[i].teacheremailid + '||' + data[i].classname + "'" + ')"></i>'
             };
         } else {
             Rows['info'] = 'Waiting approval';
             Rows['option'] = {
                 value: '',
-                htmlTag: '<i class="glyphicon glyphicon-remove actionIcon" onclick="Confirm(' + "'" +  data[i].teacheremailid+'||'+ data[i].classname + "'" + ')"></i>'
+                htmlTag: '<i class="glyphicon glyphicon-remove actionIcon" onclick="Confirm(' + "'" + data[i].teacheremailid + '||' + data[i].classname + "'" + ')"></i>'
             };
         }
         TeacherData.push(Rows);
@@ -152,9 +517,12 @@ Teacher.DeleteRow = function (data) {
     ajax.sender_data_json_by_url_callback(Global.url, {
         act: 'delete_teacher_by_teacherEmailId',
         teacheremailid: data[0],
-        classname:data[1]
+        classname: data[1]
     }, console.log);
+    ///// refresh grid after delete Row
+    Global.RefreshGrid('PGrid', {act: 'get_tbl_teachers'}, Global.url, Teacher.CreateTeacherTblData)
 };
+
 /*view Profile*/
 Teacher.Profile.CreatePersonalDetails = function (Data) {
     Data = Data[0];
@@ -335,8 +703,10 @@ Teacher.Edit.Edit = function (EmailID) {
         act: 'get_teacher_age_group_by_teacherEmailId',
         teacheremailid: EmailID
     }, Teacher.Edit.FillInputAgeGroup);
+
     setTimeout(function () {
         showModal('edit_data_Modal');
+        Profile.CreateAdd('employee_lang'); //____ Create Add Button
     }, 500);
 };
 /*add Language View*/
@@ -390,10 +760,14 @@ Teacher.Edit.AddLanguage = function () {
     }, 200);
 
 };
+
+/*
 function DeleteTr(id) {
     var tr = document.getElementById(id);
     tr.parentNode.removeChild(tr);
 }
+*/
+
 /*Update Teacher*/
 
 Teacher.Update.PersonalDetails = function () {
@@ -530,33 +904,34 @@ Teacher.Update.CheckResult = function (Data) {
     }
 };
 
-Teacher.invite = function(){
+Teacher.invite = function () {
 
     var email = $("#EmailInvite").val();
     var classname = $("#classInvite").val();
     var name = $("#NameInvite").val();
     var constraints = {from: {email: true}};
     if (validate({from: email}, constraints) != undefined) {
-        message.show(__lang.translate("teacher email is not valid"),__lang.translate("Error"));
+        message.show(__lang.translate("teacher email is not valid"), __lang.translate("Error"));
         return;
     }
 
     ajax.sender_data_json_by_url_callback(Global.url, {
         act: 'invite_teecher',
-        invite : true ,
+        invite: true,
         name: name,
-        email : email,
-        classname : classname
+        email: email,
+        classname: classname
 
 
     }, class_data.add_new_class.result);
 
     $("#EmailInvite").val("")
-    $("#classInvite").val("");;
+    $("#classInvite").val("");
+    ;
     $("#NameInvite").val("");
 }
-Teacher.invite.result = function(data){}
-
+Teacher.invite.result = function (data) {
+}
 
 
 /*Key Facts*/
@@ -598,6 +973,7 @@ Teacher.AdminProfile.btn_user_profile_edit = function () {
         btn_edit.attr('name', 'edit');
         $('#user_profile_header').html('User profile');
     }
+
 };
 Teacher.AdminProfile.Update = function () {
     var adminemailid = document.getElementById('Adminemail').value;
@@ -634,27 +1010,36 @@ Teacher.AdminProfile.setData = function (Data) {
     //______ if country is australia ---> create select Tag and fill australia School from dataValue folder
     var schoolTD = document.getElementById('schoolNameTd');
     schoolTD.innerHTML = '';
+    var input = document.createElement('input');
+    input.setAttribute('class', 'psco_readonly form-control');
+    input.setAttribute('id', 'SchoolName');
+try {
     if (Data.country.toLowerCase() == 'australia') {
-        var selectTag = document.createElement('select');
-        selectTag.setAttribute('id', 'SchoolName');
-        selectTag.setAttribute('class', 'form-control');
-        selectTag.setAttribute('disabled', 'true');
-        schoolTD.appendChild(selectTag);
-        setTimeout(function () {
-            $('#SchoolName').load('../data_value/AustraliaSchool.html', function () {
-                $('#SchoolName').val(Data.schoolname);
-            });
-        }, 200);
+        /*        var selectTag = document.createElement('select');
+         selectTag.setAttribute('id', 'SchoolName');
+         selectTag.setAttribute('class', 'form-control');
+         selectTag.setAttribute('disabled', 'true');
+         schoolTD.appendChild(selectTag);
+         setTimeout(function () {
+         $('#SchoolName').load('../data_value/AustraliaSchool.html', function () {
+         $('#SchoolName').val(Data.schoolname);
+         });
+         }, 200);*/
+        input.setAttribute('list', 'SchoolList');
+        var List = document.createElement('datalist');
+        List.setAttribute('id', 'SchoolList');
+        schoolTD.appendChild(List);
+        ajax.sender_data_json_by_url_callback(Global.url, {act: 'get_australia_school'}, Teacher.AdminProfile.FillSchools);
+        Teacher.AdminProfile.isAustralia = true;
+
     } else { //if not australia ----> create input Text
-        var input = document.createElement('input');
-        input.setAttribute('class', 'psco_readonly form-control');
         input.setAttribute('type', 'text');
-        input.setAttribute('placeholder', 'School Name');
-        input.setAttribute('readonly', 'true');
-        input.setAttribute('id', 'SchoolName');
-        input.value = Data.schoolname;
-        schoolTD.appendChild(input);
     }
+}catch (e){}
+    input.setAttribute('placeholder', 'School Name');
+    input.setAttribute('readonly', 'true');
+    schoolTD.appendChild(input);
+    input.value = Data.schoolname;
 
     document.getElementById('Adminemail').value = Data.adminemailid;
     document.getElementById('Adminfirstname').value = Data.firstname;
@@ -691,15 +1076,49 @@ Teacher.AdminProfile.setData = function (Data) {
 
      }, 3000);*/
 };
-
+//----> if country change to australia school name change to list else change to text
+Teacher.AdminProfile.ChangeCountry = function (elem){
+    var List;
+    var schoolName = document.getElementById('SchoolName');
+    if (elem.value.toLowerCase() == 'australia') {
+        var SchoolTd = schoolName.parentNode;
+        /*
+         SchoolTd.removeChild(schoolName);
+         var select = document.createElement('select');
+         select.setAttribute('id' , )*/
+        schoolName.setAttribute('type', '');
+        schoolName.setAttribute('list', 'SchoolList');
+        List = document.createElement('datalist');
+        List.setAttribute('id', 'SchoolList');
+        SchoolTd.appendChild(List);
+        Teacher.AdminProfile.isAustralia = true;
+        ajax.sender_data_json_by_url_callback(Global.url , {act:'get_australia_school'} , Teacher.AdminProfile.FillSchools);
+    }else{
+        if(Teacher.AdminProfile.isAustralia){ //--- if past country is australia change input type
+            List = document.getElementById('SchoolList');
+            List.parentNode.removeChild(List);
+            schoolName.setAttribute('type' , 'text');
+            schoolName.setAttribute('list' , '');
+            Teacher.AdminProfile.isAustralia = false;
+        }
+    }
+};
+// ----> get australia SchoolName List
+Teacher.AdminProfile.FillSchools = function(Data){
+  var options = '';
+  for(var i = 0 ; i < Data.length ; i++){
+      options += '<option value="'+Data[i].schoolname+'">'+Data[i].schoolname+'</option>';
+  }
+  document.getElementById('SchoolList').innerHTML = options;
+};
 
 //____________add className
 var class_data = {};
 
-class_data.add_new_class = function(){
+class_data.add_new_class = function () {
     var classname = $('#classNameAdd').val();
-    if(classname == "" || classname == undefined || classname == null){
-        message.show(__lang.translate("please Enter class name"),__lang.translate("Error"));
+    if (classname == "" || classname == undefined || classname == null) {
+        message.show(__lang.translate("please Enter class name"), __lang.translate("Error"));
         return;
     }
     ajax.sender_data_json_by_url_callback(Global.url, {
@@ -708,22 +1127,7 @@ class_data.add_new_class = function(){
     }, class_data.add_new_class.result);
 
     $('#classNameAdd').val("");
-<<<<<<< HEAD
-<<<<<<< HEAD
 };
-class_data.add_new_class.result = function(data){};
+class_data.add_new_class.result = function (data) {
+};
 
-=======
-=======
->>>>>>> e1239fba462841e40c4d47613dc439a92857dc5d
-}
-class_data.add_new_class.result = function(data){};
-
-
-
-
-
-<<<<<<< HEAD
->>>>>>> e1239fba462841e40c4d47613dc439a92857dc5d
-=======
->>>>>>> e1239fba462841e40c4d47613dc439a92857dc5d

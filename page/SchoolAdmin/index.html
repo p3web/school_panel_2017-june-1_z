@@ -16,9 +16,6 @@
     <link rel="stylesheet" href="../js/sweetalert/sweetalert2.css">
 
 
-
-
-
 </head>
 <body onload="Teacher.LoadTeacherTable();">
 <div id="wrap">
@@ -133,19 +130,8 @@
                                          name="submitvalstutab" value="SUBMIT">
 
                             <div class="headerContent">TEACHER</div>
-<<<<<<< HEAD
-<<<<<<< HEAD
                             <p>As a school administrator, you can now invite teachers to register for Ancestry Atlas</p>
                             <h4>How?</h4>
-=======
-=======
->>>>>>> e1239fba462841e40c4d47613dc439a92857dc5d
-                            <p>As school administrator, you can now invite teachers to register for Ancestry Atlas</p>
-                            <h4>How?</h4>
-                            <p>Enter each teacher's email address, their class name and hit INVITE.</p>
-                            <p>Teachers can now register and start mapping their classroom cultural diversity</p>
-                            <div id="PGrid">
->>>>>>> e1239fba462841e40c4d47613dc439a92857dc5d
 
                             <p>Enter each teacher's email address, their class name and hit INVITE.</p>
 
@@ -260,20 +246,23 @@
                         <td><input id="Adminlasttname" class="psco_readonly form-control" type="email"
                                    placeholder="Email" readonly="" value="Mousaferiadis"><br></td>
                     </tr>
+
+                    <tr>
+                        <td>Country:</td>
+                        <td>
+                            <select id="Admincountry" onchange="Teacher.AdminProfile.ChangeCountry(this)" class="PSCO_country form-control" disabled>
+
+                            </select>
+                            <br></td>
+                    </tr>
+
                     <tr>
                         <td>School name:</td>
                         <td id="schoolNameTd">
 
                         </td>
                     </tr>
-                    <tr>
-                        <td>Country:</td>
-                        <td>
-                            <select id="Admincountry" class="PSCO_country form-control" disabled>
 
-                            </select>
-                            <br></td>
-                    </tr>
                     <tr>
                         <td>City:</td>
                         <td>
@@ -408,7 +397,7 @@
                 <div class="table-responsive">
                     <input type="hidden" id="AdminSchoolID">
 
-                    <h3>PERSONAL DETAILS</h3>
+                    <h3 class="HeaderPink">PERSONAL DETAILS</h3>
                     <table id="TeacherPersonalTable" class="table borderless">
 
 
@@ -463,7 +452,7 @@
                             ID:</label>
 
                         <div class="col-sm-9">
-                            <input type="email" class="form-control" id="Teacheremail" name="staffemail" readonly=""
+                            <input  type="email" class="form-control" id="Teacheremail" name="staffemail" readonly=""
                                    style="background-color:#e2e2e2;visibility: hidden;">
                         </div>
                     </div>
@@ -506,8 +495,9 @@
 
                         <div class="col-sm-9">
                             <div class="col-sm-6">
-                                <input type="text" class="form-control ui-autocomplete-input" id="beliefreligion"
-                                       name="beliefreligion" autocomplete="off" style="color: rgb(0, 0, 0);">
+                                <input list="ReligionTeacher" type="text" class="form-control  ui-autocomplete-input" id="beliefreligion"
+                                        name="beliefreligion" autocomplete="off" style="color: rgb(0, 0, 0);">
+                                <datalist id="ReligionTeacher" class="PSCO_religion"></datalist>
                             </div>
                             <!-- <div class="col-sm-6">
                                  <input id="checko" type="checkbox">
@@ -521,8 +511,8 @@
                         <label class="control-label col-sm-3" for="tb">Teacher:</label>
 
                         <div class="col-sm-9">
-                            <input type="text" class="form-control ui-autocomplete-input" id="tb" name="tb"
-                                   autocomplete="off">
+                            <select type="text" class="form-control PSCO_country ui-autocomplete-input" id="tb" name="tb"
+                                    autocomplete="off"></select>
                         </div>
                     </div>
 
@@ -531,24 +521,24 @@
                         <label class="control-label col-sm-3" for="m">Mother:</label>
 
                         <div class="col-sm-9">
-                            <input type="text" class="form-control ui-autocomplete-input" id="m" name="m"
-                                   autocomplete="off">
+                            <select type="text" class="form-control PSCO_country ui-autocomplete-input" id="m" name="m"
+                                    autocomplete="off"></select>
                         </div>
                     </div>
                     <div class="form-group">
                         <label class="control-label col-sm-3" for="gfm">GrandFather:</label>
 
                         <div class="col-sm-9">
-                            <input type="text" class="form-control ui-autocomplete-input" id="gfm" name="gfm"
-                                   autocomplete="off">
+                            <select type="text" class="form-control PSCO_country ui-autocomplete-input" id="gfm" name="gfm"
+                                    autocomplete="off"></select>
                         </div>
                     </div>
                     <div class="form-group">
                         <label class="control-label col-sm-3" for="gmm">GrandMother:</label>
 
                         <div class="col-sm-9">
-                            <input type="text" class="form-control ui-autocomplete-input" id="gmm" name="gmm"
-                                   autocomplete="off">
+                            <select type="text" class="form-control PSCO_country ui-autocomplete-input" id="gmm" name="gmm"
+                                    autocomplete="off"></select>
                         </div>
                     </div>
 
@@ -557,24 +547,24 @@
                         <label class="control-label col-sm-3" for="f">Father:</label>
 
                         <div class="col-sm-9">
-                            <input type="text" class="form-control ui-autocomplete-input" id="f" name="f"
-                                   autocomplete="off">
+                            <select type="text" class="form-control PSCO_country ui-autocomplete-input" id="f" name="f"
+                                    autocomplete="off"></select>
                         </div>
                     </div>
                     <div class="form-group">
                         <label class="control-label col-sm-3" for="gff">GrandFather:</label>
 
                         <div class="col-sm-9">
-                            <input type="text" class="form-control ui-autocomplete-input" id="gff" name="gff"
-                                   autocomplete="off">
+                            <select type="text" class="form-control PSCO_country ui-autocomplete-input" id="gff" name="gff"
+                                    autocomplete="off"></select>
                         </div>
                     </div>
                     <div class="form-group">
                         <label class="control-label col-sm-3" for="gmf">GrandMother:</label>
 
                         <div class="col-sm-9">
-                            <input type="text" class="form-control ui-autocomplete-input" id="gmf" name="gmf"
-                                   autocomplete="off">
+                            <select type="text" class="form-control PSCO_country ui-autocomplete-input" id="gmf" name="gmf"
+                                    autocomplete="off"></select>
                         </div>
                     </div>
 
@@ -616,6 +606,7 @@
 
 <!--classes MODAL-->
 <!--Edit Modals-->
+<!--
 <div id="edit_Classes_Modal" class="modal fade in">
     <div class="modal-dialog">
         <div class="modal-content">
@@ -657,6 +648,167 @@
         </div>
     </div>
 </div>
+-->
+<!--Edit Student Profile Modal-->
+<div id="edit_Student_data_Modal" class="modal fade in">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">×</button>
+                <h4 class="modal-title" style="text-align:center;font-weight:bold;">Update Student's Details</h4>
+            </div>
+            <div class="modal-body">
+
+                <div id="" class="form-horizontal">
+                    <h3 class="HeaderPink">PERSONAL DETAILS</h3>
+
+                    <div class="form-group">
+                        <label class="control-label col-sm-3" for="StudentEmail_STU">Email
+                            ID:</label>
+
+                        <div class="col-sm-9">
+                            <input data-EditStudent="true" data-studentProfile="true" type="email" class="form-control" id="StudentEmail_STU" name="studentemailid" readonly=""
+                                   style="background-color:#e2e2e2;">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label col-sm-3" for="firstname_STU">First Name:</label>
+
+                        <div class="col-sm-9">
+                            <input data-studentProfile="true" data-EditStudent="true" type="text" class="form-control" id="firstname_STU" name="firstname" readonly="">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label col-sm-3" for="lastname_STU">Last Name:</label>
+
+                        <div class="col-sm-9">
+                            <input data-studentProfile="true" data-EditStudent="true" type="text" class="form-control" id="lastname_STU" name="lastname" readonly="">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label col-sm-3" for="gender_STU">Gender:</label>
+
+                        <div class="col-sm-9">
+                            <select data-studentProfile="true" data-EditStudent="true" name="gender" id="gender_STU" class="form-control">
+                                <option value="male">Male</option>
+                                <option value="female">Female</option>
+                                <option value="others">Others</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label col-sm-3" for="age_STU">Age Group:</label>
+
+                        <div class="col-sm-9">
+                            <select name="age" id="age_STU" data-EditStudent="true" class="form-control">
+
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label col-sm-3" for="beliefreligion_STU">Belief/Religion:</label>
+
+                        <div class="col-sm-9">
+                            <div class="col-sm-6">
+                                <input list="Religion_student" data-studentProfile="true" data-EditStudent="true" type="text" class="form-control  ui-autocomplete-input" id="beliefreligion_STU"
+                                        name="religion" autocomplete="off" style="color: rgb(0, 0, 0);">
+                                <datalist id="Religion_student" class="PSCO_religion"></datalist>
+                            </div>
+                            <!-- <div class="col-sm-6">
+                                 <input id="checko" type="checkbox">
+                                 <label style="margin-top:0.5em">&nbsp;Don't want to answer</label>
+                             </div>-->
+                        </div>
+                    </div>
+                    <h3 class="HeaderPink">BIRTH COUNTRIES</h3>
+
+                    <div class="form-group">
+                        <label class="control-label col-sm-3" for="tb_STU">Student:</label>
+
+                        <div class="col-sm-9">
+                            <select type="text" data-EditStudent="true" class="form-control PSCO_country ui-autocomplete-input" id="tb_STU" name="sb"
+                                    autocomplete="off"></select>
+                        </div>
+                    </div>
+
+                    <hr>
+                    <div class="form-group">
+                        <label class="control-label col-sm-3" for="m_STU">Mother:</label>
+
+                        <div class="col-sm-9">
+                            <select type="text"  data-EditStudent="true" class="form-control PSCO_country ui-autocomplete-input" id="m_STU" name="m"
+                                    autocomplete="off"></select>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label col-sm-3" for="gfm_STU">GrandFather:</label>
+
+                        <div class="col-sm-9">
+                            <select  data-EditStudent="true" type="text" class="form-control PSCO_country ui-autocomplete-input" id="gfm_STU" name="gfm"
+                                     autocomplete="off"></select>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label col-sm-3" for="gmm_STU">GrandMother:</label>
+
+                        <div class="col-sm-9">
+                            <select data-EditStudent="true" type="text" class="form-control PSCO_country ui-autocomplete-input" id="gmm_STU" name="gmm"
+                                    autocomplete="off"></select>
+                        </div>
+                    </div>
+
+                    <hr>
+                    <div class="form-group">
+                        <label class="control-label col-sm-3" for="f_STU">Father:</label>
+
+                        <div class="col-sm-9">
+                            <select data-EditStudent="true" type="text" class="form-control PSCO_country ui-autocomplete-input" id="f_STU" name="f"
+                                    autocomplete="off"></select>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label col-sm-3" for="gff_STU">GrandFather:</label>
+
+                        <div class="col-sm-9">
+                            <select data-EditStudent="true" type="text" class="form-control PSCO_country ui-autocomplete-input" id="gff_STU" name="gff"
+                                    autocomplete="off"></select>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label col-sm-3" for="gmf_STU">GrandMother:</label>
+
+                        <div class="col-sm-9">
+                            <select data-EditStudent="true" type="text" class="form-control PSCO_country ui-autocomplete-input" id="gmf_STU" name="gmf"
+                                    autocomplete="off"></select>
+                        </div>
+                    </div>
+
+                    <h3 class="HeaderPink">LANGUAGES</h3>
+
+                    <div class="form-group">
+                        <div class="col-sm-10 col-sm-push-1">
+                            <table class="table borderless table-responsive " id="Student_lang">
+                                <tbody id="LangEditTable_STU">
+
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+
+                    <br>
+                    <button type="button" name="update" id="update_Stu" onclick="student.Edit.Update()"
+                            class="btn btn-success ">Save
+                    </button>
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+
+
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+</div>
 <script src="../../scripts/jquery-1.10.2.js"></script>
 
 <!--ajax-->
@@ -682,21 +834,9 @@
 <script type="text/javascript">
     var __lang = undefined;
 
-<<<<<<< HEAD
-<<<<<<< HEAD
     $.getJSON('../data_value/lang.json', function (data) {
         __lang = new lang(data);
     });
-=======
-    $.getJSON('../data_value/lang.json', function(data){
-        __lang = new lang(data);
-    } );
->>>>>>> e1239fba462841e40c4d47613dc439a92857dc5d
-=======
-    $.getJSON('../data_value/lang.json', function(data){
-        __lang = new lang(data);
-    } );
->>>>>>> e1239fba462841e40c4d47613dc439a92857dc5d
 </script>
 
 <!--PSCO_Grid-->
@@ -737,7 +877,10 @@
         });
         $('#studentClassNameDropDown').on('change' , function(){
             Global.RefreshGrid('PstudentGrid' , {act:'get_tbl_student' , classname : this.value} , Global.url , student.CreateStudentTblData)
-        })
+        });
+
+        $('.PSCO_country').load('../data_value/country.html');
+        $('.PSCO_religion').load('../data_value/religions.html');
     });
 
     var StuGrid;
@@ -761,27 +904,12 @@
         id: 'EmailInvite',
         type: 'inputtext'
     }, {
-<<<<<<< HEAD
-<<<<<<< HEAD
         name: {
             value: '',
             htmlTag: ' <input class="PGrid-InputStyle" list="classnameInvite" name="classInvite" id="classInvite" placeholder="Class name"  > <datalist id="classnameInvite"></datalist>'
         }
 
     }, {}, {}, {
-=======
-=======
->>>>>>> e1239fba462841e40c4d47613dc439a92857dc5d
-    name: {
-        value:'',
-        htmlTag:'<select class="form-control" id="classInvite"></select>'
-    }
-
-    },{}, {}, {
-<<<<<<< HEAD
->>>>>>> e1239fba462841e40c4d47613dc439a92857dc5d
-=======
->>>>>>> e1239fba462841e40c4d47613dc439a92857dc5d
         name: 'Invite',
         id: 'InviteBTN',
         type: 'btn',
@@ -829,8 +957,6 @@
                     name: 'Class name',
                     id: 'classNameAdd',
                     type: 'inputtext'
-<<<<<<< HEAD
-<<<<<<< HEAD
                 }, {
                     name: 'Add',
                     id: 'ClassAddBTN',
@@ -870,14 +996,6 @@
                     type: 'inputtext'
                 },  {
                    name: 'Add',
-=======
-                },  {
-                    name: 'Add',
->>>>>>> e1239fba462841e40c4d47613dc439a92857dc5d
-=======
-                },  {
-                    name: 'Add',
->>>>>>> e1239fba462841e40c4d47613dc439a92857dc5d
                     id: 'ClassAddBTN',
                     type: 'btn',
                     attribute: [
@@ -885,16 +1003,8 @@
                         {name: 'onclick', value: 'class_data.add_new_class()'}
                     ]
 
-<<<<<<< HEAD
-<<<<<<< HEAD
                 }]];*/
                 student.LoadStudentTable(); //______ send Act
-=======
-=======
->>>>>>> e1239fba462841e40c4d47613dc439a92857dc5d
-                }]];
-                Classes.LoadClassesTable(); //______ send Act
->>>>>>> e1239fba462841e40c4d47613dc439a92857dc5d
             } else {
                 //____ LOAD OTHER TAB FROM EXTERNAL PAGE
                 $(TabID + ' .TABContent').load(pageName + '.html');

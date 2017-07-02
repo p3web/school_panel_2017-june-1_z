@@ -55,7 +55,7 @@
     position: absolute;
     z-index: 2;
     width: 12%;
-    left: 63.5%;
+    left: 50%;
     top: -28px;
 }
 
@@ -69,8 +69,7 @@
 .chartDivider {
 }
 
-.topBorder::before {
-    content: '';
+.textLabel{
     background-color: #f88882;
     -webkit-transform: rotate(-90deg);
     -moz-transform: rotate(-90deg);
@@ -85,20 +84,23 @@
     font-size: 21px;
     color: #fff;
     z-index: 100;
+    border: 2px solid #f88882;
 }
+/*
 
 #TopBorderMap::before {
     content: 'BIRTH COUNTRIES';
 }
+*/
 
-#TopBorderBar::before {
-    content: 'RELIGIONS';
+#TopBorderBar {
+    content: 'BELIEF';
     left: -100px;
 }
 
-#TopBorderDonut::before {
+/*#TopBorderDonut::before {
     content: 'SPOKEN LANGUAGE';
-}
+}*/
 
 .MapCountryDetails table {
     font-size: 15px;

@@ -20,71 +20,80 @@
 <body onload="Teacher.LoadTeacherTable();">
 <div id="wrap">
     <i class="glyphicon glyphicon-menu-hamburger" data-show="false" onclick="ToggleMenu(this)" id="menuIcon"></i>
+
     <div class="container-fluid">
         <!--Header-->
         <div class="row">
             <div class="col-sm-1">
             </div>
 
+            <div class="col-sm-10 no-padding-left">
+                <div class=" Lightbackground headerLight " style="border-left: none; ">
+                    <div class="headerIconDiv">
+                        <img id="btn_user_profile" class="userProfile" onclick="Teacher.AdminProfile.ShowProfile()" src="../../images/MenuIcons/PenHeader.png" />
+                        <b>Welcome, <b id="UserFullName"></b></b>
+                    </div>
+                </div>
 
-            <div class="col-sm-10" style="height:5.325em; margin-top:1em; ">
+                <div>
+                    <!--   <a class="pull-left hidden-xs" id="LogoSM" href="#"><img src="../../images/logoM.png"
+                                                                                title="Ancestry Atlas"
+                                                                                alt="Ancestry Atlas"></a>
+   -->
 
-
-                <div style="margin-left:2em; margin-right:2em;">
-                    <a class="pull-left hidden-xs" id="LogoSM" href="#"><img src="../../images/logoM.png"
-                                                                             title="Ancestry Atlas"
-                                                                             alt="Ancestry Atlas"></a>
-
-                    <a href="../../teamadminpanel.php?logoutrequest"
-                       class="btn btn-default navbar-btn logbutton submitbtunnew"
-                       style="float:right; border-radius:5px; margin:1.0em 0em; font-weight:bold;  text-decoration:none;">LOGOUT</a>
-
-                    <a id="btn_user_profile" href="#" class="btn btn-default navbar-btn logbutton submitbtunnew"
-                       style="float:right; border-radius:5px; margin:1.0em 0em; font-weight:bold;  text-decoration:none; margin-right: 1em;">PROFILE</a>
+                    <!--
+                                        <a id="btn_user_profile" href="#" class="btn btn-default navbar-btn logbutton submitbtunnew"
+                                           style="float:right; border-radius:5px; margin:1.0em 0em; font-weight:bold;  text-decoration:none; margin-right: 1em;">PROFILE</a>-->
 
 
                 </div>
             </div>
 
-            <div class="col-sm-1">
+            <div class="col-sm-1 no-padding Lightbackground headerLight" style="border-right: none">
+                <!--<a id="btn_user_profile" href="#" class="btn btn-default navbar-btn logbutton submitbtunnew HeaderBtn "
+                   onclick="Teacher.AdminProfile.ShowProfile()"
+                   style="/*float:right; border-radius:5px; margin:1.0em 0em; font-weight:bold;  text-decoration:none; margin-right: 1em;*/">PROFILE</a>-->
+                <a href="../../teamadminpanel.php?logoutrequest" id="logOutBtn"
+                   class="btn btn-default navbar-btn logbutton submitbtunnew HeaderBtn "><span
+                        id="logoutSpan">LOGOUT</span><i
+                        id="logoutIcon" class="glyphicon glyphicon-off"></i> </a>
             </div>
 
         </div>
         <!--Tab Control-->
         <div class="panelControl" id="MenuPanel">
-            <a href="#"><img src="../../images/logo.png" title="Ancestry Atlas" alt="Ancestry Atlas"></a>
+            <a href="#"><img src="../../images/MenuIcons/MenuLogo.png" title="Ancestry Atlas" alt="Ancestry Atlas"></a>
             <ul class=" nav nav-tabs">
                 <li class="active"><a data-toggle="tab" href="#students"
-                                      aria-expanded="true"><i class="glyphicon glyphicon-user"></i> TEACHER</a>
+                                      aria-expanded="true"><img src="../../images/MenuIcons/person.png"> DEPARTMENT</a>
                 </li>
-                <li class=""><a onclick="loadPage(this)"
-                                data-toggle="tab" data-Page="Classes"
-                                href="#classes"
-                                aria-expanded="false"><i class="glyphicon glyphicon-blackboard"></i> CLASSES</a></li>
-                <li class=""><a data-toggle="tab"
+                <!--<li class=""><a onclick="loadPage(this)"-->
+                <!--data-toggle="tab" data-Page="Classes"-->
+                <!--href="#classes"-->
+                <!--aria-expanded="false"><i class="glyphicon glyphicon-blackboard"></i> CLASSES</a></li>-->
+                        <li class=""><a data-toggle="tab"
                                 onclick="loadPage(this)" data-Page="Map"
                                 href="#maps"
-                                aria-expanded="false"><i class="glyphicon glyphicon-stats"></i> MAPS</a></li>
+                                aria-expanded="false"><img src="../../images/MenuIcons/Map.png"> MAPS</a></li>
                 <li class=""><a data-toggle="tab"
                                 onclick="loadPage(this)"
                                 data-Page="Language"
                                 href="#language"
-                                aria-expanded="false"><i class="glyphicon glyphicon-comment"></i> LANGUAGE</a></li>
+                                aria-expanded="false"><img src="../../images/MenuIcons/comment.png"> LANGUAGE</a></li>
                 <li class=""><a data-toggle="tab"
                                 onclick="loadPage(this)"
                                 data-Page="Belief"
                                 href="#Belief"
-                                aria-expanded="false"><i class="glyphicon glyphicon-heart-empty"></i> BELIEF</a>
+                                aria-expanded="false"><img src="../../images/MenuIcons/heart.png"> BELIEF</a>
                 </li>
                 <li class=""><a data-toggle="tab" data-Page="KeyFacts"
                                 onclick="loadPage(this)"
                                 href="#Keyfact"
-                                aria-expanded="false"><i class="glyphicon glyphicon-wrench
-                    "></i> KEY
+                                aria-expanded="false"><img src="../../images/MenuIcons/star.png"> KEY
                     FACTS</a></li>
                 <li class=""><a data-toggle="tab" data-Page="Export"
                                 onclick="loadPage(this)" href="#export"
-                                aria-expanded="false"><i class="glyphicon glyphicon-globe"></i> EXPORT</a>
+                                aria-expanded="false"><img src="../../images/MenuIcons/Compass.png"> EXPORT</a>
                 </li>
 
             </ul>
@@ -93,72 +102,88 @@
         <div class="row">
             <div class="col-sm-1">
             </div>
-            <div class="col-sm-10">
+            <div class="col-sm-11">
                 <!--navigation-->
-                <div class="col-sm-12">
-                    <div class="col-sm-6">
-                        <h2>Welcome to school administration panel</h2>
-                        <h5>School Admin-&gt; &nbsp;<b id="UserFullName"></b></h5>
-                    </div>
-                    <div class="col-sm-6 text-right">
-                        <h2 id="SchoolName"></h2>
-                        <h5 id="City"></h5>
-                    </div>
-                </div>
-
+                <!--    <div class="col-sm-12">
+                        <div class="col-sm-6">
+                            <h2>Welcome to school administration panel</h2>
+                            <h5>School Admin-&gt; &nbsp;<b id="UserFullName"></b></h5>
+                        </div>
+                        <div class="col-sm-6 text-right">
+                                <h2 id="SchoolName"></h2>
+                            <h5 id="City"></h5>
+                        </div>
+                    </div>-->
 
                 <div class="col-sm-12" style="margin-top:2em;">
                     <!--tab body-->
-                    <div class="tab-content">
+                    <div class="tab-content Lightbackground">
                         <div id="students" class="tab-pane fade active in">
-                            <br><br>
                             <b style="display: none;"> Team Name: </b><select name="classnamedropdownstutab"
                                                                               style="padding:0.3em;display: none;">
                             <option value="CITeam">CITeam</option>
                         </select> <input style="display: none;" type="submit" id="submitvalstutab" class="submitbtunnew"
                                          name="submitvalstutab" value="SUBMIT">
 
-                            <div id="PGrid">
+                            <div class="headerContent">TEACHER</div>
+                            <p>As a school administrator, you can now invite teachers to register for Ancestry Atlas</p>
+                            <h4>How?</h4>
 
-                            </div>
+                            <p>Enter each teacher's email address, their class name and hit INVITE.</p>
+
+                            <p>Teachers can now register and start mapping their classroom cultural diversity</p>
+
+                            <div id="PGrid"></div>
                         </div>
 
                         <div id="classes" class="tab-pane fade in">
-                            <div id="PClassGrid">
-
-                            </div>
+                            <div class="headerContent">CLASSESS</div>
+                            <div id="PClassGrid"></div>
                         </div>
 
+                        <div id="Pstudent" class="tab-pane fade in">
+                            <div class="headerContent">STUDENT</div>
+                            <div>
+                            <b> Teacher Name: </b>
+                                <select id="studentTeacherNameDropDown" style="padding:0.3em;"></select>
+                            <b> Class Name: </b>
+                                <select id="studentClassNameDropDown" style="padding:0.3em;"></select>
+                            </div>
+                            <div id="PstudentGrid"></div>
+                        </div>
 
                         <div id="maps" class="tab-pane fade in">
-
+                            <div class="headerContent">MAP</div>
                         </div>
 
 
                         <div id="language" class="tab-pane fade in">
-
+                            <div class="headerContent">LANGUAGE</div>
+                            <div class="TABContent"></div>
                         </div>
 
 
                         <div id="Belief" class="tab-pane fade in">
-
+                            <div class="headerContent">BELIEF</div>
+                            <div class="TABContent"></div>
                         </div>
 
 
                         <div id="export" class="tab-pane fade in">
-
+                            <div class="headerContent">EXPORT</div>
                         </div>
 
 
                         <div id="Keyfact" class="tab-pane fade in">
-
+                            <div class="headerContent">KEY FACTS</div>
+                            <div class="TABContent"></div>
                         </div>
 
 
                     </div>
                 </div>
             </div>
-            <div class="col-sm-1"></div>
+            <!--<div class="col-sm-1"></div>-->
         </div>
 
 
@@ -171,7 +196,8 @@
 
 
             <span style="float:left;">ANCESTRY ATLAS IS POWERED BY <a href="http://culturalinfusion.org.au/"
-                                                                      target="_blank" style="color:#ff9999;">CULTURAL INFUSION</a></span>
+                                                                      target="_blank" style="color:#ff9999;">CULTURAL
+                INFUSION</a></span>
             <span style="float:right; ">
                 	<a style="rgb(219,87,87);outline: none;" target="_blank"
                        href="http://ancestryatlas.com/how-to-use-ancestry-atlas/" title="FAQ">FAQ</a> |
@@ -186,6 +212,174 @@
 
     </div>
 </div>
+<!--Admin Panel Modal-->
+<div id="modal_Admin_profile" class="modal fade in">
+    <div class="modal-dialog">
+        <div class="modal-content">
+
+            <div class="modal-body" id="user_profile">
+
+
+                <h3 id="user_profile_header" style="text-align: center;"> User profile</h3>
+                <img src="../../images/mainlogo.png" width="73" height="73" class="loglogo"
+                     style="margin: 0 auto;display: block;">
+                <hr>
+                <h3>PERSONAL DETAILS</h3>
+                <table class="table borderless table-responsive">
+                    <tbody>
+                    <tr>
+                        <td>Email:</td>
+                        <td><input id="Adminemail" class="form-control" type="email" placeholder="Email" readonly=""
+                                ><br></td>
+                    </tr>
+                    <tr>
+                        <td>First name:</td>
+                        <td><input id="Adminfirstname" class="psco_readonly form-control" type="email"
+                                   placeholder="Email" readonly="" value="Peter"><br></td>
+                    </tr>
+                    <tr>
+                        <td>Last name:</td>
+                        <td><input id="Adminlasttname" class="psco_readonly form-control" type="email"
+                                   placeholder="Email" readonly="" value="Mousaferiadis"><br></td>
+                    </tr>
+
+                    <tr>
+                        <td>Country:</td>
+                        <td>
+                            <select id="Admincountry" onchange="Teacher.AdminProfile.ChangeCountry(this)" class="PSCO_country form-control" disabled>
+
+                            </select>
+                            <br></td>
+                    </tr>
+
+                    <tr>
+                        <td>School name:</td>
+                        <td id="schoolNameTd">
+
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>City:</td>
+                        <td>
+                            <input id="Admincity" class="psco_readonly form-control" type="text" placeholder="city"
+                                   readonly="">
+                            <br></td>
+                    </tr>
+                    <tr>
+                        <td>State:</td>
+                        <td>
+                            <input id="Adminstate" class="psco_readonly form-control" type="text" placeholder="State"
+                                   readonly="">
+                            <br></td>
+                    </tr>
+                    <tr>
+                        <td>Suburb:</td>
+                        <td>
+                            <input id="Adminsuburb" class="psco_readonly form-control" type="text" placeholder="Suburb"
+                                   readonly="">
+                            <br></td>
+                    </tr>
+                    <tr>
+                        <td>Post code:</td>
+                        <td>
+                            <input id="Adminpostcode" class="psco_readonly form-control" type="number"
+                                   placeholder="postcode" readonly="">
+                            <br></td>
+                    </tr>
+
+                    <tr>
+                        <td>Password:</td>
+                        <td>
+                            <button id="btn_change_pass_user" type="button" class="btn btn-warning"
+                                    style="margin: 0 auto;display: block;width: 45%;padding: 2%;">Update My Password
+                            </button>
+                            <br></td>
+                    </tr>
+                    </tbody>
+                </table>
+
+                <br>
+                <hr>
+                <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                <input type="hidden" name="act" value="edit_team_user">
+                <button id="btn_profile_edit" name="edit" type="button" class="btn btn-warning"
+                        onclick="Teacher.AdminProfile.btn_user_profile_edit()">Edit
+                </button>
+
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<!--Admin Change Pass-->
+<div id="modal_change_pass_user" class="modal fade in">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-body" id="change_pass_user">
+                <div id="ChangePasswrap">
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div class="col-sm-4"></div>
+                            <div class="col-sm-6 col-sm-pull-1 text-center">
+
+                                <h2>CHANGE PASSWORD</h2>
+
+                                <div class="col-sm-12 text-center"
+                                     style="background-color:#FFF; margin-bottom:30px;  padding-bottom:30px;">
+                                    <div class="row">
+                                        <br>
+
+                                        <div class="col-sm-4 text-left" style="margin-left:1.5%; margin-top:3.5%;"><span
+                                                style=" font-weight:bold; font-size:1.5em; color:#71908a;"></span>
+                                        </div>
+                                        <div class="col-sm-4 text-center">
+                                            <img src="../../images/mainlogo.png" alt="" title="" width="73" height="73"
+                                                 class="loglogo">
+                                        </div>
+                                        <div class="col-sm-4">
+                                        </div>
+                                    </div>
+                                    <form id="frm_change_pass" method="post" action="../../controller_user.php">
+                                        <div class="form-group form-inline">
+                                            <br>
+                                            <!--<input type="password" class="form-control inputfield" style="margin-left:1.5%; width:90%;" name="current_password" id="current_password" placeholder="Current Password*" >-->
+                                            <input type="password" class="form-control inputfield"
+                                                   style="margin-left:1.5%; width:90%;" name="password" id="password"
+                                                   placeholder="New Password*">
+                                            <input type="password" class="form-control inputfield"
+                                                   style="margin-left:1.5%; width:90%;" name="confirmPassword"
+                                                   id="confirmPassword" placeholder="Confirm New Password*">
+                                        </div>
+                                        <span style="float:left; margin-left:2.5em;">* Mandatory fields</span><br>
+
+                                        <div class="col-sm-12 text-left">
+                			                <span id="error_box" style="clear:both; float:left; margin-left:3em;">
+
+											</span>
+                                            <input type="hidden" name="act" id="change_pass_act"
+                                                   value="team_user_change_pass">
+                                            <button id="btn_change_pass" type="button"
+                                                    class="btn btn-default loginbutton" title="SAVE"
+                                                    style=" float:right; width:98%; padding:5%; padding-bottom: 12%;">
+                                                SAVE
+                                            </button>
+                                        </div>
+
+
+                                    </form>
+
+                                </div>
+                            </div>
+                            <div class="col-sm-3"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 <!--view Profile Modal-->
 <div id="dataModal" class="modal fade in">
     <div class="modal-dialog">
@@ -197,10 +391,20 @@
                 <button type="button" class="close" data-dismiss="modal">×</button>
 
                 <div class="table-responsive">
-                    <h3>PERSONAL DETAILS</h3>
+                    <input type="hidden" id="AdminSchoolID">
+
+                    <h3 class="HeaderPink">PERSONAL DETAILS</h3>
                     <table id="TeacherPersonalTable" class="table borderless">
 
 
+                    </table>
+                    <table class="table borderless" style=" margin-top: -24px;">
+                        <tbody>
+                        <tr>
+                            <td><strong>Age Group</strong></td>
+                            <td id="ageGroup"></td>
+                        </tr>
+                        </tbody>
                     </table>
                 </div>
 
@@ -244,7 +448,7 @@
                             ID:</label>
 
                         <div class="col-sm-9">
-                            <input type="email" class="form-control" id="Teacheremail" name="staffemail" readonly=""
+                            <input  type="email" class="form-control" id="Teacheremail" name="staffemail" readonly=""
                                    style="background-color:#e2e2e2;visibility: hidden;">
                         </div>
                     </div>
@@ -287,8 +491,9 @@
 
                         <div class="col-sm-9">
                             <div class="col-sm-6">
-                                <input type="text" class="form-control ui-autocomplete-input" id="beliefreligion"
-                                       name="beliefreligion" autocomplete="off" style="color: rgb(0, 0, 0);">
+                                <input list="ReligionTeacher" type="text" class="form-control  ui-autocomplete-input" id="beliefreligion"
+                                        name="beliefreligion" autocomplete="off" style="color: rgb(0, 0, 0);">
+                                <datalist id="ReligionTeacher" class="PSCO_religion"></datalist>
                             </div>
                             <!-- <div class="col-sm-6">
                                  <input id="checko" type="checkbox">
@@ -302,8 +507,8 @@
                         <label class="control-label col-sm-3" for="tb">Teacher:</label>
 
                         <div class="col-sm-9">
-                            <input type="text" class="form-control ui-autocomplete-input" id="tb" name="tb"
-                                   autocomplete="off">
+                            <select type="text" class="form-control PSCO_country ui-autocomplete-input" id="tb" name="tb"
+                                    autocomplete="off"></select>
                         </div>
                     </div>
 
@@ -312,24 +517,24 @@
                         <label class="control-label col-sm-3" for="m">Mother:</label>
 
                         <div class="col-sm-9">
-                            <input type="text" class="form-control ui-autocomplete-input" id="m" name="m"
-                                   autocomplete="off">
+                            <select type="text" class="form-control PSCO_country ui-autocomplete-input" id="m" name="m"
+                                    autocomplete="off"></select>
                         </div>
                     </div>
                     <div class="form-group">
                         <label class="control-label col-sm-3" for="gfm">GrandFather:</label>
 
                         <div class="col-sm-9">
-                            <input type="text" class="form-control ui-autocomplete-input" id="gfm" name="gfm"
-                                   autocomplete="off">
+                            <select type="text" class="form-control PSCO_country ui-autocomplete-input" id="gfm" name="gfm"
+                                    autocomplete="off"></select>
                         </div>
                     </div>
                     <div class="form-group">
                         <label class="control-label col-sm-3" for="gmm">GrandMother:</label>
 
                         <div class="col-sm-9">
-                            <input type="text" class="form-control ui-autocomplete-input" id="gmm" name="gmm"
-                                   autocomplete="off">
+                            <select type="text" class="form-control PSCO_country ui-autocomplete-input" id="gmm" name="gmm"
+                                    autocomplete="off"></select>
                         </div>
                     </div>
 
@@ -338,38 +543,44 @@
                         <label class="control-label col-sm-3" for="f">Father:</label>
 
                         <div class="col-sm-9">
-                            <input type="text" class="form-control ui-autocomplete-input" id="f" name="f"
-                                   autocomplete="off">
+                            <select type="text" class="form-control PSCO_country ui-autocomplete-input" id="f" name="f"
+                                    autocomplete="off"></select>
                         </div>
                     </div>
                     <div class="form-group">
                         <label class="control-label col-sm-3" for="gff">GrandFather:</label>
 
                         <div class="col-sm-9">
-                            <input type="text" class="form-control ui-autocomplete-input" id="gff" name="gff"
-                                   autocomplete="off">
+                            <select type="text" class="form-control PSCO_country ui-autocomplete-input" id="gff" name="gff"
+                                    autocomplete="off"></select>
                         </div>
                     </div>
                     <div class="form-group">
                         <label class="control-label col-sm-3" for="gmf">GrandMother:</label>
 
                         <div class="col-sm-9">
-                            <input type="text" class="form-control ui-autocomplete-input" id="gmf" name="gmf"
-                                   autocomplete="off">
+                            <select type="text" class="form-control PSCO_country ui-autocomplete-input" id="gmf" name="gmf"
+                                    autocomplete="off"></select>
                         </div>
                     </div>
 
                     <h3 class="HeaderPink">LANGUAGES</h3>
 
                     <div class="form-group">
-                        <div class="col-sm-9">
+                        <div class="col-sm-10 col-sm-push-1">
                             <table class="table borderless table-responsive " id="employee_lang">
                                 <tbody id="LangEditTable">
 
                                 </tbody>
-                                <script type="text/javascript">
-
-                                </script>
+                                <tfoot style="display: none;">
+                                <tr>
+                                    <td colspan="2">
+                                        <div class="btn btn-primary btn-block" onclick="Teacher.Edit.AddLanguage()">
+                                            Add Language
+                                        </div>
+                                    </td>
+                                </tr>
+                                </tfoot>
                             </table>
                         </div>
                     </div>
@@ -391,6 +602,7 @@
 
 <!--classes MODAL-->
 <!--Edit Modals-->
+<!--
 <div id="edit_Classes_Modal" class="modal fade in">
     <div class="modal-dialog">
         <div class="modal-content">
@@ -431,125 +643,391 @@
             </div>
         </div>
     </div>
+</div>
+-->
+<!--Edit Student Profile Modal-->
+<div id="edit_Student_data_Modal" class="modal fade in">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">×</button>
+                <h4 class="modal-title" style="text-align:center;font-weight:bold;">Update Student's Details</h4>
+            </div>
+            <div class="modal-body">
 
-    <script src="../../scripts/jquery-1.10.2.js"></script>
+                <div id="" class="form-horizontal">
+                    <h3 class="HeaderPink">PERSONAL DETAILS</h3>
 
-    <!--ajax-->
-    <script src="../js/ajax.js"></script>
-    <!--Global-->
-    <script src="../js/Global.js"></script>
-    <!--loadPage-->
-    <script src="js/load_pages/Index.js"></script>
-    <script src="js/load_pages/classes.js"></script>
-    <script src="js/load_pages/Belief.js"></script>
-    <script src="js/load_pages/Language.js"></script>
+                    <div class="form-group">
+                        <label class="control-label col-sm-3" for="StudentEmail_STU">Email
+                            ID:</label>
 
-    <!--bootstrap-->
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
-            integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
-            crossorigin="anonymous"></script>
+                        <div class="col-sm-9">
+                            <input data-EditStudent="true" data-studentProfile="true" type="email" class="form-control" id="StudentEmail_STU" name="studentemailid" readonly=""
+                                   style="background-color:#e2e2e2;">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label col-sm-3" for="firstname_STU">First Name:</label>
 
-    <!--PSCO_Grid-->
-    <script src="../js/PSCO_Grid.js"></script>
+                        <div class="col-sm-9">
+                            <input data-studentProfile="true" data-EditStudent="true" type="text" class="form-control" id="firstname_STU" name="firstname" readonly="">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label col-sm-3" for="lastname_STU">Last Name:</label>
 
-    <!--Charts-->
-    <script src="https://code.highcharts.com/highcharts.js"></script>
-    <script src="https://code.highcharts.com/modules/exporting.js"></script>
-    <script src="https://code.highcharts.com/modules/data.js"></script>
-    <script src="https://code.highcharts.com/modules/drilldown.js"></script>
-    <script src="../js/chart.js"></script>
+                        <div class="col-sm-9">
+                            <input data-studentProfile="true" data-EditStudent="true" type="text" class="form-control" id="lastname_STU" name="lastname" readonly="">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label col-sm-3" for="gender_STU">Gender:</label>
 
-    <!--Dom To Image-->
-    <script src="../js/dom-to-image.min.js"></script>
+                        <div class="col-sm-9">
+                            <select data-studentProfile="true" data-EditStudent="true" name="gender" id="gender_STU" class="form-control">
+                                <option value="male">Male</option>
+                                <option value="female">Female</option>
+                                <option value="others">Others</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label col-sm-3" for="age_STU">Age Group:</label>
 
-    <!--Alert-->
-    <script src="../js/sweetalert/sweetalert2.js"></script>
-    <script src="../js/sweetalert/msg.js"></script>
+                        <div class="col-sm-9">
+                            <select name="age" id="age_STU" data-EditStudent="true" class="form-control">
 
-    <script type="text/javascript">
-        /*Load age Group option*/
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label col-sm-3" for="beliefreligion_STU">Belief/Religion:</label>
+
+                        <div class="col-sm-9">
+                            <div class="col-sm-6">
+                                <input list="Religion_student" data-studentProfile="true" data-EditStudent="true" type="text" class="form-control  ui-autocomplete-input" id="beliefreligion_STU"
+                                        name="religion" autocomplete="off" style="color: rgb(0, 0, 0);">
+                                <datalist id="Religion_student" class="PSCO_religion"></datalist>
+                            </div>
+                            <!-- <div class="col-sm-6">
+                                 <input id="checko" type="checkbox">
+                                 <label style="margin-top:0.5em">&nbsp;Don't want to answer</label>
+                             </div>-->
+                        </div>
+                    </div>
+                    <h3 class="HeaderPink">BIRTH COUNTRIES</h3>
+
+                    <div class="form-group">
+                        <label class="control-label col-sm-3" for="tb_STU">Student:</label>
+
+                        <div class="col-sm-9">
+                            <select type="text" data-EditStudent="true" class="form-control PSCO_country ui-autocomplete-input" id="tb_STU" name="sb"
+                                    autocomplete="off"></select>
+                        </div>
+                    </div>
+
+                    <hr>
+                    <div class="form-group">
+                        <label class="control-label col-sm-3" for="m_STU">Mother:</label>
+
+                        <div class="col-sm-9">
+                            <select type="text"  data-EditStudent="true" class="form-control PSCO_country ui-autocomplete-input" id="m_STU" name="m"
+                                    autocomplete="off"></select>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label col-sm-3" for="gfm_STU">GrandFather:</label>
+
+                        <div class="col-sm-9">
+                            <select  data-EditStudent="true" type="text" class="form-control PSCO_country ui-autocomplete-input" id="gfm_STU" name="gfm"
+                                     autocomplete="off"></select>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label col-sm-3" for="gmm_STU">GrandMother:</label>
+
+                        <div class="col-sm-9">
+                            <select data-EditStudent="true" type="text" class="form-control PSCO_country ui-autocomplete-input" id="gmm_STU" name="gmm"
+                                    autocomplete="off"></select>
+                        </div>
+                    </div>
+
+                    <hr>
+                    <div class="form-group">
+                        <label class="control-label col-sm-3" for="f_STU">Father:</label>
+
+                        <div class="col-sm-9">
+                            <select data-EditStudent="true" type="text" class="form-control PSCO_country ui-autocomplete-input" id="f_STU" name="f"
+                                    autocomplete="off"></select>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label col-sm-3" for="gff_STU">GrandFather:</label>
+
+                        <div class="col-sm-9">
+                            <select data-EditStudent="true" type="text" class="form-control PSCO_country ui-autocomplete-input" id="gff_STU" name="gff"
+                                    autocomplete="off"></select>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label col-sm-3" for="gmf_STU">GrandMother:</label>
+
+                        <div class="col-sm-9">
+                            <select data-EditStudent="true" type="text" class="form-control PSCO_country ui-autocomplete-input" id="gmf_STU" name="gmf"
+                                    autocomplete="off"></select>
+                        </div>
+                    </div>
+
+                    <h3 class="HeaderPink">LANGUAGES</h3>
+
+                    <div class="form-group">
+                        <div class="col-sm-10 col-sm-push-1">
+                            <table class="table borderless table-responsive " id="Student_lang">
+                                <tbody id="LangEditTable_STU">
+
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+
+                    <br>
+                    <button type="button" name="update" id="update_Stu" onclick="student.Edit.Update()"
+                            class="btn btn-success ">Save
+                    </button>
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+
+
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+</div>
+<script src="../../scripts/jquery-1.10.2.js"></script>
+
+<!--ajax-->
+<script src="../js/ajax.js"></script>
+<!--Global-->
+<script src="../js/Global.js"></script>
+<!--loadPage-->
+<script src="js/load_pages/Index.js"></script>
+<script src="js/load_pages/classes.js"></script>
+<script src="js/load_pages/student.js"></script>
+<script src="js/load_pages/Belief.js"></script>
+<script src="js/load_pages/Language.js"></script>
+
+<!--bootstrap-->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
+        integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+        crossorigin="anonymous"></script>
+
+<!--data validation-->
+<script src="../js/validate.min.js"></script>
+<!--load lang.json for message and text page -->
+<script src="../js/lang.js"></script>
+<script type="text/javascript">
+    var __lang = undefined;
+
+    $.getJSON('../data_value/lang.json', function (data) {
+        __lang = new lang(data);
+    });
+</script>
+
+<!--PSCO_Grid-->
+<script src="../js/PSCO_Grid.js"></script>
+
+<!--Charts-->
+<script src="https://code.highcharts.com/highcharts.js"></script>
+<script src="https://code.highcharts.com/modules/exporting.js"></script>
+<script src="https://code.highcharts.com/modules/data.js"></script>
+<script src="https://code.highcharts.com/modules/drilldown.js"></script>
+<script src="../js/chart.js"></script>
+
+<!--Dom To Image-->
+<script src="../js/dom-to-image.min.js"></script>
+
+<!--Alert-->
+<script src="../js/sweetalert/sweetalert2.js"></script>
+<script src="../js/sweetalert/msg.js"></script>
+<script type="text/javascript">
+
+    $('#btn_change_pass').click(function () {
+        var pass1 = $('#password').val();
+        var pass2 = $('#confirmPassword').val();
+        if (pass1 == pass2 && pass1 != "" && pass1 != undefined) {
+            $("#frm_change_pass").submit();
+        } else {
+            $('#error_box').text('password not match.');
+        }
+    });
+</script>
+<script type="text/javascript">
+    /*Load age Group option*/
+    $(document).ready(function () {
+        $('#Admincountry').load('../data_value/country.html'); // load admin profile Country
         $('#age').load("../data_value/age_group_60.html");
+        $('#studentTeacherNameDropDown').on('change' , function(){
+            student.getClassByTeacher(this.value);
+        });
+        $('#studentClassNameDropDown').on('change' , function(){
+            Global.RefreshGrid('PstudentGrid' , {act:'get_tbl_student' , classname : this.value} , Global.url , student.CreateStudentTblData)
+        });
 
-        var ClassesGrid;
-        var TeacherGrid = new PSCO_grid('TeacherGrid');
-        TeacherGrid.cols = [
-            {name: 'name', thname: 'Teacher Name'},
-            {name: 'email', thname: 'Teacher Email ID*'},
-            {name: 'info', thname: 'Info', notSearch: true},
-            {name: 'status', thname: 'Status', notSearch: true},
-            {name: 'option', thname: 'Option', notSearch: true}
-        ];
-        TeacherGrid.RightToLeft = false;
-        TeacherGrid.embeddedRow = [[{}, {
-            name: 'Teacher Name',
-            id: 'NameInvite',
-            type: 'inputtext'
-        }, {name: 'Click here to add email address', id: 'EmailInvite', type: 'inputtext'}, {}, {}, {
-            name: 'Invite',
-            id: 'InviteBTN',
-            type: 'btn',
-            attribute: [{name: 'class', value: 'btn btn-success'}]
-        }]];
+        $('.PSCO_country').load('../data_value/country.html');
+        $('.PSCO_religion').load('../data_value/religions.html');
+    });
+
+    var StuGrid;
+    /*var ClassesGrid;*/
+    var TeacherGrid = new PSCO_grid('TeacherGrid');
+    TeacherGrid.cols = [
+        {name: 'name', thname: 'Teacher Name'},
+        {name: 'email', thname: 'Teacher Email ID*'},
+        {name: 'classname', thname: 'Class*'},
+        {name: 'info', thname: 'Info', notSearch: true},
+        {name: 'status', thname: 'Status', notSearch: true},
+        {name: 'option', thname: 'Option', notSearch: true}
+    ];
+    TeacherGrid.RightToLeft = false;
+    TeacherGrid.embeddedRow = [[{}, {
+        name: 'Teacher Name',
+        id: 'NameInvite',
+        type: 'inputtext'
+    }, {
+        name: 'Click here to add email address',
+        id: 'EmailInvite',
+        type: 'inputtext'
+    }, {
+        name: {
+            value: '',
+            htmlTag: ' <input class="PGrid-InputStyle" list="classnameInvite" name="classInvite" id="classInvite" placeholder="Class name"  > <datalist id="classnameInvite"></datalist>'
+        }
+
+    }, {}, {}, {
+        name: 'Invite',
+        id: 'InviteBTN',
+        type: 'btn',
+        attribute: [
+            {name: 'class', value: 'btn btn-success'},
+            {name: 'onclick', value: 'Teacher.invite()'}
+        ]
+    }]];
 
 
-        function loadPage(elm) {
-            var pageName = elm.getAttribute('data-Page');
-            var isShow = elm.getAttribute('data-show'); //___ For one Load
+    function loadPage(elm) {
+        var pageName = elm.getAttribute('data-Page');
+        var isShow = elm.getAttribute('data-show'); //___ For one Load
 
-            if (isShow != 'true') {
+        if (isShow != 'true') {
 
-                var TabID = elm.getAttribute('href');
-                if (pageName == 'Map' || pageName == 'Export') {
-                    //____ CREATE IFRAME
-                    var frame = document.createElement('iframe');
-                    frame.setAttribute('src', pageName + '.html');
-                    frame.setAttribute('id', pageName);
+            var TabID = elm.getAttribute('href');
+            if (pageName == 'Map' || pageName == 'Export') {
+                //____ CREATE IFRAME
+                var frame = document.createElement('iframe');
+                frame.setAttribute('src', pageName + '.html');
+                frame.setAttribute('id', pageName);
 
-                    if (pageName == 'Export') {
-                        frame.style.cssText = 'width:100%;min-height:1200px;margin-top:20px;border:none;';
-                    } else {
-                        frame.style.cssText = 'width:100%;min-height:800px;margin-top:20px;border:none;';
-                    }
-                    TabID = TabID.split('#');
-                    TabID = TabID[1];
-                    document.getElementById(TabID).appendChild(frame);
-                } else if (pageName == 'KeyFacts') {
-                    KeyFacts.LoadKeyFact();
-
-                } else if (pageName == 'Classes') {
-                    //______LOAD CLASSES GRID
-                    ClassesGrid = new PSCO_grid('ClassesGrid');
-                    ClassesGrid.ContainerID = 'PClassGrid';
-                    ClassesGrid.cols = [
-                        {name: 'classname', thname: 'Class Name'},
-                        {name: 'option', thname: 'Option'}
-                    ];
-                    ClassesGrid.RightToLeft = false;
-                    Classes.LoadClassesTable(); //______ send Act
+                if (pageName == 'Export') {
+                    frame.style.cssText = 'width:100%;min-height:1200px;margin-top:20px;border:none;';
                 } else {
-                    //____ LOAD OTHER TAB FROM EXTERNAL PAGE
-                    $(TabID).load(pageName + '.html');
-                    if (pageName == 'Language') {
-                        setTimeout(function () {
-                            Language.sendAction();
-                        },200)
-                    }
+                    frame.style.cssText = 'width:100%;min-height:800px;margin-top:20px;border:none;';
                 }
-                elm.setAttribute('data-show', 'true');
-            }
-        }
-        function ToggleMenu(elem) {
-            var flag = elem.getAttribute('data-show');
-            if (flag == 'true') {
-                document.getElementById('MenuPanel').style.cssText = '';
-                elem.style.cssText = '';
-                elem.setAttribute('data-show', 'false');
+                TabID = TabID.split('#');
+                TabID = TabID[1];
+                document.getElementById(TabID).appendChild(frame);
+            } else if (pageName == 'KeyFacts') {
+                KeyFacts.LoadKeyFact();
+
+            } else if (pageName == 'Classes') {
+                //______LOAD CLASSES GRID
+          /*      ClassesGrid = new PSCO_grid('ClassesGrid');
+                ClassesGrid.ContainerID = 'PClassGrid';
+                ClassesGrid.cols = [
+                    {name: 'classname', thname: 'Class Name'},
+                    {name: 'option', thname: 'Option'}
+                ];
+                ClassesGrid.RightToLeft = false;
+                ClassesGrid.embeddedRow = [[{}, {
+                    name: 'Class name',
+                    id: 'classNameAdd',
+                    type: 'inputtext'
+                }, {
+                    name: 'Add',
+                    id: 'ClassAddBTN',
+                    type: 'btn',
+                    attribute: [
+                        {name: 'class', value: 'btn btn-success'},
+                        {name: 'onclick', value: 'class_data.add_new_class()'}
+                    ]
+
+                }]];*/
+           //     Classes.LoadClassesTable(); //______ send Act
+            } else if (pageName == 'student') {
+                //______LOAD CLASSES GRID
+                StuGrid = new PSCO_grid('StuGrid');
+                StuGrid.ContainerID = 'PstudentGrid';
+                StuGrid.cols = [
+
+                    {name:'firstname' , thname:'Student Name'},
+                    {name:'studentemailid' , thname:'Email ID*'},
+                    {name:'classname' , thname:'Class Name'},
+                    {name:'info' , thname:'Info'},
+                    {name:'gender' , thname:'gender', hidden:true , notSearch : true},
+                    {name:'lastname' , thname:'lastname' , hidden:true , notSearch : true},
+                    {name:'religion' , thname:'religion' , hidden:true , notSearch : true},
+                    {name:'schoolid' , thname:'schoolid' , hidden:true , notSearch : true},
+                    {name:'status' , thname:'status', hidden:true , notSearch : true},
+
+
+                    {name:'token' , thname:'token', hidden:true},
+                    {name:'option' , thname:'option'}
+                    ];
+                StuGrid.RightToLeft = false;
+
+               /*StudentGrid.embeddedRow = [[{}, {
+                    name: 'Class name',
+                    id: 'classNameAdd',
+                    type: 'inputtext'
+                },  {
+                   name: 'Add',
+                    id: 'ClassAddBTN',
+                    type: 'btn',
+                    attribute: [
+                        {name: 'class', value: 'btn btn-success'},
+                        {name: 'onclick', value: 'class_data.add_new_class()'}
+                    ]
+
+                }]];*/
+                student.LoadStudentTable(); //______ send Act
             } else {
-                document.getElementById('MenuPanel').style.cssText = 'height:100vh;width:30vw';
-                elem.setAttribute('data-show', 'true');
-                elem.style.left = '31.5vw';
+                //____ LOAD OTHER TAB FROM EXTERNAL PAGE
+                $(TabID + ' .TABContent').load(pageName + '.html');
+                if (pageName == 'Language') {
+                    setTimeout(function () {
+                        Language.sendAction();
+                    }, 200)
+                }
             }
+            elm.setAttribute('data-show', 'true');
         }
-    </script>
+    }
+    function ToggleMenu(elem) {
+        var flag = elem.getAttribute('data-show');
+        if (flag == 'true') {
+            document.getElementById('MenuPanel').style.cssText = '';
+            elem.style.cssText = '';
+            elem.setAttribute('data-show', 'false');
+        } else {
+            document.getElementById('MenuPanel').style.cssText = 'height:100vh;width:30vw';
+            elem.setAttribute('data-show', 'true');
+            elem.style.left = '31.5vw';
+        }
+    }
+
+
+
+</script>
 </body>
 </html>

@@ -5,9 +5,14 @@ var Export = {
 Export.sendActions = function () {
     //ajax.sender_data_callback(Export.url , {act: 'TRMDO'} , Export.CreateMapData);
     ajax.sender_data_json_by_url_callback(Export.url, {act: 'get_religions'}, Export.CreateBarData);
+    ajax.sender_data_json_by_url_callback(Export.url, {act: 'get_map_poster'}, Export.mapposter);
+    ajax.sender_data_json_by_url_callback(Export.url, {act:'get_map'}, Export.CreateMapData);
 };
 Export.sendDonutActions = function () {
-    ajax.sender_data_json_by_url_callback(Export.url, {act: 'get_languge_by_gender', gender: 'all'}, Export.createDonutData);
+    ajax.sender_data_json_by_url_callback(Export.url, {
+        act: 'get_languge_by_gender',
+        gender: 'all'
+    }, Export.createDonutData);
 };
 
 
@@ -54,12 +59,14 @@ Export.CreateMapData = function (data) {
 
     ];
 
-    for (var i = 1; i < data.length; i++) {
-        var Name = data[i][0];
-        var numb = data[i][1];
-        for (var c = 1; c < MapDatas[0].length; c++) {
-            if (Name.toLowerCase() == MapDatas[1][c].toLowerCase()) {
-                MapDatas[2][c] = numb;
+    for (var i = 0; i < data.length; i++) {
+        var Name = data[i].x; //-------> this Data different with all Map Returned Data
+        var numb = data[i].count;
+        if (Name != '') {
+            for (var c = 1; c < MapDatas[0].length; c++) {
+                if (MapDatas[1][c].toLowerCase().search(Name.toLowerCase()) > -1) {
+                    MapDatas[2][c] = numb;
+                }
             }
         }
     }
@@ -68,14 +75,21 @@ Export.CreateMapData = function (data) {
         var Table = document.getElementById('Table');
         var Tag = '';
         for (var i = 0; i < data.length; i++) {
-            Tag += '<tr><td>' + data[i][0] + '</td><td>' + data[i][1] + '</td></tr>';
+            Tag += '<tr><td>' + data[i].x + '</td><td>' + data[i].count + '</td></tr>';
         }
         Table.innerHTML = Tag;
     } catch (err) {
     }
 };
 
+Export.mapposter = function (Data) {
+    document.getElementById('schoolname').innerText = Data[0].schoolname;
+    document.getElementById('schoolAddress').innerText = Data[0].country + '/' + Data[0].state;
+    document.getElementById('AllCount').innerText = Data[3].count;
+    document.getElementById('MaleCount').innerText = Data[2].count_male;
+    document.getElementById('FemaleCount').innerText = Data[1].count_female;
 
+};
 /*var donutSeries = {
  name: 'Browser',
  data: [

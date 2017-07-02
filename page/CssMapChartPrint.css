@@ -1,3 +1,7 @@
+body{
+    width:7016px;
+    height:4961px;
+}
 /*Padding*/
 .no-padding {
     padding: 0;
@@ -26,14 +30,14 @@
 }
 
 #MapContainer {
-    height: 800px;
+    height: 2851px;
     margin-top: 24px;
-    width: 1500px;
+    width: 90%;
 }
 
 .OtherChart {
     width: 80%;
-    height: 400px;
+    height: 1451px;
 }
 
 .loading {
@@ -50,7 +54,7 @@
 .topBorder {
     border-top: 2px solid #f88882;
     position: relative;
-    margin-top: 50px;
+    margin-top: 142px;
 }
 
 #Logo {
@@ -78,13 +82,13 @@
     margin-top: 20px;
     font-weight: 600;
     width: 80%;
+    font-size: 63px !important;
 }
 
 .chartDivider {
 }
 
-.topBorder::before {
-    content: '';
+.textLabel{
     background-color: #f88882;
     -webkit-transform: rotate(-90deg);
     -moz-transform: rotate(-90deg);
@@ -93,29 +97,24 @@
     transform: rotate(-90deg);
     transform-origin: top right;
     position: absolute;
-    left: -211px;
+    left: -1165px;
     top: 0;
     padding: 10px;
-    font-size: 21px;
+    font-size: 131px;
     color: #fff;
     z-index: 100;
+    border: 2px solid #f88882;
 }
 
-#TopBorderMap::before {
-    content: 'BIRTH COUNTRIES';
+
+
+#TopBorderBar {
+    left: -213px;
 }
 
-#TopBorderBar::before {
-    content: 'RELIGIONS';
-    left: -100px;
-}
-
-#TopBorderDonut::before {
-    content: 'SPOKEN LANGUAGE';
-}
 
 .MapCountryDetails table {
-    font-size: 15px;
+    font-size: 64px;
     margin: 11px;
     margin-top: 20%;
 }
@@ -125,12 +124,14 @@
     border-left: 2px solid;
     border-color: #f88882;
     padding: 11px;
-    margin-top: 50px;
+    margin-top: 134px;
+    min-height: 1000px;
+    font-size: 70px;
 }
 
 .MapDetails p {
     margin-bottom: 2px;
-    font-size: 11px;
+    /* font-size: 11px; */
 }
 
 .MapCountryDetails table tr td:first-child {
@@ -146,7 +147,11 @@
     margin-bottom: 50px;
 }
 #IFRAME{
-    width:95%;margin-left:-14%;height: 450px;overflow: hidden;border: none;
+    width:95%;
+    margin-left:-14%;
+    height: 1451px;
+    overflow: hidden;
+    border: none;
 }
 @media print
 {

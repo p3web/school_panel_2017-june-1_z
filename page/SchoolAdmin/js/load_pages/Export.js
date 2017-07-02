@@ -6,6 +6,7 @@ Export.sendActions = function () {
     //ajax.sender_data_callback(Export.url , {act: 'TRMDO'} , Export.CreateMapData);
     ajax.sender_data_json_by_url_callback(Export.url, {act: 'get_religions'}, Export.CreateBarData);
     ajax.sender_data_json_by_url_callback(Export.url, {act: 'get_map_poster'}, Export.mapposter);
+    ajax.sender_data_json_by_url_callback(Export.url, {act:'get_map'}, Export.CreateMapData);
 };
 Export.sendDonutActions = function () {
     ajax.sender_data_json_by_url_callback(Export.url, {
@@ -58,12 +59,14 @@ Export.CreateMapData = function (data) {
 
     ];
 
-    for (var i = 1; i < data.length; i++) {
-        var Name = data[i][0];
-        var numb = data[i][1];
-        for (var c = 1; c < MapDatas[0].length; c++) {
-            if (MapDatas[1][c].toLowerCase().search(Name.toLowerCase()) > -1) {
-                MapDatas[2][c] = numb;
+    for (var i = 0; i < data.length; i++) {
+        var Name = data[i].x; //-------> this Data different with all Map Returned Data
+        var numb = data[i].count;
+        if (Name != '') {
+            for (var c = 1; c < MapDatas[0].length; c++) {
+                if (MapDatas[1][c].toLowerCase().search(Name.toLowerCase()) > -1) {
+                    MapDatas[2][c] = numb;
+                }
             }
         }
     }
@@ -72,7 +75,7 @@ Export.CreateMapData = function (data) {
         var Table = document.getElementById('Table');
         var Tag = '';
         for (var i = 0; i < data.length; i++) {
-            Tag += '<tr><td>' + data[i][0] + '</td><td>' + data[i][1] + '</td></tr>';
+            Tag += '<tr><td>' + data[i].x + '</td><td>' + data[i].count + '</td></tr>';
         }
         Table.innerHTML = Tag;
     } catch (err) {

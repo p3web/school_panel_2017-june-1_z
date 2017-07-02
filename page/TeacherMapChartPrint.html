@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
-      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
-            integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+          integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 
     <style>
 
@@ -18,6 +18,7 @@
     <div class="row">
         <div class="col-xs-12 col-md-10 no-padding">
             <div class="topBorder" id="TopBorderMap">
+                <div class="textLabel">BIRTH COUNTRIES</div>
                 <img src="logo.jpg" id="Logo"/>
                 <div id="MapContainer" class="Chart">
                     <div class="loading">
@@ -57,14 +58,16 @@
     <div class="row">
         <div class="col-md-6 bottomBorder col-xs-12 no-padding">
             <div class="topBorder chartDivider" id="TopBorderDonut">
+                <div class="textLabel">SPOKEN LANGUAGE</div>
                 <div class="Chart OtherChart" id="DonutChart">
-                    <iframe style="width:100%;height: 320px;overflow: hidden;border: none;"
+                    <iframe style="width:100%;height: 1451px;overflow: hidden;border: none;"
                             src="TeacherdonutChartPrint.html"></iframe>
                 </div>
             </div>
         </div>
         <div class="col-md-6 col-xs-12 bottomBorder no-padding-left">
-            <div class="topBorder chartDivider" id="TopBorderBar">
+            <div class="topBorder chartDivider">
+                <div class="textLabel" id="TopBorderBar">BELIEF</div>
                 <div class="Chart OtherChart" id="BarChart">
 
                 </div>
@@ -74,7 +77,11 @@
     <div class="row">
         <div class="col-xs-12">
 
-            <div class="Footer"><p id="copyright" style="font-size: 14px"><b><a href="http://ancestryatlas.com/" rel="nofollow" target="_blank">Ancestry Atlas</a></b> is powered&nbsp;by <b>© <a href="http://culturalinfusion.org.au/" rel="nofollow" target="_blank">Cultural Infusion</a>, 2017</p></b></font></div>
+            <div class="Footer"><p id="copyright" style="font-size: 14px"><b><a href="http://ancestryatlas.com/"
+                                                                                rel="nofollow" target="_blank">Ancestry
+                Atlas</a></b> is powered&nbsp;by <b>© <a href="http://culturalinfusion.org.au/" rel="nofollow"
+                                                         target="_blank">Cultural Infusion</a>, 2017</p></b></font>
+            </div>
         </div>
     </div>
 </div>
@@ -105,12 +112,11 @@
 <script>
 
     function sendActions() {
-        ajax.sender_data_callback({out : 'TRMDO'} , CreateMapData);
-        ajax.sender_data_callback({out : 'TRO'} , CreateBarData);
-        ajax.sender_data_callback({out:'TRO' , metadata:'1'} , CreateMapdetails);
-        ajax.sender_data_callback({out:'STCT'} , CreateMapBottomDetails);
+        ajax.sender_data_callback({out: 'TRMDO'}, CreateMapData);
+        ajax.sender_data_callback({out: 'TRO'}, CreateBarData);
+        ajax.sender_data_callback({out: 'TRO', metadata: '1'}, CreateMapdetails);
+        ajax.sender_data_callback({out: 'STCT'}, CreateMapBottomDetails);
     }
-
 
 
     function CreateMapData(data) {
@@ -149,7 +155,9 @@
         var Table = document.getElementById('Table');
         var Tag = '';
         for (var i = 0; i < data[0].length; i++) {
-            Tag += '<tr><td>' + data[0][i][0] + '</td><td>'+data[0][i][1]+'</td></tr>';
+            if (data[0][i][0] != '') {
+                Tag += '<tr><td>' + data[0][i][0] + '</td><td>' + data[0][i][1] + '</td></tr>';
+            }
         }
         Table.innerHTML = Tag;
     }
@@ -167,13 +175,15 @@
                 a.push({name: data[0][i][0], y: parseInt(data[0][i][1])});
             }
             BarChart('BarChart', series);
-        }else{
+        } else {
             document.getElementById('BarChart').innerHTML = '';
         }
     }
 
 
 </script>
-<embed id="plugin" type="application/x-google-chrome-pdf" src="chrome://print/11/0/print.pdf" stream-url="chrome://print/11/0/print.pdf" headers="" background-color="0xFF525659" top-toolbar-height="0" top-level-url="undefined">
+<embed id="plugin" type="application/x-google-chrome-pdf" src="chrome://print/11/0/print.pdf"
+       stream-url="chrome://print/11/0/print.pdf" headers="" background-color="0xFF525659" top-toolbar-height="0"
+       top-level-url="undefined">
 </body>
 </html>
